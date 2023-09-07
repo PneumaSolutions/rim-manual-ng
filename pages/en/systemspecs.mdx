@@ -1,0 +1,25 @@
+import runningPlatform from "../../components/runningPlatform.js"
+import dynamic from "next/dynamic"
+
+# System Requirements
+In order to run Remote Incident Manager, your system must meet or exceed the following requirements:
+<div id="platformButtons">
+<button id="showWindows">Switch to Windows requirements</button>
+<button id="showMac">Switch to Mac OS requirements</button>
+</div>
+<div class="win" style={{display: 'none;' }}>
+    * Windows 7 SP1 or later
+    * Windows Server 2012 or later
+    * At least 4GB of RAM
+    * Admin privileges for initial installation (not required for automatic updates)
+    </div>
+<div class="mac" style={{display: 'none' }}>
+    * Intel or Apple Silicon
+    * Mac OS Ventura
+    * At least 4GB of RAM
+    * Admin privileges for initial installation (not required for automatic updates)
+    </div>
+<div id="unknown-content" style={{ display: 'none' }}>
+        Please select an operating system using the above buttons.
+    </div>
+<runningPlatform />
