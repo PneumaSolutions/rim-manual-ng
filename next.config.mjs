@@ -22,4 +22,11 @@ const nextConfig = {
  
 // Merge MDX config with Next.js config
 //module.exports = withMDX(nextConfig)
+//module.exports = {
+  //withMDX(nextConfig);
+//  i18n: {
+//    locales: ['en-US', 'fr', 'nl-NL'],
+//    defaultLocale: 'en-US',
+//  },
+//}
 export default withMDX(nextConfig)
