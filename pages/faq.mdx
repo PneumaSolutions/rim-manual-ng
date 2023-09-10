@@ -80,7 +80,7 @@ Yes. The best configuration in this case would be an on-premises deployment, so 
 ### Do any ports need to be opened on the target or controller?
 No and no.
 ### What connections would need to be allowed on a network in order for RIM to function?
-When utilizing the public cloud, an https connection to <https://getrim.app> is required. In optimal cases this is enough for RIM to establish a peer-to-peer connection between the controller and the target. However, it helps to allow UDP connections through ports 19302 and 3478 (the standard STUN and TURN ports). This ensures that if a relay is being utilized, RIM will not have to fall back to a tcp connection on port 443.
+When utilizing the public cloud, an https connection to [getrim.app](https://getrim.app) is required. In optimal cases this is enough for RIM to establish a peer-to-peer connection between the controller and the target. However, it helps to allow UDP connections through ports 19302 and 3478 (the standard STUN and TURN ports). This ensures that if a relay is being utilized, RIM will not have to fall back to a tcp connection on port 443.
 ### Does RIM run in the background, and if so will it appear in my Command+Tab list?
 RIM runs in the background in order to process automatic updates, receive unattended/prompted connection requests, and enable use of the global Option+Shift+Backspace keyboard command. It will not phone home for any other purpose, and no personally identifiable information is transferred.  
 RIM will not appear in your Command+Tab list, but it will appear in the status menus that contain your battery, WiFi connection information, etc.
