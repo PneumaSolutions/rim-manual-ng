@@ -52,6 +52,7 @@
     "next-i18next": "^14.0.3",
     "openai": "^3.3.0",
     "openai-edge": "^1.1.0",
+    "pnpm": "^8.7.4",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-i18next": "^13.2.2",
