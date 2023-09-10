@@ -1,7 +1,8 @@
-    import { MacOS, Windows } from '../../components/platform'
+import { MacOS, Windows } from '@/components/platform'
+
 # Installation
 How you acquire and install Remote Incident Manager depends on your use case and configuration, but in any case the process is quite straight forward.
-<windows>
+<Windows>
 ## Typical Installation for Individuals
 There is only one installation package to use, whether you are offering or receiving assistance.
 1. [Download Remote Incident Manager](https://getrim.app/win)
@@ -25,8 +26,8 @@ and hit enter.
 1. Now, press CTRL+Windows+Enter to enable Narrator. If everything worked properly, you should get speech.  
 You can now follow the install procedure as described above.
 Please note that if you need sound for subsequent connections via RIM, you will need to install a virtual sound output device on your server. The free version of [Virtual Audio Cable](http://virtualaudiocable.org/download/software/VACSetup.exe) should suffice.
-</windows>
-<mac>
+</Windows>
+<MacOS>
 ## Typical Installation for Individuals
 There is only one installation package to use, whether you are offering or receiving assistance.
 1. [Download Remote Incident Manager](https://getrim.app/mac)
@@ -38,7 +39,7 @@ Due to Mac OS's precautionary behavior when dealing with applications of this na
 ### Karabiner HID driver
 This is the driver that processes input that is received by RIM. This is a system extension, thus you must manually approve it. Rim will bring up a system dialogue that will take you to the Privacy and Security section of system settings. You will then want to scroll until you locate the Allow button. Clicking this will prompt you for your password or touch ID, after which you may be informed that you need to reboot in order to fully enable Karabiner Elements. Whether you reboot now or later is up to you, but should you decide not to reboot until all the permissions have been approved, exit out of System Settings and go back into RIM.
 ### Receiving Input
-RIM needs permission to receive all the input directed to it over a remote connection.
+RIM needs permission to receive all the input directed to it over a remote connection.  
 Click "Continue" in the RIM window, at which point a system dialogue requesting accessibility service permissions will appear. If VoiceOver does not immediately focus it, press **VO+F1** twice quickly. Then, down arrow to "System dialogues," press right arrow, and then down to the input permissions request. Pressing enter on that will open the alert box, at which point you will want to follow it to System Settings and check the Remote Incident Manager box in the list of applications.
 ### Capturing Screen Output
 The next permission request from RIM will be for capturing the screen output which will be piped across the remote connection. The procedure for this is similar to the previous procedure.
@@ -46,4 +47,4 @@ The next permission request from RIM will be for capturing the screen output whi
 The final permission request from RIM will be for notifications. RIM will notify you when a session starts and ends. The procedure for granting this permission is similar to the previous procedure.
 ### Welcome Screen!
 After all the permissions have been approved, the welcome screen will appear. Note that if you chose to reboot later, now would be a good time to reboot. At this point, RIM is ready to initiate or receive connections.
-</mac>
+</MacOS>
