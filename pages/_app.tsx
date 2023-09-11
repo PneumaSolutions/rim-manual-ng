@@ -11,6 +11,7 @@ import { PlatformProvider, PlatformSwitcher } from '../components/platform'
 export default function App({ Component, pageProps }: AppProps) {
   return (
 <PlatformProvider>
+<SearchDialog />
       <PlatformSwitcher />
         <Component {...pageProps} />
       <PlatformSwitcher />
