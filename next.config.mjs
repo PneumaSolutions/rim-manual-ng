@@ -1,32 +1,18 @@
-import remarkGfm from 'remark-gfm'
-import createMDX from '@next/mdx'
- 
-/** @type {import('next').NextConfig} */
- 
-const withMDX = createMDX({
-  options: {
-    extension: /\.mdx?$/,
-    remarkPlugins: [remarkGfm],
-    rehypePlugins: [],
-    // If you use `MDXProvider`, uncomment the following line.
-//     providerImportSource: "@mdx-js/react",
-  },
-})
-/** @type {import('next').NextConfig} */
-const nextConfig = {
-  // Configure pageExtensions to include md and mdx
-  pageExtensions: ['ts', 'tsx', 'js', 'jsx', 'md', 'mdx'],
+import { i18n } from './next-i18next.config'; // Import i18n using ES modules
+import remarkGfm from 'remark-gfm'; // Import remark-gfm
+import { withMDX } from '@next/mdx'; // Import withMDX function from @next/mdx
+
+export default {
+  i18n, // Add the i18n configuration
   // Optionally, add any other Next.js config below
   reactStrictMode: true,
-}
- 
-// Merge MDX config with Next.js config
-//module.exports = withMDX(nextConfig)
-//module.exports = {
-  //withMDX(nextConfig);
-//  i18n: {
-//    locales: ['en-US', 'fr', 'nl-NL'],
-//    defaultLocale: 'en-US',
-//  },
-//}
-export default withMDX(nextConfig)
+  // Configure MDX with remark-gfm
+  mdx: {
+    extensions: ['.mdx', '.md'],
+    options: {
+      remarkPlugins: [remarkGfm],
+      // If you use `MDXProvider`, uncomment the following line.
+      // providerImportSource: "@mdx-js/react",
+    },
+  },
+};
