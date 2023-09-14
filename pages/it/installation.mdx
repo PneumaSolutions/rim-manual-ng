@@ -1,0 +1,50 @@
+import { MacOS, Windows } from '@/components/platform'
+
+# Installazione
+Le modalità di acquisizione e installazione di Remote Incident Manager dipendono dal caso d'uso e dalla configurazione, ma in ogni caso il processo è abbastanza semplice.
+<Windows>
+## Installazione tipica per i privati
+Esiste un solo pacchetto di installazione da utilizzare, sia che si offra o si riceva assistenza.
+1. [Scarica Remote Incident Manager](https://getrim.app/win)
+1. Eseguire il file scaricato.
+1. Se il controllo dell'account utente è abilitato, premere Alt+Y per approvare l'installazione.
+1. Una volta lanciato il file, l'installazione inizierà automaticamente. Non è necessario preoccuparsi dei pulsanti successivi. Basta sedersi, rilassarsi e lasciare che il programma faccia il suo dovere. In pochi secondi il programma sarà installato e si avvierà automaticamente.  
+È tutto qui! Verrà creato automaticamente un collegamento sul desktop per facilitare i successivi lanci di RIM. Inoltre, RIM imposta un tasto di scelta rapida globale multifunzionale (Windows+Maiusc+Backspace) che, tra le altre cose, avvia automaticamente il programma ovunque ci si trovi.
+## Installatore ad accesso non presidiato o richiesto
+Se la persona che fornisce l'assistenza ha fornito un programma di installazione personalizzato, l'utente verrà avvisato all'avvio del programma di installazione. Questo installatore configurerà automaticamente RIM per il cosiddetto accesso non presidiato o richiesto. In questo modo la persona che vi assiste potrà avviare una sessione con il vostro computer senza che dobbiate immettere una parola chiave. Questi tipi di sessioni verranno trattati in modo approfondito più avanti in questo manuale.
+## Installazione silenziosa
+Questa operazione va eseguita quando si distribuisce RIM su più computer. È sufficiente utilizzare il parametro della riga di comando **/S** nello script di distribuzione. Si noti che è sensibile alle maiuscole e minuscole, quindi è necessaria la S maiuscola.
+## Considerazioni aggiuntive per i server Windows
+Per installare RIM su un server Windows, collegarsi al server tramite RDP. Per ottenere una connessione più stabile, si consiglia di utilizzare l'applicazione Remote Desktop del Microsoft Store.
+## Ottenere il suono ed eseguire il narratore
+Per ottenere l'audio, una volta connessi, procedere come segue:
+1. Premere il tasto Windows+r.
+1. Digitare cmd e premere invio. Attendere circa dieci secondi.
+1. Digitare:  
+**net start audiosrv**  
+e premere invio.
+1. A questo punto, premere CTRL+Windows+Invio per abilitare il narratore. Se tutto ha funzionato correttamente, si dovrebbe ottenere il parlato.  
+A questo punto è possibile seguire la procedura di installazione descritta sopra.
+Se si ha bisogno del suono per le successive connessioni via RIM, è necessario installare un dispositivo di uscita audio virtuale sul server. La versione gratuita di [Virtual Audio Cable] (http://virtualaudiocable.org/download/software/VACSetup.exe) dovrebbe essere sufficiente.
+</Windows>
+<MacOS>
+## Installazione tipica per i privati
+Esiste un solo pacchetto di installazione da utilizzare, sia che si offra o si riceva assistenza.
+1. [Scarica Remote Incident Manager](https://getrim.app/mac)
+1. Accedere alla cartella dei download tramite Finder (Opzione+comando+L). Individuare il file .pkg scaricato e aprirlo con Command+O.
+1. Verrà visualizzata una procedura guidata di installazione. Seguire le istruzioni sullo schermo.  
+Siete pronti a eseguire Remote Incident Manager per la prima volta! È possibile eseguirlo dalla cartella delle applicazioni, accessibile tramite Command+Shift+A nel Finder. Inoltre, RIM imposta un tasto di scelta rapida globale multifunzionale (Opzione+Maiusc+Backspace) che, tra le altre cose, avvia automaticamente il programma da qualsiasi luogo ci si trovi.
+## Autorizzazioni
+A causa del comportamento precauzionale di Mac OS quando si ha a che fare per la prima volta con applicazioni di questo tipo, è necessario concedere alcuni permessi a Remote Incident Manager al primo avvio.
+### Driver HID Karabiner
+È il driver che elabora gli input ricevuti da RIM. Si tratta di un'estensione di sistema, pertanto è necessario approvarla manualmente. Rim farà apparire una finestra di dialogo di sistema che porterà alla sezione Privacy e sicurezza delle impostazioni di sistema. È necessario scorrere fino a individuare il pulsante Consenti. Facendo clic su questo pulsante verrà richiesta la password o il Touch ID, dopodiché verrà comunicato che è necessario riavviare il sistema per abilitare completamente Karabiner Elements. Sta a voi decidere se riavviare ora o più tardi, ma se decidete di non riavviare finché non sono state approvate tutte le autorizzazioni, uscite da Impostazioni di sistema e tornate in RIM.
+### Ricezione di input
+RIM deve essere autorizzato a ricevere tutti gli input che gli vengono inviati tramite una connessione remota.  
+Fate clic su "Continua" nella finestra di RIM; a questo punto apparirà una finestra di dialogo del sistema che richiede le autorizzazioni per il servizio di accessibilità. Se VoiceOver non la mette subito a fuoco, premere due volte rapidamente **VO+F1**. Quindi, con una freccia verso il basso, andate su "Dialoghi di sistema", premete la freccia verso destra e poi giù fino alla richiesta di permessi di accesso. Premendo Invio si aprirà la finestra di avviso, a questo punto si dovrà seguire il percorso fino a Impostazioni di sistema e selezionare la casella Gestione incidenti remoti nell'elenco delle applicazioni.
+### Catturare l'output dello schermo
+La prossima richiesta di autorizzazione da parte di RIM riguarderà la cattura dell'output dello schermo che verrà trasmesso attraverso la connessione remota. La procedura è simile a quella precedente.
+### Notifiche
+L'ultima richiesta di autorizzazione da parte di RIM riguarda le notifiche. RIM notificherà l'inizio e la fine di una sessione. La procedura per concedere questa autorizzazione è simile a quella precedente.
+### Schermata di benvenuto!
+Dopo che tutti i permessi sono stati approvati, appare la schermata di benvenuto. Se si decide di riavviare in un secondo momento, questo è un buon momento per farlo. A questo punto RIM è pronto per avviare o ricevere connessioni.
+</MacOS>

@@ -1,0 +1,50 @@
+import { MacOS, Windows } from '@/components/platform'
+
+# Installation
+Hur du skaffar och installerar Remote Incident Manager beror på ditt användningsområde och din konfiguration, men processen är i alla fall ganska okomplicerad.
+<Windows>
+## Typisk installation för enskilda personer
+Det finns bara ett installationspaket att använda, oavsett om du erbjuder eller tar emot hjälp.
+1. [Ladda ner Remote Incident Manager](https://getrim.app/win)
+1. Kör den nedladdade filen.
+1. Om du har aktiverat användarkontokontroll trycker du på Alt+Y för att godkänna installationen.
+1. När filen har startats kommer installationen att påbörjas automatiskt. Det finns inga nästa-knappar att oroa sig för. Luta dig bara tillbaka, slappna av och låt den göra sitt. Inom några sekunder kommer programmet att vara installerat och starta automatiskt.  
+Det är allt som behövs! En genväg på skrivbordet skapas automatiskt för att underlätta efterföljande start av RIM. Dessutom skapar RIM en global snabbtangent (Windows+Shift+Backspace) som bl.a. automatiskt startar programmet var du än befinner dig.
+## Installatör med obevakad eller uppmanad åtkomst
+Om den person som ger dig assistans har försett dig med ett anpassat installationsprogram kommer du att informeras om detta när installationsprogrammet startas. Detta beror på att installationsprogrammet automatiskt konfigurerar RIM för vad som kallas antingen obevakad eller uppmanad åtkomst. Detta innebär att den person som hjälper dig kan starta en session med din dator utan att du behöver ange ett nyckelord. Vi kommer att gå igenom dessa typer av sessioner mer ingående längre fram i denna handbok.
+## Tyst installation
+Du kommer att vilja göra detta när du distribuerar RIM till flera maskiner. Använd helt enkelt kommandoradsparametern **/S** i ditt distributionsskript. Observera att det är skiftlägeskänsligt, så ett stort S krävs.
+## Ytterligare överväganden för Windows-servrar
+Installera RIM på din Windows Server genom att ansluta till servern via RDP. För att få en så stabil anslutning som möjligt rekommenderar vi att du använder appen Remote Desktop från Microsoft Store.
+## Skaffa ljud och köra Narrator
+För att få ljud, gör följande när du är ansluten:
+1. Tryck på Windows-tangenten+r.
+1. Skriv cmd och tryck på enter. Vänta ca tio sekunder.
+1. Skriv in:  
+**net starta audiosrv**  
+och tryck på Enter.
+1. Tryck nu på CTRL+Windows+Enter för att aktivera Narrator. Om allt fungerade korrekt bör du få tal.  
+Du kan nu följa installationsproceduren som beskrivs ovan.
+Observera att om du behöver ljud för efterföljande anslutningar via RIM måste du installera en virtuell ljudutgångsenhet på din server. Gratisversionen av [Virtual Audio Cable] (http://virtualaudiocable.org/download/software/VACSetup.exe) bör räcka.
+</Windows>
+<MacOS>
+## Typisk installation för privatpersoner
+Det finns bara ett installationspaket att använda, oavsett om du erbjuder eller tar emot hjälp.
+1. [Ladda ner Remote Incident Manager] (https://getrim.app/mac)
+1. Gå till din nedladdningsmapp via Finder (Alternativ+kommando+L). Leta reda på den nedladdade .pkg-filen och öppna den med Command+O.
+1. En installationsguide visas. Följ anvisningarna på skärmen.  
+Nu är du redo att köra Remote Incident Manager för första gången! Du kan köra programmet från mappen Program, som du når via Kommando+Shift+A i Finder. RIM har dessutom en global snabbtangent (Option+Shift+Backspace) som bland annat automatiskt startar programmet var du än befinner dig.
+## Behörigheter
+På grund av Mac OS:s försiktighetsprincip vid första användningen av den här typen av program måste du ge Remote Incident Manager vissa behörigheter vid första start.
+### Karabiner HID-drivrutin
+Detta är den drivrutin som bearbetar indata som tas emot av RIM. Detta är ett systemtillägg, så du måste godkänna det manuellt. Rim kommer att visa en systemdialog som tar dig till avsnittet Sekretess och säkerhet i systeminställningarna. Du kommer sedan att bläddra tills du hittar knappen Tillåt. Om du klickar på den kommer du att uppmanas att ange ditt lösenord eller touch-ID, varefter du kan få information om att du måste starta om för att aktivera Karabiner Elements fullt ut. Om du startar om nu eller senare är upp till dig, men om du bestämmer dig för att inte starta om förrän alla behörigheter har godkänts, gå ut ur Systeminställningar och gå tillbaka till RIM.
+### Ta emot indata
+RIM behöver tillstånd för att ta emot all input som skickas till den via en fjärranslutning.  
+Klicka på "Fortsätt" i RIM-fönstret, varpå en systemdialog visas som begär behörighet för tillgänglighetstjänster. Om VoiceOver inte omedelbart fokuserar på den, tryck snabbt två gånger på **VO+F1**. Tryck sedan på nedåtpilen till "Systemdialoger", tryck på högerpilen och sedan nedåt till begäran om inmatningsbehörighet. Om du trycker på Enter öppnas varningsrutan, och då bör du följa den till Systeminställningar och markera rutan Remote Incident Manager i listan över program.
+### Inspelning av skärmdata
+Nästa begäran om tillstånd från RIM gäller inspelning av skärmbilden som kommer att skickas över fjärranslutningen. Proceduren för detta liknar den föregående proceduren.
+### Meddelanden
+Den sista begäran om tillstånd från RIM gäller aviseringar. RIM kommer att meddela dig när en session startar och avslutas. Proceduren för att bevilja detta tillstånd liknar den föregående proceduren.
+### Välkomstskärm!
+När alla behörigheter har godkänts visas välkomstskärmen. Observera att om du väljer att starta om senare, är detta en bra tidpunkt för omstart. Vid denna tidpunkt är RIM redo att initiera eller ta emot anslutningar.
+</MacOS>

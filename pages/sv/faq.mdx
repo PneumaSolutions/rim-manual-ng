@@ -1,0 +1,100 @@
+import { MacOS, Windows } from '@/../components/platform'
+
+# Ofta ställda frågor
+Här finns svar på några vanliga frågor om RIM. När du ställs inför ett problem, vänligen hänvisa till detta dokument när det är möjligt. Om din fråga inte behandlas i detta dokument, vänligen [Kontakta oss.](https://pneumasolutions.com/contact/)
+## Kompatibilitet
+### Vilka Windows-versioner stöds?
+Vi stöder Windows7SP1 och senare, samt Windows Server2012 och senare.
+### Vilka Mac OS-versioner stöds?
+RIM stöder Mac OS Ventura tillsammans med framtida versioner, oavsett om de är Intel eller Apple Silicon. Du som Mac-användare kan ge support till Windows-användare, och Windows-användare kan ge support till din Mac.
+### Hur är det med Mac OS-versioner före Ventura?
+Vissa funktioner i RIM är beroende av funktioner som nyligen introducerats i Ventura, vilket gör det svårt att implementera kompatibilitet med tidigare versioner.
+## Installation
+### Varför så många behörighetsförfrågningar för Mac OS?
+Detta ligger tyvärr utanför vår kontroll, eftersom Mac OS kräver att vi använder deras vägar för att begära de nödvändiga behörigheter som behövs för RIM. Vi har ingen kontroll över UX, så vi kan bara gå så långt som att ge så mycket instruktioner som vi kan.
+## Information om anslutningar
+### Generellt sett, hur responsiv är RIM?
+Latensen under en RIM-session är extremt minimal. Eftersom vi inte förlitar oss på en central tjänst är dina anslutningar för det mesta direkta från en dator till en annan - detta är vad som kallas peer-to-peer. Om din nätverkskonfiguration inte tillåter peer-to-peer-anslutningar använder vi oss av ett antal reläer runt om i världen i stället för att förlita oss på en central server. Även då kommer din latens att vara mycket minimal.
+### Var finns era reläer?
+För närvarande erbjuder vi reläer på följande platser:
+* USA
+    * Virginia
+    * Kalifornien
+* Teronto, Kanada
+* London, England
+* Warszawa, Polen
+* Bangalore, Indien
+* Singapore
+* Sidney, Australien
+* Sao Paulo, Brasilien
+
+## Allmän session Felsökning
+### Måldatorn som jag är ansluten till reagerar inte korrekt på tangentbordskommandon som fungerar bra på mitt tangentbord. Vad är det som händer?
+Detta kan bero på en konflikt mellan olika tangentbordslayouter. I sällsynta fall, om en tangentbordslayout skiljer sig tillräckligt mycket från din egen, kan det förvirra RIM. Om detta inträffar ber vi dig att kontakta oss med en rapport som innehåller information om tangentbordslayouten på båda maskinerna.
+### Finns det något som behöver göras för att RIM ska fungera igen efter att en dator har omimagerats och konfigurerats om med samma datornamn? 
+Ta helt enkelt bort maskinen från ditt konto, installera om RIM och lägg sedan till maskinen på ditt konto igen.
+
+## Prissättning och betalningar
+### Så att få hjälp av en person över RIM är helt gratis, eller hur?
+Det kan du ge dig på! Abonnemangen och/eller engångsbetalningarna är till för individer och organisationer som vill erbjuda fjärrhjälp. Du behöver inte oroa dig för att skaffa en prenumeration om du är den som får hjälp. Faktum är att du inte ens behöver skapa ett konto om du bara tar emot hjälp.
+### Jag ägnar mig inte åt fjärrhjälp regelbundet, men jag kanske hjälper en vän eller familjemedlem ibland. Finns det några alternativ som inte kräver en prenumeration?
+Absolut! Vi tillgodoser så många användningsfall som möjligt.
+* Vem som helst kan hjälpa en användare via RIM gratis i upp till 30 minuter per dag. Så om du behöver hjälpa någon att installera en programvara, lösa ett problem snabbt eller skicka över några filer, så har vi något för dig. Dessa minuter behöver inte användas på en gång.
+* Det kommer naturligtvis att finnas situationer där en viss fråga kräver lite mer tid. Eller så kanske du hjälper någon att lära sig en ny programvara och kanske kommer att ansluta till och från under de närmaste dagarna. Det är där våra dagspass och incidentpass kommer in i bilden.
+    * Med incidentpass kan du ansluta till ett enda mål så många gånger som behövs under en 24-timmarsperiod.
+    * Med dagspass kan du ansluta till flera mål under en 24-timmarsperiod.
+    * Paket med förbetalda timmar innebär att du har ett visst antal timmar tillgängliga som du kan använda helt på egen tid.
+* Du kan samla på dig flera av dessa pass och timpaket och använda dem när det passar dig. Om du t.ex. har flera dagspass behöver du inte använda dem i följd. På samma sätt behöver du inte använda dina förbetalda timmar under en session eller 24-timmarsperiod.
+
+### Jag har köpt ett paket med förbetalda timmar. Vad händer med min kostnadsfria dagliga tilldelning?
+Goda nyheter: Din kostnadsfria dagliga tilldelning på 30 minuter kommer inte att försvinna! När du startar en sökordsbaserad session kommer RIM att börja med att använda din kostnadsfria dagliga tilldelning på 30 minuter. Din förbetalda tid kommer att användas efter att dina fria 30 minuter är slut.
+### Hur länge räcker mina förbetalda timmar? Är de kopplade till min prenumeration?
+Förbetalda timmar är helt skilda från din prenumeration. Med detta sagt kommer dina förbetalda timmar att finnas kvar på ditt konto i ett (1) år efter det datum då de först användes.
+### Hur går jag tillväga för att göra min arbetsplats uppmärksam på RIM?
+Vi har sammanställt ett [Self-Advocacy Kit] (https://sak.getrim.app) (SAK). Ett paket med brev i e-postformat som du kan skicka till lämpliga personer för din egen eller en anställds räkning. RIM tillhandahåller samma funktioner som mindre tillgängliga vanliga lösningar. RIM kan därför ersätta en befintlig infrastruktur, snarare än att användas vid sidan av en sådan. Det anses därför vara en rimlig tillgänglighetsanpassning och bör tillhandahållas av din organisation. Tillgänglighet är inte en tjänst, det är en rättighet till inkludering.
+### Vilka betalningsmetoder accepterar ni?
+Vi hanterar betalningar via Stripe, så vi kan direkt acceptera Visa, Mastercard, Amex eller Discover. Dessutom kan Stripe ta emot betalningar via Google Pay.
+### Hur fungerar dessa pass? Börjar klockan omedelbart efter betalning, eller den dag jag initierar sessionen?
+Pass börjar gälla först när den personuppgiftsansvarige initierar sessionen. Så om målets maskin går sönder och de måste åka till verkstaden och det inte går att få en tid samma dag, kan du helt enkelt vänta tills maskinen är tillbaka i gott skick och ditt dagspass kommer fortfarande att vänta på dig.
+### Så detta innebär att dessa pass inte upphör att gälla?
+Nej. Du kan vara säker på att dina dagspass kommer att vänta tålmodigt på att du ska aktivera dem när du är redo.
+### Vad händer om jag ansluter till en annan maskin samma dag som ett incidentpass har använts?
+Det beror på. Om maskinen ingår i ditt abonnemang, dvs. om du ansluter till din hemmaskin medan du är på resande fot, är det som vanligt. Alla andra anslutningar som inte är det ursprungliga målet du anslöt till kommer att fungera under den vanliga 30-minuters tilldelningen.
+### Jag har en aktiv personlig prenumeration. Kommer jag fortfarande att kunna hjälpa en användare utanför målgruppen i upp till 30 minuter, eller via ett pass?
+Ja! Din dagliga tilldelning på 30 minuter gäller fortfarande för alla maskiner utanför ditt abonnemang. Dessutom ersätter en prenumeration inte några befintliga passerkort som du kan ha.
+### Jag har en personlig prenumeration och måldatorn genomgick en hårdvaruuppgradering. Kommer Rim att räkna detta som ett maskinbyte?
+Endast om RIM behöver installeras om. Så även om en uppgradering av hårddisken eller någon annan situation som kräver en ominstallation av Windows skulle betraktas som ett maskinbyte, skulle en uppgradering av RAM-minnet inte göra det.
+### Vårt företag köpte pro-prenumerationen, men vi har två tekniker - en som arbetar med helpdesk på dagtid och en systemunderhållstekniker som arbetar på kvällen. Skulle vi kunna tilldela kvällens sysadmin en controllerplats?
+Ja, absolut. I situationer där flera tekniker använder RIM erbjuder vi vid behov upp till två (2) extra controller-platser för 50 USD per månad och plats - 500 USD per år och plats - som komplement till pro-planen. Detta gör det enklare för flera controllers på olika arbetsstationer eller kontor att tillhandahålla fjärrsupport.  
+Om du har flera kontrollantplatser kan du köpa ytterligare kanaler för dem så att sessioner kan köras samtidigt. Varje extra kanal kostar 50 USD per månad eller 500 USD per år. 
+
+## Säkerhet
+### Är RIM-sessioner krypterade?
+Ja, det är de. Alla sessioner på alla plattformar, oavsett om det är direkta peer-to-peer-anslutningar eller anslutningar som använder ett relä, krypteras från början till slut med Datagram Transport Layer Security (DTLS). Detta är samma teknik som används i HTTPS-protokollet som moderna webbplatser implementerar för säkerhets skull.
+### Kan Pneuma Solutions tjuvlyssna på sessioner som vidarebefordras av det publika molnet?
+Nej. Förhandling om sessionsnyckel och kryptering utförs end-to-end mellan styrenheten och målet. Med andra ord krypteras allt innan det ens lämnar din enhet. På så sätt vidarebefordrar molntjänsten bara uppgifterna som de är, vilket gör det omöjligt för tjänsten att dechiffrera uppgifterna.
+### Vilka åtgärder har vidtagits för att förhindra RCE-sårbarheter (Remote Code Execution)?
+All RIM-kod som exponeras för indata från nätverket är skriven i [memory-safe programming languages] (https://www.memorysafety.org/docs/memory-safety/), inklusive Rust och JavaScript.
+### Är RIM förenligt med HIPAA?
+Ja. Den bästa konfigurationen i detta fall skulle vara en lokal driftsättning, så vänligen [kontakta oss](https://pneumasolutions.com/contact/) om ditt användningsfall är beroende av detta.
+### Behöver några portar öppnas på målet eller styrenheten?
+Nej och nej.
+### Vilka anslutningar måste tillåtas i ett nätverk för att RIM ska fungera?
+Vid användning av det offentliga molnet krävs en https-anslutning till [getrim.app](https://getrim.app). I optimala fall är detta tillräckligt för att RIM ska kunna upprätta en peer-to-peer-anslutning mellan styrenheten och målet. Det är dock bra att tillåta UDP-anslutningar via portarna 19302 och 3478 (standardportarna för STUN och TURN). Detta säkerställer att RIM, om ett relä används, inte behöver återgå till en tcp-anslutning på port 443.
+### Körs RIM i bakgrunden, och kommer det i så fall att visas i min Command+Tab-lista?
+RIM körs i bakgrunden för att bearbeta automatiska uppdateringar, ta emot obevakade/förberedda anslutningsförfrågningar och möjliggöra användning av det globala tangentbordskommandot Option+Shift+Backspace. Den kommer inte att ringa hem för något annat ändamål och ingen personligt identifierbar information överförs.  
+RIM visas inte i Command+Tab-listan, men däremot i statusmenyerna som innehåller information om batteri, WiFi-anslutning osv.
+## Modul för fjärråtkomst
+### Finns det något som måldatorn behöver konfigurera för att kunna använda Fjärråtkomstmodulen för första gången?
+Inte alls! Det finns inga dialogrutor, skärmar för begäran om tillstånd eller något liknande.
+### Fungerar fjärrtillgänglighetsmodulen på säkra skärmar som t.ex. låsskärmen?
+Ja, det gör den! Eftersom RIM-värden körs med förhöjda behörigheter kan vi använda fjärrtillgänglighetsmodulen för säkra skärmar. Det enda undantaget till detta är FileVaults inloggningsfönster.
+## Obevakade sessioner
+### Stöds röstkonversationer under obevakade sessioner?
+Nej, men sessioner med uppmaning stöder röstkonversationer.
+### Om jag tar bort en obevakad maskin från mitt kontrollantkonto, kommer det automatiskt att återkalla behörigheten för målet?
+Ja, det gör det. När ett obevakat mål tas bort träder ändringen i kraft omedelbart. Om målmaskinen är avstängd eller på annat sätt inte är ansluten till internet träder ändringen i kraft så snart en internetanslutning upprättas på maskinen.
+### Målmaskinen startades om efter installation av uppdateringar och drivrutiner, och det krävs ett lösenord för att logga in. Hur fortsätter sessionen härifrån?
+I de flesta fall, särskilt när FileVault-diskkryptering är aktiverad, måste målanvändaren ange lösenordet manuellt. RIM kan inte starta på en krypterad Mac innan den har varit helt inloggad.
+### Jag har flera maskiner som spelar rollen som styrenhet. Kommer listan över maskiner som konfigurerats för obevakad åtkomst att fyllas i på alla maskiner?
+Ja, listan över maskiner som konfigurerats för obevakad åtkomst lagras i ditt konto, så den fylls i automatiskt.

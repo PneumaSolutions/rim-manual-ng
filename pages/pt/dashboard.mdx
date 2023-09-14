@@ -1,0 +1,58 @@
+import { MacOS, Windows } from '@/../components/platform'
+
+# O painel de gerenciamento do RIM
+O RIM apresenta um painel de controle baseado na Web para facilitar várias tarefas de gerenciamento de máquinas e contas. Você pode gerenciar seus computadores autônomos existentes, criar instaladores pré-configurados para computadores de destino e muito mais.  
+Deve-se observar que o conjunto de recursos do painel depende muito do nível de assinatura da sua conta. Por exemplo, os usuários corporativos podem atribuir máquinas a grupos-alvo, bem como criar instaladores silenciosos. Por outro lado, qualquer pessoa (inclusive usuários pessoais) pode criar instaladores personalizados para suas máquinas autônomas.
+## Localização do painel
+Se você for um controlador, a maneira mais fácil de acessar o painel é por meio da interface principal do RIM. Clicar no botão RIM Dashboard abrirá automaticamente o painel em seu navegador padrão, com o login já feito.  
+Se você for um administrador de rede que não tem o RIM instalado, basta fazer login na sua conta no site do RIM e o painel será exibido.
+## Gerenciando alvos
+Ao clicar no link "Configure Targets" (Configurar alvos), você chegará a uma página que permite gerenciar todas as máquinas que você configurou para acesso não supervisionado. Você pode clicar em qualquer uma dessas máquinas para gerenciá-la. Uma vez lá dentro, você poderá:
+* Renomear o alvo
+* Mover o alvo para um grupo diferente (falaremos mais sobre grupos de alvos posteriormente)
+* Excluir o alvo
+
+## Grupos de alvos (para contas Pro e superiores)
+Digamos, por exemplo, que seu grupo de trabalho esteja espalhado por vários locais diferentes. Ou talvez você queira designar grupos de máquinas para seus técnicos de manutenção de rotina. Os grupos de destino permitem que você faça exatamente isso. Para fazer isso, basta clicar no botão "Create Target Group" (Criar grupo de destino), nomear o grupo e enviar.  
+Você pode ter tantos grupos-alvo quantos forem necessários para o seu caso de uso. 
+controle de acesso ### (para organizações empresariais)
+Se a sua organização atribuir um técnico de suporte a um conjunto específico de máquinas, você provavelmente desejará garantir que ele só tenha acesso a esse conjunto específico. É aí que entra a configuração de controle de acesso para grupos de destino.  
+Quando você clica em um grupo de destino, recebe opções para gerenciar as máquinas do grupo, bem como o próprio grupo. A seção de controle de acesso é onde você pode conceder acesso a esse grupo por conta. Basta digitar o endereço de e-mail da conta que deseja adicionar e clicar no botão "Give Access" (Conceder acesso). Feito isso, você verá uma tabela com as contas que têm acesso a esse grupo. Abaixo de cada conta há um botão "Revoke Access" (Revogar acesso). Esse botão não requer confirmação adicional.  
+Deve-se observar que todos os administradores da organização recebem automaticamente acesso para gerenciar todo e qualquer grupo criado na organização.
+## Configuração de um instalador RIM pré-configurado (Pro ou superior)
+Uma das maneiras mais fáceis de configurar uma máquina para conexões autônomas ou solicitadas é criar um instalador personalizado. Isso é extremamente útil se você estiver configurando implantações em massa ou até mesmo como uma maneira mais simples de colocar o RIM em funcionamento no computador de um usuário final para o qual você planeja fornecer suporte regularmente.
+
+Para fazer isso:
+1. Na tela de gerenciamento de destino, clique no botão "Build Target Installer" (Criar instalador de destino).
+1. Primeiro, será perguntado se você deseja que essa máquina seja configurada para acesso totalmente autônomo ou para acesso solicitado, no qual o usuário precisa aceitar um prompt para iniciar a conexão.
+1. Em seguida, será solicitado que você atribua um grupo-alvo. Observe que a seleção do grupo de destino irá automaticamente para o grupo de destino escolhido se você iniciar a configuração do instalador a partir da página do seu grupo.
+1. Você será perguntado por quanto tempo deseja que esse instalador seja válido. Ele pode ser válido por qualquer período entre 7 e 30 dias. Observe que esse período de tempo afeta apenas a funcionalidade do pacote de instalação. Em outras palavras, a configuração RIM da máquina não será desativada quando a instalação expirar.
+1. Em seguida, você terá a opção de atribuir um nome de baixo. Qualquer máquina provisionada por meio desse pacote de instalação terá esse nome de base atribuído a ela.
+1. Se você for um administrador corporativo, verá uma caixa de seleção que permite criar o instalador como um pacote MSI. Essa opção é útil para a implantação em massa de um instalador personalizado em um cluster de máquinas que será designado para um determinado grupo-alvo.
+1. Você será solicitado a fornecer um nome para o instalador e, opcionalmente, algumas observações. Elas são para registros internos e não aparecerão no instalador criado.
+1. Clique em "Build Installer" (Criar instalador) Será apresentado o link de download que pode ser copiado para a área de transferência e enviado ao usuário final. Como alternativa, você pode fazer o download do instalador diretamente para uso em implementações em massa.
+
+Agora que você tem o instalador, ele pode ser executado de duas maneiras. Em ambos os casos, a máquina será adicionada à sua lista de máquinas em sua conta e no cliente RIM após a conclusão do instalador.
+### Execução normal
+O usuário receberá um aviso ao executar o instalador, contendo as seguintes informações:
+* O nome do técnico junto com sua organização, se aplicável
+* a natureza da conexão, ou seja, se um prompt é necessário ou não
+
+O usuário pode optar por responder sim ou não à instalação. Se responder não, a instalação será cancelada. Após a conclusão do instalador, o usuário receberá um aviso informando que o computador está agora configurado para acesso remoto.
+### Instalação silenciosa (somente instaladores Enterprise)
+Uma instalação silenciosa pode ser iniciada com a execução do instalador executável com o parâmetro de linha de comando */S*. Isso é útil ao instalar o RIM como parte de uma rotina de implementação em massa.
+## Histórico da sessão
+Você pode visualizar todo o histórico de sessões anteriores por meio do painel do RIM. Atualmente, o histórico de sessões contém a data e a hora de cada sessão, o nome do computador ao qual você se conectou e a duração da sessão. Você também pode optar por adicionar comentários a uma sessão por meio do link "Add Comment" (Adicionar comentário) na linha da sessão. Isso é útil para adicionar notas sobre o status atual de um incidente, tanto para seu próprio benefício quanto para o dos administradores da organização.
+## Gerenciando sua assinatura (planos Personal e Pro)
+O painel permite que você visualize e gerencie facilmente os detalhes da sua assinatura do RIM. Ao clicar no link "gerenciar assinatura", você pode:
+* Fazer upgrade do seu plano
+* Atualizar seu método de pagamento
+* Cancelar pagamentos recorrentes
+
+### Atualizando seu plano
+Você pode atualizar facilmente sua assinatura. Se você estiver em um plano mensal, a cobrança restante do novo valor será rateada, e o novo valor total será cobrado nos meses subsequentes. Clicar em "Upgrade Subscription" revela uma página quase idêntica à página de seleção do plano inicial. Há algumas diferenças notáveis que descreveremos a seguir:
+* Não é possível fazer downgrade de seu plano para um com menos máquinas. No entanto, é possível fazer upgrade de um plano mensal para um plano anual com o mesmo número de máquinas do seu plano atual. Para fazer o downgrade, você precisaria cancelar seu plano, esperar que ele expire e, em seguida, iniciar um novo plano com menos máquinas.
+* Os planos empresariais, inclusive o complemento empresarial, não podem ser adquiridos diretamente por meio desta página.
+
+### Cancelamento de pagamentos recorrentes
+Quando você clicar em "Cancel Automatic Renewal" (Cancelar renovação automática), será solicitada uma confirmação, após a qual sua assinatura será definida para expirar no final do período atual.
