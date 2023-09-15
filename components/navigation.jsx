@@ -6,7 +6,7 @@ function Navigation() {
 
     <nav>
     <ul>
-        <a href="/">Welcome</a>
+        <link href="/">Welcome</link>
     </ul>
 </nav>
     );
