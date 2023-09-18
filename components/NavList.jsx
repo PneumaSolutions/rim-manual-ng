@@ -1,4 +1,4 @@
-// components/Navigation.jsx
+// components/\NavList.jsx
 
 import Link from 'next/link';
 function Navigation() {
@@ -6,9 +6,9 @@ function Navigation() {
 
     <nav>
     <ul>
-        <a href="systemspecs">System Requirements</a>
+        <Link href="systemspecs">System Requirements</Link>
     </ul>
 </nav>
     );
     }
-    export default Navigation;
+    export default NavList;

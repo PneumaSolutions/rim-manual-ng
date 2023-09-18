@@ -7,13 +7,13 @@ import { SearchDialog } from '@/components/SearchDialog'
 import Image from 'next/image'
 import Link from 'next/link'
 // @ts-ignore  
-import  Navigation from '@/components/Navigation'
+import  NavList from '@/components/NavList'
 import { PlatformProvider, PlatformSwitcher } from '../components/platform'
 
 export default function app({ Component, pageProps }: AppProps) {
   return (
 <PlatformProvider>
-<Navigation />
+<NavList />
 <SearchDialog />
       <PlatformSwitcher />
         <Component {...pageProps} />
