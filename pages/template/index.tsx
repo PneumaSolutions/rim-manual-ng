@@ -21,7 +21,7 @@ export default function Home() {
       </Head>
       <main className={styles.main}>
 <h1>Welcome!</h1>
-Copyright © 2023 <a href="https://pneumasolutions.com">Pneuma Solutions</a>
+Copyright © 2023 [Pneuma Solutions](https://www.pneumasolutions.com)  
 <p><em>Remote Incident Manager</em> (RIM) is a powerful, cross-platform fully accessible remote desktop application used to provide technical support, training, and system administration to clients both visually impaired and sighted alike. In addition to providing a streamlined remote desktop experience, RIM has a few unique qualities previously unseen in other remote desktop applications.</p>
 <h2>Why RIM?</h2>
 <p>If you are coming from previous remote desktop applications or screen reader-based assistance tools, you will find that RIM significantly streamlines your workflow.</p>
