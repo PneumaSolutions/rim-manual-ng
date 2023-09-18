@@ -1,6 +1,6 @@
 import remarkGfm from 'remark-gfm'
 import createMDX from '@next/mdx'
- 
+import { i18n } from './next-i18next.config.mjs';
 /** @type {import('next').NextConfig} */
  
 const withMDX = createMDX({
@@ -18,15 +18,8 @@ const nextConfig = {
   pageExtensions: ['ts', 'tsx', 'js', 'jsx', 'md', 'mdx'],
   // Optionally, add any other Next.js config below
   reactStrictMode: true,
+    // Include i18n configuration
+    i18n,
 }
  
-// Merge MDX config with Next.js config
-//module.exports = withMDX(nextConfig)
-//module.exports = {
-  //withMDX(nextConfig);
-//  i18n: {
-//    locales: ['en-US', 'fr', 'nl-NL'],
-//    defaultLocale: 'en-US',
-//  },
-//}
 export default withMDX(nextConfig)

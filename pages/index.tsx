@@ -1,3 +1,4 @@
+import { useTranslation } from 'next-i18next'
 import { MDXProvider } from '@mdx-js/react'
 import Head from 'next/head'
 import { Inter } from 'next/font/google'
@@ -10,10 +11,11 @@ import Welcome from './welcome.mdx'
 const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
+  const { t } = useTranslation();
   return (
     <>
       <Head>
-        <title>Remote Incident Manager Documentation</title>
+        <title>{t('app_title')}</title>
         <meta
           name="description"
           content="Documentation for Remote Incident Manager"

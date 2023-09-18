@@ -1,4 +1,5 @@
 import { appWithTranslation } from 'next-i18next';
+import { useTranslation } from 'next-i18next'
 import '@/styles/globals.css'
 import type { AppProps } from 'next/app'
 import Head from 'next/head'
@@ -11,7 +12,8 @@ import  NavList from '@/components/NavList'
 import { PlatformProvider, PlatformSwitcher } from '../components/platform'
 
 export default function app({ Component, pageProps }: AppProps) {
-  return (
+  const { t } = useTranslation();
+    return (
 <PlatformProvider>
 <NavList />
 <SearchDialog />
