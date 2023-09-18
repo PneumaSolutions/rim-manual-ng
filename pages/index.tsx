@@ -10,7 +10,7 @@ import Link from 'next/link'
 import Welcome from './welcome.mdx'
 const inter = Inter({ subsets: ['latin'] })
 
-export default function Home() {
+export default function Home({ lang }) {
   const { t } = useTranslation();
   return (
     <>
