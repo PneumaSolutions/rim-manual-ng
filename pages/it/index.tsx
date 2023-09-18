@@ -5,6 +5,7 @@ import styles from '@/styles/Home.module.css'
 import { SearchDialog } from '@/components/SearchDialog'
 import Image from 'next/image'
 import Link from 'next/link'
+// @ts-ignore  
 import Welcome from './welcome.mdx'
 const inter = Inter({ subsets: ['latin'] })
 
