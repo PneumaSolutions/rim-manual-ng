@@ -1,7 +1,7 @@
 // components/\NavList.jsx
 
 import Link from 'next/link';
-function Navigation() {
+function NavList() {
     return (
 
     <nav>
