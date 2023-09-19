@@ -12,7 +12,7 @@ import Link from 'next/link'
 import  NavList from '@/components/NavList'
 import { PlatformProvider, PlatformSwitcher } from '../components/platform'
 
-export default function App({ Component, pageProps }: AppProps) {
+function App({ Component, pageProps }: AppProps) {
   const { t } = useTranslation();
     return (
 <PlatformProvider>
@@ -36,3 +36,5 @@ export async function getStaticProps(context) {
     },
   }
 }
+
+export default appWithTranslation(App)
