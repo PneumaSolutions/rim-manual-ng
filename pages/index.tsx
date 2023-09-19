@@ -9,13 +9,12 @@ import Link from 'next/link'
 // @ts-ignore  
 import Welcome from './welcome.mdx'
 const inter = Inter({ subsets: ['latin'] })
-
-export default function Home({ lang }) {
+export default function Home() {
   const { t } = useTranslation();
   return (
     <>
       <Head>
-        <title>{t('app_title')}</title>
+        <title>{t('home_title')}</title>
         <meta
           name="description"
           content="Documentation for Remote Incident Manager"

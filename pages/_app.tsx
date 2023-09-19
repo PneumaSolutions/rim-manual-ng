@@ -1,4 +1,5 @@
 import { appWithTranslation } from 'next-i18next';
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 import { useTranslation } from 'next-i18next'
 import '@/styles/globals.css'
 import type { AppProps } from 'next/app'
@@ -22,4 +23,16 @@ export default function App({ Component, pageProps }: AppProps) {
       <PlatformSwitcher />
     </PlatformProvider>
   )
+}
+// @ts-ignore  
+export async function getStaticProps(context) {
+  // extract the locale identifier from the URL
+  const { locale } = context
+
+  return {
+    props: {
+      // pass the translation props to the page component
+      ...(await serverSideTranslations(locale)),
+    },
+  }
 }
