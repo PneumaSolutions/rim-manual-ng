@@ -1,4 +1,6 @@
 import { useTranslation } from 'next-i18next'
+import { getStaticPaths, makeStaticProps } from '@/lib/getStatic'
+import { Redirect } from '../lib/redirect'
 import { MDXProvider } from '@mdx-js/react'
 import Head from 'next/head'
 import { Inter } from 'next/font/google'
@@ -10,7 +12,7 @@ import Link from 'next/link'
 import Welcome from './welcome.mdx'
 const inter = Inter({ subsets: ['latin'] })
 export default function Home() {
-  const { t } = useTranslation();
+  const { t } = useTranslation(['common']);
   return (
     <>
       <Head>
@@ -30,3 +32,5 @@ export default function Home() {
     </>
   )
 }
+const getStaticProps = makeStaticProps(['common'])
+export { getStaticPaths, getStaticProps }

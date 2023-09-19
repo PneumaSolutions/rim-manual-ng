@@ -50,6 +50,7 @@
     "micromark-extension-mdxjs": "^1.0.0",
     "next": "13.2.4",
     "next-i18next": "^14.0.3",
+    "next-language-detector": "^1.0.2",
     "openai": "^3.3.0",
     "openai-edge": "^1.1.0",
     "pnpm": "^8.7.4",
