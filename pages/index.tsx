@@ -1,5 +1,5 @@
 import { useTranslation } from 'next-i18next'
-import { getStaticPaths, makeStaticProps } from '@/lib/getStatic'
+import { makeStaticProps } from '@/lib/getStatic'
 import { Redirect } from '../lib/redirect'
 import { MDXProvider } from '@mdx-js/react'
 import Head from 'next/head'
@@ -33,4 +33,4 @@ export default function Home() {
   )
 }
 const getStaticProps = makeStaticProps(['common'])
-export { getStaticPaths, getStaticProps }
+export { getStaticProps }
