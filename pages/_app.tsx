@@ -11,7 +11,7 @@ import Link from 'next/link'
 // @ts-ignore  
 import  NavList from '@/components/NavList'
 import { PlatformProvider, PlatformSwitcher } from '../components/platform'
-
+import LanguageSwitcher from '@/components/LanguageSwitcher';
 function App({ Component, pageProps }: AppProps) {
   const { t } = useTranslation();
     return (
@@ -21,18 +21,19 @@ function App({ Component, pageProps }: AppProps) {
       <PlatformSwitcher />
         <Component {...pageProps} />
       <PlatformSwitcher />
+      <LanguageSwitcher />
     </PlatformProvider>
   )
 }
 // @ts-ignore  
 export async function getStaticProps(context) {
   // extract the locale identifier from the URL
-  const { locale } = context
+  const { locale } = context;
 
   return {
     props: {
       // pass the translation props to the page component
-      ...(await serverSideTranslations(locale)),
+      ...(await serverSideTranslations(locale, ['common'])),
     },
   }
 }

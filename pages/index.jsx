@@ -12,7 +12,7 @@ import Link from 'next/link'
 import Welcome from './welcome.mdx'
 const inter = Inter({ subsets: ['latin'] })
 export default function Home() {
-  const { t } = useTranslation(['common']);
+  const { t } = useTranslation();
   return (
     <>
       <Head>
@@ -26,7 +26,7 @@ export default function Home() {
       </Head>
       <main className={styles.main}>
       <MDXProvider>
-<Welcome />
+    <Welcome />
       </MDXProvider>
       </main>
     </>
