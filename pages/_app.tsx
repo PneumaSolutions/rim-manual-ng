@@ -1,6 +1,5 @@
-import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
-import { getLangFromUrl, useTranslations } from '@/i18n/utils';
-import { languages } from '@/i18n/ui';
+// import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
+import useTranslation from "@/hooks/useTranslation";
 import '@/styles/globals.css'
 import type { AppProps } from 'next/app'
 import Head from 'next/head'
@@ -12,9 +11,12 @@ import Link from 'next/link'
 import  NavList from '@/components/NavList'
 import { PlatformProvider, PlatformSwitcher } from '../components/platform'
 import LanguageSwitcher from '@/components/LanguageSwitcher';
-function App({ Component, pageProps }: AppProps) {
-  const { t } = useTranslations();
+//function app({ Component, pageProps }: AppProps) {
+  export default function App({ Component, pageProps }: AppProps) {
+
+    const { t } = useTranslation();
     return (
+
 <PlatformProvider>
 <NavList />
 <SearchDialog />

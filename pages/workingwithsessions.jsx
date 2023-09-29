@@ -1,5 +1,4 @@
-import { useTranslation } from 'next-i18next'
-import { makeStaticProps } from '@/lib/getStatic'
+import useTranslation from "@/hooks/useTranslation";
 import { Redirect } from '../lib/redirect'
 import { MDXProvider } from '@mdx-js/react'
 import Head from 'next/head'
