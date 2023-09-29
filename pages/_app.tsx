@@ -11,6 +11,7 @@ import Link from 'next/link'
 import  NavList from '@/components/NavList'
 import { PlatformProvider, PlatformSwitcher } from '../components/platform'
 import LanguageSwitcher from '@/components/LanguageSwitcher';
+// import { MDXLayout } from '@/components/MDXLayout';
 //function app({ Component, pageProps }: AppProps) {
   export default function App({ Component, pageProps }: AppProps) {
 
