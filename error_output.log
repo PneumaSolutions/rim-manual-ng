@@ -1,7 +1,0 @@
-uncaughtException [Error: EPERM: operation not permitted, open 'C:\Users\Jack\Documents\GitHub\PneumaSolutions\rim-manual-ng\.next\trace'] {
-  errno: -4048,
-  code: 'EPERM',
-  syscall: 'open',
-  path: 'C:\\Users\\Jack\\Documents\\GitHub\\PneumaSolutions\\rim-manual-ng\\.next\\trace'
-}
-[?25h
