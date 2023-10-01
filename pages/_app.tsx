@@ -43,7 +43,6 @@ export async function getStaticProps(context) {
     props: {
       // pass the translation props to the page component
       // ...(await serverSideTranslations(locale, ['common'])),
-            mdxTitle: frontmatter.title,
 
     },
   }
