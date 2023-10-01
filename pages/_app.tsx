@@ -9,6 +9,8 @@ import Image from 'next/image'
 import Link from 'next/link'
 // @ts-ignore  
 import  NavList from '@/components/NavList'
+// @ts-ignore  
+import  FooterNav from '@/components/FooterNav'
 import { PlatformProvider, PlatformSwitcher } from '../components/platform'
 import LanguageSwitcher from '@/components/LanguageSwitcher';
 // import { MDXLayout } from '@/components/MDXLayout';
@@ -19,12 +21,16 @@ import LanguageSwitcher from '@/components/LanguageSwitcher';
     return (
 
 <PlatformProvider>
+<Head>
+  <title>{pageProps.mdxTitle || 'Default Title'}</title>
+</Head>
 <NavList />
 <SearchDialog />
       <PlatformSwitcher />
         <Component {...pageProps} />
       <PlatformSwitcher />
       <LanguageSwitcher />
+  <FooterNav />
     </PlatformProvider>
   )
 }
@@ -36,7 +42,9 @@ export async function getStaticProps(context) {
   return {
     props: {
       // pass the translation props to the page component
-      ...(await serverSideTranslations(locale, ['common'])),
+      // ...(await serverSideTranslations(locale, ['common'])),
+            mdxTitle: frontmatter.title,
+
     },
   }
 }

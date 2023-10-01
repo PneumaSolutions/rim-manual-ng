@@ -18,10 +18,6 @@ const nextConfig = {
   // Optionally, add any other Next.js config below
   reactStrictMode: false,
     // Include i18n configuration
-    i18n: {
-      locales: ["en", "es"],
-      defaultLocale: "en",
-    },
   }
  
 export default withMDX(nextConfig)
