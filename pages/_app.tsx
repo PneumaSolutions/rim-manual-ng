@@ -16,7 +16,6 @@ import LanguageSwitcher from '@/components/LanguageSwitcher';
 //function app({ Component, pageProps }: AppProps) {
   export default function App({ Component, pageProps }: AppProps) {
 
-    const { t } = useTranslation();
     return (
 
 <PlatformProvider>
