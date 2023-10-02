@@ -33,7 +33,10 @@ let prevPath="/";
 let prevText="Previous Section";
 let nextPath="/";
 let nextText="Next Section";
-
+if (router.asPath.match(/^\/(en|es|fr|it|sv|de|pt)\/?$/)) {
+  prevPath=null;
+  nextPath=specsPath;
+}
 if (router.asPath.includes('/systemspecs')) {
     prevPath = homePath;
     nextPath= instPath;
@@ -69,7 +72,7 @@ if (router.asPath.includes('/systemspecs')) {
   
   return (
     <footer>
-      <Link role="button" href={prevPath}>{prevText}</Link>
+      {router.asPath.match(/^\/(en|es|fr|it|sv|de|pt)\/?$/) ? null : <Link role="button" href={prevPath}>{prevText}</Link>}
       {router.asPath.includes('/changelog') ? null : <Link role="button" href={nextPath}>{nextText}</Link>}
     </footer>
     
