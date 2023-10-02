@@ -31,6 +31,7 @@ function NavList() {
 
   return (
     <nav>
+      <Link href={homePath}>{homeText}</Link>
       <Link href={specsPath}>{specsText}</Link>
       <Link href={instPath}>{instText}</Link>
       <Link href={gcPath}>{gcText}</Link>
