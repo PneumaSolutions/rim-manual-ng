@@ -19,7 +19,8 @@ const languageMappings = {
     planPath: "/en/plans",
     planText: "Plans and Purchasing",
     clPath: "/en/changelog",
-    clText: "Change Log"
+    clText: "Change Log",
+    langChangeText: "Language:"
   },
   es: {
     homePath: "/es",
@@ -39,7 +40,9 @@ const languageMappings = {
     planPath: "/es/plans",
     planText: "Planes y compras",
     clPath: "/es/changelog",
-    clText: "Registro de cambios"    
+    clText: "Registro de cambios",    
+    langChangeText: "Idioma:"
+
   },
   fr: {
     homePath: "/fr",
@@ -59,7 +62,9 @@ const languageMappings = {
     planPath: "/fr/plans",
     planText: "Plans et achats",
     clPath: "/fr/changelog",
-    clText: "Journal des modifications"
+    clText: "Journal des modifications",
+    langChangeText: "Langue:"
+
   },
   it: {
     homePath: "/it",
@@ -79,7 +84,9 @@ const languageMappings = {
     planPath: "/it/plans",
     planText: "Piani e acquisti",
     clPath: "/it/changelog",
-    clText: "Registro delle modifiche"
+    clText: "Registro delle modifiche",
+    langChangeText: "Lingua:"
+
   },
   de: {
     homePath: "/de",
@@ -99,7 +106,9 @@ const languageMappings = {
     planPath: "/de/plans",
     planText: "Planen und Kaufeng",
     clPath: "/de/changelog",
-    clText: "Änderungsprotokoll"
+    clText: "Änderungsprotokoll",
+    langChangeText: "Sprache:"
+
   },
   sv: {
     homePath: "/sv",
@@ -119,7 +128,9 @@ const languageMappings = {
     planPath: "/sv/plans",
     planText: "Planer och inköp",
     clPath: "/sv/changelog",
-    clText: "Ändra logg"
+    clText: "Ändra logg",
+    langChangeText: "Språk:"
+
   },
   pt: {
     homePath: "/pt",
@@ -139,7 +150,9 @@ const languageMappings = {
     planPath: "/pt/plans",
     planText: "Planos e compras",
     clPath: "/pt/changelog",
-    clText: "Registro de alterações"
+    clText: "Registro de alterações",
+    langChangeText: "Idioma:"
+
   },
 };
 

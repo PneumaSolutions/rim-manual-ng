@@ -3,10 +3,19 @@
 import { useRouter } from 'next/router';
 import Link from 'next/link';
 import languageMappings from '@/components/languageMappings'; // translation dictionary
-
+import { useState } from 'react';
 function FooterNav() {
   const router = useRouter();
+  const [selectedLang, setSelectedLang] = useState('en'); // <-- New state
   const currentLang = (router.asPath.match(/\/(en|es|fr|it|sv|de|pt)(\/|$)/) || [])[1] || 'en';
+  const handleLanguageChange = (event) => {
+    setSelectedLang(event.target.value);
+  };
+
+  const handleGoClick = () => {
+    router.push('/' + selectedLang);
+  };
+
     // Let's define our default path/text sets
   const {
     homePath,
@@ -27,6 +36,7 @@ function FooterNav() {
     planText,
     clPath,
     clText,
+    langChangeText,
   } = languageMappings[currentLang];  
 
 let prevPath="/";  
@@ -74,6 +84,19 @@ if (router.asPath.includes('/systemspecs')) {
     <footer>
       {router.asPath.match(/^\/(en|es|fr|it|sv|de|pt)\/?$/) ? null : <Link role="button" href={prevPath}>{prevText}</Link>}
       {router.asPath.includes('/changelog') ? null : <Link role="button" href={nextPath}>{nextText}</Link>}
+      <div className="languageSelector">
+        <label htmlFor="langChange">{langChangeText}</label>
+        <select id="langChange" value={selectedLang} onChange={handleLanguageChange}>
+          <option value="en">English</option>
+          <option value="es">Spanish</option>
+          <option value="fr">French</option>
+          <option value="de">German</option>
+          <option value="it">Italian</option>
+          <option value="sv">Swedish</option>
+          <option value="pt">Portuguese</option>
+        </select>
+        <button onClick={handleGoClick}>Go</button>
+      </div>
     </footer>
     
   );

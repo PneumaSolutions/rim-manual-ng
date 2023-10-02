@@ -11,7 +11,6 @@ import  NavList from '@/components/NavList'
 // @ts-ignore  
 import  FooterNav from '@/components/FooterNav'
 import { PlatformProvider, PlatformSwitcher } from '../components/platform'
-import LanguageSwitcher from '@/components/LanguageSwitcher';
 // import { MDXLayout } from '@/components/MDXLayout';
 //function app({ Component, pageProps }: AppProps) {
   export default function App({ Component, pageProps }: AppProps) {
@@ -27,7 +26,6 @@ import LanguageSwitcher from '@/components/LanguageSwitcher';
       <PlatformSwitcher />
         <Component {...pageProps} />
       <PlatformSwitcher />
-      <LanguageSwitcher />
   <FooterNav />
     </PlatformProvider>
   )
