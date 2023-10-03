@@ -7,7 +7,7 @@ import { SearchDialog } from '@/components/SearchDialog'
 import Image from 'next/image'
 import Link from 'next/link'
 // @ts-ignore  
-import  NavList from '@/components/NavList'
+import  TOCNav from '@/components/TOCNav'
 // @ts-ignore  
 import  FooterNav from '@/components/FooterNav'
 import { PlatformProvider, PlatformSwitcher } from '../components/platform'
@@ -85,7 +85,7 @@ import languageMappings from '@/components/languageMappings'; // translation dic
 <Head>
   <title>{titleText}</title>
 </Head>
-<NavList />
+<TOCNav />
 <SearchDialog />
       <PlatformSwitcher />
         <Component {...pageProps} />
