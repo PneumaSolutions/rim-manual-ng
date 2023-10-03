@@ -1,4 +1,4 @@
-import { FC, ReactNode, createContext, useContext } from 'react'
+import { FC, ReactNode, createContext, useContext, useState } from 'react'
 import useLocalStorageState from 'use-local-storage-state'
 
 export type Platform = 'windows' | 'macOS'

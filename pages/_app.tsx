@@ -1,5 +1,5 @@
 // import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
-import '@/styles/globals.css'
+import '@/styles/general.css'
 import type { AppProps } from 'next/app'
 import Head from 'next/head'
 import { Inter } from 'next/font/google'
@@ -95,16 +95,16 @@ import languageMappings from '@/components/languageMappings'; // translation dic
   )
 }
 // @ts-ignore  
-export async function getStaticProps(context) {
+//export async function getStaticProps(context) {
   // extract the locale identifier from the URL
-  const { locale } = context;
+//  const { locale } = context;
 
-  return {
-    props: {
+//  return {
+//    props: {
       // pass the translation props to the page component
       // ...(await serverSideTranslations(locale, ['common'])),
 
-    },
-  }
-}
+//    },
+//  }
+//}
 
