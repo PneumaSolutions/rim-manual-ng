@@ -66,7 +66,7 @@ export const PlatformSwitcher = () => {
         Switch to Windows content
       </button>
       <button type="button" onClick={setMacOS} hidden={platform === 'macOS'}>
-       Switch to Mac OS content
+       Switch to macOS content
       </button>
     </div>
   )
