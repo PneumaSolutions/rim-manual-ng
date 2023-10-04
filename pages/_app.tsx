@@ -89,15 +89,15 @@ import languageMappings from '@/components/languageMappings'; // translation dic
 <div>
 <h2>Remote Incident Manager (RIM)</h2>
 </div>
-<div class="container-fluid">
-  <div class="sidebar">
+<div className="container-fluid">
+  <div className="sidebar">
   <TOCNav />
-  <div class="search">
+  <div className="search">
   <SearchDialog />
   </div>
   </div>
-<main class="col ps-md-2 pt-2">
-<div class="page-header pt-3">
+<main className="col ps-md-2 pt-2">
+<div className="page-header pt-3">
 <PlatformSwitcher />
 <Component {...pageProps} />
 <PlatformSwitcher />
