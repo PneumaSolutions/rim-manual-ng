@@ -97,9 +97,9 @@ import languageMappings from '@/components/languageMappings'; // translation dic
   <SearchDialog />
   </div>
   </div>
-<Component {...pageProps} />
 <main className="col ps-md-2 pt-2">
 <div className="page-header pt-3">
+<Component {...pageProps} />
 </div>
 <FooterNav />
 
