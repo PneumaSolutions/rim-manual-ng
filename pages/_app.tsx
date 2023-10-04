@@ -1,4 +1,5 @@
 // import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
+import 'bootstrap/dist/css/bootstrap.css'
 import '@/styles/general.css'
 import type { AppProps } from 'next/app'
 import Head from 'next/head'
@@ -85,13 +86,27 @@ import languageMappings from '@/components/languageMappings'; // translation dic
 <Head>
   <title>{titleText}</title>
 </Head>
-<TOCNav />
-<SearchDialog />
-      <PlatformSwitcher />
-        <Component {...pageProps} />
-      <PlatformSwitcher />
-  <FooterNav />
-    </PlatformProvider>
+<div>
+<h2>Remote Incident Manager (RIM)</h2>
+</div>
+<div class="container-fluid">
+  <div class="sidebar">
+  <TOCNav />
+  <div class="search">
+  <SearchDialog />
+  </div>
+  </div>
+<main class="col ps-md-2 pt-2">
+<div class="page-header pt-3">
+<PlatformSwitcher />
+<Component {...pageProps} />
+<PlatformSwitcher />
+</div>
+<FooterNav />
+
+</main>
+</div>
+</PlatformProvider>
   )
 }
 // @ts-ignore  

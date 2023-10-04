@@ -1,6 +1,5 @@
 /* Base styles and content styles */
 
-
 :root {
     /* Browser default font-size is 16px, this way 1 rem = 10px
     font-size: 100%; */
@@ -27,21 +26,56 @@ body {
 }
 
 #sidebar {
-  margin-top: 10px;
+  margin-top: 30px;
+  margin-right: 20px;
 }
+
+.search {
+  margin: 25px 20px 20px 0;
+}
+
+.platform-switcher {
+  margin: 25px 20px 20px 0;
+}
+
+.languageSelector {
+  margin: 25px 20px 20px 0;
+}
+
+.path-prev {
+margin-right: 8px;
+}
+
+.path-next {
+margin-left: 8px;
+}
+
+.row {
+  margin-right: 20px;
+  margin-left: 0;
+}
+
 .navbar-toggler {
     display: none;
   }
   
-  @media only screen and (max-width: 600px) {
-  .navbar-toggler {
-    display:block;
-  }
-  }
   
 .container-fluid {
 margin: 0 !important;
 padding: 0 !important;
+display:flex;
+}
+
+@media only screen and (max-width: 600px) {
+  .navbar-toggler {
+    display:block;
+}
+}
+
+@media only screen and (max-width: 600px) {
+.container-fluid {
+   display:block !important;
+}
 }
 
 .navbar > .container,
@@ -52,11 +86,21 @@ padding: 0 !important;
 .navbar > .container-xl,
 .navbar > .container-xxl {
   align-items: revert !important;
+  flex: inherit !important;
+}
+
+.navbar {
+  align-items: revert !important;
+  flex: inherit !important;
 }
 
 .navbar-header.logo {
 margin: 0 !important;
 padding: 0 !important;
+}
+
+.nav-item {
+  margin-bottom: 8px;
 }
 
 .navbar-brand {
@@ -126,8 +170,8 @@ h1 code, h2 code, h3 code, h4 code, h5 code, h6 code {
 .hide-boring .boring { display: none; }
 .hidden { display: none !important; }
 
-h2, h3 { margin-top: 2.5em; }
-h4, h5 { margin-top: 2em; }
+h2, h3 { margin-top: 1em; }
+h4, h5 { margin-top: 0.8em; }
 
 .header + .header h3,
 .header + .header h4,

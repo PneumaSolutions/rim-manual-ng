@@ -61,7 +61,7 @@ export const PlatformSwitcher = () => {
   }
 
   return (
-    <div>
+    <div class="platform-switcher">
       <button type="button" onClick={setWindows} hidden={platform === 'windows'}>
         Switch to Windows content
       </button>

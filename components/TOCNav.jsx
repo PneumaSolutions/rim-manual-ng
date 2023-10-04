@@ -40,8 +40,8 @@ function TOCNav() {
 
   return (
     <div class="navbar navbar-default" role="navigation">
-      <div class="container-fluid">
       <div class="row flex-nowrap">
+      <div class="col-auto px-0">
       <div id="sidebar" class="collapse show collapse-horizontal" aria-expanded="true">
       <ul class="navbar-nav mr-auto mt-2 mt-lg-0" id="navList">
 
