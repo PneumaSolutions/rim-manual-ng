@@ -4,6 +4,8 @@ import { useRouter } from 'next/router';
 import Link from 'next/link';
 import languageMappings from '@/components/languageMappings'; // translation dictionary
 import { useState } from 'react';
+import { PlatformProvider, PlatformSwitcher } from '../components/platform'
+
 function FooterNav() {
   const router = useRouter();
   const [selectedLang, setSelectedLang] = useState('en'); // <-- New state
@@ -93,6 +95,8 @@ if (router.asPath.includes('/systemspecs')) {
     <footer>
       {router.asPath.match(/^\/(en|es|fr|it|sv|de|pt)\/?$/) ? null : <Link class="path-prev" role="button" href={prevPath}>{prevText}</Link>}
       {router.asPath.includes('/changelog') ? null : <Link class="path-next" role="button" href={nextPath}>{nextText}</Link>}
+      <PlatformSwitcher />
+
       <div className="languageSelector">
         <label htmlFor="langChange">{langChangeText}</label>
         <select id="langChange" value={selectedLang} onChange={handleLanguageChange}>
