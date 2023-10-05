@@ -86,16 +86,6 @@ export default function SearchPage() {
               }`}
             />
           </div>
-          <div className="text-xs text-gray-500 dark:text-gray-100">
-            Or try:{' '}
-            <button
-              type="button"
-              className="px-1.5 py-0.5 bg-slate-50 dark:bg-gray-500 hover:bg-slate-100 dark:hover:bg-gray-600 rounded border border-slate-200 dark:border-slate-600 transition-colors"
-              onClick={(_) => setQuery('What are embeddings?')}
-            >
-              What are embeddings?
-            </button>
-          </div>
         </div>
         <footer className="search-footer">
           <Button type="submit" className="bg-red-500">
