@@ -1,6 +1,7 @@
 # A string used to distinguish different Supabase projects on the same host. Defaults to the working
 # directory name when running `supabase init`.
-project_id = "nuzafabdefykwreckdng"
+project_id = "nextjs-openai-doc-search"
+#project_id = "nuzafabdefykwreckdng"
 
 [api]
 # Port to use for the API URL.
