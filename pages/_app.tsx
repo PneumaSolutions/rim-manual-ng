@@ -18,7 +18,7 @@ import languageMappings from '@/components/languageMappings'; // translation dic
 // import { MDXLayout } from '@/components/MDXLayout';
 //function app({ Component, pageProps }: AppProps) {
   export default function App({ Component, pageProps }: AppProps) {
-    const router = useRouter();
+        const router = useRouter();
     const currentLang = (router.asPath.match(/\/(en|es|fr|it|sv|de|pt)(\/|$)/) || [])[1] || 'en';
     // Let's define our default path/text sets
     const {
@@ -50,9 +50,10 @@ import languageMappings from '@/components/languageMappings'; // translation dic
       clText,
       clTitleText,
     } = languageMappings[currentLang];  
-  let titleText="";
-  // Let's define our titles per page.
-  if (router.asPath.match(/^\/(en|es|fr|it|sv|de|pt)\/?$/)) {
+  let titleText = pageProps.frontMatter?.title || "";
+  // Let's define our titles per page for when we can't get the frontmatter, or there is none.
+  if (!titleText) {
+      if (router.asPath.match(/^\/(en|es|fr|it|sv|de|pt)\/?$/)) {
     titleText = homeTitleText;
   }
   if (router.asPath.includes('/systemspecs')) {
@@ -79,7 +80,7 @@ import languageMappings from '@/components/languageMappings'; // translation dic
   if (router.asPath.includes('/changelog')) {
     titleText = clTitleText;
   }
-  
+}
     return (
 
 <PlatformProvider>
@@ -100,6 +101,7 @@ import languageMappings from '@/components/languageMappings'; // translation dic
 <main className="col ps-md-2 pt-2">
 <div className="page-header pt-3">
 <Component {...pageProps} />
+console.log(pageProps);
 </div>
 <FooterNav />
 

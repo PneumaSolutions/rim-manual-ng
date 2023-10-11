@@ -39,21 +39,21 @@ function TOCNav() {
   } = languageMappings[currentLang];  
 
   return (
-    <div class="navbar navbar-default" role="navigation">
-      <div class="row flex-nowrap">
-      <div class="col-auto px-0">
-      <div id="sidebar" class="collapse show collapse-horizontal" aria-expanded="true">
-      <ul class="navbar-nav mr-auto mt-2 mt-lg-0" id="navList">
+    <div className="navbar navbar-default" role="navigation">
+      <div className="row flex-nowrap">
+      <div className="col-auto px-0">
+      <div id="sidebar" className="collapse show collapse-horizontal" aria-expanded="true">
+      <ul className="navbar-nav mr-auto mt-2 mt-lg-0" id="navList">
 
-      <li class="nav-item"><Link href={homePath}>{homeText}</Link></li>
-      <li class="nav-item"><Link href={specsPath}>{specsText}</Link></li>
-      <li class="nav-item"><Link href={instPath}>{instText}</Link></li>
-      <li class="nav-item"><Link href={gcPath}>{gcText}</Link></li>
-      <li class="nav-item"><Link href={wwsPath}>{wwsText}</Link></li>
-      <li class="nav-item"><Link href={dashPath}>{dashText}</Link></li>
-      <li class="nav-item"><Link href={faqPath}>{faqText}</Link></li>
-      <li class="nav-item"><Link href={planPath}>{planText}</Link></li>
-      <li class="nav-item"><Link href={clPath}>{clText}</Link></li>
+      <li className="nav-item"><Link href={homePath}>{homeText}</Link></li>
+      <li className="nav-item"><Link href={specsPath}>{specsText}</Link></li>
+      <li className="nav-item"><Link href={instPath}>{instText}</Link></li>
+      <li className="nav-item"><Link href={gcPath}>{gcText}</Link></li>
+      <li className="nav-item"><Link href={wwsPath}>{wwsText}</Link></li>
+      <li className="nav-item"><Link href={dashPath}>{dashText}</Link></li>
+      <li className="nav-item"><Link href={faqPath}>{faqText}</Link></li>
+      <li className="nav-item"><Link href={planPath}>{planText}</Link></li>
+      <li className="nav-item"><Link href={clPath}>{clText}</Link></li>
 </ul>
     </div>
     </div>

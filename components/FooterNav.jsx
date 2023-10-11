@@ -93,8 +93,8 @@ if (router.asPath.includes('/systemspecs')) {
   
   return (
     <footer>
-      {router.asPath.match(/^\/(en|es|fr|it|sv|de|pt)\/?$/) ? null : <Link class="path-prev" role="button" href={prevPath}>{prevText}</Link>}
-      {router.asPath.includes('/changelog') ? null : <Link class="path-next" role="button" href={nextPath}>{nextText}</Link>}
+      {router.asPath.match(/^\/(en|es|fr|it|sv|de|pt)\/?$/) ? null : <Link className="path-prev" role="button" href={prevPath}>{prevText}</Link>}
+      {router.asPath.includes('/changelog') ? null : <Link className="path-next" role="button" href={nextPath}>{nextText}</Link>}
       <PlatformSwitcher />
 
       <div className="languageSelector">

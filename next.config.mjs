@@ -1,11 +1,15 @@
 import remarkGfm from 'remark-gfm'
+import { readFile } from 'node:fs/promises'
+import { compile } from '@mdx-js/mdx'
+import remarkFrontmatter from 'remark-frontmatter'
+import remarkMdxFrontmatter from 'remark-mdx-frontmatter'
 import createMDX from '@next/mdx'
 /** @type {import('next').NextConfig} */
  
 const withMDX = createMDX({
   options: {
     extension: /\.mdx?$/,
-    remarkPlugins: [remarkGfm],
+    remarkPlugins: [remarkGfm, remarkFrontmatter, remarkMdxFrontmatter],
     rehypePlugins: [],
     // If you use `MDXProvider`, uncomment the following line.
 //     providerImportSource: "@mdx-js/react",
