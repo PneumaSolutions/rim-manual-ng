@@ -14,6 +14,9 @@ dependencies:
   '@mdx-js/react':
     specifier: ^2.3.0
     version: 2.3.0(react@18.2.0)
+  '@meilisearch/instant-meilisearch':
+    specifier: ^0.13.6
+    version: 0.13.6
   '@next/mdx':
     specifier: ^13.4.19
     version: 13.4.19(@mdx-js/loader@2.3.0)(@mdx-js/react@2.3.0)
@@ -98,6 +101,9 @@ dependencies:
   mdast-util-to-string:
     specifier: ^3.1.1
     version: 3.1.1
+  meilisearch:
+    specifier: ^0.35.0
+    version: 0.35.0
   micromark-extension-mdxjs:
     specifier: ^1.0.0
     version: 1.0.0
@@ -140,6 +146,9 @@ dependencies:
   remark-mdx-frontmatter:
     specifier: ^3.0.0
     version: 3.0.0
+  remove-markdown:
+    specifier: ^0.5.0
+    version: 0.5.0
   supabase:
     specifier: ^1.93.0
     version: 1.93.0
@@ -706,6 +715,14 @@ packages:
       '@types/mdx': 2.0.7
       '@types/react': 18.0.30
       react: 18.2.0
+    dev: false
+
+  /@meilisearch/instant-meilisearch@0.13.6:
+    resolution: {integrity: sha512-olVCeOXmignmfY+ML8ExgyPCLGkr/XPXcz0n8tajRFr4afDKzomxySGMfQXVok9SoyhB+xeNH/mEMhguxCwklg==}
+    dependencies:
+      meilisearch: 0.35.0
+    transitivePeerDependencies:
+      - encoding
     dev: false
 
   /@next/env@13.2.4:
@@ -2190,6 +2207,14 @@ packages:
   /core-js@3.32.2:
     resolution: {integrity: sha512-pxXSw1mYZPDGvTQqEc5vgIb83jGQKFGYWY76z4a7weZXUolw3G+OvpZqSRcfYOoOVUQJYEPsWeQK8pKEnUtWxQ==}
     requiresBuild: true
+    dev: false
+
+  /cross-fetch@3.1.8:
+    resolution: {integrity: sha512-cvA+JwZoU0Xq+h6WkMvAUqPEYy92Obet6UdKLfW60qn99ftItKjB5T+BkyWOFWe2pUyfQ+IJHmpOTznqk1M6Kg==}
+    dependencies:
+      node-fetch: 2.7.0
+    transitivePeerDependencies:
+      - encoding
     dev: false
 
   /cross-fetch@4.0.0:
@@ -4006,6 +4031,14 @@ packages:
     resolution: {integrity: sha512-GaqWWShW4kv/G9IEucWScBx9G1/vsFZZJUO+tD26M8J8z3Kw5RDQjaoZe03YAClgeS/SWPOcb4nkFBTEi5DUEA==}
     dev: false
 
+  /meilisearch@0.35.0:
+    resolution: {integrity: sha512-gF1I6K5/Wpe7BWfjBnG+o19y/FIpJ9HbN+byON6CB9U3uE7qc6GvwUbjKOllh7LKXQVVxH/kCu7Jn0ODCUwqbQ==}
+    dependencies:
+      cross-fetch: 3.1.8
+    transitivePeerDependencies:
+      - encoding
+    dev: false
+
   /merge-stream@2.0.0:
     resolution: {integrity: sha512-abv/qOcuPfk3URPfDzmZU1LKmuw8kT+0nIHvKrKgFrwifol/doWcdA4ZqsWQ8ENrFKkd67Mfpo/LovbIUsbt3w==}
     dev: false
@@ -5301,6 +5334,10 @@ packages:
       '@types/mdast': 3.0.11
       mdast-util-to-hast: 12.3.0
       unified: 10.1.2
+    dev: false
+
+  /remove-markdown@0.5.0:
+    resolution: {integrity: sha512-x917M80K97K5IN1L8lUvFehsfhR8cYjGQ/yAMRI9E7JIKivtl5Emo5iD13DhMr+VojzMCiYk8V2byNPwT/oapg==}
     dev: false
 
   /require-directory@2.1.1:
