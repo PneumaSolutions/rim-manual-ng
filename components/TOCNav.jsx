@@ -1,5 +1,6 @@
 // components/TOCNav.jsx
 
+import { SearchBox } from 'react-instantsearch-dom';
 import { useRouter } from 'next/router';
 import Link from 'next/link';
 import languageMappings from '@/components/languageMappings'; // translation dictionary
@@ -58,7 +59,9 @@ function TOCNav() {
     </div>
     </div>
     </div>
+    <SearchBox />
     </div>
+    
   );
 }
 
