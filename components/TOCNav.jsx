@@ -1,11 +1,14 @@
 // components/TOCNav.jsx
 
-import { SearchBox } from 'react-instantsearch-dom';
+import { instantMeiliSearch } from '@meilisearch/instant-meilisearch';
+import { InstantSearch, SearchBox } from 'react-instantsearch-dom';
 import { useRouter } from 'next/router';
 import Link from 'next/link';
 import languageMappings from '@/components/languageMappings'; // translation dictionary
 
 function TOCNav() {
+  const searchClient = instantMeiliSearch(process.env.NEXT_PUBLIC_MEILISEARCH_HOST, process.env.NEXT_PUBLIC_MEILISEARCH_KEY);
+
   const router = useRouter();
   const currentLang = (router.asPath.match(/\/(en|es|fr|it|sv|de|pt)(\/|$)/) || [])[1] || 'en';
     // Let's define our default path/text sets
@@ -59,7 +62,9 @@ function TOCNav() {
     </div>
     </div>
     </div>
-    <SearchBox />
+    <InstantSearch searchClient={searchClient} indexName="rim-manual-en">
+      <SearchBox />
+    </InstantSearch>
     </div>
     
   );

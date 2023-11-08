@@ -101,8 +101,6 @@ import languageMappings from '@/components/languageMappings'; // translation dic
 <main className="col ps-md-2 pt-2">
 <div className="page-header pt-3">
 <Component {...pageProps} />
-console.log(JSON.stringify(pageProps))
-//console.log(pageProps);
 </div>
 <FooterNav />
 
