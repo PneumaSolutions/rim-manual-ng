@@ -14,20 +14,23 @@ export default function SearchPage() {
   const handleSubmit: React.FormEventHandler<HTMLFormElement> = (e) => {
     e.preventDefault()
     complete(query)
-    setQuery('')  // This clears the input after submission.
+    setQuery('') // This clears the input after submission.
   }
   React.useEffect(() => {
     if (completion && !error) {
-      setAlertText('I have an answer for you!');
+      setAlertText('I have an answer for you!')
     } else {
-      setAlertText('');  // Clear the alert text in other cases
+      setAlertText('') // Clear the alert text in other cases
     }
-  }, [completion, error]);
+  }, [completion, error])
   return (
     <div className="search-page-container">
       <header className="search-header">
         <h1>Documentation Smart Search</h1>
-        <p>Hello! I am a helper bot that can answer your questions about Remote Incident Manager. Enter a query and I will answer it to the best of my ability.</p>
+        <p>
+          Hello! I am a helper bot that can answer your questions about Remote Incident Manager.
+          Enter a query and I will answer it to the best of my ability.
+        </p>
         <hr />
       </header>
 
@@ -59,9 +62,11 @@ export default function SearchPage() {
             </div>
           )}
 
-{alertText && (
-        <div role="alert" aria-live="polite">{alertText}</div>
-      )}
+          {alertText && (
+            <div role="alert" aria-live="polite">
+              {alertText}
+            </div>
+          )}
           {completion && !error && (
             <div className="flex items-center gap-4 dark:text-white">
               <span className="bg-green-500 p-2 w-8 h-8 rounded-full text-center flex items-center justify-center">

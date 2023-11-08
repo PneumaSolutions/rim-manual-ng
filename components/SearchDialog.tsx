@@ -82,7 +82,11 @@ export function SearchDialog() {
               Build your own ChatGPT style search with Next.js, OpenAI & Supabase.
             </DialogDescription>
             <hr />
-            <button aria-label="Close Search" className="absolute top-0 right-2 p-2" onClick={() => setOpen(false)}>
+            <button
+              aria-label="Close Search"
+              className="absolute top-0 right-2 p-2"
+              onClick={() => setOpen(false)}
+            >
               <X className="h-4 w-4 dark:text-gray-100" />
             </button>
           </DialogHeader>

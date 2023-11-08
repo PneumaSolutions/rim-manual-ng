@@ -1,10 +1,11 @@
 // components/LanguageSwitcher.jsx
-import { useRouter } from 'next/router';
+import { useRouter } from 'next/router'
 export default function LanguageSwitcher() {
-  const router = useRouter();
-      return (
-      <div>
-      <select onChange={(e) =>
+  const router = useRouter()
+  return (
+    <div>
+      <select
+        onChange={(e) =>
           router.push(
             {
               pathname: router.pathname,
@@ -15,10 +16,9 @@ export default function LanguageSwitcher() {
           )
         }
       >
-
-          <option value='en'>English</option>
-          <option value='es'>Español</option>
-        </select>
-      </div>
-    );
-  }
+        <option value="en">English</option>
+        <option value="es">Español</option>
+      </select>
+    </div>
+  )
+}

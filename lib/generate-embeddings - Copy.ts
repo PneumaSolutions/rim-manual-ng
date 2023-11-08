@@ -331,7 +331,8 @@ async function generateEmbeddings() {
 
       // We use checksum to determine if this page & its sections need to be regenerated
       if (!shouldRefresh && existingPage !== null && existingPage.checksum === checksum) {
-        const existingParentPage = existingPage.parentPage?.length === 1 ? existingPage.parentPage[0] : undefined;
+        const existingParentPage =
+          existingPage.parentPage?.length === 1 ? existingPage.parentPage[0] : undefined
         // If parent page changed, update it
         if (existingParentPage?.path !== parentPath) {
           console.log(`[${path}] Parent page has changed. Updating to '${parentPath}'...`)

@@ -5,14 +5,14 @@ import remarkFrontmatter from 'remark-frontmatter'
 import remarkMdxFrontmatter from 'remark-mdx-frontmatter'
 import createMDX from '@next/mdx'
 /** @type {import('next').NextConfig} */
- 
+
 const withMDX = createMDX({
   options: {
     extension: /\.mdx?$/,
     remarkPlugins: [remarkGfm, remarkFrontmatter, remarkMdxFrontmatter],
     rehypePlugins: [],
     // If you use `MDXProvider`, uncomment the following line.
-//     providerImportSource: "@mdx-js/react",
+    //     providerImportSource: "@mdx-js/react",
   },
 })
 /** @type {import('next').NextConfig} */
@@ -21,7 +21,7 @@ const nextConfig = {
   pageExtensions: ['ts', 'tsx', 'js', 'jsx', 'md', 'mdx'],
   // Optionally, add any other Next.js config below
   reactStrictMode: false,
-    // Include i18n configuration
-  }
- 
+  // Include i18n configuration
+}
+
 export default withMDX(nextConfig)
