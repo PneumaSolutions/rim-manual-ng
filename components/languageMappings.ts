@@ -1,6 +1,35 @@
-// languageMappings.js
+interface LanguageMapping {
+  homePath: string
+  homeText: string
+  homeTitleText: string
+  specsPath: string
+  specsText: string
+  specsTitleText: string
+  instPath: string
+  instText: string
+  instTitleText: string
+  gcPath: string
+  gcText: string
+  gcTitleText: string
+  wwsPath: string
+  wwsText: string
+  wwsTitleText: string
+  dashPath: string
+  dashText: string
+  dashTitleText: string
+  faqPath: string
+  faqText: string
+  faqTitleText: string
+  planPath: string
+  planText: string
+  planTitleText: string
+  clPath: string
+  clText: string
+  clTitleText: string
+  langChangeText: string
+}
 
-const languageMappings = {
+const languageMappings: Record<string, LanguageMapping> = {
   en: {
     homePath: '/en',
     homeText: 'Welcome',

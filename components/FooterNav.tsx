@@ -10,10 +10,6 @@ function FooterNav() {
   const router = useRouter()
   const [selectedLang, setSelectedLang] = useState('en') // <-- New state
   const currentLang = (router.asPath.match(/\/(en|es|fr|it|sv|de|pt)(\/|$)/) || [])[1] || 'en'
-  const handleLanguageChange = (event) => {
-    setSelectedLang(event.target.value)
-  }
-
   const handleGoClick = () => {
     router.push('/' + selectedLang)
   }
@@ -50,12 +46,11 @@ function FooterNav() {
     langChangeText,
   } = languageMappings[currentLang]
 
-  let prevPath = '/'
+  let prevPath: string | null = null
   let prevText = 'Previous Section'
-  let nextPath = '/'
+  let nextPath: string | null = null
   let nextText = 'Next Section'
   if (router.asPath.match(/^\/(en|es|fr|it|sv|de|pt)\/?$/)) {
-    prevPath = null
     nextPath = specsPath
   }
   if (router.asPath.includes('/systemspecs')) {
@@ -88,17 +83,16 @@ function FooterNav() {
   }
   if (router.asPath.includes('/changelog')) {
     prevPath = planPath
-    nextPath = '/'
   }
 
   return (
     <footer>
-      {router.asPath.match(/^\/(en|es|fr|it|sv|de|pt)\/?$/) ? null : (
+      {!prevPath ? null : (
         <Link className="path-prev" role="button" href={prevPath}>
           {prevText}
         </Link>
       )}
-      {router.asPath.includes('/changelog') ? null : (
+      {!nextPath ? null : (
         <Link className="path-next" role="button" href={nextPath}>
           {nextText}
         </Link>
@@ -107,7 +101,13 @@ function FooterNav() {
 
       <div className="languageSelector">
         <label htmlFor="langChange">{langChangeText}</label>
-        <select id="langChange" value={selectedLang} onChange={handleLanguageChange}>
+        <select
+          id="langChange"
+          value={selectedLang}
+          onChange={(event) => {
+            setSelectedLang(event.target.value)
+          }}
+        >
           <option value="en">English</option>
           <option value="es">Spanish</option>
           <option value="fr">French</option>

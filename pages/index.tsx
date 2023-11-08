@@ -6,7 +6,7 @@ import { useRouter } from 'next/router'
 const supportedLocales = ['en', 'es', 'fr', 'it', 'de', 'sv', 'pt']
 
 const getBrowserLocale = () => {
-  const [lang] = (navigator.language || navigator.userLanguage).split('-')
+  const [lang] = navigator.languages
   return supportedLocales.includes(lang) ? lang : 'en' // default to 'en' if the locale isn't included
 }
 

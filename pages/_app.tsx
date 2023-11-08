@@ -1,4 +1,3 @@
-// import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 import 'bootstrap/dist/css/bootstrap.css'
 import '@/styles/general.css'
 import type { AppProps } from 'next/app'
@@ -15,8 +14,6 @@ import { PlatformProvider, PlatformSwitcher } from '../components/platform'
 import { useRouter } from 'next/router'
 import languageMappings from '@/components/languageMappings' // translation dictionary
 
-// import { MDXLayout } from '@/components/MDXLayout';
-//function app({ Component, pageProps }: AppProps) {
 export default function App({ Component, pageProps }: AppProps) {
   const router = useRouter()
   const currentLang = (router.asPath.match(/\/(en|es|fr|it|sv|de|pt)(\/|$)/) || [])[1] || 'en'
@@ -107,16 +104,3 @@ export default function App({ Component, pageProps }: AppProps) {
     </PlatformProvider>
   )
 }
-// @ts-ignore
-//export async function getStaticProps(context) {
-// extract the locale identifier from the URL
-//  const { locale } = context;
-
-//  return {
-//    props: {
-// pass the translation props to the page component
-// ...(await serverSideTranslations(locale, ['common'])),
-
-//    },
-//  }
-//}

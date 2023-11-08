@@ -8,8 +8,8 @@ import languageMappings from '@/components/languageMappings' // translation dict
 
 function TOCNav() {
   const searchClient = instantMeiliSearch(
-    process.env.NEXT_PUBLIC_MEILISEARCH_HOST,
-    process.env.NEXT_PUBLIC_MEILISEARCH_KEY
+    process.env.NEXT_PUBLIC_MEILISEARCH_HOST!,
+    process.env.NEXT_PUBLIC_MEILISEARCH_KEY!
   )
 
   const router = useRouter()

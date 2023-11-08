@@ -6,14 +6,10 @@ export default function LanguageSwitcher() {
     <div>
       <select
         onChange={(e) =>
-          router.push(
-            {
-              pathname: router.pathname,
-              query: router.query,
-            },
-            null,
-            { locale: e.target.value }
-          )
+          router.push({
+            pathname: router.pathname,
+            query: router.query,
+          })
         }
       >
         <option value="en">English</option>
