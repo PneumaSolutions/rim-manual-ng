@@ -13,10 +13,9 @@
     "trailingComma": "es5",
     "tabWidth": 2,
     "semi": false,
-    "singleQuote": true,
-    "printWidth": 100,
-    "endOfLine": "lf",
-    "sqlKeywordCase": "lower"
+    "singleQuote": false,
+    "printWidth": 79,
+    "endOfLine": "lf"
   },
   "dependencies": {
     "@mdx-js/loader": "^2.3.0",

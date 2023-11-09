@@ -6,7 +6,7 @@
 }
 
 html {
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
   color: var(--fg);
   background-color: var(--bg);
   text-size-adjust: none;
@@ -147,8 +147,8 @@ h3,
 }
 
 code {
-  font-family: 'Source Code Pro', Consolas, 'Ubuntu Mono', Menlo, 'DejaVu Sans Mono', monospace,
-    monospace !important;
+  font-family: "Source Code Pro", Consolas, "Ubuntu Mono", Menlo,
+    "DejaVu Sans Mono", monospace, monospace !important;
   font-size: 0.875em; /* please adjust the ace font size accordingly in editor.js */
 }
 
@@ -210,7 +210,7 @@ h4:target::before,
 h5:target::before,
 h6:target::before {
   display: inline-block;
-  content: '»';
+  content: "»";
   margin-left: -30px;
   width: 30px;
 }
@@ -326,7 +326,9 @@ blockquote {
   visibility: hidden;
   color: #fff;
   background-color: #333;
-  transform: translateX(-50%); /* Center by moving tooltip 50% of its width left */
+  transform: translateX(
+    -50%
+  ); /* Center by moving tooltip 50% of its width left */
   left: -8px; /* Half of the width of the icon */
   top: -35px;
   font-size: 0.8em;

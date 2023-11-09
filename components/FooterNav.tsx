@@ -1,17 +1,18 @@
 // components/FooterNav.jsx
 
-import { useRouter } from 'next/router'
-import Link from 'next/link'
-import languageMappings from '@/components/languageMappings' // translation dictionary
-import { useState } from 'react'
-import { PlatformProvider, PlatformSwitcher } from '../components/platform'
+import { useRouter } from "next/router"
+import Link from "next/link"
+import languageMappings from "@/components/languageMappings" // translation dictionary
+import { useState } from "react"
+import { PlatformProvider, PlatformSwitcher } from "../components/platform"
 
 function FooterNav() {
   const router = useRouter()
-  const [selectedLang, setSelectedLang] = useState('en') // <-- New state
-  const currentLang = (router.asPath.match(/\/(en|es|fr|it|sv|de|pt)(\/|$)/) || [])[1] || 'en'
+  const [selectedLang, setSelectedLang] = useState("en") // <-- New state
+  const currentLang =
+    (router.asPath.match(/\/(en|es|fr|it|sv|de|pt)(\/|$)/) || [])[1] || "en"
   const handleGoClick = () => {
-    router.push('/' + selectedLang)
+    router.push("/" + selectedLang)
   }
 
   // Let's define our default path/text sets
@@ -47,41 +48,41 @@ function FooterNav() {
   } = languageMappings[currentLang]
 
   let prevPath: string | null = null
-  let prevText = 'Previous Section'
+  let prevText = "Previous Section"
   let nextPath: string | null = null
-  let nextText = 'Next Section'
+  let nextText = "Next Section"
   if (router.asPath.match(/^\/(en|es|fr|it|sv|de|pt)\/?$/)) {
     nextPath = specsPath
   }
-  if (router.asPath.includes('/systemspecs')) {
+  if (router.asPath.includes("/systemspecs")) {
     prevPath = homePath
     nextPath = instPath
   }
-  if (router.asPath.includes('/installation')) {
+  if (router.asPath.includes("/installation")) {
     prevPath = specsPath
     nextPath = gcPath
   }
-  if (router.asPath.includes('/gettingconnected')) {
+  if (router.asPath.includes("/gettingconnected")) {
     prevPath = instPath
     nextPath = wwsPath
   }
-  if (router.asPath.includes('/workingwithsessions')) {
+  if (router.asPath.includes("/workingwithsessions")) {
     prevPath = gcPath
     nextPath = dashPath
   }
-  if (router.asPath.includes('/dashboard')) {
+  if (router.asPath.includes("/dashboard")) {
     prevPath = wwsPath
     nextPath = faqPath
   }
-  if (router.asPath.includes('/faq')) {
+  if (router.asPath.includes("/faq")) {
     prevPath = dashPath
     nextPath = planPath
   }
-  if (router.asPath.includes('/plans')) {
+  if (router.asPath.includes("/plans")) {
     prevPath = faqPath
     nextPath = clPath
   }
-  if (router.asPath.includes('/changelog')) {
+  if (router.asPath.includes("/changelog")) {
     prevPath = planPath
   }
 

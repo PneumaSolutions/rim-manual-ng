@@ -1,5 +1,5 @@
 // components/LanguageSwitcher.jsx
-import { useRouter } from 'next/router'
+import { useRouter } from "next/router"
 export default function LanguageSwitcher() {
   const router = useRouter()
   return (

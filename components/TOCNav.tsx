@@ -1,10 +1,10 @@
 // components/TOCNav.jsx
 
-import { instantMeiliSearch } from '@meilisearch/instant-meilisearch'
-import { InstantSearch, SearchBox } from 'react-instantsearch-dom'
-import { useRouter } from 'next/router'
-import Link from 'next/link'
-import languageMappings from '@/components/languageMappings' // translation dictionary
+import { instantMeiliSearch } from "@meilisearch/instant-meilisearch"
+import { InstantSearch, SearchBox } from "react-instantsearch-dom"
+import { useRouter } from "next/router"
+import Link from "next/link"
+import languageMappings from "@/components/languageMappings" // translation dictionary
 
 function TOCNav() {
   const searchClient = instantMeiliSearch(
@@ -13,7 +13,8 @@ function TOCNav() {
   )
 
   const router = useRouter()
-  const currentLang = (router.asPath.match(/\/(en|es|fr|it|sv|de|pt)(\/|$)/) || [])[1] || 'en'
+  const currentLang =
+    (router.asPath.match(/\/(en|es|fr|it|sv|de|pt)(\/|$)/) || [])[1] || "en"
   // Let's define our default path/text sets
   const {
     homePath,
@@ -49,7 +50,11 @@ function TOCNav() {
     <div className="navbar navbar-default" role="navigation">
       <div className="row flex-nowrap">
         <div className="col-auto px-0">
-          <div id="sidebar" className="collapse show collapse-horizontal" aria-expanded="true">
+          <div
+            id="sidebar"
+            className="collapse show collapse-horizontal"
+            aria-expanded="true"
+          >
             <ul className="navbar-nav mr-auto mt-2 mt-lg-0" id="navList">
               <li className="nav-item">
                 <Link href={homePath}>{homeText}</Link>
