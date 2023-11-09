@@ -3,7 +3,6 @@ import '@/styles/general.css'
 import type { AppProps } from 'next/app'
 import Head from 'next/head'
 import { Inter } from 'next/font/google'
-import { SearchDialog } from '@/components/SearchDialog'
 import Image from 'next/image'
 import Link from 'next/link'
 // @ts-ignore
@@ -91,7 +90,6 @@ export default function App({ Component, pageProps }: AppProps) {
         <div className="sidebar">
           <TOCNav />
           <div className="search">
-            <SearchDialog />
           </div>
         </div>
         <main className="col ps-md-2 pt-2">
