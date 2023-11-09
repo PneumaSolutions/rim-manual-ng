@@ -1,0 +1,19 @@
+---
+/*
+TODO: Look into using something like the below to automatically redirect based on user language.
+
+const KNOWN_LANGUAGES = ['de", "en", "es", "fr", "it", "pt", "sv"];
+let newLangWithRegion = (window.navigator.userLanguage || window.navigator.language || 'en-US').substr(0, 5);
+let newLang = newLangWithRegion.substr(0, 2);
+if (KNOWN_LANGUAGES.includes(newLangWithRegion)) {
+	window.location.pathname = '/' + newLangWithRegion + '/getting-started';
+} else if (KNOWN_LANGUAGES.includes(newLang)) {
+	window.location.pathname = '/' + newLang + '/getting-started';
+} else {
+	window.location.pathname = '/en/getting-started';
+}
+
+*/
+---
+
+<meta http-equiv="refresh" content="0;url=/en/welcome/" />

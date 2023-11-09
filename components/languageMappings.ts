@@ -272,8 +272,7 @@ const languageMappings: Record<string, LanguageMapping> = {
       "Perguntas frequentes - Documentação do Remote Incident Manager",
     planPath: "/pt/plans",
     planText: "Planos e compras",
-    planTitleText:
-      "Planos e compras - Documentação do Remote Incident Manager",
+    planTitleText: "Planos e compras - Documentação do Remote Incident Manager",
     clPath: "/pt/changelog",
     clText: "Registro de alterações",
     clTitleText:
