@@ -33,7 +33,7 @@ if (pageIndex < 0) {
     <div>
       <h2>Remote Incident Manager (RIM)</h2>
       <PlatformSwitcher />
-      <form role="search" action={`/${lang}/search/`} method="post">
+      <form role="search" action={`/${lang}/search/`} method="get">
         <label for="q"><UIString key="search.label" /></label>
         <input type="text" name="q" id="q" required />
         <button type="submit"><UIString key="search.button" /></button>
