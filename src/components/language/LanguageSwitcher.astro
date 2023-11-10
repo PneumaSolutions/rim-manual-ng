@@ -1,0 +1,21 @@
+---
+import { useTranslations } from "~/i18n/util"
+
+import { LanguageSwitcher } from "./client.tsx"
+
+export interface Props {
+  origLang: string
+  slug: string
+}
+
+const { origLang, slug } = Astro.props
+const t = useTranslations(Astro)
+---
+
+<LanguageSwitcher
+  client:only="preact"
+  origLang={origLang}
+  slug={slug}
+  languageLabel={t("language.label")}
+  switchLanguageLabel={t("language.switchLanguage")}
+/>

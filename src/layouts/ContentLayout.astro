@@ -4,6 +4,7 @@ import "~/styles/general.css"
 
 import type { CollectionEntry } from "astro:content"
 
+import LanguageSwitcher from "~/components/language/LanguageSwitcher.astro"
 import PlatformSwitcher from "~/components/platform/PlatformSwitcher.astro"
 import UIString from "~/components/UIString.astro"
 import { pageOrder, pagesByPath } from "~/content"
@@ -96,6 +97,7 @@ if (pageIndex < 0) {
             )
           }
           <PlatformSwitcher />
+          <LanguageSwitcher origLang={lang} slug={slug} />
         </footer>
       </div>
     </div>
