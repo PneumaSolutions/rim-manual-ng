@@ -3,6 +3,8 @@ import "bootstrap/dist/css/bootstrap.css"
 import "~/styles/general.css"
 
 import type { CollectionEntry } from "astro:content"
+
+import { PlatformSwitcher } from "~/components/platform/client.tsx"
 import { pageOrder, pagesByPath } from "~/content"
 
 export interface Props {
@@ -28,6 +30,7 @@ if (pageIndex < 0) {
   <body>
     <div>
       <h2>Remote Incident Manager (RIM)</h2>
+      <PlatformSwitcher client:only="preact" />
     </div>
     <div class="container-fluid">
       <div class="sidebar">
@@ -91,6 +94,7 @@ if (pageIndex < 0) {
               </a>
             )
           }
+          <PlatformSwitcher client:only="preact" />
         </footer>
       </div>
     </div>
