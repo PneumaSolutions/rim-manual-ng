@@ -11,8 +11,8 @@ const t = useTranslations(Astro)
 export const prerender = false
 const { lang } = Astro.params
 const client = new MeiliSearch({
-  host: process.env.MEILISEARCH_HOST,
-  apiKey: process.env.MEILISEARCH_SEARCH_KEY,
+  host: import.meta.env.MEILISEARCH_HOST,
+  apiKey: import.meta.env.MEILISEARCH_SEARCH_KEY,
 })
 const index = client.index(`rim-manual-${lang}`)
 
