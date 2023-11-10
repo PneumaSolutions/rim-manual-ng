@@ -4,7 +4,8 @@ import "~/styles/general.css"
 
 import type { CollectionEntry } from "astro:content"
 
-import { PlatformSwitcher } from "~/components/platform/client.tsx"
+import PlatformSwitcher from "~/components/platform/PlatformSwitcher.astro"
+import UIString from "~/components/UIString.astro"
 import { pageOrder, pagesByPath } from "~/content"
 
 export interface Props {
@@ -30,7 +31,7 @@ if (pageIndex < 0) {
   <body>
     <div>
       <h2>Remote Incident Manager (RIM)</h2>
-      <PlatformSwitcher client:only="preact" />
+      <PlatformSwitcher />
     </div>
     <div class="container-fluid">
       <div class="sidebar">
@@ -78,7 +79,7 @@ if (pageIndex < 0) {
                 class="path-prev"
                 href={`/${lang}/${pageOrder[pageIndex - 1]}/`}
               >
-                Previous:{" "}
+                <UIString key="footer.previous" />:{" "}
                 {pagesByPath[`${lang}/${pageOrder[pageIndex - 1]}`].data.title}
               </a>
             )
@@ -89,12 +90,12 @@ if (pageIndex < 0) {
                 class="path-next"
                 href={`/${lang}/${pageOrder[pageIndex + 1]}/`}
               >
-                Next:{" "}
+                <UIString key="footer.next" />:{" "}
                 {pagesByPath[`${lang}/${pageOrder[pageIndex + 1]}`].data.title}
               </a>
             )
           }
-          <PlatformSwitcher client:only="preact" />
+          <PlatformSwitcher />
         </footer>
       </div>
     </div>

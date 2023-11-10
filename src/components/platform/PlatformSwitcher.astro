@@ -1,0 +1,13 @@
+---
+import { useTranslations } from "~/i18n/util"
+
+import { PlatformSwitcher } from "./client.tsx"
+
+const t = useTranslations(Astro)
+---
+
+<PlatformSwitcher
+  client:only="preact"
+  switchToWindowsLabel={t("platform.switchToWindows")}
+  switchToMacOSLabel={t("platform.switchToMacOS")}
+/>

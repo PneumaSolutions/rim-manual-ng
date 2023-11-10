@@ -37,7 +37,15 @@ export const MacOS: FunctionComponent<ChildrenProps> = ({ children }) => {
   return <div hidden={$platform != "macOS"}>{children}</div>
 }
 
-export const PlatformSwitcher = () => {
+interface PlatformSwitcherProps {
+  switchToWindowsLabel: string
+  switchToMacOSLabel: string
+}
+
+export const PlatformSwitcher: FunctionComponent<PlatformSwitcherProps> = ({
+  switchToWindowsLabel,
+  switchToMacOSLabel,
+}) => {
   const $platform = useStore(platform)
 
   const setWindows = () => {
@@ -55,10 +63,10 @@ export const PlatformSwitcher = () => {
         onClick={setWindows}
         hidden={$platform === "windows"}
       >
-        Switch to Windows content
+        {switchToWindowsLabel}
       </button>
       <button type="button" onClick={setMacOS} hidden={$platform === "macOS"}>
-        Switch to macOS content
+        {switchToMacOSLabel}
       </button>
     </div>
   )

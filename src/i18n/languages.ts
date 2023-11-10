@@ -1,4 +1,4 @@
-const allLanguages: Record<string, string> = {
+const allLanguages = {
   en: "English",
   de: "Deutsch",
   pt: "Português",
@@ -6,10 +6,10 @@ const allLanguages: Record<string, string> = {
   fr: "Français",
   it: "Italiano",
   sv: "Svenska",
-}
+} as const
 
 // Build for two languages only to speed up Astro's smoke tests
-const twoLanguages: Record<string, string> = {
+const twoLanguages = {
   en: "English",
   es: "Español",
 } as const
