@@ -1,0 +1,19 @@
+---
+import { MeiliSearch } from "meilisearch"
+
+export const prerender = false
+const { lang } = Astro.params
+const client = new MeiliSearch({
+  host: process.env.MEILISEARCH_HOST,
+  apiKey: process.env.MEILISEARCH_SEARCH_KEY,
+})
+const index = client.index(`rim-manual-${lang}`)
+
+const query = Astro.url.searchParams.get("q")
+if (!query) {
+  return new Response(null, { status: 400 })
+}
+const search = await index.search(query)
+---
+
+{JSON.stringify(search.hits)}

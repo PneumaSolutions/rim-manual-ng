@@ -5,4 +5,6 @@ export default {
   "language.switchLanguage": "Switch language",
   "platform.switchToWindows": "Switch to Windows content",
   "platform.switchToMacOS": "Switch to macOS content",
+  "search.button": "Search",
+  "search.label": "Search",
 }
