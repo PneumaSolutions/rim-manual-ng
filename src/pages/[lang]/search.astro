@@ -1,6 +1,13 @@
 ---
+import "bootstrap/dist/css/bootstrap.css"
+import "~/styles/general.css"
+
 import { MeiliSearch } from "meilisearch"
 
+import { pageOrder } from "~/content"
+import { useTranslations } from "~/i18n/util"
+
+const t = useTranslations(Astro)
 export const prerender = false
 const { lang } = Astro.params
 const client = new MeiliSearch({
@@ -13,7 +20,39 @@ const query = Astro.url.searchParams.get("q")
 if (!query) {
   return new Response(null, { status: 400 })
 }
-const search = await index.search(query)
+const search = await index.search(query, (attributesToHighlight = ["content"]))
 ---
 
-{JSON.stringify(search.hits)}
+<html lang={lang}>
+  <head>
+    <title>{t("search.resultsHeading")} - Remote Incident Manager</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+  </head>
+  <body>
+    <main>
+      <h1>{t("search.resultsHeading")}</h1>
+      {
+        search.hits ? (
+          <ul>
+            {search.hits.map((hit) => {
+              return (
+                <li>
+                  <a href={`/${lang}/${hit.id}/`}>{hit.title}</a>
+                  <p>
+                    <Fragment set:html={hit._formatted.content} />
+                  </p>
+                </li>
+              )
+            })}
+          </ul>
+        ) : (
+          <p>{t("search.noResults")}</p>
+        )
+      }
+    </main>
+    <footer>
+      <p><a href={`/${lang}/${pageOrder[0]}/`}>{t("search.back")}</a></p>
+    </footer>
+  </body>
+</html>
