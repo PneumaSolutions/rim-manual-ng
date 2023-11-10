@@ -20,7 +20,7 @@ const query = Astro.url.searchParams.get("q")
 if (!query) {
   return new Response(null, { status: 400 })
 }
-const search = await index.search(query, (attributesToHighlight = ["content"]))
+const search = await index.search(query, { attributesToHighlight: ["content"] })
 ---
 
 <html lang={lang}>
