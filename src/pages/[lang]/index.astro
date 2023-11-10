@@ -1,4 +1,5 @@
 ---
+import { pageOrder } from "~/content"
 import languages from "../../i18n/languages"
 
 export const getStaticPaths = () =>
@@ -7,4 +8,4 @@ export const getStaticPaths = () =>
 const { lang } = Astro.params
 ---
 
-<meta http-equiv="refresh" content={`0;url=/${lang}/welcome/`} />
+<meta http-equiv="refresh" content={`0;url=/${lang}/${pageOrder[0]}/`} />

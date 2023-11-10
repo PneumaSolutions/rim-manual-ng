@@ -1,0 +1,67 @@
+---
+import type { CollectionEntry } from "astro:content"
+import { pageOrder, pagesByPath } from "~/content"
+
+export interface Props {
+  data: CollectionEntry<"docs">["data"]
+  lang: string
+  slug: string
+}
+
+const { data, lang, slug } = Astro.props
+
+const pageIndex = pageOrder.indexOf(slug)
+if (pageIndex < 0) {
+  throw new Error(`page ${slug} not found in navigation order`)
+}
+---
+
+<html lang={lang}>
+  <head>
+    <title>{data.title} - Remote Incident Manager</title>
+  </head>
+  <body>
+    <nav>
+      <ul>
+        {
+          pageOrder.map((linkSlug) => {
+            let entry = pagesByPath[`${lang}/${linkSlug}`]
+            if (!entry) {
+              throw new Error(`couldn't find entry for ${lang}/${linkSlug}`)
+            }
+            return (
+              <li>
+                <a href={`/${lang}/${linkSlug}`}>{entry.data.title}</a>
+              </li>
+            )
+          })
+        }
+      </ul>
+    </nav>
+    <main>
+      <slot />
+    </main>
+    <footer>
+      {
+        pageIndex === 0 ? null : (
+          <div>
+            <a href={`/${lang}/${pageOrder[pageIndex - 1]}/`}>
+              Previous:{" "}
+              {pagesByPath[`${lang}/${pageOrder[pageIndex - 1]}`].data.title}
+            </a>
+          </div>
+        )
+      }
+      {
+        pageIndex === pageOrder.length - 1 ? null : (
+          <div>
+            <a href={`/${lang}/${pageOrder[pageIndex + 1]}/`}>
+              Next:{" "}
+              {pagesByPath[`${lang}/${pageOrder[pageIndex + 1]}`].data.title}
+            </a>
+          </div>
+        )
+      }
+    </footer>
+  </body>
+</html>

@@ -1,4 +1,4 @@
-import { getCollection } from "astro:content"
+import { getCollection, type CollectionEntry } from "astro:content"
 import { createIsLangEntry, isEnglishEntry } from "./content/config"
 
 const isSpanishEntry = createIsLangEntry("es")
@@ -11,4 +11,26 @@ export const allPages = await getCollection("docs", (entry) => {
     return true
   }
 })
+
+export const pagesByPath = (() => {
+  let result: Record<string, CollectionEntry<"docs">> = {}
+  for (let entry of allPages) {
+    result[entry.slug] = entry
+  }
+  return result
+})()
+
 export const englishPages = allPages.filter(isEnglishEntry)
+
+export const pageOrder: string[] = [
+  "welcome",
+  "systemspecs",
+  "installation",
+  "gettingconnected",
+  "workingwithsessions",
+  "dashboard",
+  "faq",
+  "plans",
+  "changelog",
+  "localization",
+]

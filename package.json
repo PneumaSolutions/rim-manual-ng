@@ -6,7 +6,7 @@
     "dev": "astro dev",
     "build": "astro build",
     "start": "astro preview --port=3000",
-    "format": "prettier --write ."
+    "format": "prettier --write . '**/*.astro'"
   },
   "dependencies": {
     "@mdx-js/loader": "^2.3.0",

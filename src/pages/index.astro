@@ -1,4 +1,6 @@
 ---
+import { pageOrder } from "~/content"
+
 /*
 TODO: Look into using something like the below to automatically redirect based on user language.
 
@@ -16,4 +18,4 @@ if (KNOWN_LANGUAGES.includes(newLangWithRegion)) {
 */
 ---
 
-<meta http-equiv="refresh" content="0;url=/en/welcome/" />
+<meta http-equiv="refresh" content={`0;url=/en/${pageOrder[0]}/`} />
