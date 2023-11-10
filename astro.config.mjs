@@ -5,4 +5,7 @@ import preact from "@astrojs/preact"
 
 export default defineConfig({
   integrations: [preact({ compat: true }), mdx()],
+  server: {
+    port: 3000,
+  },
 })
