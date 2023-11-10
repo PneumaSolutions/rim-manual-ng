@@ -1,5 +1,6 @@
 ---
 import "bootstrap/dist/css/bootstrap.css"
+import "~/styles/general.css"
 
 import type { CollectionEntry } from "astro:content"
 import { pageOrder, pagesByPath } from "~/content"
@@ -21,49 +22,77 @@ if (pageIndex < 0) {
 <html lang={lang}>
   <head>
     <title>{data.title} - Remote Incident Manager</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
   </head>
   <body>
-    <nav>
-      <ul>
-        {
-          pageOrder.map((linkSlug) => {
-            let entry = pagesByPath[`${lang}/${linkSlug}`]
-            if (!entry) {
-              throw new Error(`couldn't find entry for ${lang}/${linkSlug}`)
-            }
-            return (
-              <li>
-                <a href={`/${lang}/${linkSlug}`}>{entry.data.title}</a>
-              </li>
+    <div>
+      <h2>Remote Incident Manager (RIM)</h2>
+    </div>
+    <div class="container-fluid">
+      <div class="sidebar">
+        <div class="navbar navbar-default" role="navigation">
+          <div class="row flex-nowrap">
+            <div class="col-auto px-0">
+              <div
+                id="sidebar"
+                class="collapse show collapse-horizontal"
+                aria-expanded="true"
+              >
+                <ul class="navbar-nav mr-auto mt-2 mt-lg-0" id="navList">
+                  {
+                    pageOrder.map((linkSlug) => {
+                      let entry = pagesByPath[`${lang}/${linkSlug}`]
+                      if (!entry) {
+                        throw new Error(
+                          `couldn't find entry for ${lang}/${linkSlug}`
+                        )
+                      }
+                      return (
+                        <li class="nav-item">
+                          <a class="nav-link" href={`/${lang}/${linkSlug}/`}>
+                            {entry.data.title}
+                          </a>
+                        </li>
+                      )
+                    })
+                  }
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="search"></div>
+      </div>
+      <div class="col ps-md-2 pt-2">
+        <main class="page-header pt-3">
+          <slot />
+        </main>
+        <footer>
+          {
+            pageIndex === 0 ? null : (
+              <a
+                class="path-prev"
+                href={`/${lang}/${pageOrder[pageIndex - 1]}/`}
+              >
+                Previous:{" "}
+                {pagesByPath[`${lang}/${pageOrder[pageIndex - 1]}`].data.title}
+              </a>
             )
-          })
-        }
-      </ul>
-    </nav>
-    <main>
-      <slot />
-    </main>
-    <footer>
-      {
-        pageIndex === 0 ? null : (
-          <div>
-            <a href={`/${lang}/${pageOrder[pageIndex - 1]}/`}>
-              Previous:{" "}
-              {pagesByPath[`${lang}/${pageOrder[pageIndex - 1]}`].data.title}
-            </a>
-          </div>
-        )
-      }
-      {
-        pageIndex === pageOrder.length - 1 ? null : (
-          <div>
-            <a href={`/${lang}/${pageOrder[pageIndex + 1]}/`}>
-              Next:{" "}
-              {pagesByPath[`${lang}/${pageOrder[pageIndex + 1]}`].data.title}
-            </a>
-          </div>
-        )
-      }
-    </footer>
+          }
+          {
+            pageIndex === pageOrder.length - 1 ? null : (
+              <a
+                class="path-next"
+                href={`/${lang}/${pageOrder[pageIndex + 1]}/`}
+              >
+                Next:{" "}
+                {pagesByPath[`${lang}/${pageOrder[pageIndex + 1]}`].data.title}
+              </a>
+            )
+          }
+        </footer>
+      </div>
+    </div>
   </body>
 </html>
