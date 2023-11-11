@@ -19,12 +19,17 @@ const data = filenames.map((filename) => {
     const markdownWithMeta = fs.readFileSync(
       "./src/content/docs/en/" + filename
     )
-    const { data: frontmatter, content } = matter(markdownWithMeta)
+    let { data: frontmatter, content } = matter(markdownWithMeta)
+    content = content.trim()
+    while (content.startsWith("import ")) {
+      let i = content.indexOf("\n")
+      content = content.substring(i + 1).trim()
+    }
     const baseFilename = path.basename(filename, ".mdx")
     return {
       id: baseFilename,
       title: frontmatter.title,
-      content: removeMd(content).replace(/\n/g, ""),
+      content: removeMd(content).replace(/\n/g, " "),
     }
   } catch (e) {
     console.error(`Error processing file ${filename}:`, e.message)
