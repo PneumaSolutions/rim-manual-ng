@@ -34,7 +34,12 @@ Currently, we offer relays in the following locations:
 
 ## General Session Troubleshooting
 ### The target machine to which I am connected doesn't respond properly to keyboard commands that work fine on my keyboard. What's going on?
-This could be due to a conflict in keyboard layouts. On rare occasions, if a keyboard layout is different enough from your own it may confuse RIM. Should that occur, please contact us with a report containing information about the keyboard layout of both machines.
+This could be due to either one of these possibilities:
+* A conflict in keyboard layouts: On rare occasions, if a keyboard layout is different enough from your own it may confuse RIM. Should that occur, please contact us with a report containing information about the keyboard layout of both machines.
+* If the target machine is using JAWS 2024, its unified keyboard processing sometimes interferes with use of the CTRL key for silencing speech. Although we deployed a fix for this, issues sometimes may still arise.
+    * This issue can be resolved by disabling unified keyboard processing in the JAWS settings center.
+    * Unified keyboard processing is not necessary if the target user is not also using ZoomText or Fusion.
+
 ### After a computer is reimaged and has been reconfigured with the same computer name, is there anything that needs to be done to get RIM up and running again? 
 Simply remove the machine from your account, reinstall RIM, then add the machine back into your account.
 
@@ -57,7 +62,8 @@ Prepaid hours are entirely separate from your subscription. That being said, you
 ### How do I go about bringing RIM to the attention of my place of work?
 We've assembled a [Self-Advocacy Kit](https://sak.getrim.app) (SAK). A packet of e-mail formatted letters you can send to appropriate individuals on behalf of yourself or an employee. For the record, RIM provides the same functionality as less accessible mainstream solutions. As such, RIM can replace an existing infrastructure, rather than be used alongside one. It is therefore considered a reasonable accessibility accommodation and should be provided to you by your organization. Accessibility isn't a favor, it's a right to inclusivity.
 ### What payment methods do you accept?
-We process payments through Stripe, so we are able to directly accept Visa, Mastercard, Amex, or Discover. Additionally, Stripe can accept payments via Google Pay.
+We process payments through FastSpring, so we are able to directly accept a variety of international payment methods including major credit cards, PayPal, Alipay, and many more.
+
 ### How do these passes work? Does the clock start immediately upon payment, or on the day I initiate the session?
 Passes only begin when the controller initiates the session. So if the target's machine fails on them requiring a trip to the shop and a same-day turnaround is not possible, you can simply hold off until the machine is back in good shape and your day pass will still be waiting for you.
 ### So this means these passes don't expire?
