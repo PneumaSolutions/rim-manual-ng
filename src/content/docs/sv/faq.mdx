@@ -1,5 +1,5 @@
 ---
-title: Ofta ställda frågor
+title: Vanliga frågor och svar
 ---
 
 import Windows from "~/components/platform/Windows.astro"
@@ -34,8 +34,13 @@ För närvarande erbjuder vi reläer på följande platser:
 
 ## Allmän session Felsökning
 ### Måldatorn som jag är ansluten till reagerar inte korrekt på tangentbordskommandon som fungerar bra på mitt tangentbord. Vad är det som händer?
-Detta kan bero på en konflikt mellan olika tangentbordslayouter. I sällsynta fall, om en tangentbordslayout skiljer sig tillräckligt mycket från din egen, kan det förvirra RIM. Om detta inträffar ber vi dig att kontakta oss med en rapport som innehåller information om tangentbordslayouten på båda maskinerna.
-### Finns det något som behöver göras för att RIM ska fungera igen efter att en dator har omimagerats och konfigurerats om med samma datornamn? 
+Detta kan bero på någon av följande möjligheter:
+* En konflikt mellan tangentbordslayouter: I sällsynta fall, om en tangentbordslayout skiljer sig tillräckligt mycket från din egen, kan det förvirra RIM. Om detta inträffar ber vi dig att kontakta oss med en rapport som innehåller information om tangentbordslayouten på båda maskinerna.
+* Om målmaskinen använder JAWS 2024 kan dess enhetliga tangentbordsbehandling ibland störa användningen av CTRL-tangenten för att tysta tal. Även om vi har distribuerat en fix för detta kan problem ibland fortfarande uppstå.
+    * Detta problem kan lösas genom att inaktivera enhetlig tangentbordsbehandling i JAWS inställningscenter.
+    * Unified Keyboard Processing är inte nödvändigt om målanvändaren inte också använder ZoomText eller Fusion.
+
+### Behöver man göra något för att få igång RIM igen efter att en dator har omimagerats och konfigurerats om med samma datornamn? 
 Ta helt enkelt bort maskinen från ditt konto, installera om RIM och lägg sedan till maskinen på ditt konto igen.
 
 ## Prissättning och betalningar
@@ -57,9 +62,10 @@ Förbetalda timmar är helt skilda från din prenumeration. Med detta sagt komme
 ### Hur går jag tillväga för att göra min arbetsplats uppmärksam på RIM?
 Vi har sammanställt ett [Self-Advocacy Kit] (https://sak.getrim.app) (SAK). Ett paket med brev i e-postformat som du kan skicka till lämpliga personer för din egen eller en anställds räkning. RIM tillhandahåller samma funktioner som mindre tillgängliga vanliga lösningar. RIM kan därför ersätta en befintlig infrastruktur, snarare än att användas vid sidan av en sådan. Det anses därför vara en rimlig tillgänglighetsanpassning och bör tillhandahållas av din organisation. Tillgänglighet är inte en tjänst, det är en rättighet till inkludering.
 ### Vilka betalningsmetoder accepterar ni?
-Vi hanterar betalningar via Stripe, så vi kan direkt acceptera Visa, Mastercard, Amex eller Discover. Dessutom kan Stripe ta emot betalningar via Google Pay.
-### Hur fungerar dessa pass? Börjar klockan omedelbart efter betalning, eller den dag jag initierar sessionen?
-Pass börjar gälla först när den personuppgiftsansvarige initierar sessionen. Så om målets maskin går sönder och de måste åka till verkstaden och det inte går att få en tid samma dag, kan du helt enkelt vänta tills maskinen är tillbaka i gott skick och ditt dagspass kommer fortfarande att vänta på dig.
+Vi hanterar betalningar via FastSpring, så vi kan direkt acceptera en mängd olika internationella betalningsmetoder, inklusive större kreditkort, PayPal, Alipay och många fler.
+
+### Hur fungerar dessa pass? Startar klockan direkt vid betalning, eller samma dag som jag initierar sessionen?
+Pass börjar gälla först när den personuppgiftsansvarige initierar sessionen. Så om målets maskin går sönder och kräver en resa till verkstaden och det inte är möjligt att få en tid samma dag, kan du helt enkelt vänta tills maskinen är tillbaka i gott skick och ditt dagspass kommer fortfarande att vänta på dig.
 ### Så detta innebär att dessa pass inte upphör att gälla?
 Nej. Du kan vara säker på att dina dagspass kommer att vänta tålmodigt på att du ska aktivera dem när du är redo.
 ### Vad händer om jag ansluter till en annan maskin samma dag som ett incidentpass har använts?

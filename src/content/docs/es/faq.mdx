@@ -5,7 +5,7 @@ title: Preguntas frecuentes
 import Windows from "~/components/platform/Windows.astro"
 import MacOS from "~/components/platform/MacOS.astro"
 
-A continuación encontrará respuestas a algunas preguntas frecuentes sobre RIM. Cuando se enfrente a un problema, consulte este documento siempre que sea posible. Si su pregunta no está cubierta en este documento, por favor [Contacte con nosotros.](https://pneumasolutions.com/contact/)
+A continuación se ofrecen respuestas a algunas preguntas frecuentes sobre RIM. Cuando se enfrente a un problema, consulte este documento siempre que sea posible. Si su pregunta no está cubierta en este documento, por favor [Contacte con nosotros.](https://pneumasolutions.com/contact/)
 ## Compatibilidad
 ### ¿Qué versiones de Windows son compatibles?
 Admitimos Windows7SP1 y versiones superiores, así como Windows Server2012 y versiones superiores.
@@ -33,9 +33,14 @@ Actualmente, ofrecemos repetidores en los siguientes lugares:
 * Sao Paulo, Brasil
 
 ## Solución de problemas de la sesión general
-### La máquina de destino a la que estoy conectado no responde correctamente a comandos de teclado que funcionan bien en mi teclado. ¿Qué ocurre?
-Esto puede deberse a un conflicto en la distribución del teclado. En raras ocasiones, si una distribución de teclado es lo suficientemente diferente de la suya, puede confundir a RIM. Si esto ocurre, ponte en contacto con nosotros y envíanos un informe con información sobre la distribución del teclado de ambos equipos.
-### Después de que un ordenador ha sido reimaginado y ha sido reconfigurado con el mismo nombre de ordenador, ¿hay que hacer algo para que RIM vuelva a funcionar? 
+### La máquina de destino a la que estoy conectado no responde correctamente a comandos de teclado que funcionan bien en mi teclado. ¿Qué es lo que ocurre?
+Esto podría deberse a cualquiera de estas posibilidades:
+* Un conflicto en la distribución del teclado: En raras ocasiones, si la distribución del teclado es lo suficientemente diferente de la suya, puede confundir a RIM. Si esto ocurre, ponte en contacto con nosotros con un informe que contenga información sobre la distribución del teclado de ambas máquinas.
+* Si el equipo de destino utiliza JAWS 2024, su procesamiento de teclado unificado a veces interfiere con el uso de la tecla CTRL para silenciar la voz. Aunque hemos implementado una solución para este problema, a veces puede seguir produciéndose.
+    * Este problema puede resolverse desactivando el procesamiento de teclado unificado en el centro de configuración de JAWS.
+    * El procesamiento de teclado unificado no es necesario si el usuario de destino no utiliza también ZoomText o Fusion.
+
+### Después de que un ordenador haya sido reimaginado y haya sido reconfigurado con el mismo nombre de ordenador, ¿hay que hacer algo para que RIM vuelva a funcionar? 
 Simplemente elimine la máquina de su cuenta, reinstale RIM y, a continuación, vuelva a añadir la máquina a su cuenta.
 
 ## Precios y pagos
@@ -55,11 +60,12 @@ Buenas noticias: ¡su asignación diaria gratuita de 30 minutos no desaparecerá
 ### ¿Cuánto durarán mis horas de prepago? ¿Están vinculadas a mi suscripción?
 Las horas de prepago son totalmente independientes de tu suscripción. Dicho esto, las horas de prepago permanecerán en su cuenta durante un (1) año a partir de la fecha en que se utilizaron por primera vez.
 ### ¿Cómo puedo informar a mi lugar de trabajo sobre RIM?
-Hemos preparado un [Self-Advocacy Kit](https://sak.getrim.app) (SAK). Se trata de un paquete de cartas con formato de correo electrónico que puedes enviar a las personas adecuadas en tu nombre o en el de un empleado. Para que conste, RIM proporciona la misma funcionalidad que las soluciones convencionales menos accesibles. Como tal, RIM puede sustituir a una infraestructura existente, en lugar de utilizarse junto a ella. Por lo tanto, se considera un ajuste de accesibilidad razonable y su organización debería proporcionárselo. La accesibilidad no es un favor, es un derecho a la inclusión.
+Hemos preparado un [Kit de autodefensa](https://sak.getrim.app) (SAK). Se trata de un paquete de cartas con formato de correo electrónico que puedes enviar a las personas adecuadas en tu nombre o en el de un empleado. Para que conste, RIM proporciona la misma funcionalidad que las soluciones convencionales menos accesibles. Como tal, RIM puede sustituir a una infraestructura existente, en lugar de utilizarse junto a ella. Por lo tanto, se considera un ajuste de accesibilidad razonable y su organización debería proporcionárselo. La accesibilidad no es un favor, es un derecho a la inclusión.
 ### ¿Qué métodos de pago aceptan?
-Procesamos los pagos a través de Stripe, por lo que podemos aceptar directamente Visa, Mastercard, Amex o Discover. Además, Stripe puede aceptar pagos a través de Google Pay.
+Procesamos los pagos a través de FastSpring, por lo que podemos aceptar directamente una gran variedad de métodos de pago internacionales, incluidas las principales tarjetas de crédito, PayPal, Alipay y muchos más.
+
 ### ¿Cómo funcionan estos pases? ¿El reloj comienza inmediatamente después del pago, o el día que inicio la sesión?
-Los pases sólo comienzan cuando el controlador inicia la sesión. Por lo tanto, si la máquina del objetivo les falla, lo que requiere un viaje al taller y no es posible un cambio en el mismo día, simplemente puede esperar hasta que la máquina vuelva a estar en buen estado y su pase de un día seguirá esperándole.
+Los pases sólo comienzan cuando el controlador inicia la sesión. Por lo tanto, si la máquina del objetivo falla y tiene que ir al taller y no es posible realizar la sesión en el mismo día, puede esperar hasta que la máquina vuelva a estar en buen estado y su pase diario seguirá esperándole.
 ### ¿Significa esto que estos pases no caducan?
 No. Tenga la seguridad de que su acumulación de pases diarios le estará esperando pacientemente para que los active cuando esté preparado.
 ### ¿Qué ocurre si me conecto a otra máquina el día que se ha utilizado un pase de incidencias?
@@ -82,7 +88,7 @@ Todo el código de RIM que está expuesto a entradas desde la red está escrito 
 ### ¿Cumple RIM la HIPAA?
 Sí. La mejor configuración en este caso sería una implantación local, así que [póngase en contacto con nosotros](https://pneumasolutions.com/contact/) si su caso de uso depende de ello.
 ### ¿Es necesario abrir algún puerto en el destino o el controlador?
-No y no.
+No.
 ### ¿Qué conexiones habría que permitir en una red para que funcione RIM?
 Cuando se utiliza la nube pública, se requiere una conexión https a [getrim.app](https://getrim.app). En casos óptimos, esto es suficiente para que RIM establezca una conexión peer-to-peer entre el controlador y el objetivo. Sin embargo, ayuda permitir conexiones UDP a través de los puertos 19302 y 3478 (los puertos estándar STUN y TURN). Esto asegura que si se está utilizando un relé, RIM no tendrá que recurrir a una conexión tcp en el puerto 443.
 ### ¿Se ejecuta RIM en segundo plano, y si es así aparecerá en mi lista Command+Tab?
@@ -99,6 +105,6 @@ No. Sin embargo, las sesiones solicitadas sí admiten conversaciones de voz.
 ### Si elimino una máquina desatendida de mi cuenta de controlador, ¿se revocará automáticamente el permiso sobre el objetivo?
 Sí. Una vez eliminado un objetivo desatendido, el cambio será efectivo inmediatamente. Si la máquina de destino está apagada o no está conectada a Internet, el cambio será efectivo tan pronto como se establezca una conexión a Internet en su máquina.
 ### La máquina de destino se reinició después de instalar las actualizaciones y los controladores, y requiere una contraseña para iniciar sesión. ¿Cómo continúa la sesión a partir de aquí?
-En la mayoría de los casos, especialmente cuando el cifrado de disco FileVault está activado, el usuario de destino deberá introducir manualmente la contraseña. RIM no puede iniciarse en un Mac cifrado antes de que se haya iniciado una sesión completa.
+En la mayoría de los casos, especialmente cuando el cifrado de disco FileVault está activado, el usuario de destino tendrá que introducir manualmente la contraseña. RIM no puede iniciarse en un Mac cifrado antes de que se haya iniciado una sesión completa.
 ### Tengo varias máquinas haciendo de controlador. ¿La lista de máquinas configuradas para el acceso desatendido aparecerá en todas las máquinas?
 Sí. La lista de máquinas configuradas para el acceso desatendido se almacena dentro de su cuenta, por lo que se rellenará automáticamente.

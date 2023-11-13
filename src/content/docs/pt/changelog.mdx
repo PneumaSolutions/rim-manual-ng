@@ -1,306 +1,342 @@
 ---
-title: Change Log
+title: Registro de alterações
 ---
 
 import Windows from "~/components/platform/Windows.astro"
 import MacOS from "~/components/platform/MacOS.astro"
 
-Versions of RIM will be denoted by headings at level 2. Substantial updates with several features for both platforms will be divided into Mac and Windows subheadings at level 3.
+As versões da RIM serão indicadas por títulos no nível 2. Atualizações substanciais com vários recursos para ambas as plataformas serão divididas em subtítulos para Mac e Windows no nível 3.
+## 3.2.13
+### Windows
+Corrigido um problema com a entrada do teclado ao se conectar a máquinas de destino que executam o JAWS 2024.
+## 3.2.12
+Contornado um problema raro que poderia impedir que o aplicativo RIM se conectasse ao serviço de nuvem.
+## 3.2.11
+Adicionado um novo botão à janela Connection Details (Detalhes da conexão) para solicitar que a máquina de destino envie seus registros RIM para a Pneuma Solutions. Utilize esse recurso somente se solicitado pela Pneuma Solutions.
+## 3.2.10
+Foi corrigido um problema que poderia fazer com que o RIM parasse de funcionar até a próxima reinicialização do aplicativo se a conexão da máquina com a Internet estivesse temporariamente indisponível.
+## 3.2.9
+### macOS
+Infelizmente, não podemos mais oferecer entrada automática de microfone estéreo em conversas de voz nessa plataforma, pois, em alguns casos, isso impedia que a entrada de microfone funcionasse em um Mac. Observe que essa alteração não tem efeito sobre a saída de áudio capturada da máquina de destino; ela continua sendo estéreo.
 ## 3.2.8
-### mac
-Fixed a bug that prevented RIM from coming up when activating the application through the Finder or Dock, rather than using the global hotkey.
+### macOS
+Foi corrigido um bug que impedia que o RIM aparecesse ao ativar o aplicativo por meio do Finder ou do Dock, em vez de usar a tecla de atalho global.
 ## 3.2.7
-* Voice conversations now automatically use stereo when the audio hardware supports it. This is useful when using RIM for training in audio production.
+As conversas por voz agora usam automaticamente o estéreo quando o hardware de áudio o suporta. Isso é útil ao usar o RIM para treinamento em produção de áudio.
 ## 3.2.6
-* Fixed a recently introduced problem that could prevent RIM from working on a fresh operating system installation.
+Foi corrigido um problema introduzido recentemente que poderia impedir que o RIM funcionasse em uma nova instalação do sistema operacional.
 ## 3.2.5
-* Fixed the message that displays remaining free time.
+Foi corrigida a mensagem que exibe o tempo livre restante.
 ## 3.2.4
-* Localization of RIM into other languages is now in beta. The following languages are currently supported: German, Spanish, French, Italian, and Swedish. To use RIM in one of these languages, press the "Language (BETA)" button at the bottom of the "Provide Help" or "Receive Help" window, then choose your language from the drop-down list and press the "Switch Language" button. We look forward to your feedback.
+A localização do RIM em outros idiomas está agora na versão beta. Atualmente, há suporte para os seguintes idiomas: Alemão, espanhol, francês, italiano e sueco. Para usar o RIM em um desses idiomas, pressione o botão "Idioma (BETA)" na parte inferior da janela "Fornecer ajuda" ou "Receber ajuda" e, em seguida, escolha o idioma na lista suspensa e pressione o botão "Alternar idioma". Aguardamos seus comentários.
 ## 3.2.1
-* The process of starting a new RIM session on the controller side is now smoother. The original window, where you entered your keyword or chose a target machine, will not go away until the main session window is ready. If the initial window no longer has focus when the session starts, e.g. if you switched tasks while waiting for the target user to enter a keyword, then RIM will notify you that the session is ready, and the main session window will appear when you return focus to RIM.
-* macOS only: As part of the previous change, we modified the way that RIM adds and removes itself in the Dock and the Command+Tab list. Please let us know if you find any problems with the current behavior.
-* Windows targets only: If a screen reader is started on the target machine while remote accessibility is active, then remote accessibility will quietly shut down to avoid double speech output.
+* O processo de início de uma nova sessão RIM no lado do controlador agora está mais suave. A janela original, onde você digitou a palavra-chave ou escolheu uma máquina de destino, não desaparecerá até que a janela principal da sessão esteja pronta. Se a janela inicial não tiver mais o foco quando a sessão for iniciada, por exemplo, se você trocou de tarefa enquanto esperava o usuário-alvo inserir uma palavra-chave, o RIM o notificará de que a sessão está pronta e a janela principal da sessão aparecerá quando você retornar o foco ao RIM.
+* somente macOS: Como parte da alteração anterior, modificamos a maneira como o RIM adiciona e remove a si mesmo no Dock e na lista Command+Tab. Informe-nos se encontrar algum problema com o comportamento atual.
+* Somente para alvos do Windows: se um leitor de tela for iniciado no computador de destino enquanto a acessibilidade remota estiver ativa, a acessibilidade remota será silenciosamente encerrada para evitar a duplicação da saída de voz.
+
 ## 3.2.0
-First official release for Mac OS! New features include:
-* ability to configure unattended or prompted sessions from within an interactive session.
-* All new permissions instructions for users who are not using VoiceOver.
+Primeira versão oficial para Mac OS! Os novos recursos incluem:
+* capacidade de configurar sessões não assistidas ou solicitadas de dentro de uma sessão interativa.
+* Todas as novas instruções de permissões para usuários que não usam o VoiceOver.
+
 ## 3.1.49
-This version provides a consistent, cross-platform way of opening the RIM controller session menu with the mouse. A controller can either click the large RIM icon at the upper-left corner of the session window, or as was previously possible on Windows, they can right-click anywhere on the title bar.
+Esta versão oferece uma maneira consistente e multiplataforma de abrir o menu de sessão do controlador RIM com o mouse. Um controlador pode clicar no ícone grande do RIM no canto superior esquerdo da janela da sessão ou, como era possível anteriormente no Windows, pode clicar com o botão direito do mouse em qualquer lugar da barra de título.
 ## 3.1.48
 ### Mac
-* Added support for the FN+Number key workaround for using the function row on MacBooks.
-* RIM for Mac now customizes the menu bar, and in particular, the "About" option on the application menu now opens our own About dialog rather than the generic one.
+* Foi adicionado suporte à solução alternativa da tecla FN+Número para o uso da linha de funções em MacBooks.
+* O RIM para Mac agora personaliza a barra de menus e, em particular, a opção "Sobre" no menu do aplicativo agora abre nossa própria caixa de diálogo Sobre, em vez da genérica.
+
 ## 3.1.47
 ### Windows
-When connecting a Mac controller to a Windows target, with both sides using the same non-US keyboard layout, keyboard input from the controller wasn't being translated correctly. Version 3.1.47 for Windows fixes this problem.
+Ao conectar um controlador Mac a um alvo Windows, com ambos os lados usando o mesmo layout de teclado não americano, a entrada de teclado do controlador não estava sendo traduzida corretamente. A versão 3.1.47 para Windows corrige esse problema.
 ## 3.1.46
-* Added support for the new RIM Personal Community Support subscription package.
+Esta versão adiciona suporte ao novo pacote de assinatura do RIM Personal Community Support.
 
 ## 3.1.45
 ### Mac
-RIM is now able to automatically resume capturing screen content and audio output if the target machine switches to the lock screen during a session.
+A RIM agora pode retomar automaticamente a captura do conteúdo da tela e a saída de áudio se a máquina de destino mudar para a tela de bloqueio durante uma sessão.
 
 ## 3.1.44
 ### Mac
-* Implements reboot and reconnect for Mac targets, including both standard and emergency reboots.
-    * As with unattended access, RIM doesn't come up on the macOS login screen due to platform restrictions, particularly FileVault. So the target user will need to log back in before RIM can reconnect.
-* The notification about file transfers, introduced in the previous update, is now shown only once per RIM session.
+* Implementa a reinicialização e a reconexão para alvos Mac, incluindo reinicializações padrão e de emergência.
+    * Assim como no acesso autônomo, o RIM não aparece na tela de login do macOS devido às restrições da plataforma, especialmente o FileVault. Portanto, o usuário alvo precisará fazer login novamente antes que a RIM possa se reconectar.
+* A notificação sobre transferências de arquivos, introduzida na atualização anterior, agora é exibida apenas uma vez por sessão da RIM.
+
 ## 3.1.43
 ### Mac
-* This update modifies the user interface for file transfers. When one or more files are placed on the clipboard on either side of the connection, the controller now receives a notification saying that the file transfer can be completed through the RIM menu. If the controller chooses this menu option, the file transfer is performed, and when done, a temporary folder containing the transferred file or files is opened on the destination machine. This method of file transfer is necessary when the destination machine is a Mac. When the destination is a Windows machine, the file transfer can be completed using either this new method or the old method of pasting in File Explorer on the destination machine.
+Esta atualização modifica a interface do usuário para transferências de arquivos. Quando um ou mais arquivos são colocados na área de transferência em ambos os lados da conexão, o controlador agora recebe uma notificação informando que a transferência de arquivos pode ser concluída por meio do menu RIM. Se o controlador escolher essa opção de menu, a transferência de arquivos será executada e, quando concluída, uma pasta temporária contendo o arquivo ou arquivos transferidos será aberta na máquina de destino. Esse método de transferência de arquivos é necessário quando o computador de destino é um Mac. Quando o destino é um computador Windows, a transferência de arquivos pode ser concluída usando esse novo método ou o método antigo de colar no File Explorer no computador de destino.
 ## 3.1.42
 ### Mac
-* RIM for Mac now works as an unattended target. It also performs updates in the background as the Windows version does.
-    * We still have some work to do on access to the lock screen, and we don't believe we'll be able to provide access to the login screen before a user is logged in at all, due to limitations of the platform.
-    * we haven't yet figured out how, or if, we'll be able to implement pre-configured target installers, so you'll need to use one of the other available methods of setting up unattended access.
-* Eliminates one source of latency in audio captured from Mac targets.
+* O RIM para Mac agora funciona como um alvo autônomo. Ele também executa atualizações em segundo plano, assim como a versão do Windows.
+    * Ainda temos que trabalhar no acesso à tela de bloqueio e não acreditamos que poderemos fornecer acesso à tela de login antes que o usuário faça login, devido às limitações da plataforma.
+    * ainda não descobrimos como, ou se, poderemos implementar instaladores de destino pré-configurados, portanto, você precisará usar um dos outros métodos disponíveis para configurar o acesso autônomo.
+* Elimina uma fonte de latência no áudio capturado de alvos Mac.
 
 ## 3.1.41
 ### Windows
-Fixed a problem that sometimes caused RIM to crash in response to activity on the Windows clipboard during a RIM session.
+Corrigido um problema que às vezes fazia com que o RIM travasse em resposta à atividade na área de transferência do Windows durante uma sessão do RIM.
 ## 3.1.40
-Adds some more logging related to audio on the target. So if you can reproduce laggy audio on the target, please do so with this version, then send logs. 
+Adiciona mais alguns registros relacionados ao áudio no destino. Portanto, se você puder reproduzir áudio com atraso no destino, faça isso com esta versão e envie os registros. 
 ## 3.1.39
 ### Mac
-This update adds mouse support for Mac targets.
-RIM now requests permission to use macOS accessibility features. For new
-installations, this replaces the input monitoring permission request, so
-the total number of permission steps doesn't go up. But for updates,
-you'll need to grant this permission before you can use RIM after updating.
+Esta atualização adiciona suporte a mouse para alvos Mac.
+A RIM agora solicita permissão para usar os recursos de acessibilidade do macOS. Para novas
+instalações, isso substitui a solicitação de permissão de monitoramento de entrada, portanto
+o número total de etapas de permissão não aumenta. Mas para atualizações,
+você precisará conceder essa permissão antes de poder usar o RIM após a atualização.
 ## 3.1.38
 ### Mac
-Fixed a crash that was affecting Mac targets at session initialization.
+Foi corrigida uma falha que estava afetando os alvos do Mac na inicialização da sessão.
 ## 3.1.37
-This update marks a major milestone in the Mac port of RIM. The remote
-accessibility feature of RIM is now available when connecting to Mac
-targets. Using a special configuration of VoiceOver on the target
-machine, the controller, whether using Windows or Mac, will hear speech
-while the target user does not hear any speech or sound effects. There
-is also no visible indication that VoiceOver is running on the target.
-The process of starting remote accessibility, either automatically or
-manually, works just as it does with Windows targets. And of course,
-when the session ends, the special configuration of VoiceOver is shut
-down, and VoiceOver is restored to its previous settings.
+Esta atualização representa um marco importante na porta do RIM para Mac. O recurso de acessibilidade
+o recurso de acessibilidade remota do RIM agora está disponível ao se conectar a alvos Mac
+alvos Mac. Usando uma configuração especial do VoiceOver na máquina de destino
+máquina de destino, o controlador, seja usando Windows ou Mac, ouvirá a fala
+enquanto o usuário alvo não ouve nenhuma fala ou efeito sonoro. Não há
+também não há nenhuma indicação visível de que o VoiceOver está sendo executado no alvo.
+O processo de iniciar a acessibilidade remota, seja automática ou
+manualmente, funciona exatamente como nos alvos do Windows. E, é claro,
+quando a sessão termina, a configuração especial do VoiceOver é encerrada e o
+e o VoiceOver é restaurado para suas configurações anteriores.
 
-Note that both Windows and Mac controllers now need to be running
-version 3.1.37 to get full functionality when connecting to a Mac target.
+Observe que os controladores do Windows e do Mac agora precisam estar executando a
+versão 3.1.37 para obter funcionalidade total ao se conectar a um alvo Mac.
 ## 3.1.36
 ### Windows
-The remote accessibility feature is now compatible with NVDA 2023.1.
+O recurso de acessibilidade remota agora é compatível com o NVDA 2023.1.
 ## 3.1.35
 ### Mac
-* RIM now consistently uses stereo audio, particularly for Mac controllers.
-* When using RIM for Mac as a controller with the remote accessibility feature, RIM now uses the voice and speaking rate as defined in the Spoken Content section of system settings.
+* O RIM agora usa consistentemente áudio estéreo, especialmente para controladores do Mac.
+* Ao usar o RIM para Mac como um controlador com o recurso de acessibilidade remota, o RIM agora usa a voz e a velocidade de fala conforme definido na seção Conteúdo falado das configurações do sistema.
 
 ## 3.1.34
 ### Mac
-When a Mac controller connects to a Windows target that's not running a screen reader, you can now run the remote accessibility module on the Windows target and get speech output on the Mac controller. Note that you still need to use NVDA keyboard commands when interacting with the Windows target, not VoiceOver commands, and we're using the NVDA laptop keyboard layout. 
+Quando um controlador do Mac se conecta a um alvo do Windows que não está executando um leitor de tela, agora é possível executar o módulo de acessibilidade remota no alvo do Windows e obter saída de voz no controlador do Mac. Observe que você ainda precisa usar os comandos de teclado do NVDA ao interagir com o alvo do Windows, não os comandos do VoiceOver, e estamos usando o layout de teclado do laptop do NVDA. 
 ## 3.1.33
-In response to user feedback, we removed the sound effect when displaying notifications about the status of a remote session.
+Em resposta aos comentários dos usuários, removemos o efeito sonoro ao exibir notificações sobre o status de uma sessão remota.
 ## 3.1.32
 ### Mac
-RIM now supports the Fn key when using a Mac laptop as a controller.  
-Note that for the top row of function keys, RIM always treats them as F1 through F12, and you need to use the Fn key if you want to use these keys as system function keys (for adjusting volume and so on), regardless of how the system preference is set on either end of the connection. We figure that in a remote session, you probably want to use these keys as F keys most of the time anyway. Behavior like using Fn+Left Arrow to press Home works as expected.
+A RIM agora é compatível com a tecla Fn ao usar um laptop Mac como controlador.  
+Observe que, para a linha superior de teclas de função, a RIM sempre as trata como F1 a F12, e você precisa usar a tecla Fn se quiser usar essas teclas como teclas de função do sistema (para ajustar o volume e assim por diante), independentemente de como a preferência do sistema estiver definida em qualquer extremidade da conexão. Imaginamos que, em uma sessão remota, você provavelmente desejará usar essas teclas como teclas F na maior parte do tempo. Comportamento como usar Fn+Seta para a esquerda para pressionar Home funciona como esperado.
 ## 3.1.31
 ### Mac
-* RIM previously didn't let go of its lock on keyboard input when some dialogs were displayed, such as the dialog requesting permission to access the microphone. This is now fixed.
-* When connecting from Mac to Windows or vice versa, it's no longer possible for the controller to trigger the RIM menu on the target machine. This fix requires the corresponding update to RIM for Windows.
+* Anteriormente, a RIM não liberava o bloqueio da entrada do teclado quando algumas caixas de diálogo eram exibidas, como a caixa de diálogo que solicitava permissão para acessar o microfone. Isso agora foi corrigido.
+* Ao se conectar do Mac ao Windows ou vice-versa, não é mais possível que o controlador acione o menu RIM no computador de destino. Essa correção requer a atualização correspondente do RIM para Windows.
+
 ### Windows
-* Added a way to send RIM's log files to Pneuma Solutions, introduced for Mac OS in version 3.1.29. Please only use this function if requested by a representative of Pneuma Solutions.
-* RIM now plays a sound whenever it displays a notification.
+* Foi adicionada uma maneira de enviar os arquivos de registro do RIM para a Pneuma Solutions, introduzida para o Mac OS na versão 3.1.29. Use essa função somente se for solicitada por um representante da Pneuma Solutions.
+* A RIM agora reproduz um som sempre que exibe uma notificação.
 
 ## 3.1.30
 ### Mac
-RIM will now request permission to display notifications, both on first run and for existing users updating from a previous version. As with most other permissions, granting this permission requires flipping a switch in System Settings. We've also added our own sound for these
-notifications.
+A RIM agora solicitará permissão para exibir notificações, tanto na primeira execução quanto para usuários existentes que estejam atualizando a partir de uma versão anterior. Como acontece com a maioria das outras permissões, a concessão dessa permissão requer o acionamento de um botão nas Configurações do sistema. Também adicionamos nosso próprio som para essas
+notificações.
 ## 3.1.29
 ### Mac
-* We believe the problem that some users have reported with requesting keyboard input monitoring permission on machines running Karabiner Elements is now fixed.
-* The RIM About dialog now has a button to send logs. Please only use this if requested by Pneuma Solutions.
+* Acreditamos que o problema que alguns usuários relataram com a solicitação de permissão de monitoramento de entrada de teclado em máquinas que executam o Karabiner Elements já foi corrigido.
+* A caixa de diálogo Sobre o RIM agora tem um botão para enviar registros. Use-o somente se solicitado pela Pneuma Solutions.
+
 ## 3.1.28
 ### Mac
-When using RIM as a controller, it is now compatible with advanced keyboard customization tools such as Karabiner Elements.
+Ao usar o RIM como um controlador, ele agora é compatível com ferramentas avançadas de personalização de teclado, como o Karabiner Elements.
 ## 3.1.27
 ### Mac
-This is a minor update, with just two changes:
-* Marked RIM as requiring macOS 13.0 (Ventura) or later.
-* Fixed RIM so the virtual keyboard is only connected when RIM is actually running as a target. This means that the Keyboard Setup Assistant won't appear when using RIM as a controller. We're still looking into possible ways to avoid that dialog altogether.
+Esta é uma atualização menor, com apenas duas alterações:
+* Marcou o RIM como exigindo o macOS 13.0 (Ventura) ou posterior.
+* Corrigido o RIM para que o teclado virtual seja conectado somente quando o RIM estiver realmente sendo executado como um alvo. Isso significa que o Keyboard Setup Assistant não aparecerá quando o RIM for usado como controlador. Ainda estamos procurando possíveis maneiras de evitar essa caixa de diálogo.
+
 ## 3.1.26
-Initial beta build of RIM for Mac OS.
+Versão beta inicial do RIM para Mac OS.
 ## 3.1.24
-* When connecting to a target machine with lower display resolution or a higher dots-per-inch (DPI) scale factor than the controller, RIM now scales the remote target display to fit the controller's screen, making the remote display easier to work with visually.
+* Ao se conectar a uma máquina de destino com uma resolução de tela mais baixa ou um fator de escala de pontos por polegada (DPI) mais alto do que o controlador, o RIM agora dimensiona a tela de destino remota para se ajustar à tela do controlador, facilitando o trabalho visual com a tela remota.
 
 ## 3.1.23
-* Added support for prepaid hours.
+* Adicionado suporte para horas pré-pagas.
 
 ## 3.1.22
-* Fixed a bug that sometimes caused RIM on the target machine to get into a loop that prevented unattended connections.
+* Correção de um bug que às vezes fazia com que o RIM no computador de destino entrasse em um loop que impedia conexões autônomas.
 
 ## 3.1.21
-* Added a new keyboard shortcut, Windows+Shift+M, while in a session window, to minimize the window and return the keyboard focus to the local (controller) machine.
+* Adição de um novo atalho de teclado, Windows+Shift+M, em uma janela de sessão, para minimizar a janela e retornar o foco do teclado para o computador local (controlador).
 
 ## 3.1.20
-* Added logging that will help us diagnose reports of unattended targets being intermittently disconnected from RIM.
+* Adição de registro que nos ajudará a diagnosticar relatórios de alvos não assistidos sendo intermitentemente desconectados do RIM.
 
 ## 3.1.19
-* Fixed some corner cases in remote keyboard input handling. In particular, when running JAWS on the target machine, JAWS now correctly recognizes Pause and NumLock key presses from the controller. Please let us know if you find any regressions in keyboard input handling, particularly for non-US keyboard layouts.
+* Correção de alguns casos de canto no tratamento de entrada de teclado remoto. Em particular, ao executar o JAWS no computador de destino, o JAWS agora reconhece corretamente as teclas Pause e NumLock pressionadas pelo controlador. Informe-nos se encontrar alguma regressão no manuseio da entrada do teclado, especialmente para layouts de teclado não americanos.
 
 ## 3.1.18
-* Fixed a problem that prevented RIM from updating itself on target machines that were on the Windows Sign-in screen with no active user session.
+* Foi corrigido um problema que impedia que a RIM se atualizasse em máquinas de destino que estavam na tela de login do Windows sem nenhuma sessão de usuário ativa.
 
 ## 3.1.17
-* Since the previous update, we've received reports of the Shift modifier being stuck on the target machine when running JAWS. We believe this update resolves that problem. Please let us know if you continue to have trouble with stuck modifiers.
-* Fixed a bug that caused RIM to shut down NVDA on the target machine at the end of a session if NVDA was started on the target machine after enabling remote accessibility.
+* Desde a atualização anterior, recebemos relatos de que o modificador Shift ficou preso no computador de destino ao executar o JAWS. Acreditamos que esta atualização resolve esse problema. Informe-nos se você continuar a ter problemas com modificadores travados.
+* Corrigimos um erro que fazia com que a RIM desligasse o NVDA no computador de destino no final de uma sessão se o NVDA fosse iniciado no computador de destino após a ativação da acessibilidade remota.
 
 ## 3.1.16
-* When running JAWS on the target machine with Unified Keyboard Processing enabled, JAWS now reliably responds to keystrokes from the controller.
-* Fixed an error that sporadically occurs when starting the remote accessibility add-on after installing or updating the NVDA add-on on the controller machine.
+* Ao executar o JAWS no computador de destino com o Processamento de teclado unificado ativado, o JAWS agora responde de forma confiável aos pressionamentos de tecla do controlador.
+* Foi corrigido um erro que ocorria esporadicamente ao iniciar o complemento de acessibilidade remota depois de instalar ou atualizar o complemento NVDA no computador do controlador.
 
 ## 3.1.15
-* When you connect to a target machine with no running screen reader, RIM will automatically enable remote accessibility if you are running a screen reader on the controller machine. If you're running a screen reader other than NVDA on the controller machine, RIM will even automatically shut down that screen reader and start NVDA if you have it installed.
-* Fixed issues that prevented the remote accessibility module from using your local NVDA configuration settings such as keyboard layout and typing echo.
+* Ao se conectar a um computador de destino sem leitor de tela em execução, o RIM ativará automaticamente a acessibilidade remota se você estiver executando um leitor de tela no computador controlador. Se estiver executando um leitor de tela que não seja o NVDA na máquina controladora, o RIM até mesmo desligará automaticamente esse leitor de tela e iniciará o NVDA se ele estiver instalado.
+* Correção de problemas que impediam o módulo de acessibilidade remota de usar suas definições de configuração local do NVDA, como layout de teclado e eco de digitação.
 
 ## 3.1.14
-* The process of re-establishing a connection when there is a connectivity issue is now more robust.
-* Fixed a problem that sometimes caused RIM's background update process to stop.
-* If the controller is running an older version of RIM than the target, the menu no longer includes an option to update the target.
-* If a screen reader or RIM's remote accessibility module is running on the target machine, you can now stop it through an option on the menu.
+* O processo de restabelecimento de uma conexão quando há um problema de conectividade agora é mais robusto.
+* Foi corrigido um problema que às vezes fazia com que o processo de atualização em segundo plano da RIM parasse.
+* Se o controlador estiver executando uma versão mais antiga do RIM do que o destino, o menu não incluirá mais uma opção para atualizar o destino.
+* Se um leitor de tela ou o módulo de acessibilidade remota do RIM estiver em execução no computador de destino, agora é possível interrompê-lo por meio de uma opção no menu.
 
 ## 3.1.13
-* Fixed a bug that caused users to get logged out of RIM after installing some Windows updates.
+* Foi corrigido um erro que fazia com que os usuários fossem desconectados do RIM após a instalação de algumas atualizações do Windows.
 
 ## 3.1.12
-* By popular demand, RIM no longer prompts for a comment at the end of each session. You can still post comments on sessions in the RIM Dashboard. We may add a configurable option to prompt for a comment as a feature in the future.
+* Por demanda popular, o RIM não solicita mais um comentário no final de cada sessão. Você ainda pode publicar comentários sobre as sessões no painel do RIM. Poderemos adicionar uma opção configurável para solicitar um comentário como um recurso no futuro.
 
 ## 3.1.11
-* If the target machine is running at least this version of RIM, but hasn't yet updated to the latest version, the controller can now force the target machine to update its installation of RIM through a new option on the session menu.
+* Se o computador de destino estiver executando pelo menos essa versão do RIM, mas ainda não tiver atualizado para a versão mais recente, o controlador agora poderá forçar o computador de destino a atualizar sua instalação do RIM por meio de uma nova opção no menu da sessão.
 
 ## 3.1.10
-* You can now optionally add a comment at the end of a RIM session. Session comments can be viewed in the RIM Dashboard.
-* The Connection Details window is enhanced. The statistics are updated live as long as the window is open, and the window now includes information about the target machine.
+* Agora você pode adicionar opcionalmente um comentário ao final de uma sessão do RIM. Os comentários da sessão podem ser visualizados no Painel de controle do RIM.
+* A janela Detalhes da conexão foi aprimorada. As estatísticas são atualizadas em tempo real enquanto a janela estiver aberta, e a janela agora inclui informações sobre a máquina de destino.
 
 ## 3.1.9
-* Fixed a problem that sometimes caused a RIM session to get stuck trying to reconnect.
+* Foi corrigido um problema que às vezes fazia com que uma sessão do RIM ficasse travada ao tentar se reconectar.
 
 ## 3.1.8
-* Fixed a problem that sometimes prevented the remote accessibility module from starting.
+* Foi corrigido um problema que às vezes impedia a inicialização do módulo de acessibilidade remota.
 
 ## 3.1.7
-* When choosing a target machine for an unattended or prompted session, you can now search through your target machines. To do this, on the Provide Help screen, press "Choose machine" as before, tab to the "Search" field, enter the text to search for, then either press Enter or press the "Search" button.
+* Ao escolher uma máquina de destino para uma sessão não assistida ou solicitada, agora é possível pesquisar nas máquinas de destino. Para fazer isso, na tela Fornecer ajuda, pressione "Escolher máquina" como antes, vá até o campo "Pesquisar", digite o texto a ser pesquisado e pressione Enter ou pressione o botão "Pesquisar".
 
 ## 3.1.6
-* Fixed a problem that sometimes made it impossible to interrupt JAWS speech on the secure desktop.
+* Corrigido um problema que às vezes impossibilitava a interrupção da fala do JAWS na área de trabalho segura.
+
 ## 3.1.5
-* Fixed a visual display bug that caused the list of unattended target machines to overlap with the buttons below it.
+* Foi corrigido um bug de exibição visual que fazia com que a lista de máquinas de destino não atendidas se sobrepusesse aos botões abaixo dela.
+
 ## 3.1.4
-* Enterprise customers can now deploy RIM using an MSI-based installer.
+* Os clientes corporativos agora podem implementar o RIM usando um instalador baseado em MSI.
+
 ## 3.1.3
-* Fixed a bug that could cause RIM to crash if the RIM menu is open when a session is reconnected.
+* Foi corrigido um bug que poderia fazer com que o RIM travasse se o menu RIM estivesse aberto quando uma sessão fosse reconectada.
+
 ## 3.1.2
-* Adjusted the visual style to be more accessible to low-vision users.
-* Added error messages if required fields are left empty.
+* Ajustado o estilo visual para ser mais acessível a usuários com baixa visão.
+* Adicionadas mensagens de erro se os campos obrigatórios forem deixados em branco.
+
 ## 3.1.1
-* When you press the "RIM Dashboard" button in the Provide Help window, that window now stays open.
+* Quando você pressiona o botão "RIM Dashboard" na janela Fornecer ajuda, essa janela agora permanece aberta.
+
 ## 3.1.0
-This release adds a complete management dashboard for controllers.
-* All subscribers have access to the dashboard, with feature sets determined by subscription tier.
-* Removed the in-app functions for renaming, deleting, and creating installers for unattended machines as this is now part of the dashboard
-* Brought back the welcome page.
+Esta versão adiciona um painel de gerenciamento completo para controladores.
+* Todos os assinantes têm acesso ao painel, com conjuntos de recursos determinados pelo nível de assinatura.
+* Removemos as funções no aplicativo para renomear, excluir e criar instaladores para máquinas autônomas, pois isso agora faz parte do painel
+* Trouxe de volta a página de boas-vindas.
+
 ## 3.0.8
-Fixed a bug that sometimes prevented remote screen output from working when a User Account Control prompt was displayed.
+Corrigido um bug que às vezes impedia que a saída de tela remota funcionasse quando um prompt de Controle de Conta de Usuário era exibido.
 ## 3.0.7
-* This is a bug-fix update.
+* Esta é uma atualização para correção de bugs.
+
 ## 3.0.6
-* Users with either a RIM Enterprise subscription or a RIM Pro subscription with the Enterprise add-on can now create fully silent pre-configured installers for unattended access. To run an installer in silent mode, whether it's the standard installer or a pre-configured installer from an enterprise account, use the /S command line switch (note the capitalization) when running the installer.
+* Os usuários com uma assinatura RIM Enterprise ou uma assinatura RIM Pro com o complemento Enterprise agora podem criar instaladores pré-configurados totalmente silenciosos para acesso sem supervisão. Para executar um instalador no modo silencioso, seja ele o instalador padrão ou um instalador pré-configurado de uma conta corporativa, use a opção de linha de comando /S (observe a capitalização) ao executar o instalador.
+
 ## 3.0.5
-* This is a bug-fix update.
+* Esta é uma atualização para correção de bugs.
+
 ## 3.0.4
-* This update restores compatibility with Windows 7.
+* Esta atualização restaura a compatibilidade com o Windows 7.
+
 ## 3.0.3
-* RIM no longer mistakenly shows the "Create an Installer for Unattended Access" button if you don't have a subscription.
+* A RIM não mostra mais, por engano, o botão "Criar um instalador para acesso autônomo" se você não tiver uma assinatura.
+
 ## 3.0.2
-* If you have purchased one or more RIM passes, you now have control over whether a particular session will use a RIM pass or the free tier, as well as which pass will be used. RIM also tells you how much time is left on your selected pass.
+* Se tiver adquirido um ou mais passes da RIM, agora você tem controle sobre se uma determinada sessão usará um passe da RIM ou o nível gratuito, bem como qual passe será usado. A RIM também informa quanto tempo resta no passe selecionado.
+
 ## 3.0.1
-* This update introduces support for the new RIM personal passes, which let you use RIM for remote technical support or training for up to 24 hours for as little as $10. [Try a RIM pass today.](https://getrim.app/signup/pass)
-* The button that used to be called "Create a Pre-Configured Target Installer" is now called "Create an Installer for Unattended Access".
-* When renaming an unattended target machine, the existing name is now filled in and selected for easy editing.
+* Esta atualização introduz o suporte para os novos passes pessoais da RIM, que permitem usar a RIM para suporte técnico remoto ou treinamento por até 24 horas por apenas US$ 10. Experimente um passe da RIM hoje mesmo (https://getrim.app/signup/pass)
+* O botão que costumava se chamar "Create a Pre-Configured Target Installer" (Criar um instalador de destino pré-configurado) agora se chama "Create an Installer for Unattended Access" (Criar um instalador para acesso autônomo).
+* Ao renomear uma máquina de destino autônoma, o nome existente agora é preenchido e selecionado para facilitar a edição.
+
 ## 3.0.0
-This release concludes the RIM public beta. RIM pricing plans and restrictions on free usage are now in effect. For free accounts, RIM now displays a usage meter along with a purchase button.
+Esta versão conclui a versão beta pública da RIM. Os planos de preços da RIM e as restrições de uso gratuito agora estão em vigor. Para contas gratuitas, a RIM agora exibe um medidor de uso junto com um botão de compra.
 ## 0.12.2
-Fixed a bug that prevented the new Windows+Shift+Backspace hotkey from working in some situations.
+Foi corrigido um bug que impedia que a nova tecla de atalho Windows+Shift+Backspace funcionasse em algumas situações.
 ## 0.12.1
-* The Control+Shift+Backspace hotkey is no longer active in RIM. The official hotkey is now Windows+Shift+Backspace. Windows+Shift+Escape also remains available during a session.
-* RIM's new main hotkey, Windows+Shift+Backspace, is now active at all times on machines where RIM is installed, unless another application claims the hotkey first. When a RIM session is active on the controller, this hotkey opens the RIM menu if the session window is focused, or focuses the session window if it's in the background. On the target, this hotkey opens the RIM target menu while the session is active. On either side, if a session is not active, this hotkey opens the RIM window to start a new session.
-* When requesting unattended access, RIM now reliably focuses the approval dialog on the target machine.
-* Updated the remote accessibility module.
+* A tecla de atalho Control+Shift+Backspace não está mais ativa no RIM. A tecla de atalho oficial agora é Windows+Shift+Backspace. Windows+Shift+Escape também permanece disponível durante uma sessão.
+* A nova tecla de atalho principal do RIM, Windows+Shift+Backspace, agora está ativa o tempo todo nas máquinas em que o RIM está instalado, a menos que outro aplicativo use a tecla de atalho primeiro. Quando uma sessão do RIM está ativa no controlador, essa tecla de atalho abre o menu do RIM se a janela da sessão estiver focada, ou foca a janela da sessão se ela estiver em segundo plano. No destino, essa tecla de atalho abre o menu de destino do RIM enquanto a sessão estiver ativa. Em ambos os lados, se uma sessão não estiver ativa, essa tecla de atalho abrirá a janela do RIM para iniciar uma nova sessão.
+* Ao solicitar acesso autônomo, o RIM agora focaliza de forma confiável a caixa de diálogo de aprovação na máquina de destino.
+* Atualização do módulo de acessibilidade remota.
+
 ## 0.12.0
-You can now create a pre-configured installer that will automatically register all machines on which it is installed as unattended targets in your RIM account.
+Agora é possível criar um instalador pré-configurado que registrará automaticamente todas as máquinas nas quais ele for instalado como alvos autônomos na sua conta do RIM.
 
-To do this, use the new button called "Create a Pre-Configured Target Installer", on the "Provide Help" screen. You will then need to enter a base name for the target machine(s); RIM will automatically add the host name of each target machine to this base name. Once target machines are registered, you can rename them as with any unattended target. You can also set the expiration date of the installer, which must be between 7 and 30 days. Once RIM has created the installer, you'll get a link that you can either share directly with the target users, or download yourself so you can share the installer some other way.
+Para fazer isso, use o novo botão chamado "Create a Pre-Configured Target Installer" (Criar um instalador de destino pré-configurado), na tela "Provide Help" (Fornecer ajuda). Em seguida, você precisará inserir um nome de base para a(s) máquina(s) de destino; a RIM adicionará automaticamente o nome do host de cada máquina de destino a esse nome de base. Depois que as máquinas de destino forem registradas, você poderá renomeá-las como qualquer outro destino não assistido. Você também pode definir a data de expiração do instalador, que deve estar entre 7 e 30 dias. Depois que a RIM criar o instalador, você receberá um link que poderá compartilhar diretamente com os usuários de destino ou fazer o download você mesmo para que possa compartilhar o instalador de outra forma.
 
-Note that when a target user runs the pre-configured installer, it will first show them a confirmation dialog which explains what the installer will do. This dialog includes the name of the controller who created the installer. This confirmation step is designed to prevent abuse. A completely silent mode will be available for enterprise customers.
+Observe que, quando um usuário-alvo executar o instalador pré-configurado, ele mostrará primeiro uma caixa de diálogo de confirmação que explica o que o instalador fará. Essa caixa de diálogo inclui o nome do controlador que criou o instalador. Essa etapa de confirmação foi projetada para evitar abusos. Um modo totalmente silencioso estará disponível para clientes corporativos.
 
 ## 0.11.6
-* RIM now has a new option for registering a machine for unattended access under your RIM account without having to start a remote session using a keyword. On the machine that you want to register, press the new button called "Register This Machine for Unattended Access", on the Receive Help screen. Then log into your RIM account if you haven't already done so on that machine, enter a name for the machine, and you're done. Note that we're still working on a way to customize the RIM installer, to enable mass deployment and make it as easy as possible to set up unattended access on machines that you don't already have access to.
-* RIM now prevents you from trying to open an unattended connection to the same machine where you're running the controller.
-* We're now experimenting with a third hotkey to open the RIM menu: Windows+Shift+Backspace. That means there are now three options: Windows+Shift+Escape, Windows+Shift+Backspace, and Control+Shift+Backspace. We haven't yet made a final decision on which hotkey or hotkeys to keep, but we will decide before the end of the public beta. We appreciate your feedback.
-* Most options on the RIM menu now have single-letter keyboard shortcuts that you can press once you've opened the menu.
-* This update introduces a more reliable solution to the intermittent problems that users have reported with JAWS not recognizing keyboard input from RIM. Please let us know if you continue to have problems with this scenario.
+* O RIM agora tem uma nova opção para registrar uma máquina para acesso autônomo na sua conta do RIM sem precisar iniciar uma sessão remota usando uma palavra-chave. Na máquina que deseja registrar, pressione o novo botão chamado "Register This Machine for Unattended Access" (Registrar esta máquina para acesso não assistido), na tela Receive Help (Receber ajuda). Em seguida, faça login na sua conta RIM, caso ainda não o tenha feito nessa máquina, digite um nome para a máquina e pronto. Observe que ainda estamos trabalhando em uma maneira de personalizar o instalador do RIM, para permitir a implantação em massa e facilitar ao máximo a configuração do acesso autônomo em máquinas às quais você ainda não tem acesso.
+* O RIM agora impede que você tente abrir uma conexão autônoma com a mesma máquina em que está executando o controlador.
+* Agora estamos experimentando uma terceira tecla de atalho para abrir o menu do RIM: Windows+Shift+Backspace. Isso significa que agora há três opções: Windows+Shift+Escape, Windows+Shift+Backspace e Control+Shift+Backspace. Ainda não tomamos uma decisão final sobre qual tecla ou teclas de atalho manteremos, mas decidiremos antes do final da versão beta pública. Agradecemos seu feedback.
+* A maioria das opções no menu RIM agora tem atalhos de teclado de uma única letra que você pode pressionar depois de abrir o menu.
+* Esta atualização apresenta uma solução mais confiável para os problemas intermitentes que os usuários relataram com o JAWS não reconhecendo a entrada de teclado da RIM. Informe-nos se continuar a ter problemas com esse cenário.
+
 ## 0.11.5
-* This update introduces two new hotkeys. Windows+Shift+D disconnects the session when pressed on either side. For the controller, Windows+Shift+F flips the session.
-* This update adds safeguards against keyboard modifiers becoming stuck on either machine.
-* There's a new menu option, "Lock the Target Machine", which is equivalent to pressing Windows+L on the target.
-* RIM now has an "About" window, where you can check the version number, contact Pneuma Solutions for support and feedback, read the manual, and view the version change log.
-* RIM no longer prompts for feedback at the end of a session or when closing the "Provide Help" window.
+* Esta atualização apresenta duas novas teclas de atalho. Windows+Shift+D desconecta a sessão quando pressionado em ambos os lados. No caso do controle, Windows+Shift+F inverte a sessão.
+* Essa atualização adiciona proteções contra modificadores de teclado que ficam presos em qualquer máquina.
+* Há uma nova opção de menu, "Lock the Target Machine" (Bloquear o computador de destino), que é equivalente a pressionar Windows+L no computador de destino.
+* O RIM agora tem uma janela "About" (Sobre), na qual é possível verificar o número da versão, entrar em contato com a Pneuma Solutions para obter suporte e feedback, ler o manual e visualizar o registro de alterações da versão.
+* O RIM não solicita mais comentários no final de uma sessão ou ao fechar a janela "Fornecer ajuda".
 
 ## 0.11.4
-This update fixes a few bugs in the reboot and reconnect process. We haven't yet diagnosed everything that has been reported, but we were able to find and fix a few issues in our own testing.
+Esta atualização corrige alguns erros no processo de reinicialização e reconexão. Ainda não diagnosticamos tudo o que foi relatado, mas conseguimos encontrar e corrigir alguns problemas em nossos próprios testes.
 ## 0.11.3
-* RIM now updates itself in the background on all machines. RIM now includes the currently installed version number in the tooltip of its tray icon. This is the last update users will need to install manually, irrespective of machine configuration.
-* If the target machine is rebooted, but not using RIM’s Reboot and Reconnect feature, RIM now asks the controller whether they want to reconnect to the target after the reboot. If the controller answers no, then the target won’t wait for a reconnect after the reboot.
+* O RIM agora se atualiza em segundo plano em todas as máquinas. A RIM agora inclui o número da versão instalada no momento na dica de ferramenta de seu ícone na bandeja. Esta é a última atualização que os usuários precisarão instalar manualmente, independentemente da configuração do computador.
+* Se a máquina de destino for reinicializada, mas não estiver usando o recurso Reboot and Reconnect da RIM, a RIM agora pergunta ao controlador se ele deseja se reconectar ao destino após a reinicialização. Se o controlador responder não, o destino não aguardará uma reconexão após a reinicialização.
 
 ## 0.11.2
-* RIM now updates itself in the background on unattended target machines. This is the last update that you will need to install manually on your unattended targets.
-* When updating before an interactive session, RIM no longer needs to go through User Account Control. This means that non-administrator users can update RIM once it has been installed for them by an administrator.
+* O RIM agora se atualiza em segundo plano em máquinas de destino sem supervisão. Esta é a última atualização que você precisará instalar manualmente em seus alvos autônomos.
+* Ao atualizar antes de uma sessão interativa, o RIM não precisa mais passar pelo Controle de Conta de Usuário. Isso significa que os usuários não administradores podem atualizar o RIM depois que ele tiver sido instalado para eles por um administrador.
+
 ## 0.11.1
-This is a bug-fix update. Please note that unattended targets still need to be updated manually by running the latest RIM installer. However, now you will be able to connect to an unattended target after the installation is done, without requiring someone to close the "Receive Help" window.
+Esta é uma atualização para correção de erros. Observe que os alvos não assistidos ainda precisam ser atualizados manualmente, executando o instalador mais recente do RIM. No entanto, agora você poderá se conectar a um alvo autônomo após a conclusão da instalação, sem precisar que alguém feche a janela "Receber ajuda".
 ## 0.11.0
-* The Reboot and Reconnect feature is now implemented. Using the new Reboot and Reconnect option on the controller’s RIM menu, you can do either a standard or emergency reboot, and automatically continue the session when the reboot is complete. RIM will also reconnect if the target machine reboots for some other reason, such as when an installer reboots the machine.
-* RIM also automatically attempts to reconnect if the connection drops for any reason. This will help with unreliable Internet connections.
-* When running an unattended session or using Reboot and Reconnect, you can now use RIM while the target machine is on the Windows Logon screen. Note that RIM will need to reconnect the session when the target machine transitions from the logon screen to the main desktop. This is a known limitation of the current implementation which we may address in a future update.
-* RIM is now fully functional when the target user does not have administrator privileges on the target machine, as long as the Remote Incident Manager Host service is running on that machine. Note that administrator privileges are still required to install RIM updates. Also note that new versions of RIM still need to be manually installed on unattended targets. We are working on solutions to both of these problems.
+* O recurso Reboot and Reconnect (Reinicialização e reconexão) agora está implementado. Usando a nova opção Reboot and Reconnect (Reinicialização e reconexão) no menu RIM do controlador, você pode fazer uma reinicialização padrão ou de emergência e continuar automaticamente a sessão quando a reinicialização for concluída. O RIM também se reconectará se a máquina de destino for reinicializada por algum outro motivo, como quando um instalador reinicializa a máquina.
+* O RIM também tenta se reconectar automaticamente se a conexão cair por qualquer motivo. Isso ajudará em conexões de Internet não confiáveis.
+* Ao executar uma sessão autônoma ou usar Reboot and Reconnect, agora é possível usar o RIM enquanto o computador de destino estiver na tela de logon do Windows. Observe que o RIM precisará reconectar a sessão quando o computador de destino fizer a transição da tela de logon para a área de trabalho principal. Essa é uma limitação conhecida da implementação atual, que poderá ser resolvida em uma atualização futura.
+* O RIM agora é totalmente funcional quando o usuário de destino não tem privilégios de administrador no computador de destino, desde que o serviço Remote Incident Manager Host esteja em execução nesse computador. Observe que os privilégios de administrador ainda são necessários para instalar as atualizações do RIM. Observe também que as novas versões do RIM ainda precisam ser instaladas manualmente em alvos não assistidos. Estamos trabalhando em soluções para esses dois problemas.
 
 ## 0.10.10.0
-If you've set up unattended access to one or more target machines, you can now create a shortcut to directly access any of these machines. Just press the "Create Shortcut" button under the list of unattended targets, and RIM will create a shortcut on your desktop.
+Se você configurou o acesso autônomo a um ou mais computadores de destino, agora é possível criar um atalho para acessar diretamente qualquer um desses computadores. Basta pressionar o botão "Create Shortcut" (Criar atalho) na lista de alvos autônomos, e o RIM criará um atalho em sua área de trabalho.
 ## 0.10.9
-RIM now works on a target machine that has no audio device. This, combined with the existing remote accessibility module, opens up access to servers and virtual machines that could previously not be accessed with a screen reader except through RDP and its very suboptimal audio output.
+O RIM agora funciona em um computador de destino que não tem dispositivo de áudio. Isso, combinado com o módulo de acessibilidade remota existente, abre o acesso a servidores e máquinas virtuais que antes não podiam ser acessados com um leitor de tela, exceto por meio de RDP e sua saída de áudio muito abaixo do ideal.
 ## 0.10.8
-* If you haven’t yet pre-ordered the first year of your RIM Pro subscription, you can now easily do so using the new button on the “Provide Help” screen. We are also introducing new pricing options for adding extra controllers and concurrent channels to a RIM Pro subscription. You can add up to two additional controller users and two additional channels for $500 per year each. RIM continues to be free during the public beta, but if you pre-order your subscription now, you will have uninterrupted service when the public beta concludes on September 1.
-* We are introducing Control+Shift+Backspace as an alternative hotkey for opening the RIM menu on both sides of the connection. We also still support Windows+Shift+Escape for now, but the plan is to standardize on Control+Shift+Backspace as the one hotkey for all stages of RIM.
-* If you press the “Provide Help Instead” button on the “Receive Help” screen, RIM no longer sets this choice as the default until you have logged into your RIM account.
-* Fixed a few JavaScript errors that occurred in rare cases.
+* Caso ainda não tenha feito a pré-encomenda do primeiro ano da sua assinatura do RIM Pro, agora você pode fazer isso facilmente usando o novo botão na tela "Fornecer ajuda". Também estamos introduzindo novas opções de preços para adicionar controladores extras e canais simultâneos a uma assinatura do RIM Pro. É possível adicionar até dois usuários controladores e dois canais adicionais por US$ 500 por ano cada. O RIM continua sendo gratuito durante o beta público, mas se você fizer a pré-encomenda da sua assinatura agora, terá um serviço ininterrupto quando o beta público terminar em 1º de setembro.
+* Estamos introduzindo Control+Shift+Backspace como uma tecla de atalho alternativa para abrir o menu RIM em ambos os lados da conexão. Por enquanto, ainda oferecemos suporte a Windows+Shift+Escape, mas o plano é padronizar Control+Shift+Backspace como a única tecla de atalho para todos os estágios do RIM.
+* Se você pressionar o botão "Fornecer ajuda em vez disso" na tela "Receber ajuda", a RIM não definirá mais essa opção como padrão até que você tenha feito login na sua conta RIM.
+* Correção de alguns erros de JavaScript que ocorriam em casos raros.
 
 ## 0.10.7
-you can now use the mouse wheel in a remote session.
+agora é possível usar a roda do mouse em uma sessão remota.
 ## 0.10.6
-Hopefully fixed all remaining issues causing the installation process to hang.
+Esperamos ter corrigido todos os problemas restantes que causavam o travamento do processo de instalação.
 ## 0.10.5
-This version includes some changes under the hood. In particular, we've included updates to the installation and underlying packages to address issues causing the installation to hang.
+Esta versão inclui algumas alterações internas. Em particular, incluímos atualizações na instalação e nos pacotes subjacentes para resolver os problemas que causavam o travamento da instalação.
 ## 0.10.4
-* There is now an option on the RIM menu to send Control+Alt+Delete to the target machine.
-* You can now open the RIM menu by right-clicking on the title bar of the session window. We plan to add the option of opening the RIM menu by clicking on the RIM icon at the left end of the title bar as well.
+* Agora há uma opção no menu RIM para enviar Control+Alt+Delete para a máquina de destino.
+* Agora você pode abrir o menu RIM clicando com o botão direito do mouse na barra de título da janela da sessão. Planejamos adicionar a opção de abrir o menu RIM clicando também no ícone RIM na extremidade esquerda da barra de título.
 
 ## 0.10.3
-* The controller can now flip an unattended session.
-* The controller can now rename an unattended target machine.
-* Fixed a bug that sometimes caused the session to become unresponsive after copying to the clipboard.
-* Fixed a bug that sometimes caused starting the remote accessibility module to fail with a JavaScript error.
+* O controlador agora pode inverter uma sessão não assistida.
+* O controlador agora pode renomear uma máquina de destino autônoma.
+* Foi corrigido um erro que às vezes fazia com que a sessão deixasse de responder após a cópia para a área de transferência.
+* Foi corrigido um bug que às vezes fazia com que a inicialização do módulo de acessibilidade remota falhasse com um erro de JavaScript.
 
 ## 0.10.2
-Fixed a conflict between the RIM Client Support NVDA addon and the Dropbox addon.
+Foi corrigido um conflito entre o complemento NVDA do RIM Client Support e o complemento do Dropbox.
 ## 0.10.1
-* You can now pre-order the first year of your subscription to RIM Pro for $999. The link to pre-order will be available in the feedback window when you finish a remote session. Or you can follow the direct link here: [Pre-order RIM Pro.](https://getrim.app/signup/rim_preorder)
-* If you have unattended target machines in your RIM account, the button to start an unattended session is now more reliably displayed on the “Provide Help” screen.
-* When flipping a session, the original controller can now flip the session back, by opening the RIM menu with Windows+Shift+Escape.
+* Agora você pode fazer a pré-encomenda do primeiro ano de sua assinatura do RIM Pro por US$ 999. O link para a pré-encomenda estará disponível na janela de feedback quando você terminar uma sessão remota. Ou você pode seguir o link direto aqui: [Pre-order RIM Pro.] (https://getrim.app/signup/rim_preorder)
+* Se houver máquinas de destino não assistidas na sua conta RIM, o botão para iniciar uma sessão não assistida agora é exibido de forma mais confiável na tela "Fornecer ajuda".
+* Ao inverter uma sessão, o controlador original agora pode inverter a sessão, abrindo o menu RIM com Windows+Shift+Escape.
 

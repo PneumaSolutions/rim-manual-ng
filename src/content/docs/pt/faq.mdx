@@ -5,7 +5,7 @@ title: Perguntas frequentes
 import Windows from "~/components/platform/Windows.astro"
 import MacOS from "~/components/platform/MacOS.astro"
 
-Aqui estão as respostas para algumas perguntas comuns sobre a RIM. Ao se deparar com um problema, consulte este documento sempre que possível. Se a sua pergunta não for abordada neste documento, entre em contato conosco (https://pneumasolutions.com/contact/)
+Aqui estão as respostas para algumas perguntas comuns sobre a RIM. Ao se deparar com um problema, consulte este documento sempre que possível. Se a sua dúvida não for abordada neste documento, entre em contato conosco (https://pneumasolutions.com/contact/)
 ## Compatibilidade
 ### Quais versões do Windows são compatíveis?
 Oferecemos suporte ao Windows7SP1 e superior, bem como ao Windows Server2012 e superior.
@@ -34,9 +34,14 @@ Atualmente, oferecemos retransmissores nos seguintes locais:
 
 ## Solução de problemas da sessão geral
 ### A máquina de destino à qual estou conectado não responde adequadamente aos comandos de teclado que funcionam bem no meu teclado. O que está acontecendo?
-Isso pode ser devido a um conflito nos layouts de teclado. Em raras ocasiões, se um layout de teclado for diferente o suficiente do seu, ele poderá confundir a RIM. Se isso ocorrer, entre em contato conosco com um relatório contendo informações sobre o layout do teclado de ambas as máquinas.
-### Depois que um computador é reimaginado e reconfigurado com o mesmo nome de computador, há algo que precisa ser feito para que o RIM volte a funcionar? 
-Basta remover a máquina de sua conta, reinstalar o RIM e adicionar a máquina novamente à sua conta.
+Isso pode se dever a qualquer uma das seguintes possibilidades:
+* Um conflito nos layouts de teclado: Em raras ocasiões, se um layout de teclado for diferente o suficiente do seu, ele poderá confundir a RIM. Se isso ocorrer, entre em contato conosco com um relatório contendo informações sobre o layout do teclado de ambas as máquinas.
+* Se o computador de destino estiver usando o JAWS 2024, o processamento unificado do teclado às vezes interfere no uso da tecla CTRL para silenciar a fala. Embora tenhamos implementado uma correção para isso, às vezes ainda podem surgir problemas.
+    * Esse problema pode ser resolvido desativando o processamento de teclado unificado na central de configurações do JAWS.
+    * O processamento de teclado unificado não é necessário se o usuário-alvo também não estiver usando o ZoomText ou o Fusion.
+
+### Depois que um computador é recriado e reconfigurado com o mesmo nome de computador, há algo que precise ser feito para que o RIM volte a funcionar? 
+Basta remover a máquina da sua conta, reinstalar o RIM e adicionar a máquina novamente à sua conta.
 
 ## Preços e pagamentos
 ### Então, obter ajuda de uma pessoa pelo RIM é totalmente gratuito, certo?
@@ -57,13 +62,14 @@ As horas pré-pagas são totalmente separadas de sua assinatura. Dito isso, suas
 ### Como faço para chamar a atenção do meu local de trabalho para a RIM?
 Nós montamos um [Self-Advocacy Kit] (https://sak.getrim.app) (SAK). Um pacote de cartas formatadas por e-mail que você pode enviar às pessoas apropriadas em seu nome ou em nome de um funcionário. Para fins de registro, o RIM oferece a mesma funcionalidade que as soluções convencionais menos acessíveis. Dessa forma, o RIM pode substituir uma infraestrutura existente, em vez de ser usado junto com ela. Portanto, ele é considerado uma acomodação de acessibilidade razoável e deve ser fornecido a você pela sua organização. A acessibilidade não é um favor, é um direito à inclusão.
 ### Quais métodos de pagamento vocês aceitam?
-Processamos pagamentos por meio do Stripe, portanto, podemos aceitar diretamente Visa, Mastercard, Amex ou Discover. Além disso, o Stripe pode aceitar pagamentos via Google Pay.
-### Como funcionam esses passes? O relógio começa imediatamente após o pagamento ou no dia em que eu iniciar a sessão?
-Os passes só começam quando o controlador inicia a sessão. Portanto, se a máquina do alvo falhar, exigindo uma ida à loja, e não for possível uma entrega no mesmo dia, você poderá simplesmente esperar até que a máquina volte a funcionar bem e seu passe diário ainda estará esperando por você.
+Processamos pagamentos por meio do FastSpring, portanto, podemos aceitar diretamente uma variedade de métodos de pagamento internacionais, incluindo os principais cartões de crédito, PayPal, Alipay e muitos outros.
+
+### Como esses passes funcionam? O relógio começa imediatamente após o pagamento ou no dia em que eu iniciar a sessão?
+Os passes só começam quando o controlador inicia a sessão. Portanto, se a máquina do alvo falhar, exigindo uma ida à oficina, e não for possível uma entrega no mesmo dia, você pode simplesmente esperar até que a máquina esteja de volta em boas condições e o seu passe diário ainda estará esperando por você.
 ### Então isso significa que esses passes não expiram?
 Não. Fique tranquilo, pois seu acúmulo de passes diários estará esperando pacientemente para que você os ative quando estiver pronto.
 ### O que acontece se eu me conectar a outra máquina no dia em que um passe de incidente foi usado?
-Isso depende. Se a máquina estiver dentro da sua assinatura, ou seja, se você estiver acessando a máquina de sua casa quando estiver em trânsito, tudo continuará como de costume. Quaisquer outras conexões que não sejam o alvo inicial ao qual você se conectou funcionarão de acordo com a cota usual de 30 minutos.
+Isso depende. Se a máquina estiver dentro da sua assinatura, ou seja, se você estiver acessando a máquina de sua casa enquanto estiver viajando, tudo correrá normalmente. Quaisquer outras conexões que não sejam o alvo inicial ao qual você se conectou funcionarão de acordo com a cota usual de 30 minutos.
 ### Tenho uma assinatura pessoal ativa. Ainda poderei ajudar um usuário fora do grupo de alvos por até 30 minutos ou por meio de um passe?
 Sim! Sua cota diária de 30 minutos ainda está disponível para qualquer máquina fora da sua assinatura. Além disso, a aquisição de uma assinatura não substitui os passes existentes que você possa ter.
 ### Tenho uma assinatura pessoal e o computador de destino passou por uma atualização de hardware. A Rim considerará isso como uma troca de máquina?
@@ -98,7 +104,7 @@ Sim! Como o host da RIM é executado com privilégios elevados, isso nos permite
 Não. No entanto, as sessões solicitadas são compatíveis com conversas por voz.
 ### Se eu excluir uma máquina autônoma da minha conta de controlador, isso revogará automaticamente a permissão no destino?
 Sim. Quando um alvo autônomo for removido, a alteração entrará em vigor imediatamente. Se a máquina de destino estiver desligada ou não estiver conectada à Internet, a alteração entrará em vigor assim que uma conexão com a Internet for estabelecida na máquina.
-### O computador de destino foi reiniciado após a instalação de atualizações e drivers e requer uma senha para fazer login. Como a sessão continua a partir daqui?
+### A máquina de destino foi reinicializada após a instalação de atualizações e drivers e requer uma senha para fazer login. Como a sessão continua a partir daqui?
 Na maioria dos casos, especialmente quando a criptografia de disco FileVault está ativada, o usuário de destino precisará digitar a senha manualmente. O RIM não pode ser iniciado em um Mac criptografado antes que ele tenha sido totalmente conectado.
 ### Tenho várias máquinas desempenhando o papel de controlador. A lista de máquinas configuradas para acesso autônomo será preenchida em todas as máquinas?
 Sim. A lista de máquinas configuradas para acesso não supervisionado é armazenada em sua conta, portanto, será preenchida automaticamente.

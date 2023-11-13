@@ -5,7 +5,7 @@ title: Domande frequenti
 import Windows from "~/components/platform/Windows.astro"
 import MacOS from "~/components/platform/MacOS.astro"
 
-Ecco le risposte ad alcune domande comuni riguardanti RIM. Quando si presenta un problema, fare riferimento a questo documento ogni volta che è possibile. Se la domanda non è contenuta in questo documento, si prega di [Contattarci] (https://pneumasolutions.com/contact/)
+Di seguito sono riportate le risposte ad alcune domande comuni riguardanti RIM. Quando si presenta un problema, fare riferimento a questo documento ogni volta che è possibile. Se la vostra domanda non è contenuta in questo documento, vi preghiamo di [Contattarci] (https://pneumasolutions.com/contact/)
 ## Compatibilità
 ### Quali versioni di Windows sono supportate?
 Supportiamo Windows7SP1 e successivi, nonché Windows Server2012 e successivi.
@@ -34,7 +34,12 @@ Attualmente offriamo relè nelle seguenti località:
 
 ## Risoluzione dei problemi della sessione generale
 ### La macchina di destinazione a cui sono collegato non risponde correttamente ai comandi da tastiera che funzionano bene sulla mia tastiera. Cosa succede?
-Il problema potrebbe essere dovuto a un conflitto tra i layout della tastiera. In rare occasioni, se il layout di una tastiera è sufficientemente diverso da quello dell'utente, può confondere RIM. In tal caso, contattateci con un rapporto contenente informazioni sul layout della tastiera di entrambi i computer.
+Il problema potrebbe essere dovuto a una di queste possibilità:
+* Un conflitto tra i layout di tastiera: In rare occasioni, se il layout della tastiera è sufficientemente diverso da quello dell'utente, RIM potrebbe confonderlo. In tal caso, contattateci con un rapporto contenente informazioni sul layout della tastiera di entrambi i computer.
+* Se il computer di destinazione utilizza JAWS 2024, la sua elaborazione unificata della tastiera a volte interferisce con l'uso del tasto CTRL per silenziare il parlato. Sebbene sia stata implementata una correzione per questo problema, a volte possono verificarsi dei problemi.
+    * Questo problema può essere risolto disabilitando l'elaborazione della tastiera unificata nel centro impostazioni di JAWS.
+    * L'elaborazione unificata della tastiera non è necessaria se l'utente di destinazione non utilizza anche ZoomText o Fusion.
+
 ### Dopo che un computer è stato reimpostato e riconfigurato con lo stesso nome di computer, è necessario fare qualcosa per far funzionare nuovamente RIM? 
 È sufficiente rimuovere il computer dall'account, reinstallare RIM, quindi aggiungere nuovamente il computer all'account.
 
@@ -57,9 +62,10 @@ Le ore prepagate sono completamente separate dall'abbonamento. Detto questo, le 
 ### Come faccio a portare RIM all'attenzione del mio posto di lavoro?
 Abbiamo preparato un [Self-Advocacy Kit](https://sak.getrim.app) (SAK). Si tratta di un pacchetto di lettere formattate per e-mail che potete inviare alle persone competenti per conto vostro o di un dipendente. Per la cronaca, RIM offre le stesse funzionalità delle soluzioni tradizionali meno accessibili. Pertanto, RIM può sostituire un'infrastruttura esistente, piuttosto che affiancarla. È quindi considerato un accomodamento ragionevole per l'accessibilità e dovrebbe essere fornito dalla vostra organizzazione. L'accessibilità non è un favore, è un diritto all'inclusione.
 ### Quali metodi di pagamento accettate?
-Elaboriamo i pagamenti tramite Stripe, quindi siamo in grado di accettare direttamente Visa, Mastercard, Amex o Discover. Inoltre, Stripe può accettare pagamenti tramite Google Pay.
-### Come funzionano questi pass? L'orologio parte immediatamente dopo il pagamento o il giorno in cui inizio la sessione?
-I pass iniziano solo quando il controller avvia la sessione. Quindi, se la macchina dell'obiettivo si guasta e deve essere portata in officina, e non è possibile ottenere un'uscita in giornata, si può semplicemente aspettare che la macchina torni in buone condizioni e il pass giornaliero sarà ancora lì ad aspettarvi.
+Elaboriamo i pagamenti tramite FastSpring, quindi siamo in grado di accettare direttamente una varietà di metodi di pagamento internazionali, tra cui le principali carte di credito, PayPal, Alipay e molti altri.
+
+### Come funzionano questi pass? L'orologio inizia immediatamente dopo il pagamento o il giorno in cui inizio la sessione?
+I pass iniziano solo quando il controller avvia la sessione. Quindi, se la macchina dell'obiettivo si guasta e richiede un viaggio in officina, e non è possibile ottenere un'uscita in giornata, potete semplicemente aspettare che la macchina torni in buone condizioni e il vostro pass giornaliero sarà ancora lì ad aspettarvi.
 ### Questo significa che i pass non scadono?
 No. Siate certi che il vostro accumulo di pass giornalieri vi aspetterà pazientemente per essere attivato quando sarete pronti.
 ### Cosa succede se mi collego a un'altra macchina nel giorno in cui è stato utilizzato un pass incidente?
@@ -100,5 +106,5 @@ No. Tuttavia, le sessioni richieste supportano le conversazioni vocali.
 Sì. Una volta rimosso un target non presidiato, la modifica avrà effetto immediato. Se il computer di destinazione è spento o comunque non connesso a Internet, la modifica sarà effettiva non appena verrà stabilita una connessione a Internet sul suo computer.
 ### Il computer di destinazione si è riavviato dopo l'installazione degli aggiornamenti e dei driver e richiede una password per accedere. Come prosegue la sessione da qui?
 Nella maggior parte dei casi, in particolare quando è abilitata la crittografia del disco FileVault, l'utente di destinazione dovrà inserire manualmente la password. RIM non può avviarsi su un Mac crittografato prima che sia stato effettuato l'accesso completo.
-### Ho più macchine che svolgono il ruolo di controller. L'elenco dei computer configurati per l'accesso non presidiato verrà visualizzato su tutti i computer?
+### Ho più macchine che svolgono il ruolo di controller. L'elenco delle macchine configurate per l'accesso non presidiato verrà popolato su tutte le macchine?
 Sì. L'elenco delle macchine configurate per l'accesso non presidiato è memorizzato all'interno del vostro account, quindi si popolerà automaticamente.

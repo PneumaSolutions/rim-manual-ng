@@ -5,7 +5,7 @@ title: Häufig gestellte Fragen
 import Windows from "~/components/platform/Windows.astro"
 import MacOS from "~/components/platform/MacOS.astro"
 
-Hier finden Sie Antworten auf einige häufig gestellte Fragen zu RIM. Wenn Sie mit einem Problem konfrontiert werden, beziehen Sie sich bitte wann immer möglich auf dieses Dokument. Wenn Ihre Frage in diesem Dokument nicht behandelt wird, wenden Sie sich bitte an [Contact us.](https://pneumasolutions.com/contact/)
+Hier finden Sie Antworten auf einige häufig gestellte Fragen zu RIM. Wenn Sie mit einem Problem konfrontiert werden, beziehen Sie sich bitte auf dieses Dokument, wann immer es möglich ist. Wenn Ihre Frage in diesem Dokument nicht behandelt wird, wenden Sie sich bitte an [Contact us.](https://pneumasolutions.com/contact/)
 ## Kompatibilität
 ### Welche Windows-Versionen werden unterstützt?
 Wir unterstützen Windows7SP1 und höher, sowie Windows Server2012 und höher.
@@ -34,9 +34,14 @@ Derzeit bieten wir Relays an den folgenden Standorten an:
 
 ## Allgemeine Sitzung Fehlersuche
 ### Der Zielcomputer, mit dem ich verbunden bin, reagiert nicht richtig auf Tastaturbefehle, die auf meiner Tastatur gut funktionieren. Was ist da los?
-Dies könnte auf einen Konflikt bei der Tastaturbelegung zurückzuführen sein. In seltenen Fällen kann es vorkommen, dass eine Tastaturbelegung, die sich stark von Ihrer eigenen unterscheidet, RIM verwirrt. Sollte dies der Fall sein, senden Sie uns bitte einen Bericht mit Informationen über die Tastaturbelegung beider Geräte.
-### Ist nach der Neukonfiguration eines Computers mit demselben Computernamen noch etwas zu tun, um RIM wieder zum Laufen zu bringen? 
-Entfernen Sie einfach den Computer aus Ihrem Konto, installieren Sie RIM neu und fügen Sie den Computer dann wieder Ihrem Konto hinzu.
+Dies könnte auf eine der folgenden Möglichkeiten zurückzuführen sein:
+* Ein Konflikt bei der Tastaturbelegung: In seltenen Fällen kann es vorkommen, dass ein Tastaturlayout, das sich stark von Ihrem eigenen unterscheidet, RIM verwirrt. Sollte dies der Fall sein, kontaktieren Sie uns bitte mit einem Bericht, der Informationen über die Tastaturbelegung beider Rechner enthält.
+* Wenn der Zielcomputer JAWS 2024 verwendet, stört dessen einheitliche Tastaturverarbeitung manchmal die Verwendung der STRG-Taste zum Stummschalten von Sprache. Obwohl wir eine Lösung für dieses Problem gefunden haben, kann es immer noch zu Problemen kommen.
+    * Dieses Problem kann behoben werden, indem Sie die einheitliche Tastaturverarbeitung im JAWS Einstellungscenter deaktivieren.
+    * Die einheitliche Tastaturverarbeitung ist nicht notwendig, wenn der Zielbenutzer nicht auch ZoomText oder Fusion verwendet.
+
+### Muss nach dem Reimaging eines Computers und der Neukonfiguration mit demselben Computernamen noch etwas getan werden, um RIM wieder zum Laufen zu bringen? 
+Entfernen Sie einfach den Computer aus Ihrem Konto, installieren Sie RIM neu und fügen Sie den Computer dann wieder zu Ihrem Konto hinzu.
 
 ## Preise und Zahlungen
 ### Hilfe von einem Mitarbeiter über RIM ist also völlig kostenlos, oder?
@@ -57,9 +62,10 @@ Die im Voraus bezahlten Stunden sind völlig unabhängig von Ihrem Abonnement. I
 ### Wie mache ich meine Arbeitsstelle auf RIM aufmerksam?
 Wir haben ein [Self-Advocacy Kit](https://sak.getrim.app) (SAK) zusammengestellt. Dabei handelt es sich um ein Paket von Briefen im E-Mail-Format, die Sie in Ihrem Namen oder im Namen eines Mitarbeiters an die zuständigen Personen senden können. RIM bietet die gleichen Funktionen wie die weniger zugänglichen Mainstream-Lösungen. Daher kann RIM eine bestehende Infrastruktur ersetzen und muss nicht zusätzlich verwendet werden. Es gilt daher als angemessene Vorkehrung für die Barrierefreiheit und sollte Ihnen von Ihrer Organisation zur Verfügung gestellt werden. Barrierefreiheit ist kein Gefallen, sondern ein Recht auf Inklusion.
 ### Welche Zahlungsmethoden akzeptieren Sie?
-Wir wickeln Zahlungen über Stripe ab, so dass wir direkt Visa, Mastercard, Amex oder Discover akzeptieren können. Außerdem kann Stripe auch Zahlungen über Google Pay akzeptieren.
-### Wie funktionieren diese Pässe? Beginnt die Zeit sofort nach der Zahlung oder am Tag, an dem ich die Sitzung initiiere?
-Die Pässe beginnen erst, wenn der Kontrolleur die Sitzung einleitet. Wenn also die Maschine der Zielperson ausfällt und eine Fahrt in die Werkstatt erforderlich ist und eine Bearbeitung am selben Tag nicht möglich ist, können Sie einfach warten, bis die Maschine wieder in Ordnung ist, und Ihr Tagespass wartet immer noch auf Sie.
+Wir wickeln Zahlungen über FastSpring ab, so dass wir eine Vielzahl von internationalen Zahlungsmethoden direkt akzeptieren können, darunter die wichtigsten Kreditkarten, PayPal, Alipay und viele mehr.
+
+### Wie funktionieren diese Pässe? Beginnt die Zeit sofort nach der Zahlung oder erst am Tag, an dem ich die Sitzung initiiere?
+Die Pässe beginnen erst, wenn der Kontrolleur die Sitzung einleitet. Wenn also die Maschine der Zielperson ausfällt und eine Fahrt in die Werkstatt erforderlich ist und eine Bearbeitung am selben Tag nicht möglich ist, können Sie einfach warten, bis die Maschine wieder einsatzbereit ist, und Ihr Tagespass wartet immer noch auf Sie.
 ### Heißt das, dass diese Pässe nicht ablaufen?
 Nein. Seien Sie versichert, dass Ihre gesammelten Tageskarten geduldig auf Sie warten, um sie zu aktivieren, wann immer Sie bereit sind.
 ### Was passiert, wenn ich an einem Tag, an dem ein Ereignispass verwendet wurde, eine Verbindung zu einem anderen Rechner herstelle?
@@ -96,7 +102,7 @@ Ja! Da der RIM-Host mit erhöhten Rechten ausgeführt wird, können wir das Modu
 ## Unbeaufsichtigte Sitzungen
 ### Werden Sprachunterhaltungen während unbeaufsichtigter Sitzungen unterstützt?
 Nein. Aufgeforderte Sitzungen unterstützen jedoch Telefongespräche.
-### Wenn ich einen unbeaufsichtigten Rechner aus meinem Controller-Konto lösche, werden dann automatisch die Berechtigungen für das Ziel entzogen?
+### Wenn ich einen unbeaufsichtigten Rechner aus meinem Controller-Konto lösche, wird dann automatisch die Berechtigung für das Ziel entzogen?
 Ja. Sobald ein unbeaufsichtigtes Ziel entfernt wird, wird die Änderung sofort wirksam. Wenn der Zielcomputer ausgeschaltet oder anderweitig nicht mit dem Internet verbunden ist, wird die Änderung wirksam, sobald eine Internetverbindung auf diesem Computer hergestellt wird.
 ### Der Zielcomputer wurde nach der Installation von Updates und Treibern neu gestartet und erfordert ein Kennwort für die Anmeldung. Wie wird die Sitzung von hier an fortgesetzt?
 In den meisten Fällen, insbesondere wenn die FileVault-Festplattenverschlüsselung aktiviert ist, muss der Zielbenutzer das Kennwort manuell eingeben. RIM kann auf einem verschlüsselten Mac nicht gestartet werden, bevor er vollständig angemeldet ist.
