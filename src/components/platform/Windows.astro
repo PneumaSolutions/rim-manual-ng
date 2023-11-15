@@ -1,5 +1,5 @@
 ---
-import { Windows } from "./client.tsx"
+import { getPlatformFromURL } from "~/util"
 ---
 
-<Windows client:load><slot /></Windows>
+{getPlatformFromURL(Astro.url.pathname) === "windows" ? <slot /> : null}

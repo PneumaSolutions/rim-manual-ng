@@ -2,24 +2,30 @@
 import type { CollectionEntry } from "astro:content"
 import { allPages } from "~/content"
 import ContentLayout from "~/layouts/ContentLayout.astro"
-import { getLangFromSlug, stripLangFromSlug } from "~/util"
+import { type Platform, getLangFromSlug, stripLangFromSlug } from "~/util"
 
 export async function getStaticPaths() {
-  return allPages.map((page) => {
+  return allPages.flatMap((page) => {
     const lang = getLangFromSlug(page.slug)
     const slug = stripLangFromSlug(page.slug)
-    return { params: { lang, slug }, props: { ...page, lang, slug } }
+    return ["windows", "macos"].map((platform) => {
+      return {
+        params: { lang, platform, slug },
+        props: { ...page, lang, platform, slug },
+      }
+    })
   })
 }
 
 interface ExtraProps {
   lang: string
+  platform: Platform
   slug: string
 }
 
 export type Props = CollectionEntry<"docs"> & ExtraProps
-const { lang, slug, data, render } = Astro.props
+const { lang, platform, slug, data, render } = Astro.props
 const { Content, headings } = await render()
 ---
 
-<ContentLayout {...{ data, lang, slug }}><Content /></ContentLayout>
+<ContentLayout {...{ data, lang, platform, slug }}><Content /></ContentLayout>

@@ -9,7 +9,7 @@ import { useTranslations } from "~/i18n/util"
 
 const t = useTranslations(Astro)
 export const prerender = false
-const { lang } = Astro.params
+const { lang, platform } = Astro.params
 const client = new MeiliSearch({
   host: import.meta.env.MEILISEARCH_HOST,
   apiKey: import.meta.env.MEILISEARCH_SEARCH_KEY,
@@ -37,12 +37,12 @@ const search = await index.search(query, {
     <main>
       <h1>{t("search.resultsHeading")}</h1>
       {
-        search.hits ? (
+        search.hits.length > 0 ? (
           <ul>
             {search.hits.map((hit) => {
               return (
                 <li>
-                  <a href={`/${lang}/${hit.id}/`}>{hit.title}</a>
+                  <a href={`/${lang}/${platform}/${hit.id}/`}>{hit.title}</a>
                   <p>
                     <Fragment set:html={hit._formatted.content} />
                   </p>
@@ -56,7 +56,9 @@ const search = await index.search(query, {
       }
     </main>
     <footer>
-      <p><a href={`/${lang}/${pageOrder[0]}/`}>{t("search.back")}</a></p>
+      <p>
+        <a href={`/${lang}/${platform}/${pageOrder[0]}/`}>{t("search.back")}</a>
+      </p>
     </footer>
   </body>
 </html>

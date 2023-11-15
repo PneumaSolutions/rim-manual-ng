@@ -1,13 +1,29 @@
 ---
-import { useTranslations } from "~/i18n/util"
+import UIString from "~/components/UIString.astro"
+import type { Platform } from "~/util"
 
-import { PlatformSwitcher } from "./client.tsx"
+export interface Props {
+  lang: string
+  platform: Platform
+  slug: string
+}
 
-const t = useTranslations(Astro)
+const { lang, platform, slug } = Astro.props
 ---
 
-<PlatformSwitcher
-  client:only="preact"
-  switchToWindowsLabel={t("platform.switchToWindows")}
-  switchToMacOSLabel={t("platform.switchToMacOS")}
-/>
+<div>
+  {
+    platform === "windows" ? null : (
+      <a href={`/${lang}/windows/${slug}/`}>
+        <UIString key="platform.switchToWindows" />
+      </a>
+    )
+  }
+  {
+    platform === "macos" ? null : (
+      <a href={`/${lang}/macos/${slug}/`}>
+        <UIString key="platform.switchToMacOS" />
+      </a>
+    )
+  }
+</div>

@@ -1,5 +1,5 @@
 ---
-import { MacOS } from "./client.tsx"
+import { getPlatformFromURL } from "~/util"
 ---
 
-<MacOS client:load><slot /></MacOS>
+{getPlatformFromURL(Astro.url.pathname) === "macos" ? <slot /> : null}

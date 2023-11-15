@@ -1,0 +1,24 @@
+---
+import { pageOrder } from "~/content"
+import languages from "~/i18n/languages"
+import { getLanguageFromRequest, getPlatformFromRequest } from "~/util"
+
+export const prerender = false
+
+const lang = getLanguageFromRequest(Astro.request)
+const platform = getPlatformFromRequest(Astro.request)
+let { pathPart } = Astro.params
+pathPart = pathPart.replace(".html", "")
+if (languages[pathPart]) {
+  return Astro.redirect(`/${pathPart}/${platform}/${pageOrder[0]}/`)
+}
+if (pathPart === "win") {
+  pathPart = "windows"
+} else if (pathPart === "mac") {
+  pathPart = "macos"
+}
+if (pathPart === "windows" || pathPart === "macos") {
+  return Astro.redirect(`/${lang}/${pathPart}/${pageOrder[0]}/`)
+}
+return Astro.redirect(`/${lang}/${platform}/${pathPart}/`)
+---

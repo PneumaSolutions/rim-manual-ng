@@ -1,0 +1,39 @@
+---
+import UIString from "~/components/UIString.astro"
+import languages from "~/i18n/languages"
+import type { Platform } from "~/util"
+
+export interface Props {
+  origLang: string
+  platform: Platform
+  slug: string
+}
+
+const { origLang, platform, slug } = Astro.props
+---
+
+<details>
+  <summary><UIString key="language.switchLanguage" /> (BETA)</summary>
+  <ul>
+    {
+      ["en", "de", "es", "fr", "it", "pt", "sv"].map((lang) => {
+        return (
+          <li>
+            <a
+              href={`/${lang}/${platform}/${slug}/`}
+              lang={lang}
+              aria-current={lang === origLang}
+            >
+              {languages[lang]}
+            </a>
+          </li>
+        )
+      })
+    }
+  </ul>
+</details>
+<style>
+  [aria-current="true"] {
+    font-weight: bold;
+  }
+</style>
