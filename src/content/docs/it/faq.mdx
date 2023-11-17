@@ -42,6 +42,14 @@ Il problema potrebbe essere dovuto a una di queste possibilità:
 * Se il computer di destinazione utilizza NVDA e "Gestisci i tasti da altre applicazioni" è deselezionato, RIM non sarà in grado di elaborare l'input da tastiera dal controller.
     * Si noti che questa impostazione è attiva per impostazione predefinita e nella maggior parte dei casi è consigliabile lasciarla attiva.
 
+### Quando si avvia una conversazione vocale su Windows, RIM utilizza il microfono interno, indipendentemente dal microfono selezionato nelle impostazioni audio. Cosa c'è che non va?
+
+Il problema potrebbe essere dovuto alla tecnologia Intel® Smart Sound per microfoni digitali presente su alcuni processori Intel più recenti. La disattivazione di questa tecnologia dovrebbe risolvere il problema. Per disattivare la tecnologia Intel® Smart Sound per i microfoni digitali, procedere come segue:
+1. Accedere alla casella di esecuzione (Windows+R).
+1. Digitare devmgmt.msc
+1. Nella struttura dei dispositivi, espandere "Controller audio, video e giochi"
+1. Fare clic con il pulsante destro del mouse su "Tecnologia audio intelligente Intel® per microfoni digitali" Scegliere "Disattiva dispositivo" dal menu contestuale.
+
 ### Dopo che un computer è stato reimpostato e riconfigurato con lo stesso nome di computer, è necessario fare qualcosa per far funzionare nuovamente RIM? 
 È sufficiente rimuovere il computer dall'account, reinstallare RIM, quindi aggiungere nuovamente il computer all'account.
 

@@ -42,6 +42,14 @@ Isso pode se dever a qualquer uma das seguintes possibilidades:
 * Se o computador de destino estiver usando o NVDA e tiver a opção "Manipular teclas de outros aplicativos" desmarcada, o RIM não poderá processar a entrada de teclado do controlador.
     * Observe que essa configuração está ativada por padrão e, na maioria dos casos, é recomendável deixá-la ativada.
 
+### Ao iniciar uma conversa por voz no Windows, a RIM usa o microfone interno, independentemente do microfone que eu selecionar nas configurações de som. O que há de errado?
+
+Isso pode ser devido à tecnologia Intel® Smart Sound para microfones digitais em alguns processadores Intel mais recentes. A desativação dessa tecnologia deve resolver o problema. Para desativar a tecnologia Intel® Smart Sound para microfones digitais, faça o seguinte:
+1. Vá para a caixa de execução (Windows+R).
+1. Digite devmgmt.msc
+1. Na árvore de dispositivos, expanda "Controladores de som, vídeo e jogos"
+1. Clique com o botão direito do mouse em "Tecnologia de som inteligente Intel® para microfones digitais" Escolha "Desativar dispositivo" no menu de contexto.
+
 ### Depois que um computador é recriado e reconfigurado com o mesmo nome de computador, há algo que precise ser feito para que o RIM volte a funcionar? 
 Basta remover a máquina da sua conta, reinstalar o RIM e adicionar a máquina novamente à sua conta.
 

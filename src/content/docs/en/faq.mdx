@@ -42,6 +42,15 @@ This could be due to either one of these possibilities:
 * If the target machine is using NVDA and has "Handle keys from other applications" unchecked, RIM will not be able to process keyboard input from the controller.
     * Note that this setting is on by default, and in most cases it is advisable to leave it on.
 
+### When starting a voice conversation on Windows, RIM uses the internal microphone no matter which microphone I select in sound settings. What's wrong?
+
+This may be due to the Intel® Smart Sound Technology for Digital Microphones on some newer Intel processors. Disabling this should fix the issue. In order to disable Intel® Smart Sound Technology for Digital Microphones, do the following:
+1. Go to the run box (Windows+R).
+1. Type devmgmt.msc
+1. In the devices tree, expand "Sound, Video and Game Controllers."
+1. Right click on "Intel® Smart Sound Technology for Digital Microphones." Choose "Disable Device" from the context menu.
+
+
 ### After a computer is reimaged and has been reconfigured with the same computer name, is there anything that needs to be done to get RIM up and running again? 
 Simply remove the machine from your account, reinstall RIM, then add the machine back into your account.
 
