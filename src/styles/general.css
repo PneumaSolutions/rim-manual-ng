@@ -15,7 +15,7 @@ html {
 
 body {
   /*  margin: 0; */
-  padding: 0 30px 10px 30px;
+  padding: 0 30px 30px 30px;
   /*  font-size: 1rem !important; */
   overflow-x: hidden;
 }
@@ -69,12 +69,13 @@ body {
   .navbar-toggler {
     display: block;
   }
-}
-
-@media only screen and (max-width: 600px) {
   .container-fluid {
     display: block !important;
   }
+   
+  .pt-3 {
+  padding-top: 0 !important;
+}
 }
 
 .navbar > .container,
@@ -99,7 +100,19 @@ body {
 }
 
 .nav-item {
-  margin-bottom: 8px;
+  margin-bottom: 3px;
+}
+
+label {
+  margin-right: 6px;
+}
+
+details {
+  margin: 12px 0;
+}
+
+footer > div {
+  margin: 12px 0;
 }
 
 .navbar-brand {
@@ -122,6 +135,7 @@ a {
   font-size: 16px !important;
   font-weight: var(--bs-nav-link-font-weight);
   color: var(--bs-nav-link-color);
+  padding: 3px;
 }
 
 h1,
