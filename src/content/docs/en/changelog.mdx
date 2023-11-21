@@ -6,6 +6,10 @@ import Windows from "~/components/platform/Windows.astro"
 import MacOS from "~/components/platform/MacOS.astro"
 
 Versions of RIM will be denoted by headings at level 2. Substantial updates with several features for both platforms will be divided into Mac and Windows subheadings at level 3.
+## 3.2.14
+### Windows
+* RIM now detects Fusion, the Vispero product that combines JAWS and ZoomText, as a distinct product when determining which screen reader is running on the target machine, rather than simply detecting it as JAWS. This means that RIM will not attempt to start its remote accessibility feature while Fusion is starting up.
+* We received reports that if Fusion started up after the beginning of a RIM session, Fusion would ignore some keystrokes from the controller, as JAWS used to do. We believe this problem is now fixed.
 ## 3.2.13
 ### Windows
 Fixed a problem with keyboard input when connecting to target machines running JAWS 2024.
