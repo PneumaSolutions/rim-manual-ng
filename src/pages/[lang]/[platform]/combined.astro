@@ -1,0 +1,42 @@
+---
+import { pageOrder, pagesByPath } from "~/content"
+
+const { lang } = Astro.params
+import languages from "~/i18n/languages"
+
+export async function getStaticPaths() {
+  return Object.keys(languages).flatMap((lang) => {
+    return ["windows", "macos"].map((platform) => {
+      return { params: { lang, platform } }
+    })
+  })
+}
+
+const pages = await (async () => {
+  let result = []
+  for (let slug of pageOrder) {
+    let path = `${lang}/${slug}`
+    let { data, render } = pagesByPath[path]!
+    let { Content, headings } = await render()
+    result.push({ data, Content })
+  }
+  return result
+})()
+---
+
+<!DOCTYPE html>
+<html lang={lang}>
+  <head>
+    <title>Remote Incident Manager</title>
+  </head>
+  <body>
+    {pages.map(({ data, Content }) => {
+      return (
+        <>
+          <h1>{data.title}</h1>
+          <Content />
+        </>
+      )
+    })}
+  </body>
+</html>
