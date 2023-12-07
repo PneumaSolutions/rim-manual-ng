@@ -122,3 +122,33 @@ Ja. Sobald ein unbeaufsichtigtes Ziel entfernt wird, wird die Änderung sofort w
 In den meisten Fällen, insbesondere wenn die FileVault-Festplattenverschlüsselung aktiviert ist, muss der Zielbenutzer das Kennwort manuell eingeben. RIM kann auf einem verschlüsselten Mac nicht gestartet werden, bevor er vollständig angemeldet ist.
 ### Ich habe mehrere Rechner, die die Rolle des Controllers übernehmen. Wird die Liste der Rechner, die für den unbeaufsichtigten Zugriff eingerichtet sind, auf allen Rechnern angezeigt?
 Ja. Die Liste der Rechner, die für den unbeaufsichtigten Zugriff konfiguriert sind, ist in Ihrem Konto gespeichert und wird daher automatisch ausgefüllt.
+
+## Tipps und Tricks
+
+Willkommen im Bereich Tipps und Tricks unserer FAQ! Wir freuen uns, Ihnen einige nützliche Einblicke und Weisheiten geben zu können, um Ihre RIM-Erfahrung zu verbessern. Doch wie bei allen großen Abenteuern gibt es auch hier ein paar Vorbehalte, die Sie beachten sollten: 
+1. Die Welt der Technik ist wie eine Pralinenschachtel - immer voller Überraschungen. Unsere Tipps basieren auf einer Reihe von Faktoren, einschließlich, aber nicht beschränkt auf die Version von RIM und die Betriebssystemversion, die der Ersteller des Tipps verwendet. Wenn sich RIM weiterentwickelt, werden einige dieser Tipps möglicherweise weniger relevant. Halten Sie sich mit der neuesten Version auf dem Laufenden, um die beste Erfahrung zu machen! 
+1. Eine Größe ist nicht für alle geeignet. Unsere Software ist so konzipiert, dass sie eine Vielzahl von Bedürfnissen abdeckt, aber jeder Benutzer ist einzigartig. Was für den einen gut funktioniert, ist für den anderen vielleicht nicht ganz so bezaubernd. Sie können diese Tipps gerne an Ihre speziellen Bedürfnisse und Vorlieben anpassen. 
+1. Einige dieser Tipps stammen zwar von uns, aber viele dieser Tipps kommen direkt von unserer lebhaften Nutzergemeinschaft (wie Sie!). Wir freuen uns über dieses gemeinsame Wissen, aber bedenken Sie, dass diese Vorschläge auf persönlichen Erfahrungen beruhen und nicht unbedingt von unseren Technikern geprüft wurden. 
+
+Sollten Sie jemals Zweifel oder Fragen haben, ist unser Support-Team [nur eine Nachricht entfernt] (https://pneumasolutions.com/contact/). Wir beißen nicht, versprochen!
+
+Indem Sie diese Tipps nutzen, erklären Sie sich mit dem oben genannten Haftungsausschluss einverstanden. Und nun gehen Sie los und erkunden Sie das Potenzial von RIM mit diesen Tricks in Ihrem Ärmel! 
+
+### Abhören des Mikrofons eines Ihrer persönlichen Geräte (Windows)
+
+Um ein Höchstmaß an Privatsphäre zu gewährleisten, unterstützt RIM keine Telefongespräche während völlig unbeaufsichtigter Sitzungen. Es kann jedoch vorkommen, dass Sie den Ton von einem Gerät in der Nähe eines Ihrer entfernten Computer hören möchten. Sie können zum Beispiel einen Radiowecker in der Nähe Ihres Desktops haben und Ihren Laptop auf der Veranda benutzen. Auch wenn die Qualität nicht die beste ist, kann RIM eine hervorragende drahtlose Behelfslösung für Audio sein!
+
+Wenn Sie Ihr Zielgerät so einrichten, dass Sie den Ton des Mikrofons hören können, müssen Sie den Ton des Mikrofons an die Lautsprecher weiterleiten. Da Sie das Mikrofon in einer Remote-Sitzung hören wollen, müssen wir zunächst die Lautstärke der Lautsprecher verringern, um eine Rückkopplungsschleife zu vermeiden. Zu diesem Zweck:
+1. Öffnen Sie das Ausführungsfenster (Windows+R).
+1. Geben Sie sndvol ein und drücken Sie dann die Eingabetaste.
+1. Drücken Sie die Ende-Taste, um 0 % zu erreichen, und dann einmal die Pfeiltaste nach oben, um 1 % zu erreichen. Wie Sie sehen, berücksichtigt RIM bei der Audioausgabe nicht die tatsächliche Lautstärke des Zielrechners.
+1. Verlassen Sie den Lautstärkemixer.
+
+Nachdem die Lautstärke nun gesenkt wurde, ist es an der Zeit, die Abhörfunktion Ihres Mikrofons zu aktivieren.
+1. Drücken Sie erneut Windows+R und geben Sie dieses Mal mmsys.cpl ein, um die Toneinstellungen zu öffnen.
+1. Öffnen Sie in den Toneinstellungen die Registerkarte "Aufnahme" (Strg+Tab).
+1. Wählen Sie das Mikrofon oder das Line-In-Gerät aus, das Sie abhören möchten, und rufen Sie dann die Eigenschaften mit Alt+P auf.
+1. Wechseln Sie in den Eigenschaften mit STRG+Tab zur Registerkarte "Abhören" und aktivieren Sie das Kontrollkästchen "Diesem Gerät zuhören".
+1. Wechseln Sie erneut mit STRG+Tab zum Abschnitt "Pegel" und stellen Sie die Verstärkung des Mikrofons so ein, dass sie für Sie ausreichend ist. Drücken Sie abschließend die Eingabetaste.
+
+Das war's! Sie sollten nun den Ton des Mikrofons zusammen mit dem übrigen Ausgang des entfernten Rechners hören.

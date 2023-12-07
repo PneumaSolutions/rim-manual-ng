@@ -122,3 +122,33 @@ Sì. Una volta rimosso un target non presidiato, la modifica avrà effetto immed
 Nella maggior parte dei casi, in particolare quando è abilitata la crittografia del disco FileVault, l'utente di destinazione dovrà inserire manualmente la password. RIM non può avviarsi su un Mac crittografato prima che sia stato effettuato l'accesso completo.
 ### Ho più macchine che svolgono il ruolo di controller. L'elenco delle macchine configurate per l'accesso non presidiato verrà popolato su tutte le macchine?
 Sì. L'elenco delle macchine configurate per l'accesso non presidiato è memorizzato all'interno del vostro account, quindi si popolerà automaticamente.
+
+## Suggerimenti e trucchi
+
+Benvenuti nella sezione Consigli e trucchi delle nostre FAQ! Siamo entusiasti di condividere alcune informazioni utili e pepite di saggezza per migliorare la vostra esperienza RIM. Tuttavia, come in tutte le grandi avventure, ci sono alcune avvertenze da tenere a mente: 
+1. Il mondo della tecnologia è come una scatola di cioccolatini, sempre piena di sorprese. I nostri suggerimenti si basano su una serie di fattori, tra cui, ma non solo, la versione di RIM e del sistema operativo utilizzata dal creatore del suggerimento. Con l'evoluzione di RIM, alcuni di questi suggerimenti potrebbero diventare meno rilevanti. Rimanete aggiornati con l'ultima versione per un'esperienza ottimale! 
+1. La taglia unica non va bene per tutti. Il nostro software è progettato per soddisfare una vasta gamma di esigenze, ma il percorso di ogni utente è unico. Ciò che funziona a meraviglia per uno potrebbe essere meno affascinante per un altro. Sentitevi liberi di adattare questi suggerimenti alle vostre esigenze e preferenze specifiche. 
+1. Sebbene alcuni di questi consigli provengano da noi, molti di essi provengono direttamente dalla nostra vivace comunità di utenti (come voi!). Mentre celebriamo questa conoscenza condivisa, ricordate che questi suggerimenti sono basati su esperienze personali e potrebbero non essere stati verificati dai nostri maghi della tecnologia. 
+
+Se avete dubbi o domande, il nostro team di assistenza è a portata di messaggio (https://pneumasolutions.com/contact/). Non mordiamo, promesso!
+
+Utilizzando questi suggerimenti, riconoscete e accettate la clausola di esclusione della responsabilità di cui sopra. Ora, andate avanti ed esplorate il potenziale di RIM con questi assi nella manica! 
+
+### Ascolto dell'audio del microfono di uno dei vostri computer personali (Windows)
+
+Per garantire la massima privacy, RIM non supporta le conversazioni vocali durante le sessioni non presidiate. Tuttavia, in alcuni casi è possibile ascoltare l'audio proveniente da un dispositivo vicino a uno dei computer remoti. Ad esempio, si potrebbe avere una radiosveglia vicino al desktop e utilizzare il computer portatile in veranda. Anche se la qualità non è delle migliori, RIM può essere un'eccellente soluzione audio wireless di fortuna!
+
+Per configurare il computer di destinazione in modo che ascolti l'audio del microfono, è necessario convogliare l'audio del microfono agli altoparlanti. Poiché l'obiettivo è ascoltare il microfono da una sessione remota, è necessario abbassare il volume degli altoparlanti per evitare un loop di feedback. Per fare questo:
+1. Aprite la finestra di esecuzione (Windows+R).
+1. Digitare sndvol, quindi premere Invio.
+1. Premere il tasto fine per raggiungere lo 0%, quindi premere una volta il tasto freccia su per raggiungere l'1%. Come si può notare, RIM non prende in considerazione il volume effettivo del computer di destinazione quando emette l'audio.
+1. Uscire dal mixer del volume.
+
+Con il volume abbassato, è ora di attivare la funzione di ascolto del microfono.
+1. Premete nuovamente Windows+R e questa volta digitate mmsys.cpl per aprire le impostazioni audio.
+1. Una volta entrati nelle impostazioni audio, accedere alla scheda di registrazione (Ctrl+Tab).
+1. Selezionare il microfono o il dispositivo line-in che si desidera ascoltare, quindi accedere alle proprietà con Alt+P.
+1. Una volta entrati nelle proprietà, CTRL+Tab per la scheda di ascolto e selezionare la casella di controllo "Ascolta questo dispositivo".
+1. CTRL+Tab un'altra volta nella sezione Livelli e regolate il guadagno del microfono a un livello sufficiente per voi. Al termine, premere invio.
+
+Ecco fatto! Ora si dovrebbe sentire l'audio del microfono insieme al resto dell'uscita della macchina remota.

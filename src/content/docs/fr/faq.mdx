@@ -122,3 +122,33 @@ Oui. Une fois qu'une machine cible sans surveillance est supprimée, le changeme
 Dans la plupart des cas, en particulier lorsque le cryptage de disque FileVault est activé, l'utilisateur cible devra saisir manuellement le mot de passe. RIM ne peut pas démarrer sur un Mac crypté avant qu'il n'ait été entièrement connecté.
 ### J'ai plusieurs machines qui jouent le rôle de contrôleur. La liste des machines configurées pour un accès sans surveillance s'affichera-t-elle sur toutes les machines ?
 Oui. La liste des machines configurées pour l'accès sans surveillance est stockée dans votre compte, elle s'affichera donc automatiquement.
+
+## Conseils et astuces
+
+Bienvenue dans la section Conseils et astuces de notre FAQ ! Nous sommes ravis de partager avec vous des conseils pratiques et des astuces qui vous permettront d'améliorer votre expérience RIM. Cela dit, comme dans toutes les grandes aventures, il y a quelques mises en garde à garder à l'esprit : 
+1. Le monde de la technologie est comme une boîte de chocolats - toujours plein de surprises. Nos conseils sont basés sur un certain nombre de facteurs, notamment la version de RIM et la version du système d'exploitation utilisées par le créateur du conseil. Au fur et à mesure de l'évolution de RIM, certains de ces conseils pourraient perdre de leur pertinence. Restez à jour avec la dernière version pour une expérience optimale ! 
+1. Une taille unique ne convient pas à tous. Notre logiciel est conçu pour répondre à un large éventail de besoins, mais le parcours de chaque utilisateur est unique. Ce qui fonctionne à merveille pour l'un peut s'avérer moins intéressant pour l'autre. N'hésitez pas à adapter ces conseils à vos besoins et préférences spécifiques. 
+1. Si certains de ces conseils viennent de nous, beaucoup d'entre eux proviennent directement de notre dynamique communauté d'utilisateurs (comme vous !). Tout en célébrant ce partage de connaissances, n'oubliez pas que ces suggestions sont basées sur des expériences personnelles et qu'elles n'ont pas forcément été vérifiées par nos experts en technologie. 
+
+Si vous avez des doutes ou des questions, notre équipe d'assistance est à votre disposition [par simple message] (https://pneumasolutions.com/contact/). Nous ne mordons pas, c'est promis !
+
+En utilisant ces conseils, vous reconnaissez et acceptez la clause de non-responsabilité ci-dessus. Maintenant, allez-y et explorez le potentiel de RIM avec ces astuces dans votre manche ! 
+
+### Écouter le son du microphone de l'une de vos machines personnelles (Windows)
+
+Afin de garantir une confidentialité maximale, RIM ne prend pas en charge les conversations vocales pendant les sessions sans surveillance. Toutefois, il peut arriver que vous souhaitiez entendre le son provenant d'un appareil situé à proximité de l'un de vos ordinateurs distants. Par exemple, vous pouvez avoir un radio-réveil près de votre bureau et vous pouvez utiliser votre ordinateur portable sous le porche. Bien que la qualité ne soit pas optimale, RIM peut constituer une excellente solution audio sans fil de fortune !
+
+Pour configurer votre machine cible afin d'écouter le son de son microphone, vous devez faire passer le son du microphone par les haut-parleurs. Comme vous souhaitez entendre le microphone à partir d'une session à distance, nous devons d'abord réduire le volume de vos haut-parleurs afin d'éviter une boucle de rétroaction. Pour ce faire, vous devez
+1. Ouvrez la boîte d'exécution (Windows+R).
+1. Tapez sndvol, puis appuyez sur la touche Entrée.
+1. Appuyez sur la touche de fin pour atteindre 0 %, puis sur la flèche du haut pour atteindre 1 %. Comme vous pouvez le constater, RIM ne tient pas compte du volume réel de la machine cible lorsqu'il émet son son.
+1. Quittez le mélangeur de volume.
+
+Le volume étant maintenant réduit, il est temps d'activer la fonction d'écoute de votre microphone.
+1. Appuyez à nouveau sur Windows+R et, cette fois, tapez mmsys.cpl pour ouvrir les paramètres sonores.
+1. Une fois dans les paramètres sonores, accédez à l'onglet d'enregistrement (Ctrl+Tab).
+1. Sélectionnez le microphone ou le périphérique d'entrée en ligne que vous souhaitez écouter, puis accédez aux propriétés avec Alt+P.
+1. Une fois dans les propriétés, appuyez sur CTRL+Tab pour accéder à l'onglet d'écoute et cochez la case "Écouter ce périphérique".
+1. Faites CTRL+Tab une fois de plus dans la section Niveaux et réglez le gain du microphone à un niveau qui vous conviendra. Appuyez sur la touche Entrée lorsque vous avez terminé.
+
+Voilà, c'est fait ! Vous devriez maintenant entendre l'audio du microphone avec le reste de la sortie de la machine distante.

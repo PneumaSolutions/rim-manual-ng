@@ -122,3 +122,33 @@ Ja, det gör det. När ett obevakat mål tas bort träder ändringen i kraft ome
 I de flesta fall, särskilt när FileVault-diskkryptering är aktiverad, måste målanvändaren ange lösenordet manuellt. RIM kan inte starta på en krypterad Mac innan den har varit helt inloggad.
 ### Jag har flera maskiner som spelar rollen som styrenhet. Kommer listan över maskiner som konfigurerats för obevakad åtkomst att fyllas i på alla maskiner?
 Ja, listan över maskiner som konfigurerats för obevakad åtkomst lagras i ditt konto, så den fylls i automatiskt.
+
+## Tips och tricks
+
+Välkommen till avsnittet Tips och tricks i vår FAQ! Vi är glada över att kunna dela med oss av några praktiska insikter och visdomsord för att förbättra din RIM-upplevelse. Som med alla stora äventyr finns det dock några förbehåll att ta hänsyn till: 
+1. Teknikvärlden är som en chokladask - alltid full av överraskningar. Våra tips är baserade på ett antal faktorer, inklusive men inte begränsat till den version av RIM och operativsystem som används av den som skapat tipset. I takt med att RIM utvecklas kan vissa av dessa tips bli mindre relevanta. Håll dig uppdaterad med den senaste versionen för bästa upplevelse! 
+1. En storlek passar inte alla. Vår programvara är utformad för att tillgodose en mängd olika behov, men varje användares resa är unik. Det som fungerar utmärkt för en person kan vara mindre förtrollande för en annan. Anpassa gärna dessa tips efter dina specifika behov och preferenser. 
+1. Även om vissa av tipsen kommer från oss, kommer många av dem direkt från vårt livliga community av användare (som du!). Medan vi firar denna delade kunskap, kom ihåg att dessa förslag bygger på personliga erfarenheter och kanske inte har granskats av våra tekniska trollkarlar. 
+
+Om du någonsin är osäker eller har frågor är vårt supportteam [bara ett meddelande bort.](https://pneumasolutions.com/contact/) Vi bits inte, vi lovar!
+
+Genom att använda dessa tips bekräftar och godkänner du ovanstående ansvarsfriskrivning. Gå nu vidare och utforska RIM:s potential med de här knepen i ärmen! 
+
+### Lyssna på mikrofonljudet från en av dina personliga maskiner (Windows)
+
+För att säkerställa maximal integritet stöder RIM inte röstkonversationer under helt obevakade sessioner. Det kan dock finnas tillfällen då du vill höra ljudet från en enhet som finns i närheten av en av dina fjärrdatorer. Du kan t.ex. ha en klockradio nära skrivbordet och använda din bärbara dator på verandan. Även om kvaliteten kanske inte är den bästa kan RIM vara en utmärkt provisorisk lösning för trådlöst ljud!
+
+När du ställer in din målmaskin för att lyssna på mikrofonljudet kommer mikrofonljudet att ledas till högtalarna. Eftersom du vill höra mikrofonen från en fjärrsession måste vi först sänka högtalarvolymen för att undvika en återkopplingsslinga. För att göra detta:
+1. Öppna körrutan (Windows+R).
+1. Skriv sndvol och tryck sedan på enter.
+1. Tryck på end-tangenten för att nå 0%, tryck sedan på upp-pilen en gång för att nå 1%. Som du kan se tar RIM inte hänsyn till den faktiska volymen på målmaskinen när den skickar ut sitt ljud.
+1. Avsluta volymblandaren.
+
+När volymen nu är sänkt är det dags att aktivera mikrofonens lyssningsfunktion.
+1. Tryck på Windows+R igen, och skriv den här gången mmsys.cpl för att öppna ljudinställningarna.
+1. I ljudinställningarna öppnar du fliken Inspelning (Ctrl+Tab).
+1. Markera den mikrofon eller line-in-enhet som du vill lyssna på och öppna sedan egenskaperna med Alt+P.
+1. I egenskaperna går du till fliken Lyssna med CTRL+Tab och markerar kryssrutan "Lyssna på den här enheten".
+1. CTRL+Tab en gång till till avsnittet Nivåer och justera mikrofonens förstärkning till en nivå som är tillräcklig för dig. Tryck på Enter när du är klar.
+
+Nu är det klart! Du bör nu höra mikrofonens ljud tillsammans med resten av fjärrmaskinens utdata.

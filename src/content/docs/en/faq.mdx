@@ -122,3 +122,33 @@ Yes. Once an unattended target is removed, the change will be effective immediat
 In most instances, particularly when FileVault disk encryption is enabled, the target user will need to manually enter the password. RIM cannot start on an encrypted Mac before it has been fully logged in.
 ### I have multiple machines playing the part of the controller. Will the list of machines set up for unattended access populate across all machines?
 Yes. The list of machines configured for unattended access is stored within your account, so it will populate automatically.
+
+## Tips and Tricks
+
+Welcome to the Tips and Tricks section of our FAQ! We're thrilled to share some handy insights and nuggets of wisdom to enhance your RIM experience. That said, as with all great adventures, there are a few caveats to keep in mind: 
+1. The tech world is like a box of chocolates – always full of surprises. Our tips are based on a number of factors, including but not limited to the version of RIM and operating system version used by the creator of the tip. As RIM evolves, some of these tips might become less relevant. Stay updated with the latest version for the best experience! 
+1. One Size Doesn't Fit All. Our software is designed to cater to a diverse range of needs, but every user's journey is unique. What works like a charm for one might be less enchanting for another. Feel free to adapt these tips to your specific needs and preferences. 
+1. While some of these tips may come from us, many of these tips come straight from our vibrant community of users (like you!). While we celebrate this shared knowledge, remember that these suggestions are based on personal experiences and might not have been vetted by our tech wizards. 
+
+If you're ever in doubt or have questions, our support team is [just a message away.](https://pneumasolutions.com/contact/) We don't bite, we promise!
+
+By using these tips, you acknowledge and agree to the above disclaimer. Now, go forth and explore the potential of RIM with these tricks up your sleeve! 
+
+### Listening to the microphone audio of one of your personal machines (Windows)
+
+In the interest of ensuring maximum privacy, RIM does not support voice conversations during fully unattended sessions. There however may be times where you may want to hear audio coming from a device near one of your remote computers. For example, you may have a clock radio near your desktop, and you may be using your laptop on the porch. While the quality may not be the greatest, RIM can make for an excellent makeshift wireless audio solution!
+
+Setting up your target machine to listen to its microphone audio will involve piping the microphone audio through to its speakers. As you're aiming to hear the microphone from within a remote session, we first need to lower your speaker volume to avoid a feedback loop. In order to do that:
+1. Open the run box (Windows+R).
+1. Type sndvol, then press enter.
+1. Press the end key to reach 0%, then press up arrow once to reach 1%. As you can see, RIM does not take the actual volume of the target machine into consideration when outputting its audio.
+1. Exit out of volume mixer.
+
+With your volume now lowered, it's time to enable your microphone's listen function.
+1. Press Windows+R again, and this time, type mmsys.cpl to open the sound settings.
+1. Once in sound settings, access the recording tab (Ctrl+Tab).
+1. Select the microphone or line-in device you want to listen to, then access the properties with Alt+P.
+1. Once in the properties, CTRL+Tab to the listen tab, and check the "Listen to this Device" checkbox.
+1. CTRL+Tab one more time to the Levels section, and adjust the gain of the microphone to a level that will be sufficient for you. Press enter when done.
+
+That's it! You should now hear the microphone's audio along with the rest of the remote machine's output.
