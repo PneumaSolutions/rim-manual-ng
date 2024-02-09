@@ -16,6 +16,21 @@ Det finns bara ett installationspaket att använda, oavsett om du erbjuder eller
 Det är allt som behövs! En genväg på skrivbordet skapas automatiskt för att underlätta efterföljande start av RIM. Dessutom skapar RIM en global snabbtangent (Windows+Shift+Backspace) som bl.a. automatiskt startar programmet var du än befinner dig.
 ## Installatör med obevakad eller uppmanad åtkomst
 Om den person som ger dig assistans har försett dig med ett anpassat installationsprogram kommer du att informeras om detta när installationsprogrammet startas. Detta beror på att installationsprogrammet automatiskt konfigurerar RIM för vad som kallas antingen obevakad eller uppmanad åtkomst. Detta innebär att den person som hjälper dig kan starta en session med din dator utan att du behöver ange ett nyckelord. Vi kommer att gå igenom dessa typer av sessioner mer ingående längre fram i denna handbok.
+
+## Installera utan administrativa privilegier
+
+Installationsprogrammet för Remote Incident Manager kommer alltid att försöka få administratörsbehörighet. I miljöer där administratörsbehörighet inte kan erhållas, kommer installationen av RIM att utföras inom ramen för det aktuella användarkontot, snarare än på systemnivå.
+
+Att köra utan administratör ger inga begränsningar på styrenhetssidan av RIM. Det finns dock begränsningar som du kommer att stöta på på målmaskinen.
+
+* RIM körs bara när den Windows-användare som installerade programmet är inloggad. 
+* RIM körs inte på inloggningsskärmen i Windows. 
+* RIM har ingen åtkomst till det säkra skrivbordet, dvs. ingen åtkomst till UAC-meddelanden eller till inloggningsskärmen när maskinen låses upp. 
+* Fjärrstyrd tangentbordsinmatning fungerar inte om fokus på målet är i ett upphöjt program, eller till och med ett program som körs med Windows UI Access-flaggan, t.ex. en installerad kopia av en skärmläsare. 
+* Alternativet att trycka Ctrl+Alt+Delete fungerar inte. 
+
+Som registeransvarig kommer du att kunna försöka installera om RIM med administratörsbehörighet under en session.
+
 ## Tyst installation
 Du kommer att vilja göra detta när du distribuerar RIM till flera maskiner. Använd helt enkelt kommandoradsparametern **/S** i ditt distributionsskript. Observera att det är skiftlägeskänsligt, så ett stort S krävs.
 ## Ytterligare överväganden för Windows-servrar
@@ -39,9 +54,9 @@ Det finns bara ett installationspaket att använda, oavsett om du erbjuder eller
 1. En installationsguide visas. Följ anvisningarna på skärmen.  
 Nu är du redo att köra Remote Incident Manager för första gången! Du kan köra programmet från mappen Program, som du når via Kommando+Shift+A i Finder. RIM har dessutom en global snabbtangent (Option+Shift+Backspace) som bland annat automatiskt startar programmet var du än befinner dig.
 ## Behörigheter
-På grund av macOS:s försiktighetsprincip vid första användningen av den här typen av program måste du ge Remote Incident Manager vissa behörigheter vid första start.
+På grund av macOS försiktighetsprincip när du hanterar program av den här typen för första gången måste du ge Remote Incident Manager vissa behörigheter vid första start.
 ### Karabiner HID-drivrutin
-Detta är den drivrutin som bearbetar indata som tas emot av RIM. Detta är ett systemtillägg, så du måste godkänna det manuellt. Rim kommer att visa en systemdialog som tar dig till avsnittet Sekretess och säkerhet i systeminställningarna. Du kommer sedan att bläddra tills du hittar knappen Tillåt. Om du klickar på den kommer du att uppmanas att ange ditt lösenord eller touch-ID, varefter du kan få information om att du måste starta om för att aktivera Karabiner Elements fullt ut. Om du startar om nu eller senare är upp till dig, men om du bestämmer dig för att inte starta om förrän alla behörigheter har godkänts, gå ut ur Systeminställningar och gå tillbaka till RIM.
+Detta är den drivrutin som bearbetar indata som tas emot av RIM. Detta är ett systemtillägg, så du måste godkänna det manuellt. Rim kommer att visa en systemdialog som tar dig till avsnittet Sekretess och säkerhet i systeminställningarna. Du kommer sedan att bläddra tills du hittar knappen Tillåt. Om du klickar på den kommer du att uppmanas att ange ditt lösenord eller touch-ID, varefter du kan få information om att du måste starta om för att aktivera Karabiner Elements fullt ut. Om du startar om nu eller senare är upp till dig, men om du bestämmer dig för att inte starta om förrän alla behörigheter har godkänts, avsluta Systeminställningar och gå tillbaka till RIM.
 ### Ta emot indata
 RIM behöver tillstånd för att ta emot all input som skickas till den via en fjärranslutning.  
 Klicka på "Fortsätt" i RIM-fönstret, varpå en systemdialog visas som begär behörighet för tillgänglighetstjänster. Om VoiceOver inte omedelbart fokuserar på den, tryck snabbt två gånger på **VO+F1**. Tryck sedan på nedåtpilen till "Systemdialoger", tryck på högerpilen och sedan nedåt till begäran om inmatningsbehörighet. Om du trycker på Enter öppnas varningsrutan, och då bör du följa den till Systeminställningar och markera rutan Remote Incident Manager i listan över program.
@@ -51,4 +66,10 @@ Nästa begäran om tillstånd från RIM gäller inspelning av skärmbilden som k
 Den sista begäran om tillstånd från RIM gäller aviseringar. RIM kommer att meddela dig när en session startar och avslutas. Proceduren för att bevilja detta tillstånd liknar den föregående proceduren.
 ### Välkomstskärm!
 När alla behörigheter har godkänts visas välkomstskärmen. Observera att om du väljer att starta om senare, är detta en bra tidpunkt för omstart. Vid denna tidpunkt är RIM redo att initiera eller ta emot anslutningar.
+
+# Avinstallera RIM
+
+Om du stöter på några problem med din installation av RIM, kanske du vill göra en ren ominstallation av programmet. På grund av den komplexa karaktären hos RIM-distributionen för Mac OS, kommer inte en enkel flyttning av appen till papperskorgen att avinstallera den, och därmed kanske inte helt lösa ditt problem.
+
+RIM tillhandahåller en enkel metod för att helt avinstallera sig själv. När du klickar på knappen "Om" i huvudfönstret kommer du att se en avinstallationsknapp i skärmen Om som visas. Om du klickar på denna knapp visas en bekräftelsedialog, varefter du ombeds ange ditt lösenord eller touch-ID för att kunna fortsätta avinstallationen. Du kommer att få ett bekräftelsemeddelande när avinstallationen är klar.
 </MacOS>

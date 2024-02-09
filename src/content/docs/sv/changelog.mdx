@@ -1,11 +1,40 @@
 ---
-title: Ändra logg
+title: Change Log
 ---
 
 import Windows from "~/components/platform/Windows.astro"
 import MacOS from "~/components/platform/MacOS.astro"
 
 Versioner av RIM betecknas med rubriker på nivå 2. Betydande uppdateringar med flera funktioner för båda plattformarna kommer att delas in i Mac- och Windows-underrubriker på nivå 3.
+
+## 3.3.0
+Denna uppdatering tillför en mängd nya funktioner över hela linjen, samt plattformsspecifika revideringar. Allmänna tillägg inkluderar:
+* Tillagt stöd för röstkonversationer i obevakade sessioner. Målanvändaren tillfrågas direkt om tillstånd att starta en röstkonversation.
+* I röstsamtal hanterar RIM nu att mikrofoner kopplas in och ur under sessionen 
+
+### Windows
+* Berättaren talar nu konsekvent RIM-aviseringar
+* Lagt till en icke-administratörsfallback
+
+### Mac OS
+* Lagt till en avinstallerare som nås via Om-skärmen som helt och rent tar bort RIM, inklusive Karabiner Virtual HID-drivrutinen
+* Information om Mac-målmaskin innehåller nu körande processer och installerade program 
+
+## 3.2.18
+När du trycker på knappen Logga ut i fönstret Tillhandahåll hjälp återgår RIM nu till fönstret Ta emot hjälp i stället för att kräva att du loggar in igen.
+## 3.2.17
+* Problem med översättningar av menyalternativ har åtgärdats.
+* När du startar en obevakad session stöder RIM nu dubbelklickning på en målgrupp eller målmaskin.
+* Åtgärdat ett fel i processen för att lägga till en målmaskin till ditt konto när du använder SSO (Single Sign-On).
+## 3.2.16
+* Åtgärdade problem med den franska lokaliseringen. Tack till Nael Sayegh för dessa korrigeringar; detta är det första community-bidraget till våra lokaliseringsinsatser.
+## 3.2.15
+### Windows
+* Åtgärdat ett problem som gjorde att skärmutmatningen på styrenheten frös när målmaskinen låstes.
+## 3.2.14
+### Windows
+* RIM identifierar nu Fusion, Vispero-produkten som kombinerar JAWS och ZoomText, som en separat produkt när man fastställer vilken skärmläsare som körs på måldatorn, istället för att bara identifiera den som JAWS. Detta innebär att RIM inte kommer att försöka starta sin funktion för fjärråtkomst medan Fusion startas.
+* Vi har fått rapporter om att om Fusion startades efter att en RIM-session påbörjats skulle Fusion ignorera vissa tangenttryckningar från styrenheten, vilket JAWS brukade göra. Vi tror att detta problem nu är åtgärdat.
 ## 3.2.13
 ### Windows
 Åtgärdade ett problem med tangentbordsinmatning vid anslutning till målmaskiner som kör JAWS 2024.
@@ -59,7 +88,7 @@ RIM kan nu automatiskt återuppta inspelning av skärminnehåll och ljud om mål
 ## 3.1.44
 ### Mac
 * Implementerar omstart och återanslutning för Mac-mål, inklusive både standardomstart och nödomstart.
-    * Precis som med obevakad åtkomst visas inte RIM på macOS-inloggningsskärmen på grund av plattformsbegränsningar, särskilt FileVault. Målanvändaren måste därför logga in igen innan RIM kan återansluta.
+    * Precis som vid obevakad åtkomst visas inte RIM på macOS-inloggningsskärmen på grund av plattformsbegränsningar, särskilt FileVault. Målanvändaren måste därför logga in igen innan RIM kan återansluta.
 * Meddelandet om filöverföringar, som introducerades i föregående uppdatering, visas nu bara en gång per RIM-session.
 
 ## 3.1.43
@@ -284,7 +313,7 @@ Observera att när en målanvändare kör det förkonfigurerade installationspro
 
 ## 0.11.5
 * Denna uppdatering introducerar två nya snabbtangenter. Windows+Shift+D kopplar bort sessionen när den trycks ned på endera sidan. För styrenheten vänder Windows+Shift+F sessionen.
-* Denna uppdatering lägger till skyddsåtgärder mot att tangentbordsmodifierare fastnar på endera maskinen.
+* Den här uppdateringen lägger till skydd mot att tangentbordsmodifierare fastnar på endera maskinen.
 * Det finns ett nytt menyalternativ, "Lås målmaskinen", som motsvarar att trycka på Windows+L på målmaskinen.
 * RIM har nu ett "Om"-fönster, där du kan kontrollera versionsnumret, kontakta Pneuma Solutions för support och feedback, läsa manualen och se versionsändringsloggen.
 * RIM ber inte längre om feedback i slutet av en session eller när fönstret "Provide Help" stängs.
@@ -302,7 +331,7 @@ Den här uppdateringen åtgärdar några buggar i processen för omstart och åt
 ## 0.11.1
 Detta är en buggfix-uppdatering. Observera att obevakade mål fortfarande måste uppdateras manuellt genom att köra det senaste RIM-installationsprogrammet. Nu kommer du dock att kunna ansluta till ett obevakat mål efter att installationen är klar, utan att någon behöver stänga fönstret "Ta emot hjälp".
 ## 0.11.0
-* Funktionen för omstart och återanslutning är nu implementerad. Med det nya alternativet Reboot and Reconnect på styrenhetens RIM-meny kan du göra antingen en standardomstart eller en nödomstart och automatiskt fortsätta sessionen när omstarten är klar. RIM återansluter även om målmaskinen startas om av någon annan anledning, t.ex. när ett installationsprogram startar om maskinen.
+* Funktionen för omstart och återanslutning är nu implementerad. Med det nya alternativet Reboot and Reconnect på styrenhetens RIM-meny kan du göra antingen en standard- eller nödomstart och automatiskt fortsätta sessionen när omstarten är klar. RIM återansluter även om målmaskinen startas om av någon annan anledning, t.ex. när ett installationsprogram startar om maskinen.
 * RIM försöker också automatiskt återansluta om anslutningen bryts av någon anledning. Detta underlättar vid opålitliga Internetanslutningar.
 * När du kör en obevakad session eller använder Omstart och återanslutning kan du nu använda RIM medan målmaskinen är på Windows inloggningsskärm. Observera att RIM måste återansluta sessionen när måldatorn övergår från inloggningsskärmen till huvudskrivbordet. Detta är en känd begränsning i den nuvarande implementeringen som vi kan komma att åtgärda i en framtida uppdatering.
 * RIM är nu fullt fungerande när målanvändaren inte har administratörsbehörighet på måldatorn, så länge tjänsten Remote Incident Manager Host körs på den maskinen. Observera att administratörsbehörighet fortfarande krävs för att installera RIM-uppdateringar. Observera också att nya versioner av RIM fortfarande måste installeras manuellt på obevakade mål. Vi arbetar på lösningar för båda dessa problem.
@@ -322,7 +351,7 @@ du kan nu använda mushjulet i en fjärrsession.
 ## 0.10.6
 Förhoppningsvis har alla återstående problem som orsakade att installationsprocessen hängde sig åtgärdats.
 ## 0.10.5
-Den här versionen innehåller några ändringar under huven. I synnerhet har vi inkluderat uppdateringar av installationen och underliggande paket för att åtgärda problem som gör att installationen hänger sig.
+Den här versionen innehåller några förändringar under huven. I synnerhet har vi inkluderat uppdateringar av installationen och underliggande paket för att åtgärda problem som gör att installationen hänger sig.
 ## 0.10.4
 * Det finns nu ett alternativ på RIM-menyn för att skicka Control+Alt+Delete till målmaskinen.
 * Du kan nu öppna RIM-menyn genom att högerklicka på titelfältet i sessionsfönstret. Vi planerar att lägga till möjligheten att öppna RIM-menyn genom att klicka på RIM-ikonen i den vänstra änden av titelfältet också.
@@ -330,7 +359,7 @@ Den här versionen innehåller några ändringar under huven. I synnerhet har vi
 ## 0.10.3
 * Styrenheten kan nu vända en obevakad session.
 * Styrenheten kan nu byta namn på en obevakad målmaskin.
-* Åtgärdat ett fel som ibland gjorde att sessionen inte svarade efter kopiering till urklipp.
+* Åtgärdat ett fel som ibland gjorde att sessionen inte svarade efter kopiering till Urklipp.
 * Åtgärdat ett fel som ibland ledde till att start av fjärråtkomstmodulen misslyckades med ett JavaScript-fel.
 
 ## 0.10.2

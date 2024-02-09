@@ -44,12 +44,13 @@ As mentioned earlier, accessing the RIM menu directs you back to your machine. T
 <Windows>
 - Update RIM on Target: Forces an update of RIM on the target computer
     - This option shows if the target's machine is running an older version of RIM.
+- Re-install RIM as Administrator on Target: This option will attempt to reinstall RIM as admin on a Windows target, requiring the target user to accept the admin permission request by themselves and/or with the help of their company IT.
 - Minimize Session (**Windows+Shift+M**): brings control back to your machine as described above
 - Transfer File to Target: Appears if a file is on the clipboard.
     - Although this alternate method of completing a file transfer is always available, it is only necessary for transferring files to Mac targets.
 - Flip Session (**Windows+Shift+F**): Allows your client to remote control your machine and hear its audio. As the original controller, you can flip the session back by selecting this option a second time.
 - Start/stop Voice Conversation: Allows you to toggle the voice chat on or off for your session.
-    - Note that this option is unavailable in unattended sessions as they do not support voice chat. However, prompted sessions still support this.
+    - During an unattended session, this option will present a permissions dialogue that the user must be present to respond to. However, prompted sessions still initiate voice conversations upon activation by the controller.
 - Start Remote Accessibility: This option appears when no screen reader is running on the remote computer. This will enable speech on your end, but the client will not need to worry about hearing speech.
     - If a screen reader (including Remote Accessibility) is running, this option turns into a force quit for the running screen reader. This is useful when a target's screen reader stops responding to the extent you are unable to restart it normally.
 - Reboot and Reconnect: Allows you to reboot the computer and automatically reconnect the session.
@@ -62,20 +63,21 @@ As mentioned earlier, accessing the RIM menu directs you back to your machine. T
 - View Connection Details: Provides a detailed lowdown on your connection, as well as the target machine. Information includes:
     - Connection statistics
     - Information about the computer, including operating system version, available RAM, etc.
-    - Running processes (Windows targets)
-    - Installed packages (Windows targets)
+    - Running processes
+    - Installed packages
 - Disconnect Session (**Windows+Shift+D**): Terminates the session.
     - Remember that this option is available to both sides of the session.
-</Windows>
+</Windows>  
 <MacOS>
 - Update RIM on Target: Forces an update of RIM on the target computer
     - This option shows if the target's machine is running an older version of RIM.
+- Re-install RIM as Administrator on Target: This option will attempt to reinstall RIM as admin on a Windows target, requiring the target user to accept the admin permission request by themselves and/or with the help of their company IT.
 - Minimize Session (**Option+Shift+M**): brings control back to your machine as described above
 - Transfer File to Target: Appears if a file is on the clipboard.
     - Although this alternate method of completing a file transfer is always available, it is only necessary for transferring files to Mac targets.
 - Flip Session (**Option+Shift+F**): Allows your client to remote control your machine and hear its audio. As the original controller, you can flip the session back by selecting this option a second time.
 - Start/stop Voice Conversation: Allows you to toggle the voice chat on or off for your session.
-    - Note that this option is unavailable in unattended sessions as they do not support voice chat. However, prompted sessions still support this.
+    - During an unattended session, this option will present a permissions dialogue that the user must be present to respond to. However, prompted sessions still initiate voice conversations upon activation by the controller.
 - Start Remote Accessibility: This option appears when no screen reader is running on the remote computer. This will enable speech on your end, but the client will not need to worry about hearing speech.
     - If a screen reader (including Remote Accessibility) is running, this option turns into a force quit for the running screen reader. This is useful when a target's screen reader stops responding to the extent you are unable to restart it normally.
 - Reboot and Reconnect: Allows you to reboot the computer and automatically reconnect the session.
@@ -88,8 +90,8 @@ As mentioned earlier, accessing the RIM menu directs you back to your machine. T
 - View Connection Details: Provides a detailed lowdown on your connection, as well as the target machine. Information includes:
     - Connection statistics
     - Information about the computer, including operating system version, available RAM, etc.
-    - Running processes (Windows targets)
-    - Installed packages (Windows targets)
+    - Running processes
+    - Installed packages
 - Disconnect Session (**Option+Shift+D**): Terminates the session.
     - Remember that this option is available to both sides of the session.
 </MacOS>
@@ -177,7 +179,8 @@ Now that we've registered the machine for unattended access, here is how we will
 
 If the target machine is configured for prompted access, the end user will get a prompt. Once they answer yes, you'll be connected. If the session is unattended, you will immediately be connected and dropped into the remote control zone.
 
-Please note: Voice conversations are not supported during fully unattended sessions, however they are supported for prompted sessions.
+Please note: Voice conversations require the target user to approve them during fully unattended sessions. This is however not required for prompted sessions.
+
 ### Creating a Shortcut for an Unattended Session
 
 For extra convenience, you can create desktop shortcuts that allow you to automatically launch unattended sessions. In order to do this:
@@ -191,6 +194,7 @@ Now, when you activate this shortcut, you will either automatically land in the 
 Unattended session shortcuts, like any other shortcuts, can have global hotkeys associated with them. This can be extremely useful if you are a maintenance tech managing multiple computers in a workgroup. For example, if your workgroup consists of 6 computers that you perform routine maintenance on, you could configure Alt+Control+1 through 6 as hotkeys for each respective machine. This ought to significantly speed up your workflow.
 In addition, you can call up an unattended session via the run box if you copy the shortcut into your user directory. Once you've copied the shortcut, you may start an unattended session by typing your-session-name.url in the run box.
 </Windows>
+
 ### Revoking Unattended Access
 
 If you no longer want your machine to be controlled unattended, you can revoke the controller's access. You do not need to be in a session in order to do this.

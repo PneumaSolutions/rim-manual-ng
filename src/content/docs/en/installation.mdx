@@ -16,6 +16,21 @@ There is only one installation package to use, whether you are offering or recei
 That's all there is to it! A desktop shortcut will be automatically created to aid in subsequent launches of RIM. Additionally, RIM sets up a multipurpose global hotkey (Windows+Shift+Backspace) which, among other things, automatically launches the program from wherever you are.
 ## Unattended or Prompted Access Installer
 If the person providing assistance has provided you a custom installer, you will be advised of this when the installer launches. This is because this installer will automatically configure RIM for what is known as either unattended or prompted access. This is what will allow the person helping you to initiate a session with your computer without you having to enter a keyword. We will cover these types of sessions indepth later on in this manual.
+
+## Installing without Administrative Privileges
+
+The Remote Incident Manager installer will always attempt to obtain administrator privileges. In environments where administrator privileges are unable to be obtained, the installation of RIM will be performed within the scope of the current user account, rather than at the system level.
+
+Running without admin does not result in any limitations on the controller side of RIM. There are, however, limitations you will encounter on the target machine.
+
+* RIM only runs when the Windows user that installed it is signed in. 
+* RIM doesn't run on the Windows sign-in screen. 
+* RIM has no access to the secure desktop; this means no access to UAC prompts, or to the sign-in screen when unlocking the machine. 
+* Remote keyboard input doesn't work if the focus on the target is in an elevated application, or even an application running with the Windows UI Access flag, such as an installed copy of a screen reader. 
+* The option to press Ctrl+Alt+Delete doesn't work. 
+
+As a controller, you will be able to attempt a re-installation of RIM with admin privileges during a session.
+
 ## Silent Installation
 You'll want to do this when deploying RIM to multiple machines. Simply use the **/S** command line parameter in your deployment script. Note that it is case-sensitive, so a capital S is required.
 ## Additional Considerations for Windows Servers
@@ -51,4 +66,10 @@ The next permission request from RIM will be for capturing the screen output whi
 The final permission request from RIM will be for notifications. RIM will notify you when a session starts and ends. The procedure for granting this permission is similar to the previous procedure.
 ### Welcome Screen!
 After all the permissions have been approved, the welcome screen will appear. Note that if you chose to reboot later, now would be a good time to reboot. At this point, RIM is ready to initiate or receive connections.
+
+# Uninstalling RIM
+
+Should you encounter any show-stopping problems with your installation of RIM, you may wish to perform a clean reinstall of the app. Due to the complex nature of the RIM distribution for Mac OS, simply moving the app to the trash will not uninstall it, and thus may not fully resolve your issue.
+
+RIM provides an easy method to fully uninstall itself. When you click the "About" button in the main window, you will see an uninstall button in the About screen that appears. Clicking this button will result in a confirmation dialogue, afterwhich you will be prompted for your password or touch ID in order to proceed with uninstallation. You will be given a confirmation message once the uninstallation is complete.
 </MacOS>

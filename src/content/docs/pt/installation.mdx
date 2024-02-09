@@ -1,5 +1,5 @@
 ---
-title: Instalação
+title: Installation
 ---
 
 import Windows from "~/components/platform/Windows.astro"
@@ -16,6 +16,21 @@ Há apenas um pacote de instalação a ser usado, quer você esteja oferecendo o
 Isso é tudo o que há para fazer! Um atalho na área de trabalho será criado automaticamente para ajudar nas próximas inicializações do RIM. Além disso, o RIM configura uma tecla de atalho global multiuso (Windows+Shift+Backspace) que, entre outras coisas, inicia automaticamente o programa de onde quer que você esteja.
 ## Instalador de acesso autônomo ou solicitado
 Se a pessoa que estiver prestando assistência tiver fornecido um instalador personalizado, você será avisado disso quando o instalador for iniciado. Isso ocorre porque esse instalador configurará automaticamente o RIM para o que é conhecido como acesso autônomo ou solicitado. Isso permitirá que a pessoa que o estiver ajudando inicie uma sessão com seu computador sem que você precise digitar uma palavra-chave. Abordaremos esses tipos de sessões em detalhes mais adiante neste manual.
+
+## Instalação sem privilégios administrativos
+
+O instalador do Remote Incident Manager sempre tentará obter privilégios de administrador. Em ambientes em que não for possível obter privilégios de administrador, a instalação do RIM será executada dentro do escopo da conta de usuário atual, e não no nível do sistema.
+
+A execução sem administrador não resulta em nenhuma limitação no lado do controlador do RIM. No entanto, há limitações que você encontrará no computador de destino.
+
+* O RIM só é executado quando o usuário do Windows que o instalou está conectado. 
+* O RIM não é executado na tela de login do Windows. 
+* O RIM não tem acesso à área de trabalho segura; isso significa que não há acesso aos prompts do UAC ou à tela de login ao desbloquear a máquina. 
+* A entrada remota do teclado não funciona se o foco no alvo estiver em um aplicativo elevado ou mesmo em um aplicativo executado com o sinalizador Windows UI Access, como uma cópia instalada de um leitor de tela. 
+* A opção de pressionar Ctrl+Alt+Delete não funciona. 
+
+Como controlador, você poderá tentar reinstalar o RIM com privilégios de administrador durante uma sessão.
+
 ## Instalação silenciosa
 Você desejará fazer isso ao implantar o RIM em várias máquinas. Basta usar o parâmetro de linha de comando **/S** em seu script de implementação. Observe que ele diferencia maiúsculas de minúsculas, portanto, é necessário um S maiúsculo.
 ## Considerações adicionais para servidores Windows
@@ -37,9 +52,9 @@ Há apenas um pacote de instalação a ser usado, quer você esteja oferecendo o
 1. [Faça o download do Remote Incident Manager] (https://getrim.app/mac)
 1. Vá para a pasta de downloads por meio do Finder (Option+command+L). Localize o arquivo .pkg baixado e abra-o com Command+O.
 1. Será exibido um assistente de instalação. Siga as instruções na tela.  
-Você está pronto para executar o Remote Incident Manager pela primeira vez! Você pode executá-lo a partir da pasta de aplicativos, acessada por meio de Command+Shift+A quando localizado no Finder. Além disso, o RIM configura uma tecla de atalho global multiuso (Option+Shift+Backspace) que, entre outras coisas, inicia automaticamente o programa de onde quer que você esteja.
+Você está pronto para executar o Remote Incident Manager pela primeira vez! Você pode executá-lo a partir da pasta de aplicativos, acessada por meio de Command+Shift+A enquanto estiver localizado no Finder. Além disso, o RIM configura uma tecla de atalho global multiuso (Option+Shift+Backspace) que, entre outras coisas, inicia automaticamente o programa de onde quer que você esteja.
 ## Permissões
-Devido ao comportamento de precaução do macOS ao lidar com aplicativos dessa natureza pela primeira vez, será necessário conceder algumas permissões ao Remote Incident Manager na primeira inicialização.
+Devido ao comportamento de precaução do macOS ao lidar com aplicativos dessa natureza pela primeira vez, você precisará conceder algumas permissões ao Remote Incident Manager na primeira inicialização.
 ### Driver Karabiner HID
 Esse é o driver que processa a entrada recebida pelo RIM. Essa é uma extensão do sistema, portanto, você deve aprová-la manualmente. O Rim exibirá uma caixa de diálogo do sistema que o levará à seção Privacidade e segurança das configurações do sistema. Em seguida, role a tela até localizar o botão Allow (Permitir). Clicar nesse botão solicitará sua senha ou Touch ID e, em seguida, você poderá ser informado de que precisa reiniciar para ativar totalmente o Karabiner Elements. A decisão de reiniciar agora ou mais tarde é sua, mas se você decidir não reiniciar até que todas as permissões tenham sido aprovadas, saia das Configurações do sistema e volte para a RIM.
 ### Recebimento de entrada
@@ -51,4 +66,10 @@ A próxima solicitação de permissão da RIM será para capturar a saída da te
 A solicitação de permissão final da RIM será para notificações. A RIM notificará você quando uma sessão começar e terminar. O procedimento para conceder essa permissão é semelhante ao procedimento anterior.
 ### Tela de boas-vindas!
 Depois que todas as permissões tiverem sido aprovadas, a tela de boas-vindas será exibida. Observe que, se você optar por reinicializar mais tarde, agora seria um bom momento para reinicializar. Nesse momento, o RIM está pronto para iniciar ou receber conexões.
+
+# Desinstalação do RIM
+
+Se você encontrar algum problema que interrompa a instalação do RIM, talvez queira executar uma reinstalação limpa do aplicativo. Devido à natureza complexa da distribuição do RIM para Mac OS, simplesmente mover o aplicativo para a lixeira não o desinstalará e, portanto, pode não resolver totalmente o problema.
+
+A RIM oferece um método fácil de desinstalação completa. Ao clicar no botão "Sobre" na janela principal, você verá um botão de desinstalação na tela Sobre que é exibida. Clicar nesse botão resultará em uma caixa de diálogo de confirmação, após a qual será solicitada a senha ou o Touch ID para prosseguir com a desinstalação. Você receberá uma mensagem de confirmação quando a desinstalação for concluída.
 </MacOS>

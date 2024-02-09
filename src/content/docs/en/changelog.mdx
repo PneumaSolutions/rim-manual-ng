@@ -6,8 +6,22 @@ import Windows from "~/components/platform/Windows.astro"
 import MacOS from "~/components/platform/MacOS.astro"
 
 Versions of RIM will be denoted by headings at level 2. Substantial updates with several features for both platforms will be divided into Mac and Windows subheadings at level 3.
+
+## 3.3.0
+This update adds a host of new features across the board, as well as platform-specific revisions. General additions include:
+* Added support for voice conversations in unattended sessions. The target user is prompted on the spot for permission to start a voice conversation.
+* In voice conversations, RIM now handles microphones being plugged and unplugged during the session 
+
+### Windows
+* Narrator now consistently speaks RIM notifications
+* Added a non-admin fallback
+
+### Mac OS
+* Added an uninstaller accessed via the About screen that completely and cleanly removes RIM, including the Karabiner Virtual HID driver
+* Mac target machine info now includes running processes and installed applications 
+
 ## 3.2.18
-* When you press the Log Out button in the Provide Help window, RIM now returns to the Receive Help window rather than requiring you to log in again.
+When you press the Log Out button in the Provide Help window, RIM now returns to the Receive Help window rather than requiring you to log in again.
 ## 3.2.17
 * Fixed problems with the translations of menu items.
 * When starting an unattended session, RIM now supports double-clicking a target group or target machine.

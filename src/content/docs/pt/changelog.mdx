@@ -1,16 +1,45 @@
 ---
-title: Registro de alterações
+title: Change Log
 ---
 
 import Windows from "~/components/platform/Windows.astro"
 import MacOS from "~/components/platform/MacOS.astro"
 
 As versões da RIM serão indicadas por títulos no nível 2. Atualizações substanciais com vários recursos para ambas as plataformas serão divididas em subtítulos para Mac e Windows no nível 3.
+
+## 3.3.0
+Esta atualização adiciona uma série de novos recursos em toda a linha, bem como revisões específicas de plataforma. As adições gerais incluem:
+* Suporte adicional para conversas de voz em sessões sem supervisão. O usuário-alvo é solicitado no local a obter permissão para iniciar uma conversa por voz.
+* Nas conversas por voz, a RIM agora lida com o fato de os microfones serem conectados e desconectados durante a sessão 
+
+### Windows
+* O narrador agora fala consistentemente as notificações da RIM
+* Adicionado um fallback não administrativo
+
+### Mac OS
+* Adição de um desinstalador acessado pela tela Sobre que remove a RIM de forma completa e limpa, incluindo o driver Karabiner Virtual HID
+* As informações da máquina de destino do Mac agora incluem processos em execução e aplicativos instalados 
+
+## 3.2.18
+Quando você pressiona o botão Sair na janela Fornecer ajuda, o RIM agora retorna à janela Receber ajuda em vez de exigir que você faça login novamente.
+## 3.2.17
+* Foram corrigidos problemas com as traduções de itens de menu.
+* Ao iniciar uma sessão autônoma, o RIM agora suporta o clique duplo em um grupo de destino ou máquina de destino.
+* Foi corrigido um erro no processo de adição de uma máquina de destino à sua conta ao usar o logon único (SSO).
+## 3.2.16
+* Correção de problemas com a localização em francês. Agradecemos a Nael Sayegh por essas correções; essa é a primeira contribuição da comunidade para nossos esforços de localização.
+## 3.2.15
+### Windows
+* Foi corrigido um problema que fazia com que a saída de tela no controlador congelasse ao bloquear a máquina de destino.
+## 3.2.14
+### Windows
+* A RIM agora detecta o Fusion, o produto Vispero que combina o JAWS e o ZoomText, como um produto distinto ao determinar qual leitor de tela está em execução no computador de destino, em vez de simplesmente detectá-lo como JAWS. Isso significa que a RIM não tentará iniciar seu recurso de acessibilidade remota enquanto o Fusion estiver sendo iniciado.
+* Recebemos relatos de que, se o Fusion fosse iniciado após o início de uma sessão RIM, ele ignoraria algumas teclas digitadas pelo controlador, como o JAWS costumava fazer. Acreditamos que esse problema foi corrigido.
 ## 3.2.13
 ### Windows
-Corrigido um problema com a entrada do teclado ao se conectar a máquinas de destino que executam o JAWS 2024.
+Foi corrigido um problema com a entrada de teclado ao se conectar a máquinas de destino que executavam o JAWS 2024.
 ## 3.2.12
-Contornado um problema raro que poderia impedir que o aplicativo RIM se conectasse ao serviço de nuvem.
+Foi solucionado um problema raro que poderia impedir que o aplicativo RIM se conectasse ao serviço de nuvem.
 ## 3.2.11
 Adicionado um novo botão à janela Connection Details (Detalhes da conexão) para solicitar que a máquina de destino envie seus registros RIM para a Pneuma Solutions. Utilize esse recurso somente se solicitado pela Pneuma Solutions.
 ## 3.2.10
@@ -36,7 +65,7 @@ A localização do RIM em outros idiomas está agora na versão beta. Atualmente
 
 ## 3.2.0
 Primeira versão oficial para Mac OS! Os novos recursos incluem:
-* capacidade de configurar sessões não assistidas ou solicitadas de dentro de uma sessão interativa.
+* capacidade de configurar sessões não assistidas ou solicitadas em uma sessão interativa.
 * Todas as novas instruções de permissões para usuários que não usam o VoiceOver.
 
 ## 3.1.49
@@ -95,7 +124,7 @@ máquina de destino, o controlador, seja usando Windows ou Mac, ouvirá a fala
 enquanto o usuário alvo não ouve nenhuma fala ou efeito sonoro. Não há
 também não há nenhuma indicação visível de que o VoiceOver está sendo executado no alvo.
 O processo de iniciar a acessibilidade remota, seja automática ou
-manualmente, funciona exatamente como nos alvos do Windows. E, é claro,
+manualmente, funciona da mesma forma que com os alvos do Windows. E, é claro,
 quando a sessão termina, a configuração especial do VoiceOver é encerrada e o
 e o VoiceOver é restaurado para suas configurações anteriores.
 
@@ -190,7 +219,7 @@ Versão beta inicial do RIM para Mac OS.
 * Foi corrigido um erro que fazia com que os usuários fossem desconectados do RIM após a instalação de algumas atualizações do Windows.
 
 ## 3.1.12
-* Por demanda popular, o RIM não solicita mais um comentário no final de cada sessão. Você ainda pode publicar comentários sobre as sessões no painel do RIM. Poderemos adicionar uma opção configurável para solicitar um comentário como um recurso no futuro.
+* Por demanda popular, o RIM não solicita mais um comentário no final de cada sessão. Você ainda pode publicar comentários sobre as sessões no painel do RIM. Podemos adicionar uma opção configurável para solicitar um comentário como um recurso no futuro.
 
 ## 3.1.11
 * Se o computador de destino estiver executando pelo menos essa versão do RIM, mas ainda não tiver atualizado para a versão mais recente, o controlador agora poderá forçar o computador de destino a atualizar sua instalação do RIM por meio de uma nova opção no menu da sessão.
@@ -236,7 +265,7 @@ Esta versão adiciona um painel de gerenciamento completo para controladores.
 ## 3.0.8
 Corrigido um bug que às vezes impedia que a saída de tela remota funcionasse quando um prompt de Controle de Conta de Usuário era exibido.
 ## 3.0.7
-* Esta é uma atualização para correção de bugs.
+* Esta é uma atualização para correção de erros.
 
 ## 3.0.6
 * Os usuários com uma assinatura RIM Enterprise ou uma assinatura RIM Pro com o complemento Enterprise agora podem criar instaladores pré-configurados totalmente silenciosos para acesso sem supervisão. Para executar um instalador no modo silencioso, seja ele o instalador padrão ou um instalador pré-configurado de uma conta corporativa, use a opção de linha de comando /S (observe a capitalização) ao executar o instalador.
@@ -271,7 +300,7 @@ Foi corrigido um bug que impedia que a nova tecla de atalho Windows+Shift+Backsp
 ## 0.12.0
 Agora é possível criar um instalador pré-configurado que registrará automaticamente todas as máquinas nas quais ele for instalado como alvos autônomos na sua conta do RIM.
 
-Para fazer isso, use o novo botão chamado "Create a Pre-Configured Target Installer" (Criar um instalador de destino pré-configurado), na tela "Provide Help" (Fornecer ajuda). Em seguida, você precisará inserir um nome de base para a(s) máquina(s) de destino; a RIM adicionará automaticamente o nome do host de cada máquina de destino a esse nome de base. Depois que as máquinas de destino forem registradas, você poderá renomeá-las como qualquer outro destino não assistido. Você também pode definir a data de expiração do instalador, que deve estar entre 7 e 30 dias. Depois que a RIM criar o instalador, você receberá um link que poderá compartilhar diretamente com os usuários de destino ou fazer o download você mesmo para que possa compartilhar o instalador de outra forma.
+Para fazer isso, use o novo botão chamado "Create a Pre-Configured Target Installer" (Criar um instalador de destino pré-configurado), na tela "Provide Help" (Fornecer ajuda). Em seguida, você precisará inserir um nome de base para a(s) máquina(s) de destino; a RIM adicionará automaticamente o nome do host de cada máquina de destino a esse nome de base. Depois que as máquinas de destino forem registradas, você poderá renomeá-las como qualquer outro destino não assistido. Você também pode definir a data de expiração do instalador, que deve estar entre 7 e 30 dias. Depois que a RIM criar o instalador, você receberá um link que poderá compartilhar diretamente com os usuários de destino ou fazer o download você mesmo, para que possa compartilhar o instalador de outra forma.
 
 Observe que, quando um usuário-alvo executar o instalador pré-configurado, ele mostrará primeiro uma caixa de diálogo de confirmação que explica o que o instalador fará. Essa caixa de diálogo inclui o nome do controlador que criou o instalador. Essa etapa de confirmação foi projetada para evitar abusos. Um modo totalmente silencioso estará disponível para clientes corporativos.
 
