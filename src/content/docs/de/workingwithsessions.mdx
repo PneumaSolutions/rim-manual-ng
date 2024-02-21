@@ -5,12 +5,12 @@ title: Working within a Session
 import Windows from "~/components/platform/Windows.astro"
 import MacOS from "~/components/platform/MacOS.astro"
 
-## Dinge, die man wissen sollte, bevor man beginnt
+### Dinge, die man wissen sollte, bevor man anfängt
 
 Unmittelbar nach dem Aufbau der Verbindung werden einige Dinge passieren.
 <Windows>
 - Das Fernsteuerungsfenster für die Sitzung wird angezeigt.
-- Sie werden über den Status des Bildschirmlesegeräts auf dem Client-Rechner informiert (oder über das Fehlen eines solchen).
+- Sie werden über den Status des Bildschirmlesegeräts auf dem Client-Rechner informiert (oder auch nicht).
 - Wenn auf dem Client ein Bildschirmlesegerät läuft, wird der Benutzer durch eine Toast-Benachrichtigung darüber informiert, dass die Fernsteuerungssitzung begonnen hat, und erhält eine sofortige Bestätigung, dass der Systemton des Benutzers funktioniert.
 - Bei einem Mac-Ziel wird der Assistent für die Tastatureinrichtung angezeigt, wenn zum ersten Mal eine Verbindung mit einem Controller hergestellt wurde.
     - Dies ist für die virtuelle Karabiner-Tastatur, die auf Tastaturbefehle hört, die von einem Controller gesendet werden.
@@ -32,11 +32,16 @@ Unmittelbar nach dem Aufbau der Verbindung werden einige Dinge passieren.
     - Klicken Sie auf das große RIM-Symbol in der oberen linken Ecke des Sitzungsfensters.
 </MacOS>
 
-## Fernsteuerungszone
-
+### Fernsteuerungszone
+<Windows>
 Jetzt können Sie alle Aufgaben auf der Client-Seite erledigen. Wenn Sie zur Steuerung Ihres eigenen Computers zurückkehren möchten, rufen Sie das RIM-Menü auf und wählen Sie die Option "Sitzung minimieren". Sie kehren zu Ihrem Rechner zurück, bis Sie wieder in das Sitzungsfenster wechseln oder die Tastenkombination Windows+Umschalt+Rücktaste erneut drücken. Wenn Sie wieder in das Sitzungsfenster wechseln, werden die Tastatur- und Mauseingaben wieder an den Client-Computer weitergeleitet.
+</Windows>
 
-Wenn Sie fertig sind, kann entweder der Controller oder der Zielcomputer das RIM-Menü aufrufen und die Option "Sitzung trennen" wählen. Wenn die Sitzung beendet ist, erhält der Zielcomputer eine Toast-Benachrichtigung, die ihn hierüber informiert.
+<MacOS>
+Jetzt können Sie alle Aufgaben ausführen, die auf der Client-Seite zu erledigen sind. Wenn Sie wieder zu Ihrem eigenen Rechner zurückkehren möchten, rufen Sie das RIM-Menü auf und wählen Sie die Option "Sitzung minimieren". Sie kehren zu Ihrem Rechner zurück, bis Sie wieder in das Sitzungsfenster wechseln oder erneut die Tastenkombination Wahl+Umschalt+Rücktaste drücken. Wenn Sie wieder in das Sitzungsfenster wechseln, werden die Tastatur- und Mauseingaben wieder auf den Client-Computer geleitet.
+</MacOS>
+
+Wenn Sie fertig sind, kann entweder der Controller oder das Ziel im RIM-Menü die Option "Sitzung trennen" wählen. Wenn die Sitzung beendet ist, erhält der Zielcomputer eine Toast-Benachrichtigung, die ihn hierüber informiert.
 
 ## Das RIM-Menü
 
@@ -68,9 +73,11 @@ Wie bereits erwähnt, führt Sie der Zugriff auf das RIM-Menü zurück zu Ihrem 
 - Sitzung trennen (**Windows+Umschalt+D**): Beendet die Sitzung.
     - Denken Sie daran, dass diese Option für beide Seiten der Sitzung verfügbar ist.
 </Windows> 
+  
+
 <MacOS>
-- RIM auf dem Ziel aktualisieren: Erzwingt eine Aktualisierung von RIM auf dem Zielcomputer
-    - Diese Option wird angezeigt, wenn auf dem Zielcomputer eine ältere Version von RIM läuft.
+- RIM auf dem Ziel aktualisieren: Erzwingt ein Update von RIM auf dem Zielcomputer
+    - Diese Option wird angezeigt, wenn auf dem Zielcomputer eine ältere Version von RIM ausgeführt wird.
 - RIM als Administrator auf dem Ziel neu installieren: Mit dieser Option wird versucht, RIM als Administrator auf einem Windows-Ziel neu zu installieren, wobei der Zielbenutzer die Anforderung der Administratorrechte selbst und/oder mit Hilfe der IT-Abteilung seines Unternehmens akzeptieren muss.
 - Sitzung minimieren (**Option+Umschalt+M**): bringt die Kontrolle zurück zu Ihrem Rechner, wie oben beschrieben
 - Datei zum Ziel übertragen: Wird angezeigt, wenn sich eine Datei in der Zwischenablage befindet.
@@ -94,11 +101,12 @@ Wie bereits erwähnt, führt Sie der Zugriff auf das RIM-Menü zurück zu Ihrem 
     - Installierte Pakete
 - Sitzung trennen (**Option+Umschalt+D**): Beendet die Sitzung.
     - Denken Sie daran, dass diese Option für beide Seiten der Sitzung verfügbar ist.
+
 </MacOS>
 
-## Dateiübertragungen
+### Dateiübertragungen
 
-RIM bietet einen einfachen Weg für die Übertragung von Dateien, unabhängig von der verwendeten Plattform.
+RIM bietet einen einfachen Weg zur Übertragung von Dateien, unabhängig von der verwendeten Plattform.
 1. Rufen Sie das RIM-Menü auf, und klicken Sie auf "Sitzung minimieren" Die Steuerung wird zurück auf Ihren Computer geleitet.
 1. Wählen Sie mit Ihrem Dateimanager die Datei(en) und/oder den/die Ordner aus, die Sie übertragen möchten.
 1. Kopieren Sie die ausgewählten Inhalte wie gewohnt in die Zwischenablage. Sie erhalten eine Benachrichtigung, dass eine Datei zum Übertragen bereit ist. Sie haben zwei Möglichkeiten.
@@ -111,9 +119,9 @@ RIM bietet einen einfachen Weg für die Übertragung von Dateien, unabhängig vo
 
 Beachten Sie, dass die Übertragungszeit ausschließlich von der Größe des zu übertragenden Inhalts und von der Geschwindigkeit Ihres Netzwerks abhängt.
 
-## Modul für Fernzugriff
+### Modul für Fernzugriff
 
-Ganz gleich, ob Sie einen Benutzer unterstützen, der kein Bildschirmlesegerät verwendet, oder ob Sie ein Problem mit einem nicht funktionierenden Bildschirmlesegerät diagnostizieren, RIM ist voll und ganz darauf vorbereitet, Ihnen zu Hilfe zu kommen.
+Ganz gleich, ob Sie einen Benutzer unterstützen, der kein Bildschirmlesegerät verwendet, oder ob Sie ein Problem mit einem nicht funktionierenden Bildschirmlesegerät diagnostizieren, RIM ist bestens darauf vorbereitet, Ihnen zu helfen.
 <Windows>
 Das Fernzugriffsmodul besteht aus zwei Komponenten:
 - Einem Addon für den NVDA-Bildschirmleser, das es dem Bildschirmleser ermöglicht, Ausgaben vom entfernten Computer zu empfangen
@@ -133,11 +141,13 @@ Das Fernzugriffsmodul ist eine spezielle Konfiguration, die auf dem Ziel-Mac auf
 
 Ganz gleich, ob Sie Systemaktualisierungen installieren oder einen Systemstillstand beheben möchten, RIM unterstützt Sie während des Neustartvorgangs. Wenn Sie die Option "Neustart und Neuverbindung" aus dem RIM-Menü auswählen, können Sie entweder einen ordnungsgemäßen Neustart oder einen Notfall-Neustart durchführen, je nachdem, in welchem Zustand sich der Computer befindet. Während der Computer neu startet, werden Sie von RIM darüber informiert, dass die Verbindung wiederhergestellt werden soll.
 Wenn der Computer durch eine Softwareinstallation oder manuell neu gestartet wird, werden Sie gefragt, ob Sie die Verbindung wiederherstellen möchten. Außerdem ist zu beachten, dass Mac targets in beiden Fällen die Verbindung nur wiederherstellt, wenn sich der Benutzer anmeldet. Dies ist darauf zurückzuführen, dass RIM aufgrund von Plattformbeschränkungen, insbesondere der FileVault-Festplattenverschlüsselung, nicht automatisch auf dem Anmeldebildschirm starten kann.
-## Unbeaufsichtigter oder abgefragter Zugriff
 
-Mit RIM können Sie als Kontrolleur Rechner für den unbeaufsichtigten oder angeforderten Zugriff konfigurieren. So können Sie Fernhilfe leisten, ohne dass der Benutzer RIM starten, ein Schlüsselwort eingeben oder sich überhaupt in der Nähe des Computers aufhalten muss. Dies ist nützlich, wenn Sie als Systemadministrator routinemäßige Wartungsarbeiten an Computern in Ihrer Arbeitsgruppe durchführen oder für Kunden, denen Sie regelmäßig Support bieten. Vielleicht möchten Sie auch den unbeaufsichtigten Zugriff auf Ihren Heimcomputer erlauben, wenn Sie von einem anderen Ort aus darauf zugreifen müssen.
+### Unbeaufsichtigter oder abgefragter Zugriff
+
+RIM ermöglicht es Ihnen als Controller, Rechner für den unbeaufsichtigten oder angeforderten Zugriff zu konfigurieren. Dadurch können Sie Fernhilfe leisten, ohne dass der Benutzer RIM starten, ein Schlüsselwort eingeben oder sich überhaupt in der Nähe des Computers aufhalten muss. Dies ist nützlich, wenn Sie als Systemadministrator routinemäßige Wartungsarbeiten an Computern in Ihrer Arbeitsgruppe durchführen oder für Kunden, denen Sie regelmäßig Support bieten. Vielleicht möchten Sie auch den unbeaufsichtigten Zugriff auf Ihren Heimcomputer erlauben, wenn Sie von einem anderen Ort aus darauf zugreifen müssen.
 Es gibt mehrere Möglichkeiten, Rechner für den unbeaufsichtigten Zugriff zu konfigurieren.
-### Während einer interaktiven Sitzung
+
+#### Während einer interaktiven Sitzung
 
 1. Rufen Sie das RIM-Menü auf.
 1. Wählen Sie "Unbeaufsichtigten oder angeforderten Zugriff anfordern"
@@ -147,30 +157,33 @@ Es gibt mehrere Möglichkeiten, Rechner für den unbeaufsichtigten Zugriff zu ko
 1. Sie werden aufgefordert, diesem Rechner einen Namen zu geben. Geben Sie einen persönlichen Namen für den Computer ein, oder, falls zutreffend, die Computer-ID, wie sie in Ihrer Arbeitsgruppe erscheint.
 1. Drücken Sie die Eingabetaste.
 1. Auf dem Client-Computer wird ein Dialogfeld angezeigt, in dem der Benutzer gefragt wird, ob er damit einverstanden ist, dass sein Computer für den von Ihnen gewünschten Zugriff eingerichtet wird. Wenn er dies bejaht, erhalten Sie eine Meldung, dass der Zugriff genehmigt wurde.  
-#### Hinweis für persönliche unbeaufsichtigte Kontoinhaber
+
+##### Hinweis für persönliche unbeaufsichtigte Kontoinhaber
 
 Wenn Sie alle Ihrem Konto zugewiesenen Rechner-Slots verwendet haben, wird RIM die Anfrage nicht ausführen. In diesem Fall haben Sie zwei Möglichkeiten, die beide über das RIM Dashboard möglich sind:
 1. Melden Sie eines Ihrer Geräte ab, um einen Steckplatz freizugeben.
 1. Erweitern Sie Ihr Abonnement um mehr Slots.
 
-### Registrierung eines Automaten in Ihrem RIM-Konto
+#### Registrierung eines Automaten in Ihrem RIM-Konto
 
-Wenn Sie einen Ihrer eigenen Rechner für den unbeaufsichtigten Zugang registrieren möchten, können Sie dies tun, ohne eine interaktive Sitzung mit dem Rechner zu starten. 
+Wenn Sie einen Ihrer eigenen Rechner für den unbeaufsichtigten Zugriff registrieren möchten, können Sie dies tun, ohne eine interaktive Sitzung mit dem Rechner zu starten. 
 1. Starten Sie RIM im Empfangshilfemodus.
 1. Klicken Sie auf die Schaltfläche "Diesen Rechner zu Ihrem RIM-Konto hinzufügen".
 1. Geben Sie Ihre E-Mail-Adresse ein und klicken Sie dann auf "Weiter".
-1. Warten Sie, bis Sie den zweistufigen Anmeldecode erhalten, geben Sie ihn ein, und Sie sollten angemeldet sein.
+1. Warten Sie, bis Sie den zweistufigen Anmeldecode erhalten, geben Sie ihn ein, und Sie sollten nun angemeldet sein.
 1. Sie werden gefragt, welche Art von Zugang Sie für diesen Rechner konfigurieren möchten. Ihre Optionen sind:
     1. Unbeaufsichtigt: Ermöglicht das Starten von Sitzungen ohne jegliches Eingreifen des Endbenutzers.
     1. Aufgefordert: Bei dieser Konfiguration wird dem Benutzer eine Eingabeaufforderung angezeigt, die ihn darüber informiert, dass Sie eine Verbindung zu seinem Rechner herstellen.
 1. Geben Sie dem Rechner einen Namen und aktivieren Sie dann die Schaltfläche "Rechner hinzufügen".
-1. Das Gerät wird in Ihrem Konto registriert, so dass alle Controller, die in Ihrem RIM-Konto angemeldet sind, eine Verbindung zu diesem Gerät herstellen können.
-#### Hinweis für persönliche unbeaufsichtigte Kontoinhaber
+1. Das Gerät wird in Ihrem Konto registriert, so dass alle Controller, die in Ihrem RIM-Konto angemeldet sind, sich mit diesem Gerät verbinden können.
 
-Wenn Sie alle Ihrem Konto zugewiesenen Rechner-Slots verwendet haben, führt RIM die Anfrage nicht aus. In dieser Situation haben Sie zwei Möglichkeiten, die beide über das RIM-Dashboard möglich sind:
+##### Hinweis für persönliche unbeaufsichtigte Kontoinhaber
+
+Wenn Sie alle Ihrem Konto zugewiesenen Rechner-Slots verwendet haben, wird RIM die Anfrage nicht ausführen. In dieser Situation haben Sie zwei Möglichkeiten, die beide über das RIM-Dashboard möglich sind:
 1. Melden Sie eines Ihrer Geräte ab, um einen Steckplatz freizugeben.
 1. Erweitern Sie Ihr Abonnement um mehr Slots.
-### Verbinden
+
+#### Verbindung herstellen
 
 Nachdem wir den Rechner für den unbeaufsichtigten Zugriff registriert haben, können wir nun eine Sitzung starten.
 1. Starten Sie RIM im Controller-Modus.
@@ -181,7 +194,7 @@ Wenn der Zielcomputer für den Zugriff mit Eingabeaufforderung konfiguriert ist,
 
 Bitte beachten Sie: Bei völlig unbeaufsichtigten Sitzungen muss der Zielbenutzer die Sprachkonversation genehmigen. Bei angeforderten Sitzungen ist dies jedoch nicht erforderlich.
 
-### Erstellen einer Verknüpfung für eine unbeaufsichtigte Sitzung
+#### Erstellen einer Verknüpfung für eine unbeaufsichtigte Sitzung
 
 Für zusätzlichen Komfort können Sie Desktop-Verknüpfungen erstellen, mit denen Sie automatisch unbeaufsichtigte Sitzungen starten können. Um dies zu tun:
 1. Rufen Sie die Liste der unbeaufsichtigten Computer auf, und wählen Sie den Computer aus, für den Sie eine Verknüpfung erstellen möchten.
@@ -190,14 +203,15 @@ Für zusätzlichen Komfort können Sie Desktop-Verknüpfungen erstellen, mit den
 
 Wenn Sie nun diese Verknüpfung aktivieren, landen Sie entweder automatisch in der Fernsitzung oder senden eine Aufforderung an den Rechner des Benutzers, die dieser akzeptieren kann.
 <Windows>
-#### Weitere Möglichkeiten, unbeaufsichtigte Sitzungsverknüpfungen zu verwenden
+##### Weitere Möglichkeiten zur Verwendung von Verknüpfungen für unbeaufsichtigte Sitzungen
+
 Tastenkombinationen für unbeaufsichtigte Sitzungen können, wie alle anderen Tastenkombinationen auch, mit globalen Hotkeys verknüpft werden. Dies kann äußerst nützlich sein, wenn Sie als Wartungstechniker mehrere Computer in einer Arbeitsgruppe verwalten. Wenn Ihre Arbeitsgruppe beispielsweise aus 6 Computern besteht, an denen Sie routinemäßige Wartungsarbeiten durchführen, können Sie Alt+Steuerung+1 bis 6 als Tastenkombinationen für jeden einzelnen Computer konfigurieren. Dies sollte Ihren Arbeitsablauf erheblich beschleunigen.
 Darüber hinaus können Sie eine unbeaufsichtigte Sitzung über die Ausführungsbox aufrufen, wenn Sie die Verknüpfung in Ihr Benutzerverzeichnis kopieren. Sobald Sie die Verknüpfung kopiert haben, können Sie eine unbeaufsichtigte Sitzung starten, indem Sie Ihren-Sitzungsnamen.url in das Ausführungsfenster eingeben.
 </Windows>
 
-### Entzug des unbeaufsichtigten Zugriffs
+#### Unbeaufsichtigten Zugriff widerrufen
 
-Wenn Sie nicht mehr möchten, dass Ihr Rechner unbeaufsichtigt kontrolliert wird, können Sie den Zugriff des Controllers widerrufen. Dazu müssen Sie sich nicht in einer Sitzung befinden.
+Wenn Sie nicht mehr wollen, dass Ihr Rechner unbeaufsichtigt kontrolliert wird, können Sie den Zugriff des Controllers widerrufen. Dazu müssen Sie sich nicht in einer Sitzung befinden.
 <Windows>
 1. Rufen Sie das Symbol für den Remote Incident Manager in Ihrer Taskleiste auf.
     1. Wenn Sie die Tastatur verwenden, drücken Sie die Tastenkombination Windows+b, dann die Leertaste und dann den Pfeil nach links oder rechts, bis Sie das Symbol finden.
@@ -216,7 +230,7 @@ Wenn Sie nicht mehr möchten, dass Ihr Rechner unbeaufsichtigt kontrolliert wird
 </MacOS>
 Das war's! Der für die Verarbeitung Verantwortliche erhält eine Meldung, dass dieser Rechner nicht mehr für den unbeaufsichtigten Zugang zur Verfügung steht. Sollte er den unbeaufsichtigten Zugang erneut benötigen, kann er das Verfahren zur Beantragung der Genehmigung für den unbeaufsichtigten Zugang wie oben beschrieben erneut einleiten.
 <Windows>
-## Schlüsselbefehl-Referenz
+### Referenz der Tastenbefehle
 
 | Aktion | Befehl |
 | ---------------------------------------- | ------------------- |
@@ -226,11 +240,11 @@ Das war's! Der für die Verarbeitung Verantwortliche erhält eine Meldung, dass 
 | Sitzung trennen (Controller oder Ziel) | Windows+Umschalt+D |
 </Windows>
 <MacOS>
-## Tastenbefehlsreferenz
+### Tastenbefehl-Referenz
 
     Aktion | Befehl
     --- | ---
-    Zugriff auf das RIM-Menü | Option+Umschalt+Rücktaste
+    Zugriff auf das RIM-Menü | Option+Umschalt+Rückwärts-Taste
     Sitzung minimieren | Option+Umschalt+M
     Sitzung umkehren | Wahl+Umschalt+F
     Sitzung trennen (Controller oder Ziel) | Wahl+Umschalt+D

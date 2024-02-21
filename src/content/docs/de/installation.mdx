@@ -7,19 +7,20 @@ import MacOS from "~/components/platform/MacOS.astro"
 
 Wie Sie Remote Incident Manager erwerben und installieren, hängt von Ihrem Anwendungsfall und Ihrer Konfiguration ab, aber in jedem Fall ist der Prozess recht einfach.
 <Windows>
-## Typische Installation für Einzelpersonen
+### Typische Installation für Einzelpersonen
 Es gibt nur ein einziges Installationspaket, das Sie verwenden müssen, unabhängig davon, ob Sie Hilfe anbieten oder empfangen.
 1. [Remote Incident Manager herunterladen](https://getrim.app/win)
 1. Führen Sie die heruntergeladene Datei aus.
 1. Wenn Sie die Benutzerkontensteuerung aktiviert haben, drücken Sie Alt+Y, um die Installation zu bestätigen.
 1. Sobald die Datei gestartet wird, beginnt die Installation automatisch. Es gibt keine weiteren Schaltflächen, um die Sie sich kümmern müssen. Lehnen Sie sich einfach zurück, entspannen Sie sich und lassen Sie das Programm seine Arbeit machen. Innerhalb weniger Sekunden ist das Programm installiert und wird automatisch gestartet.  
-Das war's schon! Es wird automatisch eine Desktop-Verknüpfung erstellt, die Ihnen bei späteren Starts von RIM hilft. Außerdem richtet RIM einen globalen Mehrzweck-Hotkey ein (Windows+Umschalt+Rücktaste), der unter anderem das Programm automatisch startet, egal wo Sie sich befinden.
-## Unbeaufsichtigter oder aufgeforderter Zugriff Installer
-Wenn die Person, die Sie unterstützt, Ihnen ein benutzerdefiniertes Installationsprogramm zur Verfügung gestellt hat, werden Sie beim Starten des Installationsprogramms darauf hingewiesen. Der Grund dafür ist, dass dieses Installationsprogramm RIM automatisch für den so genannten unbeaufsichtigten oder angeforderten Zugriff konfiguriert. Dies ermöglicht es der Person, die Ihnen hilft, eine Sitzung mit Ihrem Computer zu starten, ohne dass Sie ein Schlüsselwort eingeben müssen. Wir werden diese Arten von Sitzungen später in diesem Handbuch ausführlich behandeln.
+    1. Auf dem Willkommensbildschirm können Sie auswählen, wie Sie RIM hauptsächlich verwenden möchten. Wenn Sie nur Support erhalten möchten, klicken Sie auf die Schaltfläche "Hilfe jetzt erhalten". Wenn Sie vorhaben, Unterstützung zu leisten, klicken Sie auf die Schaltfläche "Jetzt Hilfe bereitstellen". Diese Entscheidung ist nicht endgültig, da der Modus jederzeit innerhalb der Anwendung geändert werden kann.
+Das war's schon! Es wird automatisch eine Desktop-Verknüpfung erstellt, die bei späteren Starts von RIM hilfreich ist. Außerdem richtet RIM einen globalen Mehrzweck-Hotkey ein (Windows+Umschalt+Rücktaste), mit dem das Programm unter anderem automatisch gestartet wird, egal wo Sie sich gerade befinden.
+### Unbeaufsichtigter oder aufgeforderter Zugriff Installer
+Wenn Ihnen die Hilfsperson ein benutzerdefiniertes Installationsprogramm zur Verfügung gestellt hat, werden Sie beim Starten des Programms darauf hingewiesen. Der Grund dafür ist, dass dieses Installationsprogramm RIM automatisch für den so genannten unbeaufsichtigten oder angeforderten Zugriff konfiguriert. Dies ermöglicht es der Person, die Ihnen hilft, eine Sitzung mit Ihrem Computer zu starten, ohne dass Sie ein Schlüsselwort eingeben müssen. Wir werden diese Arten von Sitzungen später in diesem Handbuch ausführlich behandeln.
 
-## Installation ohne administrative Rechte
+### Installieren ohne administrative Berechtigungen
 
-Das Installationsprogramm von Remote Incident Manager versucht immer, Administratorrechte zu erhalten. In Umgebungen, in denen keine Administratorrechte erlangt werden können, wird die Installation von RIM im Rahmen des aktuellen Benutzerkontos und nicht auf Systemebene durchgeführt.
+Das Installationsprogramm des Remote Incident Managers versucht immer, Administratorrechte zu erhalten. In Umgebungen, in denen keine Administratorrechte erlangt werden können, wird die Installation von RIM im Rahmen des aktuellen Benutzerkontos und nicht auf Systemebene durchgeführt.
 
 Die Ausführung ohne Administratorrechte führt zu keinerlei Einschränkungen auf der Controllerseite von RIM. Es gibt jedoch Einschränkungen auf dem Zielcomputer, die Sie beachten müssen.
 
@@ -31,45 +32,64 @@ Die Ausführung ohne Administratorrechte führt zu keinerlei Einschränkungen au
 
 Als Controller können Sie während einer Sitzung eine Neuinstallation von RIM mit Admin-Rechten versuchen.
 
-## Stille Installation
+### Stille Installation
+
 Sie sollten dies tun, wenn Sie RIM auf mehreren Rechnern einsetzen. Verwenden Sie einfach den Befehlszeilenparameter **/S** in Ihrem Verteilungsskript. Beachten Sie die Groß- und Kleinschreibung, daher ist ein großes S erforderlich.
-## Zusätzliche Überlegungen für Windows Server
+
+### Zusätzliche Überlegungen für Windows Server
+
 Um RIM auf Ihrem Windows Server zu installieren, verbinden Sie sich über RDP mit dem Server. Um eine möglichst stabile Verbindung zu erhalten, empfehlen wir die Verwendung der Remote Desktop App aus dem Microsoft Store.
-## Beschaffung von Ton und Ausführung von Narrator
-Um Ton zu erhalten, gehen Sie nach der Verbindung wie folgt vor:
+
+#### Beschaffung von Sound und Ausführung von Narrator
+
+Bei Windows Server-Distributionen vor 2022 müssen Sie den Ton manuell aktivieren, bevor Sie Narrator starten können. Gehen Sie nach dem Herstellen der Verbindung wie folgt vor:
 1. Drücken Sie die Windows-Taste+r.
 1. Geben Sie cmd ein und drücken Sie die Eingabetaste. Warten Sie etwa zehn Sekunden.
 1. Geben Sie ein:  
 **net start audiosrv**  
 und drücken Sie die Eingabetaste.
-1. Drücken Sie nun STRG+Windows+Enter, um Narrator zu aktivieren. Wenn alles richtig funktioniert hat, sollten Sie Sprache erhalten.  
+
+Drücken Sie auf jeden Fall STRG+Windows+Enter, um Narrator zu aktivieren. Wenn alles richtig funktioniert hat, sollten Sie Sprache erhalten.  
 Sie können nun den Installationsvorgang wie oben beschrieben fortsetzen.
-Bitte beachten Sie, dass Sie ein virtuelles Tonausgabegerät auf Ihrem Server installieren müssen, wenn Sie Ton für spätere Verbindungen über RIM benötigen. Die kostenlose Version von [Virtual Audio Cable] (http://virtualaudiocable.org/download/software/VACSetup.exe) sollte ausreichen.
+Bitte beachten Sie, dass Sie auf Windows Server-Distributionen vor 2022 ein virtuelles Tonausgabegerät auf Ihrem Server installieren müssen, wenn Sie Ton für nachfolgende Verbindungen über RIM benötigen. Die kostenlose Version von [Virtual Audio Cable] (http://virtualaudiocable.org/download/software/VACSetup.exe) sollte ausreichen.
 </Windows>
 <MacOS>
-## Typische Installation für Einzelpersonen
-Es gibt nur ein Installationspaket, das Sie verwenden müssen, unabhängig davon, ob Sie Hilfe anbieten oder empfangen.
+### Typische Installation für Einzelpersonen
+
+Es gibt nur ein Installationspaket, das Sie verwenden müssen, unabhängig davon, ob Sie Hilfe anbieten oder erhalten.
 1. [Remote Incident Manager herunterladen](https://getrim.app/mac)
 1. Gehen Sie über den Finder (Option+Befehl+L) zu Ihrem Download-Ordner. Suchen Sie die heruntergeladene .pkg-Datei und öffnen Sie sie mit Befehl+O.
 1. Ein Installationsassistent wird angezeigt. Befolgen Sie die Anweisungen auf dem Bildschirm.  
 Jetzt können Sie Remote Incident Manager zum ersten Mal ausführen! Sie können das Programm von Ihrem Anwendungsordner aus starten, den Sie über Befehl+Umschalt+A im Finder erreichen. Zusätzlich richtet RIM einen globalen Mehrzweck-Hotkey ein (Option+Umschalt+Rückwärts), der unter anderem das Programm automatisch startet, egal wo Sie sich befinden.
-## Berechtigungen
-Aufgrund des vorsichtigen Verhaltens von macOS, wenn Sie zum ersten Mal mit Anwendungen dieser Art zu tun haben, müssen Sie dem Remote Incident Manager beim ersten Start einige Berechtigungen erteilen.
-### Karabiner HID-Treiber
-Dies ist der Treiber, der die Eingaben verarbeitet, die von RIM empfangen werden. Da es sich um eine Systemerweiterung handelt, müssen Sie diese manuell genehmigen. Rim öffnet einen Systemdialog, der Sie zum Abschnitt Datenschutz und Sicherheit der Systemeinstellungen führt. Blättern Sie dann, bis Sie die Schaltfläche Zulassen finden. Wenn Sie darauf klicken, werden Sie aufgefordert, Ihr Passwort oder Ihre Touch-ID einzugeben. Danach werden Sie möglicherweise darüber informiert, dass Sie neu starten müssen, um Karabiner-Elemente vollständig zu aktivieren. Ob Sie jetzt oder später neu starten, bleibt Ihnen überlassen. Sollten Sie sich jedoch dafür entscheiden, nicht neu zu starten, bis alle Berechtigungen genehmigt wurden, verlassen Sie die Systemeinstellungen und kehren Sie zu RIM zurück.
-### Empfang von Eingaben
+
+### Berechtigungen
+
+Aufgrund des vorsichtigen Verhaltens von macOS beim erstmaligen Umgang mit Programmen dieser Art müssen Sie dem Remote Incident Manager beim ersten Start einige Berechtigungen erteilen.
+
+#### Karabiner HID-Treiber
+
+Dies ist der Treiber, der die Eingaben verarbeitet, die von RIM empfangen werden. Da es sich um eine Systemerweiterung handelt, müssen Sie diese manuell genehmigen. Rim zeigt einen Systemdialog an, der Sie zum Abschnitt Datenschutz und Sicherheit der Systemeinstellungen führt. Blättern Sie dann, bis Sie die Schaltfläche Zulassen finden. Wenn Sie darauf klicken, werden Sie aufgefordert, Ihr Passwort oder Ihre Touch-ID einzugeben. Danach werden Sie möglicherweise darüber informiert, dass Sie neu starten müssen, um Karabiner-Elemente vollständig zu aktivieren. Ob Sie jetzt oder später neu starten, bleibt Ihnen überlassen. Sollten Sie sich jedoch dafür entscheiden, nicht neu zu starten, bis alle Berechtigungen genehmigt wurden, verlassen Sie die Systemeinstellungen und gehen Sie zurück zu RIM.
+
+#### Empfang von Eingaben
+
 RIM benötigt die Erlaubnis, alle Eingaben zu empfangen, die über eine Fernverbindung an es gerichtet werden.  
-Klicken Sie im RIM-Fenster auf "Weiter". Daraufhin wird ein Systemdialog angezeigt, in dem die Berechtigungen für den Eingabedienst angefordert werden. Wenn VoiceOver diesen nicht sofort fokussiert, drücken Sie zweimal schnell **VO+F1**. Gehe dann mit dem Pfeil nach unten auf "Systemdialoge", drücke den Pfeil nach rechts und dann nach unten auf die Eingabeaufforderung. Wenn du darauf die Eingabetaste drückst, öffnet sich das Warnfenster, dem du zu den Systemeinstellungen folgen und in der Liste der Anwendungen das Kästchen Remote Incident Manager markieren solltest.
-### Bildschirmausgabe erfassen
-Die nächste Berechtigungsanfrage von RIM betrifft die Erfassung der Bildschirmausgabe, die über die Remote-Verbindung weitergeleitet wird. Die Vorgehensweise ist ähnlich wie bei der vorherigen Prozedur.
-### Benachrichtigungen
-Die letzte Anfrage von RIM betrifft die Benachrichtigungen. RIM wird Sie benachrichtigen, wenn eine Sitzung beginnt und endet. Das Verfahren zur Erteilung dieser Berechtigung ähnelt dem vorherigen Verfahren.
+Klicken Sie im RIM-Fenster auf "Weiter", woraufhin ein Systemdialog erscheint, der die Berechtigungen für den Eingabedienst anfordert. Wenn VoiceOver diesen nicht sofort fokussiert, drücken Sie zweimal schnell **VO+F1**. Gehe dann mit dem Pfeil nach unten auf "Systemdialoge", drücke den Pfeil nach rechts und dann nach unten auf die Eingabeaufforderung. Wenn Sie darauf die Eingabetaste drücken, öffnet sich das Warnfenster, in dem Sie zu den Systemeinstellungen gehen und das Kästchen Remote Incident Manager in der Liste der Anwendungen markieren müssen.
+
+#### Bildschirmausgabe aufzeichnen
+
+Die nächste Berechtigungsanfrage von RIM bezieht sich auf die Erfassung der Bildschirmausgabe, die über die Fernverbindung weitergeleitet wird. Das Verfahren hierfür ist ähnlich wie das vorherige Verfahren.
+
+#### Benachrichtigungen
+
+Die letzte Genehmigungsanfrage von RIM betrifft Benachrichtigungen. RIM wird Sie benachrichtigen, wenn eine Sitzung beginnt und endet. Das Verfahren zur Erteilung dieser Berechtigung ist ähnlich wie das vorherige Verfahren.
+
 ### Willkommensbildschirm!
-Nachdem alle Berechtigungen genehmigt wurden, erscheint der Willkommensbildschirm. Wenn Sie später einen Neustart durchführen möchten, wäre jetzt ein guter Zeitpunkt dafür. Zu diesem Zeitpunkt ist RIM bereit, Verbindungen zu initiieren oder zu empfangen.
 
-# RIM deinstallieren
+Nachdem alle Berechtigungen genehmigt worden sind, erscheint der Willkommensbildschirm. Wenn Sie später einen Neustart durchführen möchten, ist jetzt ein guter Zeitpunkt dafür. Zu diesem Zeitpunkt ist RIM bereit, Verbindungen zu initiieren oder zu empfangen.
 
-Sollten Sie bei der Installation von RIM auf Probleme stoßen, können Sie die Anwendung neu installieren. Aufgrund des komplexen Charakters der RIM-Distribution für Mac OS wird die Anwendung durch einfaches Verschieben in den Papierkorb nicht deinstalliert, so dass Ihr Problem möglicherweise nicht vollständig behoben wird.
+## RIM deinstallieren
+
+Sollten Sie bei der Installation von RIM auf Probleme stoßen, können Sie die Anwendung neu installieren. Aufgrund des komplexen Charakters der RIM-Distribution für Mac OS wird die App durch einfaches Verschieben in den Papierkorb nicht deinstalliert und kann daher Ihr Problem nicht vollständig lösen.
 
 RIM bietet eine einfache Methode zur vollständigen Deinstallation an. Wenn Sie im Hauptfenster auf die Schaltfläche "Info" klicken, sehen Sie in der daraufhin angezeigten Info-Anzeige eine Schaltfläche zum Deinstallieren. Wenn Sie auf diese Schaltfläche klicken, wird ein Bestätigungsdialog angezeigt, nach dem Sie aufgefordert werden, Ihr Kennwort oder Ihre Touch ID einzugeben, um mit der Deinstallation fortzufahren. Sobald die Deinstallation abgeschlossen ist, erhalten Sie eine Bestätigungsmeldung.
 </MacOS>

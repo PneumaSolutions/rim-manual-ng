@@ -33,7 +33,7 @@ if (pageIndex < 0) {
   </head>
   <body>
     <div>
-      <h2>Remote Incident Manager (RIM)</h2>
+      <h1>Remote Incident Manager (RIM)</h1>
       <PlatformSwitcher lang={lang} platform={platform} slug={slug} />
       <LanguageSwitcher origLang={lang} platform={platform} slug={slug} />
       <form role="search" action={`/${lang}/${platform}/search/`} method="get">
@@ -83,7 +83,7 @@ if (pageIndex < 0) {
       <div class="col ps-md-2 pt-2">
         <main>
           <div class="page-header pt-3">
-            <h1>{data.title}</h1>
+            <h2>{data.title}</h2>
           </div>
           <slot />
         </main>

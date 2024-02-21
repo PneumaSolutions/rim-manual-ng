@@ -5,7 +5,7 @@ title: Working within a Session
 import Windows from "~/components/platform/Windows.astro"
 import MacOS from "~/components/platform/MacOS.astro"
 
-## Saker att veta innan du börjar
+### Saker att veta innan du börjar
 
 Några saker kommer att hända omedelbart efter att anslutningen har upprättats.
 <Windows>
@@ -32,9 +32,14 @@ Några saker kommer att hända omedelbart efter att anslutningen har upprättats
     - Klicka på den stora RIM-ikonen i det övre vänstra hörnet av sessionsfönstret.
 </MacOS>
 
-## Fjärrkontrollzon
-
+### Fjärrkontrollzon
+<Windows>
 Nu är du redo att utföra de uppgifter som behöver göras på klientsidan. Om du behöver återgå till att styra din egen maskin öppnar du RIM-menyn och väljer sedan alternativet "Minimera sessionen". Du kommer att återgå till din maskin tills du växlar tillbaka till sessionsfönstret eller trycker på Windows+Shift+Backspace igen. När du går tillbaka till sessionsfönstret kommer tangentbords- och musinmatningar återigen att riktas till klientdatorn.
+</Windows>
+
+<MacOS>
+Nu är du redo att utföra de uppgifter som behöver göras på klientsidan. Om du behöver återgå till att styra din egen dator öppnar du RIM-menyn och väljer sedan alternativet "Minimera sessionen". Du kommer att återgå till din maskin tills du växlar tillbaka till sessionsfönstret eller trycker på Option+Shift+Backspace igen. När du går tillbaka till sessionsfönstret kommer tangentbords- och musinmatningar återigen att dirigeras till klientdatorn.
+</MacOS>
 
 När du är klar kan antingen styrenheten eller målet gå till RIM-menyn och välja alternativet "Koppla bort sessionen". När sessionen avslutas får måldatorn ett toastmeddelande som informerar dem om detta.
 
@@ -69,6 +74,7 @@ Som nämnts tidigare leder åtkomst till RIM-menyn dig tillbaka till din maskin.
     - Kom ihåg att detta alternativ är tillgängligt för båda sidor av sessionen.
 </Windows> 
   
+
 <MacOS>
 - Uppdatera RIM på måldatorn: Tvingar fram en uppdatering av RIM på måldatorn
     - Detta alternativ visar om målets dator kör en äldre version av RIM.
@@ -95,11 +101,12 @@ Som nämnts tidigare leder åtkomst till RIM-menyn dig tillbaka till din maskin.
     - Installerade paket
 - Koppla bort sessionen (**Alternativ+Skift+D**): Avslutar sessionen.
     - Kom ihåg att detta alternativ är tillgängligt för båda sidor av sessionen.
+
 </MacOS>
 
-## Filöverföringar
+### Filöverföringar
 
-RIM tillhandahåller ett enkelt sätt att överföra filer, oavsett vilken plattform som används.
+RIM ger en enkel möjlighet att överföra filer, oavsett vilken plattform som används.
 1. Öppna RIM-menyn och klicka på "Minimera session" Kontrollen dirigeras tillbaka till din dator.
 1. Välj den eller de filer och/eller mappar som du vill överföra med hjälp av din filhanterare.
 1. Kopiera det valda innehållet till Urklipp på vanligt sätt. Du får ett meddelande om att en fil är redo att överföras. Du har två alternativ.
@@ -112,9 +119,9 @@ RIM tillhandahåller ett enkelt sätt att överföra filer, oavsett vilken platt
 
 Observera att överföringstiden beror helt på storleken på det innehåll som skickas samt din nätverkshastighet.
 
-## Modul för fjärråtkomst
+### Modul för fjärråtkomst
 
-Oavsett om du hjälper en användare som inte använder en skärmläsare, eller om du diagnostiserar ett problem med en skärmläsare som inte fungerar, är RIM helt förberedd på att komma till din hjälp.
+Oavsett om du hjälper en användare som inte använder en skärmläsare, eller om du diagnostiserar ett problem med en skärmläsare som inte fungerar, är RIM helt förberedd på att hjälpa dig.
 <Windows>
 Modulen för fjärråtkomst består av två komponenter:
 - Ett tillägg för NVDA-skärmläsaren som gör att skärmläsaren kan ta emot utdata från fjärrdatorn
@@ -134,11 +141,13 @@ Fjärrtillgänglighetsmodulen är en specialkonfiguration som startas på mål-M
 
 Oavsett om du installerar systemuppdateringar eller arbetar dig ur ett systemhäng har RIM tagit hand om dig under omstartsprocessen. Om du väljer alternativet "Starta om och återanslut" i RIM-menyn kan du antingen utföra en elegant omstart eller en nödomstart, beroende på vilket tillstånd datorn befinner sig i. Medan datorn startas om kommer RIM att informera dig om att återanslutningsförsök görs.
 Observera att om datorn startas om genom en programvaruinstallation eller manuellt på vanligt sätt, kommer du att tillfrågas om du vill återansluta sessionen. Observera också att Mac targets i båda fallen endast kommer att återansluta när användaren loggar in. Detta beror på att RIM inte kan starta automatiskt på inloggningsskärmen på grund av plattformsbegränsningar, framför allt FileVault-diskkryptering.
-## Obevakad eller uppmanad åtkomst
 
-Med RIM kan du, som styrenhet, konfigurera maskiner för obevakad eller uppmanad åtkomst. Detta gör att du kan ge fjärrhjälp utan att användaren behöver starta RIM, ange ett nyckelord eller ens vara i närheten av datorn. Detta är användbart om du är systemadministratör och utför rutinunderhåll på datorer i din arbetsgrupp, eller för klienter som du ger support till regelbundet. Du kanske också vill tillåta obevakad åtkomst för din hemdator om du skulle behöva komma åt den från någon annanstans.
+### Obevakad eller uppmanad åtkomst
+
+Med RIM kan du, som styrenhet, konfigurera maskiner för obevakad eller uppmanad åtkomst. På så sätt kan du ge fjärrhjälp utan att användaren behöver starta RIM, ange ett nyckelord eller ens vara i närheten av datorn. Detta är användbart om du är systemadministratör och utför rutinunderhåll på datorer i din arbetsgrupp, eller för klienter som du ger support till regelbundet. Du kanske också vill tillåta obevakad åtkomst för din hemdator om du skulle behöva komma åt den från någon annanstans.
 Det finns några sätt att konfigurera maskiner för obevakad åtkomst.
-### Under en interaktiv session
+
+#### Under en interaktiv session
 
 1. Visa RIM-menyn.
 1. Välj "Begär obevakad eller uppmanad åtkomst."
@@ -148,13 +157,14 @@ Det finns några sätt att konfigurera maskiner för obevakad åtkomst.
 1. Du kommer att bli ombedd att ge maskinen ett namn. Ange ett personligt namn för maskinen, eller om tillämpligt, maskinens ID som det visas i din arbetsgrupp.
 1. Tryck på Enter.
 1. På klientdatorn visas en dialogruta där användaren tillfrågas om det är okej att datorn konfigureras för den åtkomst du har begärt. Om de svarar ja får du ett meddelande om att åtkomsten har godkänts.  
-#### Anmärkning för personliga kontoinnehavare utan uppsikt
+
+##### Anmärkning för personliga kontoinnehavare utan uppsikt
 
 Om du har använt alla maskinplatser som tilldelats ditt konto kommer RIM inte att utföra begäran. I den här situationen har du två alternativ, båda möjliga via RIM Dashboard:
 1. Avregistrera en av dina maskiner och frigör en plats.
 1. Uppgradera ditt abonnemang med fler platser.
 
-### Registrera en maskin till ditt RIM-konto
+#### Registrera en maskin till ditt RIM-konto
 
 Om du vill registrera en av dina egna maskiner för obevakad åtkomst kan du göra det utan att behöva starta en interaktiv session med maskinen. 
 1. Starta RIM i hjälpläge för mottagning.
@@ -166,14 +176,16 @@ Om du vill registrera en av dina egna maskiner för obevakad åtkomst kan du gö
     1. Prompt: I den här konfigurationen visas ett meddelande som informerar användaren om att du ansluter till dennes dator.
 1. Ge maskinen ett namn och aktivera sedan knappen "Lägg till maskin".
 1. Maskinen kommer att registreras på ditt konto, vilket gör att alla styrenheter som är inloggade på ditt RIM-konto kan ansluta till den här maskinen.
-#### Anmärkning för personliga kontoinnehavare utan uppsikt
+
+##### Anmärkning för personliga obevakade kontoinnehavare
 
 Om du har använt alla maskinplatser som tilldelats ditt konto kommer RIM inte att utföra begäran. I den här situationen har du två alternativ, båda möjliga via RIM Dashboard:
 1. Avregistrera en av dina maskiner och frigör en plats.
 1. Uppgradera ditt abonnemang med fler platser.
-### Att bli ansluten
 
-Nu när vi har registrerat maskinen för obevakad åtkomst kan du se hur vi startar en session.
+#### Ansluta sig
+
+Nu när vi har registrerat maskinen för obevakad åtkomst kan du se här hur vi startar en session.
 1. Starta RIM i kontrollantläge.
 1. Istället för att ange ett nyckelord, leta reda på och aktivera knappen "Välj en maskin".
 1. När du klickar på denna visas en lista med maskiner. Välj den du vill ha och tryck sedan på enter. Du kan också använda sökfältet för att begränsa listan till en specifik maskin.
@@ -182,7 +194,7 @@ Om målmaskinen är konfigurerad för automatisk åtkomst kommer slutanvändaren
 
 Observera: Röstkonversationer kräver att målanvändaren godkänner dem under helt obevakade sessioner. Detta krävs dock inte för sessioner med uppmaning.
 
-### Skapa en genväg för en obevakad session
+#### Skapa en genväg för en obevakad session
 
 För extra bekvämlighet kan du skapa skrivbordsgenvägar som gör att du automatiskt kan starta obevakade sessioner. För att göra detta:
 1. Öppna listan över obevakade datorer och välj den dator som du vill skapa en genväg för.
@@ -191,14 +203,15 @@ För extra bekvämlighet kan du skapa skrivbordsgenvägar som gör att du automa
 
 När du nu aktiverar denna genväg kommer du antingen automatiskt att landa i fjärrsessionen eller skicka en uppmaning till användarens maskin som de kan acceptera.
 <Windows>
-#### Fler sätt att använda obevakade sessionsgenvägar
+##### Fler sätt att använda genvägar för obevakade sessioner
+
 Obevakade sessionsgenvägar kan, precis som alla andra genvägar, ha globala snabbknappar associerade med dem. Detta kan vara mycket användbart om du är en underhållstekniker som hanterar flera datorer i en arbetsgrupp. Om din arbetsgrupp till exempel består av 6 datorer som du utför rutinunderhåll på, kan du konfigurera Alt+Control+1 till 6 som snabbtangenter för respektive maskin. Detta borde påskynda ditt arbetsflöde avsevärt.
 Dessutom kan du starta en obevakad session via runboxen om du kopierar genvägen till din användarkatalog. När du har kopierat genvägen kan du starta en obevakad session genom att skriva your-session-name.url i runboxen.
 </Windows>
 
-### Återkalla obevakad åtkomst
+#### Återkalla obevakad åtkomst
 
-Om du inte längre vill att din maskin ska styras obevakat kan du återkalla styrenhetens åtkomst. Du behöver inte vara i en session för att göra detta.
+Om du inte längre vill att din maskin ska styras utan uppsikt kan du återkalla styrenhetens åtkomst. Du behöver inte vara i en session för att göra detta.
 <Windows>
 1. Öppna ikonen Remote Incident Manager i systemfältet.
     1. Om du använder tangentbordet trycker du på Windows+b, sedan mellanslag, sedan vänster eller höger pil tills du hittar ikonen.
@@ -217,7 +230,7 @@ Om du inte längre vill att din maskin ska styras obevakat kan du återkalla sty
 </MacOS>
 Nu är det klart! Den registeransvarige kommer att få ett meddelande om att maskinen inte längre är tillgänglig för obevakad åtkomst. Om de behöver obevakad åtkomst igen kan de återuppta proceduren för att begära tillstånd för obevakad åtkomst enligt beskrivningen ovan.
 <Windows>
-## Referens för nyckelkommandon
+### Referens för nyckelkommandon
 
 | Åtgärd | Kommando |
 | ---------------------------------------- | ------------------- |
@@ -227,7 +240,7 @@ minimera sessionen | Windows+Shift+M | Flip sessionen | Windows+Shift+F
 | Koppla från session (styrenhet eller mål) Windows+Shift+D
 </Windows>
 <MacOS>
-## Hänvisning till tangentkommandon
+### Hänvisning till tangentkommandon
 
     Åtgärd | Kommando
     --- | ---

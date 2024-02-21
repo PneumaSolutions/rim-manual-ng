@@ -7,17 +7,18 @@ import MacOS from "~/components/platform/MacOS.astro"
 
 Le modalità di acquisizione e installazione di Remote Incident Manager dipendono dal caso d'uso e dalla configurazione, ma in ogni caso il processo è abbastanza semplice.
 <Windows>
-## Installazione tipica per i privati
+### Installazione tipica per i privati
 Esiste un solo pacchetto di installazione da utilizzare, sia che si offra o si riceva assistenza.
 1. [Scarica Remote Incident Manager](https://getrim.app/win)
 1. Eseguire il file scaricato.
 1. Se il controllo dell'account utente è abilitato, premere Alt+Y per approvare l'installazione.
 1. Una volta lanciato il file, l'installazione inizierà automaticamente. Non è necessario preoccuparsi dei pulsanti successivi. Basta sedersi, rilassarsi e lasciare che il programma faccia il suo dovere. In pochi secondi il programma sarà installato e si avvierà automaticamente.  
-È tutto qui! Verrà creato automaticamente un collegamento sul desktop per facilitare i successivi lanci di RIM. Inoltre, RIM imposta un tasto di scelta rapida globale multifunzionale (Windows+Maiusc+Backspace) che, tra le altre cose, avvia automaticamente il programma ovunque ci si trovi.
-## Installatore ad accesso non presidiato o richiesto
-Se la persona che fornisce l'assistenza ha fornito un programma di installazione personalizzato, l'utente verrà avvisato all'avvio del programma di installazione. Questo installatore configurerà automaticamente RIM per il cosiddetto accesso non presidiato o richiesto. In questo modo la persona che vi assiste potrà avviare una sessione con il vostro computer senza che dobbiate immettere una parola chiave. Questo tipo di sessioni verrà trattato in modo approfondito più avanti in questo manuale.
+    1. La schermata di benvenuto vi consentirà di scegliere la modalità di utilizzo principale di RIM. Se si intende solo ricevere assistenza, premere il pulsante "Ricevi assistenza ora". Se si intende fornire assistenza, fare clic sul pulsante "Fornisci assistenza ora". Questa decisione non è definitiva, poiché la modalità può sempre essere cambiata dall'interno dell'applicazione.
+Questo è tutto! Verrà creato automaticamente un collegamento sul desktop per facilitare i successivi lanci di RIM. Inoltre, RIM imposta un tasto di scelta rapida globale multiuso (Windows+Maiusc+Backspace) che, tra le altre cose, avvia automaticamente il programma da qualsiasi punto si trovi.
+### Installatore ad accesso non presidiato o richiesto
+Se la persona che fornisce l'assistenza ha fornito un programma di installazione personalizzato, l'utente verrà avvisato all'avvio del programma di installazione. Questo perché il programma di installazione configurerà automaticamente RIM per il cosiddetto accesso non presidiato o richiesto. In questo modo la persona che vi assiste potrà avviare una sessione con il vostro computer senza che dobbiate immettere una parola chiave. Questo tipo di sessioni verrà trattato in modo approfondito più avanti in questo manuale.
 
-## Installazione senza privilegi amministrativi
+### Installazione senza privilegi amministrativi
 
 Il programma di installazione di Remote Incident Manager cercherà sempre di ottenere i privilegi di amministratore. Negli ambienti in cui non è possibile ottenere i privilegi di amministratore, l'installazione di RIM verrà eseguita nell'ambito dell'account utente corrente, anziché a livello di sistema.
 
@@ -31,45 +32,64 @@ L'esecuzione senza amministratore non comporta alcuna limitazione sul lato contr
 
 Come controllore, sarà possibile tentare una reinstallazione di RIM con privilegi di amministratore durante una sessione.
 
-## Installazione silenziosa
-Si consiglia di eseguire questa operazione quando si distribuisce RIM su più macchine. È sufficiente utilizzare il parametro della riga di comando **/S** nello script di distribuzione. Si noti che è sensibile alle maiuscole e minuscole, quindi è necessaria la S maiuscola.
-## Considerazioni aggiuntive per i server Windows
-Per installare RIM su un server Windows, collegarsi al server tramite RDP. Per ottenere una connessione più stabile, si consiglia di utilizzare l'applicazione Remote Desktop del Microsoft Store.
-## Ottenere il suono ed eseguire il narratore
-Per ottenere l'audio, una volta connessi, procedere come segue:
+### Installazione silenziosa
+
+È consigliabile eseguire questa operazione quando si distribuisce RIM su più macchine. È sufficiente utilizzare il parametro della riga di comando **/S** nello script di distribuzione. Si noti che è sensibile alle maiuscole, quindi è necessaria la S maiuscola.
+
+### Considerazioni aggiuntive per i server Windows
+
+Per installare RIM su un server Windows, collegarsi al server tramite RDP. Per ottenere un'esperienza di connessione più stabile, si consiglia di utilizzare l'applicazione Remote Desktop del Microsoft Store.
+
+#### Ottenere il suono ed eseguire Narrator
+
+Per le distribuzioni di Windows Server precedenti alla 2022, è necessario abilitare manualmente l'audio prima di avviare Narrator. Una volta connessi, procedere come segue:
 1. Premere il tasto Windows+r.
 1. Digitare cmd e premere invio. Attendere circa dieci secondi.
 1. Digitare:  
 **net start audiosrv**  
 e premere invio.
-1. A questo punto, premere CTRL+Windows+Invio per abilitare il narratore. Se tutto ha funzionato correttamente, si dovrebbe ottenere il parlato.  
+
+In ogni caso, premere CTRL+Windows+Invio per abilitare il narratore. Se tutto ha funzionato correttamente, si dovrebbe ottenere il parlato.  
 A questo punto è possibile seguire la procedura di installazione descritta sopra.
-Se si ha bisogno del suono per le successive connessioni via RIM, è necessario installare un dispositivo di uscita audio virtuale sul server. La versione gratuita di [Virtual Audio Cable] (http://virtualaudiocable.org/download/software/VACSetup.exe) dovrebbe essere sufficiente.
+Si noti che sulle distribuzioni di Windows Server precedenti alla 2022, se si ha bisogno del suono per le successive connessioni tramite RIM, è necessario installare un dispositivo di uscita audio virtuale sul server. La versione gratuita di [Virtual Audio Cable] (http://virtualaudiocable.org/download/software/VACSetup.exe) dovrebbe essere sufficiente.
 </Windows>
 <MacOS>
-## Installazione tipica per i privati
+### Installazione tipica per i privati
+
 Esiste un solo pacchetto di installazione da utilizzare, sia che si offra o si riceva assistenza.
 1. [Scarica Remote Incident Manager](https://getrim.app/mac)
 1. Accedere alla cartella dei download tramite Finder (Opzione+comando+L). Individuare il file .pkg scaricato e aprirlo con Command+O.
 1. Verrà visualizzata una procedura guidata di installazione. Seguire le istruzioni sullo schermo.  
 Siete pronti a eseguire Remote Incident Manager per la prima volta! È possibile eseguirlo dalla cartella delle applicazioni, accessibile tramite Command+Shift+A nel Finder. Inoltre, RIM imposta un tasto di scelta rapida globale multifunzionale (Opzione+Maiusc+Backspace) che, tra le altre cose, avvia automaticamente il programma da qualsiasi luogo ci si trovi.
-## Autorizzazioni
-A causa del comportamento precauzionale di macOS quando si ha a che fare per la prima volta con applicazioni di questo tipo, è necessario concedere alcuni permessi a Remote Incident Manager al primo avvio.
-### Driver HID Karabiner
-È il driver che elabora gli input ricevuti da RIM. Si tratta di un'estensione di sistema, pertanto è necessario approvarla manualmente. Rim farà apparire una finestra di dialogo di sistema che porterà alla sezione Privacy e sicurezza delle impostazioni di sistema. È necessario scorrere fino a individuare il pulsante Consenti. Facendo clic su questo pulsante verrà richiesta la password o il Touch ID, dopodiché verrà comunicato che è necessario riavviare il sistema per abilitare completamente Karabiner Elements. Sta a voi decidere se riavviare ora o più tardi, ma se decidete di non riavviare finché non sono state approvate tutte le autorizzazioni, uscite da Impostazioni di sistema e tornate in RIM.
-### Ricezione di input
+
+### Autorizzazioni
+
+A causa del comportamento precauzionale di macOS quando si ha a che fare con applicazioni di questo tipo per la prima volta, è necessario concedere alcuni permessi a Remote Incident Manager al primo avvio.
+
+#### Driver HID Karabiner
+
+È il driver che elabora gli input ricevuti da RIM. Si tratta di un'estensione di sistema, pertanto è necessario approvarla manualmente. Rim farà apparire una finestra di dialogo di sistema che vi porterà alla sezione Privacy e sicurezza delle impostazioni di sistema. È necessario scorrere fino a individuare il pulsante Consenti. Facendo clic su questo pulsante verrà richiesta la password o il Touch ID, dopodiché verrà comunicato che è necessario riavviare il sistema per abilitare completamente Karabiner Elements. Sta a voi decidere se riavviare ora o più tardi, ma se decidete di non riavviare finché non sono state approvate tutte le autorizzazioni, uscite dalle Impostazioni di sistema e rientrate in RIM.
+
+#### Ricevere l'input
+
 RIM deve essere autorizzato a ricevere tutti gli input che gli vengono inviati tramite una connessione remota.  
 Fate clic su "Continua" nella finestra di RIM; a questo punto apparirà una finestra di dialogo del sistema che richiede le autorizzazioni per il servizio di accessibilità. Se VoiceOver non la mette subito a fuoco, premere due volte rapidamente **VO+F1**. Quindi, con una freccia verso il basso, andate su "Dialoghi di sistema", premete la freccia verso destra e poi in basso fino alla richiesta di permessi di accesso. Premendo Invio si aprirà la finestra di avviso, a questo punto si dovrà seguire il percorso fino a Impostazioni di sistema e selezionare la casella Gestione incidenti remoti nell'elenco delle applicazioni.
-### Catturare l'output dello schermo
+
+#### Cattura dell'output dello schermo
+
 La prossima richiesta di autorizzazione da parte di RIM riguarderà la cattura dell'output dello schermo che verrà trasmesso attraverso la connessione remota. La procedura è simile a quella precedente.
-### Notifiche
-L'ultima richiesta di autorizzazione da parte di RIM riguarda le notifiche. RIM notificherà l'inizio e la fine di una sessione. La procedura per concedere questa autorizzazione è simile a quella precedente.
+
+#### Notifiche
+
+L'ultima richiesta di autorizzazione da parte di RIM riguarda le notifiche. RIM notificherà all'utente l'inizio e la fine di una sessione. La procedura per la concessione di questa autorizzazione è simile a quella precedente.
+
 ### Schermata di benvenuto!
-Dopo che tutti i permessi sono stati approvati, appare la schermata di benvenuto. Se si decide di riavviare in un secondo momento, questo è un buon momento per farlo. A questo punto RIM è pronto per avviare o ricevere connessioni.
 
-# Disinstallazione di RIM
+Dopo che tutti i permessi sono stati approvati, appare la schermata di benvenuto. Se si decide di riavviare in un secondo momento, questo è un buon momento per farlo. A questo punto, RIM è pronto per avviare o ricevere connessioni.
 
-Nel caso in cui si riscontrino problemi di funzionamento con l'installazione di RIM, si consiglia di eseguire una reinstallazione pulita dell'applicazione. A causa della natura complessa della distribuzione RIM per Mac OS, il semplice spostamento dell'applicazione nel cestino non la disinstallerà e quindi potrebbe non risolvere completamente il problema.
+## Disinstallazione di RIM
+
+Nel caso in cui l'installazione di RIM dovesse presentare problemi, si consiglia di eseguire una reinstallazione pulita dell'applicazione. A causa della natura complessa della distribuzione RIM per Mac OS, il semplice spostamento dell'applicazione nel cestino non la disinstallerà e quindi potrebbe non risolvere completamente il problema.
 
 RIM fornisce un metodo semplice per disinstallare completamente l'applicazione. Quando si fa clic sul pulsante "Informazioni" nella finestra principale, viene visualizzato un pulsante di disinstallazione nella schermata Informazioni. Facendo clic su questo pulsante si aprirà una finestra di dialogo di conferma, dopodiché verrà richiesta la password o il Touch ID per procedere con la disinstallazione. Al termine della disinstallazione verrà visualizzato un messaggio di conferma.
 </MacOS>
