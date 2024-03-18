@@ -44,6 +44,6 @@ function buildIndex(lang) {
     .then((res) => console.log(res)) //show the result
 }
 
-for (let lang of ["de", "en", "es", "fr", "it", "pt", "sv"]) {
+for (let lang of ["de", "en", "es", "fr", "it", "nl", "pt", "sv"]) {
   buildIndex(lang)
 }

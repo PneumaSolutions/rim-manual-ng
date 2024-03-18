@@ -1,0 +1,156 @@
+---
+title: Veelgestelde vragen
+---
+
+import Windows from "~/components/platform/Windows.astro"
+import MacOS from "~/components/platform/MacOS.astro"
+
+Hier vindt u antwoorden op veelgestelde vragen over RIM. Raadpleeg dit document wanneer u met een probleem wordt geconfronteerd. Als uw vraag niet in dit document wordt behandeld, [Neem contact met ons op.](https://pneumasolutions.com/contact/)
+### Compatibiliteit
+#### Welke Windows-versies worden ondersteund?
+We ondersteunen Windows10 en hoger, evenals Windows Server2016 en hoger.
+#### Welke Mac OS-versies worden ondersteund?
+RIM ondersteunt Mac OS Ventura en toekomstige versies, zowel Intel als Apple Silicon. U als Mac-gebruiker kunt ondersteuning bieden aan Windows-doelen, en Windows-gebruikers kunnen ondersteuning bieden aan uw Mac.
+#### Hoe zit het met Mac OS-versies vóór Ventura?
+Sommige functies van RIM zijn afhankelijk van functionaliteit die nieuw is geïntroduceerd in Ventura, waardoor compatibiliteit met eerdere versies moeilijk te implementeren is.
+### Installatie
+#### Waarom zoveel toestemmingsaanvragen op Mac OS?
+Dit ligt helaas buiten onze controle, omdat Mac OS vereist dat we hun wegen gebruiken voor het aanvragen van de benodigde toestemmingen voor RIM. We hebben geen controle over de UX, dus we kunnen alleen zoveel mogelijk instructies geven.
+### Verbindingsinformatie
+#### Hoe reageert RIM over het algemeen?
+De roundtrip-latentie tijdens een RIM-sessie is uiterst minimaal. Omdat we niet afhankelijk zijn van een centrale service, zijn uw verbindingen meestal rechtstreeks van de ene computer naar de andere - dit staat bekend als peer-to-peer. Als je netwerkconfiguratie geen peer-to-peer verbindingen toelaat, vallen we terug op een aantal relais over de hele wereld in plaats van te vertrouwen op één centrale server. Dus zelfs dan zal de latentie nog steeds zeer minimaal zijn.
+#### Waar bevinden jullie relais zich?
+Momenteel bieden we relais op de volgende locaties:
+* V.S.
+    * Virginia
+    * Californië
+* Teronto, Canada
+* Londen, Engeland
+* Warschau, Polen
+* Bangalore, India
+* Singapore
+* Sidney, Australië
+* Sao Paulo, Brazilië
+
+### Problemen oplossen tijdens algemene sessies
+#### De doelmachine waarmee ik verbonden ben, reageert niet goed op toetsenbordcommando's die prima werken op mijn toetsenbord. Wat is er aan de hand?
+Dit kan een van de volgende oorzaken hebben:
+* Een conflict in toetsenbordindelingen: In zeldzame gevallen, als een toetsenbordindeling voldoende verschilt van uw eigen indeling, kan dit RIM in de war brengen. Als dat gebeurt, neem dan contact met ons op met een rapport met informatie over de toetsenbordindeling van beide machines.
+* Als de doelcomputer JAWS 2024 gebruikt, kan de verwerking van het uniforme toetsenbord soms het gebruik van de CTRL-toets voor het onderdrukken van spraak verstoren. Hoewel we hier een oplossing voor hebben, kunnen er soms nog problemen optreden.
+    * Dit probleem kan worden opgelost door de verwerking van het verenigde toetsenbord uit te schakelen in het JAWS instellingencentrum.
+    * Unified keyboard processing is niet nodig als de doelgebruiker niet ook ZoomText of Fusion gebruikt.
+* Als de doelcomputer NVDA gebruikt en "Toetsen van andere applicaties verwerken" is uitgeschakeld, dan kan RIM de toetsenbordinvoer van de controller niet verwerken.
+    * Merk op dat deze instelling standaard aan staat en dat het in de meeste gevallen aan te raden is om deze aan te laten staan.
+
+#### Bij het starten van een spraakgesprek onder Windows gebruikt RIM de interne microfoon, ongeacht welke microfoon ik selecteer in de geluidsinstellingen. Wat is er aan de hand?
+
+Dit kan te wijten zijn aan de Intel® Smart Sound Technology for Digital Microphones op sommige nieuwere Intel-processors. Het uitschakelen hiervan zou het probleem moeten verhelpen. Om Intel® Smart Sound Technology for Digital Microphones uit te schakelen, doe je het volgende:
+1. Ga naar het uitvoervak (Windows+R).
+1. Typ devmgmt.msc
+1. Vouw in de apparatenstructuur "Geluid, video en spelcontrollers" uit
+1. Klik met de rechtermuisknop op "Intel® Smart Sound Technology for Digital Microphones Kies "Apparaat uitschakelen" in het contextmenu.
+
+#### Het doel gebruikt Zoom Text. Hoe ervaar ik de visuele uitvoer zoals weergegeven door deze vergroting?
+
+Dit wordt bereikt door ZoomText in de compatibiliteitsmodus te zetten. Deze modus maakt het mogelijk om schermvergrotingen te delen via tools zoals Teams of Zoom, maar ook via RIM. Je kunt het activeren via het ZoomText menu: Help &gt; Geavanceerd &gt; Beeldschermadapter. Selecteer in het geopende dialoogvenster de compatibiliteitsmodus en ZoomText zal opnieuw opstarten. We raden aan om de Beeldschermadapter terug te schakelen naar de normale modus nadat de RIM-sessie is voltooid voor optimale prestaties en vergrotingskwaliteit. 
+
+#### Nadat een computer opnieuw is geïmaged en opnieuw is geconfigureerd met dezelfde computernaam, moet er dan nog iets worden gedaan om RIM weer aan de gang te krijgen? 
+Verwijder de machine gewoon uit uw account, installeer RIM opnieuw en voeg de machine vervolgens weer toe aan uw account.
+
+### Prijzen en betalingen
+#### Dus hulp krijgen van iemand van RIM is helemaal gratis, toch?
+Reken maar! De abonnementen en/of eenmalige betalingen zijn voor individuen en organisaties die hulp op afstand willen bieden. Je hoeft je geen zorgen te maken over een abonnement als jij de persoon bent die hulp ontvangt. Sterker nog, je hoeft niet eens een account aan te maken als je alleen maar hulp ontvangt.
+#### Ik doe niet echt regelmatig aan hulp op afstand, maar misschien help ik af en toe een vriend of familielid. Zijn er mogelijkheden zonder abonnement?
+Zeker! We bieden zoveel mogelijk mogelijkheden.
+* Iedereen kan een gebruiker via RIM gratis tot 30 minuten per dag helpen. Dus als je iemand moet helpen met het installeren van software, snel een probleem moet oplossen of een paar bestanden moet sturen, dan kun je bij ons terecht. Deze minuten hoeven niet in één keer gebruikt te worden.
+* Er zijn natuurlijk situaties waarin een bepaald probleem iets meer tijd vereist. Of misschien help je iemand bij het leren van nieuwe software en zul je de komende dagen of weken af en aan verbinding moeten maken. Dat is waar onze passen van pas komen.
+    * Met incidentpassen kun je binnen een periode van 24 uur zo vaak als nodig verbinding maken met één doel.
+    * Met dagpassen kun je verbinding maken met meerdere doelen over een periode van 24 uur.
+    * Met Pro-passen kun je alle pro-mogelijkheden van RIM benutten met eenmalige voorwaarden van 1 week, 2 weken of een maand.
+    * Met pakketten van vooruitbetaalde uren heb je een vast aantal uren beschikbaar die je volledig in je eigen tijd kunt gebruiken.
+* Je kunt meerdere van deze passen en urenpakketten verzamelen en ze gebruiken wanneer het je uitkomt. Als je bijvoorbeeld meerdere dagpassen hebt, hoef je ze niet achter elkaar te gebruiken. Je hoeft je vooruitbetaalde uren ook niet in één sessie of 24 uur te gebruiken.
+
+#### Ik heb een pakket prepaiduren gekocht. Wat gebeurt er met mijn gratis dagelijkse hoeveelheid?
+Goed nieuws: uw gratis dagelijkse toewijzing van 30 minuten gaat nergens heen! Wanneer u een sessie op basis van een trefwoord start, zal RIM beginnen met het gebruiken van uw gratis dagelijkse toewijzing van 30 minuten. Uw prepaid tijd wordt gebruikt nadat uw gratis 30 minuten op zijn.
+#### Hoe lang duren mijn prepaid uren? Zijn ze gekoppeld aan mijn abonnement?
+Voorafbetaalde uren staan volledig los van uw abonnement. Uw vooruitbetaalde uren blijven echter nog één (1) jaar na de datum waarop ze voor het eerst zijn gebruikt op uw account staan.
+#### Hoe breng ik RIM onder de aandacht op mijn werkplek?
+We hebben een [Self-Advocacy Kit](https://sak.getrim.app) (SAK) samengesteld. Een pakket met brieven in e-mailformaat die je namens jezelf of een werknemer naar de juiste personen kunt sturen. Voor de goede orde, RIM biedt dezelfde functionaliteit als minder toegankelijke mainstream oplossingen. Als zodanig kan RIM een bestaande infrastructuur vervangen, in plaats van er naast te worden gebruikt. Het wordt daarom beschouwd als een redelijke toegankelijkheidsvoorziening en moet door je organisatie aan je worden verstrekt. Toegankelijkheid is geen gunst, het is een recht op inclusiviteit.
+#### Welke betalingsmethoden accepteert u?
+We verwerken betalingen via FastSpring, dus we zijn in staat om direct een verscheidenheid aan internationale betalingsmethoden te accepteren, waaronder grote creditcards, PayPal, Alipay, en nog veel meer.
+
+#### Hoe werken deze passen? Begint de klok direct na betaling of op de dag dat ik de sessie start?
+Pasjes beginnen pas op het moment dat de controller de sessie start. Dus als de machine van het doelwit het begeeft, waardoor een ritje naar de winkel nodig is en een ommekeer op dezelfde dag niet mogelijk is, kun je gewoon wachten tot de machine weer in goede staat is en dan ligt je dagpas nog steeds op je te wachten.
+#### Dus dit betekent dat deze passen niet verlopen?
+Nee. Je kunt er zeker van zijn dat je opeenhoping van dagpassen geduldig op je wacht om ze te activeren wanneer je er klaar voor bent.
+#### Wat gebeurt er als ik verbinding maak met een andere machine op de dag dat een incidentpas is gebruikt?
+Dat hangt ervan af. Als de machine binnen uw abonnement valt, d.w.z. als u onderweg toegang krijgt tot uw thuismachine, dan is het business as usual. Alle andere verbindingen die niet het oorspronkelijke doel zijn waarmee je verbinding hebt gemaakt, werken onder de gebruikelijke 30 minuten.
+#### Ik heb een actief persoonlijk abonnement. Zou ik nog steeds een gebruiker buiten de groep doelen kunnen helpen voor maximaal 30 minuten, of via een pas?
+Ja! Je dagelijkse toewijzing van 30 minuten geldt nog steeds voor elke machine buiten je abonnement. Bovendien vervangt het aanschaffen van een abonnement geen bestaande passen die je hebt.
+#### Ik heb een persoonlijk abonnement en de doelcomputer heeft een hardware-upgrade ondergaan. Telt Rim dit als een switch van machine?
+Alleen als RIM opnieuw moet worden geïnstalleerd. Dus, terwijl een upgrade van de harde schijf of een andere situatie die een herinstallatie van Windows vereist zou worden beschouwd als een switch van de machine, zou het upgraden van het ram dat niet doen.
+#### Ons bedrijf heeft het pro-abonnement gekocht, maar we hebben twee technici - een die overdag de helpdesk doet en een systeemonderhoudstechnicus die 's avonds werkt. Zouden we aan de avondsysteembeheerder een controllerstoel kunnen toewijzen?
+Zeker. In situaties waarin meerdere technici RIM gebruiken, bieden we tot twee (2) extra controller seats voor $50 per maand per seat - $500 per jaar per seat - om het pro-abonnement zo nodig aan te vullen. Dit maakt het makkelijker voor meerdere controllers op verschillende werkstations of kantoren om ondersteuning op afstand te bieden.  
+Als je meerdere controller seats hebt, kun je er extra kanalen voor kopen zodat sessies tegelijkertijd kunnen worden uitgevoerd. Elk extra kanaal kost $50 per maand, of $500 per jaar. 
+
+### Beveiliging
+#### Zijn RIM-sessies gecodeerd?
+Ja. Alle sessies op alle platforms, of het nu gaat om directe peer-to-peer verbindingen of verbindingen via een relay, worden van begin tot eind versleuteld met DTLS (Datagram Transport Layer Security). Dit is dezelfde technologie als in het HTTPS-protocol dat moderne websites implementeren voor beveiliging.
+#### Kan Pneuma Solutions sessies afluisteren die door de publieke cloud worden doorgegeven?
+Nee. Onderhandeling over sessiesleutels en versleuteling worden end-to-end uitgevoerd tussen de controller en het doel. Met andere woorden, alles wordt versleuteld voordat het uw apparaat verlaat. Op die manier geeft de cloudservice de gegevens alleen door zoals ze zijn, waardoor het voor de service onmogelijk is om de gegevens te ontcijferen.
+#### Welke maatregelen zijn er genomen om RCE-kwetsbaarheden (Remote Code Execution) te voorkomen?
+Alle code van RIM die wordt blootgesteld aan invoer vanaf het netwerk is geschreven in [geheugenveilige programmeertalen] (https://www.memorysafety.org/docs/memory-safety/), waaronder Rust en JavaScript.
+#### Voldoet RIM aan de HIPAA-normen?
+Ja. De beste configuratie in dit geval zou een on-premises implementatie zijn, dus [neem contact met ons op](https://pneumasolutions.com/contact/) als uw use case hiervan afhankelijk is.
+#### Moeten er poorten worden geopend op de doel- of controller?
+Nee en nee.
+#### Welke verbindingen moeten worden toegestaan op een netwerk om RIM te laten werken?
+Bij gebruik van de publieke cloud is een https-verbinding met [getrim.app](https://getrim.app) vereist. In optimale gevallen is dit voldoende voor RIM om een peer-to-peer verbinding op te zetten tussen de controller en het doel. Het helpt echter om UDP-verbindingen toe te staan via de poorten 19302 en 3478 (de standaard STUN- en TURN-poorten). Dit zorgt ervoor dat als er een relay wordt gebruikt, RIM niet hoeft terug te vallen op een tcp-verbinding op poort 443.
+#### Draait RIM op de achtergrond en zo ja, verschijnt het dan in mijn Command+Tab-lijst?
+RIM draait op de achtergrond om automatische updates te verwerken, onbeheerde/prompted verbindingsverzoeken te ontvangen en het gebruik van de globale toetsenbordopdracht Option+Shift+Backspace mogelijk te maken. Er wordt niet voor andere doeleinden naar huis gebeld en er wordt geen persoonlijk identificeerbare informatie overgedragen.  
+RIM verschijnt niet in je Command+Tab-lijst, maar wel in de statusmenu's met informatie over je batterij, WiFi-verbinding, enzovoort.
+### Externe Toegankelijkheidsmodule
+#### Moet de doelcomputer iets configureren voor het eerste gebruik van de Remote Accessibility Module?
+Helemaal niets! Er zijn geen dialoogvensters, schermen voor het aanvragen van toestemming of iets dergelijks.
+#### Werkt de Remote Accessibility Module op beveiligde schermen zoals het vergrendelscherm?
+Ja! Aangezien de RIM host met verhoogde rechten draait, kunnen we de Remote Accessibility Module gebruiken voor beveiligde schermen. De enige uitzondering hierop is het inlogvenster van FileVault.
+### Onbeheerde sessies
+#### Worden spraakgesprekken ondersteund tijdens sessies zonder toezicht?
+Ja. Ze kunnen echter alleen worden geïnitieerd als de eindgebruiker fysiek aanwezig is om een toestemmingsverzoek te accepteren. Dit maakt spraakgesprekken mogelijk terwijl maximale privacy en beveiliging gewaarborgd blijven.
+#### Als ik een onbeheerde machine verwijder uit mijn controlleraccount, wordt dan automatisch de toestemming op het doel ingetrokken?
+Ja. Zodra een onbeheerd doel wordt verwijderd, wordt de wijziging onmiddellijk van kracht. Als de doelcomputer is uitgeschakeld of op een andere manier niet is verbonden met het internet, zal de wijziging van kracht zijn zodra er een internetverbinding tot stand wordt gebracht op hun machine.
+#### De doelcomputer is opnieuw opgestart na het installeren van updates en stuurprogramma's, en heeft een wachtwoord nodig om in te loggen. Hoe gaat de sessie vanaf hier verder?
+In de meeste gevallen, vooral als FileVault schijfversleuteling is ingeschakeld, moet de doelgebruiker het wachtwoord handmatig invoeren. RIM kan niet starten op een versleutelde Mac voordat deze volledig is aangemeld.
+#### Ik heb meerdere machines die de rol van controller spelen. Wordt de lijst met machines die zijn ingesteld voor onbeheerde toegang op alle machines ingevuld?
+Ja. De lijst met machines die zijn geconfigureerd voor onbeheerde toegang wordt opgeslagen in uw account, dus deze wordt automatisch ingevuld.
+
+### Tips en trucs
+
+Welkom bij het gedeelte Tips en trucs van onze FAQ! We delen graag een aantal handige inzichten en slimmigheden om uw RIM-ervaring te verbeteren. Dat gezegd hebbende, zoals bij alle grote avonturen, zijn er een paar voorbehouden om in gedachten te houden: 
+1. De technische wereld is als een doos bonbons - altijd vol verrassingen. Onze tips zijn gebaseerd op een aantal factoren, inclusief maar niet beperkt tot de versie van RIM en het besturingssysteem dat wordt gebruikt door de maker van de tip. Naarmate RIM zich verder ontwikkelt, kunnen sommige tips minder relevant worden. Blijf op de hoogte met de nieuwste versie voor de beste ervaring! 
+1. One Size Doesn't Fit All. Onze software is ontworpen om aan verschillende behoeften te voldoen, maar de reis van elke gebruiker is uniek. Wat voor de één fantastisch werkt, kan voor de ander minder betoverend zijn. Voel je vrij om deze tips aan te passen aan jouw specifieke behoeften en voorkeuren. 
+1. Sommige van deze tips komen misschien van ons, maar veel van deze tips komen rechtstreeks van onze levendige community van gebruikers (zoals jij!). We zijn blij met deze gedeelde kennis, maar vergeet niet dat deze suggesties gebaseerd zijn op persoonlijke ervaringen en mogelijk niet zijn doorgelicht door onze technische experts. 
+
+Als je ooit twijfelt of vragen hebt, is ons ondersteuningsteam [slechts een bericht verwijderd.](https://pneumasolutions.com/contact/) We bijten niet, dat beloven we!
+
+Door deze tips te gebruiken, ga je akkoord met bovenstaande disclaimer. Ga nu verder en verken de mogelijkheden van RIM met deze trucs in je mouw! 
+
+#### Luisteren naar de microfoonaudio van een van je persoonlijke machines (Windows)
+
+Om maximale privacy te garanderen, ondersteunt RIM geen spraakgesprekken tijdens sessies zonder toezicht. Er kunnen echter momenten zijn waarop u audio wilt horen van een apparaat in de buurt van een van uw externe computers. Je hebt bijvoorbeeld een wekkerradio in de buurt van je bureaublad en je gebruikt je laptop op de veranda. Hoewel de kwaliteit misschien niet geweldig is, kan RIM een uitstekende geïmproviseerde draadloze audio-oplossing zijn!
+
+Als je je doelmachine instelt om naar de microfoonaudio te luisteren, moet je de microfoonaudio naar de luidsprekers leiden. Aangezien het de bedoeling is om de microfoon te horen vanuit een sessie op afstand, moeten we eerst het volume van de luidsprekers verlagen om een feedbacklus te vermijden. Om dat te doen:
+1. Open de run box (Windows+R).
+1. Typ sndvol en druk op enter.
+1. Druk op de eindtoets om 0% te bereiken en druk dan eenmaal op de pijl omhoog om 1% te bereiken. Zoals je kunt zien, houdt RIM geen rekening met het werkelijke volume van de doelcomputer bij het uitvoeren van zijn audio.
+1. Sluit de volumemixer af.
+
+Nu je volume verlaagd is, is het tijd om de luisterfunctie van je microfoon in te schakelen.
+1. Open Windows-instellingen (Windows+I). Zoek naar microfoon. Zoek Microfoonprivacy in de lijst en druk op Enter. Zorg ervoor dat "Toegang tot microfoon" en "Apps toegang geven tot uw microfoon" beide zijn ingeschakeld.
+1. Druk nogmaals op Windows+R en typ deze keer mmsys.cpl om de geluidsinstellingen te openen.
+1. Ga in de geluidsinstellingen naar het tabblad Opname (Ctrl+Tab).
+1. Selecteer de microfoon of het line-in apparaat waarnaar je wilt luisteren en open de eigenschappen met Alt+P.
+1. Eenmaal in de eigenschappen, CTRL+Tab naar de luistertab en schakel het selectievakje "Luisteren naar dit apparaat" in.
+1. Ga nog een keer met CTRL+Tab naar het gedeelte Niveaus en stel de versterking van de microfoon in op een niveau dat voor u voldoende is. Druk op enter als je klaar bent.
+
+Dat is het! Je zou nu het geluid van de microfoon moeten horen samen met de rest van de uitvoer van de machine op afstand.

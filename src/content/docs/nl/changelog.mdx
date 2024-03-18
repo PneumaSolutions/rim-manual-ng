@@ -1,0 +1,383 @@
+---
+title: Wijzigingslogboek
+---
+
+import Windows from "~/components/platform/Windows.astro"
+import MacOS from "~/components/platform/MacOS.astro"
+
+Versies van RIM worden aangeduid met kopjes op niveau 2. Substantiële updates met meerdere functies voor beide platformen worden onderverdeeld in Mac- en Windows-subrubrieken op niveau 3.
+
+### 3.3.3
+
+* We hebben nu genoeg vertrouwen in de lokalisatie van RIM om het uit bèta te halen. Dus RIM gebruikt nu standaard de voorkeurstaal van uw systeem en we hebben het label "BETA" uit de taalselector verwijderd.
+* Om verwarring te voorkomen, is er niet langer een knop "Annuleren" op het scherm "Hulp bieden". In plaats daarvan kun je het venster gewoon sluiten.
+* Als je er in het scherm "Hulp ontvangen" voor kiest om deze machine toe te voegen aan je RIM-account, blijft het venster "Hulp ontvangen" nu geopend.
+
+### 3.3.2
+##### Vensters
+* Probleem opgelost waardoor RIM geen updates kon installeren op sommige machines met een vergrendelde configuratie.
+### 3.3.1
+* Vertalingen bijgewerkt
+* Interne wijzigingen
+### 3.3.0
+Deze update voegt een groot aantal nieuwe functies over de hele linie toe, evenals platform-specifieke herzieningen. Algemene toevoegingen zijn onder andere:
+* Ondersteuning toegevoegd voor spraakconversaties in sessies zonder toezicht. De doelgebruiker wordt ter plekke om toestemming gevraagd om een spraakgesprek te starten.
+* In spraakgesprekken regelt RIM nu het in- en uitschakelen van microfoons tijdens de sessie 
+
+##### Vensters
+* Narrator spreekt nu consequent RIM-meldingen uit
+* Een niet-admin fallback toegevoegd
+
+##### Mac OS
+* Een de-installatieprogramma toegevoegd dat toegankelijk is via het scherm Over dat RIM volledig en schoon verwijdert, inclusief het Karabiner Virtual HID-stuurprogramma
+* Info over Mac doelcomputer bevat nu lopende processen en geïnstalleerde toepassingen 
+
+### 3.2.18
+Als u in het venster Hulp bieden op de knop Afmelden drukt, keert RIM nu terug naar het venster Hulp ontvangen in plaats van dat u zich opnieuw moet aanmelden.
+### 3.2.17
+* Problemen met de vertaling van menu-items opgelost.
+* Bij het starten van een sessie zonder toezicht ondersteunt RIM nu dubbelklikken op een doelgroep of doelmachine.
+* Bug opgelost in het toevoegen van een doelcomputer aan uw account bij gebruik van SSO (Single Sign-on).
+### 3.2.16
+* Problemen met de Franse lokalisatie opgelost. Met dank aan Nael Sayegh voor deze reparaties; dit is de eerste gemeenschapsbijdrage aan onze lokalisatie-inspanningen.
+### 3.2.15
+##### Windows
+* Probleem opgelost waarbij de schermuitvoer op de controller bevroor bij het vergrendelen van de doelmachine.
+### 3.2.14
+##### Windows
+* RIM detecteert nu Fusion, het Vispero-product dat JAWS en ZoomText combineert, als een afzonderlijk product bij het bepalen welke schermlezer er op de doelmachine draait, in plaats van het alleen als JAWS te detecteren. Dit betekent dat RIM niet zal proberen zijn functie voor toegankelijkheid op afstand te starten terwijl Fusion opstart.
+* We ontvingen meldingen dat als Fusion opstartte na het begin van een RIM sessie, Fusion sommige toetsaanslagen van de controller negeerde, zoals JAWS vroeger deed. We denken dat dit probleem nu is opgelost.
+### 3.2.13
+##### Windows
+Probleem met toetsenbordinvoer opgelost bij het verbinden met doelmachines met JAWS 2024.
+### 3.2.12
+Een zeldzaam probleem opgelost waardoor de RIM-app geen verbinding kon maken met de cloudservice.
+### 3.2.11
+Een nieuwe knop toegevoegd aan het venster Verbindingsdetails om de doelmachine te vragen zijn RIM-logs naar Pneuma Solutions te sturen. Gebruik deze functie alleen op verzoek van Pneuma Solutions.
+### 3.2.10
+Probleem opgelost waardoor RIM niet meer werkte tot de volgende herstart van de toepassing als de internetverbinding van de machine tijdelijk niet beschikbaar was.
+### 3.2.9
+##### macOS
+We kunnen helaas geen automatische stereomicrofooninvoer meer aanbieden in spraakgesprekken op dit platform, omdat dit in sommige gevallen verhinderde dat microfooninvoer überhaupt werkte op een Mac. Merk op dat deze wijziging geen effect heeft op de opgenomen audio-uitvoer van de doelmachine; die is nog steeds stereo.
+### 3.2.8
+##### macOS
+Bug verholpen waardoor RIM niet kon worden weergegeven als het programma werd geactiveerd via de Finder of het Dock, in plaats van via de algemene sneltoets.
+### 3.2.7
+Gesproken gesprekken gebruiken nu automatisch stereo als de audiohardware dit ondersteunt. Dit is handig bij gebruik van RIM voor training in audioproductie.
+### 3.2.6
+Onlangs geïntroduceerd probleem verholpen waardoor RIM niet kon werken op een nieuwe installatie van het besturingssysteem.
+### 3.2.5
+Het bericht dat de resterende vrije tijd weergeeft, is opgelost.
+### 3.2.4
+Lokalisatie van RIM in andere talen is nu in bèta. Momenteel worden de volgende talen ondersteund: Duits, Spaans, Frans, Italiaans en Zweeds. Om RIM in een van deze talen te gebruiken, druk je op de knop "Language (BETA)" onderaan het venster "Hulp geven" of "Hulp ontvangen", kies je je taal uit de vervolgkeuzelijst en druk je op de knop "Taal wijzigen". We kijken uit naar uw feedback.
+### 3.2.1
+* Het starten van een nieuwe RIM-sessie aan de kant van de controller verloopt nu soepeler. Het oorspronkelijke venster, waar je je sleutelwoord hebt ingevoerd of een doelmachine hebt gekozen, gaat pas weg als het hoofdvenster van de sessie klaar is. Als het oorspronkelijke venster niet langer is gefocust wanneer de sessie start, bijvoorbeeld als je van taak bent veranderd terwijl je wacht tot de doelgebruiker een sleutelwoord invoert, dan zal RIM je laten weten dat de sessie klaar is en zal het hoofdvenster van de sessie verschijnen wanneer je de focus weer op RIM legt.
+* alleen macOS: Als onderdeel van de vorige wijziging hebben we de manier aangepast waarop RIM zichzelf toevoegt en verwijdert in het Dock en de Command+Tab lijst. Laat het ons weten als je problemen ondervindt met het huidige gedrag.
+* Alleen Windows-doelen: Als een schermlezer wordt gestart op de doelcomputer terwijl externe toegankelijkheid actief is, dan zal externe toegankelijkheid stil worden uitgeschakeld om dubbele spraakuitvoer te voorkomen.
+
+### 3.2.0
+Eerste officiële release voor Mac OS! Nieuwe functies zijn onder andere
+* mogelijkheid om onbewaakte of gevraagde sessies te configureren vanuit een interactieve sessie.
+* Volledig nieuwe toestemmingsinstructies voor gebruikers die geen VoiceOver gebruiken.
+
+### 3.1.49
+Deze versie biedt een consistente, platformonafhankelijke manier om het sessiemenu van de RIM-controller met de muis te openen. Een controller kan ofwel klikken op het grote RIM-pictogram in de linkerbovenhoek van het sessievenster, of zoals eerder mogelijk was onder Windows, met de rechtermuisknop klikken op een willekeurige plaats in de titelbalk.
+### 3.1.48
+##### Mac
+* Ondersteuning toegevoegd voor de FN+Nummer-toets workaround voor het gebruik van de functiebalk op MacBooks.
+* RIM voor Mac past nu de menubalk aan en met name de optie "Over" in het applicatiemenu opent nu ons eigen Over-dialoogvenster in plaats van het algemene.
+
+### 3.1.47
+##### Windows
+Bij het aansluiten van een Mac-controller op een Windows-doel, waarbij beide zijden dezelfde niet-Amerikaanse toetsenbordindeling gebruiken, werd toetsenbordinvoer van de controller niet correct vertaald. Versie 3.1.47 voor Windows lost dit probleem op.
+### 3.1.46
+Deze versie voegt ondersteuning toe voor het nieuwe RIM Personal Community Support-abonnementspakket.
+
+### 3.1.45
+##### Mac
+RIM kan nu automatisch het vastleggen van scherminhoud en audio-uitvoer hervatten als de doelmachine tijdens een sessie overschakelt naar het vergrendelscherm.
+
+### 3.1.44
+##### Mac
+* Implementeert opnieuw opstarten en verbinden voor Mac-doelen, inclusief zowel standaard- als noodreboot.
+    * Net als bij onbeheerde toegang verschijnt RIM niet op het macOS aanmeldscherm vanwege platformbeperkingen, met name FileVault. De doelgebruiker moet dus opnieuw inloggen voordat RIM opnieuw verbinding kan maken.
+* De melding over bestandsoverdrachten, geïntroduceerd in de vorige update, wordt nu slechts één keer per RIM-sessie getoond.
+
+### 3.1.43
+##### Mac
+Deze update wijzigt de gebruikersinterface voor bestandsoverdrachten. Wanneer een of meer bestanden op het klembord worden geplaatst aan weerszijden van de verbinding, krijgt de controller nu een melding dat de bestandsoverdracht kan worden voltooid via het RIM-menu. Als de controller deze menuoptie kiest, wordt de bestandsoverdracht uitgevoerd en als dat gebeurd is, wordt er een tijdelijke map met het overgedragen bestand of de overgedragen bestanden geopend op de bestemmingsmachine. Deze methode van bestandsoverdracht is nodig als de doelmachine een Mac is. Als de bestemming een Windows-machine is, kan de bestandsoverdracht worden voltooid met deze nieuwe methode of met de oude methode van plakken in Verkenner op de bestemmingsmachine.
+### 3.1.42
+##### Mac
+* RIM voor Mac werkt nu als een onbeheerd doel. Het voert ook updates uit op de achtergrond, net als de Windows-versie.
+    * We moeten nog werken aan de toegang tot het vergrendelscherm en we denken niet dat we toegang tot het inlogscherm kunnen bieden voordat een gebruiker is ingelogd, vanwege de beperkingen van het platform.
+    * we hebben nog niet uitgezocht hoe en of we vooraf geconfigureerde doel-installateurs kunnen implementeren, dus je zult een van de andere beschikbare methoden moeten gebruiken om onbeheerde toegang in te stellen.
+* Elimineert een bron van latentie in audio die is opgenomen van Mac-doelen.
+
+### 3.1.41
+##### Windows
+Probleem verholpen waarbij RIM soms vastliep als reactie op activiteit op het Windows klembord tijdens een RIM-sessie.
+### 3.1.40
+Voegt meer logging toe met betrekking tot audio op het doel. Dus als u vertraagde audio op het doel kunt reproduceren, doe dat dan met deze versie en stuur de logboeken op. 
+### 3.1.39
+##### Mac
+Deze update voegt muisondersteuning voor Mac-targets toe.
+RIM vraagt nu toestemming om de toegankelijkheidsfuncties van macOS te gebruiken. Voor nieuwe
+installaties vervangt dit de toestemmingsaanvraag voor invoercontrole, dus
+het totale aantal toestemmingsstappen neemt niet toe. Maar voor updates,
+moet je deze toestemming geven voordat je RIM kunt gebruiken na het updaten.
+### 3.1.38
+##### Mac
+Crash verholpen die Mac-doelen trof tijdens sessie-initialisatie.
+### 3.1.37
+Deze update markeert een belangrijke mijlpaal in de Mac-port van RIM. De functie
+toegankelijkheidsfunctie van RIM is nu beschikbaar bij het verbinden met Mac
+doelen. Met behulp van een speciale configuratie van VoiceOver op de
+machine hoort de controller, of hij nu Windows of Mac gebruikt, spraak
+terwijl de doelgebruiker geen spraak of geluidseffecten hoort. Er
+er is ook geen zichtbare indicatie dat VoiceOver draait op het doel.
+Het proces om toegankelijkheid op afstand te starten, automatisch of handmatig, werkt net als bij het gebruik van VoiceOver
+handmatig, werkt net als bij Windows-doelen. En natuurlijk,
+wordt aan het eind van de sessie de speciale configuratie van VoiceOver afgesloten en wordt VoiceOver weer teruggezet naar de oorspronkelijke toestand
+afgesloten en worden de eerdere instellingen van VoiceOver hersteld.
+
+Merk op dat zowel Windows- als Mac-controllers nu met
+versie 3.1.37 moeten draaien om de volledige functionaliteit te krijgen als je verbinding maakt met een Mac-doel.
+### 3.1.36
+##### Windows
+De functie Toegankelijkheid op afstand is nu compatibel met NVDA 2023.1.
+### 3.1.35
+##### Mac
+* RIM maakt nu consequent gebruik van stereogeluid, met name voor Mac-controllers.
+* Wanneer je RIM voor Mac gebruikt als controller met de functie Toegankelijkheid op afstand, gebruikt RIM nu de stem en spreeksnelheid zoals gedefinieerd in het gedeelte Gesproken inhoud van de systeeminstellingen.
+
+### 3.1.34
+##### Mac
+Wanneer een Mac-controller verbinding maakt met een Windows-doel waarop geen schermlezer wordt uitgevoerd, kun je nu de module voor externe toegankelijkheid uitvoeren op het Windows-doel en spraakuitvoer krijgen op de Mac-controller. Merk op dat je nog steeds NVDA-toetsenbordcommando's moet gebruiken voor interactie met het Windows-doel, geen VoiceOver-commando's, en we gebruiken de toetsenbordindeling van de NVDA-laptop. 
+### 3.1.33
+Naar aanleiding van feedback van gebruikers hebben we het geluidseffect verwijderd bij meldingen over de status van een sessie op afstand.
+### 3.1.32
+##### Mac
+RIM ondersteunt nu de Fn-toets bij gebruik van een Mac-laptop als controller.  
+Merk op dat voor de bovenste rij functietoetsen, RIM deze altijd behandelt als F1 tot en met F12, en dat u de Fn-toets moet gebruiken als u deze toetsen wilt gebruiken als systeemfunctietoetsen (voor het aanpassen van het volume enzovoort), ongeacht hoe de systeemvoorkeuren zijn ingesteld aan beide kanten van de verbinding. We denken dat je in een sessie op afstand deze toetsen waarschijnlijk toch meestal als F-toetsen wilt gebruiken. Gedrag zoals het gebruik van Fn+Linkerpijl om op Home te drukken werkt zoals verwacht.
+### 3.1.31
+##### Mac
+* RIM liet eerder zijn vergrendeling op toetsenbordinvoer niet los wanneer sommige dialoogvensters werden weergegeven, zoals het dialoogvenster waarin om toestemming voor toegang tot de microfoon werd gevraagd. Dit is nu verholpen.
+* Wanneer je verbinding maakt van Mac naar Windows of omgekeerd, is het niet langer mogelijk dat de controller het RIM-menu activeert op de doelmachine. Voor deze reparatie is de bijbehorende update van RIM voor Windows vereist.
+
+##### Windows
+* Een manier toegevoegd om RIM's logbestanden naar Pneuma Solutions te sturen, geïntroduceerd voor Mac OS in versie 3.1.29. Gebruik deze functie alleen op verzoek van een vertegenwoordiger van Pneuma Solutions.
+* RIM speelt nu een geluid af wanneer een melding wordt weergegeven.
+
+### 3.1.30
+##### Mac
+RIM vraagt nu toestemming om meldingen weer te geven, zowel bij de eerste keer opstarten als voor bestaande gebruikers die een update uitvoeren vanaf een vorige versie. Net als bij de meeste andere toestemmingen, moet je voor het verlenen van deze toestemming een schakelaar in Systeeminstellingen omzetten. We hebben ook ons eigen geluid toegevoegd voor deze
+meldingen.
+### 3.1.29
+##### Mac
+* We geloven dat het probleem dat sommige gebruikers hebben gemeld met het aanvragen van toestemming voor het monitoren van toetsenbordinvoer op machines met Karabiner Elements nu is opgelost.
+* Het RIM Over dialoogvenster heeft nu een knop om logs te versturen. Gebruik deze alleen op verzoek van Pneuma Solutions.
+
+### 3.1.28
+##### Mac
+Wanneer u RIM als controller gebruikt, is het nu compatibel met geavanceerde hulpmiddelen voor toetsenbordaanpassing zoals Karabiner Elements.
+### 3.1.27
+##### Mac
+Dit is een kleine update met slechts twee wijzigingen:
+* RIM vereist macOS 13.0 (Ventura) of hoger.
+* RIM zo ingesteld dat het virtuele toetsenbord alleen wordt aangesloten als RIM daadwerkelijk als doel wordt uitgevoerd. Dit betekent dat de Keyboard Setup Assistant niet verschijnt wanneer je RIM als controller gebruikt. We kijken nog naar mogelijke manieren om dat dialoogvenster helemaal te vermijden.
+
+### 3.1.26
+Eerste bètaversie van RIM voor Mac OS.
+### 3.1.24
+* Wanneer je verbinding maakt met een doelmachine met een lagere schermresolutie of een hogere dots-per-inch (DPI) schaalfactor dan de controller, schaalt RIM nu het remote doeldisplay zodat het past op het scherm van de controller, waardoor het makkelijker wordt om visueel met het remote display te werken.
+
+### 3.1.23
+* Ondersteuning voor vooruitbetaalde uren toegevoegd.
+
+### 3.1.22
+* Bug opgelost die er soms voor zorgde dat RIM op de doelmachine in een lus terechtkwam waardoor onbeheerde verbindingen niet mogelijk waren.
+
+### 3.1.21
+* Een nieuwe sneltoets toegevoegd, Windows+Shift+M, terwijl je in een sessievenster bent, om het venster te minimaliseren en de toetsenbordfocus terug te brengen naar de lokale (controller) machine.
+
+### 3.1.20
+* Logboekregistratie toegevoegd die ons helpt bij het diagnosticeren van meldingen over onbeheerde targets die met tussenpozen worden losgekoppeld van RIM.
+
+### 3.1.19
+* Enkele hoekgevallen in de verwerking van toetsenbordinvoer op afstand opgelost. In het bijzonder, wanneer JAWS op de doelmachine draait, herkent JAWS nu correct Pauze en NumLock toetsaanslagen van de controller. Laat het ons weten als u regressies vindt in de verwerking van toetsenbordinvoer, met name voor niet-Amerikaanse toetsenbordindelingen.
+
+### 3.1.18
+* Probleem opgelost waardoor RIM zichzelf niet kon bijwerken op doelmachines die zich in het Windows aanmeldscherm bevonden zonder actieve gebruikerssessie.
+
+### 3.1.17
+* Sinds de vorige update hebben we meldingen ontvangen over het vastlopen van de Shift modifier op de doelmachine bij het uitvoeren van JAWS. We denken dat dit probleem met deze update is opgelost. Laat het ons weten als u nog steeds problemen ondervindt met vastzittende modifiers.
+* Bug opgelost die ervoor zorgde dat RIM NVDA op de doelcomputer afsloot aan het einde van een sessie als NVDA was gestart op de doelcomputer na het inschakelen van externe toegankelijkheid.
+
+### 3.1.16
+* Als JAWS op de doelmachine wordt uitgevoerd met Unified Keyboard Processing ingeschakeld, reageert JAWS nu betrouwbaar op toetsaanslagen van de controller.
+* Fout opgelost die sporadisch optreedt bij het starten van de externe toegankelijkheidsuitbreiding na het installeren of bijwerken van de NVDA-uitbreiding op de controllermachine.
+
+### 3.1.15
+* Wanneer je verbinding maakt met een doelmachine waarop geen schermlezer actief is, schakelt RIM automatisch externe toegankelijkheid in als je een schermlezer gebruikt op de controllermachine. Als je een andere schermlezer dan NVDA gebruikt op de controllermachine, zal RIM zelfs automatisch die schermlezer afsluiten en NVDA starten als je die hebt geïnstalleerd.
+* Problemen opgelost waardoor de externe toegankelijkheidsmodule geen gebruik kon maken van je lokale NVDA-configuratie-instellingen, zoals toetsenbordindeling en typ-echo.
+
+### 3.1.14
+* Het proces van het herstellen van een verbinding als er een connectiviteitsprobleem is, is nu robuuster.
+* Probleem opgelost dat er soms voor zorgde dat het achtergrondupdateproces van RIM stopte.
+* Als de controller een oudere versie van RIM gebruikt dan het doel, bevat het menu niet langer een optie om het doel bij te werken.
+* Als een schermlezer of RIM's externe toegankelijkheidsmodule draait op de doelcomputer, kun je deze nu stoppen via een optie in het menu.
+
+### 3.1.13
+* Bug verholpen waardoor gebruikers uitgelogd werden bij RIM na het installeren van bepaalde Windows-updates.
+
+### 3.1.12
+* Op veler verzoek vraagt RIM niet langer om commentaar aan het einde van elke sessie. U kunt nog steeds commentaar geven op sessies in het RIM Dashboard. Mogelijk voegen we in de toekomst een configureerbare optie toe om om commentaar te vragen.
+
+### 3.1.11
+* Als de doelmachine ten minste deze versie van RIM draait, maar nog niet is bijgewerkt naar de nieuwste versie, kan de controller de doelmachine nu dwingen om zijn installatie van RIM bij te werken via een nieuwe optie in het sessiemenu.
+
+### 3.1.10
+* Je kunt nu optioneel commentaar toevoegen aan het einde van een RIM-sessie. Sessiecommentaar kan worden bekeken in het RIM Dashboard.
+* Het venster Verbindingsdetails is verbeterd. De statistieken worden live bijgewerkt zolang het venster geopend is en het venster bevat nu informatie over de doelmachine.
+
+### 3.1.9
+* Probleem opgelost dat er soms voor zorgde dat een RIM-sessie vastliep bij het opnieuw proberen te verbinden.
+
+### 3.1.8
+* Probleem opgelost waardoor de module voor externe toegankelijkheid soms niet kon opstarten.
+
+### 3.1.7
+* Bij het kiezen van een doelmachine voor een sessie zonder toezicht of gevraagd, kun je nu door je doelmachines zoeken. Om dit te doen, druk je in het scherm Hulp bieden op "Kies machine" zoals voorheen, tab naar het veld "Zoeken", voer je de tekst in waarnaar je wilt zoeken en druk je op Enter of op de knop "Zoeken".
+
+### 3.1.6
+* Probleem opgelost dat het soms onmogelijk maakte om JAWS spraak op het beveiligde bureaublad te onderbreken.
+
+### 3.1.5
+* Een visuele weergavefout verholpen waardoor de lijst met onbeheerde doelmachines overlapte met de knoppen eronder.
+
+### 3.1.4
+* Enterprise-klanten kunnen RIM nu implementeren met een MSI-gebaseerd installatieprogramma.
+
+### 3.1.3
+* Bug verholpen waardoor RIM kon crashen als het RIM-menu geopend was wanneer een sessie opnieuw werd verbonden.
+
+### 3.1.2
+* Visuele stijl aangepast om toegankelijker te zijn voor slechtziende gebruikers.
+* Foutmeldingen toegevoegd als verplichte velden leeg blijven.
+
+### 3.1.1
+* Als u op de knop "RIM Dashboard" in het venster Hulp bieden drukt, blijft dat venster nu geopend.
+
+### 3.1.0
+Deze release voegt een compleet beheerdashboard voor controllers toe.
+* Alle abonnees hebben toegang tot het dashboard, met functiesets die worden bepaald door de abonnementsklasse.
+* De in-app functies voor het hernoemen, verwijderen en aanmaken van installateurs voor onbeheerde machines zijn verwijderd omdat dit nu deel uitmaakt van het dashboard
+* De welkomstpagina teruggebracht.
+
+### 3.0.8
+Bug verholpen waardoor schermuitvoer op afstand soms niet werkte als er een User Account Control-prompt werd weergegeven.
+### 3.0.7
+* Dit is een bug-fix update.
+
+### 3.0.6
+* Gebruikers met een RIM Enterprise-abonnement of een RIM Pro-abonnement met de Enterprise-uitbreiding kunnen nu volledig stille vooraf geconfigureerde installatieprogramma's maken voor toegang zonder toezicht. Om een installatieprogramma in stille modus uit te voeren, of het nu het standaard installatieprogramma is of een vooraf geconfigureerd installatieprogramma van een ondernemingsaccount, gebruikt u de opdrachtregeloptie /S (let op het hoofdlettergebruik) wanneer u het installatieprogramma uitvoert.
+
+### 3.0.5
+* Dit is een bug-fix update.
+
+### 3.0.4
+* Deze update herstelt de compatibiliteit met Windows 7.
+
+### 3.0.3
+* RIM toont niet langer ten onrechte de knop "Installer voor onbeheerde toegang maken" als u geen abonnement hebt.
+
+### 3.0.2
+* Als u een of meer RIM-passen hebt gekocht, hebt u nu controle over of een bepaalde sessie een RIM-pas of het gratis niveau gebruikt en welke pas wordt gebruikt. RIM vertelt u ook hoeveel tijd er nog over is op uw geselecteerde pas.
+
+### 3.0.1
+* Deze update introduceert ondersteuning voor de nieuwe persoonlijke RIM-passen, waarmee u RIM kunt gebruiken voor technische ondersteuning of training op afstand gedurende maximaal 24 uur voor slechts $ 10. [Probeer vandaag nog een RIM-pas.](https://getrim.app/signup/pass)
+* De knop die voorheen "Create a Pre-Configured Target Installer" heette, heet nu "Create an Installer for Unattended Access".
+* Bij het hernoemen van een onbeheerde doelcomputer, wordt de bestaande naam nu ingevuld en geselecteerd voor eenvoudige bewerking.
+
+### 3.0.0
+Met deze release wordt de publieke bèta van RIM afgesloten. De RIM-prijsplannen en beperkingen op gratis gebruik zijn nu van kracht. Voor gratis accounts geeft RIM nu een gebruiksmeter en een aankoopknop weer.
+### 0.12.2
+Bug verholpen waardoor de nieuwe sneltoets Windows+Shift+Backspace in sommige situaties niet werkte.
+### 0.12.1
+* De sneltoets Control+Shift+Backspace is niet langer actief in RIM. De officiële sneltoets is nu Windows+Shift+Backspace. Windows+Shift+Escape blijft ook beschikbaar tijdens een sessie.
+* De nieuwe sneltoets van RIM, Windows+Shift+Backspace, is nu altijd actief op machines waarop RIM is geïnstalleerd, tenzij een andere toepassing de sneltoets eerst opeist. Als er een RIM-sessie actief is op de controller, opent deze sneltoets het RIM-menu als het sessievenster is geopend, of stelt het sessievenster scherp als het op de achtergrond is. Op het doelwit opent deze sneltoets het RIM doelmenu als de sessie actief is. Aan beide kanten, als er geen sessie actief is, opent deze sneltoets het RIM-venster om een nieuwe sessie te starten.
+* Bij het aanvragen van onbeheerde toegang, richt RIM het goedkeuringsvenster nu betrouwbaar op de doelmachine.
+* De module voor externe toegankelijkheid is bijgewerkt.
+
+### 0.12.0
+Je kunt nu een voorgeconfigureerd installatieprogramma maken dat automatisch alle machines waarop het is geïnstalleerd als onbeheerde doelen registreert in je RIM-account.
+
+Om dit te doen, gebruik je de nieuwe knop genaamd "Create a Pre-Configured Target Installer", op het "Hulp bieden" scherm. Je moet dan een basisnaam invoeren voor de doelmachine(s); RIM voegt automatisch de hostnaam van elke doelmachine toe aan deze basisnaam. Zodra doelmachines geregistreerd zijn, kun je ze hernoemen zoals bij elk onbeheerd doel. Je kunt ook de vervaldatum van het installatieprogramma instellen, die tussen de 7 en 30 dagen moet liggen. Zodra RIM het installatieprogramma heeft gemaakt, krijg je een link die je direct kunt delen met de doelgebruikers, of zelf kunt downloaden zodat je het installatieprogramma op een andere manier kunt delen.
+
+Merk op dat wanneer een gebruiker het vooraf geconfigureerde installatieprogramma uitvoert, hij eerst een bevestigingsvenster te zien krijgt waarin wordt uitgelegd wat het installatieprogramma zal doen. Dit dialoogvenster bevat de naam van de controller die het installatieprogramma heeft gemaakt. Deze bevestigingsstap is ontworpen om misbruik te voorkomen. Er zal een volledig stille modus beschikbaar zijn voor zakelijke klanten.
+
+### 0.11.6
+* RIM heeft nu een nieuwe optie om een machine te registreren voor onbeheerde toegang onder je RIM account zonder dat je een sessie op afstand hoeft te starten met een sleutelwoord. Op de machine die u wilt registreren, drukt u op de nieuwe knop genaamd "Registreer deze machine voor onbeheerde toegang", op het scherm Help ontvangen. Log vervolgens in op je RIM-account als je dat nog niet hebt gedaan op die machine, voer een naam in voor de machine en je bent klaar. Merk op dat we nog steeds werken aan een manier om het RIM installatieprogramma aan te passen, om massa-implementatie mogelijk te maken en het zo makkelijk mogelijk te maken om onbeheerde toegang in te stellen op machines waar je nog geen toegang toe hebt.
+* RIM voorkomt nu dat je een onbeheerde verbinding probeert te openen met dezelfde machine waarop je de controller draait.
+* We experimenteren nu met een derde sneltoets om het RIM-menu te openen: Windows+Shift+Backspace. Dat betekent dat er nu drie opties zijn: Windows+Shift+Escape, Windows+Shift+Backspace en Control+Shift+Backspace. We hebben nog geen definitieve beslissing genomen over welke sneltoets of sneltoetsen we zullen behouden, maar dat zullen we doen voor het einde van de publieke bèta. We stellen uw feedback op prijs.
+* De meeste opties in het RIM-menu hebben nu sneltoetsen van één letter die je kunt indrukken zodra je het menu hebt geopend.
+* Deze update introduceert een meer betrouwbare oplossing voor de intermitterende problemen die gebruikers hebben gemeld met JAWS die de toetsenbordinvoer van RIM niet herkent. Laat het ons weten als je problemen blijft ondervinden met dit scenario.
+
+### 0.11.5
+* Deze update introduceert twee nieuwe sneltoetsen. Windows+Shift+D verbreekt de sessie wanneer deze aan beide zijden wordt ingedrukt. Voor de controller draait Windows+Shift+F de sessie om.
+* Deze update voegt beveiligingen toe tegen toetsenbordmodifiers die vastlopen op een van beide machines.
+* Er is een nieuwe menu-optie, "Vergrendel de doelmachine", die overeenkomt met het indrukken van Windows+L op de doelmachine.
+* RIM heeft nu een "Over" venster, waar je het versienummer kunt controleren, contact kunt opnemen met Pneuma Solutions voor ondersteuning en feedback, de handleiding kunt lezen en het versie wijzigingslogboek kunt bekijken.
+* RIM vraagt niet langer om feedback aan het einde van een sessie of bij het sluiten van het "Help"-venster.
+
+### 0.11.4
+Deze update verhelpt een paar bugs in het herstart- en verbindingsproces. We hebben nog niet alles gediagnosticeerd wat er is gemeld, maar we konden een paar problemen vinden en oplossen tijdens onze eigen tests.
+### 0.11.3
+* RIM werkt zichzelf nu op de achtergrond bij op alle machines. RIM vermeldt nu het huidig geïnstalleerde versienummer in de tooltip van zijn ladepictogram. Dit is de laatste update die gebruikers handmatig moeten installeren, ongeacht de configuratie van de machine.
+* Als de doelmachine opnieuw wordt opgestart, maar niet met behulp van de functie Reboot and Reconnect van RIM, vraagt RIM nu aan de controller of hij na het opnieuw opstarten opnieuw verbinding wil maken met de doelmachine. Als de controller nee antwoordt, zal de target niet wachten op een herverbinding na de herstart.
+
+### 0.11.2
+* RIM werkt zichzelf nu op de achtergrond bij op onbeheerde doelmachines. Dit is de laatste update die je handmatig moet installeren op je onbeheerde targets.
+* Bij het updaten voor een interactieve sessie, hoeft RIM niet langer door User Account Control te gaan. Dit betekent dat niet-beheerders RIM kunnen bijwerken nadat het voor hen is geïnstalleerd door een beheerder.
+
+### 0.11.1
+Dit is een bug-fix update. Houd er rekening mee dat onbeheerde doelen nog steeds handmatig moeten worden bijgewerkt door het nieuwste RIM-installatieprogramma uit te voeren. U kunt nu echter verbinding maken met een onbeheerd doel nadat de installatie is voltooid, zonder dat iemand het venster "Hulp ontvangen" hoeft te sluiten.
+### 0.11.0
+* De functie Opnieuw opstarten en verbinding maken is nu geïmplementeerd. Met de nieuwe optie Reboot and Reconnect (Opnieuw opstarten en opnieuw verbinden) in het RIM-menu van de controller kun je een standaard of noodreboot uitvoeren en de sessie automatisch voortzetten wanneer de reboot is voltooid. RIM zal ook opnieuw verbinding maken als de doelmachine om een andere reden opnieuw opstart, zoals wanneer een installateur de machine opnieuw opstart.
+* RIM probeert ook automatisch opnieuw verbinding te maken als de verbinding om wat voor reden dan ook wegvalt. Dit helpt bij onbetrouwbare internetverbindingen.
+* Als je een sessie zonder toezicht uitvoert of Reboot and Reconnect gebruikt, kun je RIM nu gebruiken terwijl de doelmachine op het Windows Logon scherm staat. Merk op dat RIM de sessie opnieuw moet verbinden wanneer de doelcomputer van het aanmeldscherm naar het hoofdbureaublad gaat. Dit is een bekende beperking van de huidige implementatie die we in een toekomstige update kunnen verhelpen.
+* RIM is nu volledig functioneel wanneer de doelgebruiker geen beheerdersrechten heeft op de doelmachine, zolang de Remote Incident Manager Host service draait op die machine. Merk op dat administrator rechten nog steeds nodig zijn om RIM updates te installeren. Merk ook op dat nieuwe versies van RIM nog steeds handmatig geïnstalleerd moeten worden op onbeheerde targets. We werken aan oplossingen voor beide problemen.
+
+### 0.10.10.0
+Als je onbeheerde toegang hebt ingesteld op een of meer doelmachines, kun je nu een snelkoppeling maken om direct toegang te krijgen tot een van deze machines. Druk gewoon op de knop "Snelkoppeling maken" onder de lijst met onbeheerde doelen en RIM maakt een snelkoppeling op je bureaublad.
+### 0.10.9
+RIM werkt nu op een doelmachine die geen audioapparaat heeft. In combinatie met de bestaande module voor toegankelijkheid op afstand, biedt dit toegang tot servers en virtuele machines die voorheen niet toegankelijk waren met een schermlezer, behalve via RDP en zijn zeer suboptimale audio-uitvoer.
+### 0.10.8
+* Als u het eerste jaar van uw RIM Pro-abonnement nog niet hebt vooruitbesteld, kunt u dat nu gemakkelijk doen met de nieuwe knop op het scherm "Hulp bieden". We introduceren ook nieuwe prijsopties voor het toevoegen van extra controllers en gelijktijdige kanalen aan een RIM Pro-abonnement. Je kunt maximaal twee extra controllergebruikers en twee extra kanalen toevoegen voor elk $500 per jaar. RIM blijft gratis tijdens de publieke bèta, maar als je nu je abonnement vooraf bestelt, heb je ononderbroken toegang wanneer de publieke bèta op 1 september afloopt.
+* We introduceren Control+Shift+Backspace als alternatieve sneltoets voor het openen van het RIM-menu aan beide zijden van de verbinding. We ondersteunen voorlopig ook nog Windows+Shift+Escape, maar het plan is om Control+Shift+Backspace als sneltoets te standaardiseren voor alle fasen van RIM.
+* Als je op de knop "Help bieden in plaats van" drukt in het scherm "Help ontvangen", stelt RIM deze keuze niet langer als standaard in totdat je bent aangemeld bij je RIM-account.
+* Enkele JavaScript-fouten opgelost die in zeldzame gevallen optraden.
+
+### 0.10.7
+u kunt nu het muiswiel gebruiken in een sessie op afstand.
+### 0.10.6
+Hopelijk alle resterende problemen verholpen waardoor het installatieproces bleef hangen.
+### 0.10.5
+Deze versie bevat enkele wijzigingen onder de motorkap. We hebben met name updates voor de installatie en onderliggende pakketten toegevoegd om problemen op te lossen die de installatie veroorzaakten.
+### 0.10.4
+* Er is nu een optie in het RIM menu om Control+Alt+Delete naar de doelmachine te sturen.
+* Je kunt nu het RIM menu openen door rechts te klikken op de titelbalk van het sessie venster. We zijn van plan om ook de optie toe te voegen om het RIM menu te openen door te klikken op het RIM icoon aan de linkerkant van de titelbalk.
+
+### 0.10.3
+* De controller kan nu een onbeheerde sessie spiegelen.
+* De controller kan nu de naam van een onbeheerde doelmachine wijzigen.
+* Bug opgelost die er soms voor zorgde dat de sessie niet meer reageerde na het kopiëren naar het klembord.
+* Bug opgelost die er soms voor zorgde dat het starten van de externe toegankelijkheidsmodule mislukte met een JavaScript-fout.
+
+### 0.10.2
+Conflict opgelost tussen de RIM Client Support NVDA-addon en de Dropbox-addon.
+### 0.10.1
+* U kunt nu een pre-order plaatsen voor het eerste jaar van uw abonnement op RIM Pro voor $999. De link om vooraf te bestellen is beschikbaar in het feedbackvenster wanneer u een sessie op afstand beëindigt. Of u kunt de directe link hier volgen: [RIM Pro vooraf bestellen] (https://getrim.app/signup/rim_preorder)
+* Als u onbeheerde doelmachines in uw RIM-account hebt, wordt de knop om een onbeheerde sessie te starten nu betrouwbaarder weergegeven in het scherm "Hulp bieden".
+* Bij het omdraaien van een sessie kan de oorspronkelijke controller nu de sessie terugdraaien door het RIM menu te openen met Windows+Shift+Escape.
+

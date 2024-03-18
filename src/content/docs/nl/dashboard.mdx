@@ -1,0 +1,82 @@
+---
+title: Het RIM Management Dashboard
+---
+
+import Windows from "~/components/platform/Windows.astro"
+import MacOS from "~/components/platform/MacOS.astro"
+
+RIM heeft een webgebaseerd dashboard om verschillende machine- en accountbeheertaken te vergemakkelijken. Je kunt je bestaande computers zonder toezicht beheren, voorgeconfigureerde installatieprogramma's voor doelcomputers maken en nog veel meer.  
+Opgemerkt moet worden dat de functieset van het dashboard grotendeels afhankelijk is van de abonnementsklasse van je account. Enterprise-gebruikers kunnen bijvoorbeeld machines toewijzen aan doelgroepen en stille installatieprogramma's maken. Aan de andere kant kan iedereen (inclusief persoonlijke gebruikers) aangepaste installatieprogramma's maken voor hun onbeheerde machines.
+
+### Het dashboard vinden
+
+Als je een controller bent, is de makkelijkste manier om naar het dashboard te gaan via de hoofdinterface van RIM. Als je op de knop RIM Dashboard klikt, wordt het dashboard automatisch geopend in je standaardbrowser, waarbij het inloggen al geregeld is.  
+Als je een netwerkbeheerder bent die RIM niet geïnstalleerd heeft, kun je gewoon inloggen op je account op de RIM website en zal je dashboard verschijnen.
+
+### Doelen beheren
+
+Als u op de link "Doelen configureren" klikt, komt u op een pagina waarmee u alle machines kunt beheren die u hebt geconfigureerd voor onbeheerde toegang. U kunt op een van deze machines klikken om ze te beheren. Eenmaal binnen, zul je in staat zijn om:
+* De naam van het doel wijzigen
+* Het doel naar een andere groep verplaatsen (later meer over doelgroepen)
+* Het doel verwijderen
+
+### Doelgroepen (voor Pro-accounts en hoger)
+
+Stel bijvoorbeeld dat uw werkgroep verspreid is over verschillende locaties. Of misschien wilt u groepen machines toewijzen aan uw routineonderhoudstechnici. Met doelgroepen kunt u precies dat doen. Om dit te doen, klikt u gewoon op de knop "Doelgroep maken", geeft u uw groep een naam en dient u deze in.  
+U kunt zoveel doelgroepen maken als nodig is voor uw toepassing. 
+
+#### Toegangscontrole (voor bedrijfsorganisaties)
+
+Als uw organisaties een supporttechnicus toewijzen aan een specifieke set machines, wilt u er waarschijnlijk voor zorgen dat ze alleen toegang hebben tot die specifieke set. Dit is waar de instelling voor toegangsbeheer voor doelgroepen om de hoek komt kijken.  
+Als je op een doelgroep klikt, krijg je opties om de machines in de groep en de groep zelf te beheren. In het gedeelte toegangsbeheer kun je per account toegang verlenen tot deze groep. Voer gewoon het e-mailadres in van de account die u wilt toevoegen en klik vervolgens op de knop "Toegang verlenen". Als je dit gedaan hebt, krijg je een tabel te zien met de accounts die toegang hebben gekregen tot deze groep. Onder elke account staat een knop "Toegang intrekken". Deze knop vereist geen verdere bevestiging.  
+Alle organisatiebeheerders krijgen automatisch toegang om alle groepen te beheren die onder de organisatie zijn aangemaakt.
+
+### Een vooraf geconfigureerd RIM-installatieprogramma instellen (Pro of hoger)
+
+Een van de gemakkelijkste manieren om een machine in te stellen voor onbeheerde of gevraagde verbindingen is door een aangepast installatieprogramma te maken. Dit is ongelooflijk handig als u massale implementaties configureert, of zelfs als een eenvoudigere manier om RIM aan de praat te krijgen op de computer van een eindgebruiker die u regelmatig wilt ondersteunen.
+
+Om dit te doen:
+1. Klik in het doelbeheerscherm op de knop "Build Target Installer".
+1. Er wordt eerst gevraagd of deze machine geconfigureerd moet worden voor volledig onbeheerde toegang, of voor toegang op verzoek waarbij de gebruiker een prompt moet accepteren om de verbinding te initiëren.
+1. Vervolgens wordt u gevraagd om een doelgroep toe te wijzen. Merk op dat de doelgroepselectie automatisch naar de door jou gekozen doelgroep gaat als je de configuratie van het installatieprogramma start vanaf de pagina van jouw groep.
+1. Er wordt gevraagd hoe lang deze installer geldig moet zijn. De geldigheidsduur kan variëren van 7 tot 30 dagen. Merk op dat dit tijdsbestek alleen invloed heeft op de functionaliteit van het installatiepakket. Met andere woorden, de RIM-configuratie van de machine wordt niet uitgeschakeld wanneer de installatie verloopt.
+1. Vervolgens krijg je de optie om een basenaam toe te wijzen. Aan elke machine die via dit installatiepakket wordt voorzien, wordt deze basenaam toegewezen.
+1. Vervolgens krijg je een selectievakje waarmee je kunt kiezen voor een e-mailmelding wanneer een gebruiker RIM installeert via dit installatiepakket.
+1. Als je een enterprisebeheerder bent, zie je een selectievakje waarmee je het installatieprogramma als een MSI-pakket kunt bouwen. Deze optie is handig voor massale implementatie van een aangepast installatieprogramma op een machinecluster dat wordt toegewezen aan de opgegeven doelgroep.
+1. Je wordt gevraagd om een installatienaam op te geven en optioneel enkele notities. Deze zijn voor interne doeleinden en verschijnen niet in het aangemaakte installatieprogramma.
+1. Klik op "Installer bouwen" Je krijgt de downloadlink te zien die je naar het klembord kunt kopiëren en naar je eindgebruiker kunt sturen. Je kunt het installatieprogramma ook rechtstreeks downloaden voor gebruik bij massale implementaties.
+
+Nu je het installatieprogramma hebt, kan het op twee manieren worden uitgevoerd. In beide gevallen zal de machine worden toegevoegd aan je lijst van machines in zowel je account als de RIM client nadat het installatieprogramma is voltooid.
+
+#### Normale uitvoering
+
+De gebruiker krijgt bij het uitvoeren van het installatieprogramma een prompt met de volgende informatie:
+* De naam van de technicus samen met hun organisatie, indien van toepassing
+* de aard van de verbinding, d.w.z. of een prompt vereist is of niet
+
+De gebruiker kan kiezen om ja of nee te antwoorden op de installatie. Als je nee antwoordt, wordt de installatie geannuleerd. Nadat het installatieprogramma is voltooid, krijgt de gebruiker een melding dat zijn machine nu is ingesteld voor externe toegang.
+
+#### Stille installatie (alleen Enterprise-installateurs)
+
+Een stille installatie kan worden gestart door het uitvoerbare installatieprogramma uit te voeren met de opdrachtregelparameter */S*. Dit is handig bij het installeren van RIM als onderdeel van een massa-implementatieroutine.
+
+### Sessiegeschiedenis
+
+U kunt uw volledige geschiedenis van eerdere sessies bekijken via het RIM dashboard. De sessiegeschiedenis bevat momenteel de datum en tijd van elke sessie, de naam van de computer waarmee je verbinding maakte en de duur van de sessie. Je kunt er ook voor kiezen om commentaar aan een sessie toe te voegen via de link "Commentaar toevoegen" in de sessierij. Dit is handig om notities toe te voegen over de huidige status van een incident, zowel voor jezelf als voor de beheerders van de organisatie.
+
+### Uw abonnement beheren (persoonlijke en Pro-abonnementen)
+
+Via het dashboard kunt u gemakkelijk de details van uw RIM-abonnement bekijken en beheren. Als u op de link "Abonnement beheren" klikt, kunt u:
+* Uw abonnement upgraden
+* Uw betalingsmethode bijwerken
+* Terugkerende betalingen annuleren
+
+#### Je plan upgraden
+
+Je kunt je abonnement eenvoudig upgraden. Als je een maandabonnement hebt, worden de resterende kosten van het nieuwe bedrag evenredig verdeeld en wordt het volledige nieuwe bedrag voor de volgende maanden in rekening gebracht. Als je op "Abonnement opwaarderen" klikt, krijg je een pagina te zien die bijna identiek is aan de pagina voor de eerste abonnementskeuze. Er zijn een paar opmerkelijke verschillen die we hieronder beschrijven:
+* U kunt uw abonnement niet downgraden naar een abonnement met minder machines. U kunt echter wel upgraden van een maandabonnement naar een jaarabonnement met hetzelfde aantal machines als uw huidige abonnement. Om te downgraden moet je je plan annuleren, wachten tot het afloopt en dan een nieuw plan met minder machines starten.
+* Enterprise-plannen, inclusief de enterprise addon, kunnen niet rechtstreeks via deze pagina worden aangeschaft.
+
+#### terugkerende betalingen annuleren
+
+Wanneer u op "Automatische verlenging annuleren" klikt, wordt u om bevestiging gevraagd, waarna uw abonnement aan het einde van de huidige termijn afloopt.

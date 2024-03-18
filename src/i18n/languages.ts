@@ -5,6 +5,7 @@ const allLanguages = {
   es: "Español",
   fr: "Français",
   it: "Italiano",
+  nl: "Nederlands",
   sv: "Svenska",
 } as const
 
