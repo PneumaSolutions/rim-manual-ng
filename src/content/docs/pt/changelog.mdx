@@ -1,11 +1,17 @@
 ---
-title: Registro de alterações
+title: Change Log
 ---
 
 import Windows from "~/components/platform/Windows.astro"
 import MacOS from "~/components/platform/MacOS.astro"
 
-As versões da RIM serão indicadas por títulos no nível 2. Atualizações substanciais com vários recursos para ambas as plataformas serão divididas em subtítulos para Mac e Windows no nível 3.
+As versões da RIM serão indicadas por títulos no nível 3. Atualizações substanciais com vários recursos para ambas as plataformas serão divididas em subtítulos para Mac e Windows no nível 4.
+
+### 3.3.8
+
+#### Windows
+
+Esta atualização introduz o suporte para a nova versão NVDA 2024.1 no recurso de acessibilidade remota da RIM.
 
 ### 3.3.7
 
@@ -63,7 +69,7 @@ Quando você pressiona o botão Sair na janela Fornecer ajuda, o RIM agora retor
 ### 3.2.14
 ##### Windows
 * A RIM agora detecta o Fusion, o produto Vispero que combina o JAWS e o ZoomText, como um produto distinto ao determinar qual leitor de tela está em execução no computador de destino, em vez de simplesmente detectá-lo como JAWS. Isso significa que a RIM não tentará iniciar seu recurso de acessibilidade remota enquanto o Fusion estiver sendo iniciado.
-* Recebemos relatos de que, se o Fusion fosse iniciado após o início de uma sessão RIM, ele ignoraria algumas teclas digitadas pelo controlador, como o JAWS costumava fazer. Acreditamos que esse problema já foi corrigido.
+* Recebemos relatos de que, se o Fusion fosse iniciado após o início de uma sessão RIM, ele ignoraria algumas teclas digitadas pelo controlador, como o JAWS costumava fazer. Acreditamos que esse problema foi corrigido.
 ### 3.2.13
 ##### Windows
 Corrigido um problema com a entrada de teclado ao se conectar a máquinas de destino que executam o JAWS 2024.
@@ -179,7 +185,7 @@ Observe que, para a linha superior das teclas de função, a RIM sempre as trata
 ### 3.1.31
 ##### Mac
 * Anteriormente, a RIM não liberava o bloqueio da entrada do teclado quando algumas caixas de diálogo eram exibidas, como a caixa de diálogo que solicitava permissão para acessar o microfone. Isso agora foi corrigido.
-* Ao conectar-se do Mac ao Windows ou vice-versa, não é mais possível que o controlador acione o menu RIM no computador de destino. Essa correção requer a atualização correspondente do RIM para Windows.
+* Ao se conectar do Mac ao Windows ou vice-versa, não é mais possível que o controlador acione o menu RIM no computador de destino. Essa correção requer a atualização correspondente do RIM para Windows.
 
 ##### Windows
 * Foi adicionada uma maneira de enviar os arquivos de registro do RIM para a Pneuma Solutions, introduzida para o Mac OS na versão 3.1.29. Use essa função somente se for solicitada por um representante da Pneuma Solutions.
@@ -288,7 +294,7 @@ Versão beta inicial do RIM para Mac OS.
 ### 3.1.0
 Esta versão adiciona um painel de gerenciamento completo para controladores.
 * Todos os assinantes têm acesso ao painel, com conjuntos de recursos determinados pelo nível de assinatura.
-* Removemos as funções no aplicativo para renomear, excluir e criar instaladores para máquinas autônomas, pois isso agora faz parte do painel
+* Removidas as funções no aplicativo para renomear, excluir e criar instaladores para máquinas autônomas, pois isso agora faz parte do painel
 * Trouxe de volta a página de boas-vindas.
 
 ### 3.0.8
@@ -321,7 +327,7 @@ Esta versão conclui a versão beta pública da RIM. Os planos de preços da RIM
 ### 0.12.2
 Foi corrigido um bug que impedia que a nova tecla de atalho Windows+Shift+Backspace funcionasse em algumas situações.
 ### 0.12.1
-* A tecla de atalho Control+Shift+Backspace não está mais ativa na RIM. A tecla de atalho oficial agora é Windows+Shift+Backspace. Windows+Shift+Escape também permanece disponível durante uma sessão.
+* A tecla de atalho Control+Shift+Backspace não está mais ativa no RIM. A tecla de atalho oficial agora é Windows+Shift+Backspace. Windows+Shift+Escape também permanece disponível durante uma sessão.
 * A nova tecla de atalho principal do RIM, Windows+Shift+Backspace, agora está ativa o tempo todo nas máquinas em que o RIM está instalado, a menos que outro aplicativo use a tecla de atalho primeiro. Quando uma sessão do RIM está ativa no controlador, essa tecla de atalho abre o menu do RIM se a janela da sessão estiver focada, ou foca a janela da sessão se ela estiver em segundo plano. No destino, essa tecla de atalho abre o menu de destino do RIM enquanto a sessão estiver ativa. Em ambos os lados, se uma sessão não estiver ativa, essa tecla de atalho abrirá a janela do RIM para iniciar uma nova sessão.
 * Ao solicitar acesso autônomo, o RIM agora focaliza de forma confiável a caixa de diálogo de aprovação na máquina de destino.
 * Atualização do módulo de acessibilidade remota.

@@ -1,11 +1,17 @@
 ---
-title: Registro delle modifiche
+title: Change Log
 ---
 
 import Windows from "~/components/platform/Windows.astro"
 import MacOS from "~/components/platform/MacOS.astro"
 
-Le versioni di RIM saranno indicate da titoli di livello 2. Gli aggiornamenti sostanziali con diverse funzioni per entrambe le piattaforme saranno suddivisi in sottovoci Mac e Windows al livello 3.
+Le versioni di RIM sono indicate da titoli di livello 3. Gli aggiornamenti sostanziali con diverse funzioni per entrambe le piattaforme saranno suddivisi in sottovoci per Mac e Windows al livello 4.
+
+### 3.3.8
+
+#### Windows
+
+Questo aggiornamento introduce il supporto per la nuova versione di NVDA 2024.1 nella funzione di accessibilità remota di RIM.
 
 ### 3.3.7
 
@@ -122,7 +128,7 @@ RIM è ora in grado di riprendere automaticamente l'acquisizione del contenuto d
 
 ### 3.1.43
 ##### Mac
-Questo aggiornamento modifica l'interfaccia utente per il trasferimento dei file. Quando uno o più file vengono inseriti negli appunti su entrambi i lati della connessione, il controllore riceve ora una notifica che indica che il trasferimento dei file può essere completato attraverso il menu RIM. Se il controllore sceglie questa opzione di menu, il trasferimento dei file viene eseguito e, al termine, sul computer di destinazione viene aperta una cartella temporanea contenente il file o i file trasferiti. Questo metodo di trasferimento dei file è necessario quando il computer di destinazione è un Mac. Quando il computer di destinazione è un computer Windows, il trasferimento dei file può essere completato utilizzando questo nuovo metodo o il vecchio metodo di incollare in Esplora file sul computer di destinazione.
+Questo aggiornamento modifica l'interfaccia utente per il trasferimento dei file. Quando uno o più file vengono inseriti negli appunti su entrambi i lati della connessione, il controllore riceve ora una notifica che indica che il trasferimento dei file può essere completato attraverso il menu RIM. Se il controllore sceglie questa opzione di menu, il trasferimento dei file viene eseguito e, al termine, sul computer di destinazione viene aperta una cartella temporanea contenente il file o i file trasferiti. Questo metodo di trasferimento dei file è necessario quando il computer di destinazione è un Mac. Se il computer di destinazione è un computer Windows, il trasferimento dei file può essere completato utilizzando questo nuovo metodo o il vecchio metodo di incollare in Esplora file sul computer di destinazione.
 ### 3.1.42
 ##### Mac
 * RIM per Mac funziona ora come destinazione non presidiata. Esegue anche gli aggiornamenti in background come la versione per Windows.
@@ -329,7 +335,7 @@ Corretto un bug che impediva il funzionamento del nuovo tasto di scelta rapida W
 ### 0.12.0
 È ora possibile creare un programma di installazione preconfigurato che registra automaticamente tutti i computer su cui è installato come target non presidiati nell'account RIM.
 
-Per farlo, utilizzare il nuovo pulsante "Crea un programma di installazione preconfigurato", nella schermata "Fornisci aiuto". È quindi necessario inserire un nome di base per i computer di destinazione; RIM aggiungerà automaticamente il nome host di ciascun computer di destinazione a questo nome di base. Una volta registrati i computer di destinazione, è possibile rinominarli come per qualsiasi altro computer di destinazione non presidiato. È inoltre possibile impostare la data di scadenza del programma di installazione, che deve essere compresa tra 7 e 30 giorni. Una volta che RIM ha creato il programma di installazione, si ottiene un link che può essere condiviso direttamente con gli utenti di destinazione o scaricato da soli per poterlo condividere in altro modo.
+A tale scopo, utilizzare il nuovo pulsante "Crea un programma di installazione preconfigurato", nella schermata "Fornisci aiuto". È quindi necessario inserire un nome di base per i computer di destinazione; RIM aggiungerà automaticamente il nome host di ciascun computer di destinazione a questo nome di base. Una volta registrati i computer di destinazione, è possibile rinominarli come per qualsiasi altro computer di destinazione non presidiato. È inoltre possibile impostare la data di scadenza del programma di installazione, che deve essere compresa tra 7 e 30 giorni. Una volta che RIM ha creato il programma di installazione, si ottiene un link che può essere condiviso direttamente con gli utenti di destinazione o scaricato da soli per poterlo condividere in altro modo.
 
 Si noti che quando un utente di destinazione esegue il programma di installazione preconfigurato, viene prima visualizzata una finestra di dialogo di conferma che spiega cosa farà il programma di installazione. Questa finestra di dialogo include il nome del controllore che ha creato il programma di installazione. Questa fase di conferma è stata pensata per evitare abusi. Per i clienti aziendali sarà disponibile una modalità completamente silenziosa.
 
