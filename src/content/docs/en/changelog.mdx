@@ -7,6 +7,13 @@ import MacOS from "~/components/platform/MacOS.astro"
 
 Versions of RIM will be denoted by headings at level 3. Substantial updates with several features for both platforms will be divided into Mac and Windows subheadings at level 4.
 
+### 3.3.9
+
+* Introduced a new fallback method of connecting to our worldwide relays that will work even in restricted networks that only allow outgoing HTTPS connections. This eliminates the need to add firewall exceptions for RIM, except in extremely restricted environments.
+* RIM no longer checks for updates in the foreground when starting the application. It now only checks for updates in the background. If you need to force RIM to update immediately, you can use the new "Check for Update" button in the "About" window.
+* When doing a reverse session flip, if the original controller is running a screen reader but the target is not, RIM will now automatically start remote accessibility on the target, as it did when starting the session.
+* Windows: Fixed a problem that sometimes prevented NVDA sound effects from playing when using remote accessibility.
+
 ### 3.3.8
 
 #### Windows
