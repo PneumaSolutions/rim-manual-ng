@@ -7,6 +7,16 @@ import MacOS from "~/components/platform/MacOS.astro"
 
 Die RIM-Versionen werden durch Überschriften auf Ebene 3 gekennzeichnet. Wesentliche Aktualisierungen mit mehreren Funktionen für beide Plattformen werden in Mac- und Windows-Unterüberschriften auf Ebene 4 unterteilt.
 
+### 3.3.9
+
+* Es wurde eine neue Fallback-Methode für die Verbindung zu unseren weltweiten Relays eingeführt, die auch in eingeschränkten Netzwerken funktioniert, die nur ausgehende HTTPS-Verbindungen zulassen. Dadurch ist es nicht mehr notwendig, Firewall-Ausnahmen für RIM hinzuzufügen, außer in extrem eingeschränkten Umgebungen.
+* RIM prüft beim Starten der Anwendung nicht mehr im Vordergrund auf Aktualisierungen. Es prüft jetzt nur noch im Hintergrund auf Aktualisierungen. Wenn Sie eine sofortige Aktualisierung von RIM erzwingen möchten, können Sie die neue Schaltfläche "Nach Updates suchen" im Fenster "Über" verwenden.
+* Wenn bei einer umgekehrten Sitzungsumkehr der ursprüngliche Controller ein Bildschirmlesegerät verwendet, das Ziel jedoch nicht, startet RIM jetzt automatisch die Fernzugänglichkeit auf dem Ziel, wie es dies beim Starten der Sitzung getan hat.
+
+#### Fenster
+
+Es wurde ein Problem behoben, das manchmal die Wiedergabe von NVDA-Soundeffekten verhinderte, wenn die Fernzugriffsfunktion verwendet wurde.
+
 ### 3.3.8
 
 #### Windows

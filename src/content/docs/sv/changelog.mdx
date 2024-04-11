@@ -7,6 +7,16 @@ import MacOS from "~/components/platform/MacOS.astro"
 
 Versioner av RIM betecknas med rubriker på nivå 3. Betydande uppdateringar med flera funktioner för båda plattformarna kommer att delas in i Mac- och Windows-underrubriker på nivå 4.
 
+### 3.3.9
+
+* Vi har infört en ny reservmetod för anslutning till våra globala reläer som fungerar även i begränsade nätverk som endast tillåter utgående HTTPS-anslutningar. Detta eliminerar behovet av att lägga till brandväggsundantag för RIM, utom i extremt begränsade miljöer.
+* RIM söker inte längre efter uppdateringar i förgrunden när programmet startas. Den söker nu bara efter uppdateringar i bakgrunden. Om du vill tvinga RIM att uppdatera omedelbart kan du använda den nya knappen "Sök efter uppdatering" i fönstret "Om".
+* Om den ursprungliga styrenheten kör en skärmläsare men målet inte gör det, kommer RIM nu automatiskt att starta fjärråtkomst på målet när du gör en omvänd sessionsvändning, precis som när du startade sessionen.
+
+#### Windows
+
+Åtgärdade ett problem som ibland hindrade NVDA-ljudeffekter från att spelas upp vid användning av fjärråtkomst.
+
 ### 3.3.8
 
 #### Windows

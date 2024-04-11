@@ -7,6 +7,16 @@ import MacOS from "~/components/platform/MacOS.astro"
 
 Les versions de RIM seront désignées par des rubriques de niveau 3. Les mises à jour substantielles comportant plusieurs fonctionnalités pour les deux plates-formes seront divisées en sous-titres Mac et Windows au niveau 4.
 
+### 3.3.9
+
+* Introduction d'une nouvelle méthode de secours pour se connecter à nos relais mondiaux, qui fonctionnera même dans les réseaux restreints qui n'autorisent que les connexions HTTPS sortantes. Il n'est donc plus nécessaire d'ajouter des exceptions de pare-feu pour le RIM, sauf dans des environnements extrêmement restreints.
+* RIM ne vérifie plus les mises à jour au premier plan lors du démarrage de l'application. Il ne vérifie plus que les mises à jour en arrière-plan. Si vous devez forcer RIM à se mettre à jour immédiatement, vous pouvez utiliser le nouveau bouton "Vérifier les mises à jour" dans la fenêtre "À propos".
+* Lors d'une inversion de session, si le contrôleur d'origine utilise un lecteur d'écran mais pas la cible, RIM démarre désormais automatiquement l'accessibilité à distance sur la cible, comme il l'a fait lors du démarrage de la session.
+
+#### Windows
+
+Correction d'un problème qui empêchait parfois la lecture des effets sonores NVDA lors de l'utilisation de l'accessibilité à distance.
+
 ### 3.3.8
 
 #### Windows

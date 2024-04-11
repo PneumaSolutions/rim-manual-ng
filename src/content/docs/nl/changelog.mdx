@@ -7,6 +7,16 @@ import MacOS from "~/components/platform/MacOS.astro"
 
 Versies van RIM worden aangeduid met rubrieken op niveau 3. Substantiële updates met meerdere functies voor beide platformen worden onderverdeeld in Mac- en Windows-subrubrieken op niveau 4.
 
+### 3.3.9
+
+* Een nieuwe fallback-methode geïntroduceerd om verbinding te maken met onze wereldwijde relais die zelfs werkt in beperkte netwerken die alleen uitgaande HTTPS-verbindingen toestaan. Hierdoor is het niet langer nodig om firewall-uitzonderingen voor RIM toe te voegen, behalve in extreem beperkte omgevingen.
+* RIM controleert niet langer op updates op de voorgrond wanneer de applicatie wordt gestart. Het controleert nu alleen op updates op de achtergrond. Als je RIM wilt dwingen om onmiddellijk te updaten, kun je de nieuwe knop "Controleren op updates" in het venster "Info" gebruiken.
+* Wanneer je een omgekeerde sessiewisseling uitvoert en de oorspronkelijke controller een schermlezer gebruikt maar het doel niet, zal RIM nu automatisch toegankelijkheid op afstand starten op het doel, net zoals bij het starten van de sessie.
+
+#### Vensters
+
+Probleem verholpen waardoor NVDA-geluidseffecten soms niet werden afgespeeld bij gebruik van externe toegankelijkheid.
+
 ### 3.3.8
 
 #### Windows

@@ -7,6 +7,16 @@ import MacOS from "~/components/platform/MacOS.astro"
 
 Las versiones de RIM se denotarán mediante epígrafes en el nivel 3. Las actualizaciones importantes con varias funciones para ambas plataformas se dividirán en subapartados Mac y Windows en el nivel 4.
 
+### 3.3.9
+
+* Se ha introducido un nuevo método alternativo de conexión a nuestros repetidores en todo el mundo que funcionará incluso en redes restringidas que sólo permitan conexiones HTTPS salientes. Esto elimina la necesidad de añadir excepciones de cortafuegos para RIM, excepto en entornos extremadamente restringidos.
+* RIM ya no busca actualizaciones en primer plano al iniciar la aplicación. Ahora sólo busca actualizaciones en segundo plano. Si necesita forzar la actualización inmediata de RIM, puede utilizar el nuevo botón "Buscar actualizaciones" de la ventana "Acerca de".
+* Al realizar un cambio de sesión inverso, si el controlador original está ejecutando un lector de pantalla pero el destino no, ahora RIM iniciará automáticamente la accesibilidad remota en el destino, como lo hizo al iniciar la sesión.
+
+#### Windows
+
+Se ha corregido un problema que a veces impedía que se reprodujeran los efectos de sonido de NVDA al utilizar la accesibilidad remota.
+
 ### 3.3.8
 
 #### Windows
