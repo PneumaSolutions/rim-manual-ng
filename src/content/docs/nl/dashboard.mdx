@@ -18,7 +18,8 @@ Als je een netwerkbeheerder bent die RIM niet geïnstalleerd heeft, kun je gewoo
 Als u op de link "Doelen configureren" klikt, komt u op een pagina waarmee u alle machines kunt beheren die u hebt geconfigureerd voor onbeheerde toegang. U kunt op een van deze machines klikken om ze te beheren. Eenmaal binnen, zul je in staat zijn om:
 * De naam van het doel wijzigen
 * Het doel naar een andere groep verplaatsen (later meer over doelgroepen)
-* Het doel verwijderen
+* Een sessie op afstand met het doel starten
+* De target verwijderen
 
 ### Doelgroepen (voor Pro-accounts en hoger)
 
@@ -27,12 +28,12 @@ U kunt zoveel doelgroepen maken als nodig is voor uw toepassing.
 
 #### Toegangscontrole (voor bedrijfsorganisaties)
 
-Als je organisaties een supporttechnicus toewijzen aan een specifieke set machines, dan wil je er waarschijnlijk voor zorgen dat ze alleen toegang hebben tot die specifieke set. Dit is waar de instelling voor toegangsbeheer voor doelgroepen om de hoek komt kijken.  
+Als uw organisaties een supporttechnicus toewijzen aan een specifieke set machines, wilt u er waarschijnlijk voor zorgen dat ze alleen toegang hebben tot die specifieke set. Dit is waar de instelling voor toegangsbeheer voor doelgroepen om de hoek komt kijken.  
 Als je op een doelgroep klikt, krijg je opties om de machines in de groep en de groep zelf te beheren. In het gedeelte toegangsbeheer kun je per account toegang verlenen tot deze groep. Voer gewoon het e-mailadres in van de account die je wilt toevoegen en klik vervolgens op de knop "Toegang verlenen". Merk op dat deze account buiten het domein van je bedrijfsorganisatie kan bestaan.  
 Zodra je dit hebt gedaan, krijg je een tabel te zien met accounts die toegang hebben gekregen tot deze groep. Onder elke account staat een knop "Toegang intrekken". Deze knop vereist geen verdere bevestiging.  
-Merk op dat alle organisatiebeheerders automatisch toegang krijgen om alle groepen te beheren die onder de organisatie zijn aangemaakt.
+Alle organisatiebeheerders krijgen automatisch toegang om alle groepen te beheren die onder de organisatie zijn aangemaakt. Bovendien worden alle e-mailadressen onder de domeinen van je organisatie standaard toegevoegd aan je organisatie in RIM. Als je meer controle wilt over wie wordt toegevoegd, kun je dit uitschakelen in het hoofdledengedeelte van je organisatie. Bovendien kun je in het ledengedeelte e-mailadressen in bulk toevoegen door middel van komma's, spaties of regeleinden tussen de e-mailadressen.
 
-### Een vooraf geconfigureerd RIM-installatieprogramma instellen (Pro of hoger)
+### Een vooraf geconfigureerde RIM-installer instellen (Pro of hoger)
 
 Een van de gemakkelijkste manieren om een machine in te stellen voor onbeheerde of gevraagde verbindingen is door een aangepast installatieprogramma te maken. Dit is ongelooflijk handig als u massale implementaties configureert, of zelfs als een eenvoudigere manier om RIM aan de praat te krijgen op de computer van een eindgebruiker die u regelmatig wilt ondersteunen.
 
@@ -43,7 +44,7 @@ Om dit te doen:
 1. Er wordt gevraagd hoe lang deze installer geldig moet zijn. De geldigheidsduur kan variëren van 7 tot 30 dagen. Merk op dat dit tijdsbestek alleen invloed heeft op de functionaliteit van het installatiepakket. Met andere woorden, de RIM-configuratie van de machine wordt niet uitgeschakeld wanneer de installatie verloopt.
 1. Vervolgens krijg je de optie om een basenaam toe te wijzen. Aan elke machine die via dit installatiepakket wordt voorzien, wordt deze basenaam toegewezen.
 1. Vervolgens krijg je een selectievakje waarmee je kunt kiezen voor een e-mailmelding wanneer een gebruiker RIM installeert via dit installatiepakket.
-1. Als je een enterprisebeheerder bent, zie je een selectievakje waarmee je het installatieprogramma als een MSI-pakket kunt bouwen. Deze optie is handig voor massale implementatie van een aangepast installatieprogramma op een machinecluster dat wordt toegewezen aan de opgegeven doelgroep.
+1. Als je een enterprise admin bent, zie je een selectievakje waarmee je het installatieprogramma als een MSI-pakket kunt bouwen. Deze optie is handig voor massale implementatie van een aangepast installatieprogramma op een machinecluster dat wordt toegewezen aan de opgegeven doelgroep.
 1. Je wordt gevraagd om een installatienaam op te geven en optioneel enkele notities. Deze zijn voor interne doeleinden en verschijnen niet in het aangemaakte installatieprogramma.
 1. Klik op "Installer bouwen" Je krijgt de downloadlink te zien die je naar het klembord kunt kopiëren en naar je eindgebruiker kunt sturen. Je kunt het installatieprogramma ook rechtstreeks downloaden voor gebruik bij massale implementaties.
 
@@ -65,9 +66,11 @@ Een stille installatie kan worden gestart door het uitvoerbare installatieprogra
 
 U kunt uw volledige geschiedenis van eerdere sessies bekijken via het RIM dashboard. De sessiegeschiedenis bevat momenteel de datum en tijd van elke sessie, de naam van de computer waarmee je verbinding maakte en de duur van de sessie. Je kunt er ook voor kiezen om commentaar aan een sessie toe te voegen via de link "Commentaar toevoegen" in de sessierij. Dit is handig om notities toe te voegen over de huidige status van een incident, zowel voor jezelf als voor de beheerders van de organisatie.
 
-### Uw abonnement beheren (persoonlijke en Pro-abonnementen)
+Je volledige sessiegeschiedenis kan worden gedownload als een csv-dump om later te bekijken via een spreadsheetapplicatie.
 
-Via het dashboard kunt u gemakkelijk de details van uw RIM-abonnement bekijken en beheren. Als u op de link "Abonnement beheren" klikt, kunt u:
+### Uw abonnement beheren (persoonlijke en Pro-plannen)
+
+Via het dashboard kunt u gemakkelijk de details van uw RIM abonnement bekijken en beheren. Als u op de link "Abonnement beheren" klikt, kunt u:
 * Uw abonnement upgraden
 * Uw betalingsmethode bijwerken
 * Terugkerende betalingen annuleren

@@ -18,23 +18,24 @@ Si vous êtes un administrateur de réseau et que RIM n'est pas installé, vous 
 Lorsque vous cliquez sur le lien "Configure Targets", vous arrivez sur une page qui vous permet de gérer toutes les machines que vous avez configurées pour un accès sans surveillance. Vous pouvez cliquer sur n'importe laquelle de ces machines pour la gérer. Une fois à l'intérieur, vous pourrez
 * Renommer la cible
 * Déplacer la cible vers un groupe différent (plus d'informations sur les groupes de cibles ultérieurement)
+* Lancer une session à distance avec la cible
 * Supprimer la cible
 
 ### Groupes de cibles (pour les comptes Pro et supérieurs)
 
-Supposons que votre groupe de travail soit réparti sur plusieurs sites. Ou peut-être souhaitez-vous désigner des groupes de machines pour vos techniciens de maintenance de routine. Les groupes cibles vous permettent de le faire. Pour ce faire, il vous suffit de cliquer sur le bouton "Créer un groupe cible", de donner un nom à votre groupe et de valider.  
+Supposons que votre groupe de travail soit réparti sur plusieurs sites. Ou peut-être voulez-vous désigner des groupes de machines pour vos techniciens de maintenance de routine. Les groupes cibles vous permettent de le faire. Pour ce faire, il vous suffit de cliquer sur le bouton "Créer un groupe cible", de donner un nom à votre groupe et de valider.  
 Vous pouvez créer autant de groupes cibles que nécessaire pour votre cas d'utilisation. 
 
 #### Contrôle d'accès (pour les entreprises)
 
-Si votre organisation affecte un technicien d'assistance à un ensemble spécifique de machines, vous souhaitez probablement vous assurer qu'il n'a accès qu'à cet ensemble spécifique. C'est là qu'intervient le paramètre de contrôle d'accès pour les groupes cibles.  
+Si votre organisation affecte un technicien de support à un ensemble spécifique de machines, vous voudrez probablement vous assurer qu'il n'a accès qu'à cet ensemble spécifique. C'est là qu'intervient le paramètre de contrôle d'accès pour les groupes cibles.  
 Lorsque vous cliquez sur un groupe cible, vous disposez d'options pour gérer les machines du groupe, ainsi que le groupe lui-même. La section de contrôle d'accès vous permet d'accorder l'accès à ce groupe par compte. Saisissez simplement l'adresse électronique du compte que vous souhaitez ajouter, puis cliquez sur le bouton "Donner accès". Notez que ce compte peut exister en dehors du domaine de votre entreprise.  
 Une fois cette opération effectuée, un tableau des comptes auxquels l'accès à ce groupe a été accordé s'affiche. Sous chaque compte se trouve un bouton "Révoquer l'accès". Ce bouton ne nécessite pas de confirmation supplémentaire.  
-Il convient de noter que tous les administrateurs d'organisations se voient automatiquement accorder l'accès à la gestion de tous les groupes créés dans le cadre de l'organisation.
+Il convient de noter que tous les administrateurs d'organisations se voient automatiquement accorder l'accès à la gestion de tous les groupes créés dans le cadre de l'organisation. En outre, toutes les adresses électroniques des domaines de votre organisation seront ajoutées par défaut à votre organisation dans RIM. Si vous souhaitez exercer un contrôle plus précis sur les personnes qui sont intégrées, vous pouvez désactiver cette fonction dans la zone principale réservée aux membres de votre organisation. De plus, dans la zone réservée aux membres, vous pouvez ajouter des adresses électroniques en vrac en insérant des virgules, des espaces ou des sauts de ligne entre les adresses électroniques.
 
 ### Mise en place d'un installateur RIM préconfiguré (Pro ou supérieur)
 
-L'un des moyens les plus simples de configurer une machine pour des connexions sans surveillance ou assistées consiste à créer un programme d'installation personnalisé. Cette méthode est extrêmement utile si vous configurez des déploiements de masse, ou même comme moyen plus simple de faire fonctionner RIM sur l'ordinateur d'un utilisateur final pour lequel vous prévoyez de fournir une assistance régulière.
+L'une des façons les plus simples de configurer une machine pour des connexions sans surveillance ou assistées consiste à créer un programme d'installation personnalisé. Cette méthode est extrêmement utile si vous configurez des déploiements de masse, ou même comme moyen plus simple de faire fonctionner RIM sur l'ordinateur d'un utilisateur final pour lequel vous prévoyez de fournir une assistance régulière.
 
 Pour ce faire, il faut
 1. Dans l'écran de gestion des cibles, cliquez sur le bouton "Build Target Installer".
@@ -64,6 +65,8 @@ Une installation silencieuse peut être lancée en exécutant le programme d'ins
 ### Historique de la session
 
 Vous pouvez consulter l'historique complet de vos sessions passées dans le tableau de bord de RIM. L'historique des sessions contient actuellement la date et l'heure de chaque session, le nom de l'ordinateur auquel vous vous êtes connecté et la durée de la session. Vous pouvez également choisir d'ajouter des commentaires à une session en cliquant sur le lien "Ajouter un commentaire" dans la ligne de la session. Cette fonction est utile pour ajouter des notes sur l'état actuel d'un incident, tant pour vous que pour les administrateurs de l'organisation.
+
+L'ensemble de l'historique des sessions peut être téléchargé sous la forme d'un fichier csv afin d'être visualisé ultérieurement à l'aide d'un tableur.
 
 ### Gestion de votre abonnement (plans personnel et professionnel)
 

@@ -18,6 +18,7 @@ Om du är en nätverksadministratör som inte har RIM installerat kan du helt en
 När du klickar på länken "Configure Targets" kommer du till en sida där du kan hantera alla de maskiner som du har konfigurerat för obevakad åtkomst. Du kan klicka på vilken som helst av dessa maskiner för att hantera den. När du är inne kommer du att kunna:
 * Byta namn på målet
 * Flytta målet till en annan grupp (mer om målgrupper senare)
+* Starta en fjärrsession med målet
 * Ta bort målet
 
 ### Målgrupper (för Pro-konton och högre)
@@ -30,9 +31,9 @@ Du kan ha så många målgrupper som behövs för ditt användningsområde.
 Om din organisation tilldelar en supporttekniker en specifik uppsättning maskiner vill du förmodligen se till att de bara har åtkomst till den specifika uppsättningen. Det är här inställningen för åtkomstkontroll för målgrupper kommer in i bilden.  
 När du klickar på en målgrupp får du alternativ för att hantera maskinerna i gruppen, liksom själva gruppen. I avsnittet för åtkomstkontroll kan du ge åtkomst till den här gruppen per konto. Ange bara e-postadressen för det konto du vill lägga till och klicka sedan på knappen "Ge åtkomst". Observera att det här kontot kan finnas utanför din företagsorganisations domän.  
 När detta är gjort visas en tabell med konton som har åtkomst till den här gruppen. Under varje konto finns en knapp för "Återkalla åtkomst". Denna knapp kräver ingen ytterligare bekräftelse.  
-Det bör noteras att alla organisationsadministratörer automatiskt får tillgång till att hantera alla grupper som skapas under organisationen.
+Det bör noteras att alla organisationsadministratörer automatiskt beviljas åtkomst för att hantera alla grupper som skapas under organisationen. Dessutom kommer alla e-postadresser under din organisations domäner att läggas till din organisation i RIM som standard. Om du behöver mer detaljerad kontroll över vilka som läggs till kan du inaktivera detta i din organisations huvudmedlemsområde. När du är i medlemsområdet kan du dessutom lägga till e-postadresser i bulk med hjälp av kommatecken, mellanslag eller radbrytningar mellan e-postadresserna.
 
-### Ställa in en förkonfigurerad RIM Installer (Pro eller högre)
+### Konfigurera en förkonfigurerad RIM Installer (Pro eller högre)
 
 Ett av de enklaste sätten att konfigurera en maskin för obevakade eller uppmanade anslutningar är att skapa ett anpassat installationsprogram. Detta är otroligt användbart om du konfigurerar massdistributioner, eller till och med som ett enklare sätt att få igång RIM på en slutanvändares dator som du planerar att ge support för regelbundet.
 
@@ -64,6 +65,8 @@ En tyst installation kan initieras genom att köra det körbara installationspro
 ### Sessionshistorik
 
 Du kan visa hela din sessionshistorik via RIM:s instrumentpanel. Sessionshistoriken innehåller för närvarande datum och tid för varje session, namnet på den dator du anslöt till och hur länge sessionen varade. Du kan också välja att lägga till kommentarer till en session via länken "Lägg till kommentar" i sessionsraden. Detta är användbart för att lägga till anteckningar om den aktuella statusen för en incident för din egen skull såväl som för organisationsadministratörer.
+
+Hela din sessionshistorik kan laddas ner som en csv-dump för senare visning via ett kalkylbladsprogram.
 
 ### Hantera din prenumeration (Personlig och Pro-plan)
 

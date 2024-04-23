@@ -18,19 +18,20 @@ Se si è un amministratore di rete che non ha installato RIM, è sufficiente acc
 Facendo clic sul link "Configura obiettivi", si accede a una pagina che consente di gestire tutte le macchine configurate per l'accesso non presidiato. È possibile fare clic su una qualsiasi di queste macchine per gestirla. Una volta entrati, sarà possibile
 * Rinominare il target
 * Spostare il target in un gruppo diverso (maggiori informazioni sui gruppi di target in seguito)
+* Avviare una sessione remota con il target
 * Eliminare il target
 
 ### Gruppi di destinazione (per gli account Pro e superiori)
 
-Supponiamo, ad esempio, che il vostro gruppo di lavoro sia distribuito in diverse sedi. Oppure che si vogliano designare gruppi di macchine per i tecnici della manutenzione ordinaria. I gruppi di destinazione consentono di fare proprio questo. Per farlo, è sufficiente fare clic sul pulsante "Crea gruppo di destinazione", assegnare un nome al gruppo e inviare.  
+Supponiamo che il vostro gruppo di lavoro sia distribuito in diverse sedi. O forse si desidera designare gruppi di macchine per i tecnici della manutenzione ordinaria. I gruppi di destinazione consentono di fare proprio questo. Per farlo, è sufficiente fare clic sul pulsante "Crea gruppo di destinazione", assegnare un nome al gruppo e inviare.  
 È possibile creare tutti i gruppi di destinazione necessari per il proprio caso d'uso. 
 
 #### Controllo degli accessi (per le organizzazioni aziendali)
 
-Se le vostre organizzazioni assegnano un tecnico dell'assistenza a un gruppo specifico di macchine, probabilmente vorrete assicurarvi che abbia accesso solo a quel gruppo specifico. È qui che entra in gioco l'impostazione del controllo degli accessi per i gruppi di destinazione.  
-Facendo clic su un gruppo di destinazione, si ottengono le opzioni per gestire i computer del gruppo e il gruppo stesso. Nella sezione di controllo dell'accesso è possibile concedere l'accesso al gruppo in base all'account. È sufficiente inserire l'indirizzo e-mail dell'account che si desidera aggiungere, quindi fare clic sul pulsante "Dai accesso". Si noti che questo account può esistere al di fuori del dominio dell'organizzazione aziendale.  
+Se le organizzazioni assegnano un tecnico dell'assistenza a un gruppo specifico di macchine, probabilmente si vuole garantire che abbia accesso solo a quel gruppo specifico. È qui che entra in gioco l'impostazione del controllo degli accessi per i gruppi di destinazione.  
+Quando si fa clic su un gruppo di destinazione, vengono offerte le opzioni per gestire i computer del gruppo e il gruppo stesso. Nella sezione di controllo dell'accesso è possibile concedere l'accesso al gruppo in base all'account. È sufficiente inserire l'indirizzo e-mail dell'account che si desidera aggiungere, quindi fare clic sul pulsante "Dai accesso". Si noti che questo account può esistere al di fuori del dominio dell'organizzazione aziendale.  
 Una volta completata l'operazione, verrà presentata una tabella di account a cui è stato concesso l'accesso a questo gruppo. Sotto ogni account è presente il pulsante "Revoca accesso". Questo pulsante non richiede ulteriori conferme.  
-Si noti che a tutti gli amministratori dell'organizzazione viene automaticamente concesso l'accesso alla gestione di tutti i gruppi creati nell'ambito dell'organizzazione.
+Si noti che a tutti gli amministratori dell'organizzazione viene automaticamente concesso l'accesso alla gestione di tutti i gruppi creati nell'ambito dell'organizzazione. Inoltre, tutti gli indirizzi e-mail che rientrano nei domini dell'organizzazione saranno aggiunti all'organizzazione in RIM per impostazione predefinita. Se si desidera un controllo più granulare su chi viene aggiunto, è possibile disattivare questa opzione nell'area principale dei membri dell'organizzazione. Inoltre, nell'area membri è possibile aggiungere indirizzi e-mail in blocco inserendo virgole, spazi o interruzioni di riga tra gli indirizzi e-mail.
 
 ### Impostazione di un programma di installazione RIM preconfigurato (Pro o superiore)
 
@@ -65,9 +66,11 @@ L'utente può scegliere se rispondere sì o no all'installazione. Rispondendo no
 
 È possibile visualizzare l'intera cronologia delle sessioni passate attraverso il cruscotto di RIM. La cronologia delle sessioni contiene attualmente la data e l'ora di ogni sessione, il nome del computer a cui ci si è connessi e la durata della sessione. Si può anche scegliere di aggiungere commenti a una sessione tramite il link "Aggiungi commento" nella riga della sessione. Questo è utile per aggiungere note sullo stato attuale di un incidente, sia per sé che per gli amministratori dell'organizzazione.
 
+L'intera cronologia delle sessioni può essere scaricata come dump csv per una successiva visualizzazione tramite un foglio di calcolo.
+
 ### Gestione dell'abbonamento (piani Personal e Pro)
 
-La dashboard consente di visualizzare e gestire facilmente i dettagli dell'abbonamento RIM. Facendo clic sul link "Gestisci abbonamento", è possibile:
+Il cruscotto consente di visualizzare e gestire facilmente i dettagli dell'abbonamento RIM. Facendo clic sul link "Gestisci abbonamento", è possibile:
 * Aggiornare il proprio piano
 * Aggiornare il metodo di pagamento
 * Annullare i pagamenti ricorrenti
