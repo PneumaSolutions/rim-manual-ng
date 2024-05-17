@@ -6,16 +6,25 @@ import Windows from "~/components/platform/Windows.astro"
 import MacOS from "~/components/platform/MacOS.astro"
 
 RIM dispose d'un tableau de bord basé sur le web pour faciliter les différentes tâches de gestion des machines et des comptes. Vous pouvez gérer vos ordinateurs existants sans surveillance, créer des installateurs préconfigurés pour les ordinateurs cibles, et bien plus encore.  
-Il convient de noter que l'ensemble des fonctionnalités du tableau de bord dépend en grande partie de la catégorie d'abonnement à laquelle appartient votre compte. Par exemple, les utilisateurs professionnels peuvent affecter des machines à des groupes cibles et créer des programmes d'installation silencieux. D'autre part, tout le monde (y compris les utilisateurs personnels) peut créer des installateurs personnalisés pour leurs machines non surveillées.
+Il convient de noter que l'ensemble des fonctionnalités du tableau de bord dépend en grande partie de la catégorie d'abonnement à laquelle appartient votre compte. Par exemple, les utilisateurs professionnels peuvent affecter des machines à des groupes cibles et créer des programmes d'installation silencieux. D'autre part, tout le monde (y compris les utilisateurs personnels) peut créer des installateurs personnalisés pour leurs machines sans surveillance.
 
 ### Localisation du tableau de bord
 
 Si vous êtes un contrôleur, le moyen le plus simple d'accéder au tableau de bord est de passer par l'interface principale de RIM. En cliquant sur le bouton RIM Dashboard, vous ouvrirez automatiquement le tableau de bord dans votre navigateur par défaut, la connexion étant déjà prise en charge.  
 Si vous êtes un administrateur de réseau et que RIM n'est pas installé, vous pouvez simplement vous connecter à votre compte sur le site web de RIM et votre tableau de bord apparaîtra.
 
+### Gestion des membres de l'organisation (Entreprise)
+
+En activant le bouton "Organisation" sur le tableau de bord RIM, vous accédez à un menu d'options relatives à la gestion de l'organisation et des membres. La page "Membres" répertorie tous les membres de votre organisation. Tous les membres peuvent voir leur rôle et leur nom modifiés, et tout membre peut être retiré d'une organisation, à l'exception du propriétaire de l'organisation. Pour ajouter des membres, il suffit de saisir leur adresse électronique, de sélectionner leur rôle (utilisateur ou administrateur) et, éventuellement, de saisir leur nom.  
+Si vous devez ajouter plusieurs membres, vous pouvez utiliser le champ d'édition "Membres" pour effectuer un ajout groupé. Ce champ d'édition accepte plusieurs lignes de texte, ce qui vous permet de saisir les informations relatives à chaque membre sur une ligne distincte. Sur chaque ligne, vous pouvez saisir soit une seule adresse électronique, soit une adresse électronique et un nom au format :  
+*email@example.com John Doe*
+
+Une fois que vous avez terminé, cliquez sur le bouton "Ajouter". 
+
+
 ### Gestion des cibles
 
-Lorsque vous cliquez sur le lien "Configure Targets", vous arrivez sur une page qui vous permet de gérer toutes les machines que vous avez configurées pour un accès sans surveillance. Vous pouvez cliquer sur n'importe laquelle de ces machines pour la gérer. Une fois à l'intérieur, vous pourrez
+Lorsque vous cliquez sur le lien "Configurer les cibles", vous arrivez sur une page qui vous permet de gérer toutes les machines que vous avez configurées pour un accès sans surveillance. Vous pouvez cliquer sur n'importe laquelle de ces machines pour la gérer. Une fois à l'intérieur, vous pourrez
 * Renommer la cible
 * Déplacer la cible vers un groupe différent (plus d'informations sur les groupes de cibles ultérieurement)
 * Lancer une session à distance avec la cible

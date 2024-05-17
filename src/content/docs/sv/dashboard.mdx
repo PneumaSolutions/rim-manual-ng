@@ -5,82 +5,91 @@ title: Instrumentpanel för RIM-hantering
 import Windows from "~/components/platform/Windows.astro"
 import MacOS from "~/components/platform/MacOS.astro"
 
-RIM har en webbaserad instrumentpanel som underlättar olika maskin- och kontohanteringsuppgifter. Du kan hantera dina befintliga obevakade datorer, skapa förkonfigurerade installationsprogram för måldatorer och mycket mer.  
-Det bör noteras att funktionerna i instrumentpanelen till stor del beror på vilken prenumerationsnivå ditt konto är under. Företagsanvändare kan t.ex. tilldela maskiner till målgrupper och skapa tysta installationsprogram. Å andra sidan kan vem som helst (inklusive personliga användare) skapa anpassade installatörer för sina obevakade maskiner.
+RIM har en webbaserad instrumentpanel för att underlätta olika maskin- och kontohanteringsuppgifter. Du kan hantera dina befintliga obevakade datorer, skapa förkonfigurerade installationsprogram för måldatorer och mycket mer.  
+Det bör noteras att instrumentpanelens funktionsuppsättning till stor del beror på vilken prenumerationsnivå ditt konto är under. Företagsanvändare kan t.ex. tilldela maskiner till målgrupper och skapa tysta installatörer. Å andra sidan kan vem som helst (inklusive personliga användare) skapa anpassade installatörer för sina obevakade maskiner.
 
 ### Hitta instrumentpanelen
 
-Om du är styrenhet är det enklaste sättet att komma till instrumentpanelen via RIM:s huvudgränssnitt. Om du klickar på knappen RIM Dashboard öppnas instrumentpanelen automatiskt i din standardwebbläsare, med inloggningen redan klar.  
-Om du är en nätverksadministratör som inte har RIM installerat kan du helt enkelt logga in på ditt konto på RIM-webbplatsen så visas din instrumentpanel.
+Om du är en styrenhet är det enklaste sättet att komma till instrumentpanelen via RIM:s huvudgränssnitt. Om du klickar på knappen RIM Dashboard öppnas instrumentpanelen automatiskt i din standardwebbläsare, där inloggningen redan är klar.  
+Om du är en nätverksadministratör som inte har RIM installerat, kan du helt enkelt logga in på ditt konto på RIM-webbplatsen och din instrumentpanel kommer att visas.
 
-### Hantering av mål
+### Hantera organisationsmedlemmar (Enterprise)
 
-När du klickar på länken "Configure Targets" kommer du till en sida där du kan hantera alla de maskiner som du har konfigurerat för obevakad åtkomst. Du kan klicka på vilken som helst av dessa maskiner för att hantera den. När du är inne kommer du att kunna:
+Om du aktiverar knappen "Organisation" på RIM:s instrumentpanel visas en meny med alternativ som rör organisations- och medlemshantering. På sidan "Medlemmar" visas en lista över alla medlemmar i din organisation. Alla medlemmar kan få sin roll och sitt namn ändrade, och alla medlemmar kan tas bort från en organisation utom organisationens ägare. Att lägga till medlemmar är så enkelt som att ange deras e-postadress, välja deras roll (användare eller administratör) och eventuellt ange deras namn.  
+Om du har flera medlemmar att lägga till kan du använda redigeringsfältet "Members" för att göra ett masstillägg. Det här redigeringsfältet accepterar flera rader med text, så att du kan ange varje medlems information på en separat rad. På varje rad kan du ange antingen en enda e-postadress eller en e-postadress och ett namn i formatet:  
+*email@example.com John Doe*
+
+När du är klar klickar du på knappen "Lägg till". 
+
+
+### Hantera mål
+
+När du klickar på länken "Configure Targets" kommer du till en sida där du kan hantera alla de maskiner som du har konfigurerat för obevakad åtkomst. Du kan klicka på vilken som helst av dessa maskiner för att hantera den. När du väl är inne kan du göra följande:
 * Byta namn på målet
 * Flytta målet till en annan grupp (mer om målgrupper senare)
 * Starta en fjärrsession med målet
 * Ta bort målet
 
-### Målgrupper (för Pro-konton och högre)
+### Målgrupper (för Pro-konton och uppåt)
 
-Låt oss säga att din arbetsgrupp är utspridd på flera olika platser. Eller så kanske du vill tilldela grupper av maskiner till dina tekniker för rutinunderhåll. Med målgrupper kan du göra just detta. För att göra detta klickar du helt enkelt på knappen "Skapa målgrupp", namnger din grupp och skickar in.  
-Du kan ha så många målgrupper som behövs för ditt användningsområde. 
+Säg till exempel att din arbetsgrupp är utspridd på flera olika platser. Eller så kanske du vill utse grupper av maskiner till dina rutinmässiga underhållstekniker. Med målgrupper kan du göra just det. För att göra detta klickar du helt enkelt på knappen "Skapa målgrupp", namnger din grupp och skickar in.  
+Du kan ha så många målgrupper som behövs för ditt användningsfall. 
 
 #### Åtkomstkontroll (för företagsorganisationer)
 
-Om din organisation tilldelar en supporttekniker en specifik uppsättning maskiner vill du förmodligen se till att de bara har åtkomst till den specifika uppsättningen. Det är här inställningen för åtkomstkontroll för målgrupper kommer in i bilden.  
-När du klickar på en målgrupp får du alternativ för att hantera maskinerna i gruppen, liksom själva gruppen. I avsnittet för åtkomstkontroll kan du ge åtkomst till den här gruppen per konto. Ange bara e-postadressen för det konto du vill lägga till och klicka sedan på knappen "Ge åtkomst". Observera att det här kontot kan finnas utanför din företagsorganisations domän.  
-När detta är gjort visas en tabell med konton som har åtkomst till den här gruppen. Under varje konto finns en knapp för "Återkalla åtkomst". Denna knapp kräver ingen ytterligare bekräftelse.  
-Det bör noteras att alla organisationsadministratörer automatiskt beviljas åtkomst för att hantera alla grupper som skapas under organisationen. Dessutom kommer alla e-postadresser under din organisations domäner att läggas till din organisation i RIM som standard. Om du behöver mer detaljerad kontroll över vilka som läggs till kan du inaktivera detta i din organisations huvudmedlemsområde. När du är i medlemsområdet kan du dessutom lägga till e-postadresser i bulk med hjälp av kommatecken, mellanslag eller radbrytningar mellan e-postadresserna.
+Om din organisation tilldelar en supporttekniker en viss uppsättning maskiner vill du förmodligen se till att de bara har åtkomst till den specifika uppsättningen. Det är här inställningen för åtkomstkontroll för målgrupper kommer in i bilden.  
+När du klickar på en målgrupp får du alternativ för att hantera maskinerna i gruppen samt själva gruppen. I avsnittet för åtkomstkontroll kan du ge åtkomst till den här gruppen per konto. Ange bara e-postadressen för det konto som du vill lägga till och klicka sedan på knappen "Ge åtkomst". Observera att det här kontot kan finnas utanför din företagsorganisations domän.  
+När detta är gjort visas en tabell med konton som har tillgång till den här gruppen. Under varje konto finns en "Revoke Access"-knapp. Denna knapp kräver ingen ytterligare bekräftelse.  
+Det bör noteras att alla organisationsadministratörer automatiskt ges åtkomst till att hantera alla grupper som skapas under organisationen. Dessutom kommer alla e-postadresser under din organisations domäner att läggas till din organisation i RIM som standard. Om du behöver mer detaljerad kontroll över vem som blir ombord, kan du inaktivera detta i din organisations huvudmedlemsområde. När du är i medlemsområdet kan du dessutom lägga till e-postadresser i bulk med hjälp av kommatecken, mellanslag eller radbrytningar mellan e-postadresserna.
 
 ### Konfigurera en förkonfigurerad RIM Installer (Pro eller högre)
 
-Ett av de enklaste sätten att konfigurera en maskin för obevakade eller uppmanade anslutningar är att skapa ett anpassat installationsprogram. Detta är otroligt användbart om du konfigurerar massdistributioner, eller till och med som ett enklare sätt att få igång RIM på en slutanvändares dator som du planerar att ge support för regelbundet.
+Ett av de enklaste sätten att ställa in en maskin för obevakade eller uppmanade anslutningar är genom att skapa en anpassad installation. Detta är otroligt användbart om du konfigurerar massdistributioner, eller till och med som ett enklare sätt att få RIM igång på en slutanvändares dator som du planerar att ge support för regelbundet.
 
 FÖR att göra detta:
-1. Klicka på knappen "Build Target Installer" på skärmen för målhantering.
-1. Du kommer först att få frågan om du vill att maskinen ska konfigureras för helt obevakad åtkomst, eller för uppmanad åtkomst där användaren måste acceptera en uppmaning för att initiera anslutningen.
-1. Du kommer sedan att bli ombedd att ange en målgrupp. Observera att målgruppsvalet automatiskt kommer att gå till din valda målgrupp om du initierar installationsprogrammets konfiguration från din grupps sida.
-1. Du kommer att bli tillfrågad om hur länge du vill att installationsprogrammet ska vara giltigt. Den kan vara giltig i mellan 7 och 30 dagar. Observera att denna tidsram endast påverkar installationspaketets funktionalitet. Med andra ord kommer maskinens RIM-konfiguration inte att inaktiveras när installationen löper ut.
-1. Du får sedan möjlighet att tilldela ett basnamn. Alla maskiner som tillhandahålls via det här installationspaketet kommer att tilldelas detta basnamn.
-1. Du får sedan en kryssruta där du kan välja att få ett e-postmeddelande när en användare installerar RIM via det här installationsprogrammet.
-1. Om du är en företagsadministratör kommer du att se en kryssruta som låter dig bygga installationsprogrammet som ett MSI-paket. Det här alternativet är användbart för massdistribution av ett anpassat installationsprogram till ett maskinkluster som kommer att tilldelas den givna målgruppen.
-1. Du kommer att bli ombedd att ange ett namn på installationsprogrammet, och eventuellt några anteckningar. Dessa är för internt bruk och kommer inte att visas i det skapade installationsprogrammet.
-1. Klicka på "Bygg installationsprogrammet" Du kommer att se nedladdningslänken som du antingen kan kopiera till urklipp och skicka till din slutanvändare. Alternativt kan du ladda ner installationsprogrammet direkt för användning i massdistributioner.
+1. Klicka på knappen "Build Target Installer" i målhanteringsfönstret.
+1. Du kommer först att få frågan om du vill att maskinen ska konfigureras för helt obevakad åtkomst eller för uppmanad åtkomst, där användaren måste acceptera en uppmaning för att initiera anslutningen.
+1. Du kommer sedan att bli ombedd att ange en målgrupp. Observera att målgruppsvalet automatiskt går till din valda målgrupp om du initierar installationsprogrammets konfiguration från din grupps sida.
+1. Du kommer att bli tillfrågad hur länge du vill att installationsprogrammet ska vara giltigt. Den kan vara giltig i allt mellan 7 och 30 dagar. Observera att den här tidsramen endast påverkar installationspaketets funktionalitet. Med andra ord kommer maskinens RIM-konfiguration inte att inaktiveras när installationen löper ut.
+1. Du får sedan möjlighet att tilldela ett basnamn. Alla maskiner som provisioneras via detta installationspaket kommer att tilldelas detta basnamn.
+1. Du kommer sedan att presenteras med en kryssruta som låter dig välja en e-postavisering när en användare installerar RIM via detta installationsprogram.
+1. Om du är företagsadministratör kommer du att se en kryssruta som gör att du kan bygga installationsprogrammet som ett MSI-paket. Det här alternativet är användbart för massdistribution av ett anpassat installationsprogram till ett maskinkluster som kommer att utses till den angivna målgruppen.
+1. Du kommer att bli ombedd att ange ett namn på installationsprogrammet och eventuellt några anteckningar. Dessa är för interna register och kommer inte att visas i det skapade installationsprogrammet.
+1. Klicka på "Build Installer" Du kommer att få en nedladdningslänk som du antingen kan kopiera till urklipp och skicka till slutanvändaren. Alternativt kan du ladda ner installationsprogrammet direkt för att använda det vid massdistributioner.
 
-Nu när du har ditt installationsprogram kan det köras på ett av två sätt. I båda fallen kommer maskinen att läggas till i listan över maskiner i både ditt konto och RIM-klienten när installationsprogrammet är klart.
+Nu när du har ditt installationsprogram kan det köras på ett av två sätt. I båda fallen kommer maskinen att läggas till i din lista över maskiner i både ditt konto och RIM-klienten efter att installationsprogrammet har slutförts.
 
-#### Normal körning
+#### Normal exekvering
 
-Användaren får ett meddelande när installationsprogrammet körs, med följande information:
+Användaren får en prompt när installationsprogrammet körs, som innehåller följande information:
 * Teknikerns namn tillsammans med deras organisation, om tillämpligt
-* typ av anslutning, dvs. om en prompt krävs eller inte
+* anslutningens art, dvs. om en prompt krävs eller inte
 
-Användaren kan välja att antingen svara ja eller nej till installationen. Om användaren svarar nej avbryts installationen. När installationen är klar kommer användaren att få ett meddelande om att maskinen nu är konfigurerad för fjärråtkomst.
+Användaren kan välja att antingen svara ja eller nej till installationen. Om du svarar nej avbryts installationen. När installationsprogrammet är klart får användaren ett meddelande om att maskinen nu är konfigurerad för fjärråtkomst.
 
-#### Silent Install (endast Enterprise-installatörer)
+#### Tyst installation (endast Enterprise-installatörer)
 
 En tyst installation kan initieras genom att köra det körbara installationsprogrammet med kommandoradsparametern */S*. Detta är användbart när du installerar RIM som en del av en massdistributionsrutin.
 
 ### Sessionshistorik
 
-Du kan visa hela din sessionshistorik via RIM:s instrumentpanel. Sessionshistoriken innehåller för närvarande datum och tid för varje session, namnet på den dator du anslöt till och hur länge sessionen varade. Du kan också välja att lägga till kommentarer till en session via länken "Lägg till kommentar" i sessionsraden. Detta är användbart för att lägga till anteckningar om den aktuella statusen för en incident för din egen skull såväl som för organisationsadministratörer.
+Du kan visa hela din historik över tidigare sessioner via RIM:s instrumentpanel. Sessionshistoriken innehåller för närvarande datum och tid för varje session, namnet på den dator som du anslöt till och sessionens varaktighet. Du kan också välja att lägga till kommentarer till en session via länken "Lägg till kommentar" i sessionsraden. Detta är användbart för att lägga till anteckningar om den aktuella statusen för en incident, både för din egen skull och för organisationsadministratörernas skull.
 
 Hela din sessionshistorik kan laddas ner som en csv-dump för senare visning via ett kalkylbladsprogram.
 
-### Hantera din prenumeration (Personlig och Pro-plan)
+### Hantera din prenumeration (Personal- och Pro-planer)
 
-I instrumentpanelen kan du enkelt visa och hantera uppgifter om din RIM-prenumeration. När du klickar på länken "Hantera prenumeration" kan du:
+Instrumentpanelen gör att du enkelt kan visa och hantera dina RIM-prenumerationsdetaljer. Genom att klicka på länken "Hantera prenumeration" kan du:
 * Uppgradera din plan
 * Uppdatera din betalningsmetod
-* Avbryt återkommande betalningar
+* Avbryta återkommande betalningar
 
 #### Uppgradera din plan
 
-Du kan enkelt uppgradera din prenumeration. Om du har en månatlig plan kommer du att debiteras den återstående avgiften proportionellt från det nya beloppet, och hela det nya beloppet debiteras för efterföljande månader. Om du klickar på "Uppgradera abonnemang" visas en sida som är nästan identisk med den första sidan för val av abonnemang. Det finns några anmärkningsvärda skillnader som vi kommer att beskriva nedan:
-* Du kan inte nedgradera din plan till en plan med färre maskiner. Du kan dock uppgradera från en månads- till en årsplan med samma antal maskiner som din nuvarande plan. För att nedgradera måste du säga upp din plan, vänta på att den löper ut och sedan initiera en ny plan med färre maskiner.
-* Företagsplaner, inklusive företagstillägget, kan inte förvärvas direkt via denna sida.
+Du kan enkelt uppgradera din prenumeration. Om du har ett månadsabonnemang kommer du att få en proportionell del av den återstående avgiften från det nya beloppet, och hela det nya beloppet kommer att debiteras för efterföljande månader. Om du klickar på "Upgrade Subscription" visas en sida som är nästan identisk med den ursprungliga sidan för val av abonnemang. Det finns några anmärkningsvärda skillnader som vi kommer att beskriva nedan:
+* Du kan inte nedgradera din plan till en plan med färre maskiner. Du kan dock uppgradera från en månadsplan till en årsplan med samma antal maskiner som din nuvarande plan. För att nedgradera måste du säga upp din plan, vänta tills den löper ut och sedan starta en ny plan med färre maskiner.
+* Enterprise-planer, inklusive Enterprise Addon, kan inte förvärvas direkt via den här sidan.
 
-#### Annullera återkommande betalningar
+#### Annullering av återkommande betalningar
 
-När du klickar på "Avbryt automatisk förnyelse" kommer du att bli ombedd att bekräfta, varefter din prenumeration kommer att upphöra att gälla i slutet av den aktuella perioden.
+När du klickar på "Avbryt automatisk förnyelse" kommer du att bli ombedd att bekräfta, varefter din prenumeration kommer att ställas in för att upphöra i slutet av den aktuella perioden.
