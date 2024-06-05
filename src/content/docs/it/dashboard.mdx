@@ -10,21 +10,35 @@ Va notato che le funzionalità del dashboard dipendono in larga misura dal livel
 
 ### Individuazione della Dashboard
 
-Se si è un controller, il modo più semplice per raggiungere la dashboard è attraverso l'interfaccia principale di RIM. Facendo clic sul pulsante RIM Dashboard si aprirà automaticamente la dashboard nel browser predefinito, con il login già effettuato.  
+Se si è un controllore, il modo più semplice per raggiungere la dashboard è attraverso l'interfaccia principale di RIM. Facendo clic sul pulsante RIM Dashboard si aprirà automaticamente la dashboard nel browser predefinito, con il login già effettuato.  
 Se siete un amministratore di rete che non ha installato RIM, potete semplicemente accedere al vostro account sul sito web di RIM e la vostra dashboard apparirà.
 
 ### Gestione dei membri dell'organizzazione (Enterprise)
 
-Attivando il pulsante "Organizzazione" sulla dashboard RIM, si aprirà un menu di opzioni relative all'organizzazione e alla gestione dei membri. La pagina "Membri" elenca tutti i membri dell'organizzazione. Tutti i membri possono essere modificati nel ruolo e nel nome e tutti i membri possono essere rimossi da un'organizzazione, tranne il proprietario dell'organizzazione. Per aggiungere un membro è sufficiente inserire il suo indirizzo e-mail, selezionare il suo ruolo (utente o amministratore) e, facoltativamente, inserire il suo nome.  
+Attivando il pulsante "Organizzazione" sulla dashboard RIM, si aprirà un menu di opzioni relative all'organizzazione e alla gestione dei membri. La pagina "Membri" elenca tutti i membri dell'organizzazione. Tutti i membri possono essere modificati nel ruolo, nel reparto e nel nome e qualsiasi membro può essere rimosso da un'organizzazione, ad eccezione del proprietario dell'organizzazione. Per aggiungere un membro è sufficiente inserire il suo indirizzo e-mail, selezionare il suo ruolo (utente o amministratore), inserire facoltativamente il suo nome e selezionare il suo dipartimento, se è stato creato.  
 Se si devono aggiungere più membri, è possibile utilizzare il campo di modifica "Membri" per eseguire un'aggiunta in blocco. Questo campo di modifica accetta più righe di testo, consentendo di inserire le informazioni di ciascun membro su una riga separata. Su ogni riga è possibile inserire un singolo indirizzo e-mail o un indirizzo e-mail e un nome nel formato:  
 *email@example.com John Doe*
 
 Al termine, fare clic sul pulsante "Aggiungi". 
 
+#### Reparti
+
+I dipartimenti consentono di organizzare i membri in base ai vari gruppi dell'organizzazione.
+
+Per aggiungere un reparto, inserire il suo nome nella casella di modifica "Nome" sotto la voce "Crea reparto".
+
+#### Esportazione dei dati dei soci
+
+L'elenco dei membri dell'organizzazione può essere esportato come file CSV. Per scaricare l'esportazione:
+1. Scegliere il separatore di campo che separerà le colonne del file. Le opzioni disponibili sono:
+    * virgola
+    * Punto e virgola
+    * Tab
+1. Attivare il pulsante "Download".
 
 ### Gestione degli obiettivi
 
-Facendo clic sul link "Configura obiettivi", si accede a una pagina che consente di gestire tutte le macchine configurate per l'accesso non presidiato. È possibile fare clic su una qualsiasi macchina per gestirla. Una volta entrati, sarà possibile
+Facendo clic sul link "Configura obiettivi", si accede a una pagina che consente di gestire tutte le macchine configurate per l'accesso non presidiato. È possibile fare clic su una qualsiasi di queste macchine per gestirla. Una volta entrati, sarà possibile
 * Rinominare il target
 * Spostare il target in un gruppo diverso (maggiori informazioni sui gruppi di target in seguito)
 * Avviare una sessione remota con il target
@@ -87,7 +101,7 @@ Il cruscotto consente di visualizzare e gestire facilmente i dettagli dell'abbon
 #### Aggiornamento del piano
 
 È possibile aggiornare facilmente il proprio abbonamento. Se avete un piano mensile, vi verrà addebitato il costo residuo del nuovo importo, mentre l'intero importo verrà addebitato per i mesi successivi. Facendo clic su "Aggiorna abbonamento" si apre una pagina quasi identica a quella di selezione del piano iniziale. Ci sono alcune differenze degne di nota che illustreremo di seguito:
-* Non è possibile effettuare il downgrade a un piano con meno macchine. È invece possibile passare da un piano mensile a uno annuale con lo stesso numero di macchine del piano attuale. Per effettuare il downgrade, è necessario annullare il piano, attendere la sua scadenza e avviare un nuovo piano con un numero inferiore di macchine.
+* Non è possibile effettuare il downgrade a un piano con meno macchine. È tuttavia possibile passare da un piano mensile a uno annuale con lo stesso numero di macchine del piano attuale. Per effettuare il downgrade, è necessario annullare il piano, attendere la sua scadenza e avviare un nuovo piano con un numero inferiore di macchine.
 * I piani Enterprise, compreso l'addon Enterprise, non possono essere acquistati direttamente da questa pagina.
 
 #### Annullamento dei pagamenti ricorrenti

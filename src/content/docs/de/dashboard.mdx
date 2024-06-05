@@ -15,12 +15,26 @@ Wenn Sie ein Netzwerkadministrator sind, der RIM nicht installiert hat, können 
 
 ### Verwaltung von Organisationsmitgliedern (Unternehmen)
 
-Wenn Sie die Schaltfläche "Organisation" auf dem RIM-Dashboard aktivieren, wird ein Menü mit Optionen für die Verwaltung von Organisationen und Mitgliedern angezeigt. Auf der Seite "Mitglieder" werden alle Mitglieder Ihrer Organisation aufgelistet. Alle Mitglieder können ihre Rolle und ihren Namen ändern, und jedes Mitglied kann aus einer Organisation entfernt werden, mit Ausnahme des Eigentümers der Organisation. Das Hinzufügen von Mitgliedern ist so einfach wie die Eingabe ihrer E-Mail-Adresse, die Auswahl ihrer Rolle (Benutzer oder Administrator) und optional die Eingabe ihres Namens.  
-Wenn Sie mehrere Mitglieder hinzufügen möchten, können Sie das Bearbeitungsfeld "Mitglieder" verwenden, um eine Massenaufnahme durchzuführen. Dieses Feld kann mehrere Textzeilen aufnehmen, so dass Sie die Informationen zu jedem Mitglied in eine eigene Zeile eingeben können. In jeder Zeile können Sie entweder eine einzelne E-Mail-Adresse oder eine E-Mail-Adresse und einen Namen in dem Format eingeben:  
+Wenn Sie die Schaltfläche "Organisation" auf dem RIM-Dashboard aktivieren, wird ein Menü mit Optionen für die Verwaltung von Organisationen und Mitgliedern angezeigt. Auf der Seite "Mitglieder" werden alle Mitglieder Ihrer Organisation aufgelistet. Alle Mitglieder können ihre Rolle, Abteilung und ihren Namen ändern, und jedes Mitglied kann aus einer Organisation entfernt werden, mit Ausnahme des Eigentümers der Organisation. Das Hinzufügen von Mitgliedern ist so einfach wie das Eingeben ihrer E-Mail-Adresse, das Auswählen ihrer Rolle (Benutzer oder Administrator), das optionale Eingeben ihres Namens und das Auswählen ihrer Abteilung, falls eine solche angelegt wurde.  
+Wenn Sie mehrere Mitglieder hinzufügen möchten, können Sie das Bearbeitungsfeld "Mitglieder" verwenden, um eine Massenaddition durchzuführen. Dieses Feld kann mehrere Textzeilen enthalten, so dass Sie die Informationen zu jedem Mitglied in eine eigene Zeile eingeben können. In jeder Zeile können Sie entweder eine einzelne E-Mail-Adresse oder eine E-Mail-Adresse und einen Namen in dem Format eingeben:  
 *email@example.com Unbekannter*
 
 Wenn Sie fertig sind, klicken Sie auf die Schaltfläche "Hinzufügen". 
 
+#### Abteilungen
+
+Abteilungen ermöglichen es Ihnen, Mitglieder nach den verschiedenen Gruppen Ihrer Organisation zu organisieren.
+
+Um eine Abteilung hinzuzufügen, geben Sie ihren Namen in das Eingabefeld "Name" unter der Überschrift "Abteilung erstellen" ein.
+
+#### Mitgliederdaten exportieren
+
+Die Mitgliederliste in Ihrer Organisation kann als CSV-Datei exportiert werden. Um den Export herunterzuladen:
+1. Wählen Sie das Feldtrennzeichen, das die Spalten der Datei trennen soll. Die verfügbaren Optionen sind:
+    * komma
+    * Semikolon
+    * Tabulator
+1. Aktivieren Sie die Schaltfläche "Herunterladen".
 
 ### Ziele verwalten
 
@@ -37,7 +51,7 @@ Sie können so viele Zielgruppen erstellen, wie Sie für Ihren Anwendungsfall be
 
 #### Zugriffskontrolle (für Unternehmensorganisationen)
 
-Wenn Ihr Unternehmen einen Supporttechniker einer bestimmten Gruppe von Rechnern zuweist, möchten Sie wahrscheinlich sicherstellen, dass er nur auf diese bestimmte Gruppe Zugriff hat. Hier kommt die Zugriffskontrolle für Zielgruppen ins Spiel.  
+Wenn in Ihrem Unternehmen ein Supporttechniker einer bestimmten Gruppe von Rechnern zugewiesen wird, möchten Sie wahrscheinlich sicherstellen, dass er nur auf diese bestimmte Gruppe Zugriff hat. Hier kommt die Zugriffskontrolle für Zielgruppen ins Spiel.  
 Wenn Sie auf eine Zielgruppe klicken, erhalten Sie Optionen zur Verwaltung der Maschinen in der Gruppe sowie der Gruppe selbst. Im Abschnitt "Zugriffskontrolle" können Sie den Zugriff auf diese Gruppe für einzelne Konten gewähren. Geben Sie einfach die E-Mail-Adresse des Kontos ein, das Sie hinzufügen möchten, und klicken Sie dann auf die Schaltfläche "Zugriff gewähren". Beachten Sie, dass dieses Konto außerhalb der Domäne Ihrer Unternehmensorganisation existieren kann.  
 Danach wird eine Tabelle mit den Konten angezeigt, die Zugriff auf diese Gruppe haben. Unter jedem Konto befindet sich eine Schaltfläche "Zugriff widerrufen". Für diese Schaltfläche ist keine weitere Bestätigung erforderlich.  
 Es ist zu beachten, dass alle Organisationsadministratoren automatisch Zugriff auf die Verwaltung aller Gruppen erhalten, die unter der Organisation erstellt werden. Außerdem werden alle E-Mail-Adressen, die unter den Domänen Ihrer Organisation liegen, standardmäßig zu Ihrer Organisation in RIM hinzugefügt. Wenn Sie eine genauere Kontrolle darüber wünschen, wer in die Organisation aufgenommen wird, können Sie dies im Hauptmitgliederbereich Ihrer Organisation deaktivieren. Darüber hinaus können Sie im Mitgliederbereich E-Mail-Adressen in großen Mengen hinzufügen, indem Sie Kommas, Leerzeichen oder Zeilenumbrüche zwischen die E-Mail-Adressen setzen.
@@ -75,19 +89,19 @@ Eine stille Installation kann durch Ausführen des ausführbaren Installationspr
 
 Über das RIM-Dashboard können Sie den gesamten Verlauf Ihrer vergangenen Sitzungen einsehen. Der Sitzungsverlauf enthält derzeit das Datum und die Uhrzeit jeder Sitzung, den Namen des Computers, mit dem Sie verbunden waren, und die Dauer der Sitzung. Über den Link "Kommentar hinzufügen" in der Sitzungszeile können Sie außerdem Kommentare zu einer Sitzung hinzufügen. Dies ist nützlich, um Notizen zum aktuellen Status eines Vorfalls sowohl für Sie selbst als auch für die Administratoren der Organisation hinzuzufügen.
 
-Ihr gesamter Sitzungsverlauf kann zur späteren Ansicht über eine Tabellenkalkulationsanwendung exportiert werden. Aktivieren Sie die Schaltfläche "Sitzungsverlauf als CSV herunterladen", die sich unter der Tabelle des Sitzungsverlaufs befindet, um eine Anpassungsseite für Ihren Datenexport zu öffnen. Auf dieser Seite können Sie die Zeitspanne für den Export sowie das Symbol zur Trennung der Felder auswählen.
+Ihr gesamter Sitzungsverlauf kann zur späteren Betrachtung über eine Tabellenkalkulationsanwendung exportiert werden. Aktivieren Sie die Schaltfläche "Sitzungsverlauf als CSV herunterladen", die sich unter der Tabelle des Sitzungsverlaufs befindet, um eine Anpassungsseite für den Datenexport zu öffnen. Auf dieser Seite können Sie die Zeitspanne des Exports sowie das Symbol zur Trennung der Felder auswählen.
 
 ### Verwaltung Ihres Abonnements (Personal und Pro Plans)
 
 Über das Dashboard können Sie die Details Ihres RIM-Abonnements einfach einsehen und verwalten. Wenn Sie auf den Link "Abonnement verwalten" klicken, können Sie:
-* Ihr Abonnement aktualisieren
+* Ihr Abo upgraden
 * Ihre Zahlungsmethode aktualisieren
 * Wiederkehrende Zahlungen stornieren
 
 #### Ihr Abonnement aufwerten
 
-Sie können Ihr Abonnement ganz einfach aktualisieren. Wenn Sie ein Monatsabonnement haben, wird Ihnen der verbleibende Betrag des neuen Abonnements anteilig berechnet, während für die folgenden Monate der volle neue Betrag berechnet wird. Wenn Sie auf "Abonnement aktualisieren" klicken, öffnet sich eine Seite, die fast identisch ist mit der Seite zur Auswahl des ursprünglichen Tarifs. Es gibt ein paar bemerkenswerte Unterschiede, die wir im Folgenden erläutern:
-* Sie können Ihren Tarif nicht auf einen Tarif mit weniger Rechnern herabstufen. Sie können jedoch von einem Monatstarif auf einen Jahrestarif mit der gleichen Anzahl von Rechnern wie Ihr aktueller Tarif umsteigen. Um ein Downgrade vorzunehmen, müssen Sie Ihren Plan kündigen, dessen Ablauf abwarten und dann einen neuen Plan mit weniger Rechnern abschließen.
+Sie können Ihr Abonnement ganz einfach aktualisieren. Wenn Sie ein Monatsabonnement haben, wird Ihnen der verbleibende Betrag des neuen Abonnements anteilig berechnet, während für die folgenden Monate der volle neue Betrag berechnet wird. Wenn Sie auf "Abonnement aktualisieren" klicken, öffnet sich eine Seite, die fast identisch ist mit der Seite zur Auswahl des ursprünglichen Tarifs. Es gibt jedoch ein paar bemerkenswerte Unterschiede, die wir im Folgenden erläutern werden:
+* Sie können Ihr Abo nicht auf ein Abo mit weniger Rechnern herabstufen. Sie können jedoch von einem Monatstarif auf einen Jahrestarif mit der gleichen Anzahl von Rechnern wie Ihr aktueller Tarif umsteigen. Um ein Downgrade vorzunehmen, müssen Sie Ihren Plan kündigen, dessen Ablauf abwarten und dann einen neuen Plan mit weniger Rechnern abschließen.
 * Enterprise-Tarife, einschließlich des Enterprise-Addons, können nicht direkt über diese Seite erworben werden.
 
 #### Stornierung wiederkehrender Zahlungen

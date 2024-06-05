@@ -1,5 +1,5 @@
 ---
-title: Instrumentpanel för RIM-hantering
+title: Instrumentpanelen för RIM-hantering
 ---
 
 import Windows from "~/components/platform/Windows.astro"
@@ -15,12 +15,26 @@ Om du är en nätverksadministratör som inte har RIM installerat, kan du helt e
 
 ### Hantera organisationsmedlemmar (Enterprise)
 
-Om du aktiverar knappen "Organisation" på RIM:s instrumentpanel visas en meny med alternativ som rör organisations- och medlemshantering. På sidan "Medlemmar" visas en lista över alla medlemmar i din organisation. Alla medlemmar kan få sin roll och sitt namn ändrade, och alla medlemmar kan tas bort från en organisation utom organisationens ägare. Att lägga till medlemmar är så enkelt som att ange deras e-postadress, välja deras roll (användare eller administratör) och eventuellt ange deras namn.  
-Om du har flera medlemmar att lägga till kan du använda redigeringsfältet "Members" för att göra ett masstillägg. Det här redigeringsfältet accepterar flera rader med text, så att du kan ange varje medlems information på en separat rad. På varje rad kan du ange antingen en enda e-postadress eller en e-postadress och ett namn i formatet:  
+Om du aktiverar knappen "Organisation" på RIM:s instrumentpanel visas en meny med alternativ som rör organisations- och medlemshantering. På sidan "Medlemmar" visas en lista över alla medlemmar i din organisation. Alla medlemmar kan få sin roll, avdelning och namn ändrade, och alla medlemmar kan tas bort från en organisation utom organisationens ägare. Att lägga till medlemmar är så enkelt som att ange deras e-postadress, välja deras roll (användare eller administratör), valfritt ange deras namn och välja deras avdelning om en sådan har skapats.  
+Om du har flera medlemmar att lägga till kan du använda redigeringsfältet "Members" för att göra ett masstillägg. Detta redigeringsfält accepterar flera textrader, vilket gör att du kan ange varje medlems information på en separat rad. På varje rad kan du ange antingen en enda e-postadress eller en e-postadress och ett namn i formatet:  
 *email@example.com John Doe*
 
 När du är klar klickar du på knappen "Lägg till". 
 
+#### Avdelningar
+
+Med hjälp av avdelningar kan du organisera medlemmarna efter de olika grupperna i din organisation.
+
+Du lägger till en avdelning genom att ange dess namn i redigeringsrutan "Namn" under rubriken "Skapa avdelning".
+
+#### Export av medlemsdata
+
+Medlemslistan i din organisation kan exporteras som en CSV-fil. För att ladda ner exporten:
+1. Välj den fältavskiljare som ska separera kolumnerna i filen. De tillgängliga alternativen inkluderar:
+    * komma
+    * Semikolon
+    * Flik
+1. Aktivera knappen "Ladda ner".
 
 ### Hantera mål
 
@@ -75,11 +89,11 @@ En tyst installation kan initieras genom att köra det körbara installationspro
 
 Du kan visa hela din historik över tidigare sessioner via RIM:s instrumentpanel. Sessionshistoriken innehåller för närvarande datum och tid för varje session, namnet på den dator som du anslöt till och sessionens varaktighet. Du kan också välja att lägga till kommentarer till en session via länken "Lägg till kommentar" i sessionsraden. Detta är användbart för att lägga till anteckningar om den aktuella statusen för en incident, både för din egen skull och för organisationsadministratörernas skull.
 
-Hela din sessionshistorik kan exporteras för senare visning via ett kalkylbladsprogram. Aktivera knappen "Ladda ner sessionshistorik som CSV" under tabellen med sessionshistorik för att öppna en anpassningssida för din dataexport. På den här sidan kan du välja tidsintervall för exporten samt vilken symbol som ska användas för att separera fälten.
+Hela din sessionshistorik kan exporteras för senare visning via ett kalkylbladsprogram. Aktivera knappen "Download session history as CSV" som finns under tabellen med sessionshistorik för att öppna en anpassningssida för dataexporten. På den här sidan kan du välja tidsintervall för exporten och vilken symbol som ska användas för att separera fälten.
 
-### Hantera din prenumeration (Personal- och Pro-planer)
+### Hantera din prenumeration (personliga planer och Pro-planer)
 
-Instrumentpanelen gör att du enkelt kan visa och hantera dina RIM-prenumerationsdetaljer. Genom att klicka på länken "Hantera prenumeration" kan du:
+Instrumentpanelen gör att du enkelt kan visa och hantera dina RIM-prenumerationsuppgifter. Genom att klicka på länken "Hantera prenumeration" kan du:
 * Uppgradera din plan
 * Uppdatera din betalningsmetod
 * Avbryta återkommande betalningar
@@ -90,6 +104,6 @@ Du kan enkelt uppgradera din prenumeration. Om du har ett månadsabonnemang komm
 * Du kan inte nedgradera din plan till en plan med färre maskiner. Du kan dock uppgradera från en månadsplan till en årsplan med samma antal maskiner som din nuvarande plan. För att nedgradera måste du säga upp din plan, vänta tills den löper ut och sedan starta en ny plan med färre maskiner.
 * Enterprise-planer, inklusive Enterprise Addon, kan inte förvärvas direkt via den här sidan.
 
-#### Annullering av återkommande betalningar
+#### Avbrytande av återkommande betalningar
 
 När du klickar på "Avbryt automatisk förnyelse" kommer du att bli ombedd att bekräfta, varefter din prenumeration kommer att ställas in för att upphöra i slutet av den aktuella perioden.

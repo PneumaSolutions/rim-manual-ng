@@ -6,7 +6,7 @@ import Windows from "~/components/platform/Windows.astro"
 import MacOS from "~/components/platform/MacOS.astro"
 
 RIM dispose d'un tableau de bord basé sur le web pour faciliter les différentes tâches de gestion des machines et des comptes. Vous pouvez gérer vos ordinateurs existants sans surveillance, créer des installateurs préconfigurés pour les ordinateurs cibles, et bien plus encore.  
-Il convient de noter que l'ensemble des fonctionnalités du tableau de bord dépend en grande partie de la catégorie d'abonnement à laquelle appartient votre compte. Par exemple, les utilisateurs professionnels peuvent affecter des machines à des groupes cibles et créer des programmes d'installation silencieux. D'autre part, tout le monde (y compris les utilisateurs personnels) peut créer des installateurs personnalisés pour leurs machines sans surveillance.
+Il convient de noter que l'ensemble des fonctionnalités du tableau de bord dépend en grande partie de la catégorie d'abonnement à laquelle appartient votre compte. Par exemple, les utilisateurs professionnels peuvent affecter des machines à des groupes cibles et créer des programmes d'installation silencieux. D'autre part, tout le monde (y compris les utilisateurs personnels) peut créer des installateurs personnalisés pour leurs machines non surveillées.
 
 ### Localisation du tableau de bord
 
@@ -15,12 +15,26 @@ Si vous êtes un administrateur de réseau et que RIM n'est pas installé, vous 
 
 ### Gestion des membres de l'organisation (Entreprise)
 
-En activant le bouton "Organisation" sur le tableau de bord RIM, vous accédez à un menu d'options relatives à la gestion de l'organisation et des membres. La page "Membres" répertorie tous les membres de votre organisation. Tous les membres peuvent voir leur rôle et leur nom modifiés, et tout membre peut être retiré d'une organisation, à l'exception du propriétaire de l'organisation. Pour ajouter des membres, il suffit de saisir leur adresse électronique, de sélectionner leur rôle (utilisateur ou administrateur) et, éventuellement, de saisir leur nom.  
-Si vous devez ajouter plusieurs membres, vous pouvez utiliser le champ d'édition "Membres" pour effectuer un ajout groupé. Ce champ d'édition accepte plusieurs lignes de texte, ce qui vous permet de saisir les informations relatives à chaque membre sur une ligne distincte. Sur chaque ligne, vous pouvez saisir soit une seule adresse électronique, soit une adresse électronique et un nom au format :  
+En activant le bouton "Organisation" sur le tableau de bord RIM, vous accédez à un menu d'options relatives à la gestion de l'organisation et des membres. La page "Membres" répertorie tous les membres de votre organisation. Tous les membres peuvent voir leur rôle, leur département et leur nom modifiés, et tout membre peut être retiré d'une organisation, à l'exception du propriétaire de l'organisation. Pour ajouter des membres, il suffit de saisir leur adresse électronique, de sélectionner leur rôle (utilisateur ou administrateur), de saisir éventuellement leur nom et de sélectionner leur département s'il en a été créé un...  
+Si vous devez ajouter plusieurs membres, vous pouvez utiliser le champ d'édition "Membres" pour effectuer un ajout en masse. Ce champ d'édition accepte plusieurs lignes de texte, ce qui vous permet de saisir les informations relatives à chaque membre sur une ligne distincte. Sur chaque ligne, vous pouvez saisir soit une seule adresse électronique, soit une adresse électronique et un nom au format :  
 *email@example.com John Doe*
 
 Une fois que vous avez terminé, cliquez sur le bouton "Ajouter". 
 
+#### Départements
+
+Les départements vous permettent d'organiser les membres en fonction des différents groupes de votre organisation.
+
+Pour ajouter un département, saisissez son nom dans la boîte d'édition "Nom" sous la rubrique "Créer un département".
+
+#### Exportation des données des membres
+
+La liste des membres de votre organisation peut être exportée sous la forme d'un fichier CSV. Pour télécharger l'exportation :
+1. Choisissez le séparateur de champs qui séparera les colonnes du fichier. Les options disponibles sont les suivantes
+    * virgule
+    * Point-virgule
+    * Tabulation
+1. Activer le bouton "Télécharger".
 
 ### Gestion des cibles
 
@@ -75,7 +89,7 @@ Une installation silencieuse peut être lancée en exécutant le programme d'ins
 
 Vous pouvez consulter l'historique complet de vos sessions passées dans le tableau de bord de RIM. L'historique des sessions contient actuellement la date et l'heure de chaque session, le nom de l'ordinateur auquel vous vous êtes connecté et la durée de la session. Vous pouvez également choisir d'ajouter des commentaires à une session en cliquant sur le lien "Ajouter un commentaire" dans la ligne de la session. Cette fonction est utile pour ajouter des notes sur l'état actuel d'un incident, tant pour vous que pour les administrateurs de l'organisation.
 
-L'ensemble de l'historique des sessions peut être exporté en vue d'une consultation ultérieure via un tableur. Activez le bouton "Télécharger l'historique des sessions au format CSV" situé sous le tableau de l'historique des sessions pour afficher une page de personnalisation pour l'exportation de vos données. Sur cette page, vous pouvez choisir la durée de l'exportation, ainsi que le symbole utilisé pour séparer les champs.
+L'ensemble de l'historique des sessions peut être exporté pour être consulté ultérieurement dans un tableur. Activez le bouton "Télécharger l'historique des sessions au format CSV" situé sous le tableau de l'historique des sessions pour afficher une page de personnalisation pour l'exportation de vos données. Sur cette page, vous pouvez choisir la durée de l'exportation, ainsi que le symbole utilisé pour séparer les champs.
 
 ### Gestion de votre abonnement (plans personnel et professionnel)
 
@@ -88,7 +102,7 @@ Le tableau de bord vous permet de visualiser et de gérer facilement les détail
 
 Vous pouvez facilement modifier votre abonnement. Si vous bénéficiez d'un abonnement mensuel, vous serez facturé au prorata des frais restants du nouveau montant, la totalité du nouveau montant étant facturée pour les mois suivants. En cliquant sur "Upgrade Subscription", vous accédez à une page presque identique à la page de sélection du plan initial. Il existe quelques différences notables que nous décrivons ci-dessous :
 * Vous ne pouvez pas rétrograder votre plan vers un plan comportant moins de machines. Vous pouvez cependant passer d'un abonnement mensuel à un abonnement annuel avec le même nombre de machines que votre abonnement actuel. Pour rétrograder, vous devez annuler votre plan, attendre qu'il expire, puis lancer un nouveau plan avec moins de machines.
-* Les plans d'entreprise, y compris l'addon d'entreprise, ne peuvent pas être acquis directement sur cette page.
+* Les plans d'entreprise, y compris l'addon d'entreprise, ne peuvent pas être achetés directement sur cette page.
 
 #### Annulation des paiements récurrents
 
