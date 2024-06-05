@@ -15,7 +15,9 @@ Se você for um administrador de rede que não tem o RIM instalado, basta fazer 
 
 ### Gerenciando membros da organização (Enterprise)
 
-A ativação do botão "Organization" (Organização) no painel do RIM revelará um menu de opções relacionadas à organização e ao gerenciamento de membros. A página "Members" (Membros) listará todos os membros de sua organização. Todos os membros podem ter sua função, departamento e nome modificados, e qualquer membro pode ser removido de uma organização, exceto o proprietário da organização. Para adicionar membros, basta digitar o endereço de e-mail, selecionar a função (usuário ou administrador), opcionalmente digitar o nome e selecionar o departamento, caso tenha sido criado um.  
+A ativação do botão "Organization" (Organização) no painel do RIM revelará um menu de opções relacionadas à organização e ao gerenciamento de membros. A página "Members" (Membros) listará todos os membros de sua organização. Todos os membros podem ter sua função, departamento e nome modificados, e qualquer membro pode ser desativado ou removido de uma organização, exceto o proprietário da organização. Observe que a desativação de um membro tornará a conta dele inoperante, mas manterá o registro.
+
+Adicionar membros é tão simples quanto digitar o endereço de e-mail, selecionar a função (usuário ou administrador), opcionalmente digitar o nome e selecionar o departamento, caso tenha sido criado.
 Se você tiver vários membros para adicionar, poderá usar o campo de edição "Membros" para fazer uma adição em massa. Esse campo de edição aceita várias linhas de texto, permitindo que você insira as informações de cada membro em uma linha separada. Em cada linha, você pode inserir um único endereço de e-mail ou um endereço de e-mail e um nome no formato:  
 *email@example.com John Doe*
 
@@ -66,7 +68,7 @@ Para fazer isso:
 1. Em seguida, será solicitado que você atribua um grupo-alvo. Observe que a seleção do grupo de destino irá automaticamente para o grupo de destino escolhido se você iniciar a configuração do instalador a partir da página do seu grupo.
 1. Você será perguntado por quanto tempo deseja que esse instalador seja válido. Ele pode ser válido por qualquer período entre 7 e 30 dias. Observe que esse período de tempo afeta apenas a funcionalidade do pacote de instalação. Em outras palavras, a configuração RIM da máquina não será desativada quando a instalação expirar.
 1. Em seguida, você terá a opção de atribuir um nome de baixo. Qualquer máquina provisionada por meio desse pacote de instalação terá esse nome de base atribuído a ela.
-1. Em seguida, será apresentada uma caixa de seleção que permite que você opte por uma notificação por e-mail quando um usuário instalar o RIM por meio desse instalador.
+1. Em seguida, será apresentada uma caixa de seleção que permite que você opte por receber uma notificação por e-mail quando um usuário instalar o RIM por meio desse instalador.
 1. Se você for um administrador corporativo, verá uma caixa de seleção que permite criar o instalador como um pacote MSI. Essa opção é útil para a implantação em massa de um instalador personalizado em um cluster de máquinas que será designado para um determinado grupo-alvo.
 1. Você será solicitado a fornecer um nome para o instalador e, opcionalmente, algumas observações. Elas são para registros internos e não aparecerão no instalador criado.
 1. Clique em "Build Installer" (Criar instalador) Será apresentado o link de download que pode ser copiado para a área de transferência e enviado ao usuário final. Como alternativa, você pode fazer o download do instalador diretamente para uso em implementações em massa.
