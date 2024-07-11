@@ -15,7 +15,7 @@ Il n'y a qu'un seul kit d'installation à utiliser, que vous offriez ou receviez
 1. Une fois le fichier lancé, l'installation commence automatiquement. Vous n'avez pas à vous préoccuper des boutons suivants. Il vous suffit de vous asseoir, de vous détendre et de laisser le programme faire son travail. En quelques secondes, le programme sera installé et se lancera automatiquement.  
     1. L'écran de bienvenue vous permet de choisir le mode d'utilisation principal de RIM. Si vous souhaitez uniquement recevoir de l'aide, cliquez sur le bouton "Recevoir de l'aide maintenant". Si vous avez l'intention de fournir de l'aide, cliquez sur le bouton "Fournir de l'aide maintenant". Cette décision n'est pas définitive, car le mode peut toujours être modifié à partir de l'application.
 
-C'est tout ce qu'il y a à faire ! Un raccourci sur le bureau sera automatiquement créé pour faciliter les lancements ultérieurs de RIM. En outre, RIM met en place un raccourci clavier global polyvalent (Windows+Shift+Backspace) qui, entre autres choses, lance automatiquement le programme où que vous soyez.
+C'est tout ce qu'il y a à faire ! Un raccourci sur le bureau sera automatiquement créé pour faciliter les lancements ultérieurs de RIM. En outre, RIM met en place un raccourci-clavier global polyvalent (Windows+Shift+Backspace) qui, entre autres choses, lance automatiquement le programme où que vous soyez.
 ### Unattended or Prompted Access Installer (programme d'installation sans surveillance ou avec invite)
 Si la personne qui vous assiste vous a fourni un programme d'installation personnalisé, vous en serez informé au lancement du programme d'installation. En effet, ce programme d'installation configurera automatiquement RIM pour ce que l'on appelle l'accès sans surveillance ou l'accès assisté. Cela permet à la personne qui vous aide d'ouvrir une session avec votre ordinateur sans que vous ayez à saisir un mot-clé. Nous aborderons ces types de sessions en détail plus loin dans ce manuel.
 
@@ -23,7 +23,7 @@ Si la personne qui vous assiste vous a fourni un programme d'installation person
 
 Le programme d'installation de Remote Incident Manager tente toujours d'obtenir les privilèges d'administrateur. Dans les environnements où il est impossible d'obtenir des privilèges d'administrateur, l'installation de RIM sera effectuée dans le cadre du compte d'utilisateur actuel, plutôt qu'au niveau du système.
 
-L'exécution sans administrateur n'entraîne aucune limitation du côté du contrôleur du RIM. Il y a cependant des limitations que vous rencontrerez sur la machine cible.
+L'exécution sans administrateur n'entraîne aucune limitation du côté contrôleur du RIM. Il y a cependant des limitations que vous rencontrerez sur la machine cible.
 
 * RIM ne fonctionne que lorsque l'utilisateur Windows qui l'a installé est connecté. 
 * Il ne s'exécute pas sur l'écran d'ouverture de session de Windows. 
@@ -52,7 +52,7 @@ et appuyez sur la touche Entrée.
 
 Dans tous les cas, appuyez sur CTRL+Windows+Entrée pour activer Narrator. Si tout a fonctionné correctement, vous devriez obtenir la parole.  
 Vous pouvez maintenant suivre la procédure d'installation décrite ci-dessus.
-Veuillez noter que sur les distributions de Windows Server antérieures à 2022, si vous avez besoin de son pour les connexions ultérieures via RIM, vous devrez installer un périphérique de sortie sonore virtuel sur votre serveur. La version gratuite de [Virtual Audio Cable] (http://virtualaudiocable.org/download/software/VACSetup.exe) devrait suffire.
+Veuillez noter que pour les distributions de Windows Server antérieures à 2022, si vous avez besoin de son pour les connexions ultérieures via RIM, vous devrez installer un périphérique de sortie sonore virtuel sur votre serveur. La version gratuite de [Virtual Audio Cable] (http://virtualaudiocable.org/download/software/VACSetup.exe) devrait suffire.
 </Windows>
 <MacOS>
 ### Installation typique pour les particuliers
@@ -61,7 +61,7 @@ Il n'y a qu'un seul paquet d'installation à utiliser, que vous offriez ou recev
 1. [Télécharger Remote Incident Manager](https://getrim.app/mac)
 1. Accédez à votre dossier de téléchargements via Finder (Option+commande+L). Localisez le fichier .pkg téléchargé et ouvrez-le avec Commande+O.
 1. Un assistant d'installation apparaît. Suivez les instructions à l'écran.  
-Vous êtes prêt à exécuter Remote Incident Manager pour la première fois ! Vous pouvez le lancer à partir de votre dossier d'applications, auquel vous accédez par Commande+Shift+A dans le Finder. En outre, RIM met en place un raccourci clavier global polyvalent (Option+Shift+Backspace) qui, entre autres choses, lance automatiquement le programme où que vous soyez.
+Vous êtes prêt à exécuter Remote Incident Manager pour la première fois ! Vous pouvez le lancer à partir de votre dossier d'applications, auquel vous accédez par Commande+Shift+A dans le Finder. En outre, RIM crée une touche de raccourci globale polyvalente (Option+Shift+Backspace) qui, entre autres choses, lance automatiquement le programme où que vous soyez.
 
 ### Permissions
 
@@ -74,7 +74,7 @@ Il s'agit du pilote qui traite les données reçues par RIM. Il s'agit d'une ext
 #### Réception des données
 
 Le MIR doit être autorisé à recevoir toutes les données qui lui sont adressées par le biais d'une connexion à distance.  
-Cliquez sur "Continuer" dans la fenêtre du RIM. Une boîte de dialogue demandant les autorisations du service d'accessibilité s'affiche alors. Si VoiceOver ne l'affiche pas immédiatement, appuyez deux fois rapidement sur **VO+F1**. Ensuite, appuyez sur la flèche vers le bas jusqu'à "System dialogues", appuyez sur la flèche vers la droite, puis vers le bas jusqu'à la demande d'autorisations d'entrée. En appuyant sur la touche Entrée, vous ouvrirez la boîte d'alerte, et vous devrez alors suivre les paramètres du système et cocher la case Gestionnaire d'incidents à distance dans la liste des applications.
+Cliquez sur "Continuer" dans la fenêtre du RIM. Une boîte de dialogue demandant les autorisations du service d'accessibilité s'affiche alors. Si VoiceOver ne l'affiche pas immédiatement, appuyez deux fois rapidement sur **VO+F1**. Ensuite, appuyez sur la flèche vers le bas jusqu'à "System dialogues", appuyez sur la flèche vers la droite, puis vers le bas jusqu'à la demande d'autorisations d'entrée. En appuyant sur la touche Entrée, la boîte d'alerte s'ouvrira, et vous devrez alors la suivre jusqu'aux Paramètres du système et cocher la case Gestionnaire d'incidents à distance dans la liste des applications.
 
 #### Capturer la sortie d'écran
 
@@ -86,7 +86,7 @@ La dernière demande d'autorisation de la part de RIM concerne les notifications
 
 ### Écran de bienvenue !
 
-Une fois que toutes les autorisations ont été approuvées, l'écran de bienvenue s'affiche. Notez que si vous avez choisi de redémarrer plus tard, c'est le bon moment pour le faire. A ce stade, RIM est prêt à initier ou à recevoir des connexions.
+Une fois que toutes les autorisations ont été approuvées, l'écran de bienvenue s'affiche. Notez que si vous avez choisi de redémarrer plus tard, c'est le bon moment pour le faire. À ce stade, RIM est prêt à initier ou à recevoir des connexions.
 
 ## Désinstallation de RIM
 

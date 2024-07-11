@@ -15,7 +15,7 @@ Esiste un solo pacchetto di installazione da utilizzare, sia che si offra o si r
 1. Una volta lanciato il file, l'installazione inizierà automaticamente. Non è necessario preoccuparsi dei pulsanti successivi. Basta sedersi, rilassarsi e lasciare che il programma faccia il suo dovere. In pochi secondi il programma sarà installato e si avvierà automaticamente.  
     1. La schermata di benvenuto vi consentirà di scegliere la modalità di utilizzo principale di RIM. Se si intende solo ricevere assistenza, premere il pulsante "Ricevi assistenza ora". Se si intende fornire assistenza, fare clic sul pulsante "Fornisci assistenza ora". Questa decisione non è definitiva, poiché la modalità può sempre essere cambiata dall'interno dell'applicazione.
 
-Questo è tutto! Verrà creato automaticamente un collegamento sul desktop per facilitare i successivi lanci di RIM. Inoltre, RIM imposta un tasto di scelta rapida globale multiuso (Windows+Maiusc+Backspace) che, tra le altre cose, avvia automaticamente il programma da qualsiasi punto si trovi.
+Questo è tutto! Verrà creato automaticamente un collegamento sul desktop per facilitare i successivi lanci di RIM. Inoltre, RIM imposta un tasto di scelta rapida globale multifunzionale (Windows+Maiusc+Backspace) che, tra le altre cose, avvia automaticamente il programma ovunque ci si trovi.
 ### Installatore ad accesso non presidiato o richiesto
 Se la persona che fornisce l'assistenza ha fornito un programma di installazione personalizzato, l'utente verrà avvisato all'avvio del programma di installazione. Questo perché il programma di installazione configurerà automaticamente RIM per il cosiddetto accesso non presidiato o richiesto. In questo modo la persona che vi assiste potrà avviare una sessione con il vostro computer senza che dobbiate immettere una parola chiave. Questo tipo di sessioni verrà trattato in modo approfondito più avanti in questo manuale.
 
@@ -35,7 +35,7 @@ Come controllore, sarà possibile tentare una reinstallazione di RIM con privile
 
 ### Installazione silenziosa
 
-È consigliabile eseguire questa operazione quando si distribuisce RIM su più macchine. È sufficiente utilizzare il parametro della riga di comando **/S** nello script di distribuzione. Si noti che è sensibile alle maiuscole, quindi è necessaria la S maiuscola.
+È consigliabile eseguire questa operazione quando si distribuisce RIM su più macchine. È sufficiente utilizzare il parametro della riga di comando **/S** nello script di distribuzione. Si noti che è sensibile alle maiuscole e minuscole, quindi è necessaria la S maiuscola.
 
 ### Considerazioni aggiuntive per i server Windows
 
@@ -52,7 +52,7 @@ e premere invio.
 
 In ogni caso, premere CTRL+Windows+Invio per abilitare il narratore. Se tutto ha funzionato correttamente, si dovrebbe ottenere il parlato.  
 A questo punto è possibile seguire la procedura di installazione descritta sopra.
-Si noti che sulle distribuzioni di Windows Server precedenti alla 2022, se si ha bisogno del suono per le successive connessioni tramite RIM, è necessario installare un dispositivo di uscita audio virtuale sul server. La versione gratuita di [Virtual Audio Cable] (http://virtualaudiocable.org/download/software/VACSetup.exe) dovrebbe essere sufficiente.
+Si noti che per le distribuzioni di Windows Server precedenti alla 2022, se si ha bisogno del suono per le successive connessioni tramite RIM, è necessario installare un dispositivo di uscita audio virtuale sul server. La versione gratuita di [Virtual Audio Cable] (http://virtualaudiocable.org/download/software/VACSetup.exe) dovrebbe essere sufficiente.
 </Windows>
 <MacOS>
 ### Installazione tipica per i privati
@@ -69,14 +69,14 @@ A causa del comportamento precauzionale di macOS quando si ha a che fare con app
 
 #### Driver HID Karabiner
 
-È il driver che elabora gli input ricevuti da RIM. Si tratta di un'estensione di sistema, pertanto è necessario approvarla manualmente. Rim farà apparire una finestra di dialogo di sistema che vi porterà alla sezione Privacy e sicurezza delle impostazioni di sistema. È necessario scorrere fino a individuare il pulsante Consenti. Facendo clic su questo pulsante verrà richiesta la password o il Touch ID, dopodiché verrà comunicato che è necessario riavviare il sistema per abilitare completamente Karabiner Elements. Sta a voi decidere se riavviare ora o più tardi, ma se decidete di non riavviare finché non sono state approvate tutte le autorizzazioni, uscite dalle Impostazioni di sistema e rientrate in RIM.
+È il driver che elabora gli input ricevuti da RIM. Si tratta di un'estensione di sistema, pertanto è necessario approvarla manualmente. Rim farà apparire una finestra di dialogo di sistema che vi porterà alla sezione Privacy e sicurezza delle impostazioni di sistema. È necessario scorrere fino a individuare il pulsante Consenti. Facendo clic su di esso, verrà richiesta la password o il Touch ID, dopodiché verrà comunicato che è necessario riavviare il sistema per abilitare completamente Karabiner Elements. Sta a voi decidere se riavviare ora o più tardi, ma se decidete di non riavviare finché non sono state approvate tutte le autorizzazioni, uscite dalle Impostazioni di sistema e rientrate in RIM.
 
 #### Ricevere l'input
 
 RIM deve essere autorizzato a ricevere tutti gli input che gli vengono inviati tramite una connessione remota.  
 Fate clic su "Continua" nella finestra di RIM; a questo punto apparirà una finestra di dialogo del sistema che richiede le autorizzazioni per il servizio di accessibilità. Se VoiceOver non la mette subito a fuoco, premere due volte rapidamente **VO+F1**. Quindi, con una freccia verso il basso, andate su "Dialoghi di sistema", premete la freccia verso destra e poi in basso fino alla richiesta di permessi di accesso. Premendo Invio si aprirà la finestra di avviso, a questo punto si dovrà seguire il percorso fino a Impostazioni di sistema e selezionare la casella Gestione incidenti remoti nell'elenco delle applicazioni.
 
-#### Cattura dell'output dello schermo
+#### Catturare l'output dello schermo
 
 La prossima richiesta di autorizzazione da parte di RIM riguarderà la cattura dell'output dello schermo che verrà trasmesso attraverso la connessione remota. La procedura è simile a quella precedente.
 
