@@ -123,6 +123,15 @@ Yes. Once an unattended target is removed, the change will be effective immediat
 In most instances, particularly when FileVault disk encryption is enabled, the target user will need to manually enter the password. RIM cannot start on an encrypted Mac before it has been fully logged in.
 #### I have multiple machines playing the part of the controller. Will the list of machines set up for unattended access populate across all machines?
 Yes. The list of machines configured for unattended access is stored within your account, so it will populate automatically.
+#### Why am I prompted for user confirmation after a one-click install on the Pro plan, whereas the Enterprise plan allows for unattended installs?
+The key difference lies in the ownership and control of the machines being managed.
+* Enterprise Plan:
+    * It is assumed that the organization owns the machines being managed.
+    * As such, the enterprise plan allows for mass deployment of RIM without requiring interaction from individual users. This is because the organization has full control over these devices, eliminating the need for user confirmation.
+* Pro Plan:
+    * It is assumed that the machines being controlled belong to individual end users.
+    * We prioritize transparency and user consent. After a one-click install, the end user is prompted to confirm the installation of RIM. This ensures that they are aware of the software being installed on their device and provides an opportunity for them to agree to it.
+    * This approach helps maintain trust and compliance with privacy standards, respecting the ownership and autonomy of the end user's machine.
 
 ### Tips and Tricks
 
