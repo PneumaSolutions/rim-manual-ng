@@ -6,11 +6,11 @@ import Windows from "~/components/platform/Windows.astro"
 import MacOS from "~/components/platform/MacOS.astro"
 
 RIM dispose d'un tableau de bord basé sur le web pour faciliter les différentes tâches de gestion des machines et des comptes. Vous pouvez gérer vos ordinateurs existants sans surveillance, créer des installateurs préconfigurés pour les ordinateurs cibles, et bien plus encore.  
-Il convient de noter que l'ensemble des fonctionnalités du tableau de bord dépend en grande partie de la catégorie d'abonnement à laquelle appartient votre compte. Par exemple, les utilisateurs professionnels peuvent affecter des machines à des groupes cibles et créer des programmes d'installation silencieux. D'autre part, tout le monde (y compris les utilisateurs personnels) peut créer des installateurs personnalisés pour leurs machines sans surveillance.
+Il convient de noter que l'ensemble des fonctionnalités du tableau de bord dépend en grande partie de la catégorie d'abonnement à laquelle appartient votre compte. Par exemple, les utilisateurs professionnels peuvent affecter des machines à des groupes cibles et créer des programmes d'installation silencieux. D'autre part, tout le monde (y compris les utilisateurs personnels) peut créer des installateurs personnalisés pour leurs machines non surveillées.
 
 ### Localisation du tableau de bord
 
-Si vous êtes un contrôleur, le moyen le plus simple d'accéder au tableau de bord est de passer par l'interface principale de RIM. En cliquant sur le bouton RIM Dashboard, vous ouvrirez automatiquement le tableau de bord dans votre navigateur par défaut, la connexion étant déjà prise en charge.  
+Si vous êtes un contrôleur, le moyen le plus simple d'accéder au tableau de bord est de passer par l'interface principale de RIM. En cliquant sur le bouton "RIM Dashboard", vous ouvrirez automatiquement le tableau de bord dans votre navigateur par défaut, le login étant déjà pris en charge.  
 Si vous êtes un administrateur de réseau et que RIM n'est pas installé, vous pouvez simplement vous connecter à votre compte sur le site web de RIM et votre tableau de bord apparaîtra.
 
 ### Gestion des membres de l'organisation (Entreprise)
@@ -38,6 +38,24 @@ La liste des membres de votre organisation peut être exportée sous la forme d'
     * Tabulation
 1. Activer le bouton "Télécharger".
 
+#### Restrictions
+
+En fonction de la nature de votre organisation, il se peut que vous ne souhaitiez pas que votre personnel ait accès à certaines fonctionnalités. Les administrateurs de l'organisation peuvent donc choisir les fonctions auxquelles ils souhaitent autoriser l'accès des contrôleurs. L'écran "Restrictions", accessible via le menu "Organisation", vous permet de configurer ces autorisations.
+
+Les autorisations qui peuvent être modifiées sont les suivantes :
+* Autoriser le contrôleur à retourner la session
+    * Si cette option n'est pas cochée, l'option "Retourner la session" disparaîtra du menu de la session et le raccourci clavier ne fonctionnera pas.
+* Autoriser le contrôleur à démarrer une conversation vocale
+    * Si cette option n'est pas cochée, la case "Démarrer une conversation vocale" disparaîtra de l'écran "Fournir une aide à distance", de même que l'option du menu de la session.
+* Autoriser le contrôleur à demander un accès sans surveillance
+    * Si cette option n'est pas cochée, l'option permettant de demander un accès sans surveillance disparaîtra du menu de la session.
+* Autoriser le transfert de texte et de fichiers entre machines via le presse-papiers
+    * Si cette option n'est pas cochée, RIM ignorera toute activité du presse-papiers.
+* Autoriser le contrôleur à verrouiller la machine cible
+    * Si cette option n'est pas cochée, l'option de verrouillage de la machine cible disparaîtra du menu de la session.
+
+Une fois que vous avez configuré les autorisations à votre convenance, cliquez sur le bouton "Mettre à jour". Les modifications n'affecteront pas les sessions actives au moment où les permissions sont modifiées. Elles prendront toutefois effet pour toutes les sessions futures sans nécessiter un redémarrage du client.
+
 ### Gestion des cibles
 
 Lorsque vous cliquez sur le lien "Configurer les cibles", vous arrivez sur une page qui vous permet de gérer toutes les machines que vous avez configurées pour un accès sans surveillance. Vous pouvez cliquer sur n'importe laquelle de ces machines pour la gérer. Une fois à l'intérieur, vous pourrez
@@ -56,7 +74,7 @@ Vous pouvez créer autant de groupes cibles que nécessaire pour votre cas d'uti
 Si votre organisation affecte un technicien de support à un ensemble spécifique de machines, vous voudrez probablement vous assurer qu'il n'a accès qu'à cet ensemble spécifique. C'est là qu'intervient le paramètre de contrôle d'accès pour les groupes cibles.  
 Lorsque vous cliquez sur un groupe cible, vous disposez d'options pour gérer les machines du groupe, ainsi que le groupe lui-même. La section de contrôle d'accès vous permet d'accorder l'accès à ce groupe par compte. Saisissez simplement l'adresse électronique du compte que vous souhaitez ajouter, puis cliquez sur le bouton "Donner accès". Notez que ce compte peut exister en dehors du domaine de votre entreprise.  
 Une fois cette opération effectuée, un tableau des comptes auxquels l'accès à ce groupe a été accordé s'affiche. Sous chaque compte se trouve un bouton "Révoquer l'accès". Ce bouton ne nécessite pas de confirmation supplémentaire.  
-Il convient de noter que tous les administrateurs d'organisations se voient automatiquement accorder l'accès à la gestion de tous les groupes créés dans le cadre de l'organisation. En outre, toutes les adresses électroniques des domaines de votre organisation seront ajoutées par défaut à votre organisation dans RIM. Si vous souhaitez exercer un contrôle plus précis sur les personnes qui sont intégrées, vous pouvez désactiver cette fonction dans la zone principale réservée aux membres de votre organisation. De plus, dans la zone réservée aux membres, vous pouvez ajouter des adresses électroniques en vrac en insérant des virgules, des espaces ou des sauts de ligne entre les adresses électroniques.
+Il convient de noter que tous les administrateurs d'organisations se voient automatiquement accorder l'accès à la gestion de tous les groupes créés dans le cadre de l'organisation. En outre, toutes les adresses électroniques des domaines de votre organisation seront ajoutées par défaut à votre organisation dans RIM. Si vous souhaitez exercer un contrôle plus précis sur les personnes qui sont intégrées, vous pouvez désactiver cette fonction dans la zone principale réservée aux membres de votre organisation. De plus, dans la zone réservée aux membres, vous pouvez ajouter des adresses électroniques en vrac en utilisant des virgules, des espaces ou des sauts de ligne entre les adresses électroniques.
 
 ### Mise en place d'un installateur RIM préconfiguré (Pro ou supérieur)
 

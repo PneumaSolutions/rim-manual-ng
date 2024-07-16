@@ -10,7 +10,7 @@ Va notato che le funzionalità del dashboard dipendono in larga misura dal livel
 
 ### Individuazione della Dashboard
 
-Se si è un controller, il modo più semplice per raggiungere la dashboard è attraverso l'interfaccia principale di RIM. Facendo clic sul pulsante RIM Dashboard si aprirà automaticamente la dashboard nel browser predefinito, con il login già effettuato.  
+Se si è un controller, il modo più semplice per raggiungere la dashboard è attraverso l'interfaccia principale di RIM. Facendo clic sul pulsante "RIM Dashboard" si aprirà automaticamente la dashboard nel browser predefinito, con il login già effettuato.  
 Se siete un amministratore di rete che non ha installato RIM, potete semplicemente accedere al vostro account sul sito web di RIM e la vostra dashboard apparirà.
 
 ### Gestione dei membri dell'organizzazione (Enterprise)
@@ -38,9 +38,27 @@ L'elenco dei membri dell'organizzazione può essere esportato come file CSV. Per
     * Tab
 1. Attivare il pulsante "Download".
 
+#### Restrizioni
+
+A seconda della natura della vostra organizzazione, è possibile che vi siano alcune funzioni a cui non volete che il vostro personale abbia accesso. Gli amministratori dell'organizzazione possono quindi scegliere le funzioni a cui consentire l'accesso ai controllori. La schermata "Restrizioni", accessibile dal menu "Organizzazione", consente di configurare queste autorizzazioni.
+
+Le autorizzazioni che possono essere attivate includono:
+* Consentire al controllore di capovolgere la sessione
+    * Se questa opzione è deselezionata, l'opzione "Capovolgi sessione" scomparirà dal menu della sessione e la scorciatoia da tastiera non funzionerà.
+* Consenti al controllore di avviare una conversazione vocale
+    * Se questa opzione è deselezionata, la casella di controllo "Avvia conversazione vocale" scomparirà dalla schermata "Fornisci assistenza remota", così come l'opzione nel menu della sessione.
+* Consenti al controllore di richiedere l'accesso senza sorveglianza
+    * Se questa opzione è deselezionata, l'opzione di richiesta di accesso non presidiato scomparirà dal menu della sessione.
+* Consentire il trasferimento di testo e di file tra le macchine tramite gli appunti
+    * Se questa opzione è deselezionata, RIM ignorerà tutte le attività degli appunti.
+* Consenti al controller di bloccare il computer di destinazione
+    * Se questa opzione è deselezionata, l'opzione di blocco del computer di destinazione scompare dal menu di sessione.
+
+Una volta configurate le autorizzazioni in modo soddisfacente, attivare il pulsante "Aggiorna". Le modifiche non influiscono sulle sessioni attive al momento della modifica dei permessi. Tuttavia, avranno effetto per tutte le sessioni future senza richiedere il riavvio del client.
+
 ### Gestione degli obiettivi
 
-Facendo clic sul link "Configura obiettivi", si accede a una pagina che consente di gestire tutte le macchine configurate per l'accesso non presidiato. È possibile fare clic su una qualsiasi di queste macchine per gestirla. Una volta entrati, sarà possibile
+Facendo clic sul collegamento "Configura obiettivi", si accede a una pagina che consente di gestire tutte le macchine configurate per l'accesso non presidiato. È possibile fare clic su una qualsiasi di queste macchine per gestirla. Una volta entrati, sarà possibile
 * Rinominare il target
 * Spostare il target in un gruppo diverso (maggiori informazioni sui gruppi di target in seguito)
 * Avviare una sessione remota con il target
@@ -53,7 +71,7 @@ Supponiamo che il vostro gruppo di lavoro sia distribuito in diverse sedi. O for
 
 #### Controllo degli accessi (per le organizzazioni aziendali)
 
-Se le organizzazioni assegnano un tecnico dell'assistenza a un gruppo specifico di macchine, probabilmente si vuole garantire che abbia accesso solo a quel gruppo specifico. È qui che entra in gioco l'impostazione del controllo degli accessi per i gruppi di destinazione.  
+Se le vostre organizzazioni assegnano un tecnico dell'assistenza a un gruppo specifico di macchine, probabilmente vorrete assicurarvi che abbia accesso solo a quel gruppo specifico. È qui che entra in gioco l'impostazione del controllo degli accessi per i gruppi di destinazione.  
 Quando si fa clic su un gruppo di destinazione, vengono offerte le opzioni per gestire i computer del gruppo e il gruppo stesso. Nella sezione di controllo dell'accesso è possibile concedere l'accesso al gruppo in base all'account. È sufficiente inserire l'indirizzo e-mail dell'account che si desidera aggiungere, quindi fare clic sul pulsante "Dai accesso". Si noti che questo account può esistere al di fuori del dominio dell'organizzazione aziendale.  
 Una volta completata l'operazione, verrà presentata una tabella di account a cui è stato concesso l'accesso a questo gruppo. Sotto ogni account è presente il pulsante "Revoca accesso". Questo pulsante non richiede ulteriori conferme.  
 Si noti che a tutti gli amministratori dell'organizzazione viene automaticamente concesso l'accesso alla gestione di tutti i gruppi creati nell'ambito dell'organizzazione. Inoltre, tutti gli indirizzi e-mail che rientrano nei domini dell'organizzazione saranno aggiunti all'organizzazione in RIM per impostazione predefinita. Se si desidera un controllo più granulare su chi viene aggiunto, è possibile disattivare questa opzione nell'area principale dei membri dell'organizzazione. Inoltre, nell'area membri è possibile aggiungere indirizzi e-mail in blocco inserendo virgole, spazi o interruzioni di riga tra gli indirizzi e-mail.

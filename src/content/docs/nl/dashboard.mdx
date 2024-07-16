@@ -10,7 +10,7 @@ Opgemerkt moet worden dat de functieset van het dashboard grotendeels afhankelij
 
 ### Het dashboard vinden
 
-Als je een controller bent, is de makkelijkste manier om naar het dashboard te gaan via de hoofdinterface van RIM. Als je op de knop RIM Dashboard klikt, wordt het dashboard automatisch geopend in je standaardbrowser, waarbij het inloggen al geregeld is.  
+Als je een controller bent, is de makkelijkste manier om naar het dashboard te gaan via de hoofdinterface van RIM. Als je op de knop "RIM Dashboard" klikt, wordt het dashboard automatisch geopend in je standaardbrowser, waarbij het inloggen al geregeld is.  
 Als je een netwerkbeheerder bent die RIM niet geïnstalleerd heeft, kun je gewoon inloggen op je account op de RIM website en zal je dashboard verschijnen.
 
 ### Organisatieleden beheren (Enterprise)
@@ -37,6 +37,24 @@ De ledenlijst van uw organisatie kan worden geëxporteerd als CSV-bestand. Om de
     * Puntkomma
     * Tab
 1. Activeer de knop "Downloaden".
+
+#### Beperkingen
+
+Afhankelijk van de aard van je organisatie kunnen er bepaalde functies zijn waarvan je niet wilt dat je personeel er toegang toe heeft. Als zodanig kunnen organisatiebeheerders kiezen tot welke functies ze controleurs toegang willen geven. In het scherm "Beperkingen", dat toegankelijk is via het menu "Organisatie", kun je deze rechten configureren.
+
+De permissies die kunnen worden aangezet zijn onder andere:
+* De controller toestaan om de sessie om te keren
+    * Als deze optie niet is aangevinkt, verdwijnt de optie "Sessie omkeren" uit het sessiemenu en werkt de sneltoets niet.
+* De controller toestaan om een spraakgesprek te starten
+    * Als deze optie niet is aangevinkt, verdwijnt het selectievakje "Spraakconversatie starten" uit het scherm "Hulp op afstand verlenen", net als de menuoptie in het sessiemenu.
+* De controller toestaan om onbeheerde toegang te vragen
+    * Als deze optie niet is aangevinkt, verdwijnt de optie om onbeheerde toegang aan te vragen uit het sessiemenu.
+* Toestaan dat tekst en bestanden via het klembord worden overgedragen tussen machines
+    * Als deze optie niet is aangevinkt, negeert RIM alle klembordactiviteiten.
+* De controller toestaan om de doelmachine te vergrendelen
+    * Als deze optie niet is aangevinkt, verdwijnt de optie om de doelmachine te vergrendelen uit het sessiemenu.
+
+Zodra je de rechten naar wens hebt ingesteld, activeer je de knop "Bijwerken". Wijzigingen zullen geen invloed hebben op actieve sessies op het moment dat de permissies worden gewijzigd. Ze worden echter wel van kracht voor alle toekomstige sessies zonder dat de client opnieuw opgestart hoeft te worden.
 
 ### Doelen beheren
 
@@ -67,9 +85,9 @@ Om dit te doen:
 1. Er wordt eerst gevraagd of deze machine geconfigureerd moet worden voor volledig onbeheerde toegang, of voor toegang op verzoek waarbij de gebruiker een prompt moet accepteren om de verbinding te initiëren.
 1. Vervolgens wordt u gevraagd om een doelgroep toe te wijzen. Merk op dat de doelgroepselectie automatisch naar de door jou gekozen doelgroep gaat als je de configuratie van het installatieprogramma start vanaf de pagina van jouw groep.
 1. Er wordt gevraagd hoe lang deze installer geldig moet zijn. De geldigheidsduur kan variëren van 7 tot 30 dagen. Merk op dat dit tijdsbestek alleen invloed heeft op de functionaliteit van het installatiepakket. Met andere woorden, de RIM-configuratie van de machine wordt niet uitgeschakeld wanneer de installatie verloopt.
-1. Vervolgens krijg je de optie om een basenaam toe te wijzen. Aan elke machine die via dit installatiepakket wordt voorzien, wordt deze basenaam toegewezen.
+1. Vervolgens krijg je de optie om een basenaam toe te wijzen. Aan elke machine die via dit installatiepakket wordt geleverd, wordt deze basenaam toegewezen.
 1. Vervolgens krijg je een selectievakje waarmee je kunt kiezen voor een e-mailmelding wanneer een gebruiker RIM installeert via dit installatiepakket.
-1. Als je een enterprise admin bent, zie je een selectievakje waarmee je het installatieprogramma als een MSI-pakket kunt bouwen. Deze optie is handig voor massale implementatie van een aangepast installatieprogramma op een machinecluster dat wordt toegewezen aan de opgegeven doelgroep.
+1. Als je een enterprisebeheerder bent, zie je een selectievakje waarmee je het installatieprogramma als een MSI-pakket kunt bouwen. Deze optie is handig voor massale implementatie van een aangepast installatieprogramma op een machinecluster dat wordt toegewezen aan de opgegeven doelgroep.
 1. Je wordt gevraagd om een installatienaam op te geven en optioneel enkele notities. Deze zijn voor interne doeleinden en verschijnen niet in het aangemaakte installatieprogramma.
 1. Klik op "Installer bouwen" Je krijgt de downloadlink te zien die je naar het klembord kunt kopiëren en naar je eindgebruiker kunt sturen. Je kunt het installatieprogramma ook rechtstreeks downloaden voor gebruik bij massale implementaties.
 

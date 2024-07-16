@@ -10,7 +10,7 @@ Det bör noteras att instrumentpanelens funktionsuppsättning till stor del bero
 
 ### Hitta instrumentpanelen
 
-Om du är en styrenhet är det enklaste sättet att komma till instrumentpanelen via RIM:s huvudgränssnitt. Om du klickar på knappen RIM Dashboard öppnas instrumentpanelen automatiskt i din standardwebbläsare, där inloggningen redan är klar.  
+Om du är en styrenhet är det enklaste sättet att komma till instrumentpanelen via RIM:s huvudgränssnitt. Om du klickar på knappen "RIM Dashboard" öppnas instrumentpanelen automatiskt i din standardwebbläsare, där inloggningen redan är klar.  
 Om du är en nätverksadministratör som inte har RIM installerat, kan du helt enkelt logga in på ditt konto på RIM-webbplatsen och din instrumentpanel kommer att visas.
 
 ### Hantera organisationsmedlemmar (Enterprise)
@@ -38,7 +38,25 @@ Medlemslistan i din organisation kan exporteras som en CSV-fil. För att ladda n
     * Flik
 1. Aktivera knappen "Ladda ner".
 
-### Hantera mål
+#### Begränsningar
+
+Beroende på hur din organisation ser ut kan det finnas vissa funktioner som du inte vill att din personal ska ha tillgång till. Som organisationsadministratör kan du välja vilka funktioner du vill ge de personuppgiftsansvariga tillgång till. På skärmen "Restrictions", som du kommer åt via menyn "Organization", kan du konfigurera dessa behörigheter.
+
+De behörigheter som kan växlas inkluderar:
+* Tillåt den personuppgiftsansvarige att vända sessionen
+    * Om det här alternativet är avmarkerat försvinner alternativet "Vänd session" från sessionsmenyn och kortkommandot fungerar inte.
+* Tillåt styrenheten att starta en röstkonversation
+    * Om det här alternativet är avmarkerat försvinner kryssrutan "Starta röstkonversation" från skärmen "Ge fjärrhjälp", liksom menyalternativet i sessionsmenyn.
+* Tillåt styrenheten att begära obevakad åtkomst
+    * Om detta alternativ inte är markerat försvinner alternativet att begära obevakad åtkomst från sessionsmenyn.
+* Tillåt att text och filer överförs mellan maskiner via urklipp
+    * Om detta alternativ är avmarkerat kommer RIM att ignorera all aktivitet i urklipp.
+* Tillåt styrenheten att låsa målmaskinen
+    * Om detta alternativ är avmarkerat försvinner alternativet att låsa målmaskinen från sessionsmenyn.
+
+När du har konfigurerat behörigheterna på ett tillfredsställande sätt aktiverar du knappen "Uppdatera". Ändringarna kommer inte att påverka några aktiva sessioner vid den tidpunkt då behörigheterna ändras. De kommer dock att gälla för alla framtida sessioner utan att det krävs en omstart av klienten.
+
+### Hantering av mål
 
 När du klickar på länken "Configure Targets" kommer du till en sida där du kan hantera alla de maskiner som du har konfigurerat för obevakad åtkomst. Du kan klicka på vilken som helst av dessa maskiner för att hantera den. När du väl är inne kan du göra följande:
 * Byta namn på målet
@@ -55,7 +73,7 @@ Du kan ha så många målgrupper som behövs för ditt användningsfall.
 
 Om din organisation tilldelar en supporttekniker en viss uppsättning maskiner vill du förmodligen se till att de bara har åtkomst till den specifika uppsättningen. Det är här inställningen för åtkomstkontroll för målgrupper kommer in i bilden.  
 När du klickar på en målgrupp får du alternativ för att hantera maskinerna i gruppen samt själva gruppen. I avsnittet för åtkomstkontroll kan du ge åtkomst till den här gruppen per konto. Ange bara e-postadressen för det konto som du vill lägga till och klicka sedan på knappen "Ge åtkomst". Observera att det här kontot kan finnas utanför din företagsorganisations domän.  
-När detta är gjort visas en tabell med konton som har tillgång till den här gruppen. Under varje konto finns en "Revoke Access"-knapp. Denna knapp kräver ingen ytterligare bekräftelse.  
+När detta är gjort visas en tabell med konton som har tillgång till den här gruppen. Under varje konto finns en knapp för att "Återkalla åtkomst". Denna knapp kräver ingen ytterligare bekräftelse.  
 Det bör noteras att alla organisationsadministratörer automatiskt ges åtkomst till att hantera alla grupper som skapas under organisationen. Dessutom kommer alla e-postadresser under din organisations domäner att läggas till din organisation i RIM som standard. Om du behöver mer detaljerad kontroll över vem som blir ombord, kan du inaktivera detta i din organisations huvudmedlemsområde. När du är i medlemsområdet kan du dessutom lägga till e-postadresser i bulk med hjälp av kommatecken, mellanslag eller radbrytningar mellan e-postadresserna.
 
 ### Konfigurera en förkonfigurerad RIM Installer (Pro eller högre)
@@ -81,7 +99,7 @@ Användaren får en prompt när installationsprogrammet körs, som innehåller f
 * Teknikerns namn tillsammans med deras organisation, om tillämpligt
 * anslutningens art, dvs. om en prompt krävs eller inte
 
-Användaren kan välja att antingen svara ja eller nej till installationen. Om du svarar nej avbryts installationen. När installationsprogrammet är klart får användaren ett meddelande om att maskinen nu är konfigurerad för fjärråtkomst.
+Användaren kan välja att antingen svara ja eller nej till installationen. Om du svarar nej avbryts installationen. När installationsprogrammet är klart får användaren ett meddelande om att maskinen nu är inställd för fjärråtkomst.
 
 #### Tyst installation (endast Enterprise-installatörer)
 
@@ -108,4 +126,4 @@ Du kan enkelt uppgradera din prenumeration. Om du har ett månadsabonnemang komm
 
 #### Avbrytande av återkommande betalningar
 
-När du klickar på "Avbryt automatisk förnyelse" kommer du att bli ombedd att bekräfta, varefter din prenumeration kommer att ställas in för att upphöra i slutet av den aktuella perioden.
+När du klickar på "Avbryt automatisk förnyelse" kommer du att bli ombedd att bekräfta, varefter din prenumeration kommer att ställas in så att den löper ut i slutet av den aktuella perioden.

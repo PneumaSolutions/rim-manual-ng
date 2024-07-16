@@ -10,14 +10,14 @@ Es ist zu beachten, dass der Funktionsumfang des Dashboards weitgehend davon abh
 
 ### Auffinden des Dashboards
 
-Wenn Sie ein Controller sind, gelangen Sie am einfachsten über die RIM-Hauptschnittstelle zum Dashboard. Wenn Sie auf die Schaltfläche RIM-Dashboard klicken, wird das Dashboard automatisch in Ihrem Standardbrowser geöffnet, wobei die Anmeldung bereits erfolgt ist.  
+Wenn Sie ein Controller sind, gelangen Sie am einfachsten über die RIM-Hauptschnittstelle zum Dashboard. Wenn Sie auf die Schaltfläche "RIM-Dashboard" klicken, wird das Dashboard automatisch in Ihrem Standardbrowser geöffnet, wobei die Anmeldung bereits erledigt ist.  
 Wenn Sie ein Netzwerkadministrator sind, der RIM nicht installiert hat, können Sie sich einfach bei Ihrem Konto auf der RIM-Website anmelden, und Ihr Dashboard wird angezeigt.
 
 ### Verwaltung von Organisationsmitgliedern (Unternehmen)
 
 Wenn Sie die Schaltfläche "Organisation" auf dem RIM-Dashboard aktivieren, wird ein Menü mit Optionen für die Verwaltung von Organisationen und Mitgliedern angezeigt. Auf der Seite "Mitglieder" werden alle Mitglieder Ihrer Organisation aufgelistet. Alle Mitglieder können ihre Rolle, Abteilung und ihren Namen ändern, und jedes Mitglied kann deaktiviert oder aus einer Organisation entfernt werden, mit Ausnahme des Eigentümers der Organisation. Beachten Sie, dass die Deaktivierung eines Mitglieds dazu führt, dass sein Konto nicht mehr funktionsfähig ist, während sein Datensatz erhalten bleibt.
 
-Das Hinzufügen von Mitgliedern ist so einfach wie das Eingeben ihrer E-Mail-Adresse, das Auswählen ihrer Rolle (Benutzer oder Administrator), das optionale Eingeben ihres Namens und das Auswählen ihrer Abteilung, falls eine solche erstellt wurde.
+Das Hinzufügen von Mitgliedern ist so einfach wie die Eingabe ihrer E-Mail-Adresse, die Auswahl ihrer Rolle (Benutzer oder Administrator), die optionale Eingabe ihres Namens und die Auswahl ihrer Abteilung, falls eine solche erstellt wurde.
 Wenn Sie mehrere Mitglieder hinzufügen möchten, können Sie das Bearbeitungsfeld "Mitglieder" verwenden, um eine Massenaufnahme durchzuführen. Dieses Feld kann mehrere Textzeilen enthalten, so dass Sie die Informationen zu jedem Mitglied in eine eigene Zeile eingeben können. In jeder Zeile können Sie entweder eine einzelne E-Mail-Adresse oder eine E-Mail-Adresse und einen Namen in dem Format eingeben:  
 *email@example.com Unbekannter*
 
@@ -38,6 +38,24 @@ Die Mitgliederliste in Ihrer Organisation kann als CSV-Datei exportiert werden. 
     * Tabulator
 1. Aktivieren Sie die Schaltfläche "Herunterladen".
 
+#### Restriktionen
+
+Je nach Art Ihrer Organisation kann es bestimmte Funktionen geben, auf die Ihre Mitarbeiter keinen Zugriff haben sollen. Daher können die Administratoren der Organisation die Funktionen auswählen, auf die sie den Kontrolleuren Zugriff gewähren möchten. Der Bildschirm "Einschränkungen", auf den Sie über das Menü "Organisation" zugreifen können, ermöglicht Ihnen die Konfiguration dieser Berechtigungen.
+
+Zu den Berechtigungen, die umgeschaltet werden können, gehören:
+* Zulassen, dass der Kontrolleur die Sitzung umdreht
+    * Wenn diese Option nicht aktiviert ist, verschwindet die Option "Sitzung umdrehen" aus dem Sitzungsmenü, und die Tastenkombination funktioniert nicht.
+* Dem Controller erlauben, eine Sprachkonversation zu starten
+    * Wenn diese Option nicht aktiviert ist, verschwindet das Kontrollkästchen "Sprachkonversation starten" aus dem Bildschirm "Fernhilfe bereitstellen", ebenso wie der Menüpunkt im Sitzungsmenü.
+* Dem Controller erlauben, unbeaufsichtigten Zugriff anzufordern
+    * Wenn diese Option nicht markiert ist, wird die Option zur Anforderung des unbeaufsichtigten Zugriffs aus dem Sitzungsmenü entfernt.
+* Übertragung von Text und Dateien zwischen Rechnern über die Zwischenablage zulassen
+    * Wenn diese Option nicht aktiviert ist, ignoriert RIM alle Aktivitäten in der Zwischenablage.
+* Sperren des Zielrechners durch den Controller zulassen
+    * Wenn diese Option nicht aktiviert ist, wird die Option zum Sperren des Zielrechners aus dem Sitzungsmenü entfernt.
+
+Sobald Sie die Berechtigungen zu Ihrer Zufriedenheit konfiguriert haben, aktivieren Sie die Schaltfläche "Aktualisieren". Die Änderungen wirken sich nicht auf aktive Sitzungen zum Zeitpunkt der Änderung der Berechtigungen aus. Sie werden jedoch für alle zukünftigen Sitzungen wirksam, ohne dass ein Neustart des Clients erforderlich ist.
+
 ### Ziele verwalten
 
 Wenn Sie auf den Link "Ziele konfigurieren" klicken, gelangen Sie auf eine Seite, auf der Sie alle Rechner verwalten können, die Sie für den unbeaufsichtigten Zugriff konfiguriert haben. Sie können auf jeden dieser Rechner klicken, um ihn zu verwalten. Dort können Sie Folgendes tun:
@@ -53,7 +71,7 @@ Sie können so viele Zielgruppen erstellen, wie Sie für Ihren Anwendungsfall be
 
 #### Zugriffskontrolle (für Unternehmensorganisationen)
 
-Wenn in Ihrem Unternehmen ein Supporttechniker einer bestimmten Gruppe von Rechnern zugewiesen wird, möchten Sie wahrscheinlich sicherstellen, dass er nur auf diese bestimmte Gruppe Zugriff hat. Hier kommt die Zugriffskontrolle für Zielgruppen ins Spiel.  
+Wenn in Ihrem Unternehmen ein Supporttechniker einer bestimmten Gruppe von Rechnern zugewiesen wird, möchten Sie wahrscheinlich sicherstellen, dass er nur Zugriff auf diese bestimmte Gruppe hat. Hier kommt die Zugriffskontrolle für Zielgruppen ins Spiel.  
 Wenn Sie auf eine Zielgruppe klicken, erhalten Sie Optionen zur Verwaltung der Maschinen in der Gruppe sowie der Gruppe selbst. Im Abschnitt "Zugriffskontrolle" können Sie den Zugriff auf diese Gruppe für einzelne Konten gewähren. Geben Sie einfach die E-Mail-Adresse des Kontos ein, das Sie hinzufügen möchten, und klicken Sie dann auf die Schaltfläche "Zugriff gewähren". Beachten Sie, dass dieses Konto außerhalb der Domäne Ihrer Unternehmensorganisation existieren kann.  
 Danach wird eine Tabelle mit den Konten angezeigt, die Zugriff auf diese Gruppe haben. Unter jedem Konto befindet sich eine Schaltfläche "Zugriff widerrufen". Für diese Schaltfläche ist keine weitere Bestätigung erforderlich.  
 Es ist zu beachten, dass alle Organisationsadministratoren automatisch Zugriff auf die Verwaltung aller Gruppen erhalten, die unter der Organisation erstellt werden. Außerdem werden alle E-Mail-Adressen, die unter den Domänen Ihrer Organisation liegen, standardmäßig zu Ihrer Organisation in RIM hinzugefügt. Wenn Sie eine genauere Kontrolle darüber wünschen, wer in die Organisation aufgenommen wird, können Sie dies im Hauptmitgliederbereich Ihrer Organisation deaktivieren. Darüber hinaus können Sie im Mitgliederbereich E-Mail-Adressen in großen Mengen hinzufügen, indem Sie Kommas, Leerzeichen oder Zeilenumbrüche zwischen die E-Mail-Adressen setzen.
@@ -102,7 +120,7 @@ Ihr gesamter Sitzungsverlauf kann zur späteren Betrachtung über eine Tabellenk
 
 #### Ihr Abonnement aufwerten
 
-Sie können Ihr Abonnement ganz einfach aktualisieren. Wenn Sie ein Monatsabonnement haben, wird Ihnen der verbleibende Betrag des neuen Abonnements anteilig berechnet, während für die folgenden Monate der volle neue Betrag berechnet wird. Wenn Sie auf "Abonnement aktualisieren" klicken, öffnet sich eine Seite, die fast identisch ist mit der Seite zur Auswahl des ersten Tarifs. Es gibt jedoch ein paar bemerkenswerte Unterschiede, die wir im Folgenden erläutern werden:
+Sie können Ihr Abonnement ganz einfach aktualisieren. Wenn Sie ein Monatsabonnement haben, wird Ihnen der verbleibende Betrag des neuen Abonnements anteilig berechnet, während für die folgenden Monate der volle neue Betrag berechnet wird. Wenn Sie auf "Abonnement aktualisieren" klicken, öffnet sich eine Seite, die fast identisch ist mit der Seite zur Auswahl des ursprünglichen Tarifs. Es gibt jedoch ein paar bemerkenswerte Unterschiede, die wir im Folgenden erläutern werden:
 * Sie können Ihr Abo nicht auf ein Abo mit weniger Rechnern herabstufen. Sie können jedoch von einem Monatstarif auf einen Jahrestarif mit der gleichen Anzahl von Rechnern wie Ihr aktueller Tarif umsteigen. Um ein Downgrade vorzunehmen, müssen Sie Ihren Plan kündigen, dessen Ablauf abwarten und dann einen neuen Plan mit weniger Rechnern abschließen.
 * Enterprise-Tarife, einschließlich des Enterprise-Addons, können nicht direkt über diese Seite erworben werden.
 

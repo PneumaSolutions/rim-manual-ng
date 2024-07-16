@@ -10,7 +10,7 @@ Deve-se observar que o conjunto de recursos do painel depende muito do nível de
 
 ### Localizando o painel
 
-Se você for um controlador, a maneira mais fácil de acessar o painel é por meio da interface principal do RIM. Clicar no botão RIM Dashboard abrirá automaticamente o painel em seu navegador padrão, com o login já feito.  
+Se você for um controlador, a maneira mais fácil de acessar o painel é por meio da interface principal do RIM. Clicar no botão "RIM Dashboard" abrirá automaticamente o painel em seu navegador padrão, com o login já feito.  
 Se você for um administrador de rede que não tem o RIM instalado, basta fazer login na sua conta no site do RIM e o painel será exibido.
 
 ### Gerenciando membros da organização (Enterprise)
@@ -38,9 +38,27 @@ A lista de membros de sua organização pode ser exportada como um arquivo CSV. 
     * Tabulação
 1. Ativar o botão "Download".
 
+#### Restrições
+
+Dependendo da natureza da sua organização, pode haver determinados recursos aos quais você não deseja que a sua equipe tenha acesso. Dessa forma, os administradores da organização podem escolher os recursos aos quais desejam permitir o acesso dos controladores. A tela "Restrictions" (Restrições), acessada pelo menu "Organization" (Organização), permite configurar essas permissões.
+
+As permissões que podem ser alternadas incluem:
+* Permitir que o controlador vire a sessão
+    * Se essa opção estiver desmarcada, a opção "Flip Session" desaparecerá do menu da sessão e o atalho do teclado não funcionará.
+* Permitir que o controlador inicie uma conversa por voz
+    * Se essa opção estiver desmarcada, a caixa de seleção "Start Voice Conversation" (Iniciar conversa por voz) desaparecerá da tela "Provide Remote Help" (Fornecer ajuda remota), assim como a opção de menu no menu da sessão.
+* Permitir que o controlador solicite acesso sem supervisão
+    * Se essa opção estiver desmarcada, a opção de solicitar acesso sem supervisão desaparecerá do menu da sessão.
+* Permitir que texto e arquivos sejam transferidos entre máquinas por meio da área de transferência
+    * Se essa opção estiver desmarcada, o RIM ignorará toda e qualquer atividade da área de transferência.
+* Permitir que o controlador bloqueie a máquina de destino
+    * Se essa opção estiver desmarcada, a opção de bloquear a máquina de destino desaparecerá do menu da sessão.
+
+Depois de configurar as permissões de forma satisfatória, ative o botão "Update" (Atualizar). As alterações não afetarão nenhuma sessão ativa no momento em que as permissões forem alteradas. No entanto, elas entrarão em vigor para toda e qualquer sessão futura sem exigir a reinicialização do cliente.
+
 ### Gerenciando alvos
 
-Ao clicar no link "Configure Targets" (Configurar alvos), você chegará a uma página que permite gerenciar todas as máquinas que você configurou para acesso não assistido. Você pode clicar em qualquer uma dessas máquinas para gerenciá-la. Uma vez lá dentro, você poderá:
+Ao clicar no link "Configure Targets" (Configurar destinos), você chegará a uma página que permite gerenciar todas as máquinas que você configurou para acesso autônomo. Você pode clicar em qualquer uma dessas máquinas para gerenciá-la. Uma vez lá dentro, você poderá:
 * Renomear o alvo
 * Mover o alvo para um grupo diferente (falaremos mais sobre grupos de alvos posteriormente)
 * Iniciar uma sessão remota com o alvo
@@ -48,7 +66,7 @@ Ao clicar no link "Configure Targets" (Configurar alvos), você chegará a uma p
 
 ### Grupos de destino (para contas Pro e superiores)
 
-Digamos, por exemplo, que seu grupo de trabalho esteja espalhado por vários locais diferentes. Ou talvez você queira designar grupos de máquinas para seus técnicos de manutenção de rotina. Os grupos de destino permitem que você faça exatamente isso. Para fazer isso, basta clicar no botão "Create Target Group" (Criar grupo de destino), nomear o grupo e enviar.  
+Digamos, por exemplo, que seu grupo de trabalho esteja espalhado por vários locais diferentes. Ou talvez você queira designar grupos de máquinas para os técnicos de manutenção de rotina. Os grupos-alvo permitem que você faça exatamente isso. Para fazer isso, basta clicar no botão "Create Target Group" (Criar grupo de destino), nomear o grupo e enviar.  
 Você pode ter tantos grupos-alvo quantos forem necessários para o seu caso de uso. 
 
 #### Controle de acesso (para organizações empresariais)
@@ -68,7 +86,7 @@ Para fazer isso:
 1. Em seguida, será solicitado que você atribua um grupo-alvo. Observe que a seleção do grupo de destino irá automaticamente para o grupo de destino escolhido se você iniciar a configuração do instalador a partir da página do seu grupo.
 1. Você será perguntado por quanto tempo deseja que esse instalador seja válido. Ele pode ser válido por qualquer período entre 7 e 30 dias. Observe que esse período de tempo afeta apenas a funcionalidade do pacote de instalação. Em outras palavras, a configuração RIM da máquina não será desativada quando a instalação expirar.
 1. Em seguida, você terá a opção de atribuir um nome de baixo. Qualquer máquina provisionada por meio desse pacote de instalação terá esse nome de base atribuído a ela.
-1. Em seguida, será apresentada uma caixa de seleção que permite que você opte por receber uma notificação por e-mail quando um usuário instalar o RIM por meio desse instalador.
+1. Em seguida, será apresentada uma caixa de seleção que permite que você opte por uma notificação por e-mail quando um usuário instalar o RIM por meio desse instalador.
 1. Se você for um administrador corporativo, verá uma caixa de seleção que permite criar o instalador como um pacote MSI. Essa opção é útil para a implantação em massa de um instalador personalizado em um cluster de máquinas que será designado para um determinado grupo-alvo.
 1. Você será solicitado a fornecer um nome para o instalador e, opcionalmente, algumas observações. Elas são para registros internos e não aparecerão no instalador criado.
 1. Clique em "Build Installer" (Criar instalador) Será apresentado o link de download que pode ser copiado para a área de transferência e enviado ao usuário final. Como alternativa, você pode fazer o download do instalador diretamente para uso em implementações em massa.
