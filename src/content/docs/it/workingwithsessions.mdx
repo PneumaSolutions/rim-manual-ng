@@ -57,9 +57,11 @@ Come accennato in precedenza, l'accesso al menu RIM consente di tornare al compu
 - Avvio/arresto della conversazione vocale: Consente di attivare o disattivare la chat vocale per la sessione.
     - Durante una sessione non presidiata, questa opzione presenterà una finestra di dialogo sulle autorizzazioni a cui l'utente deve essere presente per rispondere. Tuttavia, le sessioni con richiesta di intervento avviano comunque le conversazioni vocali all'attivazione da parte del controllore.
 - Avvia accessibilità remota: Questa opzione appare quando sul computer remoto non è in esecuzione alcun lettore di schermo. In questo modo si abilita il parlato sul vostro computer, ma il client non dovrà preoccuparsi di sentire il parlato.
-    - Se è in esecuzione uno screen reader (compreso Accessibilità remota), questa opzione si trasforma in una chiusura forzata per lo screen reader in esecuzione. È utile quando il lettore di schermo di un target smette di rispondere al punto che non è possibile riavviarlo normalmente.
-- Riavvia e ricollega: Consente di riavviare il computer e di ricollegare automaticamente la sessione.
-    - Si noti che una destinazione Mac non può avviare RIM prima dell'accesso a causa delle limitazioni della piattaforma, in particolare FileVault.
+    - Se è in esecuzione uno screen reader (compreso Accessibilità remota), questa opzione si trasforma in una chiusura forzata per lo screen reader in esecuzione. È utile quando lo screen reader di un target smette di rispondere al punto che non è possibile riavviarlo normalmente.
+- Disattiva l'uscita audio del target: Consente di silenziare l'uscita audio del sistema del computer remoto.
+    - Quando questa impostazione è attiva, una conversazione vocale in corso rimane attiva, consentendo di parlare con la persona con cui si è connessi mentre l'audio del suo sistema non è udibile.
+- Riavvia e ricollega: Consente di riavviare il computer e di riconnettere automaticamente la sessione.
+    - Si noti che un obiettivo Mac non può avviare RIM prima dell'accesso a causa di limitazioni della piattaforma, in particolare FileVault.
     - Pertanto, RIM si riconnetterà una volta che l'utente avrà effettuato l'accesso.
 - Invia Control+Alt+Canc: Invia questa sequenza di tasti al computer remoto.
     - L'equivalente di questa opzione non è ancora stato implementato per gli obiettivi Mac.
@@ -86,9 +88,11 @@ Come accennato in precedenza, l'accesso al menu RIM consente di tornare al compu
 - Avvio/arresto della conversazione vocale: Consente di attivare o disattivare la chat vocale per la sessione.
     - Durante una sessione non presidiata, questa opzione presenterà una finestra di dialogo sulle autorizzazioni a cui l'utente deve essere presente per rispondere. Tuttavia, le sessioni con richiesta di intervento avviano comunque le conversazioni vocali all'attivazione da parte del controllore.
 - Avvia accessibilità remota: Questa opzione appare quando sul computer remoto non è in esecuzione alcun lettore di schermo. In questo modo si abilita il parlato sul vostro computer, ma il client non dovrà preoccuparsi di sentire il parlato.
-    - Se è in esecuzione uno screen reader (compreso Accessibilità remota), questa opzione si trasforma in una chiusura forzata per lo screen reader in esecuzione. È utile quando il lettore di schermo di un target smette di rispondere al punto che non è possibile riavviarlo normalmente.
-- Riavvia e ricollega: Consente di riavviare il computer e di ricollegare automaticamente la sessione.
-    - Si noti che una destinazione Mac non può avviare RIM prima dell'accesso a causa delle limitazioni della piattaforma, in particolare FileVault.
+    - Se è in esecuzione uno screen reader (compreso Accessibilità remota), questa opzione si trasforma in una chiusura forzata per lo screen reader in esecuzione. È utile quando lo screen reader di un target smette di rispondere al punto che non è possibile riavviarlo normalmente.
+- Disattiva l'uscita audio del target: Consente di silenziare l'uscita audio del sistema del computer remoto.
+    - Quando questa impostazione è attiva, una conversazione vocale in corso rimane attiva, consentendo di parlare con la persona con cui si è connessi mentre l'audio del suo sistema non è udibile.
+- Riavvia e ricollega: Consente di riavviare il computer e di riconnettere automaticamente la sessione.
+    - Si noti che un obiettivo Mac non può avviare RIM prima dell'accesso a causa di limitazioni della piattaforma, in particolare FileVault.
     - Pertanto, RIM si riconnetterà una volta che l'utente avrà effettuato l'accesso.
 - Invia Control+Alt+Canc: Invia questa sequenza di tasti al computer remoto.
     - L'equivalente di questa opzione non è ancora stato implementato per gli obiettivi Mac.
@@ -158,7 +162,7 @@ Esistono alcuni modi per configurare i computer per l'accesso non presidiato.
 1. Premere Invio.
 1. Sul computer client viene visualizzata una finestra di dialogo che chiede all'utente se è d'accordo che il suo computer sia impostato per l'accesso richiesto. Se la risposta è affermativa, viene visualizzato un messaggio che informa che l'accesso è stato approvato.  
 
-##### Nota per i titolari di account personali non presidiati
+##### Nota per i titolari di un account personale non presidiato
 
 Se sono stati utilizzati tutti gli slot macchina assegnati all'account, RIM non eseguirà la richiesta. In questa situazione, si hanno due opzioni, entrambe possibili tramite il cruscotto RIM:
 1. Eliminare la registrazione di una delle macchine, liberando così uno slot.
