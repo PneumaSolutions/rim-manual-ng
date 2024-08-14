@@ -9,8 +9,8 @@ import MacOS from "~/components/platform/MacOS.astro"
 
 Inmediatamente después de establecer la conexión ocurrirán algunas cosas.
 <Windows>
-- Aparecerá la ventana de control remoto de la sesión.
-- Se le informará del estado del lector de pantalla en ejecución, o de la ausencia del mismo, en el equipo del cliente.
+- Aparecerá la ventana de control remoto de la sesión. Esta ventana se puede mover y cambiar de tamaño en una sola pantalla, así como en una configuración multimonitor.
+- Se le informará del estado del lector de pantalla que se está ejecutando, o de la ausencia del mismo, en el equipo del cliente.
 - Si el cliente está ejecutando un lector de pantalla, una notificación tostada informando al usuario de que la sesión remota ha comenzado proporcionará una confirmación instantánea de que el audio del sistema del usuario está funcionando.
 - Si es la primera vez que un controlador se conecta a un Mac, aparecerá el asistente de configuración del teclado.
     - Esto es para el teclado virtual Karabiner, que escucha los comandos de teclado que le envía un controlador.
@@ -18,10 +18,12 @@ Inmediatamente después de establecer la conexión ocurrirán algunas cosas.
 - Por último, todas las entradas de teclado y ratón se dirigirán inmediatamente al ordenador de destino. Para volver a dirigir el control a su máquina, realice una de las siguientes acciones:
     - Pulse Windows+Mayús+Retroceso.
     - Haga clic con el botón derecho del ratón en la barra de título de la ventana de RIM.
-    - Haga clic con el botón izquierdo del ratón en el icono de RIM.
+    - Haga clic con el botón izquierdo del ratón en el icono de RIM situado en el centro de la barra de título.
+
 </Windows>
+
 <MacOS>
-- Aparecerá la ventana de control remoto de la sesión.
+- Aparecerá la ventana de control remoto de la sesión. Esta ventana se puede mover y cambiar de tamaño en una sola pantalla, así como en una configuración multimonitor.
 - Se le informará del estado del lector de pantalla en ejecución, o de la ausencia del mismo, en el equipo del cliente.
 - Si el cliente está ejecutando un lector de pantalla, una notificación tostada informando al usuario de que la sesión remota ha comenzado proporcionará una confirmación instantánea de que el audio del sistema del usuario está funcionando.
 - Si es la primera vez que un controlador se conecta a un Mac, aparecerá el asistente de configuración del teclado.
@@ -29,12 +31,14 @@ Inmediatamente después de establecer la conexión ocurrirán algunas cosas.
     - Como tal, querrá guiar al ordenador de destino a través del asistente de configuración, porque estará escuchando las pulsaciones del teclado remoto en el proceso de identificación, no el propio teclado del Mac.
 - Por último, todas las entradas de teclado y ratón se dirigirán inmediatamente al ordenador de destino. Para volver a dirigir el control a su máquina, realice una de las siguientes acciones:
     - Pulse Opción+Mayús+Retroceso.
-    - Haga clic en el icono grande de RIM situado en la esquina superior izquierda de la ventana de sesión.
+    - Haga clic con el botón derecho del ratón en la barra de título de la ventana de RIM.
+    - Haga clic con el botón izquierdo del ratón en el icono de RIM situado en el centro de la barra de título.
+
 </MacOS>
 
 ### Zona de Control Remoto
 <Windows>
-En este punto, ya estás preparado para realizar cualquier tarea que necesites hacer en el lado del cliente. Si necesita volver a controlar su propia máquina, abra el menú RIM y seleccione la opción "Minimizar sesión". Volverá a su máquina hasta que vuelva a la ventana de sesión o pulse de nuevo Windows+Mayús+Retroceso. Cuando vuelva a la ventana de sesión, las entradas de teclado y ratón se dirigirán de nuevo al ordenador cliente.
+En este punto, ya estás preparado para realizar cualquier tarea que necesites en el lado del cliente. Si necesita volver a controlar su propia máquina, abra el menú RIM y seleccione la opción "Minimizar sesión". Volverá a su máquina hasta que vuelva a la ventana de sesión o pulse de nuevo Windows+Mayús+Retroceso. Cuando vuelva a la ventana de sesión, las entradas de teclado y ratón se dirigirán de nuevo al ordenador cliente.
 </Windows>
 
 <MacOS>
@@ -67,7 +71,7 @@ Como se mencionó anteriormente, acceder al menú RIM te dirige de vuelta a tu m
     - Aún no se ha implementado un equivalente para esta opción en los ordenadores Mac.
 - Solicitar acceso desatendido o solicitado: Le permite enviar una solicitud de acceso desatendido al equipo cliente. Esto es útil si usted es un administrador de sistemas y necesita realizar un mantenimiento rutinario, o incluso para algo tan simple como controlar su máquina doméstica mientras está de viaje.
 - Bloquear el equipo de destino: Bloquea el equipo de destino.
-- Ver detalles de la conexión: Proporciona información detallada sobre su conexión, así como sobre la máquina de destino. La información incluye:
+- Ver detalles de la conexión: Proporciona información detallada sobre su conexión, así como la máquina de destino. La información incluye:
     - Estadísticas de conexión
     - Información sobre el ordenador, incluida la versión del sistema operativo, la memoria RAM disponible, etc.
     - Procesos en ejecución
@@ -133,10 +137,10 @@ El módulo de accesibilidad remota consta de dos componentes:
 ### Procedimiento de configuración
 Para inicializar por primera vez el módulo de accesibilidad, esto es lo que tendrás que hacer:
 1. Conectarse a un ordenador que no tenga instalado un lector de pantalla.
-1. Si NVDA se está ejecutando actualmente, se te pedirá que instales un complemento que permitirá a tu copia de NVDA comunicarse con el ordenador remoto durante la sesión. Acepta las instrucciones de instalación y espera a que NVDA se reinicie.
+1. Si NVDA se está ejecutando, se te pedirá que instales un complemento que permitirá a tu copia de NVDA comunicarse con el ordenador remoto durante la sesión. Acepta las instrucciones de instalación y espera a que NVDA se reinicie.
 1. En este momento, el módulo de accesibilidad remota estará completamente inicializado, y oirás la salida de voz mientras controlas el ordenador remoto. Para silenciar la salida de voz temporalmente, simplemente pulsa Insertar o Bloq Mayús+S una vez para desactivarla y, a continuación, pulsa ese comando dos veces para volver a activarla.
 
-A partir de este momento, si estás ejecutando un lector de pantalla en el ordenador de control, el módulo de accesibilidad remota se iniciará automáticamente durante las sesiones remotas en las que el ordenador remoto no tenga un lector de pantalla en ejecución. Si está ejecutando un lector de pantalla que no sea NVDA, RIM desactivará ese lector de pantalla y, a continuación, le cambiará a NVDA. Si necesitas detener el módulo de accesibilidad remota en el equipo remoto para iniciar otro lector de pantalla, simplemente accede a la opción "Detener accesibilidad remota" del menú de RIM.
+A partir de este momento, si estás ejecutando un lector de pantalla en el ordenador de control, el módulo de accesibilidad remota se iniciará automáticamente durante las sesiones remotas en las que el ordenador remoto no tenga un lector de pantalla en ejecución. Si está ejecutando un lector de pantalla distinto de NVDA, RIM desactivará ese lector de pantalla y, a continuación, le cambiará a NVDA. Si necesitas detener el módulo de accesibilidad remota en el equipo remoto para iniciar otro lector de pantalla, simplemente accede a la opción "Detener accesibilidad remota" del menú de RIM.
 </Windows>
 <MacOS>
 El módulo de accesibilidad remota es una configuración especial que se inicia en el Mac de destino a petición de un controlador Windows o Mac. La ventaja de este enfoque es que el usuario final no oye la voz en su ordenador mientras usted lo controla. En su lugar, el módulo de accesibilidad remota canaliza la salida de voz a través del sistema de voz en el lado del controlador. De esta forma, puedes ayudar de forma accesible a un usuario final sin que tenga que activar un lector de pantalla. Si está ejecutando VoiceOver en el Mac controlador, el módulo de accesibilidad remota se iniciará automáticamente durante las sesiones remotas en las que el ordenador remoto no tenga un lector de pantalla en ejecución.
@@ -144,7 +148,7 @@ El módulo de accesibilidad remota es una configuración especial que se inicia 
 ## Reinicio y reconexión
 
 Tanto si estás instalando actualizaciones del sistema como si estás trabajando para salir de un cuelgue del sistema, RIM te tiene cubierto durante el proceso de reinicio. Si seleccionas la opción "Reiniciar y reconectar" del menú de RIM, podrás realizar un reinicio de emergencia o un reinicio suave, dependiendo del estado en que se encuentre el ordenador. Mientras el ordenador se reinicia, RIM le informará de que se están realizando intentos de reconexión.
-Tenga en cuenta que si el ordenador se reinicia por una instalación de software o manualmente de la forma habitual, se le preguntará si desea volver a conectar la sesión. También hay que tener en cuenta que, en cualquier caso, los objetivos Mac sólo se volverán a conectar una vez que el usuario inicie la sesión. Esto se debe al hecho de que RIM no puede iniciarse automáticamente en la pantalla de inicio de sesión debido a las limitaciones de la plataforma, sobre todo el cifrado de disco FileVault.
+Tenga en cuenta que si el ordenador se reinicia por una instalación de software o manualmente de la forma habitual, se le preguntará si desea volver a conectar la sesión. También hay que tener en cuenta que, en cualquier caso, los objetivos Mac sólo se volverán a conectar una vez que el usuario haya iniciado la sesión. Esto se debe al hecho de que RIM no puede iniciarse automáticamente en la pantalla de inicio de sesión debido a las limitaciones de la plataforma, sobre todo el cifrado de disco FileVault.
 
 ### Acceso desatendido o solicitado
 
@@ -173,7 +177,7 @@ Si ha utilizado todas las ranuras de máquina asignadas a su cuenta, RIM no real
 Si desea registrar una de sus propias máquinas para el acceso desatendido, puede hacerlo sin tener que iniciar una sesión interactiva con la máquina. 
 1. Inicie RIM en el modo Recibir ayuda.
 1. Haga clic en el botón "Añadir esta máquina a su cuenta de RIM".
-1. Introduzca su correo electrónico y haga clic en Siguiente.
+1. Introduzca su correo electrónico y haga clic en siguiente.
 1. Espere a que llegue el código de inicio de sesión en dos pasos, introdúzcalo y ya debería haber iniciado sesión.
 1. Se le preguntará qué tipo de acceso desea configurar para esta máquina. Sus opciones son:
     1. Desatendido: Permite iniciar sesiones sin intervención alguna del usuario final.
@@ -225,11 +229,11 @@ Si ya no desea que su máquina sea controlada de forma desatendida, puede revoca
 1. Se le preguntará si desea revocar la máquina; responda sí.  
 </Windows>
 <MacOS>
-1. Acceda al icono del Gestor Remoto de Incidencias en sus menús extras/de estado.
-    1. Si utiliza VoiceOver, pulse VO+M dos veces y, a continuación, localice el icono del menú Gestor remoto de incidencias.
+1. Acceda al icono del Gestor Remoto de Incidencias en sus menús de extras/estado.
+    1. Si utiliza VoiceOver, pulse VO+M dos veces y, a continuación, localice el icono del menú Administrador remoto de incidencias.
     1. Haga clic en este icono, o pulse VO+Espacio.  
 1. Seleccione la opción "Revocar acceso desatendido".
 1. Llegará a una lista de ordenadores, seleccione el que desea revocar.
 1. Se le preguntará si desea revocar la máquina; responda sí.  
 </MacOS>
-Ya está El controlador recibirá un mensaje indicando que esta máquina ya no está disponible para el acceso desatendido. En caso de que vuelva a necesitar acceso desatendido, puede reiniciar el procedimiento para solicitar permiso de acceso desatendido como se ha descrito anteriormente.
+Ya está El controlador recibirá un mensaje indicando que esta máquina ya no está disponible para el acceso desatendido. Si volviera a necesitar acceso desatendido, puede reiniciar el procedimiento para solicitar permiso de acceso desatendido como se ha descrito anteriormente.

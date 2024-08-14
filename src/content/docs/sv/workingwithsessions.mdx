@@ -9,27 +9,31 @@ import MacOS from "~/components/platform/MacOS.astro"
 
 Några saker kommer att hända omedelbart efter att anslutningen har upprättats.
 <Windows>
-- Fjärrkontrollfönstret för sessionen kommer att visas.
+- Fjärrkontrollfönstret för sessionen visas. Det här fönstret kan flyttas och ändras i storlek på en enda skärm, såväl som på en installation med flera skärmar.
 - Du kommer att informeras om statusen för den skärmläsare som körs, eller avsaknaden av en sådan, på klientens dator.
-- Om klienten kör en skärmläsare kommer ett meddelande som informerar användaren om att fjärrsessionen har startat att ge omedelbar bekräftelse på att användarens systemljud fungerar.
+- Om klienten använder en skärmläsare kommer ett meddelande som informerar användaren om att fjärrsessionen har startat att ge omedelbar bekräftelse på att användarens systemljud fungerar.
 - Ett Mac-mål kommer att visa assistenten för tangentbordsinställning om det är första gången en styrenhet har anslutits till det.
     - Detta är för det virtuella tangentbordet Karabiner, som lyssnar på tangentbordskommandon som skickas till det av en styrenhet.
     - Därför bör du gå igenom installationsassistenten med måldatorn, eftersom den lyssnar efter fjärrstyrda tangentbordstryckningar i identifieringsprocessen, inte Mac-datorns eget tangentbord.
 - Sist men inte minst kommer alla tangentbords- och musinmatningar omedelbart att styras till måldatorn. För att styra tillbaka kontrollen till din dator gör du något av följande:
     - Tryck på Windows+Shift+Backspace.
     - Högerklicka på RIM-fönstrets titelfält.
-    - Vänsterklicka på RIM-ikonen.
+    - Vänsterklicka på RIM-ikonen i mitten av titelfältet.
+
 </Windows>
+
 <MacOS>
-- Fjärrkontrollfönstret för sessionen visas.
+- Fjärrkontrollfönstret för sessionen visas. Det här fönstret kan flyttas och ändras i storlek på en enda skärm, såväl som på flera skärmar.
 - Du kommer att informeras om statusen för den skärmläsare som körs, eller avsaknaden av en sådan, på klientens dator.
-- Om klienten kör en skärmläsare kommer ett meddelande som informerar användaren om att fjärrsessionen har startat att ge omedelbar bekräftelse på att användarens systemljud fungerar.
+- Om klienten använder en skärmläsare kommer ett meddelande som informerar användaren om att fjärrsessionen har startat att ge omedelbar bekräftelse på att användarens systemljud fungerar.
 - Ett Mac-mål kommer att visa assistenten för tangentbordsinställning om det är första gången en styrenhet har anslutits till det.
     - Detta är för det virtuella tangentbordet Karabiner, som lyssnar på tangentbordskommandon som skickas till det av en styrenhet.
     - Därför bör du gå igenom installationsassistenten med måldatorn, eftersom den lyssnar efter fjärrstyrda tangentbordstryckningar i identifieringsprocessen, inte Mac-datorns eget tangentbord.
 - Sist men inte minst kommer alla tangentbords- och musinmatningar omedelbart att styras till måldatorn. För att styra tillbaka kontrollen till din dator gör du något av följande:
     - Tryck på Option+Shift+Backspace.
-    - Klicka på den stora RIM-ikonen i det övre vänstra hörnet av sessionsfönstret.
+    - Högerklicka på RIM-fönstrets titelfält.
+    - Vänsterklicka på RIM-ikonen i mitten av titelfältet.
+
 </MacOS>
 
 ### Fjärrkontrollzon
@@ -205,11 +209,11 @@ För extra bekvämlighet kan du skapa genvägar på skrivbordet som gör att du 
 1. Klicka på knappen "Create Shortcut" (Skapa genväg).
 1. En genväg kommer automatiskt att läggas till på skrivbordet.
 
-När du nu aktiverar den här genvägen kommer du antingen automatiskt att landa i fjärrsessionen eller skicka en fråga till användarens maskin som de kan acceptera.
+När du nu aktiverar den här genvägen kommer du antingen automatiskt att landa i fjärrsessionen eller skicka en uppmaning till användarens maskin som de kan acceptera.
 <Windows>
 ##### Fler sätt att använda genvägar för obevakade sessioner
 
-Genvägar för obevakade sessioner kan, precis som alla andra genvägar, ha globala snabbtangenter associerade med sig. Detta kan vara mycket användbart om du är en underhållstekniker som hanterar flera datorer i en arbetsgrupp. Om din arbetsgrupp till exempel består av 6 datorer som du utför rutinunderhåll på, kan du konfigurera Alt+Control+1 till 6 som snabbtangenter för varje maskin. Detta borde avsevärt snabba upp ditt arbetsflöde.
+Genvägar för obevakade sessioner kan, precis som alla andra genvägar, ha globala snabbtangenter associerade med sig. Detta kan vara mycket användbart om du är en underhållstekniker som hanterar flera datorer i en arbetsgrupp. Om din arbetsgrupp till exempel består av 6 datorer som du utför rutinunderhåll på, kan du konfigurera Alt+Control+1 till 6 som snabbtangenter för respektive maskin. Detta borde avsevärt snabba upp ditt arbetsflöde.
 Dessutom kan du kalla fram en obevakad session via körrutan om du kopierar genvägen till din användarkatalog. När du har kopierat genvägen kan du starta en obevakad session genom att skriva your-session-name.url i körrutan.
 </Windows>
 
@@ -229,7 +233,7 @@ Om du inte längre vill att din maskin ska styras obevakat kan du återkalla sty
     1. Om du använder VoiceOver trycker du två gånger på VO+M och letar sedan upp menyikonen Remote Incident Manager.
     1. Klicka på ikonen eller tryck på VO+Space.  
 1. Välj alternativet "Revoke Unattended Access" (Återkalla obevakad åtkomst).
-1. Du kommer till en lista med datorer, välj den du vill återkalla.
+1. Du kommer till en lista med datorer, välj den som du vill återkalla.
 1. Du får en fråga om du vill återkalla åtkomsten till maskinen; svara ja.  
 </MacOS>
 Nu är det klart! Den registeransvarige får ett meddelande om att maskinen inte längre är tillgänglig för obevakad åtkomst. Om de behöver obevakad åtkomst igen kan de på nytt inleda proceduren för att begära tillstånd för obevakad åtkomst enligt beskrivningen ovan.

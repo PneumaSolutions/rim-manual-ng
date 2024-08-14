@@ -9,32 +9,36 @@ import MacOS from "~/components/platform/MacOS.astro"
 
 Er gebeuren een paar dingen onmiddellijk nadat de verbinding tot stand is gebracht.
 <Windows>
-- Het afstandsbedieningsvenster voor de sessie verschijnt.
-- Je wordt geïnformeerd over de status van de schermlezer, of het gebrek daaraan, op de computer van de client.
-- Als de client een schermlezer gebruikt, zal een toastmelding die de gebruiker informeert dat de afstandsbedieningssessie is begonnen direct bevestigen dat de systeemaudio van de gebruiker werkt.
+- Het afstandsbedieningsvenster voor de sessie verschijnt. Dit venster kan verplaatst en aangepast worden over een enkel scherm, maar ook over een opstelling met meerdere monitoren.
+- Je wordt geïnformeerd over de status van de schermlezer, of het gebrek daaraan, op de computer van de cliënt.
+- Als de client een schermlezer gebruikt, zal een toastmelding die de gebruiker informeert dat de sessie op afstand is begonnen direct bevestigen dat de systeemaudio van de gebruiker werkt.
 - Een Mac doel zal de toetsenbord instel assistent laten verschijnen als dit de eerste keer is dat een controller er verbinding mee maakt.
     - Dit is voor het virtuele toetsenbord van Karabiner, dat luistert naar toetsenbordcommando's die door een controller worden verzonden.
     - Als zodanig zul je de doelcomputer door de setup-assistent willen leiden, omdat deze tijdens het identificatieproces luistert naar toetsenbordaanslagen op afstand en niet naar het toetsenbord van de Mac zelf.
 - Last but not least, alle toetsenbord- en muisinvoer wordt onmiddellijk naar de doelcomputer geleid. Om de besturing terug te leiden naar uw computer, doet u een van de volgende dingen:
     - Druk op Windows+Shift+Backspace.
     - Klik met de rechtermuisknop op de titelbalk van het RIM-venster.
-    - Klik met de linkermuisknop op het RIM-pictogram.
+    - Klik met de linkermuisknop op het RIM-pictogram in het midden van de titelbalk.
+
 </Windows>
+
 <MacOS>
-- Het afstandsbedieningsvenster voor de sessie verschijnt.
-- Je wordt geïnformeerd over de status van de schermlezer, of het gebrek daaraan, op de computer van de client.
-- Als de client een schermlezer gebruikt, zal een toastmelding de gebruiker informeren dat de afstandsbedieningssessie is begonnen en direct bevestigen dat de systeemaudio van de gebruiker werkt.
+- Het afstandsbedieningsvenster voor de sessie verschijnt. Dit venster kan verplaatst en aangepast worden over een enkel scherm, maar ook over een opstelling met meerdere monitoren.
+- Je wordt geïnformeerd over de status van de schermlezer, of het gebrek daaraan, op de computer van de cliënt.
+- Als de client een schermlezer gebruikt, zal een toastmelding die de gebruiker informeert dat de sessie op afstand is begonnen direct bevestigen dat de systeemaudio van de gebruiker werkt.
 - Een Mac doel zal de toetsenbord instel assistent laten verschijnen als dit de eerste keer is dat een controller er verbinding mee maakt.
     - Dit is voor het virtuele toetsenbord van Karabiner, dat luistert naar toetsenbordcommando's die door een controller worden verzonden.
     - Als zodanig zul je de doelcomputer door de setup-assistent willen leiden, omdat deze tijdens het identificatieproces luistert naar toetsenbordaanslagen op afstand en niet naar het toetsenbord van de Mac zelf.
 - Last but not least, alle toetsenbord- en muisinvoer wordt onmiddellijk naar de doelcomputer geleid. Om de besturing terug te leiden naar uw computer, doet u een van de volgende dingen:
     - Druk op Option+Shift+Backspace.
-    - Klik op het grote RIM-pictogram in de linkerbovenhoek van het sessievenster.
+    - Klik met de rechtermuisknop op de titelbalk van het RIM-venster.
+    - Klik met de linkermuisknop op het RIM-pictogram in het midden van de titelbalk.
+
 </MacOS>
 
 ### Afstandsbedieningszone
 <Windows>
-Op dit punt ben je helemaal klaar om de taken uit te voeren die aan de clientkant nodig zijn. Als je terug moet schakelen naar de besturing van je eigen machine, roep dan het RIM-menu op en selecteer de optie "Sessie minimaliseren". Je wordt teruggebracht naar je machine totdat je terugschakelt naar het sessie venster of opnieuw op Windows+Shift+Backspace drukt. Als je teruggaat naar het sessievenster, worden toetsenbord- en muisinvoer weer naar de clientcomputer geleid.
+Op dit punt ben je helemaal klaar om alle taken uit te voeren die aan de clientkant gedaan moeten worden. Als je terug moet schakelen naar de besturing van je eigen machine, roep dan het RIM-menu op en selecteer de optie "Sessie minimaliseren". Je wordt teruggebracht naar je machine totdat je terugschakelt naar het sessie venster of opnieuw op Windows+Shift+Backspace drukt. Als je teruggaat naar het sessievenster, worden toetsenbord- en muisinvoer weer naar de clientcomputer geleid.
 </Windows>
 
 <MacOS>
@@ -155,7 +159,7 @@ Er zijn een paar manieren om machines te configureren voor onbeheerde toegang.
 
 1. Roep het RIM-menu op.
 1. Selecteer "Onbewaakte of opgevraagde toegang aanvragen"
-1. Je wordt gevraagd wat voor soort verbinding je wilt configureren. De opties zijn:
+1. Er wordt gevraagd wat voor soort verbinding je wilt configureren. De opties zijn:
     1. Unattended: Hiermee kunnen sessies worden gestart zonder enige tussenkomst van de eindgebruiker.
     1. Prompted: Deze configuratie laat de gebruiker een prompt zien die hem informeert dat je verbinding maakt met zijn machine. Ze moeten op Option+Shift+Y drukken op macOS, of Windows+Shift+Y op Windows, als ze de verbinding willen accepteren.
 1. Je wordt gevraagd om deze machine een naam te geven. Voer een persoonlijke naam voor de machine in, of indien van toepassing, de machine-ID zoals die in uw werkgroep wordt weergegeven.
@@ -228,7 +232,7 @@ Als je niet langer wilt dat je machine zonder toezicht wordt bestuurd, kun je de
 1. Ga naar het pictogram Remote Incident Manager in uw menu-extra's/statusmenu's.
     1. Als u VoiceOver gebruikt, drukt u twee keer op VO+M en zoekt u het pictogram van het Remote Incident Manager-menu.
     1. Klik op dit pictogram of druk op VO+Spatie.  
-1. Selecteer de optie "Toegang zonder toezicht intrekken".
+1. Selecteer de optie "Onbeheerde toegang intrekken".
 1. Er verschijnt een lijst met computers. Selecteer de computer die u wilt intrekken.
 1. Er wordt gevraagd of je de toegang tot de computer wilt intrekken.  
 </MacOS>

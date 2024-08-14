@@ -9,27 +9,31 @@ import MacOS from "~/components/platform/MacOS.astro"
 
 Subito dopo aver stabilito la connessione, accadranno alcune cose.
 <Windows>
-- Viene visualizzata la finestra di controllo remoto della sessione.
-- L'utente verrà informato dello stato del lettore di schermo in esecuzione, o della sua mancanza, sul computer del client.
-- Se il client utilizza uno screen reader, un toast di notifica che informa l'utente dell'inizio della sessione remota confermerà immediatamente che l'audio del sistema dell'utente funziona.
+- Viene visualizzata la finestra di controllo remoto della sessione. Questa finestra può essere spostata e ridimensionata su un singolo display o su una configurazione a più monitor.
+- L'utente verrà informato sullo stato del lettore di schermo in esecuzione, o sulla sua assenza, sul computer del cliente.
+- Se il client utilizza uno screen reader, un toast di notifica che informa l'utente che la sessione remota è iniziata fornirà una conferma immediata che l'audio del sistema dell'utente funziona.
 - Se è la prima volta che un controller si collega a un Mac, viene visualizzato l'assistente di configurazione della tastiera.
     - Si tratta della tastiera virtuale Karabiner, che ascolta i comandi di tastiera inviati da un controller.
     - Per questo motivo, è necessario guidare il computer di destinazione attraverso l'assistente di configurazione, perché nel processo di identificazione il computer ascolterà le pressioni della tastiera remota e non la tastiera del Mac.
 - Infine, tutti gli input della tastiera e del mouse verranno immediatamente indirizzati al computer di destinazione. Per riportare il controllo sul proprio computer, procedere come segue:
     - Premere Windows+Maiusc+Backspace.
     - Fare clic con il pulsante destro del mouse sulla barra del titolo della finestra RIM.
-    - Fare clic con il tasto sinistro del mouse sull'icona del RIM.
+    - Fare clic con il tasto sinistro del mouse sull'icona RIM al centro della barra del titolo.
+
 </Windows>
+
 <MacOS>
-- Viene visualizzata la finestra di controllo remoto della sessione.
-- L'utente verrà informato sullo stato del lettore di schermo in esecuzione, o sulla sua assenza, sul computer del client.
-- Se il client utilizza uno screen reader, un toast di notifica che informa l'utente dell'inizio della sessione remota confermerà immediatamente che l'audio del sistema dell'utente funziona.
+- Verrà visualizzata la finestra di controllo remoto della sessione. Questa finestra può essere spostata e ridimensionata su un singolo display o su una configurazione a più monitor.
+- L'utente verrà informato sullo stato del lettore di schermo in esecuzione, o sulla sua assenza, sul computer del cliente.
+- Se il client utilizza uno screen reader, un toast di notifica che informa l'utente che la sessione remota è iniziata fornirà una conferma immediata che l'audio del sistema dell'utente funziona.
 - Se è la prima volta che un controller si collega a un Mac, viene visualizzato l'assistente di configurazione della tastiera.
     - Si tratta della tastiera virtuale Karabiner, che ascolta i comandi di tastiera inviati da un controller.
     - Per questo motivo, è necessario guidare il computer di destinazione attraverso l'assistente di configurazione, perché nel processo di identificazione il computer ascolterà le pressioni della tastiera remota e non la tastiera del Mac.
 - Infine, tutti gli input della tastiera e del mouse verranno immediatamente indirizzati al computer di destinazione. Per riportare il controllo sul proprio computer, procedere come segue:
     - Premere Option+Shift+Backspace.
-    - Fare clic sull'icona RIM grande nell'angolo superiore sinistro della finestra di sessione.
+    - Fare clic con il pulsante destro del mouse sulla barra del titolo della finestra RIM.
+    - Fare clic con il tasto sinistro del mouse sull'icona RIM al centro della barra del titolo.
+
 </MacOS>
 
 ### Zona di controllo remoto
@@ -129,7 +133,7 @@ Sia che stiate assistendo un utente che non utilizza uno screen reader, sia che 
 <Windows>
 Il modulo di accessibilità remota è costituito da due componenti:
 - Un addon per il lettore di schermo NVDA che consente al lettore di schermo di ricevere l'output dal computer remoto
-- Un modulo di accessibilità autonomo avviato sul computer di destinazione su richiesta del controllore. Il vantaggio di questo approccio è che l'utente finale non sente il parlato sul proprio computer mentre lo si controlla. Al contrario, il modulo di accessibilità remota trasmette l'output vocale alla copia in esecuzione di NVDA sul lato del controllore. In questo modo, è possibile assistere l'utente finale senza che debba installare o scaricare uno screen reader.
+- Un modulo di accessibilità autonomo avviato sul computer di destinazione su richiesta del controllore. Il vantaggio di questo approccio è che l'utente finale non sente il parlato sul proprio computer mentre lo si controlla. Al contrario, il modulo di accessibilità remota trasmette l'output vocale alla copia in esecuzione di NVDA sul lato del controllore. In questo modo è possibile assistere l'utente finale senza che debba installare o scaricare uno screen reader.
 ### Procedura di configurazione
 Per la prima inizializzazione del modulo di accessibilità, ecco cosa occorre fare:
 1. Collegarsi a un computer su cui non è in funzione uno screen reader.
@@ -139,14 +143,14 @@ Per la prima inizializzazione del modulo di accessibilità, ecco cosa occorre fa
 Da questo momento in poi, se si utilizza uno screen reader sul computer di controllo, il modulo di accessibilità remota si avvierà automaticamente durante le sessioni remote in cui il computer remoto non ha uno screen reader in funzione. Se si utilizza un lettore di schermo diverso da NVDA, RIM disattiva il lettore di schermo e passa a NVDA. Se è necessario interrompere il modulo di accessibilità remota sul computer remoto per avviare un altro screen reader, è sufficiente accedere all'opzione "Interrompi accessibilità remota" dal menu RIM.
 </Windows>
 <MacOS>
-Il modulo di accessibilità remota è una configurazione speciale avviata sul Mac di destinazione su richiesta di un controller Windows o Mac. Il vantaggio di questo approccio è che l'utente finale non sente la voce del computer mentre lo si controlla. Al contrario, il modulo di accessibilità remota trasmette l'output vocale al sistema vocale del controllore. In questo modo, è possibile assistere l'utente finale in modo accessibile senza che debba attivare uno screen reader. Se sul Mac di controllo è in esecuzione VoiceOver, il modulo di accessibilità remota si avvia automaticamente durante le sessioni remote in cui il computer remoto non ha un lettore di schermo in esecuzione.
+Il modulo di accessibilità remota è una configurazione speciale avviata sul Mac di destinazione su richiesta di un controller Windows o Mac. Il vantaggio di questo approccio è che l'utente finale non sente la voce del computer mentre lo si controlla. Al contrario, il modulo di accessibilità remota trasmette l'output vocale al sistema vocale del controllore. In questo modo, è possibile assistere l'utente finale in modo accessibile senza che debba attivare uno screen reader. Se sul Mac di controllo è in esecuzione VoiceOver, il modulo di accessibilità remota si avvia automaticamente durante le sessioni remote in cui il computer remoto non dispone di uno screen reader.
 </MacOS>
 ## Riavvio e riconnessione
 
 Sia che stiate installando aggiornamenti del sistema, sia che stiate cercando di uscire da un blocco del sistema, RIM ha pensato a voi durante il processo di riavvio. Selezionando l'opzione "Riavvia e ricollega" dal menu di RIM, è possibile eseguire un riavvio di grazia o un riavvio di emergenza, a seconda dello stato in cui si trova il computer. Durante il riavvio del computer, RIM informa che sono in corso tentativi di riconnessione.
 Se il computer viene riavviato da un'installazione software o manualmente nel modo consueto, verrà chiesto se si desidera riconnettere la sessione. Inoltre, in entrambi i casi, Mac Target si riconnetterà solo dopo che l'utente avrà effettuato l'accesso. Ciò è dovuto al fatto che RIM non può avviarsi automaticamente alla schermata di accesso a causa delle limitazioni della piattaforma, in particolare la crittografia del disco FileVault.
 
-### Accesso non presidiato o richiesto
+### Accesso non presidiato o su richiesta
 
 RIM consente all'utente, in qualità di controllore, di configurare i computer per l'accesso non presidiato o richiesto. Ciò consente di fornire assistenza remota senza che l'utente debba avviare RIM, immettere una parola chiave o trovarsi vicino al computer. Ciò è utile se si è un sysadmin che esegue la manutenzione di routine sui computer del gruppo di lavoro o per i clienti a cui si fornisce assistenza regolarmente. Si potrebbe anche voler consentire l'accesso non presidiato al proprio computer di casa, nel caso in cui sia necessario accedervi da un altro luogo.
 Esistono alcuni modi per configurare i computer per l'accesso non presidiato.
@@ -209,7 +213,7 @@ Ora, quando si attiva questo collegamento, si accede automaticamente alla sessio
 <Windows>
 ##### Altri modi per utilizzare i collegamenti alla sessione non presidiata
 
-Le scelte rapide di sessione non presidiate, come qualsiasi altra scelta rapida, possono essere associate a tasti di scelta rapida globali. Questo può essere estremamente utile se si è un tecnico della manutenzione che gestisce più computer in un gruppo di lavoro. Ad esempio, se il vostro gruppo di lavoro è composto da 6 computer sui quali eseguite la manutenzione ordinaria, potete configurare Alt+Control+1 fino a 6 come tasti di scelta rapida per ogni rispettivo computer. Questo dovrebbe accelerare notevolmente il flusso di lavoro.
+Le scelte rapide di sessione non presidiate, come qualsiasi altra scelta rapida, possono essere associate a tasti di scelta rapida globali. Questo può essere estremamente utile se si è un tecnico della manutenzione che gestisce più computer in un gruppo di lavoro. Ad esempio, se il vostro gruppo di lavoro è composto da 6 computer su cui eseguite la manutenzione ordinaria, potete configurare Alt+Control+1 fino a 6 come tasti di scelta rapida per ogni rispettivo computer. Questo dovrebbe accelerare notevolmente il flusso di lavoro.
 Inoltre, è possibile richiamare una sessione non presidiata tramite la casella di esecuzione se si copia il collegamento nella directory utente. Una volta copiato il collegamento, è possibile avviare una sessione non presidiata digitando your-session-name.url nella casella di esecuzione.
 </Windows>
 
@@ -232,4 +236,4 @@ Se non si desidera più che il computer sia controllato senza sorveglianza, è p
 1. Verrà visualizzato un elenco di computer; selezionare quello che si desidera revocare.
 1. Verrà chiesto se si desidera revocare il computer; rispondere affermativamente.  
 </MacOS>
-È tutto! Il controllore riceverà un messaggio che indica che la macchina non è più disponibile per l'accesso non presidiato. Se dovesse avere nuovamente bisogno di un accesso non presidiato, può avviare nuovamente la procedura di richiesta di autorizzazione all'accesso non presidiato come descritto in precedenza.
+È tutto! Il controllore riceverà un messaggio che indica che la macchina non è più disponibile per l'accesso non presidiato. Se dovesse aver bisogno di nuovo di un accesso non presidiato, può avviare nuovamente la procedura di richiesta di autorizzazione per l'accesso non presidiato come descritto sopra.

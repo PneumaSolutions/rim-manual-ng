@@ -9,30 +9,34 @@ import MacOS from "~/components/platform/MacOS.astro"
 
 Unmittelbar nach dem Aufbau der Verbindung werden einige Dinge passieren.
 <Windows>
-- Das Fernsteuerungsfenster für die Sitzung wird angezeigt.
-- Sie werden über den Status des Bildschirmlesegeräts auf dem Client-Rechner informiert (oder auch nicht).
-- Wenn auf dem Client ein Bildschirmlesegerät läuft, wird der Benutzer durch eine Toast-Benachrichtigung darüber informiert, dass die Fernsteuerungssitzung begonnen hat, und erhält eine sofortige Bestätigung, dass der Systemton des Benutzers funktioniert.
+- Das Fernsteuerungsfenster für die Sitzung wird angezeigt. Dieses Fenster kann sowohl auf einem einzelnen Bildschirm als auch auf mehreren Monitoren verschoben und in der Größe verändert werden.
+- Sie werden über den Status des Bildschirmlesegeräts auf dem Rechner des Kunden informiert.
+- Wenn auf dem Client ein Bildschirmlesegerät läuft, wird der Benutzer durch eine Toast-Benachrichtigung darüber informiert, dass die Fernsitzung begonnen hat, und erhält eine sofortige Bestätigung, dass der Systemton des Benutzers funktioniert.
 - Bei einem Mac-Ziel wird der Assistent für die Tastatureinrichtung angezeigt, wenn zum ersten Mal eine Verbindung mit einem Controller hergestellt wurde.
     - Dies ist für die virtuelle Karabiner-Tastatur, die auf Tastaturbefehle hört, die von einem Controller gesendet werden.
     - Daher sollten Sie den Zielcomputer durch den Einrichtungsassistenten führen, da dieser bei der Identifizierung auf das Drücken der Ferntastatur hört und nicht auf die eigene Tastatur des Macs.
 - Zu guter Letzt werden alle Tastatur- und Mauseingaben sofort an den Zielcomputer weitergeleitet. Um die Steuerung wieder auf Ihren Rechner zu lenken, führen Sie einen der folgenden Schritte aus:
     - Drücken Sie Windows+Umschalt+Leertaste.
     - Klicken Sie mit der rechten Maustaste auf die Titelleiste des RIM-Fensters.
-    - Klicken Sie mit der linken Maustaste auf das RIM-Symbol.
+    - Klicken Sie mit der linken Maustaste auf das RIM-Symbol in der Mitte der Titelleiste.
+
 </Windows>
+
 <MacOS>
-- Das Fernsteuerungsfenster für die Sitzung wird angezeigt.
-- Sie werden über den Status des Bildschirmlesegeräts auf dem Client-Rechner informiert (oder über das Fehlen eines solchen).
-- Wenn auf dem Client ein Bildschirmlesegerät läuft, wird der Benutzer durch eine Toast-Benachrichtigung darüber informiert, dass die Fernsteuerungssitzung begonnen hat, und erhält eine sofortige Bestätigung, dass der Systemton des Benutzers funktioniert.
+- Das Fernsteuerungsfenster für die Sitzung wird angezeigt. Dieses Fenster kann sowohl auf einem einzelnen Bildschirm als auch auf mehreren Monitoren verschoben und in der Größe verändert werden.
+- Sie werden über den Status des Bildschirmlesegeräts auf dem Rechner des Kunden informiert.
+- Wenn auf dem Client ein Bildschirmlesegerät läuft, wird der Benutzer durch eine Toast-Benachrichtigung darüber informiert, dass die Fernsitzung begonnen hat, und erhält eine sofortige Bestätigung, dass der Systemton des Benutzers funktioniert.
 - Bei einem Mac-Ziel wird der Assistent für die Tastatureinrichtung angezeigt, wenn zum ersten Mal eine Verbindung mit einem Controller hergestellt wurde.
     - Dies ist für die virtuelle Karabiner-Tastatur, die auf Tastaturbefehle hört, die von einem Controller gesendet werden.
     - Daher sollten Sie den Zielcomputer durch den Einrichtungsassistenten führen, da dieser bei der Identifizierung auf das Drücken der Ferntastatur hört und nicht auf die eigene Tastatur des Macs.
 - Zu guter Letzt werden alle Tastatur- und Mauseingaben sofort an den Zielcomputer weitergeleitet. Um die Steuerung wieder auf Ihren Rechner zu lenken, führen Sie einen der folgenden Schritte aus:
-    - Drücken Sie Wahl+Umschalt+Rücktaste.
-    - Klicken Sie auf das große RIM-Symbol in der oberen linken Ecke des Sitzungsfensters.
+    - Drücken Sie Wahl+Umschalt+Leertaste.
+    - Klicken Sie mit der rechten Maustaste auf die Titelleiste des RIM-Fensters.
+    - Klicken Sie mit der linken Maustaste auf das RIM-Symbol in der Mitte der Titelleiste.
+
 </MacOS>
 
-### Fernsteuerungszone
+### Fernbedienungszone
 <Windows>
 Jetzt können Sie alle Aufgaben auf der Client-Seite erledigen. Wenn Sie zur Steuerung Ihres eigenen Computers zurückkehren möchten, rufen Sie das RIM-Menü auf und wählen Sie die Option "Sitzung minimieren". Sie kehren zu Ihrem Rechner zurück, bis Sie wieder in das Sitzungsfenster wechseln oder die Tastenkombination Windows+Umschalt+Rücktaste erneut drücken. Wenn Sie wieder in das Sitzungsfenster wechseln, werden die Tastatur- und Mauseingaben wieder an den Client-Computer weitergeleitet.
 </Windows>
@@ -174,7 +178,7 @@ Wenn Sie einen Ihrer eigenen Rechner für den unbeaufsichtigten Zugriff registri
 1. Starten Sie RIM im Empfangshilfemodus.
 1. Klicken Sie auf die Schaltfläche "Diesen Rechner zu Ihrem RIM-Konto hinzufügen".
 1. Geben Sie Ihre E-Mail-Adresse ein und klicken Sie dann auf "Weiter".
-1. Warten Sie, bis Sie den zweistufigen Anmeldecode erhalten, geben Sie ihn ein, und Sie sollten nun angemeldet sein.
+1. Warten Sie, bis Sie den zweistufigen Anmeldecode erhalten, geben Sie ihn ein, und Sie sollten angemeldet sein.
 1. Sie werden gefragt, welche Art von Zugang Sie für diesen Rechner konfigurieren möchten. Ihre Optionen sind:
     1. Unbeaufsichtigt: Ermöglicht das Starten von Sitzungen ohne jegliches Eingreifen des Endbenutzers.
     1. Aufgefordert: Bei dieser Konfiguration wird dem Benutzer eine Eingabeaufforderung angezeigt, die ihn darüber informiert, dass Sie eine Verbindung zu seinem Rechner herstellen.
@@ -192,7 +196,7 @@ Wenn Sie alle Ihrem Konto zugewiesenen Rechner-Slots verwendet haben, wird RIM d
 Nachdem wir den Rechner für den unbeaufsichtigten Zugriff registriert haben, können wir nun eine Sitzung starten.
 1. Starten Sie RIM im Controller-Modus.
 1. Anstatt ein Schlüsselwort einzugeben, suchen und aktivieren Sie die Schaltfläche "Rechner auswählen".
-1. Wenn Sie auf diese Schaltfläche klicken, wird eine Liste von Rechnern angezeigt. Wählen Sie die gewünschte Maschine aus und drücken Sie dann die Eingabetaste. Sie können auch die Suchleiste verwenden, um die Liste auf ein bestimmtes Gerät einzugrenzen.
+1. Wenn Sie auf diese Schaltfläche klicken, wird eine Liste von Rechnern angezeigt. Wählen Sie die gewünschte Maschine aus und drücken Sie dann die Eingabetaste. Sie können auch die Suchleiste verwenden, um die Liste auf eine bestimmte Maschine einzugrenzen.
 
 Wenn der Zielcomputer für den Zugriff mit Eingabeaufforderung konfiguriert ist, erhält der Endbenutzer eine Aufforderung. Sobald er mit Ja antwortet, wird die Verbindung hergestellt. Wenn die Sitzung unbeaufsichtigt ist, werden Sie sofort verbunden und in die Fernsteuerungszone weitergeleitet.
 
@@ -215,14 +219,14 @@ Darüber hinaus können Sie eine unbeaufsichtigte Sitzung über die Ausführungs
 
 #### Unbeaufsichtigten Zugriff widerrufen
 
-Wenn Sie nicht mehr wollen, dass Ihr Rechner unbeaufsichtigt kontrolliert wird, können Sie den Zugriff des Controllers widerrufen. Dazu müssen Sie sich nicht in einer Sitzung befinden.
+Wenn Sie nicht mehr möchten, dass Ihr Rechner unbeaufsichtigt gesteuert wird, können Sie den Zugriff des Controllers widerrufen. Dazu müssen Sie sich nicht in einer Sitzung befinden.
 <Windows>
 1. Rufen Sie das Symbol für den Remote Incident Manager in Ihrer Taskleiste auf.
     1. Wenn Sie die Tastatur verwenden, drücken Sie die Tastenkombination Windows+b, dann die Leertaste und dann den Pfeil nach links oder rechts, bis Sie das Symbol finden.
 1. Klicken Sie mit der rechten Maustaste auf dieses Symbol oder drücken Sie die Anwendungs- oder Umschalttaste+f10.
 1. Wählen Sie die Option "Unbeaufsichtigten Zugriff widerrufen".
 1. Sie erhalten eine Liste von Computern. Wählen Sie den Computer aus, dem Sie den Zugriff entziehen möchten.
-1. Sie werden gefragt, ob Sie den Computer sperren wollen; antworten Sie mit Ja.  
+1. Sie werden gefragt, ob Sie den Computer sperren möchten; antworten Sie mit Ja.  
 </Windows>
 <MacOS>
 1. Rufen Sie das Symbol Remote Incident Manager in Ihrem Menü Extras/Statusmenüs auf.

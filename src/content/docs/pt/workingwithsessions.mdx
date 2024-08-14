@@ -9,7 +9,7 @@ import MacOS from "~/components/platform/MacOS.astro"
 
 Algumas coisas acontecerão imediatamente após o estabelecimento da conexão.
 <Windows>
-- A janela de controle remoto da sessão será exibida.
+- A janela de controle remoto da sessão será exibida. Essa janela pode ser movida e redimensionada em uma única tela, bem como em uma configuração de vários monitores.
 - Você será informado sobre o status do leitor de tela em execução, ou a falta dele, no computador do cliente.
 - Se o cliente estiver executando um leitor de tela, uma notificação de brinde informando ao usuário que a sessão remota foi iniciada fornecerá uma confirmação instantânea de que o áudio do sistema do usuário está funcionando.
 - Um alvo Mac exibirá o assistente de configuração de teclado se esta for a primeira vez que um controlador se conecta a ele.
@@ -18,10 +18,12 @@ Algumas coisas acontecerão imediatamente após o estabelecimento da conexão.
 - Por último, mas não menos importante, todas as entradas de teclado e mouse serão imediatamente direcionadas para o computador de destino. Para direcionar o controle de volta para o seu computador, siga um destes procedimentos:
     - Pressione Windows+Shift+Backspace.
     - Clique com o botão direito do mouse na barra de título da janela do RIM.
-    - Clique com o botão esquerdo do mouse no ícone do RIM.
+    - Clique com o botão esquerdo do mouse no ícone do RIM no meio da barra de título.
+
 </Windows>
+
 <MacOS>
-- A janela de controle remoto da sessão será exibida.
+- A janela de controle remoto da sessão será exibida. Essa janela pode ser movida e redimensionada em uma única tela, bem como em uma configuração com vários monitores.
 - Você será informado sobre o status do leitor de tela em execução, ou a falta dele, na máquina do cliente.
 - Se o cliente estiver executando um leitor de tela, uma notificação de brinde informando ao usuário que a sessão remota foi iniciada fornecerá uma confirmação instantânea de que o áudio do sistema do usuário está funcionando.
 - Um alvo Mac exibirá o assistente de configuração de teclado se esta for a primeira vez que um controlador se conecta a ele.
@@ -29,7 +31,9 @@ Algumas coisas acontecerão imediatamente após o estabelecimento da conexão.
     - Dessa forma, você deverá orientar o computador de destino pelo assistente de configuração, pois ele estará ouvindo os pressionamentos do teclado remoto no processo de identificação, e não o próprio teclado do Mac.
 - Por último, mas não menos importante, todas as entradas de teclado e mouse serão imediatamente direcionadas para o computador de destino. Para direcionar o controle de volta para o seu computador, siga um destes procedimentos:
     - Pressione Option+Shift+Backspace.
-    - Clique no ícone grande do RIM no canto superior esquerdo da janela da sessão.
+    - Clique com o botão direito do mouse na barra de título da janela do RIM.
+    - Clique com o botão esquerdo do mouse no ícone do RIM no meio da barra de título.
+
 </MacOS>
 
 ### Zona de controle remoto
@@ -58,7 +62,7 @@ Conforme mencionado anteriormente, o acesso ao menu RIM o direciona de volta ao 
     - Durante uma sessão sem supervisão, essa opção apresentará uma caixa de diálogo de permissões à qual o usuário deve estar presente para responder. No entanto, as sessões solicitadas ainda iniciam as conversas por voz após a ativação pelo controlador.
 - Iniciar acessibilidade remota: Essa opção aparece quando nenhum leitor de tela está em execução no computador remoto. Isso habilitará a fala no seu lado, mas o cliente não precisará se preocupar em ouvir a fala.
     - Se um leitor de tela (incluindo a Acessibilidade Remota) estiver em execução, essa opção se transformará em um encerramento forçado do leitor de tela em execução. Isso é útil quando o leitor de tela de um alvo para de responder a ponto de você não conseguir reiniciá-lo normalmente.
-- Silenciar a saída de áudio do alvo: Permite silenciar a saída de áudio do sistema do computador remoto.
+- Silenciar a saída de áudio do alvo: Permite que você silencie a saída de áudio do sistema do computador remoto.
     - Observe que uma conversa de voz em andamento permanecerá ativa enquanto essa configuração estiver em vigor, permitindo que você converse com a pessoa à qual está conectado enquanto o áudio do sistema dela estiver inaudível para você.
 - Reboot and Reconnect (Reiniciar e reconectar): Permite que você reinicie o computador e reconecte automaticamente a sessão.
     - Observe que um alvo Mac não pode iniciar o RIM antes do login devido a limitações da plataforma, principalmente o FileVault.
@@ -89,7 +93,7 @@ Conforme mencionado anteriormente, o acesso ao menu RIM o direciona de volta ao 
     - Durante uma sessão sem supervisão, essa opção apresentará uma caixa de diálogo de permissões à qual o usuário deve estar presente para responder. No entanto, as sessões solicitadas ainda iniciam as conversas por voz após a ativação pelo controlador.
 - Iniciar acessibilidade remota: Essa opção aparece quando nenhum leitor de tela está em execução no computador remoto. Isso habilitará a fala no seu lado, mas o cliente não precisará se preocupar em ouvir a fala.
     - Se um leitor de tela (incluindo a Acessibilidade Remota) estiver em execução, essa opção se transformará em um encerramento forçado do leitor de tela em execução. Isso é útil quando o leitor de tela de um alvo para de responder a ponto de você não conseguir reiniciá-lo normalmente.
-- Silenciar a saída de áudio do alvo: Permite que você silencie a saída de áudio do sistema do computador remoto.
+- Silenciar a saída de áudio do alvo: Permite silenciar a saída de áudio do sistema do computador remoto.
     - Observe que uma conversa de voz em andamento permanecerá ativa enquanto essa configuração estiver em vigor, permitindo que você converse com a pessoa à qual está conectado enquanto o áudio do sistema dela estiver inaudível para você.
 - Reboot and Reconnect (Reiniciar e reconectar): Permite que você reinicie o computador e reconecte automaticamente a sessão.
     - Observe que um alvo Mac não pode iniciar o RIM antes do login devido a limitações da plataforma, principalmente o FileVault.
@@ -148,7 +152,7 @@ Observe que, se o computador for reinicializado por uma instalação de software
 
 ### Acesso autônomo ou solicitado
 
-O RIM permite que você, como controlador, configure máquinas para acesso não assistido ou solicitado. Isso permite que você forneça assistência remota sem que o usuário tenha que iniciar o RIM, digitar uma palavra-chave ou mesmo estar perto do computador. Isso é útil se você for um administrador de sistemas que realiza manutenção de rotina em computadores do seu grupo de trabalho ou para clientes aos quais você presta suporte regularmente. Talvez você também queira permitir o acesso sem supervisão ao seu computador doméstico, caso precise acessá-lo de outro lugar.
+O RIM permite que você, como controlador, configure máquinas para acesso não assistido ou solicitado. Isso permite que você forneça assistência remota sem que o usuário precise iniciar o RIM, digitar uma palavra-chave ou mesmo estar perto do computador. Isso é útil se você for um administrador de sistemas que realiza manutenção de rotina em computadores do seu grupo de trabalho ou para clientes aos quais você presta suporte regularmente. Talvez você também queira permitir o acesso sem supervisão ao seu computador doméstico, caso precise acessá-lo de outro lugar.
 Há algumas maneiras de configurar máquinas para acesso autônomo.
 
 #### Durante uma sessão interativa
