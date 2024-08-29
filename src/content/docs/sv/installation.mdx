@@ -15,9 +15,9 @@ Det finns bara ett installationspaket att använda, oavsett om du erbjuder eller
 1. När filen har startats kommer installationen att påbörjas automatiskt. Det finns inga nästa-knappar att oroa sig för. Luta dig bara tillbaka, slappna av och låt det göra sitt. Inom några sekunder kommer programmet att installeras och startas automatiskt.  
     1. På välkomstskärmen kan du välja hur du i första hand vill använda RIM. Om du bara planerar att ta emot support trycker du på knappen "Få hjälp nu". Om du planerar att ge support klickar du på knappen "Ge hjälp nu". Detta beslut är inte slutgiltigt, eftersom läget alltid kan ändras inifrån programmet.
 
-Det är allt som behövs! En genväg till skrivbordet kommer automatiskt att skapas för att underlätta vid senare start av RIM. Dessutom skapar RIM en global snabbtangent för flera ändamål (Windows+Shift+Backspace) som bland annat automatiskt startar programmet var du än befinner dig.
+Det är allt som behövs! En genväg till skrivbordet kommer automatiskt att skapas för att underlätta vid senare start av RIM. Dessutom skapar RIM en multifunktionell global snabbtangent (Windows+Shift+Backspace) som bland annat automatiskt startar programmet var du än befinner dig.
 ### Installerare för obevakad eller uppmanad åtkomst
-Om den person som ger dig assistans har gett dig ett anpassat installationsprogram kommer du att informeras om detta när installationsprogrammet startas. Detta beror på att installationsprogrammet automatiskt konfigurerar RIM för det som kallas obevakad eller uppmanad åtkomst. Detta gör att den som hjälper dig kan starta en session med din dator utan att du behöver ange ett nyckelord. Vi kommer att gå igenom dessa typer av sessioner mer ingående längre fram i den här handboken.
+Om den person som ger dig assistans har gett dig ett anpassat installationsprogram kommer du att informeras om detta när installationsprogrammet startas. Detta beror på att installationsprogrammet automatiskt konfigurerar RIM för det som kallas obevakad eller uppmanad åtkomst. Detta gör det möjligt för den som hjälper dig att starta en session med din dator utan att du behöver ange ett nyckelord. Vi kommer att gå igenom dessa typer av sessioner mer ingående längre fram i den här handboken.
 
 ### Installera utan administratörsbehörighet
 
@@ -36,6 +36,10 @@ Som controller kommer du att kunna försöka ominstallera RIM med administratör
 ### Tyst installation
 
 Du kommer att vilja göra detta när du distribuerar RIM till flera maskiner. Använd helt enkelt kommandoradsparametern **/S** i ditt distributionsskript. Observera att det är skiftlägeskänsligt, så ett stort S krävs.
+
+### Installera en serverprofil
+
+Om du får fjärrsupport från en organisation som har en privat RIM-server har de skickat dig en länk till en konfigurationssida på den servern. När du klickar på länken kommer du till en sida där du får instruktioner om hur du installerar serverprofilen i din egen kopia av RIM. Observera att RIM måste vara installerat för att profilen ska kunna läggas till, så sidan innehåller länkar till installationsprogrammen om du ännu inte har installerat RIM.
 
 ### Ytterligare överväganden för Windows-servrar
 
@@ -61,36 +65,44 @@ Det finns bara ett installationspaket att använda, oavsett om du erbjuder eller
 1. [Ladda ner Remote Incident Manager](https://getrim.app/mac)
 1. Gå till din nedladdningsmapp via Finder (Alternativ+kommando+L). Leta reda på den nedladdade .pkg-filen och öppna den med Command+O.
 1. En installationsguide kommer att visas. Följ instruktionerna på skärmen.  
-Nu är du redo att köra Remote Incident Manager för första gången! Du kan köra den från din applikationsmapp, som du kommer åt via Command+Shift+A i Finder. Dessutom skapar RIM en global snabbtangent för flera ändamål (Option+Shift+Backspace) som bland annat automatiskt startar programmet var du än befinner dig.
+Nu är du redo att köra Remote Incident Manager för första gången! Du kan köra den från din applikationsmapp, som du kommer åt via Command+Shift+A i Finder. Du kommer att mötas av en välkomstskärm vid första starten, där du kan välja om du vill ge eller ta emot fjärrhjälp. Denna skärm visas bara en gång.  
+Dessutom har RIM skapat en global snabbtangent för flera ändamål (Option+Shift+Backspace) som bland annat automatiskt startar programmet var du än befinner dig.
+
+#### Installation Felsökning
+
+Även om alla ansträngningar görs för att säkerställa en smidig installation, uppstår ibland problem. Installationsprogrammet har en funktion för att vi enkelt ska kunna ge support för dessa sällsynta och tillfälliga fel. Om du stöter på ett fel under installationen trycker du på *Kommando+L* för att gå till loggvisaren, använder verktygsfältet och klickar sedan på "Spara". Du kommer att tillfrågas om var du vill spara loggutmatningen; spara den där du lätt kan hitta den. Den resulterande textfilen kan sedan skickas till vår supportadress, där den kan granskas för att hitta en potentiell lösning.
 
 ### Behörigheter
 
-På grund av macOS försiktighetsbeteende när man hanterar applikationer av den här typen för första gången måste du ge vissa behörigheter till Remote Incident Manager vid första lanseringen.
+På grund av macOS försiktighetsbeteende när man hanterar applikationer av den här typen för första gången måste du ge vissa behörigheter till Remote Incident Manager vid första lanseringen. Antalet behörigheter varierar beroende på om din Mac ska ge eller ta emot fjärrhjälp eller inte.
 
-#### Karabiner HID drivrutin
+#### Karabiner HID-drivrutin (endast för mål)
 
-Detta är den drivrutin som bearbetar indata som tas emot av RIM. Det här är ett systemtillägg, så du måste godkänna det manuellt. Rim kommer att visa en systemdialog som tar dig till avsnittet Sekretess och säkerhet i systeminställningarna. Du ska sedan bläddra tills du hittar knappen Tillåt. Om du klickar på den kommer du att uppmanas att ange ditt lösenord eller touch-ID, varefter du kan bli informerad om att du måste starta om för att fullt ut aktivera Karabiner Elements. Om du startar om nu eller senare är upp till dig, men om du bestämmer dig för att inte starta om förrän alla behörigheter har godkänts, lämna Systeminställningar och gå tillbaka till RIM.
-
-#### Tar emot input
-
-RIM behöver tillstånd för att ta emot all input som skickas till den via en fjärranslutning.  
-Klicka på "Fortsätt" i RIM-fönstret, varvid en systemdialog visas som begär tillstånd för tillgänglighetstjänster. Om VoiceOver inte fokuserar den omedelbart trycker du snabbt två gånger på **VO+F1**. Tryck sedan på nedåtpilen till "Systemdialoger", tryck på högerpilen och sedan nedåt till begäran om inmatningsbehörigheter. Om du trycker på Enter öppnas varningsrutan, och då ska du följa den till Systeminställningar och markera rutan Remote Incident Manager i listan över program.
-
-#### Fånga skärmutmatning
-
-Nästa begäran om tillstånd från RIM gäller att fånga skärmutmatningen som kommer att skickas över fjärranslutningen. Proceduren för detta liknar den föregående proceduren.
+Detta är den drivrutin som bearbetar indata från en styrd dator som tas emot av RIM. Det här är ett systemtillägg, så du måste godkänna det manuellt. Rim kommer att visa en systemdialog som tar dig till avsnittet Sekretess och säkerhet i systeminställningarna. Där bläddrar du tills du hittar knappen Tillåt. Om du klickar på den kommer du att bli ombedd att ange ditt lösenord eller touch-ID.
 
 #### Meddelanden
 
-Den sista begäran om tillstånd från RIM gäller aviseringar. RIM kommer att meddela dig när en session startar och avslutas. Proceduren för att bevilja detta tillstånd liknar den föregående proceduren.
+Nästa begäran om tillstånd från RIM kommer att gälla aviseringar. RIM kommer att meddela dig när en session startar och avslutas. Förfarandet för att bevilja denna behörighet är något annorlunda.
+1. Öppna meddelandecentret. Om du använder VoiceOver kommer du till meddelandecentret genom att trycka på **VO+N**.
+1. Leta reda på meddelandet från Remote Incident Manager och aktivera det sedan (*VO+Space*).
+1. Tryck på **VO+Kommando+Rymd** och aktivera sedan alternativet Tillåt i popup-menyn som visas.
 
-### Välkomstskärm!
+#### Mottagning av input
 
-När alla behörigheter har godkänts kommer välkomstskärmen att visas. Observera att om du väljer att starta om senare, är det nu en bra tidpunkt att göra det. Vid det här laget är RIM redo att initiera eller ta emot anslutningar.
+RIM behöver tillåtelse att ta emot all information som skickas till den via en fjärranslutning.  
+Klicka på "Fortsätt" i RIM-fönstret, varvid en systemdialog visas som begär tillstånd för tillgänglighetstjänster. Om VoiceOver inte fokuserar den omedelbart trycker du snabbt två gånger på **VO+F1**. Tryck sedan på nedåtpilen till "Systemdialoger", tryck på högerpilen och sedan nedåt till begäran om inmatningsbehörigheter. Om du trycker på Enter öppnas varningsrutan, och då ska du följa den till Systeminställningar och markera rutan Remote Incident Manager i listan över program.
 
-## Avinstallera RIM
+#### Fånga skärmutmatning (endast Target)
 
-Om du stöter på några problem med din installation av RIM, kanske du vill utföra en ren ominstallation av appen. På grund av den komplexa karaktären hos RIM-distributionen för Mac OS kommer appen inte att avinstalleras genom att bara flytta den till papperskorgen, och därmed kanske inte lösa problemet helt och hållet.
+Den sista begäran om tillstånd från RIM är för att fånga skärmutmatningen som kommer att skickas över fjärranslutningen. Proceduren för detta liknar den föregående proceduren.
 
-RIM tillhandahåller en enkel metod för att avinstallera sig själv helt och hållet. När du klickar på knappen "Om" i huvudfönstret kommer du att se en avinstallationsknapp i skärmen Om som visas. Om du klickar på den här knappen kommer du att få en bekräftelsedialog, varefter du uppmanas att ange ditt lösenord eller touch-ID för att kunna fortsätta avinstallationen. Du kommer att få ett bekräftelsemeddelande när avinstallationen är klar.
+### Installera en serverprofil
+
+Om du får fjärrsupport från en organisation som har en privat RIM-server, kommer de att ha skickat dig en länk till en konfigurationssida på den servern. När du klickar på länken kommer du till en sida där du får instruktioner om hur du installerar serverprofilen i din egen kopia av RIM. Observera att RIM måste vara installerat för att profilen ska kunna läggas till, så sidan innehåller länkar till installationsprogrammen om du ännu inte har installerat RIM.
+
+### Avinstallera RIM
+
+Om du stöter på några problem med din installation av RIM, kanske du vill utföra en ren ominstallation av appen. På grund av den komplexa karaktären hos RIM-distributionen för Mac OS kommer appen inte att avinstalleras om du bara flyttar den till papperskorgen, och det är därför inte säkert att problemet löses helt och hållet.
+
+RIM tillhandahåller en enkel metod för att avinstallera sig själv helt och hållet. När du klickar på knappen "Om" i huvudfönstret kommer du att se en avinstallationsknapp i skärmen Om som visas. Om du klickar på den här knappen kommer du att få en bekräftelsedialog, varefter du uppmanas att ange ditt lösenord eller touch-ID för att fortsätta avinstallationen. Du kommer att få ett bekräftelsemeddelande när avinstallationen är klar.
 </MacOS>

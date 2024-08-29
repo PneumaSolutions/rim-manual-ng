@@ -5,15 +5,15 @@ title: Installatie
 import Windows from "~/components/platform/Windows.astro"
 import MacOS from "~/components/platform/MacOS.astro"
 
-Hoe je Remote Incident Manager aanschaft en installeert, hangt af van je gebruikssituatie en configuratie, maar in elk geval is het proces vrij eenvoudig.
+Hoe je Remote Incident Manager aanschaft en installeert, hangt af van je gebruikssituatie en configuratie, maar het proces is in elk geval vrij eenvoudig.
 <Windows>
 ### Typische installatie voor individuen
-U hoeft maar één installatiepakket te gebruiken, of u nu hulp biedt of ontvangt.
+Er is slechts één installatiepakket dat u moet gebruiken, of u nu hulp biedt of ontvangt.
 1. [Download Remote Incident Manager](https://getrim.app/win)
 1. Voer het gedownloade bestand uit.
 1. Als gebruikersaccountbeheer is ingeschakeld, druk dan op Alt+Y om de installatie goed te keuren.
-1. Zodra het bestand is gestart, begint de installatie automatisch. Je hoeft je geen zorgen te maken over de volgende knoppen. Leun achterover, ontspan en laat het zijn ding doen. Binnen enkele seconden is het programma geïnstalleerd en wordt het automatisch gestart.  
-    1. In het welkomstscherm kun je kiezen hoe je RIM voornamelijk wilt gebruiken. Als je alleen ondersteuning wilt ontvangen, klik je op de knop "Nu hulp ontvangen". Als je van plan bent om ondersteuning te bieden, klik je op de knop "Nu hulp bieden". Deze beslissing is niet definitief, want de modus kan altijd worden gewijzigd vanuit de applicatie.
+1. Zodra het bestand is gestart, begint de installatie automatisch. Je hoeft je geen zorgen te maken over de volgende knoppen. Leun achterover, ontspan en laat het zijn werk doen. Binnen enkele seconden is het programma geïnstalleerd en wordt het automatisch gestart.  
+    1. In het welkomstscherm kun je kiezen hoe je RIM voornamelijk wilt gebruiken. Als je alleen van plan bent om ondersteuning te ontvangen, druk je op de knop "Nu hulp ontvangen". Als je van plan bent om ondersteuning te bieden, klik je op de knop "Nu hulp bieden". Deze beslissing is niet definitief, want de modus kan altijd worden gewijzigd vanuit de applicatie.
 
 Dat is alles! Er wordt automatisch een snelkoppeling op het bureaublad gemaakt om je te helpen bij het opnieuw opstarten van RIM. Daarnaast stelt RIM een multifunctionele algemene sneltoets in (Windows+Shift+Backspace) die onder andere het programma automatisch start, waar je ook bent.
 ### Installatieprogramma zonder toezicht of op verzoek
@@ -37,9 +37,13 @@ Als controller kun je tijdens een sessie proberen RIM opnieuw te installeren met
 
 Je zult dit willen doen wanneer je RIM uitrolt naar meerdere machines. Gebruik gewoon de **/S** commandoregelparameter in je implementatiescript. Merk op dat het hoofdlettergevoelig is, dus een hoofdletter S is vereist.
 
-### Extra overwegingen voor Windows-servers
+### Een serverprofiel installeren
 
-Om RIM op uw Windows Server te installeren, maakt u via RDP verbinding met de server. Voor de meest stabiele verbindingservaring raden we aan de Remote Desktop-app uit de Microsoft Store te gebruiken.
+Als u ondersteuning op afstand krijgt van een organisatie die een eigen RIM-server heeft, hebben ze u een link gestuurd naar een configuratiepagina op die server. Als u op deze link klikt, komt u op een pagina met instructies om dit serverprofiel in uw kopie van RIM te installeren. Merk op dat RIM geïnstalleerd moet zijn om het profiel te kunnen toevoegen, dus de pagina bevat links naar de installatieprogramma's als je RIM nog niet hebt geïnstalleerd.
+
+### Aanvullende overwegingen voor Windows-servers
+
+Om RIM op uw Windows Server te installeren, maakt u via RDP verbinding met de server. Voor de meest stabiele verbindingservaring raden we aan de Remote Desktop app uit de Microsoft Store te gebruiken.
 
 #### Geluid verkrijgen en Narrator starten
 
@@ -61,36 +65,44 @@ Er is slechts één installatiepakket dat u moet gebruiken, of u nu hulp biedt o
 1. [Remote Incident Manager downloaden](https://getrim.app/mac)
 1. Ga naar je downloads map via Finder (Option+command+L). Zoek het gedownloade .pkg-bestand en open het met Command+O.
 1. Er verschijnt een installatiewizard. Volg de instructies op het scherm.  
-U bent klaar om Remote Incident Manager voor de eerste keer te starten! Je kunt het starten vanuit je applicatiemap, toegankelijk via Command+Shift+A in de Finder. Daarnaast stelt RIM een multifunctionele algemene sneltoets in (Option+Shift+Backspace) die onder andere het programma automatisch start, waar je ook bent.
+U bent klaar om Remote Incident Manager voor de eerste keer te starten! U kunt het starten vanuit uw applicatiemap, toegankelijk via Command+Shift+A in de Finder. Bij de eerste keer opstarten krijg je een welkomstscherm te zien waarin je kunt kiezen of je hulp op afstand wilt geven of ontvangen. Dit scherm verschijnt maar één keer.  
+Daarnaast stelt RIM een multifunctionele algemene sneltoets in (Option+Shift+Backspace) die onder andere het programma automatisch start, waar je ook bent.
+
+#### Installatie Problemen oplossen
+
+Hoewel alles in het werk wordt gesteld om een probleemloze installatie te garanderen, kunnen er soms problemen optreden. Het installatieprogramma heeft een voorziening waarmee we gemakkelijk ondersteuning kunnen bieden voor deze zeldzame en incidentele fouten. Mocht je tijdens de installatie een fout tegenkomen, druk dan op *Command+L* om naar de logboekviewer te gaan, ga met de werkbalk aan de slag en klik vervolgens op "Opslaan". Je wordt gevraagd waar je de loguitvoer wilt opslaan; sla het op waar je het gemakkelijk terug kunt vinden. Het resulterende tekstbestand kan dan naar ons supportadres worden gestuurd, waar het kan worden bekeken om een mogelijke oplossing te vinden.
 
 ### Toestemmingen
 
-Door het voorzorgsgedrag van macOS wanneer je voor de eerste keer met dit soort programma's werkt, moet je Remote Incident Manager bij de eerste keer opstarten enkele toestemmingen geven.
+Door het voorzorgsgedrag van macOS wanneer je voor het eerst met dit soort applicaties werkt, moet je bij de eerste keer opstarten een aantal toestemmingen geven aan Remote Incident Manager. Het aantal machtigingen hangt af van het feit of uw Mac hulp op afstand zal bieden of ontvangen.
 
-#### Karabiner HID-stuurprogramma
+#### Karabiner HID-stuurprogramma (alleen Target)
 
-Dit is het stuurprogramma dat de invoer verwerkt die door RIM wordt ontvangen. Dit is een systeemuitbreiding, dus u moet het handmatig goedkeuren. Rim laat een systeemdialoogvenster zien dat je naar het gedeelte Privacy en beveiliging van de systeeminstellingen brengt. U moet dan scrollen tot u de knop Toestaan vindt. Als u hierop klikt, wordt u gevraagd om uw wachtwoord of Touch ID, waarna u mogelijk de melding krijgt dat u opnieuw moet opstarten om Karabiner Elements volledig in te schakelen. Of je nu herstart of later is aan jou, maar als je besluit niet opnieuw op te starten voordat alle toestemmingen zijn goedgekeurd, verlaat dan Systeeminstellingen en ga terug naar RIM.
+Dit is het stuurprogramma dat de invoer verwerkt van een computer die wordt bestuurd en ontvangen door RIM. Dit is een systeemuitbreiding, dus u moet het handmatig goedkeuren. Rim zal een systeemdialoogvenster openen dat je naar de sectie Privacy en beveiliging van de systeeminstellingen brengt. U moet dan scrollen tot u de knop Toestaan vindt. Als u hierop klikt, wordt u gevraagd om uw wachtwoord of Touch ID.
+
+#### Meldingen
+
+De volgende toestemmingsaanvraag van RIM betreft meldingen. RIM zal je verwittigen wanneer een sessie start en eindigt. De procedure voor het verlenen van deze toestemming is iets anders.
+1. Open het meldingscentrum. Als je VoiceOver gebruikt, krijg je toegang tot het meldingscentrum door op **VO+N** te drukken.
+1. Zoek de melding van Remote Incident Manager en activeer deze (*VO+Spatie*).
+1. Druk op **VO+Command+Space** en activeer de optie Toestaan in het pop-upmenu dat verschijnt.
 
 #### Invoer ontvangen
 
 RIM heeft toestemming nodig om alle invoer te ontvangen die via een externe verbinding naar RIM wordt gestuurd.  
 Klik op "Doorgaan" in het RIM-venster. Er verschijnt nu een systeemdialoogvenster met een verzoek om toestemming voor de toegankelijkheidsdienst. Als VoiceOver het dialoogvenster niet meteen opent, druk dan twee keer snel op **VO+F1**. Ga vervolgens met de pijl omlaag naar "Systeemdialogen", druk op de pijl naar rechts en vervolgens naar beneden naar het verzoek om invoerrechten. Als je daarop op enter drukt, wordt het waarschuwingsvenster geopend. Op dat moment ga je naar Systeeminstellingen en vink je Remote Incident Manager aan in de lijst met applicaties.
 
-#### Schermuitvoer vastleggen
+#### Schermuitvoer vastleggen (alleen Target)
 
-De volgende toestemmingsaanvraag van RIM is voor het vastleggen van de schermuitvoer die over de externe verbinding zal worden geleid. De procedure hiervoor is gelijkaardig aan de vorige procedure.
+De laatste toestemmingsaanvraag van RIM is voor het vastleggen van de schermuitvoer die over de externe verbinding zal worden geleid. De procedure hiervoor is vergelijkbaar met de vorige procedure.
 
-#### Meldingen
+### Een serverprofiel installeren
 
-De laatste toestemmingsaanvraag van RIM is voor meldingen. RIM zal je verwittigen wanneer een sessie start en eindigt. De procedure voor het verlenen van deze toestemming is vergelijkbaar met de vorige procedure.
+Als u ondersteuning op afstand krijgt van een organisatie die een eigen RIM-server heeft, hebben ze u een link gestuurd naar een configuratiepagina op die server. Als u op deze link klikt, komt u op een pagina met instructies om dit serverprofiel in uw kopie van RIM te installeren. Merk op dat RIM geïnstalleerd moet zijn om het profiel te kunnen toevoegen, dus de pagina bevat links naar de installatieprogramma's als je RIM nog niet hebt geïnstalleerd.
 
-### Welkomsscherm!
+### RIM verwijderen
 
-Nadat alle toestemmingen zijn goedgekeurd, verschijnt het welkomstscherm. Als u ervoor kiest om later opnieuw op te starten, is dit een goed moment om opnieuw op te starten. Op dit moment is RIM klaar om verbindingen te starten of te ontvangen.
-
-## RIM verwijderen
-
-Mocht u problemen ondervinden met de installatie van RIM, dan kunt u de app opnieuw installeren. Vanwege de complexe aard van de RIM-distributie voor Mac OS wordt het programma niet simpelweg verwijderd door het naar de prullenbak te verplaatsen.
+Als u problemen ondervindt met de installatie van RIM, kunt u de app opnieuw installeren. Door de complexe aard van de RIM-distributie voor Mac OS wordt het programma niet simpelweg verwijderd door het naar de prullenbak te verplaatsen.
 
 RIM biedt een eenvoudige methode om zichzelf volledig te verwijderen. Als je in het hoofdvenster op de knop "Over" klikt, zie je in het scherm "Over" een knop om de installatie ongedaan te maken. Als je op deze knop klikt, krijg je een bevestigingsdialoog, waarna je wordt gevraagd om je wachtwoord of touch ID om verder te gaan met de de-installatie. Je krijgt een bevestigingsbericht zodra de de-installatie is voltooid.
 </MacOS>
