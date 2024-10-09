@@ -7,6 +7,10 @@ import MacOS from "~/components/platform/MacOS.astro"
 
 Versioner av RIM betecknas med rubriker på nivå 3. Betydande uppdateringar med flera funktioner för båda plattformarna kommer att delas in i Mac- och Windows-underrubriker på nivå 4.
 
+### 3.3.33
+
+* macOS: RIM har nu den nödvändiga behörigheten från Apple för att tillåta fjärråtkomst, inklusive obevakad åtkomst, utan att behöva be om tillstånd för skärminspelning varje månad. Detta kräver att målanvändare som kör macOS Sequoia beviljar en ny "fjärråtkomst"-behörighet bara en gång. RIM kommer att begära denna behörighet innan den visar skärmen Ta emot hjälp, eller första gången den startar efter att ha installerat denna uppdatering på maskiner som är registrerade som obevakade mål. Observera att det fortfarande finns ett känt problem med RIM på macOS Sequoia: funktionen för fjärråtkomst på macOS Sequoia-målmaskiner fungerar inte korrekt. Vi arbetar för närvarande med Apple för att lösa detta problem. Om du eller dina målanvändare skulle påverkas av det här problemet fortsätter vi att rekommendera att du undviker att uppgradera till macOS Sequoia tills vidare. Tack för ditt tålamod.
+
 ### 3.3.32
 
 * Åtgärdat ett problem som ibland gjorde att RIM kraschade när en mapp kopierades till urklipp.
