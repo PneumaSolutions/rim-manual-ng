@@ -1,0 +1,28 @@
+---
+title: Kända problem
+---
+
+import Windows from "~/components/platform/Windows.astro"
+import MacOS from "~/components/platform/MacOS.astro"
+
+På Pneuma Solutions har vi åtagit oss att tillhandahålla en stabil och tillförlitlig upplevelse med Remote Incident Manager (RIM). I sällsynta fall finns det dock problem på operativsystemsnivå som kan komma i vägen.
+Med detta i åtanke kommer vi att beskriva alla aktuella problem med Remote Incident Manager i skrivande stund, tillsammans med alla tillgängliga tillfälliga lösningar som kan användas medan problemen löses.
+
+## MacOS
+
+### Problem med fjärrtillgänglighetsmodulen på macOS Sequoia Targets
+
+på grund av förändringar i macOS Sequoia påverkas för närvarande viss funktionalitet relaterad till vår fjärrtillgänglighetsmodul.
+
+#### Problemet:
+Fjärrtillgänglighetsmodulen gör det möjligt för en synskadad tekniker att hjälpa en seende användare på distans utan att aktivera en skärmläsare på användarens dator. MacOS Sequoia introducerar dock ändringar i VoiceOvers inställningshantering, vilket hindrar oss från att på ett tillförlitligt sätt justera de nödvändiga inställningarna när modulen aktiveras. Därför kan synskadade tekniker stöta på följande problem när de arbetar med macOS Sequoia-mål:
+
+* Fjärrtalsmodulen kan misslyckas, vilket resulterar i att VoiceOvers standardröst hörs av målanvändaren och avslöjar teknikerns funktionsnedsättning utan samtycke.
+* VoiceOvers ljudeffekter, markeringsmarkör och textningspanel kanske inte inaktiveras korrekt, vilket återigen avslöjar teknikerns användning av VoiceOver.
+* I vissa fall kanske VoiceOver inte återgår till sina standardinställningar, vilket kan orsaka problem för framtida synskadade användare av målmaskinen.
+
+#### Påverkade användare:
+Alla RIM-kontroller (på antingen Mac eller Windows) som försöker använda fjärrtillgänglighetsmodulen på en Mac-målmaskin som kör Sequoia kan påverkas av dessa problem. Detta kan också påverka framtida användare av VoiceOver på mål-Mac om dessa inställningar inte återställs på rätt sätt.
+
+#### Interimslösning:
+Tyvärr finns det ingen direkt lösning för denna lösning. Vi uppmuntrar alla berörda användare att kontakta Apples tillgänglighetsavdelning för att begära ett tillförlitligt och framtidssäkert API som gör det möjligt för RIM att justera VoiceOver-inställningarna på ett säkert sätt. Din insats hjälper till att bevara värdigheten och integriteten hos synskadade tekniker och säkerställer att dessa funktioner fungerar korrekt utan att oavsiktligt avslöja deras funktionshinder.

@@ -1,0 +1,28 @@
+---
+title: Problèmes connus
+---
+
+import Windows from "~/components/platform/Windows.astro"
+import MacOS from "~/components/platform/MacOS.astro"
+
+At Pneuma Solutions, we’re committed to providing a stable and reliable experience with Remote Incident Manager (RIM). In rare cases, however, there are operating system-level issues that can get in the way.
+With that in mind, We will outline any current issues with Remote Incident Manager at time of writing, along with any available interim solutions to use while the issues are resolved.
+
+## MacOS
+
+### Issues with Remote Accessibility Module on macOS Sequoia Targets
+
+due to changes in macOS Sequoia, some functionality related to our Remote Accessibility Module is currently impacted.
+
+#### The Issue:
+The Remote Accessibility Module enables a visually impaired technician to remotely assist a sighted user without activating a screen reader on the user’s machine. However, macOS Sequoia introduces changes to VoiceOver's settings management, which prevent us from reliably adjusting the necessary settings when enabling the module. As a result, visually impaired technicians may encounter the following issues when working with macOS Sequoia targets:
+
+* The remote speech module may fail, resulting in VoiceOver’s default voice being heard by the target user, revealing the technician’s disability without consent.
+* VoiceOver's sound effects, highlight cursor, and caption panel may not be properly disabled, again exposing the technician’s use of VoiceOver.
+* In some cases, VoiceOver may not revert back to its default settings,  potentially causing problems for future visually impaired users of the  target machine.
+
+#### Impacted Users:
+Any RIM controller (on either Mac or Windows) attempting to use the  Remote Accessibility Module on a Mac target running Sequoia may be  affected by these issues. This could also impact any future users of VoiceOver on the target Mac if these settings are not properly reset.
+
+#### Interim Solution:
+Unfortunately, there is no direct workaround for this solution. We encourage all impacted users to reach out to Apple’s Accessibility department to request a reliable and future-proof API that allows RIM to adjust VoiceOver settings safely. Your advocacy helps preserve the dignity and privacy of visually impaired technicians, ensuring these features function correctly without unintentionally exposing their disability.

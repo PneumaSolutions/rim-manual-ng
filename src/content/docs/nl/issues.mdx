@@ -1,0 +1,28 @@
+---
+title: Bekende problemen
+---
+
+import Windows from "~/components/platform/Windows.astro"
+import MacOS from "~/components/platform/MacOS.astro"
+
+Bij Pneuma Solutions zetten we ons in voor een stabiele en betrouwbare ervaring met Remote Incident Manager (RIM). In zeldzame gevallen zijn er echter problemen met het besturingssysteem die in de weg kunnen staan.
+Met dat in gedachten, zullen we alle huidige problemen met Remote Incident Manager op het moment van schrijven schetsen, samen met alle beschikbare tijdelijke oplossingen om te gebruiken terwijl de problemen worden opgelost.
+
+## MacOS
+
+### Problemen met Remote Accessibility Module op macOS Sequoia Targets
+
+als gevolg van veranderingen in macOS Sequoia is sommige functionaliteit met betrekking tot onze Remote Accessibility Module momenteel aangetast.
+
+#### Het probleem:
+De Remote Accessibility Module stelt een visueel gehandicapte technicus in staat om op afstand een ziende gebruiker te helpen zonder een schermlezer te activeren op de machine van de gebruiker. MacOS Sequoia introduceert echter wijzigingen in het instellingenbeheer van VoiceOver, waardoor we niet op betrouwbare wijze de benodigde instellingen kunnen aanpassen wanneer we de module inschakelen. Als gevolg hiervan kunnen technici met een visuele beperking de volgende problemen tegenkomen bij het werken met macOS Sequoia-doelen:
+
+* De spraakmodule op afstand kan falen, wat ertoe leidt dat de standaardstem van VoiceOver door de doelgebruiker wordt gehoord, waardoor de handicap van de technicus zonder toestemming wordt onthuld.
+* De geluidseffecten, de markeercursor en het bijschriftenpaneel van VoiceOver zijn mogelijk niet goed uitgeschakeld, waardoor het gebruik van VoiceOver door de technicus weer zichtbaar wordt.
+* In sommige gevallen keert VoiceOver niet terug naar de standaardinstellingen, wat problemen kan opleveren voor toekomstige gebruikers met een visuele beperking van de doelcomputer.
+
+#### Geïnfecteerde gebruikers:
+Elke RIM-controller (op Mac of Windows) die de Remote Accessibility Module probeert te gebruiken op een Mac-computer waarop Sequoia draait, kan last hebben van deze problemen. Dit kan ook gevolgen hebben voor toekomstige gebruikers van VoiceOver op de doel-Mac als deze instellingen niet correct worden gereset.
+
+#### Tussentijdse oplossing:
+Helaas is er geen directe oplossing. We raden alle betrokken gebruikers aan contact op te nemen met de afdeling Toegankelijkheid van Apple om een betrouwbare en toekomstbestendige API aan te vragen waarmee RIM de VoiceOver-instellingen veilig kan aanpassen. Door je in te zetten voor het behoud van de waardigheid en privacy van mensen met een visuele beperking, zorg je ervoor dat deze functies correct werken zonder hun handicap onbedoeld bloot te leggen.

@@ -32,6 +32,7 @@ export const pageOrder: string[] = [
   "dashboard",
   "localization",
   "faq",
+  "issues",
   "plans",
   "changelog",
 ]

@@ -1,0 +1,28 @@
+---
+title: Problemi noti
+---
+
+import Windows from "~/components/platform/Windows.astro"
+import MacOS from "~/components/platform/MacOS.astro"
+
+Pneuma Solutions si impegna a fornire un'esperienza stabile e affidabile con Remote Incident Manager (RIM). In rari casi, tuttavia, possono verificarsi problemi a livello di sistema operativo.
+Per questo motivo, al momento della stesura del presente documento, illustreremo tutti i problemi attuali con Remote Incident Manager, insieme a tutte le soluzioni provvisorie disponibili da utilizzare mentre i problemi vengono risolti.
+
+## MacOS
+
+### Problemi con il modulo di accessibilità remota sui target macOS Sequoia
+
+a causa delle modifiche apportate a macOS Sequoia, alcune funzionalità relative al nostro modulo di accessibilità remota sono attualmente compromesse.
+
+#### Il problema:
+Il modulo di accessibilità remota consente a un tecnico ipovedente di assistere in remoto un utente vedente senza attivare uno screen reader sul computer dell'utente. Tuttavia, macOS Sequoia introduce modifiche alla gestione delle impostazioni di VoiceOver che impediscono di regolare in modo affidabile le impostazioni necessarie quando si attiva il modulo. Di conseguenza, i tecnici ipovedenti potrebbero incontrare i seguenti problemi quando lavorano con i target di macOS Sequoia:
+
+* Il modulo vocale remoto potrebbe fallire, facendo sì che la voce predefinita di VoiceOver venga ascoltata dall'utente target, rivelando la disabilità del tecnico senza consenso.
+* Gli effetti sonori, il cursore di evidenziazione e il pannello delle didascalie di VoiceOver potrebbero non essere disattivati correttamente, rivelando nuovamente l'uso di VoiceOver da parte del tecnico.
+* In alcuni casi, VoiceOver potrebbe non tornare alle impostazioni predefinite, causando potenzialmente problemi ai futuri utenti ipovedenti della macchina di destinazione.
+
+#### Utenti interessati:
+Qualsiasi controller RIM (su Mac o Windows) che tenti di utilizzare il modulo di accessibilità remota su una destinazione Mac su cui è in esecuzione Sequoia potrebbe essere interessato da questi problemi. Questo potrebbe anche avere un impatto su qualsiasi futuro utente di VoiceOver sul Mac di destinazione se queste impostazioni non vengono ripristinate correttamente.
+
+#### Soluzione provvisoria:
+Purtroppo non esiste una soluzione diretta per questo problema. Incoraggiamo tutti gli utenti interessati a contattare il reparto Accessibilità di Apple per richiedere un'API affidabile e a prova di futuro che permetta a RIM di regolare le impostazioni di VoiceOver in modo sicuro. Il vostro impegno contribuisce a preservare la dignità e la privacy dei tecnici ipovedenti, garantendo che queste funzioni funzionino correttamente senza esporre involontariamente la loro disabilità.
