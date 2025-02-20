@@ -10,7 +10,7 @@ Opgemerkt moet worden dat de functieset van het dashboard grotendeels afhankelij
 
 ### Het dashboard vinden
 
-Als je een controller bent, is de makkelijkste manier om naar het dashboard te gaan via de hoofdinterface van RIM. Als je op de knop "RIM Dashboard" klikt, wordt het dashboard automatisch geopend in je standaardbrowser, waarbij het inloggen al geregeld is.  
+Als je een controller bent, is de eenvoudigste manier om naar het dashboard te gaan via de hoofdinterface van RIM. Als je op de knop "RIM Dashboard" klikt, wordt het dashboard automatisch geopend in je standaardbrowser, waarbij het inloggen al geregeld is.  
 Als je een netwerkbeheerder bent die RIM niet geïnstalleerd heeft, kun je gewoon inloggen op je account op de RIM website en zal je dashboard verschijnen.
 
 ### Organisatieleden beheren (Enterprise)
@@ -78,20 +78,20 @@ Alle organisatiebeheerders krijgen automatisch toegang om alle groepen te behere
 
 ### Een vooraf geconfigureerde RIM-installer instellen (Pro of hoger)
 
-Een van de gemakkelijkste manieren om een machine in te stellen voor onbeheerde of gevraagde verbindingen is door een aangepast installatieprogramma te maken. Dit is ongelooflijk handig als u massale implementaties configureert of zelfs als een eenvoudigere manier om RIM aan de praat te krijgen op de computer van een eindgebruiker die u regelmatig wilt ondersteunen.
+Een van de gemakkelijkste manieren om een machine in te stellen voor onbeheerde of gevraagde verbindingen is door een aangepast installatieprogramma te maken. Dit is ongelooflijk handig als u massale implementaties configureert, of zelfs als een eenvoudigere manier om RIM aan de praat te krijgen op de computer van een eindgebruiker die u regelmatig wilt ondersteunen.
 
 Om dit te doen:
 1. Klik in het doelbeheerscherm op de knop "Build Target Installer".
 1. Er wordt eerst gevraagd of deze machine geconfigureerd moet worden voor volledig onbeheerde toegang, of voor toegang op verzoek waarbij de gebruiker een prompt moet accepteren om de verbinding te initiëren.
 1. Vervolgens wordt u gevraagd om een doelgroep toe te wijzen. Merk op dat de doelgroepselectie automatisch naar de door jou gekozen doelgroep gaat als je de configuratie van het installatieprogramma start vanaf de pagina van jouw groep.
-1. Er wordt gevraagd hoe lang deze installer geldig moet zijn. De geldigheidsduur kan variëren van 7 tot 30 dagen. Merk op dat dit tijdsbestek alleen invloed heeft op de functionaliteit van het installatiepakket. Met andere woorden, de RIM-configuratie van de machine wordt niet uitgeschakeld wanneer de installatie verloopt.
-1. Vervolgens krijg je de optie om een basenaam toe te wijzen. Aan elke machine die via dit installatiepakket wordt geleverd, wordt deze basenaam toegewezen.
+1. Er wordt gevraagd hoe lang deze installer geldig moet zijn. Het kan 7 tot 30 dagen geldig zijn, of permanent geldig voor ondernemingsplannen door de vervaldatum in te stellen op nooit.
+1. Vervolgens krijg je de optie om een basenaam toe te wijzen. Aan elke machine die via dit installatiepakket wordt voorzien, wordt deze basisnaam toegewezen.
 1. Vervolgens krijg je een selectievakje waarmee je kunt kiezen voor een e-mailmelding wanneer een gebruiker RIM installeert via dit installatiepakket.
 1. Als je een enterprisebeheerder bent, zie je een selectievakje waarmee je het installatieprogramma als een MSI-pakket kunt bouwen. Deze optie is handig voor massale implementatie van een aangepast installatieprogramma op een machinecluster dat wordt toegewezen aan de opgegeven doelgroep.
 1. Je wordt gevraagd om een installatienaam op te geven en optioneel enkele notities. Deze zijn voor interne doeleinden en verschijnen niet in het aangemaakte installatieprogramma.
-1. Klik op "Installer bouwen" Je krijgt de downloadlink te zien die je naar het klembord kunt kopiëren en naar je eindgebruiker kunt sturen. Je kunt het installatieprogramma ook rechtstreeks downloaden voor gebruik bij massale implementaties.
+1. Klik op "Installer bouwen" Je krijgt de downloadlink te zien die je naar het klembord kunt kopiëren en naar je eindgebruiker kunt sturen. Je kunt het installatieprogramma ook rechtstreeks downloaden voor gebruik bij massale implementaties. Je kunt het installatieprogramma vanuit dit scherm verwijderen als je het voortijdig onbruikbaar wilt maken.
 
-Nu je het installatieprogramma hebt, kan het op twee manieren worden uitgevoerd. In beide gevallen zal de machine worden toegevoegd aan je lijst van machines in zowel je account als de RIM client nadat het installatieprogramma is voltooid.
+Nu je het installatieprogramma hebt, kun je het op twee manieren uitvoeren. In beide gevallen zal het installatieprogramma de server vragen om de geldigheid van het installatieprogramma te controleren. Als het installatieprogramma geldig is, wordt de machine toegevoegd aan je lijst met machines in zowel je account als de RIM client nadat het installatieprogramma is voltooid. Een ongeldig installatieprogramma wordt niet uitgevoerd.
 
 #### Normale uitvoering
 

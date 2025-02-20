@@ -27,7 +27,7 @@ Une fois que vous avez terminé, cliquez sur le bouton "Ajouter".
 
 Les départements vous permettent d'organiser les membres en fonction des différents groupes de votre organisation.
 
-Pour ajouter un département, saisissez son nom dans la boîte d'édition "Nom" sous la rubrique "Créer un département".
+Pour ajouter un département, saisissez son nom dans la zone d'édition "Nom" sous la rubrique "Créer un département".
 
 #### Exportation des données des membres
 
@@ -84,14 +84,14 @@ Pour ce faire, il faut
 1. Dans l'écran de gestion des cibles, cliquez sur le bouton "Build Target Installer".
 1. Il vous sera d'abord demandé si vous souhaitez que cette machine soit configurée pour un accès entièrement sans surveillance ou pour un accès guidé dans lequel l'utilisateur doit accepter une invite pour initier la connexion.
 1. Il vous sera ensuite demandé d'assigner un groupe cible. Notez que la sélection du groupe cible ira automatiquement au groupe cible que vous avez choisi si vous lancez la configuration de l'installateur à partir de la page de votre groupe.
-1. Il vous sera demandé de préciser la durée de validité du programme d'installation. La durée de validité peut être comprise entre 7 et 30 jours. Notez que cette durée n'affecte que la fonctionnalité du paquet d'installation. En d'autres termes, la configuration RIM de la machine ne sera pas désactivée à l'expiration de l'installation.
-1. Vous avez ensuite la possibilité d'attribuer un nom de basse. Ce nom de base sera attribué à toute machine approvisionnée via ce paquet d'installation.
+1. Il vous sera demandé de préciser la durée de validité du programme d'installation. La durée de validité peut être comprise entre 7 et 30 jours, ou être permanente pour les plans d'entreprise en définissant l'expiration sur "jamais".
+1. Vous avez ensuite la possibilité d'attribuer un nom de basse. Ce nom de base sera attribué à toute machine approvisionnée par le biais de ce paquet d'installation.
 1. Une case à cocher vous permet ensuite d'opter pour une notification par courrier électronique lorsqu'un utilisateur installe RIM via ce programme d'installation.
 1. Si vous êtes un administrateur d'entreprise, vous verrez une case à cocher qui vous permet de créer le programme d'installation en tant que paquet MSI. Cette option est utile pour le déploiement en masse d'un programme d'installation personnalisé sur une grappe de machines qui seront désignées pour le groupe cible donné.
 1. Il vous sera demandé de fournir un nom d'installateur, et éventuellement quelques notes. Celles-ci sont destinées à un usage interne et n'apparaîtront pas dans le programme d'installation créé.
-1. Cliquez sur "Build Installer" Vous obtiendrez un lien de téléchargement que vous pourrez copier dans le presse-papiers et envoyer à l'utilisateur final. Vous pouvez également télécharger directement le programme d'installation pour l'utiliser lors de déploiements massifs.
+1. Cliquez sur "Build Installer" Vous obtiendrez un lien de téléchargement que vous pourrez copier dans le presse-papiers et envoyer à l'utilisateur final. Vous pouvez également télécharger directement le programme d'installation pour l'utiliser lors de déploiements massifs. Vous pouvez supprimer le programme d'installation à partir de cet écran si vous décidez de le rendre inopérant prématurément.
 
-Maintenant que vous avez votre programme d'installation, vous pouvez l'exécuter de deux manières. Dans les deux cas, la machine sera ajoutée à votre liste de machines dans votre compte et dans le client RIM une fois l'installation terminée.
+Maintenant que vous avez votre programme d'installation, vous pouvez l'exécuter de deux manières. Dans les deux cas, le programme d'installation interrogera le serveur pour vérifier la validité du programme d'installation. Si le programme d'installation est valide, la machine sera ajoutée à votre liste de machines dans votre compte et dans le client RIM une fois le programme d'installation terminé. Un programme d'installation non valide ne s'exécutera pas.
 
 #### Exécution normale
 

@@ -66,7 +66,7 @@ Wenn Sie auf den Link "Ziele konfigurieren" klicken, gelangen Sie auf eine Seite
 
 ### Zielgruppen (für Pro-Konten und höher)
 
-Nehmen wir an, Ihre Arbeitsgruppe ist über mehrere Standorte verteilt. Oder Sie möchten Gruppen von Rechnern für Ihre routinemäßigen Wartungstechniker bestimmen. Mit Zielgruppen können Sie genau das tun. Klicken Sie dazu einfach auf die Schaltfläche "Zielgruppe erstellen", benennen Sie Ihre Gruppe und senden Sie sie ab.  
+Nehmen wir an, Ihre Arbeitsgruppe ist über mehrere Standorte verteilt. Oder vielleicht möchten Sie Gruppen von Rechnern für Ihre routinemäßigen Wartungstechniker bestimmen. Mit Zielgruppen können Sie genau das tun. Klicken Sie dazu einfach auf die Schaltfläche "Zielgruppe erstellen", benennen Sie Ihre Gruppe und senden Sie sie ab.  
 Sie können so viele Zielgruppen erstellen, wie Sie für Ihren Anwendungsfall benötigen. 
 
 #### Zugriffskontrolle (für Unternehmensorganisationen)
@@ -84,18 +84,18 @@ Um dies zu tun:
 1. Klicken Sie im Bildschirm "Zielverwaltung" auf die Schaltfläche "Zielinstallationsprogramm erstellen".
 1. Sie werden zunächst gefragt, ob Sie diesen Rechner für einen völlig unbeaufsichtigten Zugriff oder für einen Zugriff mit Eingabeaufforderung konfigurieren möchten, bei dem der Benutzer eine Eingabeaufforderung akzeptieren muss, um die Verbindung zu initiieren.
 1. Dann werden Sie nach einer Zielgruppenzuweisung gefragt. Beachten Sie, dass die Zielgruppenauswahl automatisch auf die von Ihnen gewählte Zielgruppe übergeht, wenn Sie die Konfiguration des Installationsprogramms von der Seite Ihrer Gruppe aus starten.
-1. Sie werden gefragt, wie lange dieser Installer gültig sein soll. Die Gültigkeitsdauer kann zwischen 7 und 30 Tagen liegen. Beachten Sie, dass dieser Zeitrahmen nur die Funktionalität des Installationspakets betrifft. Mit anderen Worten: Die RIM-Konfiguration des Rechners wird nicht deaktiviert, wenn die Installation abläuft.
-1. Sie erhalten dann die Möglichkeit, einen Bassnamen zu vergeben. Jeder Maschine, die über dieses Installationspaket bereitgestellt wird, wird dieser Basisname zugewiesen.
+1. Sie werden gefragt, wie lange dieser Installer gültig sein soll. Die Gültigkeitsdauer kann zwischen 7 und 30 Tagen liegen, oder sie kann für Unternehmenstarife dauerhaft sein, indem Sie die Gültigkeitsdauer auf nie setzen.
+1. Anschließend haben Sie die Möglichkeit, einen Bassnamen zu vergeben. Jedem Rechner, der über dieses Installationspaket bereitgestellt wird, wird dieser Basisname zugewiesen.
 1. Anschließend wird Ihnen ein Kontrollkästchen angezeigt, mit dem Sie sich für eine E-Mail-Benachrichtigung entscheiden können, wenn ein Benutzer RIM über dieses Installationsprogramm installiert.
 1. Wenn Sie ein Unternehmensadministrator sind, sehen Sie ein Kontrollkästchen, mit dem Sie das Installationsprogramm als MSI-Paket erstellen können. Diese Option ist nützlich für die Massenverteilung eines benutzerdefinierten Installers auf einen Computer-Cluster, der der angegebenen Zielgruppe zugewiesen wird.
 1. Sie werden aufgefordert, einen Installer-Namen und optional einige Notizen anzugeben. Diese sind für interne Zwecke bestimmt und werden nicht im erstellten Installer angezeigt.
-1. Klicken Sie auf "Installer erstellen" Es wird ein Download-Link angezeigt, den Sie entweder in die Zwischenablage kopieren und an Ihren Endbenutzer senden können. Alternativ können Sie das Installationsprogramm auch direkt herunterladen, um es für Massenverteilungen zu verwenden.
+1. Klicken Sie auf "Installer erstellen" Es wird ein Download-Link angezeigt, den Sie entweder in die Zwischenablage kopieren und an Ihren Endbenutzer senden können. Alternativ können Sie das Installationsprogramm auch direkt herunterladen, um es bei Masseninstallationen zu verwenden. Sie können das Installationsprogramm von diesem Bildschirm aus löschen, wenn Sie es vorzeitig unbrauchbar machen möchten.
 
-Nachdem Sie das Installationsprogramm erhalten haben, können Sie es auf eine der beiden folgenden Arten ausführen. In beiden Fällen wird der Rechner nach Abschluss der Installation sowohl in Ihrem Konto als auch im RIM-Client zu Ihrer Rechnerliste hinzugefügt.
+Nachdem Sie Ihr Installationsprogramm erhalten haben, können Sie es auf eine von zwei Arten ausführen. In beiden Fällen fragt das Installationsprogramm den Server ab, um die Gültigkeit des Installationsprogramms zu überprüfen. Wenn der Installer gültig ist, wird der Rechner nach Abschluss der Installation sowohl in Ihrem Konto als auch im RIM-Client zu Ihrer Rechnerliste hinzugefügt. Ein ungültiges Installationsprogramm wird nicht ausgeführt.
 
 #### Normale Ausführung
 
-Beim Ausführen des Installationsprogramms erhält der Benutzer eine Eingabeaufforderung mit den folgenden Informationen:
+Bei der Ausführung des Installationsprogramms erhält der Benutzer eine Eingabeaufforderung mit den folgenden Informationen:
 * Den Namen des Technikers und ggf. seine Organisation
 * die Art der Verbindung, d.h. ob eine Eingabeaufforderung erforderlich ist oder nicht
 
@@ -109,7 +109,7 @@ Eine stille Installation kann durch Ausführen des ausführbaren Installationspr
 
 Über das RIM-Dashboard können Sie den gesamten Verlauf Ihrer vergangenen Sitzungen einsehen. Der Sitzungsverlauf enthält derzeit das Datum und die Uhrzeit jeder Sitzung, den Namen des Computers, mit dem Sie verbunden waren, und die Dauer der Sitzung. Über den Link "Kommentar hinzufügen" in der Sitzungszeile können Sie außerdem Kommentare zu einer Sitzung hinzufügen. Dies ist nützlich, um Notizen zum aktuellen Status eines Vorfalls sowohl für Sie selbst als auch für die Administratoren der Organisation hinzuzufügen.
 
-Ihr gesamter Sitzungsverlauf kann zur späteren Betrachtung über eine Tabellenkalkulationsanwendung exportiert werden. Aktivieren Sie die Schaltfläche "Sitzungsverlauf als CSV herunterladen", die sich unter der Tabelle des Sitzungsverlaufs befindet, um eine Anpassungsseite für den Datenexport zu öffnen. Auf dieser Seite können Sie die Zeitspanne des Exports sowie das Symbol zur Trennung der Felder auswählen.
+Ihr gesamter Sitzungsverlauf kann zur späteren Betrachtung über eine Tabellenkalkulationsanwendung exportiert werden. Aktivieren Sie die Schaltfläche "Sitzungsverlauf als CSV herunterladen", die sich unter der Tabelle des Sitzungsverlaufs befindet, um eine Anpassungsseite für den Datenexport zu öffnen. Auf dieser Seite können Sie die Zeitspanne für den Export sowie das Symbol zur Trennung der Felder auswählen.
 
 ### Verwaltung Ihres Abonnements (Personal und Pro Plans)
 
@@ -120,8 +120,8 @@ Ihr gesamter Sitzungsverlauf kann zur späteren Betrachtung über eine Tabellenk
 
 #### Ihr Abonnement aufwerten
 
-Sie können Ihr Abonnement ganz einfach aktualisieren. Wenn Sie ein Monatsabonnement haben, wird Ihnen der verbleibende Betrag des neuen Abonnements anteilig berechnet, während für die folgenden Monate der volle neue Betrag berechnet wird. Wenn Sie auf "Abonnement aktualisieren" klicken, öffnet sich eine Seite, die fast identisch ist mit der Seite zur Auswahl des ursprünglichen Tarifs. Es gibt jedoch ein paar bemerkenswerte Unterschiede, die wir im Folgenden erläutern werden:
-* Sie können Ihr Abo nicht auf ein Abo mit weniger Rechnern herabstufen. Sie können jedoch von einem Monatstarif auf einen Jahrestarif mit der gleichen Anzahl von Rechnern wie Ihr aktueller Tarif umsteigen. Um ein Downgrade vorzunehmen, müssen Sie Ihren Plan kündigen, dessen Ablauf abwarten und dann einen neuen Plan mit weniger Rechnern abschließen.
+Sie können Ihr Abonnement ganz einfach aktualisieren. Wenn Sie ein Monatsabonnement haben, wird Ihnen der verbleibende Betrag des neuen Abonnements anteilig berechnet, während für die folgenden Monate der volle neue Betrag berechnet wird. Wenn Sie auf "Abonnement aktualisieren" klicken, öffnet sich eine Seite, die fast identisch ist mit der Seite zur Auswahl des ursprünglichen Tarifs. Es gibt ein paar bemerkenswerte Unterschiede, die wir im Folgenden erläutern:
+* Sie können Ihren Tarif nicht auf einen Tarif mit weniger Rechnern herabstufen. Sie können jedoch von einem Monatstarif auf einen Jahrestarif mit der gleichen Anzahl von Rechnern wie Ihr aktueller Tarif umsteigen. Um ein Downgrade vorzunehmen, müssen Sie Ihren Plan kündigen, dessen Ablauf abwarten und dann einen neuen Plan mit weniger Rechnern abschließen.
 * Enterprise-Tarife, einschließlich des Enterprise-Addons, können nicht direkt über diese Seite erworben werden.
 
 #### Stornierung wiederkehrender Zahlungen

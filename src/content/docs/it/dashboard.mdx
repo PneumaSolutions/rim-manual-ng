@@ -6,7 +6,7 @@ import Windows from "~/components/platform/Windows.astro"
 import MacOS from "~/components/platform/MacOS.astro"
 
 RIM dispone di un dashboard basato sul Web per facilitare varie attività di gestione dei computer e degli account. È possibile gestire i computer non presidiati esistenti, creare programmi di installazione preconfigurati per i computer di destinazione e molto altro ancora.  
-Va notato che le funzionalità del dashboard dipendono in larga misura dal livello di abbonamento dell'account. Ad esempio, gli utenti aziendali possono assegnare i computer a gruppi di destinazione e creare installatori silenziosi. D'altra parte, chiunque (compresi gli utenti privati) può creare installatori personalizzati per i propri computer non presidiati.
+Va notato che le funzionalità del dashboard dipendono in larga misura dal livello di abbonamento dell'account. Ad esempio, gli utenti aziendali possono assegnare i computer a gruppi di destinazione e creare installatori silenziosi. D'altro canto, chiunque (compresi gli utenti privati) può creare installatori personalizzati per i propri computer non presidiati.
 
 ### Individuazione della Dashboard
 
@@ -40,7 +40,7 @@ L'elenco dei membri dell'organizzazione può essere esportato come file CSV. Per
 
 #### Restrizioni
 
-A seconda della natura della vostra organizzazione, è possibile che vi siano alcune funzioni a cui non volete che il vostro personale abbia accesso. Gli amministratori dell'organizzazione possono quindi scegliere le funzioni a cui consentire l'accesso ai controllori. La schermata "Restrizioni", accessibile dal menu "Organizzazione", consente di configurare queste autorizzazioni.
+A seconda della natura della vostra organizzazione, è possibile che vi siano alcune funzioni a cui non volete che il vostro personale abbia accesso. Gli amministratori dell'organizzazione possono scegliere le funzioni a cui consentire l'accesso ai controllori. La schermata "Restrizioni", accessibile dal menu "Organizzazione", consente di configurare queste autorizzazioni.
 
 Le autorizzazioni che possono essere attivate includono:
 * Consentire al controllore di capovolgere la sessione
@@ -84,14 +84,14 @@ Per fare questo:
 1. Nella schermata di gestione dei target, fare clic sul pulsante "Build Target Installer".
 1. Verrà innanzitutto chiesto se si desidera che la macchina sia configurata per l'accesso completamente non presidiato o per l'accesso guidato, in cui l'utente deve accettare una richiesta per avviare la connessione.
 1. Verrà quindi richiesto di assegnare un gruppo di destinazione. Si noti che la selezione del gruppo di destinazione andrà automaticamente al gruppo di destinazione scelto se si avvia la configurazione del programma di installazione dalla pagina del gruppo.
-1. Verrà chiesto per quanto tempo si desidera che il programma di installazione sia valido. La validità può variare da 7 a 30 giorni. Si noti che questo periodo di tempo influisce solo sulla funzionalità del pacchetto di installazione. In altre parole, la configurazione RIM della macchina non verrà disattivata alla scadenza dell'installazione.
-1. Viene quindi data la possibilità di assegnare un nome basso. A qualsiasi macchina approvvigionata tramite questo pacchetto di installazione verrà assegnato questo nome di base.
+1. Verrà chiesto per quanto tempo si desidera che il programma di installazione sia valido. La validità può essere compresa tra i 7 e i 30 giorni, oppure può essere permanente per i piani aziendali impostando la scadenza su mai.
+1. Viene quindi data la possibilità di assegnare un nome al basso. A qualsiasi macchina approvvigionata tramite questo pacchetto di installazione verrà assegnato questo nome di base.
 1. Viene quindi presentata una casella di controllo che consente di scegliere di ricevere una notifica via e-mail quando un utente installa RIM tramite questo programma di installazione.
 1. Se siete un amministratore aziendale, vedrete una casella di controllo che vi permette di creare il programma di installazione come pacchetto MSI. Questa opzione è utile per la distribuzione di massa di un programma di installazione personalizzato su un cluster di macchine che saranno designate per il gruppo di destinazione indicato.
 1. Verrà richiesto di fornire il nome del programma di installazione e, facoltativamente, alcune note. Queste sono per i registri interni e non appariranno nel programma di installazione creato.
-1. Fare clic su "Build Installer" Verrà visualizzato il link per il download che può essere copiato negli appunti e inviato all'utente finale. In alternativa, è possibile scaricare direttamente il programma di installazione per utilizzarlo nelle distribuzioni di massa.
+1. Fare clic su "Build Installer" Verrà visualizzato il link per il download che può essere copiato negli appunti e inviato all'utente finale. In alternativa, è possibile scaricare direttamente il programma di installazione per utilizzarlo nelle distribuzioni di massa. È possibile eliminare il programma di installazione da questa schermata se si decide di renderlo prematuramente inutilizzabile.
 
-Una volta ottenuto il programma di installazione, è possibile eseguirlo in due modi. In entrambi i casi, al termine dell'installazione il computer verrà aggiunto all'elenco dei computer dell'account e del client RIM.
+Una volta ottenuto il programma di installazione, è possibile eseguirlo in due modi. In entrambi i casi, il programma di installazione interroga il server per verificare la validità del programma di installazione. Se il programma di installazione è valido, il computer verrà aggiunto all'elenco dei computer dell'account e del client RIM al termine dell'installazione. Un programma di installazione non valido non verrà eseguito.
 
 #### Esecuzione normale
 
@@ -121,7 +121,7 @@ Il cruscotto consente di visualizzare e gestire facilmente i dettagli dell'abbon
 #### Aggiornamento del piano
 
 È possibile aggiornare facilmente il proprio abbonamento. Se avete un piano mensile, vi verrà addebitato il costo residuo del nuovo importo, mentre l'intero importo verrà addebitato per i mesi successivi. Facendo clic su "Aggiorna abbonamento" si apre una pagina quasi identica a quella di selezione del piano iniziale. Ci sono alcune differenze degne di nota che illustreremo di seguito:
-* Non è possibile effettuare il downgrade a un piano con meno macchine. È invece possibile passare da un piano mensile a uno annuale con lo stesso numero di macchine del piano attuale. Per effettuare il downgrade, è necessario annullare il piano, attendere la sua scadenza e avviare un nuovo piano con un numero inferiore di macchine.
+* Non è possibile effettuare il downgrade a un piano con meno macchine. È tuttavia possibile passare da un piano mensile a uno annuale con lo stesso numero di macchine del piano attuale. Per effettuare il downgrade, è necessario annullare il piano, attendere la sua scadenza e avviare un nuovo piano con un numero inferiore di macchine.
 * I piani Enterprise, compreso l'addon Enterprise, non possono essere acquistati direttamente da questa pagina.
 
 #### Annullamento dei pagamenti ricorrenti

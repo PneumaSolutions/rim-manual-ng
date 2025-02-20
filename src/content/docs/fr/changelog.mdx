@@ -7,6 +7,12 @@ import MacOS from "~/components/platform/MacOS.astro"
 
 Les versions de RIM seront désignées par des rubriques de niveau 3. Les mises à jour substantielles comportant plusieurs fonctionnalités pour les deux plates-formes seront divisées en sous-titres Mac et Windows au niveau 4.
 
+### 3.4.0
+* Ajout d'une option permettant aux utilisateurs professionnels de créer des installateurs n'expirant jamais
+    * Cette modification s'accompagne d'un contrôle de validation de tous les installateurs personnalisés. Si un programme d'installation personnalisé est expiré ou supprimé, il ne s'exécutera plus.
+* Correction d'un problème qui provoquait un signal sonore constant sur les machines cibles dépourvues de système audio embarqué, en particulier les serveurs Windows
+* Il n'est plus possible d'appuyer involontairement sur Windows+Shift+Backspace sur une cible Windows avec macOS comme contrôleur
+
 ### 3.3.39
 
 * macOS : Ajout d'une note sur les autorisations requises dans l'écran de bienvenue.

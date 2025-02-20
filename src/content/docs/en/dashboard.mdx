@@ -5,8 +5,6 @@ title: The RIM Management Dashboard
 import Windows from "~/components/platform/Windows.astro"
 import MacOS from "~/components/platform/MacOS.astro"
 
-{/* Begin Content */}
-
 RIM features a  web-based dashboard to facilitate various machine and account management tasks. You can manage your existing unattended computers, create preconfigured installers for target computers, and much more.  
 It should be noted that the feature set of the dashboard is largely dependent on which subscription tier your account is under. For example, enterprise users can assign machines to target groups, as well as create silent installers. On the other hand, anyone (including personal users) can create custom installers for their unattended machines.
 
@@ -86,14 +84,14 @@ IN order to do this:
 1. In the target management screen, click the "Build Target Installer" button.
 1. You will first be asked if you want this machine to be configured for fully unattended access, or for prompted access in which the user has to accept a prompt to initiate the connection.
 1. You will then be asked for a target group assignment. Note that the target group selection will automatically go to your chosen target group if you initiate the installer configuration from your group's page.
-1. You will be asked how long you want this installer to be valid for. It can be valid for anywhere between 7 to 30 days. Note that this timeframe only affects the functionality of the installation package. In other words, the machine's RIM configuration will not be disabled when the installation expires.
+1. You will be asked how long you want this installer to be valid for. It can be valid for anywhere between 7 to 30 days, or permanently valid for enterprise plans by setting the expiration to never.
 1. You are then given the option to assign a bass name. Any machine provisioned via this installation package will have this base name assigned to it.
 1. You will then be presented with a checkbox that lets you opt into an email notification when a user installs RIM via this installer.
 1. If you are an enterprise admin, you will see a checkbox that allows you to build the installer as an MSI package. This option is useful for mass deployment of a custom installer to a machine cluster that will be designated to the given target group.
 1. You will be asked to provide an installer name, and optionally some notes. These are for internal records and will not appear within the created installer.
-1. Click on "Build Installer." You will be presented with the download link that you can either copy to the clipboard and send to your end user. Alternatively, you may download the installer directly for use in mass deployments.
+1. Click on "Build Installer." You will be presented with the download link that you can either copy to the clipboard and send to your end user. Alternatively, you may download the installer directly for use in mass deployments. You may delete the installer from this screen should you choose to render it inoperable prematurely.
 
-Now that you have your installer, it can be run in one of two ways. In either case, the machine will be added to your list of machines in both your account as well as the RIM client after the installer is complete.
+Now that you have your installer, it can be run in one of two ways. In either case, the installer will query the server to check the validity of the installer. If the installer is valid, the machine will be added to your list of machines in both your account as well as the RIM client after the installer is complete. An invalid installer will not run.
 
 #### Normal Execution
 

@@ -84,22 +84,22 @@ FÖR att göra detta:
 1. Klicka på knappen "Build Target Installer" i målhanteringsfönstret.
 1. Du kommer först att få frågan om du vill att maskinen ska konfigureras för helt obevakad åtkomst eller för uppmanad åtkomst, där användaren måste acceptera en uppmaning för att initiera anslutningen.
 1. Du kommer sedan att bli ombedd att ange en målgrupp. Observera att målgruppsvalet automatiskt går till din valda målgrupp om du initierar installationsprogrammets konfiguration från din grupps sida.
-1. Du kommer att bli tillfrågad hur länge du vill att installationsprogrammet ska vara giltigt. Den kan vara giltig i allt mellan 7 och 30 dagar. Observera att den här tidsramen endast påverkar installationspaketets funktionalitet. Med andra ord kommer maskinens RIM-konfiguration inte att inaktiveras när installationen löper ut.
-1. Du får sedan möjlighet att tilldela ett basnamn. Alla maskiner som provisioneras via detta installationspaket kommer att tilldelas detta basnamn.
-1. Du kommer sedan att presenteras med en kryssruta som låter dig välja en e-postavisering när en användare installerar RIM via detta installationsprogram.
-1. Om du är företagsadministratör kommer du att se en kryssruta som gör att du kan bygga installationsprogrammet som ett MSI-paket. Det här alternativet är användbart för massdistribution av ett anpassat installationsprogram till ett maskinkluster som kommer att utses till den angivna målgruppen.
+1. Du kommer att bli tillfrågad hur länge du vill att installationsprogrammet ska vara giltigt. Det kan vara giltigt mellan 7 och 30 dagar, eller permanent giltigt för företagsplaner genom att ställa in utgångsdatumet till aldrig.
+1. Du får sedan möjlighet att tilldela ett basnamn. Alla maskiner som provisioneras via det här installationspaketet kommer att tilldelas det här basnamnet.
+1. Du kommer sedan att presenteras med en kryssruta som låter dig välja ett e-postmeddelande när en användare installerar RIM via det här installationsprogrammet.
+1. Om du är företagsadministratör kommer du att se en kryssruta som gör att du kan bygga installationsprogrammet som ett MSI-paket. Detta alternativ är användbart för massdistribution av ett anpassat installationsprogram till ett maskinkluster som kommer att utses till den givna målgruppen.
 1. Du kommer att bli ombedd att ange ett namn på installationsprogrammet och eventuellt några anteckningar. Dessa är för interna register och kommer inte att visas i det skapade installationsprogrammet.
-1. Klicka på "Build Installer" Du kommer att få en nedladdningslänk som du antingen kan kopiera till urklipp och skicka till slutanvändaren. Alternativt kan du ladda ner installationsprogrammet direkt för att använda det vid massdistributioner.
+1. Klicka på "Build Installer" Du kommer att få en nedladdningslänk som du antingen kan kopiera till urklipp och skicka till slutanvändaren. Alternativt kan du ladda ner installationsprogrammet direkt för att använda det vid massdistributioner. Du kan ta bort installationsprogrammet från den här skärmen om du väljer att göra det oanvändbart i förtid.
 
-Nu när du har ditt installationsprogram kan det köras på ett av två sätt. I båda fallen kommer maskinen att läggas till i din lista över maskiner i både ditt konto och RIM-klienten efter att installationsprogrammet har slutförts.
+Nu när du har ditt installationsprogram kan det köras på ett av två sätt. I båda fallen kommer installationsprogrammet att fråga servern för att kontrollera installationsprogrammets giltighet. Om installationsprogrammet är giltigt kommer maskinen att läggas till i listan över maskiner i både ditt konto och RIM-klienten efter att installationsprogrammet har slutförts. Ett ogiltigt installationsprogram kommer inte att köras.
 
 #### Normal exekvering
 
 Användaren får en prompt när installationsprogrammet körs, som innehåller följande information:
-* Teknikerns namn tillsammans med deras organisation, om tillämpligt
+* Teknikerns namn och organisation, om tillämpligt
 * anslutningens art, dvs. om en prompt krävs eller inte
 
-Användaren kan välja att antingen svara ja eller nej till installationen. Om du svarar nej avbryts installationen. När installationsprogrammet är klart får användaren ett meddelande om att maskinen nu är inställd för fjärråtkomst.
+Användaren kan välja att antingen svara ja eller nej till installationen. Om du svarar nej avbryts installationen. När installationsprogrammet är klart får användaren ett meddelande om att maskinen nu är konfigurerad för fjärråtkomst.
 
 #### Tyst installation (endast Enterprise-installatörer)
 
@@ -124,6 +124,6 @@ Du kan enkelt uppgradera din prenumeration. Om du har ett månadsabonnemang komm
 * Du kan inte nedgradera din plan till en plan med färre maskiner. Du kan dock uppgradera från en månadsplan till en årsplan med samma antal maskiner som din nuvarande plan. För att nedgradera måste du säga upp din plan, vänta tills den löper ut och sedan starta en ny plan med färre maskiner.
 * Enterprise-planer, inklusive Enterprise Addon, kan inte förvärvas direkt via den här sidan.
 
-#### Avbrytande av återkommande betalningar
+#### Annullering av återkommande betalningar
 
 När du klickar på "Avbryt automatisk förnyelse" kommer du att bli ombedd att bekräfta, varefter din prenumeration kommer att ställas in så att den löper ut i slutet av den aktuella perioden.

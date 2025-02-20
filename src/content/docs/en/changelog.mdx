@@ -6,6 +6,13 @@ import Windows from "~/components/platform/Windows.astro"
 import MacOS from "~/components/platform/MacOS.astro"
 
 Versions of RIM will be denoted by headings at level 3. Substantial updates with several features for both platforms will be divided into Mac and Windows subheadings at level 4.
+### 3.4.0
+* Added an option for enterprise users to create never-expiring installers
+    * With this change  comes a validation check to all custom installers. If a custom installer is expired or deleted, it will no longer run.
+* Fixed an issue that caused a constant beeping from target machines with no onboard audio, particularly Windows servers
+* It is no longer possible to unwittingly press Windows+Shift+Backspace on a Windows target with macOS as the controller
+
+
 ### 3.3.39
 
 * macOS: Added a note about the required permissions to the welcome screen.

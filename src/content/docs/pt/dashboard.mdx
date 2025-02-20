@@ -66,7 +66,7 @@ Ao clicar no link "Configure Targets" (Configurar destinos), você chegará a um
 
 ### Grupos de destino (para contas Pro e superiores)
 
-Digamos, por exemplo, que seu grupo de trabalho esteja espalhado por vários locais diferentes. Ou talvez você queira designar grupos de máquinas para os técnicos de manutenção de rotina. Os grupos-alvo permitem que você faça exatamente isso. Para fazer isso, basta clicar no botão "Create Target Group" (Criar grupo de destino), nomear o grupo e enviar.  
+Digamos, por exemplo, que seu grupo de trabalho esteja espalhado por vários locais diferentes. Ou talvez você queira designar grupos de máquinas para seus técnicos de manutenção de rotina. Os grupos de destino permitem que você faça exatamente isso. Para fazer isso, basta clicar no botão "Create Target Group" (Criar grupo de destino), nomear o grupo e enviar.  
 Você pode ter tantos grupos-alvo quantos forem necessários para o seu caso de uso. 
 
 #### Controle de acesso (para organizações empresariais)
@@ -78,26 +78,26 @@ Deve-se observar que todos os administradores da organização recebem automatic
 
 ### Configuração de um instalador RIM pré-configurado (Pro ou superior)
 
-Uma das maneiras mais fáceis de configurar uma máquina para conexões autônomas ou solicitadas é criar um instalador personalizado. Isso é extremamente útil se você estiver configurando implantações em massa ou até mesmo como uma maneira mais simples de colocar o RIM em funcionamento no computador de um usuário final para o qual você planeja fornecer suporte regularmente.
+Uma das maneiras mais fáceis de configurar uma máquina para conexões autônomas ou solicitadas é criar um instalador personalizado. Isso é incrivelmente útil se você estiver configurando implantações em massa ou até mesmo como uma maneira mais simples de colocar o RIM em funcionamento no computador de um usuário final para o qual você planeja fornecer suporte regularmente.
 
 Para fazer isso:
 1. Na tela de gerenciamento de destino, clique no botão "Build Target Installer" (Criar instalador de destino).
 1. Primeiro, será perguntado se você deseja que essa máquina seja configurada para acesso totalmente autônomo ou para acesso solicitado, no qual o usuário precisa aceitar um prompt para iniciar a conexão.
 1. Em seguida, será solicitado que você atribua um grupo-alvo. Observe que a seleção do grupo de destino irá automaticamente para o grupo de destino escolhido se você iniciar a configuração do instalador a partir da página do seu grupo.
-1. Você será perguntado por quanto tempo deseja que esse instalador seja válido. Ele pode ser válido por qualquer período entre 7 e 30 dias. Observe que esse período de tempo afeta apenas a funcionalidade do pacote de instalação. Em outras palavras, a configuração RIM da máquina não será desativada quando a instalação expirar.
+1. Você será perguntado por quanto tempo deseja que esse instalador seja válido. Ele pode ser válido por qualquer período entre 7 e 30 dias ou permanentemente válido para planos empresariais, definindo a expiração como nunca.
 1. Em seguida, você terá a opção de atribuir um nome de baixo. Qualquer máquina provisionada por meio desse pacote de instalação terá esse nome de base atribuído a ela.
-1. Em seguida, será apresentada uma caixa de seleção que permite que você opte por uma notificação por e-mail quando um usuário instalar o RIM por meio desse instalador.
+1. Em seguida, será apresentada uma caixa de seleção que permite que você opte por receber uma notificação por e-mail quando um usuário instalar a RIM por meio desse instalador.
 1. Se você for um administrador corporativo, verá uma caixa de seleção que permite criar o instalador como um pacote MSI. Essa opção é útil para a implantação em massa de um instalador personalizado em um cluster de máquinas que será designado para um determinado grupo-alvo.
 1. Você será solicitado a fornecer um nome para o instalador e, opcionalmente, algumas observações. Elas são para registros internos e não aparecerão no instalador criado.
-1. Clique em "Build Installer" (Criar instalador) Será apresentado o link de download que pode ser copiado para a área de transferência e enviado ao usuário final. Como alternativa, você pode fazer o download do instalador diretamente para uso em implementações em massa.
+1. Clique em "Build Installer" (Criar instalador) Será apresentado o link de download que pode ser copiado para a área de transferência e enviado ao usuário final. Como alternativa, você pode fazer o download do instalador diretamente para uso em implementações em massa. Você pode excluir o instalador dessa tela se optar por torná-lo inoperante prematuramente.
 
-Agora que você tem o instalador, ele pode ser executado de duas maneiras. Em ambos os casos, a máquina será adicionada à sua lista de máquinas em sua conta e no cliente RIM após a conclusão do instalador.
+Agora que você tem o instalador, ele pode ser executado de duas maneiras. Em ambos os casos, o instalador consultará o servidor para verificar a validade do instalador. Se o instalador for válido, a máquina será adicionada à sua lista de máquinas em sua conta e no cliente RIM após a conclusão do instalador. Um instalador inválido não será executado.
 
 #### Execução normal
 
 O usuário receberá um aviso ao executar o instalador, contendo as seguintes informações:
-* O nome do técnico junto com sua organização, se aplicável
-* a natureza da conexão, ou seja, se é necessário um prompt ou não
+* O nome do técnico e sua organização, se aplicável
+* a natureza da conexão, ou seja, se um prompt é necessário ou não
 
 O usuário pode optar por responder sim ou não à instalação. Se responder não, a instalação será cancelada. Após a conclusão do instalador, o usuário receberá um aviso informando que a máquina está configurada para acesso remoto.
 
