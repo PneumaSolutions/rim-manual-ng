@@ -18,7 +18,7 @@ Some features of RIM depend on functionality newly introduced in Ventura, making
 This is unfortunately beyond our control, as Mac OS requires that we use their avenues for requesting the necessary permissions needed for RIM. We have no control over the UX, so can only go as far as providing as much instruction as we can.
 ### Connection Information
 #### Generally speaking, how responsive is RIM?
-The roundtrip latency during an RIM session is extremely minimal. Because we don't rely on a central service, most of the time your connections are direct from one computer to another - this is what is known as peer-to-peer. If your network configuration doesn't allow for peer-to-peer connections, we fall back to any number of relays located around the world rather than relying on one central server. Thus, even then your latency will still be farely minimal.
+The roundtrip latency during an RIM session is extremely minimal. Because we make every effort to not rely on the central service to keep the connection running, most of the time your connections are direct from one computer to another - this is what is known as peer-to-peer. If your network configuration doesn't allow for peer-to-peer connections, we fall back to any number of relays located around the world rather than relying on one central server. Thus, even then your latency will still be farely minimal.
 #### Where are your relays located?
 Currently, we offer relays in the following locations:
 * U.S.
@@ -41,6 +41,8 @@ This could be due to either one of these possibilities:
     * Unified keyboard processing is not necessary if the target user is not also using ZoomText or Fusion.
 * If the target machine is using NVDA and has "Handle keys from other applications" unchecked, RIM will not be able to process keyboard input from the controller.
     * Note that this setting is on by default, and in most cases it is advisable to leave it on.
+* If the target machine has a number-pad and your machine's numlock is out of state with their own, you may notice odd behavior target-side.
+    * Depending on which state you want the target's numlock to be in, ensure it matches controller-side as well.
 
 #### When starting a voice conversation on Windows, RIM uses the internal microphone no matter which microphone I select in sound settings. What's wrong?
 
@@ -55,6 +57,7 @@ This may be due to the Intel® Smart Sound Technology for Digital Microphones on
 This is accomplished by switching ZoomText to compatibility mode. This mode allows screen enhancements to be shared via tools like Teams or Zoom, as well as RIM. You can activate it via the ZoomText menu: Help > Advance > Display adapter. In the open dialog, select compatibility mode, and ZoomText will restart. We recommend switching the Display adapter back to its regular mode after the RIM session is complete for optimal performance and magnification quality. 
 
 #### After a computer is reimaged and has been reconfigured with the same computer name, is there anything that needs to be done to get RIM up and running again? 
+
 Simply remove the machine from your account, reinstall RIM, then add the machine back into your account.
 
 ### Pricing and Payments
@@ -93,11 +96,24 @@ Only if RIM needs to be reinstalled. So, while a hard drive upgrade or any other
 Definitely. In situations where multiple technitions will be using RIM, we offer up to two (2) additional controller seats for $50 a month per seat - $500 a year per seat - to accompany the pro plan if needed. This will make it easier for multiple controllers at different workstations or offices to provide remote support.  
 If you have multiple controller seats, you can purchase additional channels for them so that sessions can run simultaneously. Each additional channel is $50 a month, or $500 a year. 
 
+#### Why is there a setup fee for RIM Enterprise accounts?
+
+The setup fee for RIM Enterprise accounts covers the administrative, technical, and security-related work required to configure your organization's environment. This includes:
+* Custom Configuration: We tailor your RIM Enterprise deployment to fit your organization's needs, including user roles, permissions, and security settings.
+* Unattended Access Setup: If your organization requires unattended access to targets, we help configure this feature properly to ensure seamless and secure remote access.
+* Infrastructure and Security Preparations: We verify secure connections, compliance requirements, and system optimizations to ensure your deployment is reliable and meets industry standards.
+* Initial Training and Support: Our team assists IT teams and administrators with onboarding, helping them maximize RIM’s capabilities.
+* Private Consultation with Development Team: We provide direct access to our development team for addressing security documentation requests, discussing custom integration needs, or reviewing specific technical concerns.
+* Exclusive Access to the RIM Insiders Slack Channel: Enterprise customers gain access to a dedicated Slack channel where they can communicate with our team, receive updates, and collaborate with other RIM power users.
+
+This one-time setup fee ensures a smooth, secure, and customized deployment, giving your organization everything it needs to fully leverage RIM from day one.
+
 ### Security
 #### Are RIM sessions encrypted?
 Yes. All sessions across all platforms, be they direct peer-to-peer connections or connections using a relay, are encrypted end to end using Datagram Transport Layer Security (DTLS). This is the same technology seen in the HTTPS protocol that modern websites implement for security.
 #### Can Pneuma Solutions eavesdrop on sessions relayed by the public cloud?
-No. Session key negotiation and encryption are performed end to end between the controller and the target. In other words, everything is encrypted before it even leaves your device. That way, the cloud service merely relays the data as is, making it impossible for the service to decipher the data.
+No. Session key negotiation and encryption are performed end to end between the controller and the target. In other words, everything is encrypted before it even leaves your device. That way, the cloud service merely relays the data as is, making it impossible for the service to decipher the data.  
+Note that RIM will always attempt a direct peer-to-peer connection whenever possible. Relays are only used in situations where a direct peer-to-peer connection is not possible, even with NAT traversal.
 #### What measures have been taken to prevent remote code execution (RCE) vulnerabilities?
 All RIM code which is exposed to input from the network is written in [memory-safe programming languages](https://www.memorysafety.org/docs/memory-safety/) including Rust and JavaScript.
 #### Is RIM HIPAA-compliant?
@@ -120,14 +136,25 @@ RIM will not appear in your Command+Tab list, but it will appear in the status m
 #### Is there anything the target machine needs to configure for first-time use of the Remote Accessibility Module?
 Not at all! There are no dialogue boxes, permission request screens or anything of the sort.
 #### Does the Remote Accessibility Module work on secure screens such as the lock screen?
-Yes! Since the RIM host runs with elevated privileges, this allows us to leverage the Remote Accessibility Module for secure screens. The only exception to this is FileVault's logon window.
+Yes! Since the RIM host runs with elevated privileges, this allows us to leverage the Remote Accessibility Module for secure screens.
+<Windows>
+The only exception to this is when RIM is installed without administrator privileges target-side.
+</Windows>
+<MacOS>
+The only exception to this is FileVault's logon window.
+</MacOS>
 ### Unattended Sessions
 #### Are voice conversations supported during unattended sessions?
 Yes. However, they cannot be initiated unless the end user is physically present to accept a permission request. This allows for voice conversations while ensuring maximum privacy and security.
 #### If I delete an unattended machine from my controller account, will it automatically revoke permission on the target?
 Yes. Once an unattended target is removed, the change will be effective immediately. If the target machine is powered down or otherwise not connected to the internet, the change will be effective as soon as an internet connection is established on their machine.
 #### The target machine rebooted after installing updates and drivers, and it requires a password to log in. How does the session continue from here?
-In most instances, particularly when FileVault disk encryption is enabled, the target user will need to manually enter the password. RIM cannot start on an encrypted Mac before it has been fully logged in.
+<Windows>
+While RIM will run on the Windows logon screen, logging in is still a task that must be done manually by the target user. In other words, RIM *will not* automatically log the user in.
+</Windows>
+<MacOS>
+In most instances, particularly when FileVault disk encryption is enabled, the target user will need to be physically present to manually enter the password. RIM cannot start on an encrypted Mac before it has been fully logged in.
+</MacOS>
 #### I have multiple machines playing the part of the controller. Will the list of machines set up for unattended access populate across all machines?
 Yes. The list of machines configured for unattended access is stored within your account, so it will populate automatically.
 #### Why am I prompted for user confirmation after a one-click install on the Pro plan, whereas the Enterprise plan allows for unattended installs?
@@ -153,7 +180,7 @@ By using these tips, you acknowledge and agree to the above disclaimer. Now, go 
 
 #### Listening to the microphone audio of one of your personal machines (Windows)
 
-In the interest of ensuring maximum privacy, RIM does not support voice conversations during fully unattended sessions. There however may be times where you may want to hear audio coming from a device near one of your remote computers. For example, you may have a clock radio near your desktop, and you may be using your laptop on the porch. While the quality may not be the greatest, RIM can make for an excellent makeshift wireless audio solution!
+In the interest of ensuring maximum privacy, RIM does not support voice conversations during fully unattended sessions unless the target user is physically present to agree to them. There however may be times where you may want to hear audio coming from a device near one of your remote computers. For example, you may have a clock radio near your desktop, and you may be using your laptop on the porch. While the quality may not be the greatest, RIM can make for an excellent makeshift wireless audio solution!
 
 Setting up your target machine to listen to its microphone audio will involve piping the microphone audio through to its speakers. As you're aiming to hear the microphone from within a remote session, we first need to lower your speaker volume to avoid a feedback loop. In order to do that:
 1. Open the run box (Windows+R).
