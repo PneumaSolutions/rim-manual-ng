@@ -9,7 +9,7 @@
     "format": "prettier --write . '**/*.astro'"
   },
   "dependencies": {
-    "@astrojs/vercel": "^5.2.0",
+    "@astrojs/vercel": "^8.2.7",
     "@meilisearch/instant-meilisearch": "^0.13.6",
     "@nanostores/persistent": "^0.9.1",
     "@nanostores/preact": "^0.5.0",
@@ -23,10 +23,10 @@
     "remove-markdown": "^0.5.0"
   },
   "devDependencies": {
-    "@astrojs/mdx": "^1.1.4",
-    "@astrojs/preact": "^3.0.1",
+    "@astrojs/mdx": "^4.3.5",
+    "@astrojs/preact": "^4.1.1",
     "@types/node": "18.15.10",
-    "astro": "^3.5.0",
+    "astro": "^5.13.8",
     "autoprefixer": "^10.4.14",
     "dotenv": "^16.0.3",
     "prettier": "^3.0.3",
