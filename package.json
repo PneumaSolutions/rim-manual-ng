@@ -25,7 +25,7 @@
     "@astrojs/mdx": "^3.1.9",
     "@astrojs/preact": "^4.1.1",
     "@astrojs/vercel": "^7.8.2",
-    "@types/node": "18.15.10",
+    "@types/node": "20.x",
     "astro": "^4.16.19",
     "autoprefixer": "^10.4.14",
     "dotenv": "^16.0.3",
