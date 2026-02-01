@@ -18,7 +18,7 @@ Some features of RIM depend on functionality newly introduced in Ventura, making
 This is unfortunately beyond our control, as Mac OS requires that we use their avenues for requesting the necessary permissions needed for RIM. We have no control over the UX, so can only go as far as providing as much instruction as we can.
 ### Connection Information
 #### Generally speaking, how responsive is RIM?
-The roundtrip latency during an RIM session is extremely minimal. Because we make every effort to not rely on the central service to keep the connection running, most of the time your connections are direct from one computer to another - this is what is known as peer-to-peer. If your network configuration doesn't allow for peer-to-peer connections, we fall back to any number of relays located around the world rather than relying on one central server. Thus, even then your latency will still be farely minimal.
+The roundtrip latency during a RIM session is extremely minimal. Because we make every effort to not rely on the central service to keep the connection running, most of the time your connections are direct from one computer to another - this is what is known as peer-to-peer. If your network configuration doesn't allow for peer-to-peer connections, we fall back to any number of relays located around the world rather than relying on one central server. Thus, even then your latency will still be farely minimal.
 #### Where are your relays located?
 Currently, we offer relays in the following locations:
 * U.S.
@@ -43,6 +43,10 @@ This could be due to either one of these possibilities:
     * Note that this setting is on by default, and in most cases it is advisable to leave it on.
 * If the target machine has a number-pad and your machine's numlock is out of state with their own, you may notice odd behavior target-side.
     * Depending on which state you want the target's numlock to be in, ensure it matches controller-side as well.
+
+#### Upon flipping a session, Windows+Shift+F is not working to reverse the flip. Why is this?
+
+Recent editions of Windows 11 have introduced an Edge Bar, which unfortunately causes a conflict with our Windows+Shift+F keyboard command anywhere where RIM is   not directly processing your keyboard input. Reversing a flip can currently be done most effectively via the session menu.
 
 #### When starting a voice conversation on Windows, RIM uses the internal microphone no matter which microphone I select in sound settings. What's wrong?
 
@@ -113,7 +117,9 @@ This one-time setup fee ensures a smooth, secure, and customized deployment, giv
 Yes. All sessions across all platforms, be they direct peer-to-peer connections or connections using a relay, are encrypted end to end using Datagram Transport Layer Security (DTLS). This is the same technology seen in the HTTPS protocol that modern websites implement for security.
 #### Can Pneuma Solutions eavesdrop on sessions relayed by the public cloud?
 No. Session key negotiation and encryption are performed end to end between the controller and the target. In other words, everything is encrypted before it even leaves your device. That way, the cloud service merely relays the data as is, making it impossible for the service to decipher the data.  
-Note that RIM will always attempt a direct peer-to-peer connection whenever possible. Relays are only used in situations where a direct peer-to-peer connection is not possible, even with NAT traversal.
+Note that RIM will always attempt a direct peer-to-peer connection whenever possible. Relays are only used in situations where a direct peer-to-peer connection proves impossible, even with NAT traversal.
+#### What about the session recordings?
+The cloud is never used throughout the processing of session recordings. Recordings are stored on the local hard-drive of hte controller's computer, and distribution to the end-user is left entirely up to the controller.
 #### What measures have been taken to prevent remote code execution (RCE) vulnerabilities?
 All RIM code which is exposed to input from the network is written in [memory-safe programming languages](https://www.memorysafety.org/docs/memory-safety/) including Rust and JavaScript.
 #### Is RIM HIPAA-compliant?

@@ -5,152 +5,201 @@ title: Häufig gestellte Fragen
 import Windows from "~/components/platform/Windows.astro"
 import MacOS from "~/components/platform/MacOS.astro"
 
-Hier finden Sie Antworten auf einige häufig gestellte Fragen zu RIM. Wenn Sie mit einem Problem konfrontiert werden, beziehen Sie sich bitte auf dieses Dokument, wann immer es möglich ist. Wenn Ihre Frage in diesem Dokument nicht behandelt wird, wenden Sie sich bitte an [Contact us.](https://pneumasolutions.com/contact/)
-### Kompatibilität
-#### Welche Windows-Versionen werden unterstützt?
-Wir unterstützen Windows10 und höher, sowie Windows Server2016 und höher.
-#### Welche Mac OS-Version(en) werden unterstützt?
-RIM unterstützt Mac OS Ventura und zukünftige Versionen, egal ob Intel oder Apple Silicon. Sie als Mac-Benutzer können Windows-Zielen Unterstützung bieten, und Windows-Benutzer können Ihrem Mac Unterstützung bieten.
-#### Was ist mit Mac OS-Versionen vor Ventura?
-Einige Funktionen von RIM hängen von Funktionen ab, die in Ventura neu eingeführt wurden, so dass die Kompatibilität mit früheren Versionen schwierig zu realisieren ist.
+Here are answers to some common questions concerning RIM. When faced with an issue, please refer to this document whenever possible. If your question is not covered in this document, please [Contact us.](https://pneumasolutions.com/contact/)
+### Compatibility
+#### What Windows versions are supported?
+We support Windows10 and above, as well as Windows Server2016 and up.
+#### What Mac OS versions are supported?
+RIM supports all builds of Mac OS Ventura and Sonoma, be they Intel or Apple Silicon. You as a Mac user can provide support to Windows targets, and Windows users can provide support to your Mac.
+#### What about Mac OS versions before Ventura?
+Some features of RIM depend on functionality newly introduced in Ventura, making compatibility with previous versions difficult to implement.
 ### Installation
-#### Warum so viele Berechtigungsanfragen unter Mac OS?
-Darauf haben wir leider keinen Einfluss, da Mac OS von uns verlangt, dass wir die für RIM erforderlichen Berechtigungen auf dem eigenen Weg beantragen. Wir haben keine Kontrolle über die UX und können daher nur so viele Anweisungen wie möglich geben.
-### Verbindungsinformationen
-#### Wie reaktionsschnell ist RIM im Allgemeinen?
-Die Roundtrip-Latenz während einer RIM-Sitzung ist äußerst gering. Da wir uns nicht auf einen zentralen Dienst verlassen, werden die meisten Verbindungen direkt von einem Computer zum anderen hergestellt - dies wird als Peer-to-Peer bezeichnet. Wenn Ihre Netzwerkkonfiguration keine Peer-to-Peer-Verbindungen zulässt, greifen wir auf eine beliebige Anzahl von Relays in der ganzen Welt zurück, anstatt uns auf einen zentralen Server zu verlassen. Die Latenzzeit ist also auch dann noch sehr gering.
-#### Wo befinden sich Ihre Vermittlungsstellen?
-Derzeit bieten wir Relays an den folgenden Standorten an:
-* U.S..
+#### Why so many permissions requests on Mac OS?
+This is unfortunately beyond our control, as Mac OS requires that we use their avenues for requesting the necessary permissions needed for RIM. We have no control over the UX, so can only go as far as providing as much instruction as we can.
+### Connection Information
+#### Generally speaking, how responsive is RIM?
+The roundtrip latency during a RIM session is extremely minimal. Because we make every effort to not rely on the central service to keep the connection running, most of the time your connections are direct from one computer to another - this is what is known as peer-to-peer. If your network configuration doesn't allow for peer-to-peer connections, we fall back to any number of relays located around the world rather than relying on one central server. Thus, even then your latency will still be farely minimal.
+#### Where are your relays located?
+Currently, we offer relays in the following locations:
+* U.S.
     * Virginia
-    * Kalifornien
-* Teronto, Kanada
+    * California
+* Teronto, Canada
 * London, England
-* Warschau, Polen
-* Bangalore, Indien
-* Singapur
-* Sidney, Australien
-* Sao Paulo, Brasilien
+* Warsaw, Poland
+* Bangalore, India
+* Singapore
+* Sidney, Australia
+* Sao Paulo, Brazil
 
-### Allgemeine Sitzung Fehlersuche
-#### Der Zielcomputer, mit dem ich verbunden bin, reagiert nicht richtig auf Tastaturbefehle, die auf meiner Tastatur gut funktionieren. Was ist da los?
-Dies könnte auf eine der folgenden Möglichkeiten zurückzuführen sein:
-* Ein Konflikt bei der Tastaturbelegung: In seltenen Fällen kann es vorkommen, dass ein Tastaturlayout, das sich stark von Ihrem eigenen unterscheidet, RIM verwirrt. Sollte dies der Fall sein, kontaktieren Sie uns bitte mit einem Bericht, der Informationen über die Tastaturbelegung beider Rechner enthält.
-* Wenn der Zielcomputer JAWS 2024 verwendet, stört dessen einheitliche Tastaturverarbeitung manchmal die Verwendung der STRG-Taste zum Stummschalten von Sprache. Obwohl wir eine Lösung für dieses Problem gefunden haben, kann es immer noch zu Problemen kommen.
-    * Dieses Problem kann behoben werden, indem Sie die einheitliche Tastaturverarbeitung im JAWS Einstellungscenter deaktivieren.
-    * Die einheitliche Tastaturverarbeitung ist nicht erforderlich, wenn der Zielbenutzer nicht auch ZoomText oder Fusion verwendet.
-* Wenn der Zielcomputer NVDA verwendet und die Option "Tasten aus anderen Anwendungen verarbeiten" deaktiviert ist, kann RIM keine Tastatureingaben vom Controller verarbeiten.
-    * Beachten Sie, dass diese Einstellung standardmäßig aktiviert ist, und dass es in den meisten Fällen ratsam ist, sie aktiviert zu lassen.
+### General Session Troubleshooting
+#### The target machine to which I am connected doesn't respond properly to keyboard commands that work fine on my keyboard. What's going on?
+This could be due to either one of these possibilities:
+* A conflict in keyboard layouts: On rare occasions, if a keyboard layout is different enough from your own it may confuse RIM. Should that occur, please contact us with a report containing information about the keyboard layout of both machines.
+* If the target machine is using JAWS 2024, its unified keyboard processing sometimes interferes with use of the CTRL key for silencing speech. Although this was fixed in JAWS2025, unified keyboard processing interferes with proper use of the capslock key.
+    * These issues can be resolved by disabling unified keyboard processing in the JAWS settings center.
+    * Unified keyboard processing is not necessary if the target user is not also using ZoomText or Fusion.
+* If the target machine is using NVDA and has "Handle keys from other applications" unchecked, RIM will not be able to process keyboard input from the controller.
+    * Note that this setting is on by default, and in most cases it is advisable to leave it on.
+* If the target machine has a number-pad and your machine's numlock is out of state with their own, you may notice odd behavior target-side.
+    * Depending on which state you want the target's numlock to be in, ensure it matches controller-side as well.
 
-#### Wenn ich unter Windows ein Telefongespräch beginne, verwendet RIM das interne Mikrofon, unabhängig davon, welches Mikrofon ich in den Toneinstellungen ausgewählt habe. Was ist da los?
+#### Upon flipping a session, Windows+Shift+F is not working to reverse the flip. Why is this?
 
-Das kann an der Intel® Smart Sound Technology für digitale Mikrofone auf einigen neueren Intel-Prozessoren liegen. Wenn Sie diese Funktion deaktivieren, sollte das Problem behoben sein. Um die Intel® Smart Sound Technology für digitale Mikrofone zu deaktivieren, gehen Sie wie folgt vor:
-1. Rufen Sie das Ausführungsfenster auf (Windows+R).
-1. Geben Sie devmgmt.msc ein
-1. Erweitern Sie in der Gerätestruktur den Eintrag "Sound, Video und Gamecontroller"
-1. Klicken Sie mit der rechten Maustaste auf "Intel® Smart Sound Technology for Digital Microphones" Wählen Sie "Gerät deaktivieren" aus dem Kontextmenü.
+Recent editions of Windows 11 have introduced an Edge Bar, which unfortunately causes a conflict with our Windows+Shift+F keyboard command anywhere where RIM is   not directly processing your keyboard input. Reversing a flip can currently be done most effectively via the session menu.
 
-#### Das Ziel verwendet Zoom Text. Wie erlebe ich die visuelle Ausgabe, die durch diese Vergrößerung dargestellt wird?
+#### When starting a voice conversation on Windows, RIM uses the internal microphone no matter which microphone I select in sound settings. What's wrong?
 
-Dies wird erreicht, indem ZoomText in den Kompatibilitätsmodus geschaltet wird. Dieser Modus ermöglicht die gemeinsame Nutzung von Bildschirmvergrößerungen über Tools wie Teams oder Zoom sowie RIM. Sie können ihn über das ZoomText-Menü aktivieren: Hilfe &gt; Erweitern &gt; Anzeigeadapter. Wählen Sie in dem sich öffnenden Dialog den Kompatibilitätsmodus aus, und ZoomText wird neu gestartet. Wir empfehlen, den Anzeigeadapter nach Abschluss der RIM-Sitzung wieder in den normalen Modus zu schalten, um eine optimale Leistung und Vergrößerungsqualität zu erzielen. 
+This may be due to the Intel® Smart Sound Technology for Digital Microphones on some newer Intel processors. Disabling this should fix the issue. In order to disable Intel® Smart Sound Technology for Digital Microphones, do the following:
+1. Go to the run box (Windows+R).
+1. Type devmgmt.msc
+1. In the devices tree, expand "Sound, Video and Game Controllers."
+1. Right click on "Intel® Smart Sound Technology for Digital Microphones." Choose "Disable Device" from the context menu.
 
-#### Muss nach dem Reimaging eines Computers und der Neukonfiguration mit demselben Computernamen noch etwas getan werden, um RIM wieder zum Laufen zu bringen? 
-Entfernen Sie einfach den Computer aus Ihrem Konto, installieren Sie RIM neu und fügen Sie den Computer dann wieder zu Ihrem Konto hinzu.
+#### The target is using Zoom Text. How do I experience the visual output as rendered by this magnification?
 
-### Preise und Zahlungen
-#### Die Hilfe eines Mitarbeiters über RIM ist also völlig kostenlos, richtig?
-Und ob! Die Abonnements und/oder einmaligen Zahlungen sind für Einzelpersonen und Organisationen gedacht, die Fernhilfe anbieten möchten. Sie brauchen sich nicht um ein Abonnement zu kümmern, wenn Sie die Person sind, die Hilfe erhält. Sie müssen nicht einmal ein Konto einrichten, wenn Sie lediglich Hilfe erhalten.
-#### Ich mache eigentlich nicht regelmäßig Fernhilfe, aber ich helfe vielleicht gelegentlich einem Freund oder Familienmitglied. Gibt es Optionen, die kein Abonnement voraussetzen?
-Sicherlich! Wir berücksichtigen so viele Anwendungsfälle, wie wir können.
-* Jeder kann einem Benutzer bis zu 30 Minuten pro Tag kostenlos über RIM helfen. Wenn Sie also jemandem bei der Installation einer Software helfen, ein Problem schnell beheben oder ein paar Dateien übermitteln möchten, sind Sie bei uns an der richtigen Adresse. Diese Minuten müssen nicht in einer Sitzung verbraucht werden.
-* Es gibt natürlich Situationen, in denen ein bestimmtes Problem ein wenig mehr Zeit erfordert. Oder vielleicht helfen Sie jemandem beim Erlernen einer neuen Software und müssen sich in den nächsten Tagen oder Wochen immer wieder einloggen. Hier kommen unsere Pässe ins Spiel.
-    * Mit Vorfallspässen können Sie in einem Zeitraum von 24 Stunden so oft wie nötig eine Verbindung zu einem einzelnen Ziel herstellen.
-    * Mit Tagespässen können Sie über einen Zeitraum von 24 Stunden eine Verbindung zu mehreren Zielen herstellen.
-    * Mit Pro-Pässen können Sie alle Pro-Funktionen von RIM mit einmaligen Laufzeiten von 1 Woche, 2 Wochen oder einem Monat in Anspruch nehmen.
-    * Pakete mit im Voraus bezahlten Stunden ermöglichen es Ihnen, eine bestimmte Anzahl von Stunden zur Verfügung zu haben, die Sie ganz in Ihrer Freizeit nutzen können.
-* Sie können mehrere dieser Pässe und Stundenpakete sammeln und sie immer dann nutzen, wenn die Zeit dafür reif ist. Wenn Sie z. B. mehrere Tageskarten haben, müssen Sie diese nicht nacheinander nutzen. Ebenso müssen Sie Ihre im Voraus bezahlten Stunden nicht in einer Sitzung oder in einem 24-Stunden-Zeitraum nutzen.
+This is accomplished by switching ZoomText to compatibility mode. This mode allows screen enhancements to be shared via tools like Teams or Zoom, as well as RIM. You can activate it via the ZoomText menu: Help > Advance > Display adapter. In the open dialog, select compatibility mode, and ZoomText will restart. We recommend switching the Display adapter back to its regular mode after the RIM session is complete for optimal performance and magnification quality. 
 
-#### Ich habe ein Paket mit im Voraus bezahlten Stunden gekauft. Was passiert mit meinem kostenlosen Tageskontingent?
-Gute Nachrichten: Ihr kostenloses 30-Minuten-Kontingent pro Tag bleibt bestehen! Wenn Sie eine stichwortbasierte Sitzung starten, verwendet RIM zunächst Ihr kostenloses 30-Minuten-Kontingent pro Tag. Ihre vorausbezahlte Zeit wird nach Ablauf der 30 Minuten verbraucht.
-#### Wie lange reichen meine im Voraus bezahlten Stunden? Sind sie mit meinem Abonnement verknüpft?
-Die im Voraus bezahlten Stunden sind völlig unabhängig von Ihrem Abonnement. Ihre im Voraus bezahlten Stunden bleiben jedoch für ein (1) Jahr nach dem Datum ihrer ersten Nutzung auf Ihrem Konto.
-#### Wie kann ich RIM an meinem Arbeitsplatz bekannt machen?
-Wir haben ein [Self-Advocacy Kit](https://sak.getrim.app) (SAK) zusammengestellt. Dabei handelt es sich um ein Paket von Briefen im E-Mail-Format, die Sie in Ihrem Namen oder im Namen eines Mitarbeiters an die zuständigen Personen senden können. RIM bietet die gleichen Funktionen wie die weniger zugänglichen Mainstream-Lösungen. Daher kann RIM eine bestehende Infrastruktur ersetzen und muss nicht zusätzlich verwendet werden. Es gilt daher als angemessene Vorkehrung für die Barrierefreiheit und sollte Ihnen von Ihrer Organisation zur Verfügung gestellt werden. Barrierefreiheit ist kein Gefallen, sondern ein Recht auf Inklusion.
-#### Welche Zahlungsarten akzeptieren Sie?
-Wir wickeln Zahlungen über FastSpring ab, so dass wir eine Vielzahl von internationalen Zahlungsmethoden direkt akzeptieren können, darunter die wichtigsten Kreditkarten, PayPal, Alipay und viele mehr.
+#### After a computer is reimaged and has been reconfigured with the same computer name, is there anything that needs to be done to get RIM up and running again? 
 
-#### Wie funktionieren diese Pässe? Beginnt die Zeit sofort nach der Zahlung oder erst am Tag der Eröffnung der Sitzung?
-Die Pässe beginnen erst, wenn der Kontrolleur die Sitzung einleitet. Wenn also die Maschine der Zielperson ausfällt und eine Fahrt in die Werkstatt erforderlich ist und eine Bearbeitung am selben Tag nicht möglich ist, können Sie einfach warten, bis die Maschine wieder in Ordnung ist, und Ihr Tagespass wartet immer noch auf Sie.
-#### Das heißt also, dass diese Pässe nicht ablaufen?
-Nein. Seien Sie versichert, dass Ihre gesammelten Tageskarten geduldig auf Sie warten, um sie zu aktivieren, wann immer Sie bereit sind.
-#### Was passiert, wenn ich an dem Tag, an dem ein Ereignispass verwendet wurde, eine Verbindung zu einem anderen Rechner herstelle?
-Das kommt darauf an. Wenn es sich um einen Rechner innerhalb Ihres Abonnements handelt, d. h. wenn Sie von unterwegs aus auf Ihren Heimrechner zugreifen, ist alles wie gewohnt. Für alle anderen Verbindungen, die nicht das ursprüngliche Ziel sind, zu dem Sie eine Verbindung hergestellt haben, gilt das übliche 30-Minuten-Kontingent.
-#### Ich habe ein aktives persönliches Abonnement. Kann ich trotzdem einem Nutzer außerhalb der Zielgruppe bis zu 30 Minuten lang oder über einen Pass helfen?
-Ja! Ihr tägliches 30-Minuten-Kontingent gilt weiterhin für alle Geräte außerhalb Ihres Abonnements. Darüber hinaus ersetzt der Erwerb eines Abonnements keine bestehenden Pässe, die Sie möglicherweise besitzen.
-#### Ich habe ein persönliches Abonnement, und der Zielcomputer hat ein Hardware-Upgrade erhalten. Zählt Rim dies als einen Rechnerwechsel?
-Nur wenn RIM neu installiert werden muss. Während also ein Festplatten-Upgrade oder eine andere Situation, die eine Neuinstallation von Windows erfordert, als Rechnerwechsel gilt, gilt das Upgrade des Arbeitsspeichers nicht als Rechnerwechsel.
-#### Unser Unternehmen hat das Pro-Abonnement gekauft, aber wir haben zwei Techniker - einen, der tagsüber den Helpdesk übernimmt, und einen Systemwartungstechniker, der abends arbeitet. Könnten wir dem abendlichen Systemadministrator einen Controller-Platz zuweisen?
-Auf jeden Fall. In Situationen, in denen mehrere Techniker RIM verwenden, bieten wir bei Bedarf bis zu zwei (2) zusätzliche Controller-Plätze für $50 pro Monat pro Platz - $500 pro Jahr pro Platz - zusätzlich zum Pro-Plan an. Dadurch wird es für mehrere Controller an verschiedenen Arbeitsplätzen oder Büros einfacher, Fernsupport zu leisten.  
-Wenn Sie mehrere Controller-Plätze haben, können Sie zusätzliche Kanäle für diese Plätze erwerben, damit Sitzungen gleichzeitig laufen können. Jeder zusätzliche Kanal kostet 50 US-Dollar pro Monat oder 500 US-Dollar pro Jahr. 
+Simply remove the machine from your account, reinstall RIM, then add the machine back into your account.
 
-### Sicherheit
-#### Sind RIM-Sitzungen verschlüsselt?
-Ja. Alle Sitzungen auf allen Plattformen, egal ob es sich um direkte Peer-to-Peer-Verbindungen oder um Verbindungen über einen Relay handelt, werden von Ende zu Ende mit Datagram Transport Layer Security (DTLS) verschlüsselt. Dies ist dieselbe Technologie, die auch im HTTPS-Protokoll verwendet wird, das moderne Websites aus Sicherheitsgründen einsetzen.
-#### Kann Pneuma Solutions Sitzungen abhören, die von der öffentlichen Cloud weitergeleitet werden?
-Nein. Die Aushandlung des Sitzungsschlüssels und die Verschlüsselung werden Ende-zu-Ende zwischen dem Controller und dem Ziel durchgeführt. Mit anderen Worten: Alles wird verschlüsselt, noch bevor es Ihr Gerät verlässt. Auf diese Weise leitet der Cloud-Dienst die Daten lediglich so weiter, wie sie sind, so dass es für den Dienst unmöglich ist, die Daten zu entschlüsseln.
-#### Welche Maßnahmen wurden ergriffen, um Schwachstellen bei der Remotecodeausführung (RCE) zu verhindern?
-Der gesamte RIM-Code, der Eingaben aus dem Netz ausgesetzt ist, ist in [speichersicheren Programmiersprachen] (https://www.memorysafety.org/docs/memory-safety/) geschrieben, einschließlich Rust und JavaScript.
-#### Ist RIM HIPAA-konform?
-Ja. Die beste Konfiguration wäre in diesem Fall eine Bereitstellung vor Ort, also nehmen Sie bitte [Kontakt mit uns auf](https://pneumasolutions.com/contact/), wenn Ihr Anwendungsfall davon abhängt.
-#### Müssen irgendwelche Ports auf dem Ziel oder dem Controller geöffnet werden?
-Nein und nein.
-#### Welche Verbindungen müssen in einem Netzwerk erlaubt sein, damit RIM funktioniert?
-Bei der Nutzung der öffentlichen Cloud ist eine https-Verbindung zu [getrim.app] (https://getrim.app) erforderlich. Im Optimalfall reicht dies für RIM aus, um eine Peer-to-Peer-Verbindung zwischen dem Controller und dem Ziel herzustellen. Es ist jedoch hilfreich, UDP-Verbindungen über die Ports 19302 und 3478 (die Standard-Ports für STUN und TURN) zuzulassen. Dadurch wird sichergestellt, dass RIM nicht auf eine TCP-Verbindung an Port 443 zurückgreifen muss, wenn ein Relay verwendet wird.
-#### Läuft RIM im Hintergrund, und wenn ja, wird es in meiner Befehl+Tab-Liste angezeigt?
-RIM wird im Hintergrund ausgeführt, um automatische Updates zu verarbeiten, unbeaufsichtigte/aufgeforderte Verbindungsanfragen zu empfangen und die Verwendung des globalen Tastaturbefehls Option+Umschalt+Rückwärts zu ermöglichen. Es wird nicht zu anderen Zwecken angerufen, und es werden keine persönlich identifizierbaren Informationen übertragen.  
-RIM erscheint nicht in der Befehl+Tab-Liste, aber es erscheint in den Statusmenüs, die Informationen über den Akku, die WiFi-Verbindung usw. enthalten.
-### Fernzugriffsmodul
-#### Muss der Zielcomputer für die erstmalige Verwendung des Moduls für die entfernte Erreichbarkeit konfiguriert werden?
-Nein, überhaupt nicht! Es gibt keine Dialogfelder, Bildschirme zur Abfrage von Berechtigungen oder Ähnliches.
-#### Funktioniert das Modul für die entfernte Erreichbarkeit auf sicheren Bildschirmen wie dem Sperrbildschirm?
-Ja! Da der RIM-Host mit erhöhten Rechten ausgeführt wird, können wir das Modul für entfernte Barrierefreiheit für sichere Bildschirme nutzen. Die einzige Ausnahme ist das Anmeldefenster von FileVault.
-### Unbeaufsichtigte Sitzungen
-#### Werden Sprachunterhaltungen während unbeaufsichtigter Sitzungen unterstützt?
-Ja. Sie können jedoch nur dann initiiert werden, wenn der Endbenutzer physisch anwesend ist, um eine Berechtigungsanfrage zu akzeptieren. Dies ermöglicht Sprachunterhaltungen und gewährleistet gleichzeitig ein Höchstmaß an Privatsphäre und Sicherheit.
-#### Wenn ich einen unbeaufsichtigten Rechner aus meinem Controller-Konto lösche, wird dann automatisch die Berechtigung für das Ziel aufgehoben?
-Ja. Sobald ein unbeaufsichtigtes Ziel entfernt wird, wird die Änderung sofort wirksam. Wenn der Zielcomputer ausgeschaltet oder anderweitig nicht mit dem Internet verbunden ist, wird die Änderung wirksam, sobald eine Internetverbindung auf dem Computer hergestellt wird.
-#### Der Zielcomputer wurde nach der Installation von Updates und Treibern neu gestartet und erfordert ein Kennwort für die Anmeldung. Wie wird die Sitzung von hier an fortgesetzt?
-In den meisten Fällen, insbesondere wenn die FileVault-Festplattenverschlüsselung aktiviert ist, muss der Zielbenutzer das Kennwort manuell eingeben. RIM kann auf einem verschlüsselten Mac nicht gestartet werden, bevor er vollständig angemeldet ist.
-#### Ich habe mehrere Computer, die die Rolle des Controllers übernehmen. Wird die Liste der Rechner, die für den unbeaufsichtigten Zugriff eingerichtet sind, auf allen Rechnern angezeigt?
-Ja. Die Liste der Rechner, die für den unbeaufsichtigten Zugriff konfiguriert sind, ist in Ihrem Konto gespeichert und wird daher automatisch ausgefüllt.
+### Pricing and Payments
+#### So, getting help from a person over RIM is totally free, right?
+You bet! The subscriptions and/or one-off payments are for individuals and organizations seeking to offer remote assistance. No need to worry about getting a subscription if you're the person receiving help. In fact, you do not even have to set up an account if you are merely receiving help.
+#### I don't really do remote assistance regularly, but I may be helping a friend or family member on occasion. Are there any options that don't involve a subscription?
+Certainly! We do accommodate as many use cases as we can.
+* Anyone can assist a user over RIM for free for up to 30 minutes a day. So if you need to help someone install some software, fix a problem real quick, or send over a few files, we've got you covered. These minutes don't have to be used in one sitting.
+* There are, of course, going to be situations where a particular issue requires a little more time. Or maybe you're assisting someone learning a new piece of software and might be connecting on and off over the next few days or weeks. That's where our passes come in.
+    * Incident passes allow you to connect to a single target as many times as is needed over a 24 hour period.
+    * Day passes allow you to connect to multiple targets over a 24 hour period.
+    * Pro passes allow you to leverage all of RIM's pro capabilities with non-recurring 1 week, 2 week, or month-long terms.
+    * Packages of prepaid hours allow you to have a set number of hours available to be used entirely on your own time.
+* You can accumulate several of these passes and hourly packages and use them whenever the time calls for them. If you have multiple day passes, for instance, you do not need to use them consecutively. Similarly, You don't need to use your prepaid hours in one session or 24 hour period.
 
-### Tipps und Tricks
+#### I purchased a package of prepaid hours. What happens to my free daily allotment?
+Good news: Your free 30 minute daily allotment is not going anywhere! When you start a keyword-based session, RIM will start off by using your free 30 minute daily allotment. Your prepaid time will be used after your free 30 minutes is up.
+#### How long will my prepaid hours last? Are they tied in with my subscription?
+Prepaid hours are entirely separate from your subscription. That being said, your prepaid hours will remain in your account for one (1) year past the date they were first used.
+#### How do I go about bringing RIM to the attention of my place of work?
+We've assembled a [Self-Advocacy Kit](https://sak.getrim.app) (SAK). A packet of e-mail formatted letters you can send to appropriate individuals on behalf of yourself or an employee. For the record, RIM provides the same functionality as less accessible mainstream solutions. As such, RIM can replace an existing infrastructure, rather than be used alongside one. It is therefore considered a reasonable accessibility accommodation and should be provided to you by your organization. Accessibility isn't a favor, it's a right to inclusivity.
+#### What payment methods do you accept?
+We process payments through FastSpring, so we are able to directly accept a variety of international payment methods including major credit cards, PayPal, Alipay, and many more.
 
-Willkommen im Abschnitt Tipps und Tricks unserer FAQ! Wir freuen uns, Ihnen einige nützliche Einblicke und Weisheiten zu geben, um Ihre RIM-Erfahrung zu verbessern. Doch wie bei allen großen Abenteuern gibt es auch hier einige Vorbehalte, die Sie beachten sollten: 
-1. Die Welt der Technik ist wie eine Pralinenschachtel - immer voller Überraschungen. Unsere Tipps basieren auf einer Reihe von Faktoren, einschließlich, aber nicht beschränkt auf die Version von RIM und die Betriebssystemversion, die der Ersteller des Tipps verwendet. Wenn sich RIM weiterentwickelt, werden einige dieser Tipps möglicherweise weniger relevant. Halten Sie sich mit der neuesten Version auf dem Laufenden, um die beste Erfahrung zu machen! 
-1. Eine Größe ist nicht für alle geeignet. Unsere Software ist so konzipiert, dass sie eine Vielzahl von Bedürfnissen abdeckt, aber jeder Benutzer ist einzigartig. Was für den einen gut funktioniert, ist für den anderen vielleicht nicht ganz so bezaubernd. Sie können diese Tipps gerne an Ihre speziellen Bedürfnisse und Vorlieben anpassen. 
-1. Einige dieser Tipps stammen zwar von uns, aber viele dieser Tipps kommen direkt von unserer lebhaften Nutzergemeinschaft (wie Sie!). Wir freuen uns über dieses gemeinsame Wissen, aber bedenken Sie, dass diese Vorschläge auf persönlichen Erfahrungen beruhen und nicht unbedingt von unseren technischen Experten geprüft wurden. 
+#### How do these passes work? Does the clock start immediately upon payment, or on the day I initiate the session?
+Passes only begin when the controller initiates the session. So if the target's machine fails on them requiring a trip to the shop and a same-day turnaround is not possible, you can simply hold off until the machine is back in good shape and your day pass will still be waiting for you.
+#### So this means these passes don't expire?
+No. Rest assured that your accumulation of day passes will be waiting patiently for you to activate them whenever you're ready.
+#### What happens if I connect to another machine on the day an incident pass has been used?
+That depends. If the machine is within your subscription, I.E. if you're accessing your home machine while on the road, then it's business as usual. Any other connections that aren't the initial target you connected to will work under the usual 30 minute allotment.
+#### I hold an active personal subscription. Would I still be able to assist a user outside the group of targets for up to 30 minutes, or via a pass?
+Yes! Your 30 minute daily allotment is still present for any machine outside of your subscription. Additionally, acquiring a subscription does not replace any existing passes you may have.
+#### I have a personal subscription, and the target computer underwent a hardware upgrade. Will Rim count this as a machine switch?
+Only if RIM needs to be reinstalled. So, while a hard drive upgrade or any other situation requiring a Windows reinstallation would be considered a machine switch, upgrading the ram would not.
+#### Our company bought the pro subscription, but we have two techs - one that does help-desk during the day, and a system maintenance tech that works in the evening. Would we be able to assign the evening sysadmin a controller seat?
+Definitely. In situations where multiple technitions will be using RIM, we offer up to two (2) additional controller seats for $50 a month per seat - $500 a year per seat - to accompany the pro plan if needed. This will make it easier for multiple controllers at different workstations or offices to provide remote support.  
+If you have multiple controller seats, you can purchase additional channels for them so that sessions can run simultaneously. Each additional channel is $50 a month, or $500 a year. 
 
-Sollten Sie jemals Zweifel oder Fragen haben, ist unser Support-Team [nur eine Nachricht entfernt] (https://pneumasolutions.com/contact/). Wir beißen nicht, versprochen!
+#### Why is there a setup fee for RIM Enterprise accounts?
 
-Indem Sie diese Tipps nutzen, erklären Sie sich mit dem oben genannten Haftungsausschluss einverstanden. Und nun gehen Sie los und erkunden Sie das Potenzial von RIM mit diesen Tricks in Ihrem Ärmel! 
+The setup fee for RIM Enterprise accounts covers the administrative, technical, and security-related work required to configure your organization's environment. This includes:
+* Custom Configuration: We tailor your RIM Enterprise deployment to fit your organization's needs, including user roles, permissions, and security settings.
+* Unattended Access Setup: If your organization requires unattended access to targets, we help configure this feature properly to ensure seamless and secure remote access.
+* Infrastructure and Security Preparations: We verify secure connections, compliance requirements, and system optimizations to ensure your deployment is reliable and meets industry standards.
+* Initial Training and Support: Our team assists IT teams and administrators with onboarding, helping them maximize RIM’s capabilities.
+* Private Consultation with Development Team: We provide direct access to our development team for addressing security documentation requests, discussing custom integration needs, or reviewing specific technical concerns.
+* Exclusive Access to the RIM Insiders Slack Channel: Enterprise customers gain access to a dedicated Slack channel where they can communicate with our team, receive updates, and collaborate with other RIM power users.
 
-#### Abhören des Mikrofontons eines Ihrer persönlichen Geräte (Windows)
+This one-time setup fee ensures a smooth, secure, and customized deployment, giving your organization everything it needs to fully leverage RIM from day one.
 
-Um ein Höchstmaß an Privatsphäre zu gewährleisten, unterstützt RIM keine Telefongespräche während völlig unbeaufsichtigter Sitzungen. Es kann jedoch vorkommen, dass Sie Audio von einem Gerät in der Nähe eines Ihrer entfernten Computer hören möchten. Sie können zum Beispiel einen Radiowecker in der Nähe Ihres Desktops haben und Ihren Laptop auf der Veranda benutzen. Auch wenn die Qualität nicht die beste ist, kann RIM eine hervorragende drahtlose Behelfslösung für Audio sein!
+### Security
+#### Are RIM sessions encrypted?
+Yes. All sessions across all platforms, be they direct peer-to-peer connections or connections using a relay, are encrypted end to end using Datagram Transport Layer Security (DTLS). This is the same technology seen in the HTTPS protocol that modern websites implement for security.
+#### Can Pneuma Solutions eavesdrop on sessions relayed by the public cloud?
+No. Session key negotiation and encryption are performed end to end between the controller and the target. In other words, everything is encrypted before it even leaves your device. That way, the cloud service merely relays the data as is, making it impossible for the service to decipher the data.  
+Note that RIM will always attempt a direct peer-to-peer connection whenever possible. Relays are only used in situations where a direct peer-to-peer connection proves impossible, even with NAT traversal.
+#### What about the session recordings?
+The cloud is never used throughout the processing of session recordings. Recordings are stored on the local hard-drive of hte controller's computer, and distribution to the end-user is left entirely up to the controller.
+#### What measures have been taken to prevent remote code execution (RCE) vulnerabilities?
+All RIM code which is exposed to input from the network is written in [memory-safe programming languages](https://www.memorysafety.org/docs/memory-safety/) including Rust and JavaScript.
+#### Is RIM HIPAA-compliant?
+Yes. The best configuration in this case would be an on-premises deployment, so please [get in touch with us](https://pneumasolutions.com/contact/) if your use case depends on this.
+#### Do any ports need to be opened on the target or controller?
+No and no.
+#### What connections would need to be allowed on a network in order for RIM to function?
+When utilizing the public cloud, an https connection to [getrim.app](https://getrim.app) is required. In optimal cases this is enough for RIM to establish a peer-to-peer connection between the controller and the target. However, it helps to allow UDP connections through ports 19302 and 3478 (the standard STUN and TURN ports). This ensures that if a relay is being utilized, RIM will not have to fall back to a tcp connection on port 443.
+<Windows>
+#### Does RIM run in the background, and if so will it appear in my Alt+Tab list?
+RIM runs in the background in order to process automatic updates, receive unattended/prompted connection requests, and enable use of the global Windows+Shift+Backspace keyboard command. It will not phone home for any other purpose, and no personally identifiable information is transferred.  
+RIM will not appear in your Alt+Tab list, but it will appear in the system tray.
+</Windows>
+<MacOS>
+#### Does RIM run in the background, and if so will it appear in my Command+Tab list?
+RIM runs in the background in order to process automatic updates, receive unattended/prompted connection requests, and enable use of the global Option+Shift+Backspace keyboard command. It will not phone home for any other purpose, and no personally identifiable information is transferred.  
+RIM will not appear in your Command+Tab list, but it will appear in the status menus that contain your battery, WiFi connection information, etc.
+</MacOS>
+### Remote Accessibility Module
+#### Is there anything the target machine needs to configure for first-time use of the Remote Accessibility Module?
+Not at all! There are no dialogue boxes, permission request screens or anything of the sort.
+#### Does the Remote Accessibility Module work on secure screens such as the lock screen?
+Yes! Since the RIM host runs with elevated privileges, this allows us to leverage the Remote Accessibility Module for secure screens.
+<Windows>
+The only exception to this is when RIM is installed without administrator privileges target-side.
+</Windows>
+<MacOS>
+The only exception to this is FileVault's logon window.
+</MacOS>
+### Unattended Sessions
+#### Are voice conversations supported during unattended sessions?
+Yes. However, they cannot be initiated unless the end user is physically present to accept a permission request. This allows for voice conversations while ensuring maximum privacy and security.
+#### If I delete an unattended machine from my controller account, will it automatically revoke permission on the target?
+Yes. Once an unattended target is removed, the change will be effective immediately. If the target machine is powered down or otherwise not connected to the internet, the change will be effective as soon as an internet connection is established on their machine.
+#### The target machine rebooted after installing updates and drivers, and it requires a password to log in. How does the session continue from here?
+<Windows>
+While RIM will run on the Windows logon screen, logging in is still a task that must be done manually by the target user. In other words, RIM *will not* automatically log the user in.
+</Windows>
+<MacOS>
+In most instances, particularly when FileVault disk encryption is enabled, the target user will need to be physically present to manually enter the password. RIM cannot start on an encrypted Mac before it has been fully logged in.
+</MacOS>
+#### I have multiple machines playing the part of the controller. Will the list of machines set up for unattended access populate across all machines?
+Yes. The list of machines configured for unattended access is stored within your account, so it will populate automatically.
+#### Why am I prompted for user confirmation after a one-click install on the Pro plan, whereas the Enterprise plan allows for unattended installs?
+The key difference lies in the ownership and control of the machines being managed.
+* Enterprise Plan:
+    * It is assumed that the organization owns the machines being managed.
+    * As such, the enterprise plan allows for mass deployment of RIM without requiring interaction from individual users. This is because the organization has full control over these devices, eliminating the need for user confirmation.
+* Pro Plan:
+    * It is assumed that the machines being controlled belong to individual end users.
+    * We prioritize transparency and user consent. After a one-click install, the end user is prompted to confirm the installation of RIM. This ensures that they are aware of the software being installed on their device and provides an opportunity for them to agree to it.
+    * This approach helps maintain trust and compliance with privacy standards, respecting the ownership and autonomy of the end user's machine.
 
-Wenn Sie Ihr Zielgerät so einrichten, dass Sie den Ton des Mikrofons hören können, müssen Sie den Ton des Mikrofons an die Lautsprecher weiterleiten. Da Sie das Mikrofon in einer Remote-Sitzung hören wollen, müssen wir zunächst die Lautstärke der Lautsprecher verringern, um eine Rückkopplungsschleife zu vermeiden. Zu diesem Zweck:
-1. Öffnen Sie das Ausführungsfenster (Windows+R).
-1. Geben Sie sndvol ein und drücken Sie dann die Eingabetaste.
-1. Drücken Sie die Ende-Taste, um 0 % zu erreichen, und dann einmal die Pfeiltaste nach oben, um 1 % zu erreichen. Wie Sie sehen, berücksichtigt RIM bei der Audioausgabe nicht die tatsächliche Lautstärke des Zielrechners.
-1. Verlassen Sie den Lautstärkemixer.
+### Tips and Tricks
 
-Nachdem die Lautstärke nun gesenkt wurde, ist es an der Zeit, die Abhörfunktion Ihres Mikrofons zu aktivieren.
-1. Öffnen Sie die Windows-Einstellungen (Windows+I). Suchen Sie nach Mikrofon. Suchen Sie in der Liste nach Mikrofondatenschutz und drücken Sie die Eingabetaste. Vergewissern Sie sich, dass "Mikrofonzugriff" und "Anwendungen Zugriff auf Ihr Mikrofon gewähren" beide aktiviert sind.
-1. Drücken Sie erneut Windows+R und geben Sie diesmal mmsys.cpl ein, um die Toneinstellungen zu öffnen.
-1. Öffnen Sie in den Toneinstellungen die Registerkarte "Aufnahme" (Strg+Tab).
-1. Wählen Sie das Mikrofon oder das Line-In-Gerät aus, das Sie abhören möchten, und rufen Sie dann die Eigenschaften mit Alt+P auf.
-1. Wechseln Sie in den Eigenschaften mit STRG+Tab zur Registerkarte "Abhören" und aktivieren Sie das Kontrollkästchen "Diesem Gerät zuhören".
-1. Wechseln Sie erneut mit STRG+Tab zum Abschnitt "Pegel" und stellen Sie die Verstärkung des Mikrofons so ein, dass sie für Sie ausreichend ist. Drücken Sie abschließend die Eingabetaste.
+Welcome to the Tips and Tricks section of our FAQ! We're thrilled to share some handy insights and nuggets of wisdom to enhance your RIM experience. That said, as with all great adventures, there are a few caveats to keep in mind: 
+1. The tech world is like a box of chocolates – always full of surprises. Our tips are based on a number of factors, including but not limited to the version of RIM and operating system version used by the creator of the tip. As RIM evolves, some of these tips might become less relevant. Stay updated with the latest version for the best experience! 
+1. One Size Doesn't Fit All. Our software is designed to cater to a diverse range of needs, but every user's journey is unique. What works like a charm for one might be less enchanting for another. Feel free to adapt these tips to your specific needs and preferences. 
+1. While some of these tips may come from us, many of these tips come straight from our vibrant community of users (like you!). While we celebrate this shared knowledge, remember that these suggestions are based on personal experiences and might not have been vetted by our tech wizards. 
 
-Das war's! Sie sollten nun den Ton des Mikrofons zusammen mit dem übrigen Ausgang des entfernten Rechners hören.
+If you're ever in doubt or have questions, our support team is [just a message away.](https://pneumasolutions.com/contact/) We don't bite, we promise!
+
+By using these tips, you acknowledge and agree to the above disclaimer. Now, go forth and explore the potential of RIM with these tricks up your sleeve! 
+
+#### Listening to the microphone audio of one of your personal machines (Windows)
+
+In the interest of ensuring maximum privacy, RIM does not support voice conversations during fully unattended sessions unless the target user is physically present to agree to them. There however may be times where you may want to hear audio coming from a device near one of your remote computers. For example, you may have a clock radio near your desktop, and you may be using your laptop on the porch. While the quality may not be the greatest, RIM can make for an excellent makeshift wireless audio solution!
+
+Setting up your target machine to listen to its microphone audio will involve piping the microphone audio through to its speakers. As you're aiming to hear the microphone from within a remote session, we first need to lower your speaker volume to avoid a feedback loop. In order to do that:
+1. Open the run box (Windows+R).
+1. Type sndvol, then press enter.
+1. Press the end key to reach 0%, then press up arrow once to reach 1%. As you can see, RIM does not take the actual volume of the target machine into consideration when outputting its audio.
+1. Exit out of volume mixer.
+
+With your volume now lowered, it's time to enable your microphone's listen function.
+1. Open Windows Settings (Windows+I). Search for microphone. Locate Microphone Privacy in the list and press Enter. Make sure that “Microphone Access” and “Let apps Access your microphone” are both toggled on.
+1. Press Windows+R again, and this time, type mmsys.cpl to open the sound settings.
+1. Once in sound settings, access the recording tab (Ctrl+Tab).
+1. Select the microphone or line-in device you want to listen to, then access the properties with Alt+P.
+1. Once in the properties, CTRL+Tab to the listen tab, and check the "Listen to this Device" checkbox.
+1. CTRL+Tab one more time to the Levels section, and adjust the gain of the microphone to a level that will be sufficient for you. Press enter when done.
+
+That's it! You should now hear the microphone's audio along with the rest of the remote machine's output.

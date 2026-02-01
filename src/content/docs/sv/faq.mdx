@@ -5,152 +5,200 @@ title: Vanliga frågor och svar
 import Windows from "~/components/platform/Windows.astro"
 import MacOS from "~/components/platform/MacOS.astro"
 
-Här finns svar på några vanliga frågor om RIM. När du ställs inför ett problem, vänligen hänvisa till detta dokument när det är möjligt. Om din fråga inte behandlas i detta dokument, vänligen [Kontakta oss.](https://pneumasolutions.com/contact/)
+Här finns svar på några vanliga frågor om RIM. Om du stöter på ett problem, vänligen hänvisa till detta dokument när det är möjligt. Om din fråga inte behandlas i detta dokument, vänligen [kontakta oss.](https://pneumasolutions.com/contact/)
 ### Kompatibilitet
 #### Vilka Windows-versioner stöds?
-Vi stöder Windows10 och senare, samt Windows Server2016 och senare.
-#### Vilka Mac OS-versioner stöds?
-RIM stöder Mac OS Ventura tillsammans med framtida versioner, oavsett om de är Intel eller Apple Silicon. Du som Mac-användare kan ge support till Windows-användare, och Windows-användare kan ge support till din Mac.
+Vi stöder Windows 10 och senare, samt Windows Server 2016 och senare.
+#### Vilka versioner av Mac OS stöds?
+RIM stöder alla versioner av Mac OS Ventura och Sonoma, oavsett om de är Intel eller Apple Silicon. Som Mac-användare kan du ge support till Windows-mål, och Windows-användare kan ge support till din Mac.
 #### Hur är det med Mac OS-versioner före Ventura?
-Vissa funktioner i RIM är beroende av funktionalitet som nyligen introducerats i Ventura, vilket gör det svårt att implementera kompatibilitet med tidigare versioner.
+Vissa funktioner i RIM är beroende av ny funktionalitet som introducerats i Ventura, vilket gör kompatibilitet med tidigare versioner svår att implementera.
 ### Installation
 #### Varför så många behörighetsförfrågningar på Mac OS?
-Detta ligger tyvärr utanför vår kontroll, eftersom Mac OS kräver att vi använder deras vägar för att begära de nödvändiga behörigheter som behövs för RIM. Vi har ingen kontroll över UX, så vi kan bara gå så långt som att ge så mycket instruktioner som vi kan.
-### Information om anslutningen
-#### Generellt sett, hur snabb är RIM?
-Roundtrip-latenstiden under en RIM-session är extremt minimal. Eftersom vi inte förlitar oss på en central tjänst är dina anslutningar för det mesta direkta från en dator till en annan - detta är vad som kallas peer-to-peer. Om din nätverkskonfiguration inte tillåter peer-to-peer-anslutningar använder vi oss av ett antal reläer runt om i världen i stället för att förlita oss på en central server. Även då kommer din latens att vara mycket minimal.
+Detta ligger tyvärr utanför vår kontroll, eftersom Mac OS kräver att vi använder deras kanaler för att begära de behörigheter som krävs för RIM. Vi har ingen kontroll över användarupplevelsen, så vi kan bara ge så mycket instruktioner som möjligt.
+### Anslutningsinformation
+#### Hur responsiv är RIM generellt sett?
+Rundturens latens under en RIM-session är extremt minimal. Eftersom vi gör allt vi kan för att inte förlita oss på den centrala tjänsten för att hålla anslutningen igång, är dina anslutningar oftast direkta från en dator till en annan – detta kallas peer-to-peer. Om din nätverkskonfiguration inte tillåter peer-to-peer-anslutningar, faller vi tillbaka på ett antal reläer runt om i världen istället för att förlita oss på en central server. Även då kommer din latens fortfarande att vara relativt minimal.
 #### Var finns era reläer?
 För närvarande erbjuder vi reläer på följande platser:
 * USA
-    * Virginia
-    * Kalifornien
-* Teronto, Kanada
+* Virginia
+* Kalifornien
+* Toronto, Kanada
 * London, England
 * Warszawa, Polen
 * Bangalore, Indien
 * Singapore
-* Sidney, Australien
-* Sao Paulo, Brasilien
+* Sydney, Australien
+* São Paulo, Brasilien
 
-### Allmän session Felsökning
-#### Måldatorn som jag är ansluten till reagerar inte korrekt på tangentbordskommandon som fungerar bra på mitt tangentbord. Vad är det som händer?
-Detta kan bero på någon av följande möjligheter:
-* En konflikt mellan tangentbordslayouter: I sällsynta fall, om en tangentbordslayout skiljer sig tillräckligt mycket från din egen, kan det förvirra RIM. Om detta inträffar ber vi dig att kontakta oss med en rapport som innehåller information om tangentbordslayouten på båda maskinerna.
-* Om målmaskinen använder JAWS 2024 kan dess enhetliga tangentbordsbehandling ibland störa användningen av CTRL-tangenten för att tysta tal. Även om vi har distribuerat en fix för detta kan problem ibland fortfarande uppstå.
-    * Detta problem kan lösas genom att inaktivera enhetlig tangentbordsbehandling i JAWS inställningscenter.
-    * Unified Keyboard Processing är inte nödvändigt om målanvändaren inte också använder ZoomText eller Fusion.
-* Om målmaskinen använder NVDA och har "Hantera tangenter från andra program" avmarkerat, kommer RIM inte att kunna bearbeta tangentbordsinmatning från styrenheten.
-    * Observera att denna inställning är aktiverad som standard och att det i de flesta fall är lämpligt att låta den vara aktiverad.
+### Allmän felsökning av sessioner
+#### Den måldator som jag är ansluten till svarar inte korrekt på tangentbordskommandon som fungerar bra på mitt tangentbord. Vad är det som händer?
+Det kan bero på någon av följande orsaker:
+* En konflikt i tangentbordslayouter: I sällsynta fall kan en tangentbordslayout som skiljer sig tillräckligt mycket från din egen förvirra RIM. Om detta inträffar, kontakta oss med en rapport som innehåller information om tangentbordslayouten på båda maskinerna.
+* Om målmaskinen använder JAWS 2024 kan dess enhetliga tangentbordsbehandling ibland störa användningen av CTRL-tangenten för att stänga av talet. Även om detta har åtgärdats i JAWS2025, stör den enhetliga tangentbordsbehandlingen korrekt användning av caps lock-tangenten.
+    * Dessa problem kan lösas genom att inaktivera den enhetliga tangentbordsbehandlingen i JAWS inställningscenter.
+* Enhetlig tangentbordsbehandling är inte nödvändig om mål användaren inte också använder ZoomText eller Fusion.
+* Om måldatorn använder NVDA och har &quot;Hantera tangenter från andra applikationer&quot; avmarkerat, kommer RIM inte att kunna behandla tangentbordsinmatning från kontrollenheten.
+    * Observera att denna inställning är aktiverad som standard och att det i de flesta fall är lämpligt att lämna den aktiverad.
+* Om målmaskinen har ett numeriskt tangentbord och din maskins numlock inte är i samma läge som deras, kan du märka ett konstigt beteende på målsidan.
+* Beroende på vilket läge du vill att målets numlock ska vara i, se till att det också stämmer överens med kontrollerns sida.
 
-#### När jag startar en röstkonversation i Windows använder RIM den interna mikrofonen, oavsett vilken mikrofon jag väljer i ljudinställningarna. Vad är det som är fel?
+#### När jag vänder en session fungerar inte Windows+Skift+F för att återställa vändningen. Varför är det så?
 
-Detta kan bero på Intel® Smart Sound Technology för digitala mikrofoner på vissa nyare Intel-processorer. Om du inaktiverar detta bör problemet lösas. Gör så här för att inaktivera Intel® Smart Sound Technology för digitala mikrofoner:
-1. Gå till rutan Kör (Windows+R).
+De senaste versionerna av Windows 11 har introducerat en Edge Bar, som tyvärr orsakar en konflikt med vårt tangentbordskommando Windows+Skift+F överallt där RIM inte direkt bearbetar dina tangentbordsinmatningar. Att återställa en vändning kan för närvarande göras mest effektivt via sessionsmenyn.
+
+#### När jag startar ett röstsamtal i Windows använder RIM den interna mikrofonen oavsett vilken mikrofon jag väljer i ljudinställningarna. Vad är fel?
+
+Detta kan bero på Intel® Smart Sound Technology för digitala mikrofoner på vissa nyare Intel-processorer. Att inaktivera detta bör lösa problemet. För att inaktivera Intel® Smart Sound Technology för digitala mikrofoner gör du följande:
+1. Gå till körrutan (Windows+R).
 1. Skriv devmgmt.msc
-1. Expandera "Ljud-, video- och spelkontroller" i enhetsträdet
-1. Högerklicka på "Intel® Smart Sound Technology för digitala mikrofoner." Välj "Inaktivera enhet" från snabbmenyn.
+1. Expandera &quot;Ljud-, video- och spelkontroller&quot; i enhetsträdet.
+1. Högerklicka på &quot;Intel® Smart Sound Technology for Digital Microphones&quot;. Välj &quot;Inaktivera enhet&quot; från snabbmenyn.
 
 #### Målet använder Zoom Text. Hur upplever jag den visuella utmatningen som återges av denna förstoring?
 
-Detta åstadkoms genom att ZoomText växlar till kompatibilitetsläge. I detta läge kan skärmförbättringar delas via verktyg som Teams eller Zoom, samt RIM. Du kan aktivera det via ZoomText-menyn: Hjälp &gt; Advance &gt; Skärmadapter. I den öppna dialogen väljer du kompatibilitetsläge och ZoomText startar om. Vi rekommenderar att du växlar tillbaka bildskärmsadaptern till det vanliga läget efter att RIM-sessionen är klar för optimal prestanda och förstoringskvalitet. 
+Detta görs genom att växla ZoomText till kompatibilitetsläge. I detta läge kan skärmförbättringar delas via verktyg som Teams eller Zoom, samt RIM. Du kan aktivera det via ZoomText-menyn: Hjälp &gt; Avancerat &gt; Skärmkort. I den öppna dialogrutan väljer du kompatibilitetsläge, och ZoomText startas om. Vi rekommenderar att du växlar tillbaka skärmkortet till normalt läge efter att RIM-sessionen är klar för optimal prestanda och förstoringskvalitet. 
 
-#### Behöver man göra något för att få igång RIM igen efter att en dator har omimagerats och konfigurerats om med samma datornamn? 
-Ta helt enkelt bort maskinen från ditt konto, installera om RIM och lägg sedan till maskinen på ditt konto igen.
+#### Efter att en dator har återinstallerats och konfigurerats om med samma datornamn, finns det något som behöver göras för att få RIM att fungera igen? 
+
+Ta bara bort maskinen från ditt konto, installera om RIM och lägg sedan till maskinen igen i ditt konto.
 
 ### Priser och betalningar
-#### Så att få hjälp av en person över RIM är helt gratis, eller hur?
-Det kan du ge dig på! Abonnemangen och/eller engångsbetalningarna är till för individer och organisationer som vill erbjuda fjärrhjälp. Du behöver inte oroa dig för att skaffa en prenumeration om du är den som får hjälp. Faktum är att du inte ens behöver skapa ett konto om du bara tar emot hjälp.
-#### Jag ägnar mig inte åt fjärrhjälp regelbundet, men jag kanske hjälper en vän eller familjemedlem ibland. Finns det några alternativ som inte kräver en prenumeration?
-Absolut! Vi tillgodoser så många användningsfall som möjligt.
-* Vem som helst kan hjälpa en användare via RIM gratis i upp till 30 minuter per dag. Så om du behöver hjälpa någon att installera en programvara, lösa ett problem snabbt eller skicka över några filer, så har vi något för dig. Dessa minuter behöver inte användas på en gång.
-* Det kommer naturligtvis att finnas situationer där en viss fråga kräver lite mer tid. Eller så kanske du hjälper någon att lära sig en ny programvara och kanske kommer att ansluta till och från under de närmaste dagarna eller veckorna. Det är där våra pass kommer in i bilden.
-    * Incidentpass ger dig möjlighet att ansluta till ett enda mål så många gånger som behövs under en 24-timmarsperiod.
+#### Så det är helt gratis att få hjälp av en person via RIM, eller hur?
+Absolut! Abonnemangen och/eller engångsbetalningarna är för individer och organisationer som vill erbjuda fjärrhjälp. Du behöver inte oroa dig för att skaffa ett abonnemang om du är den som får hjälp. Du behöver faktiskt inte ens skapa ett konto om du bara får hjälp.
+#### Jag ger inte fjärrhjälp regelbundet, men jag kan hjälpa en vän eller familjemedlem ibland. Finns det några alternativ som inte kräver prenumeration?
+Självklart! Vi tillgodoser så många användningsfall som möjligt.
+* Vem som helst kan hjälpa en användare via RIM gratis i upp till 30 minuter per dag. Så om du behöver hjälpa någon att installera programvara, snabbt lösa ett problem eller skicka några filer, så har vi lösningen. Dessa minuter behöver inte användas på en gång.
+* Det kommer naturligtvis att finnas situationer där ett visst problem kräver lite mer tid. Eller kanske hjälper du någon att lära sig en ny programvara och kommer att ansluta till och från under de närmaste dagarna eller veckorna. Det är där våra pass kommer in.
+* Incidentpass gör att du kan ansluta till ett enda mål så många gånger som behövs under en 24-timmarsperiod.
     * Med dagspass kan du ansluta till flera mål under en 24-timmarsperiod.
-    * Pro-pass ger dig möjlighet att utnyttja alla RIM:s pro-funktioner med icke återkommande 1 veckas, 2 veckors eller månadslånga villkor.
-    * Paket med förbetalda timmar ger dig tillgång till ett visst antal timmar som du kan använda helt på egen tid.
-* Du kan samla på dig flera av dessa pass och timpaket och använda dem när det passar dig. Om du t.ex. har flera dagspass behöver du inte använda dem i följd. På samma sätt behöver du inte använda dina förbetalda timmar under en session eller 24-timmarsperiod.
+* Med pro-pass kan du utnyttja alla RIM:s pro-funktioner med engångspass som gäller i 1 vecka, 2 veckor eller en månad.
+* Med förbetalda timpaket får du ett visst antal timmar som du kan använda helt efter eget behag.
+* Du kan samla flera av dessa pass och timpaket och använda dem när du behöver. Om du till exempel har flera dagspass behöver du inte använda dem i följd. På samma sätt behöver du inte använda dina förbetalda timmar under en session eller en 24-timmarsperiod.
 
-#### Jag har köpt ett paket med förbetalda timmar. Vad händer med min kostnadsfria dagliga tilldelning?
-Goda nyheter: Din kostnadsfria dagliga tilldelning på 30 minuter kommer inte att försvinna! När du startar en sökordsbaserad session kommer RIM att börja med att använda din gratis 30 minuters dagliga tilldelning. Din förbetalda tid kommer att användas efter att dina fria 30 minuter är slut.
-#### Hur länge kommer mina förbetalda timmar att räcka? Är de kopplade till min prenumeration?
-Förbetalda timmar är helt separata från din prenumeration. Med detta sagt kommer dina förbetalda timmar att finnas kvar på ditt konto i ett (1) år efter det datum då de först användes.
-#### Hur går jag tillväga för att göra min arbetsplats uppmärksam på RIM?
-Vi har sammanställt ett [Self-Advocacy Kit] (https://sak.getrim.app) (SAK). Ett paket med brev i e-postformat som du kan skicka till lämpliga personer på uppdrag av dig själv eller en anställd. RIM tillhandahåller samma funktioner som mindre tillgängliga vanliga lösningar. RIM kan därför ersätta en befintlig infrastruktur, snarare än att användas vid sidan av en sådan. Det anses därför vara en rimlig tillgänglighetsanpassning och bör tillhandahållas av din organisation. Tillgänglighet är inte en tjänst, det är en rättighet till inkludering.
+#### Jag har köpt ett paket med förbetalda timmar. Vad händer med min dagliga gratistid?
+Goda nyheter: Din gratis dagliga tilldelning på 30 minuter försvinner inte! När du startar en nyckelordsbaserad session börjar RIM med att använda din gratis dagliga tilldelning på 30 minuter. Din förbetalda tid används efter att dina gratis 30 minuter har gått ut.
+#### Hur länge gäller mina förbetalda timmar? Är de kopplade till mitt abonnemang?
+Förbetalda timmar är helt separata från ditt abonnemang. Med det sagt kommer dina förbetalda timmar att finnas kvar på ditt konto i ett (1) år efter det datum då de först användes.
+#### Hur gör jag för att uppmärksamma min arbetsplats på RIM?
+Vi har sammanställt ett [Self-Advocacy Kit](https://sak.getrim.app) (SAK). Ett paket med e-postformaterade brev som du kan skicka till lämpliga personer på dina egna eller en anställds vägnar. För ordningens skull erbjuder RIM samma funktionalitet som mindre tillgängliga mainstream-lösningar. Som sådan kan RIM ersätta en befintlig infrastruktur, snarare än att användas parallellt med en sådan. Det anses därför vara en rimlig tillgänglighetsanpassning och bör tillhandahållas av din organisation. Tillgänglighet är inte en tjänst, det är en rättighet till inkludering.
 #### Vilka betalningsmetoder accepterar ni?
-Vi hanterar betalningar via FastSpring, så vi kan direkt acceptera en mängd olika internationella betalningsmetoder, inklusive större kreditkort, PayPal, Alipay och många fler.
+Vi hanterar betalningar via FastSpring, så vi kan direkt acceptera en rad olika internationella betalningsmetoder, inklusive de vanligaste kreditkorten, PayPal, Alipay och många fler.
 
-#### Hur fungerar dessa pass? Börjar klockan gå direkt vid betalning, eller samma dag som jag initierar sessionen?
-Pass börjar gälla först när den personuppgiftsansvarige initierar sessionen. Så om målets maskin går sönder och kräver en resa till verkstaden och det inte är möjligt att genomföra en session samma dag, kan du helt enkelt vänta tills maskinen är tillbaka i gott skick och ditt dagspass kommer fortfarande att vänta på dig.
-#### Så detta innebär att dessa pass inte upphör att gälla?
-Nej. Du kan vara säker på att dina dagspass kommer att vänta tålmodigt på att du ska aktivera dem när du är redo.
+#### Hur fungerar dessa pass? Börjar klockan ticka omedelbart efter betalningen eller den dag jag startar sessionen?
+Passen börjar först när kontrollenheten startar sessionen. Så om målets maskin går sönder och måste lämnas in till verkstaden och det inte går att få den reparerad samma dag, kan du helt enkelt vänta tills maskinen är i gott skick igen och ditt dagspass kommer fortfarande att finnas kvar.
+#### Betyder det att dessa pass inte går ut?
+Nej. Du kan vara säker på att dina ackumulerade dagspass väntar tålmodigt på att du ska aktivera dem när du är redo.
 #### Vad händer om jag ansluter till en annan maskin samma dag som ett incidentpass har använts?
-Det beror på. Om maskinen ingår i ditt abonnemang, dvs. om du ansluter till din hemmaskin medan du är på resande fot, är det som vanligt. Alla andra anslutningar som inte är det ursprungliga målet du anslöt till kommer att fungera under den vanliga 30 minuters tilldelningen.
-#### Jag har en aktiv personlig prenumeration. Kommer jag fortfarande att kunna hjälpa en användare utanför målgruppen i upp till 30 minuter, eller via ett pass?
-Ja! Din dagliga tilldelning på 30 minuter gäller fortfarande för alla maskiner utanför din prenumeration. Dessutom ersätter en prenumeration inte några befintliga pass som du kan ha.
-#### Jag har en personlig prenumeration och måldatorn genomgick en hårdvaruuppgradering. Kommer Rim att räkna detta som ett maskinbyte?
-Endast om RIM behöver installeras om. Så även om en uppgradering av hårddisken eller någon annan situation som kräver en ominstallation av Windows skulle betraktas som ett maskinbyte, skulle en uppgradering av RAM-minnet inte göra det.
-#### Vårt företag köpte pro-prenumerationen, men vi har två tekniker - en som arbetar med helpdesk på dagtid och en systemunderhållstekniker som arbetar på kvällen. Skulle vi kunna tilldela kvällens sysadmin en controllerplats?
-Ja, absolut. I situationer där flera tekniker använder RIM erbjuder vi vid behov upp till två (2) extra controller-platser för 50 USD per månad och plats - 500 USD per år och plats - som komplement till pro-planen. Detta gör det enklare för flera controllers på olika arbetsstationer eller kontor att tillhandahålla fjärrsupport.  
-Om du har flera kontrollantplatser kan du köpa ytterligare kanaler för dem så att sessioner kan köras samtidigt. Varje extra kanal kostar 50 USD per månad eller 500 USD per år. 
+Det beror på. Om maskinen ingår i ditt abonnemang, dvs. om du ansluter till din hemmamaskinen när du är på resande fot, är det business as usual. Alla andra anslutningar som inte är det ursprungliga målet du anslöt till kommer att fungera under den vanliga tilldelningen på 30 minuter.
+#### Jag har ett aktivt personligt abonnemang. Kan jag fortfarande hjälpa en användare utanför målgruppen i upp till 30 minuter eller via ett pass?
+Ja! Din dagliga tilldelning på 30 minuter gäller fortfarande för alla maskiner utanför ditt abonnemang. Dessutom ersätter ett abonnemang inte eventuella befintliga pass du har.
+#### Jag har ett personligt abonnemang och måldatorn har genomgått en hårdvaruuppgradering. Räknar Rim detta som ett maskinbyte?
+Endast om RIM behöver installeras om. Så medan en uppgradering av hårddisken eller någon annan situation som kräver en ominstallation av Windows skulle betraktas som ett byte av maskin, skulle en uppgradering av RAM-minnet inte göra det.
+#### Vårt företag har köpt pro-abonnemanget, men vi har två tekniker – en som sköter helpdesk under dagen och en systemunderhållstekniker som arbetar på kvällen. Kan vi tilldela kvällssystemadministratören en kontrollplats?
+Absolut. I situationer där flera tekniker kommer att använda RIM erbjuder vi upp till två (2) ytterligare kontrollplatser för 50 dollar per månad per plats – 500 dollar per år per plats – som tillägg till pro-abonnemanget om det behövs. Detta gör det enklare för flera kontrollanter på olika arbetsstationer eller kontor att ge fjärrsupport.  
+Om du har flera kontrollplatser kan du köpa ytterligare kanaler för dem så att sessioner kan köras samtidigt. Varje ytterligare kanal kostar 50 dollar per månad eller 500 dollar per år. 
+
+#### Varför finns det en installationsavgift för RIM Enterprise-konton?
+
+Installationsavgiften för RIM Enterprise-konton täcker det administrativa, tekniska och säkerhetsrelaterade arbete som krävs för att konfigurera din organisations miljö. Detta inkluderar:
+* Anpassad konfiguration: Vi skräddarsyr din RIM Enterprise-distribution så att den passar din organisations behov, inklusive användarroller, behörigheter och säkerhetsinställningar.
+* Installation av obevakad åtkomst: Om din organisation behöver obevakad åtkomst till mål hjälper vi till att konfigurera denna funktion på rätt sätt för att säkerställa smidig och säker fjärråtkomst.
+* Förberedelser av infrastruktur och säkerhet: Vi verifierar säkra anslutningar, efterlevnadskrav och systemoptimeringar för att säkerställa att din installation är tillförlitlig och uppfyller branschstandarder.
+* Inledande utbildning och support: Vårt team hjälper IT-team och administratörer med onboarding, så att de kan maximera RIM:s kapacitet.
+* Privat konsultation med utvecklingsteamet: Vi erbjuder direkt tillgång till vårt utvecklingsteam för att hantera förfrågningar om säkerhetsdokumentation, diskutera anpassade integrationsbehov eller granska specifika tekniska frågor.
+* Exklusiv tillgång till RIM Insiders Slack-kanal: Företagskunder får tillgång till en dedikerad Slack-kanal där de kan kommunicera med vårt team, få uppdateringar och samarbeta med andra RIM-användare.
+
+Denna engångsavgift garanterar en smidig, säker och anpassad implementering, vilket ger din organisation allt den behöver för att fullt ut kunna utnyttja RIM från dag ett.
 
 ### Säkerhet
 #### Är RIM-sessioner krypterade?
-Ja, det är de. Alla sessioner på alla plattformar, oavsett om det är direkta peer-to-peer-anslutningar eller anslutningar som använder ett relä, krypteras från början till slut med hjälp av Datagram Transport Layer Security (DTLS). Detta är samma teknik som används i HTTPS-protokollet som moderna webbplatser implementerar för säkerhets skull.
-#### Kan Pneuma Solutions avlyssna sessioner som vidarebefordras av det publika molnet?
-Nej. Förhandling om sessionsnyckel och kryptering utförs end-to-end mellan styrenheten och målet. Med andra ord krypteras allt innan det ens lämnar din enhet. På så sätt vidarebefordrar molntjänsten bara uppgifterna som de är, vilket gör det omöjligt för tjänsten att dechiffrera uppgifterna.
-#### Vilka åtgärder har vidtagits för att förhindra RCE-sårbarheter (Remote Code Execution)?
-All RIM-kod som exponeras för indata från nätverket är skriven i [memory-safe programming languages] (https://www.memorysafety.org/docs/memory-safety/) inklusive Rust och JavaScript.
+Ja. Alla sessioner på alla plattformar, oavsett om det är direkta peer-to-peer-anslutningar eller anslutningar som använder en relä, krypteras från början till slut med Datagram Transport Layer Security (DTLS). Detta är samma teknik som används i HTTPS-protokollet som moderna webbplatser implementerar för säkerhet.
+#### Kan Pneuma Solutions avlyssna sessioner som vidarebefordras av den offentliga molntjänsten?
+Nej. Förhandling om sessionsnyckel och kryptering utförs från början till slut mellan kontrollenheten och målet. Med andra ord krypteras allt innan det ens lämnar din enhet. På så sätt vidarebefordrar molntjänsten bara data som den är, vilket gör det omöjligt för tjänsten att dekryptera data.  
+Observera att RIM alltid försöker upprätta en direkt peer-to-peer-anslutning när det är möjligt. Vidarebefordran används endast i situationer där en direkt peer-to-peer-anslutning är omöjlig, även med NAT-traversering.
+#### Hur är det med sessionsinspelningarna?
+Molnet används aldrig under bearbetningen av sessionsinspelningar. Inspelningarna lagras på den lokala hårddisken på kontrollantens dator, och distributionen till slutanvändaren överlåts helt och hållet till kontrollanten.
+#### Vilka åtgärder har vidtagits för att förhindra sårbarheter för fjärrkörning av kod (RCE)?
+All RIM-kod som utsätts för inmatning från nätverket är skriven i [minnessäkra programmeringsspråk](https://www.memorysafety.org/docs/memory-safety/), inklusive Rust och JavaScript.
 #### Är RIM HIPAA-kompatibelt?
-Ja. Den bästa konfigurationen i detta fall skulle vara en lokal driftsättning, så vänligen [kontakta oss](https://pneumasolutions.com/contact/) om ditt användningsfall är beroende av detta.
-#### Behöver några portar öppnas på målet eller styrenheten?
+Ja. Den bästa konfigurationen i detta fall skulle vara en lokal distribution, så [kontakta oss](https://pneumasolutions.com/contact/) om ditt användningsfall är beroende av detta.
+#### Behöver några portar öppnas på målet eller kontrollenheten?
 Nej och nej.
 #### Vilka anslutningar måste tillåtas i ett nätverk för att RIM ska fungera?
-Vid användning av det offentliga molnet krävs en https-anslutning till [getrim.app] (https://getrim.app). I optimala fall är detta tillräckligt för att RIM ska kunna upprätta en peer-to-peer-anslutning mellan styrenheten och målet. Det är dock bra att tillåta UDP-anslutningar via portarna 19302 och 3478 (standardportarna för STUN och TURN). Detta säkerställer att om ett relä används kommer RIM inte att behöva återgå till en tcp-anslutning på port 443.
-#### Körs RIM i bakgrunden, och visas det i så fall i min Command+Tab-lista?
-RIM körs i bakgrunden för att bearbeta automatiska uppdateringar, ta emot obevakade/förberedda anslutningsförfrågningar och möjliggöra användning av det globala tangentbordskommandot Option+Shift+Backspace. Den kommer inte att ringa hem för något annat ändamål och ingen personligt identifierbar information överförs.  
-RIM visas inte i Command+Tab-listan, men däremot i statusmenyerna som innehåller information om batteri, WiFi-anslutning osv.
+När du använder den offentliga molntjänsten krävs en https-anslutning till [getrim.app](https://getrim.app). I optimala fall räcker detta för att RIM ska kunna upprätta en peer-to-peer-anslutning mellan kontrollenheten och målenheten. Det är dock bra att tillåta UDP-anslutningar via portarna 19302 och 3478 (standardportarna för STUN och TURN). Detta säkerställer att RIM inte behöver fall tillbaka på en tcp-anslutning på port 443 om en relä används.
+
+<Windows>#### Körs RIM i bakgrunden, och i så fall visas det i min Alt+Tab-lista?
+RIM körs i bakgrunden för att bearbeta automatiska uppdateringar, ta emot obevakade/promptade anslutningsförfrågningar och möjliggöra användning av det globala tangentbordskommandot Windows+Skift+Backspace. Det kommer inte att ringa hem för något annat ändamål, och ingen personlig identifierbar information överförs.  
+RIM visas inte i din Alt+Tab-lista, men det visas i systemfältet.
+</Windows>
+<MacOS>
+#### Körs RIM i bakgrunden, och i så fall kommer det att visas i min Command+Tab-lista?
+RIM körs i bakgrunden för att bearbeta automatiska uppdateringar, ta emot obevakade/promptade anslutningsförfrågningar och möjliggöra användning av det globala tangentbordskommandot Option+Shift+Backspace. Det kommer inte att ringa hem för något annat ändamål, och ingen personlig identifierbar information överförs.  
+RIM visas inte i din Command+Tab-lista, men det visas i statusmenyerna som innehåller information om batteri, WiFi-anslutning etc.</MacOS>
+
 ### Modul för fjärråtkomst
-#### Finns det något som målmaskinen behöver konfigurera för att kunna använda Fjärråtkomstmodulen för första gången?
+#### Finns det något som måldatorn behöver konfigurera för första gången modul för fjärråtkomst används?
 Inte alls! Det finns inga dialogrutor, skärmar för begäran om tillstånd eller något liknande.
-#### Fungerar fjärrtillgänglighetsmodulen på säkra skärmar, t.ex. låsskärmen?
-Ja, det gör den! Eftersom RIM-värden körs med förhöjda behörigheter kan vi använda fjärrtillgänglighetsmodulen för säkra skärmar. Det enda undantaget är FileVaults inloggningsfönster.
-### Obevakade sessioner
-#### Stöds röstkonversationer under obevakade sessioner?
-Ja, men de kan inte initieras om inte slutanvändaren är fysiskt närvarande för att acceptera en begäran om tillstånd. Detta möjliggör röstsamtal samtidigt som maximal integritet och säkerhet garanteras.
-#### Om jag tar bort en obevakad maskin från mitt kontrollantkonto, återkallas då automatiskt behörigheten för målet?
-Ja, det gör det. När ett obevakat mål tas bort träder ändringen i kraft omedelbart. Om målmaskinen är avstängd eller på annat sätt inte är ansluten till internet kommer ändringen att träda i kraft så snart en internetanslutning upprättas på deras maskin.
-#### Målmaskinen startade om efter att ha installerat uppdateringar och drivrutiner, och det krävs ett lösenord för att logga in. Hur fortsätter sessionen från och med nu?
-I de flesta fall, särskilt när FileVault-diskkryptering är aktiverad, måste målanvändaren ange lösenordet manuellt. RIM kan inte starta på en krypterad Mac innan den har varit helt inloggad.
-#### Jag har flera maskiner som spelar rollen som styrenhet. Kommer listan över maskiner som konfigurerats för obevakad åtkomst att fyllas i på alla maskiner?
-Ja, listan över maskiner som konfigurerats för obevakad åtkomst lagras i ditt konto, så den fylls i automatiskt.
+#### Fungerar modulen för fjärråtkomst på säkra skärmar, till exempel låsskärmen?
+Ja! Eftersom RIM-värden körs med utökade behörigheter kan vi använda modulen för fjärråtkomst på säkra skärmar.
+
+<Windows>Det enda undantaget är när RIM installeras utan administratörsbehörighet på måldatorn.</Windows>
+
+
+<MacOS>Det enda undantaget är FileVaults inloggningsfönster.</MacOS>
+
+### Obemannade sessioner
+#### Stöds röstsamtal under obevakade sessioner?
+Ja. De kan dock inte initieras om inte slutanvändaren är fysiskt närvarande för att godkänna en behörighetsbegäran. Detta möjliggör röstsamtal samtidigt som maximal integritet och säkerhet garanteras.
+#### Om jag tar bort en obevakad maskin från mitt kontrollerkontot, återkallas då behörigheten på målenheten automatiskt?
+Ja. När en obevakad målenhet har tagits bort träder ändringen i kraft omedelbart. Om målmaskinen är avstängd eller på annat sätt inte är ansluten till internet träder ändringen i kraft så snart en internetanslutning upprättas på maskinen.
+#### Målmaskinen startades om efter installation av uppdateringar och drivrutiner, och det krävs ett lösenord för att logga in. Hur fortsätter sessionen härifrån?
+
+<Windows>RIM körs på Windows inloggningsskärm, men inloggningen måste fortfarande göras manuellt av mål användaren. Med andra ord kommer RIM *inte* att logga in användaren automatiskt.</Windows>
+
+
+<MacOS>I de flesta fall, särskilt när FileVault-diskkryptering är aktiverad, måste mål användaren vara fysiskt närvarande för att manuellt ange lösenordet. RIM kan inte starta på en krypterad Mac innan den har loggat in helt.</MacOS>
+
+
+#### Jag har flera maskiner som fungerar som styrenheter. Kommer listan över datorer som är konfigurerade för obevakad åtkomst att fyllas i på alla datorer?
+Ja. Listan över datorer som är konfigurerade för obevakad åtkomst lagras i ditt konto, så den fylls i automatiskt.
+#### Varför ombeds jag bekräfta användaren efter en enkel installation i Pro-planen, medan Enterprise-planen tillåter obevakade installationer?
+Den viktigaste skillnaden ligger i äganderätten och kontrollen över de datorer som hanteras.
+* Enterprise-planen:
+* Det antas att organisationen äger de maskiner som hanteras.
+* Enterprise-planen tillåter därför massdistribution av RIM utan att kräva interaktion från enskilda användare. Detta beror på att organisationen har full kontroll över dessa enheter, vilket eliminerar behovet av användarkonfirmation.
+* Pro-planen:
+* Det antas att de maskiner som kontrolleras tillhör enskilda slutanvändare.
+* Vi prioriterar transparens och användarkonsent. Efter en enkel installation med ett klick uppmanas slutanvändaren att bekräfta installationen av RIM. Detta säkerställer att de är medvetna om att programvaran installeras på deras enhet och ger dem möjlighet att godkänna det.
+* Detta tillvägagångssätt hjälper till att upprätthålla förtroendet och efterlevnaden av sekretessstandarder, samtidigt som slutanvändarens äganderätt och autonomi respekteras.
 
 ### Tips och tricks
 
-Välkommen till avsnittet Tips och tricks i vår FAQ! Vi är glada över att kunna dela med oss av några praktiska insikter och visdomsord för att förbättra din RIM-upplevelse. Som med alla stora äventyr finns det dock några förbehåll att ta hänsyn till: 
-1. Teknikvärlden är som en chokladask - alltid full av överraskningar. Våra tips är baserade på ett antal faktorer, inklusive men inte begränsat till den version av RIM och operativsystem som används av den som skapat tipset. I takt med att RIM utvecklas kan vissa av dessa tips bli mindre relevanta. Håll dig uppdaterad med den senaste versionen för bästa upplevelse! 
-1. En storlek passar inte alla. Vår programvara är utformad för att tillgodose en mängd olika behov, men varje användares resa är unik. Det som fungerar utmärkt för en person kan vara mindre förtrollande för en annan. Anpassa gärna dessa tips efter dina specifika behov och preferenser. 
-1. Även om vissa av tipsen kommer från oss, kommer många av dem direkt från vårt livliga community av användare (som du!). Medan vi firar denna delade kunskap, kom ihåg att dessa förslag bygger på personliga erfarenheter och kanske inte har granskats av våra tekniska trollkarlar. 
+Välkommen till avsnittet Tips och tricks i vår FAQ! Vi är glada att kunna dela med oss av några praktiska insikter och tips för att förbättra din RIM-upplevelse. Som med alla stora äventyr finns det dock några saker att tänka på: 
+1. Teknikvärlden är som en chokladask – alltid full av överraskningar. Våra tips baseras på ett antal faktorer, inklusive men inte begränsat till den version av RIM och operativsystem som används av tipsets skapare. I takt med att RIM utvecklas kan vissa av dessa tips bli mindre relevanta. Håll dig uppdaterad med den senaste versionen för bästa upplevelse! 
+1. En storlek passar inte alla. Vår programvara är utformad för att tillgodose en mängd olika behov, men varje användares resa är unik. Det som fungerar utmärkt för en person kanske inte är lika bra för en annan. Anpassa gärna dessa tips efter dina specifika behov och preferenser. 
+1. Vissa av dessa tips kommer från oss, men många kommer direkt från vår livliga användargrupp (som du!). Vi uppskattar denna delade kunskap, men kom ihåg att dessa förslag baseras på personliga erfarenheter och kanske inte har granskats av våra tekniker. 
 
-Om du någonsin är osäker eller har frågor är vårt supportteam [bara ett meddelande bort.](https://pneumasolutions.com/contact/) Vi bits inte, vi lovar!
+Om du är osäker eller har frågor är vårt supportteam [bara ett meddelande bort.](https://pneumasolutions.com/contact/) Vi bits inte, det lovar vi!
 
-Genom att använda dessa tips bekräftar och godkänner du ovanstående ansvarsfriskrivning. Gå nu vidare och utforska RIM:s potential med de här knepen i ärmen! 
+Genom att använda dessa tips bekräftar du och godkänner ovanstående ansvarsfriskrivning. Nu kan du gå vidare och utforska RIM:s potential med dessa knep i bakfickan!# Lyssna på mikrofonljudet från en av dina personliga datorer (Windows)
 
-#### Lyssna på mikrofonljudet från en av dina personliga maskiner (Windows)
+För att säkerställa maximal integritet stöder RIM inte röstsamtal under helt obevakade sessioner, såvida inte mål användaren är fysiskt närvarande för att godkänna dem. Det kan dock finnas tillfällen då du vill höra ljud från en enhet nära en av dina fjärrdatorer. Du kan till exempel ha en klockradio nära din stationära dator och använda din bärbara dator på verandan. Kvaliteten är kanske inte den bästa, men RIM kan vara en utmärkt provisorisk trådlös ljudlösning!
 
-För att säkerställa maximal integritet stöder RIM inte röstkonversationer under helt obevakade sessioner. Det kan dock finnas tillfällen då du vill höra ljudet från en enhet som finns i närheten av en av dina fjärrdatorer. Du kan t.ex. ha en klockradio nära skrivbordet och använda din bärbara dator på verandan. Även om kvaliteten kanske inte är den bästa kan RIM vara en utmärkt provisorisk lösning för trådlöst ljud!
-
-När du ställer in din målmaskin för att lyssna på mikrofonljudet kommer mikrofonljudet att ledas till högtalarna. Eftersom du vill höra mikrofonen från en fjärrsession måste vi först sänka högtalarvolymen för att undvika en återkopplingsslinga. För att göra detta:
+För att ställa in din måldator så att du kan lyssna på mikrofonljudet måste du koppla mikrofonljudet till högtalarna. Eftersom du vill höra mikrofonen från en fjärrsession måste vi först sänka högtalarvolymen för att undvika en återkopplingsloop. För att göra det:
 1. Öppna körrutan (Windows+R).
-1. Skriv sndvol och tryck sedan på enter.
-1. Tryck på end-tangenten för att nå 0%, tryck sedan på upp-pilen en gång för att nå 1%. Som du kan se tar RIM inte hänsyn till den faktiska volymen på målmaskinen när den skickar ut sitt ljud.
-1. Avsluta volymblandaren.
+1. Skriv sndvol och tryck sedan på Enter.
+1. Tryck på slutknappen för att nå 0 % och tryck sedan på uppåtpilen en gång för att nå 1 %. Som du ser tar RIM inte hänsyn till målmaskinens faktiska volym när ljudet matas ut.
+1. Stäng volymmixern.
 
-När volymen nu är sänkt är det dags att aktivera mikrofonens lyssningsfunktion.
-1. Öppna Windows Inställningar (Windows+I). Sök efter mikrofon. Leta upp Mikrofonsekretess i listan och tryck på Enter. Se till att "Mikrofonåtkomst" och "Låt appar komma åt din mikrofon" båda är aktiverade.
-1. Tryck på Windows+R igen och skriv den här gången mmsys.cpl för att öppna ljudinställningarna.
-1. I ljudinställningarna öppnar du fliken Inspelning (Ctrl+Tab).
-1. Markera den mikrofon eller line-in-enhet som du vill lyssna på och öppna sedan egenskaperna med Alt+P.
-1. I egenskaperna går du till fliken Lyssna med CTRL+Tab och markerar kryssrutan "Lyssna på den här enheten".
-1. CTRL+Tab en gång till till avsnittet Nivåer och justera mikrofonens förstärkning till en nivå som är tillräcklig för dig. Tryck på Enter när du är klar.
+Nu när volymen är sänkt är det dags att aktivera mikrofonens lyssningsfunktion.
+1. Öppna Windows-inställningar (Windows+I). Sök efter mikrofon. Leta reda på Mikrofonens sekretess i listan och tryck på Enter. Se till att både ”Mikrofonåtkomst” och ”Låt appar komma åt din mikrofon” är aktiverade.
+1. Tryck på Windows+R igen och skriv denna gång mmsys.cpl för att öppna ljudinställningarna.
+1. När du är i ljudinställningarna går du till fliken Inspelning (Ctrl+Tab).
+1. Välj den mikrofon eller linjeingång som du vill lyssna på och öppna egenskaperna med Alt+P.
+1. När du är i egenskaperna, tryck på CTRL+Tab för att gå till fliken Lyssna och markera kryssrutan &quot;Lyssna på den här enheten&quot;.
+1. Tryck på CTRL+Tab en gång till för att gå till avsnittet Nivåer och justera mikrofonens förstärkning till en nivå som är tillräcklig för dig. Tryck på Enter när du är klar.
 
-Nu är det klart! Du bör nu höra mikrofonens ljud tillsammans med resten av fjärrmaskinens utdata.
+Det var allt! Nu bör du höra mikrofonens ljud tillsammans med resten av den fjärranslutna maskinens utdata.

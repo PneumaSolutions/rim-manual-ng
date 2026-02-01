@@ -5,75 +5,201 @@ title: Domande frequenti
 import Windows from "~/components/platform/Windows.astro"
 import MacOS from "~/components/platform/MacOS.astro"
 
-Remote Incident Manager è utile in un'ampia gamma di scenari di frequenza variabile. Per questo motivo, la nostra struttura di piani a più livelli fa ogni ragionevole tentativo di venirvi incontro. Inoltre, ricordate che RIM è sempre gratuito per la persona che riceve aiuto.
+Di seguito sono riportate le risposte ad alcune domande frequenti relative a RIM. In caso di problemi, consultare questo documento ogni volta che è possibile. Se la domanda non è trattata in questo documento, [contattarci](https://pneumasolutions.com/contact/).
+### Compatibilità
+#### Quali versioni di Windows sono supportate?
+Supportiamo Windows 10 e versioni successive, nonché Windows Server 2016 e versioni successive.
+#### Quali versioni di Mac OS sono supportate?
+RIM supporta tutte le versioni di Mac OS Ventura e Sonoma, sia Intel che Apple Silicon. Gli utenti Mac possono fornire supporto ai target Windows, mentre gli utenti Windows possono fornire supporto ai Mac.
+#### E le versioni di Mac OS precedenti a Ventura?
+Alcune funzionalità di RIM dipendono da funzionalità introdotte di recente in Ventura, rendendo difficile l&#x27;implementazione della compatibilità con le versioni precedenti.
+### Installazione
+#### Perché ci sono così tante richieste di autorizzazioni su Mac OS?
+Purtroppo questo è al di fuori del nostro controllo, poiché Mac OS richiede che utilizziamo i loro canali per richiedere le autorizzazioni necessarie per RIM. Non abbiamo alcun controllo sull&#x27;esperienza utente, quindi possiamo solo fornire tutte le istruzioni possibili.
+### Informazioni sulla connessione
+#### In generale, qual è il tempo di risposta di RIM?
+La latenza di andata e ritorno durante una sessione RIM è estremamente minima. Poiché facciamo ogni sforzo per non affidarci al servizio centrale per mantenere attiva la connessione, la maggior parte delle volte le connessioni sono dirette da un computer all&#x27;altro: questo è ciò che viene chiamato peer-to-peer. Se la configurazione di rete non consente connessioni peer-to-peer, ricorriamo a un numero qualsiasi di relay situati in tutto il mondo piuttosto che affidarci a un unico server centrale. Pertanto, anche in questo caso la latenza sarà comunque minima.
+#### Dove si trovano i vostri relay?
+Attualmente, offriamo relay nelle seguenti località:
+* Stati Uniti
+    * Virginia
+    * California
+* Toronto, Canada
+* Londra, Inghilterra
+* Varsavia, Polonia
+* Bangalore, India
+* Singapore
+* Sidney, Australia
+* San Paolo, Brasile
 
-### Livello gratuito
+### Risoluzione dei problemi generali relativi alle sessioni
+#### Il computer di destinazione a cui sono connesso non risponde correttamente ai comandi della tastiera che funzionano bene sulla mia tastiera. Cosa sta succedendo?
+Ciò potrebbe essere dovuto a una delle seguenti possibilità:
+* Un conflitto nei layout di tastiera: in rare occasioni, se il layout di una tastiera è molto diverso dal proprio, potrebbe creare confusione a RIM. In tal caso, contattateci inviandoci un rapporto contenente le informazioni relative al layout della tastiera di entrambi i computer.
+* Se il computer di destinazione utilizza JAWS 2024, la sua elaborazione unificata della tastiera a volte interferisce con l&#x27;uso del tasto CTRL per silenziare la voce. Sebbene questo problema sia stato risolto in JAWS2025, l&#x27;elaborazione unificata della tastiera interferisce con il corretto utilizzo del tasto Caps Lock.
+    * Questi problemi possono essere risolti disabilitando l&#x27;elaborazione unificata della tastiera nel centro impostazioni di JAWS.
+* L&#x27;elaborazione unificata della tastiera non è necessaria se l&#x27;utente di destinazione non utilizza anche ZoomText o Fusion.
+* Se il computer di destinazione utilizza NVDA e l&#x27;opzione &quot;Gestisci tasti da altre applicazioni&quot; non è selezionata, RIM non sarà in grado di elaborare gli input della tastiera provenienti dal controller.
+    * Si noti che questa impostazione è attiva per impostazione predefinita e nella maggior parte dei casi è consigliabile lasciarla attiva.
+* Se il computer di destinazione dispone di un tastierino numerico e il blocco numerico del computer è disattivato, è possibile che si verifichino comportamenti anomali sul lato di destinazione.
+* A seconda dello stato in cui si desidera che sia il blocco numerico di destinazione, assicurarsi che corrisponda anche a quello del controller.
 
-Chiunque può utilizzare RIM per assistere un altro utente per un massimo di 30 minuti al giorno. Non è necessario che questi minuti vengano utilizzati in una sola volta e un contatore di utilizzo terrà traccia di quanti minuti si hanno a disposizione in un determinato giorno. Durante i 30 minuti, è possibile connettersi a un numero qualsiasi di persone, per un numero qualsiasi di sessioni interattive.
+#### Dopo aver invertito una sessione, Windows+Shift+F non funziona per invertire l&#x27;inversione. Perché?
 
-### Piani per i consumatori
+Le versioni recenti di Windows 11 hanno introdotto una barra Edge, che purtroppo causa un conflitto con il nostro comando da tastiera Windows+Shift+F ovunque RIM non elabori direttamente l&#x27;input della tastiera. Attualmente, l&#x27;inversione di un&#x27;inversione può essere eseguita in modo più efficace tramite il menu della sessione.
 
-#### Pass
+#### Quando avvio una conversazione vocale su Windows, RIM utilizza il microfono interno indipendentemente dal microfono selezionato nelle impostazioni audio. Cosa c&#x27;è che non va?
 
-I pass sono utili se si fornisce assistenza in base alle necessità. Pagando un pass, questo attenderà pazientemente che lo attiviate ogni volta che ne avete la possibilità. Ciò significa anche che è possibile conservare più pass e utilizzarli quando servono.
+Ciò potrebbe essere dovuto alla tecnologia Intel® Smart Sound per microfoni digitali presente su alcuni processori Intel più recenti. Disabilitando questa tecnologia il problema dovrebbe risolversi. Per disabilitare la tecnologia Intel® Smart Sound per microfoni digitali, procedi come segue:
+1. Vai alla casella Esegui (Windows+R).
+1. Digita devmgmt.msc
+1. Nell&#x27;albero dei dispositivi, espandi &quot;Controller audio, video e giochi&quot;.
+1. Fai clic con il pulsante destro del mouse su &quot;Intel® Smart Sound Technology for Digital Microphones&quot;. Scegli &quot;Disabilita dispositivo&quot; dal menu contestuale.
 
-##### Pass per incidenti
+#### Il destinatario utilizza Zoom Text. Come posso visualizzare l&#x27;output visivo reso da questo ingrandimento?
 
-Un pass per incidenti consente di assistere un singolo utente per tutto il tempo necessario nell'arco di 24 ore. In qualsiasi momento durante il periodo di 24 ore, è possibile riconnettersi. Supponiamo di iniziare impostando una reinstallazione di Windows durante la notte. Una volta che il computer è in grado di utilizzare RIM, si può tornare a configurare il sistema dell'utente finale come meglio crede.
+È possibile farlo passando ZoomText alla modalità di compatibilità. Questa modalità consente di condividere i miglioramenti dello schermo tramite strumenti come Teams o Zoom, oltre che RIM. È possibile attivarla tramite il menu ZoomText: Aiuto &gt; Avanzate &gt; Scheda video. Nella finestra di dialogo aperta, selezionare la modalità di compatibilità e ZoomText si riavvierà. Si consiglia di riportare l&#x27;adattatore video alla modalità normale al termine della sessione RIM per ottenere prestazioni e qualità di ingrandimento ottimali. 
 
-##### Pass giornaliero
+#### Dopo che un computer è stato reinstallato e riconfigurato con lo stesso nome, è necessario eseguire altre operazioni per ripristinare il funzionamento di RIM? 
 
-Un pass giornaliero consente di assistere diversi utenti nell'arco di 24 ore. Quindi, se avete diverse commissioni da svolgere, vi conviene avere uno di questi pass.
+È sufficiente rimuovere il computer dal proprio account, reinstallare RIM, quindi aggiungere nuovamente il computer al proprio account.
 
-##### Pass Pro
+### Prezzi e pagamenti
+#### Quindi, ricevere assistenza da una persona tramite RIM è completamente gratuito, giusto?
+Certamente! Gli abbonamenti e/o i pagamenti una tantum sono destinati a persone e organizzazioni che desiderano offrire assistenza remota. Non devi preoccuparti di sottoscrivere un abbonamento se sei la persona che riceve assistenza. Infatti, non devi nemmeno creare un account se ricevi semplicemente assistenza.
+#### Non fornisco assistenza remota regolarmente, ma potrei aiutare un amico o un familiare occasionalmente. Esistono opzioni che non prevedono un abbonamento?
+Certamente! Cerchiamo di soddisfare il maggior numero possibile di casi d&#x27;uso.
+* Chiunque può assistere un utente tramite RIM gratuitamente per un massimo di 30 minuti al giorno. Quindi, se hai bisogno di aiutare qualcuno a installare un software, risolvere rapidamente un problema o inviare alcuni file, abbiamo ciò che fa per te. Questi minuti non devono essere utilizzati tutti in una volta.
+* Naturalmente, ci saranno situazioni in cui un problema particolare richiederà un po&#x27; più di tempo. Oppure potreste assistere qualcuno che sta imparando a usare un nuovo software e potreste dovervi collegare più volte nei giorni o nelle settimane successive. È qui che entrano in gioco i nostri pass.
+* I pass per incidenti vi consentono di collegarvi a un singolo target tutte le volte che è necessario in un periodo di 24 ore.
+* I pass giornalieri vi consentono di collegarvi a più target in un periodo di 24 ore.
+    * I pass Pro ti consentono di sfruttare tutte le funzionalità pro di RIM con termini non ricorrenti di 1 settimana, 2 settimane o un mese.
+* I pacchetti di ore prepagate ti consentono di avere a disposizione un numero prestabilito di ore da utilizzare interamente nel tempo libero.
+* Puoi accumulare diversi pass e pacchetti orari e utilizzarli quando necessario. Se si dispone di più pass giornalieri, ad esempio, non è necessario utilizzarli consecutivamente. Allo stesso modo, non è necessario utilizzare le ore prepagate in un&#x27;unica sessione o in un periodo di 24 ore.
 
-Questi pass di 1 settimana, 2 settimane o 1 mese consentono di sfruttare tutte le funzionalità di RIM Pro senza abbonamento.
+#### Ho acquistato un pacchetto di ore prepagate. Cosa succede alla mia quota giornaliera gratuita?
+Buone notizie: la tua quota giornaliera gratuita di 30 minuti non andrà persa! Quando avvii una sessione basata su parole chiave, RIM inizierà utilizzando la tua quota giornaliera gratuita di 30 minuti. Il tempo prepagato verrà utilizzato al termine dei 30 minuti gratuiti.
+#### Quanto dureranno le mie ore prepagate? Sono legate al mio abbonamento?
+Le ore prepagate sono completamente separate dal tuo abbonamento. Detto questo, le tue ore prepagate rimarranno nel tuo account per un (1) anno dalla data del loro primo utilizzo.
+#### Come posso far conoscere RIM al mio posto di lavoro?
+Abbiamo creato un [Kit di auto-promozione](https://sak.getrim.app) (SAK). Si tratta di un pacchetto di lettere in formato e-mail che puoi inviare alle persone appropriate per conto tuo o di un dipendente. Per la cronaca, RIM offre le stesse funzionalità delle soluzioni tradizionali meno accessibili. In quanto tale, RIM può sostituire un&#x27;infrastruttura esistente, piuttosto che essere utilizzato insieme ad essa. È quindi considerato un ragionevole adeguamento di accessibilità e dovrebbe essere fornito dalla tua organizzazione. L&#x27;accessibilità non è un favore, è un diritto all&#x27;inclusività.
+#### Quali metodi di pagamento accettate?
+Elaboriamo i pagamenti tramite FastSpring, quindi siamo in grado di accettare direttamente una varietà di metodi di pagamento internazionali, tra cui le principali carte di credito, PayPal, Alipay e molti altri.
 
-#### Pacchetti prepagati orari
+#### Come funzionano questi pass? Il tempo inizia a decorrere immediatamente dopo il pagamento o il giorno in cui avvio la sessione?
+I pass iniziano a decorrere solo quando il controller avvia la sessione. Quindi, se la macchina del target si guasta e richiede un intervento in officina e non è possibile ripararla in giornata, puoi semplicemente aspettare che la macchina torni in buone condizioni e il tuo pass giornaliero sarà ancora lì ad aspettarti.
+#### Questo significa che questi pass non scadono?
+No. Stai tranquillo, i tuoi pass giornalieri accumulati ti aspetteranno pazientemente fino a quando non sarai pronto per attivarli.
+#### Cosa succede se mi connetto a un altro computer nel giorno in cui è stato utilizzato un pass per incidenti?
+Dipende. Se la macchina rientra nel tuo abbonamento, ovvero se stai accedendo alla tua macchina di casa mentre sei in viaggio, allora tutto procede come al solito. Qualsiasi altra connessione che non sia quella iniziale a cui ti sei collegato funzionerà con la consueta assegnazione di 30 minuti.
+#### Ho un abbonamento personale attivo. Potrei comunque assistere un utente al di fuori del gruppo di destinatari per un massimo di 30 minuti o tramite un pass?
+Sì! La tua quota giornaliera di 30 minuti è ancora disponibile per qualsiasi macchina al di fuori del tuo abbonamento. Inoltre, l&#x27;acquisto di un abbonamento non sostituisce eventuali pass esistenti di cui potresti disporre.
+#### Ho un abbonamento personale e il computer di destinazione ha subito un aggiornamento hardware. Rim lo considererà come un cambio di macchina?
+Solo se RIM deve essere reinstallato. Quindi, mentre un aggiornamento del disco rigido o qualsiasi altra situazione che richieda una reinstallazione di Windows sarebbe considerata un cambio di macchina, l&#x27;aggiornamento della RAM non lo sarebbe.
+#### La nostra azienda ha acquistato l&#x27;abbonamento pro, ma abbiamo due tecnici: uno che si occupa dell&#x27;help desk durante il giorno e uno che si occupa della manutenzione del sistema la sera. Potremmo assegnare una licenza di controllo al tecnico di sistema serale?
+Certamente. Nei casi in cui più tecnici utilizzano RIM, offriamo fino a due (2) licenze controller aggiuntive al costo di 50 $ al mese per licenza (500 $ all&#x27;anno per licenza) in aggiunta al piano Pro, se necessario. Ciò faciliterà il supporto remoto da parte di più controller in diverse postazioni di lavoro o uffici.  
+Se disponete di più postazioni controller, potete acquistare canali aggiuntivi per esse in modo che le sessioni possano essere eseguite contemporaneamente. Ogni canale aggiuntivo costa 50 $ al mese, ovvero 500 $ all&#x27;anno. 
 
-Questi pacchetti consentono di avere un determinato numero di ore sul proprio account. Queste ore durano un anno dalla data di utilizzo iniziale o un anno dalla data di acquisto se non vengono utilizzate.
-Queste ore possono essere utilizzate per qualsiasi sessione interattiva e RIM detrarrà solo la quantità esatta di tempo utilizzata. Ad esempio, se si dispone di 5 ore e si utilizzano 12 minuti, rimangono 4 ore e 48 minuti. È inoltre importante notare che l'assegnazione giornaliera gratuita di 30 minuti ha la priorità prima dell'utilizzo del tempo prepagato. Se si esaurisce il tempo, che si tratti di tempo prepagato o di tempo gratuito giornaliero, si riceve un avviso di 5 minuti e di 1 minuto. Se state per esaurire il tempo pagato e ricaricate il vostro account prima che il tempo scada, la vostra sessione sarà ininterrotta.
+#### Perché è prevista una tariffa di configurazione per gli account RIM Enterprise?
 
-#### Abbonamenti all'accesso personale senza utente
+La tariffa di configurazione per gli account RIM Enterprise copre il lavoro amministrativo, tecnico e relativo alla sicurezza necessario per configurare l&#x27;ambiente della vostra organizzazione. Ciò include:
+* Configurazione personalizzata: adattiamo la vostra implementazione di RIM Enterprise alle esigenze della vostra organizzazione, inclusi i ruoli degli utenti, le autorizzazioni e le impostazioni di sicurezza.
+* Configurazione dell&#x27;accesso non presidiato: se la vostra organizzazione richiede l&#x27;accesso non presidiato agli obiettivi, vi aiutiamo a configurare correttamente questa funzione per garantire un accesso remoto sicuro e senza interruzioni.
+* Preparazione dell&#x27;infrastruttura e della sicurezza: verifichiamo le connessioni sicure, i requisiti di conformità e le ottimizzazioni del sistema per garantire che la vostra implementazione sia affidabile e soddisfi gli standard del settore.
+* Formazione iniziale e assistenza: il nostro team assiste i team IT e gli amministratori con l&#x27;onboarding, aiutandoli a massimizzare le capacità di RIM.
+* Consulenza privata con il team di sviluppo: forniamo accesso diretto al nostro team di sviluppo per rispondere alle richieste di documentazione sulla sicurezza, discutere le esigenze di integrazione personalizzata o esaminare specifiche questioni tecniche.
+* Accesso esclusivo al canale Slack RIM Insiders: i clienti aziendali hanno accesso a un canale Slack dedicato dove possono comunicare con il nostro team, ricevere aggiornamenti e collaborare con altri utenti esperti di RIM.
 
-Questi piani consentono all'utente, in qualità di controllore individuale, di configurare un determinato numero di macchine fisiche per l'accesso non presidiato. Questi piani sono scalabili (fino a dieci target) per soddisfare le vostre esigenze. Sia che vogliate semplicemente controllare il vostro desktop dalla strada, sia che siate il supporto tecnico di riferimento per alcuni membri della vostra famiglia, questi piani vi coprono.  
-Si noti che gli abbonamenti non riguardano le sessioni interattive, cioè quelle avviate tramite una parola chiave. I pass per gli incidenti e i pass giornalieri descritti sopra possono essere utilizzati insieme a un abbonamento per facilitare le sessioni interattive. Se non si dispone di alcun pass, si utilizza l'assegnazione giornaliera di 30 minuti.
+Questa tariffa di configurazione una tantum garantisce un&#x27;implementazione fluida, sicura e personalizzata, fornendo alla vostra organizzazione tutto ciò di cui ha bisogno per sfruttare appieno RIM fin dal primo giorno.
 
-#### Pacchetto di supporto alla comunità personale
+### Sicurezza
+#### Le sessioni RIM sono crittografate?
+Sì. Tutte le sessioni su tutte le piattaforme, siano esse connessioni peer-to-peer dirette o connessioni che utilizzano un relay, sono crittografate end-to-end utilizzando Datagram Transport Layer Security (DTLS). Si tratta della stessa tecnologia utilizzata nel protocollo HTTPS che i siti web moderni implementano per la sicurezza.
+#### Pneuma Solutions può intercettare le sessioni inoltrate dal cloud pubblico?
+No. La negoziazione della chiave di sessione e la crittografia vengono eseguite end-to-end tra il controller e il target. In altre parole, tutto viene crittografato prima ancora di lasciare il dispositivo. In questo modo, il servizio cloud si limita a inoltrare i dati così come sono, rendendo impossibile al servizio decifrarli.  
+Si noti che RIM tenterà sempre una connessione peer-to-peer diretta, ove possibile. I relay vengono utilizzati solo in situazioni in cui una connessione peer-to-peer diretta risulta impossibile, anche con NAT traversal.  
+#### E le registrazioni delle sessioni?  
+Il cloud non viene mai utilizzato durante l&#x27;elaborazione delle registrazioni delle sessioni. Le registrazioni vengono archiviate sul disco rigido locale del computer del controller e la distribuzione all&#x27;utente finale è lasciata interamente al controller.
+#### Quali misure sono state adottate per prevenire le vulnerabilità di esecuzione di codice remoto (RCE)?
+Tutto il codice RIM esposto agli input dalla rete è scritto in [linguaggi di programmazione memory-safe](https://www.memorysafety.org/docs/memory-safety/), tra cui Rust e JavaScript.
+#### RIM è conforme alla normativa HIPAA?
+Sì. La configurazione migliore in questo caso sarebbe un&#x27;implementazione in loco, quindi [contattateci](https://pneumasolutions.com/contact/) se il vostro caso d&#x27;uso dipende da questo.
+#### È necessario aprire delle porte sul target o sul controller?
+No e no.
+#### Quali connessioni dovrebbero essere consentite su una rete affinché RIM funzioni?
+Quando si utilizza il cloud pubblico, è necessaria una connessione https a [getrim.app](https://getrim.app). In casi ottimali, questo è sufficiente affinché RIM stabilisca una connessione peer-to-peer tra il controller e il target. Tuttavia, è utile consentire le connessioni UDP attraverso le porte 19302 e 3478 (le porte STUN e TURN standard). Ciò garantisce che, se viene utilizzato un relay, RIM non dovrà ricorrere a una connessione tcp sulla porta 443.
 
-Il pacchetto di supporto personale per la comunità è utile se si fornisce occasionalmente assistenza tecnica per attività più lunghe dell'assegnazione giornaliera gratuita. Questo pacchetto consente di ottenere tre (3) ore al giorno in aggiunta all'assegnazione giornaliera gratuita di 30 minuti. In breve, otterrete 3,5 ore al giorno. Come per l'assegnazione giornaliera gratuita di 30 minuti, queste ore non devono essere utilizzate in un'unica seduta e possono essere impiegate in diverse connessioni durante la giornata. Tuttavia, queste ore non sono rinnovabili e le connessioni non presidiate non sono incluse nel pacchetto base. Tuttavia, questo pacchetto è disponibile come addon per gli abbonamenti personali non presidiati. Questo pacchetto è disponibile solo come abbonamento annuale.
+<Windows>#### RIM funziona in background e, in tal caso, apparirà nell&#x27;elenco Alt+Tab?
+RIM funziona in background per elaborare gli aggiornamenti automatici, ricevere richieste di connessione automatiche/richieste e abilitare l&#x27;uso del comando globale da tastiera Windows+Shift+Backspace. Non effettuerà alcuna chiamata a casa per altri scopi e non trasferirà alcuna informazione di identificazione personale.  
+RIM non apparirà nell&#x27;elenco Alt+Tab, ma apparirà nella barra delle applicazioni.
+</Windows>
+<MacOS>
+#### RIM viene eseguito in background e, in tal caso, apparirà nel mio elenco Command+Tab?
+RIM viene eseguito in background per elaborare gli aggiornamenti automatici, ricevere richieste di connessione automatiche/richieste e consentire l&#x27;uso del comando globale da tastiera Option+Shift+Backspace. Non invierà dati a casa per nessun altro scopo e non verranno trasferite informazioni di identificazione personale.  
+RIM non apparirà nell&#x27;elenco Command+Tab, ma apparirà nei menu di stato che contengono le informazioni sulla batteria, sulla connessione WiFi, ecc.</MacOS>
 
-### RIM Pro
+### Modulo di accessibilità remota
+#### C&#x27;è qualcosa che il computer di destinazione deve configurare per il primo utilizzo del modulo di accessibilità remota?
+Assolutamente no! Non ci sono finestre di dialogo, schermate di richiesta di autorizzazione o altro.
+#### Il modulo di accessibilità remota funziona su schermate protette come la schermata di blocco?
+Sì! Poiché l&#x27;host RIM funziona con privilegi elevati, questo ci consente di sfruttare il modulo di accessibilità remota per le schermate protette.
 
-RIM Pro è adatto sia a un singolo addetto al supporto o formatore, sia a un piccolo team di supporto. Ogni piano Pro consente di collegarsi a un numero illimitato di obiettivi e di configurare i gruppi di obiettivi.
+<Windows>L&#x27;unica eccezione a questo è quando RIM è installato senza privilegi di amministratore sul lato di destinazione.</Windows>
 
-#### Pacchetto base RIM Pro
 
-Consente a un singolo controller di controllare un numero illimitato di bersagli.
+<MacOS>L&#x27;unica eccezione a questo è la finestra di accesso di FileVault.
+</MacOS>
+### Sessioni non presidiate
+#### Le conversazioni vocali sono supportate durante le sessioni non presidiate?
+Sì. Tuttavia, non possono essere avviate a meno che l&#x27;utente finale non sia fisicamente presente per accettare una richiesta di autorizzazione. Ciò consente di effettuare conversazioni vocali garantendo al contempo la massima privacy e sicurezza.
+#### Se elimino un computer non presidiato dal mio account controller, l&#x27;autorizzazione sul target verrà automaticamente revocata?
+Sì. Una volta rimosso un target non presidiato, la modifica avrà effetto immediato. Se il computer di destinazione è spento o non è connesso a Internet, la modifica avrà effetto non appena verrà stabilita una connessione Internet sul computer.
+#### Il computer di destinazione si è riavviato dopo l&#x27;installazione di aggiornamenti e driver e richiede una password per accedere. Come prosegue la sessione da questo punto?
+<Windows>
+Sebbene RIM venga eseguito nella schermata di accesso di Windows, l&#x27;accesso è comunque un&#x27;operazione che deve essere eseguita manualmente dall&#x27;utente di destinazione. In altre parole, RIM *non* effettuerà automaticamente l&#x27;accesso dell&#x27;utente.</Windows>
 
-#### Aggiornamenti
 
-Offriamo aggiornamenti al numero di posti controller e/o di canali, nonché al set di funzioni disponibili.
+<MacOS>Nella maggior parte dei casi, in particolare quando è abilitata la crittografia del disco FileVault, l&#x27;utente di destinazione dovrà essere fisicamente presente per inserire manualmente la password. RIM non può essere avviato su un Mac crittografato prima che sia stato effettuato l&#x27;accesso completo.
+</MacOS>
+#### Ho più macchine che svolgono il ruolo di controller. L&#x27;elenco delle macchine configurate per l&#x27;accesso automatico verrà popolato su tutte le macchine?
+Sì. L&#x27;elenco delle macchine configurate per l&#x27;accesso automatico è memorizzato nel tuo account, quindi verrà popolato automaticamente.
+#### Perché mi viene richiesta la conferma dell&#x27;utente dopo un&#x27;installazione con un solo clic sul piano Pro, mentre il piano Enterprise consente installazioni automatiche?
+La differenza fondamentale risiede nella proprietà e nel controllo dei computer gestiti.
+* Piano Enterprise:
+* Si presume che l&#x27;organizzazione sia proprietaria dei computer gestiti.
+* Pertanto, il piano Enterprise consente l&#x27;implementazione di massa di RIM senza richiedere l&#x27;interazione dei singoli utenti. Questo perché l&#x27;organizzazione ha il pieno controllo su questi dispositivi, eliminando la necessità di conferma da parte dell&#x27;utente.
+* Piano Pro:
+* Si presume che i dispositivi controllati appartengano ai singoli utenti finali.
+* Diamo priorità alla trasparenza e al consenso dell&#x27;utente. Dopo l&#x27;installazione con un solo clic, all&#x27;utente finale viene richiesto di confermare l&#x27;installazione di RIM. Ciò garantisce che sia a conoscenza del software installato sul proprio dispositivo e gli offre l&#x27;opportunità di acconsentire.
+* Questo approccio aiuta a mantenere la fiducia e la conformità agli standard di privacy, rispettando la proprietà e l&#x27;autonomia del dispositivo dell&#x27;utente finale.
 
-##### Configurazioni multisede e multicanale
+### Suggerimenti e trucchi
 
-I controller e i canali aggiuntivi sono disponibili con costi aggiuntivi separati che si aggiungono all'abbonamento base. In questo modo è possibile scegliere se desiderare o meno canali aggiuntivi - connessioni simultanee - pari al numero di controller aggiuntivi. Se si sceglie di non aggiungere canali aggiuntivi, solo uno dei controller può essere impegnato in una sessione in qualsiasi momento. 
+Benvenuti nella sezione Suggerimenti e trucchi delle nostre FAQ! Siamo entusiasti di condividere alcune informazioni utili e perle di saggezza per migliorare la vostra esperienza con RIM. Detto questo, come in tutte le grandi avventure, ci sono alcune avvertenze da tenere a mente:
+1. Il mondo della tecnologia è come una scatola di cioccolatini: sempre pieno di sorprese. I nostri consigli si basano su una serie di fattori, tra cui, a titolo esemplificativo ma non esaustivo, la versione di RIM e la versione del sistema operativo utilizzati dal creatore del consiglio. Con l&#x27;evoluzione di RIM, alcuni di questi consigli potrebbero diventare meno rilevanti. Rimanete aggiornati con l&#x27;ultima versione per un&#x27;esperienza ottimale! 
+1. Non esiste una soluzione valida per tutti. Il nostro software è progettato per soddisfare una vasta gamma di esigenze, ma il percorso di ogni utente è unico. Ciò che funziona alla perfezione per uno potrebbe essere meno efficace per un altro. Sentitevi liberi di adattare questi suggerimenti alle vostre esigenze e preferenze specifiche. 
+1. Sebbene alcuni di questi suggerimenti possano provenire da noi, molti di essi provengono direttamente dalla nostra vivace comunità di utenti (come voi!). Pur celebrando questa condivisione di conoscenze, ricordate che questi suggerimenti si basano su esperienze personali e potrebbero non essere stati verificati dai nostri esperti tecnici. 
 
-##### Addon RIM Pro Enterprise
+Se hai dubbi o domande, il nostro team di assistenza è [a tua disposizione.](https://pneumasolutions.com/contact/) Non mordiamo, promesso!
 
-Questo addon offre le funzionalità di RIM Enterprise ai singoli rappresentanti di supporto o alle piccole unità. Le caratteristiche includono:
-* Distribuzione di massa non presidiata su server Windows
-* Modalità completamente silenziosa per gli installatori di destinazione non presidiati preconfigurati
-* Integrazione opzionale con il sistema SSO (Single Sign-On) dell'organizzazione (richiede un costo di installazione aggiuntivo).
+Utilizzando questi suggerimenti, l&#x27;utente riconosce e accetta la suddetta dichiarazione di non responsabilità. Ora, vai avanti ed esplora il potenziale di RIM con questi trucchi nella manica! 
 
-Nota: per questo componente aggiuntivo potrebbe essere richiesta la verifica dell'identità.
+#### Ascolto dell&#x27;audio del microfono di uno dei tuoi dispositivi personali (Windows)
 
-### RIM Enterprise Public Cloud Edition
+Al fine di garantire la massima privacy, RIM non supporta le conversazioni vocali durante le sessioni completamente automatiche, a meno che l&#x27;utente di destinazione non sia fisicamente presente per acconsentirvi. Tuttavia, potrebbero esserci momenti in cui desideri ascoltare l&#x27;audio proveniente da un dispositivo vicino a uno dei tuoi computer remoti. Ad esempio, potresti avere una radiosveglia vicino al tuo desktop e utilizzare il tuo laptop in veranda. Anche se la qualità potrebbe non essere ottimale, RIM può rappresentare un&#x27;ottima soluzione audio wireless improvvisata! 
 
-L'edizione enterprise offre un numero illimitato di controller e target, oltre alle funzionalità descritte in precedenza. Il prezzo di ogni piano è determinato dal numero di canali simultanei che possono essere eseguiti in qualsiasi momento.
+Per configurare il tuo computer di destinazione in modo da ascoltare l&#x27;audio del microfono, dovrai convogliare l&#x27;audio del microfono agli altoparlanti. Poiché l&#x27;obiettivo è quello di ascoltare il microfono da una sessione remota, è necessario prima abbassare il volume degli altoparlanti per evitare un loop di feedback. Per farlo:
+1. Aprire la casella Esegui (Windows+R).
+1. Digitare sndvol, quindi premere Invio.
+1. Premere il tasto Fine per raggiungere lo 0%, quindi premere una volta il tasto freccia su per raggiungere l&#x27;1%. Come puoi vedere, RIM non tiene conto del volume effettivo del computer di destinazione durante l&#x27;emissione dell&#x27;audio.
+1. Esci dal mixer del volume.
 
-È previsto un costo aggiuntivo una tantum per l'installazione e l'onboarding, indipendentemente dal piano scelto.  
+Ora che il volume è abbassato, è il momento di abilitare la funzione di ascolto del microfono.
+1. Apri Impostazioni di Windows (Windows+I). Cerca microfono. Individua Privacy microfono nell&#x27;elenco e premi Invio. Assicurati che &quot;Accesso al microfono&quot; e &quot;Consenti alle app di accedere al microfono&quot; siano entrambi attivati.
+1. Premi nuovamente Windows+R e questa volta digita mmsys.cpl per aprire le impostazioni audio.
+1. Una volta nelle impostazioni audio, accedi alla scheda Registrazione (Ctrl+Tab).
+1. Seleziona il microfono o il dispositivo di ingresso linea che desideri ascoltare, quindi accedi alle proprietà con Alt+P.
+1. Una volta nelle proprietà, premi CTRL+Tab per passare alla scheda Ascolta e seleziona la casella di controllo &quot;Ascolta questo dispositivo&quot;.
+1. Premi ancora una volta CTRL+Tab per passare alla sezione Livelli e regola il guadagno del microfono a un livello che ritieni sufficiente. Premi Invio al termine.
 
-### attivazione di un abbonamento o di un pass
-
-Quando si effettua un acquisto tramite RIM, si riceve un link di attivazione. Facendo clic sul link, il pass o l'abbonamento sarà attivato e pronto per l'uso. Nel caso di pass giornalieri/incidenti, ricordate che il periodo di tempo di un pass inizia solo quando si avvia una sessione remota utilizzando tale pass.
+Ecco fatto! Ora dovresti sentire l&#x27;audio del microfono insieme al resto dell&#x27;output del computer remoto.
