@@ -129,14 +129,16 @@ Nej och nej.
 #### Vilka anslutningar måste tillåtas i ett nätverk för att RIM ska fungera?
 När du använder den offentliga molntjänsten krävs en https-anslutning till [getrim.app](https://getrim.app). I optimala fall räcker detta för att RIM ska kunna upprätta en peer-to-peer-anslutning mellan kontrollenheten och målenheten. Det är dock bra att tillåta UDP-anslutningar via portarna 19302 och 3478 (standardportarna för STUN och TURN). Detta säkerställer att RIM inte behöver fall tillbaka på en tcp-anslutning på port 443 om en relä används.
 
-<Windows>#### Körs RIM i bakgrunden, och i så fall visas det i min Alt+Tab-lista?
+<Windows>
+#### Körs RIM i bakgrunden, och i så fall visas det i min Alt+Tab-lista?
 RIM körs i bakgrunden för att bearbeta automatiska uppdateringar, ta emot obevakade/promptade anslutningsförfrågningar och möjliggöra användning av det globala tangentbordskommandot Windows+Skift+Backspace. Det kommer inte att ringa hem för något annat ändamål, och ingen personlig identifierbar information överförs.  
 RIM visas inte i din Alt+Tab-lista, men det visas i systemfältet.
 </Windows>
 <MacOS>
 #### Körs RIM i bakgrunden, och i så fall kommer det att visas i min Command+Tab-lista?
 RIM körs i bakgrunden för att bearbeta automatiska uppdateringar, ta emot obevakade/promptade anslutningsförfrågningar och möjliggöra användning av det globala tangentbordskommandot Option+Shift+Backspace. Det kommer inte att ringa hem för något annat ändamål, och ingen personlig identifierbar information överförs.  
-RIM visas inte i din Command+Tab-lista, men det visas i statusmenyerna som innehåller information om batteri, WiFi-anslutning etc.</MacOS>
+RIM visas inte i din Command+Tab-lista, men det visas i statusmenyerna som innehåller information om batteri, WiFi-anslutning etc.
+</MacOS>
 
 ### Modul för fjärråtkomst
 #### Finns det något som måldatorn behöver konfigurera för första gången modul för fjärråtkomst används?
@@ -144,10 +146,14 @@ Inte alls! Det finns inga dialogrutor, skärmar för begäran om tillstånd elle
 #### Fungerar modulen för fjärråtkomst på säkra skärmar, till exempel låsskärmen?
 Ja! Eftersom RIM-värden körs med utökade behörigheter kan vi använda modulen för fjärråtkomst på säkra skärmar.
 
-<Windows>Det enda undantaget är när RIM installeras utan administratörsbehörighet på måldatorn.</Windows>
+<Windows>
+Det enda undantaget är när RIM installeras utan administratörsbehörighet på måldatorn.
+</Windows>
 
 
-<MacOS>Det enda undantaget är FileVaults inloggningsfönster.</MacOS>
+<MacOS>
+Det enda undantaget är FileVaults inloggningsfönster.
+</MacOS>
 
 ### Obemannade sessioner
 #### Stöds röstsamtal under obevakade sessioner?
@@ -156,10 +162,14 @@ Ja. De kan dock inte initieras om inte slutanvändaren är fysiskt närvarande f
 Ja. När en obevakad målenhet har tagits bort träder ändringen i kraft omedelbart. Om målmaskinen är avstängd eller på annat sätt inte är ansluten till internet träder ändringen i kraft så snart en internetanslutning upprättas på maskinen.
 #### Målmaskinen startades om efter installation av uppdateringar och drivrutiner, och det krävs ett lösenord för att logga in. Hur fortsätter sessionen härifrån?
 
-<Windows>RIM körs på Windows inloggningsskärm, men inloggningen måste fortfarande göras manuellt av mål användaren. Med andra ord kommer RIM *inte* att logga in användaren automatiskt.</Windows>
+<Windows>
+RIM körs på Windows inloggningsskärm, men inloggningen måste fortfarande göras manuellt av mål användaren. Med andra ord kommer RIM *inte* att logga in användaren automatiskt.
+</Windows>
 
 
-<MacOS>I de flesta fall, särskilt när FileVault-diskkryptering är aktiverad, måste mål användaren vara fysiskt närvarande för att manuellt ange lösenordet. RIM kan inte starta på en krypterad Mac innan den har loggat in helt.</MacOS>
+<MacOS>
+I de flesta fall, särskilt när FileVault-diskkryptering är aktiverad, måste mål användaren vara fysiskt närvarande för att manuellt ange lösenordet. RIM kan inte starta på en krypterad Mac innan den har loggat in helt.
+</MacOS>
 
 
 #### Jag har flera maskiner som fungerar som styrenheter. Kommer listan över datorer som är konfigurerade för obevakad åtkomst att fyllas i på alla datorer?

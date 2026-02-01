@@ -129,14 +129,16 @@ Non et non.
 #### Quelles connexions doivent être autorisées sur un réseau pour que RIM fonctionne ?
 Lorsque vous utilisez le cloud public, une connexion https à [getrim.app](https://getrim.app) est nécessaire. Dans le meilleur des cas, cela suffit à RIM pour établir une connexion peer-to-peer entre le contrôleur et la cible. Cependant, il est utile d&#x27;autoriser les connexions UDP via les ports 19302 et 3478 (les ports STUN et TURN standard). Cela garantit que si un relais est utilisé, RIM n&#x27;aura pas à se rabattre sur une connexion TCP sur le port 443.
 
-<Windows>#### RIM fonctionne-t-il en arrière-plan et, si oui, apparaîtra-t-il dans ma liste Alt+Tab ?
+<Windows>
+#### RIM fonctionne-t-il en arrière-plan et, si oui, apparaîtra-t-il dans ma liste Alt+Tab ?
 RIM s&#x27;exécute en arrière-plan afin de traiter les mises à jour automatiques, de recevoir les demandes de connexion sans surveillance/avec invite et de permettre l&#x27;utilisation de la commande clavier globale Windows+Maj+Retour arrière. Il ne communiquera avec son serveur d&#x27;origine à aucune autre fin et aucune information personnelle identifiable ne sera transférée.  
 RIM n&#x27;apparaîtra pas dans votre liste Alt+Tab, mais il apparaîtra dans la barre d&#x27;état système.
 </Windows>
 <MacOS>
 #### RIM s&#x27;exécute-t-il en arrière-plan et, si oui, apparaîtra-t-il dans ma liste Command+Tab ?
 RIM s&#x27;exécute en arrière-plan afin de traiter les mises à jour automatiques, de recevoir les demandes de connexion sans surveillance/avec invite et de permettre l&#x27;utilisation de la commande clavier globale Option+Maj+Retour arrière. Il ne se connectera pas à son serveur d&#x27;origine à d&#x27;autres fins et aucune information personnelle identifiable ne sera transférée.  
-RIM n&#x27;apparaîtra pas dans votre liste Command+Tab, mais il apparaîtra dans les menus d&#x27;état qui contiennent des informations sur votre batterie, votre connexion WiFi, etc.</MacOS>
+RIM n&#x27;apparaîtra pas dans votre liste Command+Tab, mais il apparaîtra dans les menus d&#x27;état qui contiennent des informations sur votre batterie, votre connexion WiFi, etc.
+</MacOS>
 
 ### Module d&#x27;accessibilité à distance
 #### Y a-t-il quelque chose que la machine cible doit configurer pour la première utilisation du module d&#x27;accessibilité à distance ?
@@ -144,10 +146,13 @@ Pas du tout ! Il n&#x27;y a pas de boîtes de dialogue, d&#x27;écrans de demand
 #### Le module d&#x27;accessibilité à distance fonctionne-t-il sur les écrans sécurisés tels que l&#x27;écran de verrouillage ?
 Oui ! Étant donné que l&#x27;hôte RIM fonctionne avec des privilèges élevés, cela nous permet d&#x27;utiliser le module d&#x27;accessibilité à distance pour les écrans sécurisés.
 
-<Windows>La seule exception à cette règle est lorsque RIM est installé sans privilèges d&#x27;administrateur côté cible.</Windows>
+<Windows>
+La seule exception à cette règle est lorsque RIM est installé sans privilèges d&#x27;administrateur côté cible.
+</Windows>
 
 
-<MacOS>La seule exception à cette règle est la fenêtre de connexion de FileVault.
+<MacOS>
+La seule exception à cette règle est la fenêtre de connexion de FileVault.
 </MacOS>
 ### Sessions sans surveillance
 #### Les conversations vocales sont-elles prises en charge pendant les sessions sans surveillance ?
@@ -156,10 +161,12 @@ Oui. Cependant, elles ne peuvent être initiées que si l&#x27;utilisateur final
 Oui. Une fois qu&#x27;une cible sans surveillance est supprimée, la modification prend effet immédiatement. Si la machine cible est éteinte ou n&#x27;est pas connectée à Internet, la modification prendra effet dès qu&#x27;une connexion Internet sera établie sur sa machine.
 #### La machine cible a redémarré après l&#x27;installation des mises à jour et des pilotes, et un mot de passe est nécessaire pour se connecter. Comment la session se poursuit-elle à partir de là ?
 <Windows>
-Bien que RIM s&#x27;exécute sur l&#x27;écran de connexion Windows, la connexion doit toujours être effectuée manuellement par l&#x27;utilisateur cible. En d&#x27;autres termes, RIM ne connectera pas automatiquement l&#x27;utilisateur.</Windows>
+Bien que RIM s&#x27;exécute sur l&#x27;écran de connexion Windows, la connexion doit toujours être effectuée manuellement par l&#x27;utilisateur cible. En d&#x27;autres termes, RIM ne connectera pas automatiquement l&#x27;utilisateur.
+</Windows>
 
 
-<MacOS>Dans la plupart des cas, en particulier lorsque le chiffrement de disque FileVault est activé, l&#x27;utilisateur cible devra être physiquement présent pour saisir manuellement le mot de passe. RIM ne peut pas démarrer sur un Mac chiffré avant que la connexion ne soit entièrement établie.
+<MacOS>
+Dans la plupart des cas, en particulier lorsque le chiffrement de disque FileVault est activé, l&#x27;utilisateur cible devra être physiquement présent pour saisir manuellement le mot de passe. RIM ne peut pas démarrer sur un Mac chiffré avant que la connexion ne soit entièrement établie.
 </MacOS>
 #### Je dispose de plusieurs machines jouant le rôle de contrôleur. La liste des machines configurées pour un accès sans surveillance s&#x27;affichera-t-elle sur toutes les machines ?
 Oui. La liste des machines configurées pour un accès sans surveillance est stockée dans votre compte, elle s&#x27;affichera donc automatiquement.

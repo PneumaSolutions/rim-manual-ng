@@ -129,14 +129,16 @@ No e no.
 #### Quali connessioni dovrebbero essere consentite su una rete affinché RIM funzioni?
 Quando si utilizza il cloud pubblico, è necessaria una connessione https a [getrim.app](https://getrim.app). In casi ottimali, questo è sufficiente affinché RIM stabilisca una connessione peer-to-peer tra il controller e il target. Tuttavia, è utile consentire le connessioni UDP attraverso le porte 19302 e 3478 (le porte STUN e TURN standard). Ciò garantisce che, se viene utilizzato un relay, RIM non dovrà ricorrere a una connessione tcp sulla porta 443.
 
-<Windows>#### RIM funziona in background e, in tal caso, apparirà nell&#x27;elenco Alt+Tab?
+<Windows>
+#### RIM funziona in background e, in tal caso, apparirà nell&#x27;elenco Alt+Tab?
 RIM funziona in background per elaborare gli aggiornamenti automatici, ricevere richieste di connessione automatiche/richieste e abilitare l&#x27;uso del comando globale da tastiera Windows+Shift+Backspace. Non effettuerà alcuna chiamata a casa per altri scopi e non trasferirà alcuna informazione di identificazione personale.  
 RIM non apparirà nell&#x27;elenco Alt+Tab, ma apparirà nella barra delle applicazioni.
 </Windows>
 <MacOS>
 #### RIM viene eseguito in background e, in tal caso, apparirà nel mio elenco Command+Tab?
 RIM viene eseguito in background per elaborare gli aggiornamenti automatici, ricevere richieste di connessione automatiche/richieste e consentire l&#x27;uso del comando globale da tastiera Option+Shift+Backspace. Non invierà dati a casa per nessun altro scopo e non verranno trasferite informazioni di identificazione personale.  
-RIM non apparirà nell&#x27;elenco Command+Tab, ma apparirà nei menu di stato che contengono le informazioni sulla batteria, sulla connessione WiFi, ecc.</MacOS>
+RIM non apparirà nell&#x27;elenco Command+Tab, ma apparirà nei menu di stato che contengono le informazioni sulla batteria, sulla connessione WiFi, ecc.
+</MacOS>
 
 ### Modulo di accessibilità remota
 #### C&#x27;è qualcosa che il computer di destinazione deve configurare per il primo utilizzo del modulo di accessibilità remota?
@@ -144,10 +146,13 @@ Assolutamente no! Non ci sono finestre di dialogo, schermate di richiesta di aut
 #### Il modulo di accessibilità remota funziona su schermate protette come la schermata di blocco?
 Sì! Poiché l&#x27;host RIM funziona con privilegi elevati, questo ci consente di sfruttare il modulo di accessibilità remota per le schermate protette.
 
-<Windows>L&#x27;unica eccezione a questo è quando RIM è installato senza privilegi di amministratore sul lato di destinazione.</Windows>
+<Windows>
+L&#x27;unica eccezione a questo è quando RIM è installato senza privilegi di amministratore sul lato di destinazione.
+</Windows>
 
 
-<MacOS>L&#x27;unica eccezione a questo è la finestra di accesso di FileVault.
+<MacOS>
+L&#x27;unica eccezione a questo è la finestra di accesso di FileVault.
 </MacOS>
 ### Sessioni non presidiate
 #### Le conversazioni vocali sono supportate durante le sessioni non presidiate?
@@ -156,10 +161,12 @@ Sì. Tuttavia, non possono essere avviate a meno che l&#x27;utente finale non si
 Sì. Una volta rimosso un target non presidiato, la modifica avrà effetto immediato. Se il computer di destinazione è spento o non è connesso a Internet, la modifica avrà effetto non appena verrà stabilita una connessione Internet sul computer.
 #### Il computer di destinazione si è riavviato dopo l&#x27;installazione di aggiornamenti e driver e richiede una password per accedere. Come prosegue la sessione da questo punto?
 <Windows>
-Sebbene RIM venga eseguito nella schermata di accesso di Windows, l&#x27;accesso è comunque un&#x27;operazione che deve essere eseguita manualmente dall&#x27;utente di destinazione. In altre parole, RIM *non* effettuerà automaticamente l&#x27;accesso dell&#x27;utente.</Windows>
+Sebbene RIM venga eseguito nella schermata di accesso di Windows, l&#x27;accesso è comunque un&#x27;operazione che deve essere eseguita manualmente dall&#x27;utente di destinazione. In altre parole, RIM *non* effettuerà automaticamente l&#x27;accesso dell&#x27;utente.
+</Windows>
 
 
-<MacOS>Nella maggior parte dei casi, in particolare quando è abilitata la crittografia del disco FileVault, l&#x27;utente di destinazione dovrà essere fisicamente presente per inserire manualmente la password. RIM non può essere avviato su un Mac crittografato prima che sia stato effettuato l&#x27;accesso completo.
+<MacOS>
+Nella maggior parte dei casi, in particolare quando è abilitata la crittografia del disco FileVault, l&#x27;utente di destinazione dovrà essere fisicamente presente per inserire manualmente la password. RIM non può essere avviato su un Mac crittografato prima che sia stato effettuato l&#x27;accesso completo.
 </MacOS>
 #### Ho più macchine che svolgono il ruolo di controller. L&#x27;elenco delle macchine configurate per l&#x27;accesso automatico verrà popolato su tutte le macchine?
 Sì. L&#x27;elenco delle macchine configurate per l&#x27;accesso automatico è memorizzato nel tuo account, quindi verrà popolato automaticamente.

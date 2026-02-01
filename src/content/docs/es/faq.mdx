@@ -129,14 +129,16 @@ No y no.
 #### ¿Qué conexiones habría que permitir en una red para que RIM funcione?
 Cuando se utiliza la nube pública, se requiere una conexión https a [getrim.app](https://getrim.app). En casos óptimos, esto es suficiente para que RIM establezca una conexión peer-to-peer entre el controlador y el destino. Sin embargo, es útil permitir conexiones UDP a través de los puertos 19302 y 3478 (los puertos STUN y TURN estándar). Esto garantiza que, si se utiliza un relé, RIM no tendrá que recurrir a una conexión tcp en el puerto 443.
 
-<Windows>#### ¿RIM se ejecuta en segundo plano? Si es así, ¿aparecerá en mi lista Alt+Tab?
+<Windows>
+#### ¿RIM se ejecuta en segundo plano? Si es así, ¿aparecerá en mi lista Alt+Tab?
 RIM se ejecuta en segundo plano para procesar actualizaciones automáticas, recibir solicitudes de conexión desatendidas/solicitadas y habilitar el uso del comando global de teclado Windows+Mayús+Retroceso. No se conectará con ningún otro fin y no se transferirá ninguna información de identificación personal.  
 RIM no aparecerá en la lista Alt+Tab, pero sí aparecerá en la bandeja del sistema.
 </Windows>
 <MacOS>
 #### ¿RIM se ejecuta en segundo plano? Si es así, ¿aparecerá en mi lista de Command+Tab?
 RIM se ejecuta en segundo plano para procesar actualizaciones automáticas, recibir solicitudes de conexión desatendidas/solicitadas y habilitar el uso del comando global de teclado Option+Shift+Backspace. No se conectará con ningún otro fin y no se transferirá ninguna información de identificación personal.  
-RIM no aparecerá en su lista de Comando+Tab, pero sí aparecerá en los menús de estado que contienen información sobre la batería, la conexión WiFi, etc.</MacOS>
+RIM no aparecerá en su lista de Comando+Tab, pero sí aparecerá en los menús de estado que contienen información sobre la batería, la conexión WiFi, etc.  
+</MacOS>
 
 ### Módulo de accesibilidad remota
 #### ¿Hay algo que la máquina de destino deba configurar para utilizar el módulo de accesibilidad remota por primera vez?
@@ -144,10 +146,13 @@ RIM no aparecerá en su lista de Comando+Tab, pero sí aparecerá en los menús 
 #### ¿Funciona el módulo de accesibilidad remota en pantallas seguras, como la pantalla de bloqueo?
 ¡Sí! Dado que el host RIM se ejecuta con privilegios elevados, esto nos permite aprovechar el módulo de accesibilidad remota para pantallas seguras.
 
-<Windows>La única excepción a esto es cuando RIM se instala sin privilegios de administrador en el lado del destino.</Windows>
+<Windows>
+La única excepción a esto es cuando RIM se instala sin privilegios de administrador en el lado del destino.  
+</Windows>
 
 
-<MacOS>La única excepción a esto es la ventana de inicio de sesión de FileVault.
+<MacOS>
+La única excepción a esto es la ventana de inicio de sesión de FileVault.  
 </MacOS>
 ### Sesiones desatendidas
 #### ¿Se admiten las conversaciones de voz durante las sesiones desatendidas?
@@ -156,10 +161,12 @@ Sí. Sin embargo, no se pueden iniciar a menos que el usuario final esté físic
 Sí. Una vez eliminado un objetivo desatendido, el cambio se hará efectivo inmediatamente. Si el equipo de destino está apagado o no está conectado a Internet, el cambio se hará efectivo tan pronto como se establezca una conexión a Internet en su equipo.
 #### El equipo de destino se reinició después de instalar actualizaciones y controladores, y requiere una contraseña para iniciar sesión. ¿Cómo continúa la sesión a partir de aquí?
 <Windows>
-Aunque RIM se ejecutará en la pantalla de inicio de sesión de Windows, el inicio de sesión sigue siendo una tarea que debe realizar manualmente el usuario de destino. En otras palabras, RIM *no* iniciará sesión automáticamente en el usuario.</Windows>
+Aunque RIM se ejecutará en la pantalla de inicio de sesión de Windows, el inicio de sesión sigue siendo una tarea que debe realizar manualmente el usuario de destino. En otras palabras, RIM *no* iniciará sesión automáticamente en el usuario.  
+</Windows>
 
 
-<MacOS>En la mayoría de los casos, especialmente cuando el cifrado de disco FileVault está habilitado, el usuario de destino deberá estar físicamente presente para introducir manualmente la contraseña. RIM no puede iniciarse en un Mac cifrado antes de que se haya iniciado sesión completamente.
+<MacOS>
+En la mayoría de los casos, especialmente cuando el cifrado de disco FileVault está habilitado, el usuario de destino deberá estar físicamente presente para introducir manualmente la contraseña. RIM no puede iniciarse en un Mac cifrado antes de que se haya iniciado sesión completamente.
 </MacOS>
 #### Tengo varios equipos que desempeñan la función de controlador. ¿La lista de equipos configurados para el acceso desatendido se completará en todos los equipos?
 Sí. La lista de equipos configurados para el acceso desatendido se almacena en su cuenta, por lo que se completará automáticamente.

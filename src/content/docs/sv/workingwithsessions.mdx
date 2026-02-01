@@ -9,7 +9,8 @@ import MacOS from "~/components/platform/MacOS.astro"
 
 Några saker kommer att hända omedelbart efter att anslutningen har upprättats.
 
-<Windows>- Fönstret för fjärrkontroll för sessionen visas. Detta fönster kan flyttas och storleksändras på en enda skärm, liksom i en miljö med flera skärmar.
+<Windows>
+- Fönstret för fjärrkontroll för sessionen visas. Detta fönster kan flyttas och storleksändras på en enda skärm, liksom i en miljö med flera skärmar.
 - Du kommer att informeras om statusen för den aktiva skärmläsaren, eller avsaknaden av sådan, på klientens dator.
 - Om klienten kör en skärmläsare kommer ett meddelande som informerar användaren om att fjärrsessionen har startat att ge omedelbar bekräftelse på att användarens systemljud fungerar.
 - En Mac-målcomputer öppnar assistenten för tangentbordsinställningar om det är första gången en styrenhet ansluts till den.
@@ -38,11 +39,13 @@ Några saker kommer att hända omedelbart efter att anslutningen har upprättats
 
 ### Fjärrkontrollzon
 
-<Windows>Nu är du redo att utföra alla uppgifter som behöver göras på klientsidan. Om du behöver växla tillbaka till att styra din egen dator öppnar du RIM-menyn och väljer alternativet &quot;Minimera session&quot;. Du kommer då tillbaka till din egen dator tills du växlar tillbaka till sessionsfönstret eller trycker på Windows+Skift+Backspace igen. När du går tillbaka till sessionsfönstret kommer tangentbords- och musinmatningen återigen att dirigeras till klientdatorn.
+<Windows>
+Nu är du redo att utföra alla uppgifter som behöver göras på klientsidan. Om du behöver växla tillbaka till att styra din egen dator öppnar du RIM-menyn och väljer alternativet &quot;Minimera session&quot;. Du kommer då tillbaka till din egen dator tills du växlar tillbaka till sessionsfönstret eller trycker på Windows+Skift+Backspace igen. När du går tillbaka till sessionsfönstret kommer tangentbords- och musinmatningen återigen att dirigeras till klientdatorn.
 </Windows>
 
 <MacOS>
-Nu är du redo att utföra alla uppgifter som behöver göras på klientsidan. Om du behöver växla tillbaka till att styra din egen dator öppnar du RIM-menyn och väljer alternativet &quot;Minimera session&quot;. Du kommer då tillbaka till din dator tills du växlar tillbaka till sessionsfönstret eller trycker på Option+Skift+Backspace igen. När du går tillbaka till sessionsfönstret kommer tangentbords- och musinmatningar återigen att dirigeras till klientdatorn.</MacOS>
+Nu är du redo att utföra alla uppgifter som behöver göras på klientsidan. Om du behöver växla tillbaka till att styra din egen dator öppnar du RIM-menyn och väljer alternativet &quot;Minimera session&quot;. Du kommer då tillbaka till din dator tills du växlar tillbaka till sessionsfönstret eller trycker på Option+Skift+Backspace igen. När du går tillbaka till sessionsfönstret kommer tangentbords- och musinmatningar återigen att dirigeras till klientdatorn.
+</MacOS>
 
 
 När du är klar kan antingen kontrollern eller målet gå in i RIM-menyn och välja alternativet &quot;Koppla från session&quot;. När sessionen avslutas får måldatorn ett meddelande som informerar om detta.
@@ -51,7 +54,8 @@ När du är klar kan antingen kontrollern eller målet gå in i RIM-menyn och v�
 
 Som nämnts tidigare leder åtkomst till RIM-menyn dig tillbaka till din dator. Det finns ett antal alternativ i denna meny. De inkluderar:  
 
-<Windows>- Uppdatera RIM på mål: Tvingar en uppdatering av RIM på måldatorn
+<Windows>
+- Uppdatera RIM på mål: Tvingar en uppdatering av RIM på måldatorn
 - Detta alternativ visas om måldatorn kör en äldre version av RIM.
 - Installera om RIM som administratör på måldatorn: Detta alternativ försöker installera om RIM som administratör på en Windows-måldator, vilket kräver att målanvändaren accepterar begäran om administratörsbehörighet själv och/eller med hjälp av företagets IT-avdelning.
 - Minimera session (**Windows+Skift+M**): återför kontrollen till din dator enligt beskrivningen ovan
@@ -167,7 +171,8 @@ För att underlätta en sessioninspelning:
 1. Inspelningen kan stoppas via alternativet &quot;Stoppa sessionsinspelning&quot; i sessionsmenyn.
 * Båda parter får ett meddelande när inspelningen är klar.
 * Inspelningen sparas sedan i mappen &quot;Filmer&quot; i din användarkatalog. För extra bekvämlighet kommer du automatiskt att hamna i denna mapp via Finder, så att du kan skicka inspelningen till användaren om du vill.
-* Om du kopplar från sessionen stoppas inspelningen på samma sätt som beskrivs ovan.</MacOS>
+* Om du kopplar från sessionen stoppas inspelningen på samma sätt som beskrivs ovan.
+</MacOS>
 
 
 
@@ -178,7 +183,8 @@ Inspelningar är en helt gratis funktion som är tillgänglig för alla använda
 
 Oavsett om du hjälper en användare som inte använder en skärmläsare eller diagnostiserar ett problem med en felaktig skärmläsare, är RIM fullt förberedd att hjälpa dig.
 
-<Windows>Modulen för fjärråtkomst består av två komponenter:
+<Windows>
+Modulen för fjärråtkomst består av två komponenter:
 - Ett tillägg för skärmläsaren NVDA som gör det möjligt för skärmläsaren att ta emot utdata från fjärrdatorn
 - En fristående tillgänglighetsmodul som startas på måldatorn på begäran av kontrollenheten. Fördelen med detta tillvägagångssätt är att slutanvändaren inte hör tal på sin dator medan du styr den. Istället leder fjärråtkomstmodulen talutmatningen till den körda kopian av NVDA på kontrollenhetssidan. På så sätt kan du hjälpa en slutanvändare utan att denne behöver installera eller ens ladda ner en skärmläsare.
 
@@ -188,10 +194,13 @@ För första initialiseringen av tillgänglighetsmodulen behöver du göra följ
 1. Om NVDA för närvarande körs kommer du att bli ombedd att installera ett tillägg som gör att din kopia av NVDA kan kommunicera med fjärrdatorn under sessionen. Acceptera installationsmeddelandena och vänta tills NVDA startar om.
 1. Nu är fjärrtillgänglighetsmodulen helt initialiserad och du hör talutmatning när du styr fjärrdatorn. För att tillfälligt stänga av talutmatningen trycker du bara på Insert eller Capslock+S en gång för att stänga av den och sedan två gånger för att återaktivera den.
 
-Från och med nu, om du kör en skärmläsare på den styrande datorn, kommer fjärråtkomstmodulen automatiskt att starta under fjärrsessioner där den fjärranslutna datorn inte har någon skärmläsare igång. Om du kör en annan skärmläsare än NVDA kommer RIM att koppla bort den skärmläsaren och sedan växla över till NVDA. Om du behöver stoppa fjärråtkomstmodulen på fjärrdatorn för att starta en annan skärmläsare, väljer du bara alternativet &quot;Stoppa fjärråtkomst&quot; i RIM-menyn.</Windows>
+Från och med nu, om du kör en skärmläsare på den styrande datorn, kommer fjärråtkomstmodulen automatiskt att starta under fjärrsessioner där den fjärranslutna datorn inte har någon skärmläsare igång. Om du kör en annan skärmläsare än NVDA kommer RIM att koppla bort den skärmläsaren och sedan växla över till NVDA. Om du behöver stoppa fjärråtkomstmodulen på fjärrdatorn för att starta en annan skärmläsare, väljer du bara alternativet &quot;Stoppa fjärråtkomst&quot; i RIM-menyn.
+</Windows>
 
 
-<MacOS>Fjärråtkomstmodulen är en speciell konfiguration som startas på mål-Macen på begäran av en Windows- eller Mac-kontroller. Fördelen med detta tillvägagångssätt är att slutanvändaren inte hör tal på sin dator medan du styr den. Istället skickar modulen för fjärråtkomst talutmatningen till talsystemet på kontrollerns sida. På så sätt kan du hjälpa en slutanvändare utan att denne behöver aktivera en skärmläsare. Om du kör VoiceOver på den kontrollerande Mac-datorn startar modulen för fjärråtkomst automatiskt under fjärrsessioner där den fjärranslutna datorn inte har någon skärmläsare igång.</MacOS>
+<MacOS>
+Fjärråtkomstmodulen är en speciell konfiguration som startas på mål-Macen på begäran av en Windows- eller Mac-kontroller. Fördelen med detta tillvägagångssätt är att slutanvändaren inte hör tal på sin dator medan du styr den. Istället skickar modulen för fjärråtkomst talutmatningen till talsystemet på kontrollerns sida. På så sätt kan du hjälpa en slutanvändare utan att denne behöver aktivera en skärmläsare. Om du kör VoiceOver på den kontrollerande Mac-datorn startar modulen för fjärråtkomst automatiskt under fjärrsessioner där den fjärranslutna datorn inte har någon skärmläsare igång.
+</MacOS>
 
 ## Starta om och återansluta
 
@@ -269,7 +278,8 @@ Dessutom kan du öppna en obevakad session via körrutan om du kopierar genväge
 
 Om du inte längre vill att din maskin ska styras obevakat kan du återkalla kontrollerns åtkomst. Du behöver inte vara i en session för att göra detta.
 
-<Windows>1. Öppna ikonen Remote Incident Manager i systemfältet.
+<Windows>
+1. Öppna ikonen Remote Incident Manager i systemfältet.
 1. Om du använder tangentbordet trycker du på Windows+B, sedan mellanslag och sedan vänster- eller högerpilen tills du hittar ikonen.
 1. Högerklicka på ikonen eller tryck på applikationsknappen eller Skift+F10.
 1. Välj alternativet ”Återkalla obevakad åtkomst”.
@@ -282,7 +292,8 @@ Om du inte längre vill att din maskin ska styras obevakat kan du återkalla kon
 1. Klicka på ikonen eller tryck på VO+mellanslag.
 1. Välj alternativet &quot;Återkalla obevakad åtkomst&quot;.
 1. Du kommer till en lista med datorer. Välj den dator du vill återkalla.
-1. Du kommer att bli tillfrågad om du vill återkalla maskinen; svara ja.</MacOS>  
+1. Du kommer att bli tillfrågad om du vill återkalla maskinen; svara ja.
+</MacOS>  
 
 Det är allt! Kontrollenheten kommer att få ett meddelande om att denna maskin inte längre är tillgänglig för obevakad åtkomst. Om de behöver obevakad åtkomst igen kan de starta om proceduren för att begära tillstånd för obevakad åtkomst enligt beskrivningen ovan.
 

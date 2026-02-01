@@ -129,14 +129,16 @@ Não e não.
 #### Quais conexões precisariam ser permitidas em uma rede para que o RIM funcionasse?
 Ao utilizar a nuvem pública, é necessária uma conexão https com [getrim.app](https://getrim.app). Em casos ideais, isso é suficiente para que o RIM estabeleça uma conexão ponto a ponto entre o controlador e o destino. No entanto, é útil permitir conexões UDP pelas portas 19302 e 3478 (as portas STUN e TURN padrão). Isso garante que, se um relé estiver sendo utilizado, o RIM não precisará recorrer a uma conexão tcp na porta 443.
 
-<Windows>#### O RIM é executado em segundo plano e, em caso afirmativo, ele aparecerá na minha lista Alt+Tab?
+<Windows>
+#### O RIM é executado em segundo plano e, em caso afirmativo, ele aparecerá na minha lista Alt+Tab?
 O RIM é executado em segundo plano para processar atualizações automáticas, receber solicitações de conexão automáticas/solicitadas e permitir o uso do comando global do teclado Windows+Shift+Backspace. Ele não entrará em contato com o servidor para qualquer outra finalidade, e nenhuma informação de identificação pessoal será transferida.  
 O RIM não aparecerá na sua lista Alt+Tab, mas aparecerá na bandeja do sistema.
 </Windows>
 <MacOS>
 #### O RIM é executado em segundo plano e, em caso afirmativo, ele aparecerá na minha lista Command+Tab?
 O RIM é executado em segundo plano para processar atualizações automáticas, receber solicitações de conexão automáticas/solicitadas e habilitar o uso do comando global Option+Shift+Backspace do teclado. Ele não se comunicará com o servidor para qualquer outra finalidade, e nenhuma informação de identificação pessoal será transferida.  
-O RIM não aparecerá na sua lista Command+Tab, mas aparecerá nos menus de status que contêm informações sobre a bateria, conexão WiFi, etc.</MacOS>
+O RIM não aparecerá na sua lista Command+Tab, mas aparecerá nos menus de status que contêm informações sobre a bateria, conexão WiFi, etc.
+</MacOS>
 
 ### Módulo de acessibilidade remota
 #### Há algo que a máquina de destino precise configurar para usar o Módulo de acessibilidade remota pela primeira vez?
@@ -144,10 +146,13 @@ De forma alguma! Não há caixas de diálogo, telas de solicitação de permiss�
 #### O Módulo de Acessibilidade Remota funciona em telas seguras, como a tela de bloqueio?
 Sim! Como o host RIM é executado com privilégios elevados, isso nos permite aproveitar o Módulo de Acessibilidade Remota para telas seguras.
 
-<Windows>A única exceção a isso é quando o RIM é instalado sem privilégios de administrador no lado do destino.</Windows>
+<Windows>
+A única exceção a isso é quando o RIM é instalado sem privilégios de administrador no lado do destino.
+</Windows>
 
 
-<MacOS>A única exceção a isso é a janela de logon do FileVault.
+<MacOS>
+A única exceção a isso é a janela de logon do FileVault.
 </MacOS>
 ### Sessões autônomas
 #### As conversas de voz são suportadas durante sessões autônomas?
@@ -156,10 +161,12 @@ Sim. No entanto, elas não podem ser iniciadas a menos que o usuário final este
 Sim. Assim que um alvo sem supervisão for removido, a alteração entrará em vigor imediatamente. Se a máquina de destino estiver desligada ou não estiver conectada à Internet, a alteração entrará em vigor assim que uma conexão com a Internet for estabelecida na máquina.
 #### A máquina de destino foi reiniciada após a instalação de atualizações e drivers e requer uma senha para fazer login. Como a sessão continua a partir daqui?
 <Windows>
-Embora o RIM seja executado na tela de logon do Windows, o logon ainda é uma tarefa que deve ser feita manualmente pelo usuário de destino. Em outras palavras, o RIM *não* fará o logon automático do usuário.</Windows>
+Embora o RIM seja executado na tela de logon do Windows, o logon ainda é uma tarefa que deve ser feita manualmente pelo usuário de destino. Em outras palavras, o RIM *não* fará o logon automático do usuário.
+</Windows>
 
 
-<MacOS>Na maioria dos casos, especialmente quando a criptografia de disco FileVault está ativada, o usuário de destino precisará estar fisicamente presente para inserir manualmente a senha. O RIM não pode ser iniciado em um Mac criptografado antes que o logon esteja totalmente concluído.
+<MacOS>
+Na maioria dos casos, especialmente quando a criptografia de disco FileVault está ativada, o usuário de destino precisará estar fisicamente presente para inserir manualmente a senha. O RIM não pode ser iniciado em um Mac criptografado antes que o logon esteja totalmente concluído.
 </MacOS>
 #### Tenho várias máquinas desempenhando a função de controlador. A lista de máquinas configuradas para acesso autônomo será preenchida em todas as máquinas?
 Sim. A lista de máquinas configuradas para acesso autônomo é armazenada em sua conta, portanto, será preenchida automaticamente.

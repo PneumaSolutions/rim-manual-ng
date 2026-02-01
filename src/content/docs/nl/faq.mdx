@@ -129,14 +129,16 @@ Nee en nee.
 #### Welke verbindingen moeten op een netwerk worden toegestaan om RIM te laten functioneren?
 Bij gebruik van de openbare cloud is een https-verbinding met [getrim.app](https://getrim.app) vereist. In optimale gevallen is dit voldoende voor RIM om een peer-to-peer-verbinding tussen de controller en het doel tot stand te brengen. Het helpt echter om UDP-verbindingen toe te staan via poorten 19302 en 3478 (de standaard STUN- en TURN-poorten). Dit zorgt ervoor dat als er een relay wordt gebruikt, RIM niet hoeft terug te vallen op een tcp-verbinding op poort 443.
 
-<Windows>#### Draait RIM op de achtergrond en zo ja, verschijnt het dan in mijn Alt+Tab-lijst?
+<Windows>
+#### Draait RIM op de achtergrond en zo ja, verschijnt het dan in mijn Alt+Tab-lijst?
 RIM draait op de achtergrond om automatische updates te verwerken, onbeheerde/gevraagde verbindingsverzoeken te ontvangen en het gebruik van de algemene Windows+Shift+Backspace-toetsenbordopdracht mogelijk te maken. Het programma belt niet naar huis voor andere doeleinden en er wordt geen persoonlijk identificeerbare informatie overgedragen.  
 RIM verschijnt niet in uw Alt+Tab-lijst, maar wel in het systeemvak.
 </Windows>
 <MacOS>
 #### Draait RIM op de achtergrond en zo ja, verschijnt het dan in mijn Command+Tab-lijst?
 RIM draait op de achtergrond om automatische updates te verwerken, onbeheerde/gevraagde verbindingsverzoeken te ontvangen en het gebruik van de algemene Option+Shift+Backspace-toetsencombinatie mogelijk te maken. Het programma belt niet naar huis voor andere doeleinden en er wordt geen persoonlijk identificeerbare informatie overgedragen.  
-RIM verschijnt niet in uw Command+Tab-lijst, maar wel in de statusmenu&#x27;s met informatie over uw batterij, wifi-verbinding, enz.</MacOS>
+RIM verschijnt niet in uw Command+Tab-lijst, maar wel in de statusmenu&#x27;s met informatie over uw batterij, wifi-verbinding, enz.
+</MacOS>
 
 ### Module voor externe toegankelijkheid
 #### Moet er iets worden geconfigureerd op de doelmachine voor het eerste gebruik van de module voor externe toegankelijkheid?
@@ -144,10 +146,13 @@ Helemaal niet! Er zijn geen dialoogvensters, schermen voor het aanvragen van toe
 #### Werkt de module voor toegang op afstand op beveiligde schermen, zoals het vergrendelingsscherm?
 Ja! Aangezien de RIM-host met verhoogde rechten wordt uitgevoerd, kunnen we de module voor toegang op afstand gebruiken voor beveiligde schermen.
 
-<Windows>De enige uitzondering hierop is wanneer RIM zonder beheerdersrechten aan de doelzijde is geïnstalleerd.</Windows>
+<Windows>
+De enige uitzondering hierop is wanneer RIM zonder beheerdersrechten aan de doelzijde is geïnstalleerd.
+</Windows>
 
 
-<MacOS>De enige uitzondering hierop is het aanmeldingsvenster van FileVault.
+<MacOS>
+De enige uitzondering hierop is het aanmeldingsvenster van FileVault.
 </MacOS>
 ### Onbemande sessies
 #### Worden spraakgesprekken ondersteund tijdens onbemande sessies?
@@ -156,10 +161,12 @@ Ja. Ze kunnen echter alleen worden gestart als de eindgebruiker fysiek aanwezig 
 Ja. Zodra een onbeheerd doelwit is verwijderd, wordt de wijziging onmiddellijk van kracht. Als de doelmachine is uitgeschakeld of op een andere manier niet is verbonden met internet, wordt de wijziging van kracht zodra er een internetverbinding tot stand is gebracht op hun machine.
 #### De doelmachine is opnieuw opgestart na het installeren van updates en stuurprogramma&#x27;s en er is een wachtwoord nodig om in te loggen. Hoe gaat de sessie vanaf hier verder?
 <Windows>
-Hoewel RIM op het Windows-aanmeldingsscherm wordt uitgevoerd, moet de doelgebruiker nog steeds handmatig inloggen. Met andere woorden, RIM logt de gebruiker *niet* automatisch in.</Windows>
+Hoewel RIM op het Windows-aanmeldingsscherm wordt uitgevoerd, moet de doelgebruiker nog steeds handmatig inloggen. Met andere woorden, RIM logt de gebruiker *niet* automatisch in.
+</Windows>
 
 
-<MacOS>In de meeste gevallen, met name wanneer FileVault-schijfversleuteling is ingeschakeld, moet de doelgebruiker fysiek aanwezig zijn om het wachtwoord handmatig in te voeren. RIM kan niet worden gestart op een versleutelde Mac voordat deze volledig is ingelogd.
+<MacOS>
+In de meeste gevallen, met name wanneer FileVault-schijfversleuteling is ingeschakeld, moet de doelgebruiker fysiek aanwezig zijn om het wachtwoord handmatig in te voeren. RIM kan niet worden gestart op een versleutelde Mac voordat deze volledig is ingelogd.
 </MacOS>
 #### Ik heb meerdere machines die de rol van controller vervullen. Wordt de lijst met machines die zijn ingesteld voor onbeheerde toegang op alle machines weergegeven?
 Ja. De lijst met machines die zijn geconfigureerd voor onbeheerde toegang wordt opgeslagen in uw account, dus deze wordt automatisch weergegeven.

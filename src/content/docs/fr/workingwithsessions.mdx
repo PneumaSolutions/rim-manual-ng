@@ -9,7 +9,8 @@ import MacOS from "~/components/platform/MacOS.astro"
 
 Plusieurs choses se produiront immédiatement après l&#x27;établissement de la connexion.
 
-<Windows>- La fenêtre de contrôle à distance pour la session apparaîtra. Cette fenêtre peut être déplacée et redimensionnée sur un seul écran, ainsi que sur une configuration multi-écrans.
+<Windows>
+- La fenêtre de contrôle à distance pour la session apparaîtra. Cette fenêtre peut être déplacée et redimensionnée sur un seul écran, ainsi que sur une configuration multi-écrans.
 - Vous serez informé de l&#x27;état du lecteur d&#x27;écran en cours d&#x27;exécution, ou de son absence, sur la machine du client.
 - Si le client utilise un lecteur d&#x27;écran, une notification toast informant l&#x27;utilisateur que la session à distance a commencé confirmera instantanément que le système audio de l&#x27;utilisateur fonctionne.
 - Un Mac cible affichera l&#x27;assistant de configuration du clavier s&#x27;il s&#x27;agit de la première connexion d&#x27;un contrôleur.
@@ -18,12 +19,14 @@ Plusieurs choses se produiront immédiatement après l&#x27;établissement de la
 - Enfin, toutes les entrées du clavier et de la souris seront immédiatement dirigées vers l&#x27;ordinateur cible. Pour rediriger le contrôle vers votre machine, procédez de l&#x27;une des manières suivantes :
     - Appuyez sur Windows+Maj+Retour arrière.
 - Cliquez avec le bouton droit de la souris sur la barre de titre de la fenêtre RIM.
-- Cliquez avec le bouton gauche de la souris sur l&#x27;icône RIM au milieu de la barre de titre.</Windows>
+- Cliquez avec le bouton gauche de la souris sur l&#x27;icône RIM au milieu de la barre de titre.
+</Windows>
 
 
 
 
-<MacOS>- La fenêtre de contrôle à distance pour la session apparaîtra. Cette fenêtre peut être déplacée et redimensionnée sur un seul écran, ainsi que sur une configuration multi-écrans.
+<MacOS>
+- La fenêtre de contrôle à distance pour la session apparaîtra. Cette fenêtre peut être déplacée et redimensionnée sur un seul écran, ainsi que sur une configuration multi-écrans.
 - Vous serez informé de l&#x27;état du lecteur d&#x27;écran en cours d&#x27;exécution, ou de son absence, sur l&#x27;ordinateur du client.
 - Si le client utilise un lecteur d&#x27;écran, une notification toast informant l&#x27;utilisateur que la session à distance a commencé confirmera instantanément que le système audio de l&#x27;utilisateur fonctionne.
 - Une cible Mac affichera l&#x27;assistant de configuration du clavier si c&#x27;est la première fois qu&#x27;un contrôleur s&#x27;y connecte.
@@ -32,7 +35,8 @@ Plusieurs choses se produiront immédiatement après l&#x27;établissement de la
 - Enfin, toutes les entrées clavier et souris seront immédiatement dirigées vers l&#x27;ordinateur cible. Pour rediriger le contrôle vers votre machine, procédez de l&#x27;une des manières suivantes :
 - Appuyez sur Option+Maj+Retour arrière.
 - Cliquez avec le bouton droit de la souris sur la barre de titre de la fenêtre RIM.
-- Cliquez avec le bouton gauche de la souris sur l&#x27;icône RIM au milieu de la barre de titre.</MacOS>
+- Cliquez avec le bouton gauche de la souris sur l&#x27;icône RIM au milieu de la barre de titre.
+</MacOS>
 
 
 
@@ -42,7 +46,8 @@ Plusieurs choses se produiront immédiatement après l&#x27;établissement de la
 </Windows>
 
 <MacOS>
-À ce stade, vous êtes prêt à effectuer toutes les tâches nécessaires côté client. Si vous devez revenir au contrôle de votre propre machine, affichez le menu RIM, puis sélectionnez l&#x27;option « Réduire la session ». Vous serez redirigé vers votre machine jusqu&#x27;à ce que vous reveniez à la fenêtre de session ou que vous appuyiez à nouveau sur Option+Maj+Retour arrière. Lorsque vous revenez à la fenêtre de session, les entrées clavier et souris seront à nouveau dirigées vers l&#x27;ordinateur client.</MacOS>
+À ce stade, vous êtes prêt à effectuer toutes les tâches nécessaires côté client. Si vous devez revenir au contrôle de votre propre machine, affichez le menu RIM, puis sélectionnez l&#x27;option « Réduire la session ». Vous serez redirigé vers votre machine jusqu&#x27;à ce que vous reveniez à la fenêtre de session ou que vous appuyiez à nouveau sur Option+Maj+Retour arrière. Lorsque vous revenez à la fenêtre de session, les entrées clavier et souris seront à nouveau dirigées vers l&#x27;ordinateur client.
+</MacOS>
 
 
 Une fois que vous avez terminé, le contrôleur ou la cible peut accéder au menu RIM et choisir l&#x27;option « Déconnecter la session ». À la fin de la session, la machine cible recevra une notification toast l&#x27;informant de la fin de la session.
@@ -51,8 +56,9 @@ Une fois que vous avez terminé, le contrôleur ou la cible peut accéder au men
 
 Comme mentionné précédemment, l&#x27;accès au menu RIM vous ramène à votre machine. Ce menu propose plusieurs options, notamment :  
 
-<Windows>- Mettre à jour RIM sur la cible : force la mise à jour de RIM sur l&#x27;ordinateur cible</Windows>.
-<Windows>- Cette option s&#x27;affiche si la machine cible exécute une version plus ancienne de RIM.
+<Windows>
+- Mettre à jour RIM sur la cible : force la mise à jour de RIM sur l&#x27;ordinateur cible
+- Cette option s&#x27;affiche si la machine cible exécute une version plus ancienne de RIM.
 - Réinstaller RIM en tant qu&#x27;administrateur sur la cible : cette option tente de réinstaller RIM en tant qu&#x27;administrateur sur une cible Windows, ce qui nécessite que l&#x27;utilisateur cible accepte la demande d&#x27;autorisation d&#x27;administrateur par lui-même et/ou avec l&#x27;aide du service informatique de son entreprise.
 - Réduire la session (**Windows+Maj+M**) : ramène le contrôle sur votre machine comme décrit ci-dessus.
 - Transférer un fichier vers la cible : s&#x27;affiche si un fichier se trouve dans le presse-papiers.
@@ -144,7 +150,8 @@ Notez que la durée du transfert dépendra entièrement de la taille du contenu 
 La fonction d&#x27;enregistrement de session de RIM vous permet, en tant que contrôleur, d&#x27;enregistrer facilement le contenu de votre session dans un fichier sur votre ordinateur. Ce fichier peut ensuite être distribué à la personne à laquelle vous fournissez une assistance à distance. Le contenu de l&#x27;enregistrement de session comprendra la sortie audiovisuelle de l&#x27;ordinateur cible, ainsi que l&#x27;audio d&#x27;une conversation vocale en cours.  
 Pour faciliter l&#x27;enregistrement d&#x27;une session :  
 
-<Windows>1. Accédez à l&#x27;option « Démarrer l&#x27;enregistrement de session » dans le menu de session. Les actions suivantes se produiront alors :
+<Windows>
+1. Accédez à l&#x27;option « Démarrer l&#x27;enregistrement de session » dans le menu de session. Les actions suivantes se produiront alors :
 * L&#x27;enregistrement commencera instantanément
     * Les deux parties recevront une notification indiquant que l&#x27;enregistrement a commencé.
 1. Pour mettre en pause ou reprendre l&#x27;enregistrement, accédez à l&#x27;option « Mettre en pause/Reprendre l&#x27;enregistrement de la session » dans le menu de la session.
@@ -178,7 +185,8 @@ Les enregistrements sont une fonctionnalité entièrement gratuite, accessible �
 
 Que vous aidiez un utilisateur qui n&#x27;utilise pas de lecteur d&#x27;écran ou que vous diagnostiquiez un problème avec un lecteur d&#x27;écran défectueux, le module RIM est entièrement prêt à vous venir en aide.
 
-<Windows>Le module d&#x27;accessibilité à distance se compose de deux éléments :
+<Windows>
+Le module d&#x27;accessibilité à distance se compose de deux éléments :
 - Un module complémentaire pour le lecteur d&#x27;écran NVDA qui permet au lecteur d&#x27;écran de recevoir les données provenant de l&#x27;ordinateur distant
 - Un module d&#x27;accessibilité autonome lancé sur l&#x27;ordinateur cible à la demande du contrôleur. L&#x27;avantage de cette approche est que l&#x27;utilisateur final n&#x27;entend pas la synthèse vocale sur son ordinateur pendant que vous le contrôlez. Au lieu de cela, le module d&#x27;accessibilité à distance transmet la sortie vocale à la copie de NVDA en cours d&#x27;exécution côté contrôleur. De cette façon, vous pouvez aider un utilisateur final de manière accessible sans qu&#x27;il ait à installer ou même à télécharger un lecteur d&#x27;écran.
 
@@ -191,7 +199,8 @@ Pour la première initialisation du module d&#x27;accessibilité, voici ce que v
 À partir de ce moment, si vous utilisez un lecteur d&#x27;écran sur l&#x27;ordinateur de contrôle, le module d&#x27;accessibilité à distance démarrera automatiquement pendant les sessions à distance au cours desquelles aucun lecteur d&#x27;écran n&#x27;est utilisé sur l&#x27;ordinateur distant. Si vous utilisez un lecteur d&#x27;écran autre que NVDA, RIM désactivera ce lecteur d&#x27;écran et basculera vers NVDA. Si vous devez arrêter le module d&#x27;accessibilité à distance sur la machine distante afin de démarrer un autre lecteur d&#x27;écran, il vous suffit d&#x27;accéder à l&#x27;option « Arrêter l&#x27;accessibilité à distance » dans le menu RIM.
 </Windows>
 <MacOS>
-Le module d&#x27;accessibilité à distance est une configuration spéciale lancée sur le Mac cible à la demande d&#x27;un contrôleur Windows ou Mac. L&#x27;avantage de cette approche est que l&#x27;utilisateur final n&#x27;entend pas la synthèse vocale sur son ordinateur pendant que vous le contrôlez. Au lieu de cela, le module d&#x27;accessibilité à distance transmet la sortie vocale au système de synthèse vocale côté contrôleur. De cette façon, vous pouvez aider un utilisateur final de manière accessible sans qu&#x27;il ait à activer un lecteur d&#x27;écran. Si vous utilisez VoiceOver sur le Mac de contrôle, le module d&#x27;accessibilité à distance démarre automatiquement pendant les sessions à distance au cours desquelles aucun lecteur d&#x27;écran n&#x27;est en cours d&#x27;exécution sur l&#x27;ordinateur distant.</MacOS>
+Le module d&#x27;accessibilité à distance est une configuration spéciale lancée sur le Mac cible à la demande d&#x27;un contrôleur Windows ou Mac. L&#x27;avantage de cette approche est que l&#x27;utilisateur final n&#x27;entend pas la synthèse vocale sur son ordinateur pendant que vous le contrôlez. Au lieu de cela, le module d&#x27;accessibilité à distance transmet la sortie vocale au système de synthèse vocale côté contrôleur. De cette façon, vous pouvez aider un utilisateur final de manière accessible sans qu&#x27;il ait à activer un lecteur d&#x27;écran. Si vous utilisez VoiceOver sur le Mac de contrôle, le module d&#x27;accessibilité à distance démarre automatiquement pendant les sessions à distance au cours desquelles aucun lecteur d&#x27;écran n&#x27;est en cours d&#x27;exécution sur l&#x27;ordinateur distant.
+</MacOS>
 
 ## Redémarrage et reconnexion
 
@@ -262,14 +271,16 @@ Désormais, lorsque vous activerez ce raccourci, vous serez automatiquement redi
 ##### Autres façons d&#x27;utiliser les raccourcis de session sans surveillance
 
 Les raccourcis de session sans surveillance, comme tous les autres raccourcis, peuvent être associés à des raccourcis clavier globaux. Cela peut être extrêmement utile si vous êtes un technicien de maintenance qui gère plusieurs ordinateurs dans un groupe de travail. Par exemple, si votre groupe de travail comprend 6 ordinateurs sur lesquels vous effectuez une maintenance de routine, vous pouvez configurer Alt+Contrôle+1 à 6 comme raccourcis clavier pour chaque machine respective. Cela devrait accélérer considérablement votre flux de travail.
-De plus, vous pouvez appeler une session sans surveillance via la boîte d&#x27;exécution si vous copiez le raccourci dans votre répertoire utilisateur. Une fois le raccourci copié, vous pouvez démarrer une session sans surveillance en tapant votre-nom-de-session.url dans la boîte d&#x27;exécution.</Windows>
+De plus, vous pouvez appeler une session sans surveillance via la boîte d&#x27;exécution si vous copiez le raccourci dans votre répertoire utilisateur. Une fois le raccourci copié, vous pouvez démarrer une session sans surveillance en tapant votre-nom-de-session.url dans la boîte d&#x27;exécution.
+</Windows>
 
 
 #### Révoquer l&#x27;accès sans surveillance
 
 Si vous ne souhaitez plus que votre machine soit contrôlée sans surveillance, vous pouvez révoquer l&#x27;accès du contrôleur. Vous n&#x27;avez pas besoin d&#x27;être en session pour le faire.
 
-<Windows>1. Accédez à l&#x27;icône Remote Incident Manager dans votre barre d&#x27;état système.
+<Windows>
+1. Accédez à l&#x27;icône Remote Incident Manager dans votre barre d&#x27;état système.
 1. Si vous utilisez le clavier, appuyez sur Windows+B, puis sur la barre d&#x27;espace, puis sur la flèche gauche ou droite jusqu&#x27;à ce que vous trouviez l&#x27;icône.
 1. Cliquez avec le bouton droit sur cette icône ou appuyez sur la touche Applications ou Maj+F10.
 1. Sélectionnez l&#x27;option « Révoquer l&#x27;accès sans surveillance ».
@@ -282,7 +293,8 @@ Si vous ne souhaitez plus que votre machine soit contrôlée sans surveillance, 
 1. Cliquez sur cette icône ou appuyez sur VO+Espace.
 1. Sélectionnez l&#x27;option « Révoquer l&#x27;accès sans surveillance ».
 1. Vous accéderez à une liste d&#x27;ordinateurs, sélectionnez celui que vous souhaitez révoquer.
-1. Il vous sera demandé si vous souhaitez révoquer la machine ; répondez oui.</MacOS>  
+1. Il vous sera demandé si vous souhaitez révoquer la machine ; répondez oui.
+</MacOS>  
 
 C&#x27;est tout ! Le contrôleur recevra un message indiquant que cette machine n&#x27;est plus disponible pour un accès sans surveillance. S&#x27;il a à nouveau besoin d&#x27;un accès sans surveillance, il peut relancer la procédure pour demander l&#x27;autorisation d&#x27;accès sans surveillance comme décrit ci-dessus.
 
