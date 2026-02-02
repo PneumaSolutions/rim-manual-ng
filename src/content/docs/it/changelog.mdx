@@ -8,7 +8,8 @@ import MacOS from "~/components/platform/MacOS.astro"
 Le versioni di RIM sono indicate da titoli di livello 3. Gli aggiornamenti sostanziali con diverse funzioni per entrambe le piattaforme saranno suddivisi in sottovoci per Mac e Windows al livello 4.
 
 ### 3.4.7
-Questa versione introduce la funzionalità di registrazione delle sessioni su entrambe le piattaforme. Questa funzionalità è gratuita per tutti e il servizio cloud non viene mai utilizzato per l&#x27;elaborazione delle registrazioni. Le registrazioni vengono attualmente salvate nella cartella Video locale dell&#x27;utente che ha il controllo, ovvero &quot;Video&quot; su Windows e &quot;Film&quot; su MacOS rispettivamente.
+Questa versione introduce una beta aperta della funzionalità di registrazione delle sessioni su entrambe le piattaforme. Questa funzionalità è gratuita per tutti e il servizio cloud non viene mai utilizzato per l&#x27;elaborazione delle registrazioni. Le registrazioni vengono attualmente salvate nella cartella Video locale dell&#x27;utente che esegue il controllo, ovvero &quot;Video&quot; su Windows e &quot;Film&quot; su MacOS.  
+Non esitate a [inviarci un feedback](https://getrim.app/feedback?state=%7B%22return_to%22%3A%22%2F%22%7D) se riscontrate problemi durante l&#x27;utilizzo di questa funzione o se avete commenti o suggerimenti su come migliorarla.
 ### 3.4.6
 
 * Si tratta di un aggiornamento per la correzione di bug.
@@ -35,7 +36,7 @@ Questa versione introduce la funzionalità di registrazione delle sessioni su en
 
 ### 3.4.0
 * Aggiunta un'opzione per gli utenti aziendali per la creazione di programmi di installazione senza scadenza
-    * Questa modifica comporta un controllo di convalida per tutti gli installatori personalizzati. Se un programma di installazione personalizzato è scaduto o eliminato, non verrà più eseguito.
+	* Questa modifica comporta un controllo di convalida per tutti gli installatori personalizzati. Se un programma di installazione personalizzato è scaduto o eliminato, non verrà più eseguito.
 * È stato risolto un problema che causava un bip costante dai computer di destinazione privi di audio a bordo, in particolare i server Windows
 * Non è più possibile premere involontariamente Windows+Maiusc+Backspace su una destinazione Windows con macOS come controller
 
@@ -277,7 +278,7 @@ RIM è ora in grado di riprendere automaticamente l'acquisizione del contenuto d
 ### 3.1.44
 ##### Mac
 * Implementa il riavvio e la riconnessione per gli obiettivi Mac, compresi i riavvii standard e di emergenza.
-    * Come per l'accesso non presidiato, RIM non compare nella schermata di accesso di macOS a causa delle restrizioni della piattaforma, in particolare di FileVault. Pertanto, l'utente di destinazione dovrà effettuare nuovamente l'accesso prima che RIM possa riconnettersi.
+	* Come per l'accesso non presidiato, RIM non compare nella schermata di accesso di macOS a causa delle restrizioni della piattaforma, in particolare di FileVault. Pertanto, l'utente di destinazione dovrà effettuare nuovamente l'accesso prima che RIM possa riconnettersi.
 * La notifica sui trasferimenti di file, introdotta nell'aggiornamento precedente, viene ora visualizzata solo una volta per sessione RIM.
 
 ### 3.1.43
@@ -286,8 +287,8 @@ Questo aggiornamento modifica l'interfaccia utente per il trasferimento dei file
 ### 3.1.42
 ##### Mac
 * RIM per Mac funziona ora come destinazione non presidiata. Esegue anche gli aggiornamenti in background come la versione per Windows.
-    * Dobbiamo ancora lavorare sull'accesso alla schermata di blocco e non crediamo di essere in grado di fornire l'accesso alla schermata di login prima che l'utente abbia effettuato l'accesso, a causa delle limitazioni della piattaforma.
-    * non abbiamo ancora capito come o se saremo in grado di implementare installatori di target preconfigurati, quindi dovrete utilizzare uno degli altri metodi disponibili per impostare l'accesso non presidiato.
+	* Dobbiamo ancora lavorare sull'accesso alla schermata di blocco e non crediamo di essere in grado di fornire l'accesso alla schermata di login prima che l'utente abbia effettuato l'accesso, a causa delle limitazioni della piattaforma.
+	* non abbiamo ancora capito come o se saremo in grado di implementare installatori di target preconfigurati, quindi dovrete utilizzare uno degli altri metodi disponibili per impostare l'accesso non presidiato.
 * Elimina una fonte di latenza nell'audio catturato dalle destinazioni Mac.
 
 ### 3.1.41
