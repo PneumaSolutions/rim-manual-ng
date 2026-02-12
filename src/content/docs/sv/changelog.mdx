@@ -7,6 +7,13 @@ import MacOS from "~/components/platform/MacOS.astro"
 
 Versioner av RIM betecknas med rubriker på nivå 3. Betydande uppdateringar med flera funktioner för båda plattformarna kommer att delas in i Mac- och Windows-underrubriker på nivå 4.
 
+### 3.4.8
+
+* Implementerar en dialogruta för samtycke från målsidan innan en sessionsinspelning startar under alla nyckelordsbaserade sessioner. Om mål användaren nekar begäran om inspelning avslutas sessionen.
+* Implementerar en bekräftelsedialogruta innan en inspelning stoppas manuellt. Denna dialogruta kan konfigureras så att den inte visas om så önskas.
+* Det är inte längre möjligt att starta en inspelning medan en session är vänd.
+* Implementerar möjligheten att ställa in standardkatalogen för inspelning, tillsammans med flera andra konfigurationsparametrar, via en toml-fil. Se avsnittet om sessionsinspelning för instruktioner om hur du konfigurerar dessa alternativ.
+
 ### 3.4.7
 Denna version introducerar en öppen betaversion av funktionen för sessionsinspelning på båda plattformarna. Funktionen är gratis för alla att använda, och molntjänsten används aldrig för att bearbeta inspelningen. Inspelningarna sparas för närvarande i den kontrollerande användarens lokala videomapp, det vill säga &quot;Videos&quot; i Windows och &quot;Movies&quot; i MacOS.  
 Tveka inte att [skicka feedback till oss](https://getrim.app/feedback) om du stöter på problem när du använder den här funktionen eller om du har kommentarer eller förslag på hur den kan förbättras.

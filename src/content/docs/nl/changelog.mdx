@@ -7,6 +7,13 @@ import MacOS from "~/components/platform/MacOS.astro"
 
 Versies van RIM worden aangeduid met rubrieken op niveau 3. Substantiële updates met meerdere functies voor beide platformen worden onderverdeeld in Mac- en Windows-subrubrieken op niveau 4.
 
+### 3.4.8
+
+* Implementeert een dialoogvenster voor toestemming aan de kant van de doelgroep voordat een sessieopname wordt gestart tijdens sessies op basis van trefwoorden. Als de doelgebruiker het verzoek om opname weigert, wordt de sessie beëindigd.
+* Implementeert een bevestigingsdialoogvenster voordat een opname handmatig wordt gestopt. Dit dialoogvenster kan desgewenst worden geconfigureerd om niet te verschijnen.
+* Het is niet langer mogelijk om een opname te starten terwijl een sessie wordt omgedraaid.
+* Implementeert de mogelijkheid om de standaard opnamemap, samen met verschillende andere configuratieparameters, in te stellen via een toml-bestand. Raadpleeg het gedeelte over sessie-opname voor instructies over hoe u deze opties kunt configureren.
+
 ### 3.4.7
 Deze build introduceert een open bèta van de sessie-opnamefunctie op beide platforms. Deze functie is gratis voor iedereen en de cloudservice wordt nooit gebruikt voor het verwerken van de opname. Opnames worden momenteel opgeslagen in de lokale map Video&#x27;s van de controlerende gebruiker, namelijk &quot;Video&#x27;s&quot; op Windows en &quot;Films&quot; op MacOS.  
 Aarzel niet om [ons feedback te sturen](https://getrim.app/feedback) als u problemen ondervindt bij het gebruik van deze functie, of als u opmerkingen of suggesties heeft over hoe deze kan worden verbeterd.

@@ -5,23 +5,29 @@ title: Trabalhando em uma sessão
 import Windows from "~/components/platform/Windows.astro"
 import MacOS from "~/components/platform/MacOS.astro"
 
-### O que você precisa saber antes de começar
+Coisas que você precisa saber antes de começar
 
-Algumas coisas acontecerão imediatamente após o estabelecimento da conexão.
+Algumas coisas acontecerão imediatamente após a conexão ser estabelecida.
+
 
 <Windows>
-- A janela de controle remoto da sessão será exibida. Essa janela pode ser movida e redimensionada em uma única tela, bem como em uma configuração com vários monitores.
+- A janela de controle remoto para a sessão será exibida. Essa janela pode ser movida e redimensionada em uma única tela, bem como em uma configuração com vários monitores.
 - Você será informado sobre o status do leitor de tela em execução, ou a falta dele, na máquina do cliente.
 - Se o cliente estiver executando um leitor de tela, uma notificação informando ao usuário que a sessão remota foi iniciada fornecerá uma confirmação instantânea de que o áudio do sistema do usuário está funcionando.
 - Um Mac de destino exibirá o assistente de configuração do teclado se for a primeira vez que um controlador se conecta a ele.
-- Isso se aplica ao teclado virtual Karabiner, que escuta os comandos de teclado enviados a ele por um controlador.
-- Sendo assim, você precisará guiar o computador de destino pelo assistente de configuração, pois ele estará escutando os pressionamentos do teclado remoto no processo de identificação, e não o teclado do próprio Mac.
+- Isso é para o teclado virtual Karabiner, que escuta os comandos de teclado enviados a ele por um controlador.
+    - Assim, você vai querer guiar o computador de destino pelo assistente de configuração, pois ele estará ouvindo as teclas pressionadas remotamente no processo de identificação, e não o teclado do próprio Mac.
 - Por último, mas não menos importante, todas as entradas do teclado e do mouse serão imediatamente direcionadas para o computador de destino. Para direcionar o controle de volta para sua máquina, faça uma das seguintes opções:
 - Pressione Windows+Shift+Backspace.
-- Clique com o botão direito do mouse na barra de título da janela RIM.
+    - Clique com o botão direito do mouse na barra de título da janela RIM.
 - Clique com o botão esquerdo do mouse no ícone RIM no meio da barra de título.
-
 </Windows>
+
+
+
+
+
+
 
 <MacOS>
 - A janela de controle remoto da sessão será exibida. Essa janela pode ser movida e redimensionada em uma única tela, bem como em uma configuração com vários monitores.
@@ -35,83 +41,94 @@ Algumas coisas acontecerão imediatamente após o estabelecimento da conexão.
 - Clique com o botão direito do mouse na barra de título da janela RIM.
 - Clique com o botão esquerdo do mouse no ícone RIM no meio da barra de título.
 
+
 </MacOS>
+
 
 ### Zona de controle remoto
 
+
 <Windows>
-Neste ponto, você está pronto para realizar todas as tarefas necessárias no lado do cliente. Se precisar voltar a controlar sua própria máquina, abra o menu RIM e selecione a opção “Minimizar sessão”. Você será levado de volta para sua máquina até voltar para a janela da sessão ou pressionar Windows+Shift+Backspace novamente. Quando você voltar para a janela da sessão, as entradas do teclado e do mouse serão novamente direcionadas para o computador cliente.
+Neste ponto, você está pronto para realizar todas as tarefas necessárias no lado do cliente. Se precisar voltar a controlar sua própria máquina, abra o menu RIM e selecione a opção “Minimizar sessão”. Você será levado de volta à sua máquina até voltar à janela da sessão ou pressionar Windows+Shift+Backspace novamente. Quando você voltar para a janela da sessão, as entradas do teclado e do mouse serão novamente direcionadas para o computador cliente.
+
 </Windows>
 
 
 
 <MacOS>
+
 Neste ponto, você está pronto para realizar todas as tarefas necessárias no lado do cliente. Se precisar voltar a controlar sua própria máquina, abra o menu RIM e selecione a opção “Minimizar sessão”. Você será levado de volta à sua máquina até voltar à janela da sessão ou pressionar Option+Shift+Backspace novamente. Quando você voltar à janela da sessão, as entradas do teclado e do mouse serão novamente direcionadas para o computador cliente.
 </MacOS>
 
+
+
 Quando terminar, o controlador ou o alvo pode acessar o menu RIM e escolher a opção “Desconectar sessão”. Quando a sessão terminar, a máquina alvo receberá uma notificação informando sobre isso.
+
 
 ## O menu RIM
 
-Como mencionado anteriormente, acessar o menu RIM o direciona de volta para sua máquina. Existem várias opções neste menu. Elas incluem:  
+Como mencionado anteriormente, acessar o menu RIM o direciona de volta para sua máquina. Há várias opções neste menu. Elas incluem:  
+
+
 <Windows>
-- Atualizar RIM no destino: força uma atualização do RIM no computador de destino.
-- Essa opção é exibida se a máquina de destino estiver executando uma versão mais antiga do RIM.
+- Atualizar RIM no destino: força uma atualização do RIM no computador de destino
+- Esta opção é exibida se a máquina de destino estiver executando uma versão mais antiga do RIM.
 - Reinstalar o RIM como administrador no destino: essa opção tentará reinstalar o RIM como administrador em um destino Windows, exigindo que o usuário do destino aceite a solicitação de permissão de administrador por conta própria e/ou com a ajuda do departamento de TI da empresa.
-- Minimizar sessão (Windows+Shift+M): traz o controle de volta para sua máquina, conforme descrito acima
+- Minimizar sessão (**Windows+Shift+M**): traz o controle de volta para sua máquina, conforme descrito acima.
 - Transferir arquivo para o destino: aparece se houver um arquivo na área de transferência.
-- Embora esse método alternativo de concluir uma transferência de arquivo esteja sempre disponível, ele só é necessário para transferir arquivos para destinos Mac.
+    - Embora esse método alternativo de concluir uma transferência de arquivo esteja sempre disponível, ele só é necessário para transferir arquivos para destinos Mac.
 - Inverter sessão (**Windows+Shift+F**): permite que seu cliente controle remotamente sua máquina e ouça seu áudio. Como controlador original, você pode reverter a sessão selecionando essa opção uma segunda vez.
 - Iniciar/parar conversa de voz: permite ativar ou desativar o chat de voz para sua sessão.
-- Durante uma sessão não supervisionada, esta opção apresentará uma caixa de diálogo de permissões que o usuário deve estar presente para responder. No entanto, as sessões solicitadas ainda iniciam conversas de voz após a ativação pelo controlador.
-- Iniciar gravação da sessão: inicia a gravação do conteúdo da sessão ativa - mais sobre isso posteriormente.
+- Durante uma sessão autônoma, essa opção apresentará uma caixa de diálogo de permissões que o usuário deve estar presente para responder. No entanto, as sessões solicitadas ainda iniciam conversas de voz após a ativação pelo controlador.
+- Iniciar gravação da sessão: começa a gravar o conteúdo da sessão ativa - mais sobre isso posteriormente.
 - Quando a gravação da sessão está ativada, esta opção é substituída pela seguinte:
 - Pausar/retomar gravação da sessão (alternar)
 - Parar gravação da sessão: encerra e salva a gravação.
-- Iniciar acessibilidade remota: esta opção aparece quando nenhum leitor de tela está em execução no computador remoto. Isso ativará a fala na sua extremidade, mas o cliente não precisará se preocupar em ouvir a fala.
-- Se um leitor de tela (incluindo Acessibilidade Remota) estiver em execução, essa opção se transforma em um encerramento forçado do leitor de tela em execução. Isso é útil quando o leitor de tela do alvo para de responder a ponto de você não conseguir reiniciá-lo normalmente.
+- Iniciar acessibilidade remota: essa opção aparece quando nenhum leitor de tela está em execução no computador remoto. Isso ativará a fala na sua extremidade, mas o cliente não precisará se preocupar em ouvir a fala.
+- Se um leitor de tela (incluindo acessibilidade remota) estiver em execução, essa opção se transforma em um encerramento forçado do leitor de tela em execução. Isso é útil quando o leitor de tela do destino para de responder a ponto de você não conseguir reiniciá-lo normalmente.
 - Silenciar saída de áudio do alvo: permite silenciar a saída de áudio do sistema do computador remoto.
-    - Observe que uma conversa de voz em execução permanecerá ativa enquanto essa configuração estiver em vigor, permitindo que você converse com a pessoa com quem está conectado enquanto o áudio do sistema dela não for audível para você.
+- Observe que uma conversa de voz em execução permanecerá ativa enquanto essa configuração estiver em vigor, permitindo que você converse com a pessoa com quem está conectado enquanto o áudio do sistema dela não é audível para você.
 - Reiniciar e reconectar: permite reiniciar o computador e reconectar automaticamente a sessão.
 - Observe que um alvo Mac não pode iniciar o RIM antes do login devido a limitações da plataforma, principalmente o FileVault.
-    - Assim, o RIM se reconectará assim que o usuário fizer login.
+- Assim, o RIM se reconectará assim que o usuário fizer login.
 - Enviar Control+Alt+Delete: envia essa combinação de teclas para a máquina remota.
-- Uma opção equivalente ainda não foi implementada para alvos Mac.
+    - Uma opção equivalente para isso ainda não foi implementada para alvos Mac.
 - Solicitar acesso sem supervisão ou solicitado: permite enviar uma solicitação de acesso sem supervisão ao computador cliente. Isso é útil se você for um administrador de sistemas e precisar realizar manutenção de rotina ou mesmo para algo tão simples como controlar sua máquina doméstica enquanto estiver em trânsito.
 - Bloquear a máquina de destino: bloqueia a máquina de destino.
 - Exibir detalhes da conexão: fornece informações detalhadas sobre sua conexão, bem como sobre a máquina de destino. As informações incluem:
 - Estatísticas de conexão
-    - Informações sobre o computador, incluindo versão do sistema operacional, RAM disponível, etc.
+- Informações sobre o computador, incluindo versão do sistema operacional, RAM disponível, etc.
 - Processos em execução
 - Pacotes instalados
 - Ferramentas de IA: permite que você converse com vários chatbots voltados para acessibilidade.
-- Esta opção está disponível apenas para controladores que possuem passes profissionais ou estão na comunidade pessoal, suporte de fim de semana ou assinaturas profissionais/empresariais.
+    - Esta opção está disponível apenas para controladores que possuem passes profissionais ou estão na comunidade pessoal, suporte de fim de semana ou assinaturas profissionais/empresariais.
 - Desconectar sessão (**Windows+Shift+D**): encerra a sessão.
-- Lembre-se de que essa opção está disponível para ambos os lados da sessão.
+- Lembre-se de que esta opção está disponível para ambos os lados da sessão.
+
+
 </Windows>
-
-
-
+  
 
 
 <MacOS>
-- Atualizar RIM no destino: força uma atualização do RIM no computador de destino
-- Essa opção é exibida se a máquina de destino estiver executando uma versão mais antiga do RIM.
-- Reinstalar RIM como administrador no destino: esta opção tentará reinstalar o RIM como administrador em um destino Windows, exigindo que o usuário do destino aceite a solicitação de permissão de administrador por conta própria e/ou com a ajuda do departamento de TI da empresa.
+
+- Atualizar RIM no destino: força uma atualização do RIM no computador de destino.
+- Esta opção é exibida se a máquina de destino estiver executando uma versão mais antiga do RIM.
+- Reinstalar RIM como administrador no destino: esta opção tentará reinstalar o RIM como administrador em um destino Windows, exigindo que o usuário de destino aceite a solicitação de permissão de administrador por conta própria e/ou com a ajuda do departamento de TI da empresa.
 - Minimizar sessão (**Option+Shift+M**): traz o controle de volta para sua máquina, conforme descrito acima.
 - Transferir arquivo para o destino: aparece se houver um arquivo na área de transferência.
 - Embora esse método alternativo de concluir uma transferência de arquivo esteja sempre disponível, ele só é necessário para transferir arquivos para destinos Mac.
 - Inverter sessão (**Option+Shift+F**): permite que seu cliente controle remotamente sua máquina e ouça seu áudio. Como controlador original, você pode reverter a sessão selecionando essa opção uma segunda vez.
 - Iniciar/parar conversa de voz: permite ativar ou desativar o chat de voz para sua sessão.
-- Durante uma sessão não supervisionada, esta opção apresentará uma caixa de diálogo de permissões que o usuário deve estar presente para responder. No entanto, as sessões solicitadas ainda iniciam conversas de voz após a ativação pelo controlador.
-- Iniciar gravação da sessão: inicia a gravação do conteúdo da sessão ativa - mais sobre isso posteriormente.
-- Quando a gravação da sessão está ativada, esta opção é substituída pela seguinte:
+    - Durante uma sessão autônoma, essa opção apresentará uma caixa de diálogo de permissões que o usuário deve estar presente para responder. No entanto, as sessões solicitadas ainda iniciam conversas de voz após a ativação pelo controlador.
+- Iniciar gravação da sessão: começa a gravar o conteúdo da sessão ativa - mais sobre isso posteriormente
+- Quando a gravação da sessão está ativada, essa opção é substituída pela seguinte:
 - Pausar/retomar gravação da sessão (alternar)
-- Parar gravação da sessão: encerra e salva a gravação.
-- Iniciar acessibilidade remota: essa opção aparece quando nenhum leitor de tela está em execução no computador remoto. Isso ativará a fala em sua extremidade, mas o cliente não precisará se preocupar em ouvir a fala.
-- Se um leitor de tela (incluindo acessibilidade remota) estiver em execução, essa opção se transforma em um encerramento forçado do leitor de tela em execução. Isso é útil quando o leitor de tela do destino para de responder a ponto de você não conseguir reiniciá-lo normalmente.
+        - Parar gravação da sessão: encerra e salva a gravação.
+- Iniciar acessibilidade remota: essa opção aparece quando nenhum leitor de tela está em execução no computador remoto. Isso ativará a fala na sua extremidade, mas o cliente não precisará se preocupar em ouvir a fala.
+- Se um leitor de tela (incluindo acessibilidade remota) estiver em execução, essa opção se transforma em um encerramento forçado do leitor de tela em execução. Isso é útil quando o leitor de tela do alvo para de responder a ponto de você não conseguir reiniciá-lo normalmente.
 - Silenciar saída de áudio do alvo: permite silenciar a saída de áudio do sistema do computador remoto.
-- Observe que uma conversa de voz em execução permanecerá ativa enquanto essa configuração estiver em vigor, permitindo que você converse com a pessoa com quem está conectado enquanto o áudio do sistema dela fica inaudível para você.
+- Observe que uma conversa de voz em execução permanecerá ativa enquanto essa configuração estiver em vigor, permitindo que você converse com a pessoa com quem está conectado enquanto o áudio do sistema dela não é audível para você.
 - Reiniciar e reconectar: permite reiniciar o computador e reconectar automaticamente a sessão.
 - Observe que um alvo Mac não pode iniciar o RIM antes do login devido a limitações da plataforma, principalmente o FileVault.
 - Assim, em um alvo Mac, o RIM se reconectará assim que o usuário fizer login.
@@ -128,8 +145,9 @@ Como mencionado anteriormente, acessar o menu RIM o direciona de volta para sua 
     - Esta opção está disponível apenas para controladores que possuem passes profissionais ou estão na comunidade pessoal, suporte de fim de semana ou assinaturas profissionais/empresariais.
 - Desconectar sessão (**Option+Shift+D**): encerra a sessão.
 - Lembre-se de que esta opção está disponível para ambos os lados da sessão.
-</MacOS>
 
+
+</MacOS>
 
 
 ### Transferências de arquivos
@@ -140,7 +158,7 @@ O RIM oferece uma maneira simples de transferir arquivos, independentemente da p
 1. Copie o conteúdo selecionado para a área de transferência da maneira usual. Você receberá uma notificação informando que um arquivo está pronto para ser transferido. Você tem duas opções.
 1. **Se o destino for um Mac:**
 - Ative o menu da sessão RIM e clique na opção “Transferir arquivo para o destino”.
-- Após a conclusão da transferência, o Mac de destino irá gerar um diretório temporário contendo o conteúdo transferido. Este conteúdo deve então ser copiado e colado nos diretórios pretendidos.
+- Após a conclusão da transferência, o Mac de destino gerará um diretório temporário contendo o conteúdo transferido. Em seguida, esse conteúdo deve ser copiado e colado nos diretórios pretendidos.
 1. **Se o destino for uma máquina Windows:**
 - Volte para a sessão remota e localize a pasta na máquina de destino onde deseja colar o conteúdo.
 - Por último, mas não menos importante, cole como faria normalmente.
@@ -149,65 +167,121 @@ Observe que o tempo de transferência dependerá inteiramente do tamanho do cont
 
 ### Gravação de sessão
 
-A capacidade de gravação de sessão do RIM permite que você, como controlador, grave convenientemente o conteúdo da sua sessão em um arquivo no seu computador. Esse arquivo pode então ser distribuído posteriormente para a pessoa a quem você está fornecendo suporte remoto. O conteúdo da gravação da sessão incluirá a saída audiovisual do computador de destino, bem como o áudio de uma conversa de voz em andamento.  
+A capacidade de gravação de sessão do RIM permite que você, como controlador, grave convenientemente o conteúdo da sua sessão em um arquivo no seu computador. Esse arquivo pode então ser distribuído posteriormente para a pessoa a quem você está fornecendo suporte remoto. O conteúdo da gravação da sessão incluirá a saída audiovisual do computador de destino, bem como o áudio de uma conversa de voz em andamento.
 Para facilitar a gravação de uma sessão:  
+
 <Windows>
+
 1. Acesse a opção “Iniciar gravação da sessão” no menu da sessão. As seguintes ações ocorrerão como resultado:
-* A gravação começará instantaneamente
-* ambas as partes receberão uma notificação de que a gravação foi iniciada.
-1. Para pausar ou retomar a gravação, acesse a opção “Pausar/retomar gravação da sessão” no menu da sessão.
-* A gravação será pausada ou retomada de acordo
-    * Uma notificação será enviada a ambas as partes
-1. A gravação pode ser interrompida através da opção “Parar gravação da sessão” no menu da sessão.
-* Ambas as partes receberão uma notificação após a conclusão da gravação.
-* A gravação será então salva na pasta “Vídeos” no diretório do usuário. Para maior comodidade, você será automaticamente direcionado para essa pasta pelo Explorer, permitindo que você envie a gravação ao usuário, se desejar.
-* Desconectar a sessão interrompe a gravação da mesma maneira descrita acima.
+* Durante uma sessão por palavra-chave:
+* O usuário de destino receberá uma caixa de diálogo de permissões perguntando se deseja consentir com a gravação da sessão. A entrada do teclado do controlador será suspensa enquanto essa caixa de diálogo estiver exibida.
+* Se o usuário de destino concordar, a gravação será iniciada. Se o usuário alvo recusar a gravação, toda a sessão será encerrada.
+* Para sessões solicitadas/não atendidas:
+* A gravação começará instantaneamente.
+* Independentemente disso, ambas as partes receberão uma notificação de que a gravação foi iniciada assim que ela começar de fato.
+1. Para pausar ou retomar a gravação, acesse a opção “Pausar/Retomar gravação da sessão” no menu da sessão.
+    * A gravação será pausada ou retomada de acordo com a opção selecionada.
+    * Uma notificação será enviada a ambas as partes.
+1. A gravação pode ser interrompida através da opção “Interromper gravação da sessão” no menu da sessão.
+    * Por padrão, você receberá uma caixa de diálogo de confirmação perguntando se deseja interromper a gravação. Essa caixa de diálogo foi projetada para evitar a desativação acidental da gravação da sessão, mas pode ser desativada opcionalmente.
+    * Ambas as partes receberão uma notificação após a conclusão da gravação.
+* A gravação será salva no diretório em que o RIM está configurado para salvar suas gravações (por padrão, essa é a pasta &quot;Vídeos&quot; no diretório do usuário). Para maior conveniência, você será automaticamente direcionado para essa pasta pelo Explorer, permitindo que você envie a gravação ao usuário, se desejar.
+* Observe que desconectar a sessão interrompe a gravação automaticamente.
+
+
 </Windows>
 
 
 
-
 <MacOS>
+
 1. Acesse a opção “Iniciar gravação da sessão” no menu da sessão. As seguintes ações ocorrerão como resultado:
-* A gravação começará instantaneamente
-    * ambas as partes receberão uma notificação de que a gravação foi iniciada.
+* Durante uma sessão de palavra-chave:
+* O usuário de destino receberá uma caixa de diálogo de permissões perguntando se deseja consentir com a gravação da sessão. A entrada do teclado do controlador será suspensa enquanto essa caixa de diálogo estiver exibida.
+* Se o usuário de destino concordar, a gravação será iniciada. Se o usuário alvo recusar a gravação, toda a sessão será encerrada.
+* Para sessões solicitadas/não supervisionadas:
+* A gravação começará instantaneamente.
+* Independentemente disso, ambas as partes receberão uma notificação de que a gravação foi iniciada assim que ela começar de fato.
 1. Para pausar ou retomar a gravação, acesse a opção “Pausar/Retomar gravação da sessão” no menu da sessão.
-* A gravação será pausada ou retomada de acordo com sua escolha
-* Uma notificação será enviada a ambas as partes
+    * A gravação será pausada ou retomada de acordo com a opção selecionada.
+    * Uma notificação será enviada a ambas as partes.
 1. A gravação pode ser interrompida através da opção “Interromper gravação da sessão” no menu da sessão.
+    * Por padrão, você receberá uma caixa de diálogo de confirmação perguntando se deseja interromper a gravação. Essa caixa de diálogo foi projetada para evitar a desativação acidental da gravação da sessão, mas pode ser desativada opcionalmente.
     * Ambas as partes receberão uma notificação após a conclusão da gravação.
-* A gravação será salva na pasta “Filmes” no diretório do usuário. Para maior comodidade, você será automaticamente direcionado para essa pasta pelo Finder, permitindo que você envie a gravação ao usuário, se desejar.
-* Desconectar a sessão interrompe a gravação da mesma maneira descrita acima.
+* A gravação será salva no diretório em que o RIM salva suas gravações (por padrão, essa é a pasta “Filmes” no diretório do usuário). Para maior conveniência, você será automaticamente direcionado para essa pasta pelo Finder, permitindo que você envie a gravação ao usuário, se desejar.
+* Observe que desconectar a sessão interrompe a gravação automaticamente.
+
 
 </MacOS>
+
 
 
 As gravações são um recurso totalmente gratuito, disponível para qualquer usuário em qualquer nível. Além disso, as gravações são processadas inteiramente localmente, sem qualquer envolvimento do serviço em nuvem.
 
+#### Observação sobre o Módulo de Acessibilidade Remota
+
+Como o Módulo de Acessibilidade Remota envia sua fala para sua cópia do NVDA em execução, o RIM deve se adaptar a isso para capturar a gravação. Portanto, sempre que a acessibilidade remota estiver ativa durante uma gravação, o RIM inicia uma captura de toda a saída de áudio do seu sistema. Isso permite que a fala ouvida através do módulo de acessibilidade remota seja capturada exatamente como foi ouvida durante a sessão. Embora isso possa resultar em alguns sons de notificação do seu computador controlador sendo capturados na gravação, isso não fará com que o áudio do computador de destino seja duplicado.
+
+Configuração avançada para gravações de sessão
+
+O RIM apresenta várias opções de configuração avançada para gravação de sessão. Isso inclui a capacidade de iniciar gravações automaticamente no início da sessão, armazenar gravações em um caminho alternativo (por exemplo, um compartilhamento de rede) e determinar o estado da caixa de diálogo de confirmação ao interromper uma gravação. Atualmente, a única maneira de modificar essas configurações é por meio de um arquivo de configuração, portanto, o procedimento está disponível apenas em inglês.  
+
+
+<Windows>
+
+O arquivo de configuração pode ser acessado através da caixa de diálogo Executar, colando o seguinte:  
+%appdata%\remote-incident-manager\config.toml
+</Windows>
+  
+
+
+
+<MacOS>
+O arquivo config.toml estará em $HOME/Library/Application Support/remote-incident-manager
+
+</MacOS>
+
+Uma vez dentro do arquivo de configuração, as seguintes opções estarão disponíveis para você:
+*<span translate="no">directory</span> (Diretório de gravação): Define o diretório para armazenar gravações.
+* As barras invertidas devem ser escapadas corretamente no caso de diretórios do Windows.
+*<span translate="no">auto_start</span> (Iniciar gravação na sessão): Determina se a gravação da sessão começa imediatamente após o início da sessão. Isso é definido como <span translate="no">false</span> por padrão.  
+* <span translate="no">suppress_stop_confirmation</span>: controla se a caixa de diálogo de confirmação é exibida ao interromper manualmente uma gravação. O padrão é <span translate="no">false</span>.
+* Observe que desconectar uma sessão sempre interromperá a gravação sem a confirmação, independentemente dessa configuração.
+
+Depois de salvar a configuração, as alterações entrarão em vigor nas sessões subsequentes. Não é necessário reiniciar o aplicativo.
+
+
 Módulo de acessibilidade remota
 
-Esteja você auxiliando um usuário que não utiliza um leitor de tela ou diagnosticando um problema com um leitor de tela com defeito, o RIM está totalmente preparado para ajudá-lo.
+Se você estiver auxiliando um usuário que não utiliza um leitor de tela ou diagnosticando um problema com um leitor de tela com defeito, o RIM está totalmente preparado para ajudá-lo.
+
+
 <Windows>
 O módulo de acessibilidade remota consiste em dois componentes:
 - Um complemento para o leitor de tela NVDA que permite que o leitor de tela receba a saída do computador remoto
-- Um módulo de acessibilidade independente iniciado no computador de destino a pedido do controlador. A vantagem dessa abordagem é que o usuário final não ouve a fala em seu computador enquanto você o controla. Em vez disso, o Módulo de Acessibilidade Remota encaminha a saída de voz para a cópia em execução do NVDA no lado do controlador. Dessa forma, você pode ajudar um usuário final de maneira acessível, sem que ele precise instalar ou mesmo baixar um leitor de tela.
+- Um módulo de acessibilidade independentecontido, iniciado no computador de destino a pedido do controlador. A vantagem dessa abordagem é que o usuário final não ouve a fala em seu computador enquanto você o controla. Em vez disso, o Módulo de Acessibilidade Remota encaminha a saída de fala para a cópia em execução do NVDA no lado do controlador. Dessa forma, você pode ajudar um usuário final de maneira acessível, sem que ele precise instalar ou mesmo baixar um leitor de tela.
 
 ### Procedimento de configuração
-Para a inicialização inicial do módulo de acessibilidade, aqui está o que você precisa fazer:
+Para a inicialização inicial do módulo de acessibilidade, eis o que você precisa fazer:
 1. Conecte-se a um computador que não tenha um leitor de tela em execução.
 1. Se o NVDA estiver em execução, será solicitado que você instale um complemento que permitirá que sua cópia do NVDA se comunique com o computador remoto durante a sessão. Aceite as solicitações de instalação e aguarde a reinicialização do NVDA.
-1. A esta altura, o módulo de acessibilidade remota estará totalmente inicializado e você ouvirá a saída de voz enquanto controla o computador remoto. Para silenciar temporariamente a saída de voz, basta pressionar Insert ou Capslock+S uma vez para desativá-la e, em seguida, pressionar esse comando duas vezes para reativá-la.
+1. A essa altura, o módulo de acessibilidade remota estará totalmente inicializado e você ouvirá a saída de voz enquanto controla o computador remoto. Para silenciar temporariamente a saída de voz, basta pressionar Insert ou Capslock+S uma vez para desativá-la e, em seguida, pressionar esse comando duas vezes para reativá-la.
 
-A partir deste ponto, se você estiver executando um leitor de tela no computador de controle, o módulo de acessibilidade remota será iniciado automaticamente durante as sessões remotas nas quais o computador remoto não tiver um leitor de tela em execução. Caso você esteja executando um leitor de tela diferente do NVDA, o RIM desativará esse leitor de tela e, em seguida, mudará para o NVDA. Se você precisar interromper o módulo de acessibilidade remota na máquina remota para iniciar outro leitor de tela, basta acessar a opção “Interromper acessibilidade remota” no menu RIM.
+A partir deste ponto, se você estiver executando um leitor de tela no computador controlador, o módulo de acessibilidade remota será iniciado automaticamente durante as sessões remotas nas quais o computador remoto não tiver um leitor de tela em execução. Caso você esteja executando um leitor de tela diferente do NVDA, o RIM desativará esse leitor de tela e, em seguida, mudará para o NVDA. Se você precisar interromper o módulo de acessibilidade remota na máquina remota para iniciar outro leitor de tela, basta acessar a opção “Interromper acessibilidade remota” no menu RIM.  
+
 </Windows>
+
+
 <MacOS>
-O módulo de acessibilidade remota é uma configuração especial iniciada no Mac de destino a pedido de um controlador Windows ou Mac. A vantagem dessa abordagem é que o usuário final não ouve a fala em seu computador enquanto você o controla. Em vez disso, o Módulo de Acessibilidade Remota encaminha a saída de voz para o sistema de voz no lado do controlador. Dessa forma, você pode ajudar um usuário final de maneira acessível, sem que ele precise ativar um leitor de tela. Se você estiver executando o VoiceOver no Mac controlador, o módulo de acessibilidade remota será iniciado automaticamente durante as sessões remotas nas quais o computador remoto não tiver um leitor de tela em execução.
+
+O módulo de acessibilidade remota é uma configuração especial iniciada no Mac de destino a pedido de um controlador Windows ou Mac. A vantagem dessa abordagem é que o usuário final não ouve a fala em seu computador enquanto você o controla. Em vez disso, o Módulo de Acessibilidade Remota encaminha a saída de fala para o sistema de fala no lado do controlador. Dessa forma, você pode ajudar um usuário final de maneira acessível, sem que ele precise ativar um leitor de tela. Se você estiver executando o VoiceOver no Mac controlador, o módulo de acessibilidade remota será iniciado automaticamente durante as sessões remotas nas quais o computador remoto não tiver um leitor de tela em execução.
 </MacOS>
+  
 
 ## Reiniciando e reconectando
 
 Esteja você instalando atualizações do sistema ou tentando resolver um travamento do sistema, o RIM oferece suporte durante o processo de reinicialização. Selecionar a opção “Reiniciar e reconectar” no menu RIM permitirá que você execute uma reinicialização normal ou uma reinicialização de emergência, dependendo do estado em que o computador se encontra. Enquanto o computador estiver reiniciando, o RIM informará que tentativas de reconexão estão sendo feitas.
-Observe que, se o computador for reiniciado por uma instalação de software ou manualmente da maneira usual, será perguntado se você deseja reconectar a sessão. Outra observação importante é que, em ambos os casos, os destinos Mac só serão reconectados depois que o usuário fizer login. Isso se deve ao fato de que o RIM não pode iniciar automaticamente na tela de login devido a limitações da plataforma, principalmente a criptografia de disco FileVault.
+Observe que, se o computador for reiniciado por uma instalação de software ou manualmente da maneira usual, será perguntado se você deseja reconectar a sessão. Outro ponto importante é que, em ambos os casos, os destinos Mac só se reconectarão depois que o usuário fizer login. Isso se deve ao fato de que o RIM não pode iniciar automaticamente na tela de login devido a limitações da plataforma, principalmente a criptografia de disco FileVault.
 
 ### Acesso sem supervisão ou solicitado
 
@@ -223,34 +297,34 @@ Existem algumas maneiras de configurar máquinas para acesso não supervisionado
     1. Solicitado: essa configuração apresenta ao usuário um prompt informando que você está se conectando à máquina dele. Ele precisará pressionar Option+Shift+Y no macOS ou Windows+Shift+Y no Windows, caso deseje aceitar a conexão.
 1. Será solicitado que você dê um nome a essa máquina. Digite um nome pessoal para a máquina ou, se aplicável, o ID da máquina conforme aparece em seu grupo de trabalho.
 1. Pressione Enter.
-1. Na máquina cliente, uma caixa de diálogo será exibida perguntando ao usuário se ele concorda com a configuração do computador para o acesso solicitado. Se ele responder sim, você receberá um aviso informando que o acesso foi aprovado.  
+1. Na máquina cliente, uma caixa de diálogo será exibida perguntando ao usuário se ele concorda com a configuração do computador para o acesso solicitado. Se ele responder que sim, você receberá um aviso informando que o acesso foi aprovado.  
 
 ##### Observação para titulares de contas pessoais não supervisionadas
 
 Se você tiver usado todos os slots de máquina alocados para sua conta, o RIM não executará a solicitação. Nessa situação, você tem duas opções, ambas possíveis através do Painel do RIM:
-1. Cancele o registro de uma de suas máquinas, liberando um slot.
+1. Desregistre uma de suas máquinas, liberando um slot.
 1. Atualize sua assinatura com mais slots.
 
-Registrando uma máquina em sua conta RIM
+#### Registrando uma máquina em sua conta RIM
 
-Caso deseje registrar uma de suas próprias máquinas para acesso não supervisionado, você pode fazê-lo sem precisar iniciar uma sessão interativa com a máquina. 
+Caso deseje registrar uma de suas próprias máquinas para acesso não supervisionado, você pode fazê-lo sem precisar iniciar uma sessão interativa com a máquina.
 1. Inicie o RIM no modo Receber Ajuda.
 1. Clique no botão “Adicionar esta máquina à sua conta RIM”.
 1. Digite seu e-mail e clique em Avançar.
 1. Aguarde o código de login de duas etapas, insira-o e você estará conectado.
 1. Será perguntado que tipo de acesso você deseja configurar para esta máquina. Suas opções são:
 1. Sem supervisão: permite que as sessões sejam iniciadas sem qualquer intervenção do usuário final.
-1. Solicitado: esta configuração apresenta ao usuário uma mensagem informando que você está se conectando à máquina dele.
-1. Dê um nome ao computador e ative o botão “Adicionar computador”.
-1. O computador será registrado na sua conta, o que permitirá que qualquer computador controlador conectado à sua conta RIM se conecte a este computador.
+    1. Solicitado: essa configuração apresenta ao usuário uma mensagem informando que você está se conectando à máquina dele.
+1. Dê um nome à máquina e ative o botão “Adicionar máquina”.
+1. A máquina será registrada na sua conta, o que permitirá que qualquer máquina controladora conectada à sua conta RIM se conecte a essa máquina.
 
-##### Observação para titulares de contas pessoais sem supervisão
+##### Observação para titulares de contas pessoais não supervisionadas
 
-Se você tiver usado todos os slots de máquina alocados para sua conta, a RIM não executará a solicitação. Nessa situação, você tem duas opções, ambas possíveis através do Painel da RIM:
-1. Desregistre uma de suas máquinas, liberando um espaço.
-1. Atualize sua assinatura com mais espaços.
+Se você tiver usado todos os slots de máquina alocados para sua conta, o RIM não executará a solicitação. Nessa situação, você tem duas opções, ambas possíveis através do Painel do RIM:
+1. Desregistre uma de suas máquinas, liberando um slot.
+1. Atualize sua assinatura com mais slots.
 
-#### Conectando-se
+Conectando-se
 
 Agora que registramos a máquina para acesso não supervisionado, veja como iniciaremos uma sessão.
 1. Inicie o RIM no modo controlador.
@@ -259,27 +333,31 @@ Agora que registramos a máquina para acesso não supervisionado, veja como inic
 
 Se a máquina de destino estiver configurada para acesso solicitado, o usuário final receberá uma solicitação. Depois que ele responder sim, você estará conectado. Se a sessão for autônoma, você será conectado imediatamente e direcionado para a zona de controle remoto.
 
-Observação: as conversas de voz exigem que o usuário de destino as aprove durante sessões totalmente não supervisionadas. No entanto, isso não é necessário para sessões solicitadas.
+Observação: as conversas de voz exigem que o usuário de destino as aprove durante sessões totalmente autônomas. No entanto, isso não é necessário para sessões solicitadas.
 
-Criando um atalho para uma sessão não supervisionada
+#### Criando um atalho para uma sessão não assistida
 
-Para maior conveniência, você pode criar atalhos na área de trabalho que permitem iniciar automaticamente sessões não supervisionadas. Para fazer isso:
-1. Acesse a lista de computadores não supervisionados e selecione aquele para o qual deseja criar um atalho.
+Para maior conveniência, você pode criar atalhos na área de trabalho que permitem iniciar automaticamente sessões não assistidas. Para fazer isso:
+1. Acesse a lista de computadores não assistidos e selecione aquele para o qual deseja criar um atalho.
 1. Clique no botão “Criar atalho”.
 1. Um atalho será adicionado automaticamente à sua área de trabalho.
 
-Agora, ao ativar esse atalho, você será direcionado automaticamente para a sessão remota ou enviará uma solicitação para o computador do usuário, que poderá aceitá-la.
+Agora, quando você ativar esse atalho, você será direcionado automaticamente para a sessão remota ou enviará uma solicitação para a máquina do usuário, que poderá aceitá-la.
+
 
 <Windows>
 ##### Mais maneiras de usar atalhos de sessão não assistida
 
 Os atalhos de sessão não supervisionada, como qualquer outro atalho, podem ter teclas de atalho globais associadas a eles. Isso pode ser extremamente útil se você for um técnico de manutenção que gerencia vários computadores em um grupo de trabalho. Por exemplo, se o seu grupo de trabalho consistir em 6 computadores nos quais você realiza manutenção de rotina, você pode configurar Alt+Control+1 a 6 como teclas de atalho para cada máquina respectiva. Isso deve acelerar significativamente o seu fluxo de trabalho.
-Além disso, você pode abrir uma sessão autônoma pela caixa Executar se copiar o atalho para o seu diretório de usuário. Depois de copiar o atalho, você pode iniciar uma sessão autônoma digitando seu-nome-de-sessão.url na caixa Executar.
+Além disso, você pode abrir uma sessão autônoma por meio da caixa Executar se copiar o atalho para o diretório do usuário. Depois de copiar o atalho, você pode iniciar uma sessão autônoma digitando your-session-name.url na caixa Executar.
+
 </Windows>
+
 
 #### Revogando o acesso não supervisionado
 
 Se você não quiser mais que sua máquina seja controlada de forma não supervisionada, pode revogar o acesso do controlador. Você não precisa estar em uma sessão para fazer isso.
+
 
 <Windows>
 1. Acesse o ícone do Gerenciador de Incidentes Remotos na bandeja do sistema.
@@ -288,15 +366,20 @@ Se você não quiser mais que sua máquina seja controlada de forma não supervi
 1. Selecione a opção “Revogar acesso não supervisionado”.
 1. Você chegará a uma lista de computadores. Selecione aquele que deseja revogar.
 1. Será perguntado se você deseja revogar a máquina. Responda sim.  
+
 </Windows>
+
+
 <MacOS>
+
 1. Acesse o ícone Gerenciador de incidentes remotos em seus menus extras/status.
 1. Se estiver usando o VoiceOver, pressione VO+M duas vezes e localize o ícone do menu Gerenciador de incidentes remotos.
-1. Clique neste ícone ou pressione VO+Espaço.  
+1. Clique neste ícone ou pressione VO+Espaço.
 1. Selecione a opção “Revogar acesso não supervisionado”.
 1. Você chegará a uma lista de computadores, selecione aquele que deseja revogar.
 1. Será perguntado se você deseja revogar a máquina; responda sim.
-</MacOS>  
+</MacOS>
+  
 
 É isso! O controlador receberá uma mensagem informando que esta máquina não está mais disponível para acesso não supervisionado. Caso precisem de acesso não supervisionado novamente, eles podem reiniciar o procedimento para solicitar permissão para acesso não supervisionado, conforme descrito acima.
 
@@ -315,9 +398,9 @@ Cada bot será aberto em uma janela separada. Embora cada bot tenha suas própri
 
 #### Isenções de responsabilidade
 
-O recurso Ferramentas de IA do Remote Incident Manager (RIM) fornece uma interface acessível para utilizar o Pneuma Solutions RIMBot e outros serviços de terceiros. A Pneuma Solutions isenta-se expressamente de todas as garantias, expressas ou implícitas, relativas à confiabilidade, disponibilidade ou suporte a longo prazo dessas ferramentas de terceiros. As ferramentas designadas como beta, incluindo aquelas desenvolvidas pela Pneuma Solutions, serão claramente identificadas como tal na interface Ferramentas de IA do aplicativo RIM ou em seu painel associado.
+O recurso Ferramentas de IA do Remote Incident Manager (RIM) fornece uma interface acessível para utilizar o RIMBot da Pneuma Solutions e outros serviços de terceiros. A Pneuma Solutions se isenta expressamente de todas as garantias, expressas ou implícitas, relativas à confiabilidade, disponibilidade ou suporte de longo prazo dessas ferramentas de terceiros. As ferramentas designadas como beta, incluindo aquelas desenvolvidas pela Pneuma Solutions, serão claramente identificadas como tal na interface do AI Tools do aplicativo RIM ou em seu painel associado.
 
-O chatbot de suporte RIMBot é parcialmente treinado usando dados disponíveis publicamente que abrangem várias tecnologias. Esse treinamento é realizado para aprimorar a capacidade do bot de fornecer respostas precisas e úteis, ao mesmo tempo em que cumpre os padrões de direitos autorais e privacidade. A Pneuma Solutions se esforça para garantir que as respostas do bot mantenham um grau razoável de precisão. No entanto, devido às limitações inerentes aos grandes modelos de linguagem, a Pneuma Solutions não pode garantir que todas as respostas serão totalmente precisas.
+O chatbot de suporte RIMBot é parcialmente treinado usando dados disponíveis publicamente que abrangem várias tecnologias. Esse treinamento é realizado para aprimorar a capacidade do bot de fornecer respostas precisas e úteis, respeitando os padrões de direitos autorais e privacidade. A Pneuma Solutions se esforça para garantir que as respostas do bot mantenham um grau razoável de precisão. No entanto, devido às limitações inerentes aos grandes modelos de linguagem, a Pneuma Solutions não pode garantir que todas as respostas serão totalmente precisas.
 
 Embora tenham sido realizados testes extensivos para garantir a segurança e a confiabilidade do bot, podem ocorrer imprecisões. No caso de uma resposta comprovadamente incorreta, os usuários são incentivados a relatar o problema, fornecendo uma cópia detalhada do log de chat relevante por meio do aplicativo RIM ou da nossa [página de contato](https://pneumasolutions.com/contact/).
 

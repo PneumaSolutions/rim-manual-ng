@@ -7,6 +7,13 @@ import MacOS from "~/components/platform/MacOS.astro"
 
 As versões da RIM serão indicadas por títulos no nível 3. Atualizações substanciais com vários recursos para ambas as plataformas serão divididas em subtítulos para Mac e Windows no nível 4.
 
+### 3.4.8
+
+* Implementa uma caixa de diálogo de consentimento do lado do alvo antes do início de uma gravação de sessão durante qualquer sessão baseada em palavras-chave. Caso o usuário alvo recuse a solicitação de gravação, a sessão será encerrada.
+* Implementa uma caixa de diálogo de confirmação antes de interromper manualmente uma gravação. Essa caixa de diálogo pode ser configurada para não aparecer, se desejado.
+* Não é mais possível iniciar uma gravação enquanto uma sessão está sendo alternada.
+* Implementa a capacidade de definir o diretório de gravação padrão, juntamente com vários outros parâmetros de configuração, por meio de um arquivo toml. Consulte a seção sobre gravação de sessão para obter instruções sobre como configurar essas opções.
+
 ### 3.4.7
 Esta versão apresenta uma versão beta aberta do recurso de gravação de sessão em ambas as plataformas. Este recurso é gratuito para qualquer pessoa usar, e o serviço em nuvem nunca é utilizado para processar a gravação. Atualmente, as gravações são salvas na pasta Vídeos local do usuário controlador, que é “Vídeos” no Windows e “Filmes” no MacOS, respectivamente.  
 Não hesite em [nos enviar seus comentários](https://getrim.app/feedback) caso encontre algum problema ao usar esse recurso ou se tiver comentários ou sugestões sobre como ele pode ser melhorado.

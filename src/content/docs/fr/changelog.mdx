@@ -7,6 +7,13 @@ import MacOS from "~/components/platform/MacOS.astro"
 
 Les versions de RIM seront désignées par des rubriques de niveau 3. Les mises à jour substantielles comportant plusieurs fonctionnalités pour les deux plates-formes seront divisées en sous-titres Mac et Windows au niveau 4.
 
+### 3.4.8
+
+* Implémente une boîte de dialogue de consentement côté cible avant le début d&#x27;un enregistrement de session lors de toute session basée sur des mots-clés. Si l&#x27;utilisateur cible refuse la demande d&#x27;enregistrement, la session prend fin.
+* Implémente une boîte de dialogue de confirmation avant l&#x27;arrêt manuel d&#x27;un enregistrement. Cette boîte de dialogue peut être configurée pour ne pas s&#x27;afficher si vous le souhaitez.
+* Il n&#x27;est plus possible de démarrer un enregistrement pendant qu&#x27;une session est basculée.
+* Implémente la possibilité de définir le répertoire d&#x27;enregistrement par défaut, ainsi que plusieurs autres paramètres de configuration, via un fichier toml. Reportez-vous à la section sur l&#x27;enregistrement de session pour obtenir des instructions sur la configuration de ces options.
+
 ### 3.4.7
 Cette version introduit une bêta ouverte de la fonctionnalité d&#x27;enregistrement de session sur les deux plateformes. Cette fonctionnalité est gratuite pour tous et le service cloud n&#x27;est jamais utilisé pour traiter l&#x27;enregistrement. Les enregistrements sont actuellement sauvegardés dans le dossier Vidéos local de l&#x27;utilisateur qui contrôle la session, à savoir « Vidéos » sous Windows et « Films » sous MacOS.  
 N&#x27;hésitez pas à [nous envoyer vos commentaires](https://getrim.app/feedback) si vous rencontrez des problèmes lors de l&#x27;utilisation de cette fonctionnalité ou si vous avez des remarques ou des suggestions pour l&#x27;améliorer.

@@ -7,6 +7,14 @@ import MacOS from "~/components/platform/MacOS.astro"
 
 Die RIM-Versionen werden durch Überschriften auf Ebene 3 gekennzeichnet. Wesentliche Aktualisierungen mit mehreren Funktionen für beide Plattformen werden in Mac- und Windows-Unterüberschriften auf Ebene 4 unterteilt.
 
+### 3.4.8
+
+* Implementiert einen Dialog zur Einholung der Zustimmung des Zielbenutzers vor Beginn einer Sitzungsaufzeichnung während einer keywordbasierten Sitzung. Lehnt der Zielbenutzer die Aufzeichnung ab, wird die Sitzung beendet.
+* Implementiert einen Bestätigungsdialog vor dem manuellen Beenden einer Aufzeichnung. Dieser Dialog kann auf Wunsch so konfiguriert werden, dass er nicht angezeigt wird.
+* Es ist nicht mehr möglich, eine Aufzeichnung zu starten, während eine Sitzung umgeschaltet wird.
+* Implementiert die Möglichkeit, das Standardverzeichnis für Aufzeichnungen sowie mehrere andere Konfigurationsparameter über eine TOML-Datei festzulegen. Anweisungen zum Konfigurieren dieser Optionen finden Sie im Abschnitt über Sitzungsaufzeichnungen.
+
+
 ### 3.4.7
 Diese Version führt eine offene Beta-Version der Sitzungsaufzeichnungsfunktion auf beiden Plattformen ein. Diese Funktion kann von jedem kostenlos genutzt werden, und der Cloud-Dienst wird niemals für die Verarbeitung der Aufzeichnung verwendet. Die Aufzeichnungen werden derzeit im lokalen Videobereich des steuernden Benutzers gespeichert, d. h. unter „Videos” bei Windows und „Movies” bei MacOS.  
 Bitte zögern Sie nicht, uns Feedback zu senden (https://getrim.app/feedback), wenn Sie bei der Verwendung dieser Funktion auf Probleme stoßen oder wenn Sie Kommentare oder Vorschläge zur Verbesserung haben.

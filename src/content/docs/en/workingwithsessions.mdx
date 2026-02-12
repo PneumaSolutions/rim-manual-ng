@@ -141,38 +141,73 @@ Note that the transfer time will depend entirely on the size of the content bein
 
 ### Session Recording
 
-RIM's  session recording ability allows you, as the controller, to conveniently record the content of your session to a file on your computer. This file can then be later distributed to the individual to which you are providing remote support. The session recording's contents will include the audiovisual output of the target computer, as well as the audio from a running voice conversation.  
+RIM's  session recording ability allows you, as the controller, to conveniently record the content of your session to a file on your computer. This file can then be later distributed to the individual to which you are providing remote support. The session recording's contents will include the audiovisual output of the target computer, as well as the audio from a running voice conversation.
 To facilitate a session recording:  
 <Windows>
-1. Access the "Start Session Recording" option off of the session menu. The following actions will occur as a result:
-    * The recording will instantly commense
-    * both parties will receive a notification that the recording has started.
+1. Access the "Start Session Recording" option off the session menu. The following actions will occur as a result:
+    * During a keyword session:
+        * The target user will get a permissions dialog asking if they wish to consent to the session being recorded. The controller's keyboard input will be suspended while this dialog appears.
+        * If the target user agrees, then recording begins. If the target user denies recording, then the entire session terminates.
+    * For prompted/unattended sessions:
+        * The recording will instantly commense
+    * Regardless, both parties will receive a notification that the recording has started once recording initiates in earnest.
 1. To pause or resume the recording, access the "Pause/Resume Session Recording" toggle off the session menu.
     * The recording will be paused or resumed accordingly
     * A notification will be delivered to both parties as such
 1. The recording can be stopped via the "Stop Session Recording" option off the session menu.
+    * By default, you will receive a confirmation dialog asking if you wish to stop the recording. This dialog is designed to prevent accidental deactivation of the session recording, however it can optionally be disabled.
     * Both parties will receive a notification following completion of the recording.
-    * The recording will then be saved to the "Videos" folder in your user directory. For added convenience, you will be automatically dropped into this folder via Explorer, allowing  you to send the recording to the user if desired.
-    * Disconnecting the session stops the recording in the same manner described above.
+    * The recording will then be saved to the directory in which RIM is configured to save your recordings (This is the "Videos" folder in your user directory by default). For added convenience, you will be automatically dropped into this folder via Explorer, allowing  you to send the recording to the user if desired.
+    * Note that disconnecting the session stops the recording automatically.
 
 </Windows>
 
 <MacOS>
 1. Access the "Start Session Recording" option off of the session menu. The following actions will occur as a result:
-    * The recording will instantly commense
-    * both parties will receive a notification that the recording has started.
+    * During a keyword session:
+        * The target user will get a permissions dialog asking if they wish to consent to the session being recorded. The controller's keyboard input will be suspended while this dialog appears.
+        * If the target user agrees, then recording begins. If the target user denies recording, then the entire session terminates.
+    * For prompted/unattended sessions:
+        * The recording will instantly commense
+    * Regardless, both parties will receive a notification that the recording has started once recording initiates in earnest.
 1. To pause or resume the recording, access the "Pause/Resume Session Recording" toggle off the session menu.
     * The recording will be paused or resumed accordingly
     * A notification will be delivered to both parties as such
 1. The recording can be stopped via the "Stop Session Recording" option off the session menu.
+    * By default, you will receive a confirmation dialog asking if you wish to stop the recording. This dialog is designed to prevent accidental deactivation of the session recording, however it can optionally be disabled.
     * Both parties will receive a notification following completion of the recording.
-    * The recording will then be saved to the "Movies" folder in your user directory. For added convenience, you will be automatically dropped into this folder via Finder, allowing  you to send the recording to the user if desired.
-    * Disconnecting the session stops the recording in the same manner described above.
+    * The recording will then be saved to the directory in which RIM saves your recordings (This is the "Movies" folder in your user directory by default). For added convenience, you will be automatically dropped into this folder via Finder, allowing  you to send the recording to the user if desired.
+    * Note that disconnecting the session stops the recording automatically.
 
 </MacOS>
 
 
 Recordings are a completely free feature, available to any user on any tier. In addition, recordings are processed entirely locally, without any involvement from the cloud service.
+
+#### Note regarding the Remote Accessibility Module
+
+Since the Remote Accessibility Module outputs its speech to your running copy of NVDA, RIM must accommodate for that in order to capture this speech on a recording. Therefore, whenever remote accesibility is active during a recording, RIM initiates a capture of your system's full audio output. This allows the speech heard through the remote accessibility module to be captured exactly as it was heard during the session. While this may result in some notification sounds from your controlling computer being caught in the recording, this will not cause any audio from the target computer to be doubled.
+
+#### Advanced Configuration for Session Recordings
+
+RIM features a number of advanced configuration options for session recording. These include the ability to auto-start recordings upon session initiation, store recordings in an alternate path (I.E. a network share), and determine the state of the confirmation dialog when stopping a recording. Currently, the only way to modify these settings is via a configuration file, thus the procedure is only available in English.  
+
+<Windows>
+The configuration file can be accessed via the run dialog by pasting the following:  
+%appdata%\remote-incident-manager\config.toml  
+</Windows>
+<MacOS>  
+The config.toml file will be under $HOME/Library/Application Support/remote-incident-manager
+</MacOS>
+Once inside the configuration file, the following options will be available to you:
+* <span translate="no">directory</span>: Sets the directory for storing recordings.
+	* Backslashes must be properly escaped in the case of Windows directories.  
+* <span translate="no">auto_start</span>:  Determines whether session recording starts immediately upon session initiation. This is set to <span translate="no">false</span> by default.  
+* <span translate="no">suppress_stop_confirmation</span>: Controls whether the confirmation dialog is shown when manually stopping a recording. Default is <span translate="no">false</span>.
+	* Note that disconnecting a session will always stop recording without the confirmation, irrespective of this setting.
+
+Once you save the configuration, the changes will take effect for subsequent sessions. There is no need to restart the application.
+
 
 ### Remote Accessibility Module
 

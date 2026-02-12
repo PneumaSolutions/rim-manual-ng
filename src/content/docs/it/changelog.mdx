@@ -7,6 +7,13 @@ import MacOS from "~/components/platform/MacOS.astro"
 
 Le versioni di RIM sono indicate da titoli di livello 3. Gli aggiornamenti sostanziali con diverse funzioni per entrambe le piattaforme saranno suddivisi in sottovoci per Mac e Windows al livello 4.
 
+### 3.4.8
+
+* Implementa una finestra di dialogo di consenso sul lato destinatario prima dell&#x27;inizio della registrazione di una sessione durante qualsiasi sessione basata su parole chiave. Se l&#x27;utente destinatario rifiuta la richiesta di registrazione, la sessione termina.
+* Implementa una finestra di dialogo di conferma prima di interrompere manualmente una registrazione. Se lo si desidera, è possibile configurare questa finestra di dialogo in modo che non venga visualizzata.
+* Non è più possibile avviare una registrazione mentre una sessione è capovolta.
+* Implementa la possibilità di impostare la directory di registrazione predefinita, insieme a diversi altri parametri di configurazione, tramite un file toml. Fare riferimento alla sezione sulla registrazione delle sessioni per istruzioni su come configurare queste opzioni.
+
 ### 3.4.7
 Questa versione introduce una beta aperta della funzionalità di registrazione delle sessioni su entrambe le piattaforme. Questa funzionalità è gratuita per tutti e il servizio cloud non viene mai utilizzato per l&#x27;elaborazione delle registrazioni. Le registrazioni vengono attualmente salvate nella cartella Video locale dell&#x27;utente che esegue il controllo, ovvero &quot;Video&quot; su Windows e &quot;Film&quot; su MacOS.  
 Non esitate a [inviarci un feedback](https://getrim.app/feedback) se riscontrate problemi durante l&#x27;utilizzo di questa funzione o se avete commenti o suggerimenti su come migliorarla.

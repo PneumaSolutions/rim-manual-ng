@@ -5,47 +5,61 @@ title: Arbeiten innerhalb einer Sitzung
 import Windows from "~/components/platform/Windows.astro"
 import MacOS from "~/components/platform/MacOS.astro"
 
-### Wissenswertes vor dem Start  
-  
+### Wissenswertes vor dem Start
+
 Unmittelbar nach dem Herstellen der Verbindung geschehen einige Dinge.
+
 <Windows>
+
 - Das Fernsteuerungsfenster für die Sitzung wird angezeigt. Dieses Fenster kann sowohl auf einem einzelnen Bildschirm als auch in einer Konfiguration mit mehreren Bildschirmen verschoben und in der Größe angepasst werden.
 - Sie werden über den Status des laufenden Bildschirmleseprogramms oder dessen Fehlen auf dem Computer des Kunden informiert.
-- Wenn auf dem Computer des Kunden ein Bildschirmleseprogramm ausgeführt wird, wird dem Benutzer durch eine Toast-Benachrichtigung mitgeteilt, dass die Remote-Sitzung begonnen hat, wodurch sofort bestätigt wird, dass die System-Audiofunktion des Benutzers funktioniert.
-- Bei einem Mac-Zielgerät wird der Tastatur-Einrichtungsassistent angezeigt, wenn zum ersten Mal eine Verbindung mit einem Controller hergestellt wird.
-- Dieser dient der virtuellen Karabiner-Tastatur, die auf Tastaturbefehle reagiert, die von einem Controller gesendet werden.
-- Daher sollten Sie den Zielcomputer durch den Einrichtungsassistenten führen, da dieser während des Identifizierungsprozesses auf Tastatureingaben von der Fernbedienung reagiert und nicht auf die Tastatur des Mac.
+- Wenn auf dem Client ein Screenreader ausgeführt wird, wird durch eine Toast-Benachrichtigung, die den Benutzer über den Beginn der Remote-Sitzung informiert, sofort bestätigt, dass die System-Audiofunktion des Benutzers funktioniert.
+- Auf einem Mac-Zielgerät wird der Tastatur-Einrichtungsassistent angezeigt, wenn zum ersten Mal eine Verbindung zu einem Controller hergestellt wird.
+- Dies gilt für die virtuelle Tastatur Karabiner, die auf Tastaturbefehle reagiert, die von einem Controller gesendet werden.
+    - Daher sollten Sie den Zielcomputer durch den Einrichtungsassistenten führen, da dieser während des Identifizierungsprozesses auf Tastatureingaben von der Fernbedienung und nicht auf die Tastatur des Mac selbst achtet.
 - Zu guter Letzt werden alle Tastatur- und Mauseingaben sofort an den Zielcomputer weitergeleitet. Um die Steuerung wieder auf Ihren Computer zurückzuleiten, führen Sie einen der folgenden Schritte aus:
-- Drücken Sie Windows+Umschalt+Rücktaste.
+    - Drücken Sie Windows+Umschalt+Rücktaste.
 - Klicken Sie mit der rechten Maustaste auf die Titelleiste des RIM-Fensters.
 - Klicken Sie mit der linken Maustaste auf das RIM-Symbol in der Mitte der Titelleiste.
 
+
 </Windows>
 
+
+
 <MacOS>
+
 - Das Fernsteuerungsfenster für die Sitzung wird angezeigt. Dieses Fenster kann sowohl auf einem einzelnen Bildschirm als auch in einer Konfiguration mit mehreren Bildschirmen verschoben und in der Größe angepasst werden.
 - Sie werden über den Status des laufenden Bildschirmleseprogramms oder dessen Fehlen auf dem Computer des Kunden informiert.
-- Wenn der Kunde ein Bildschirmleseprogramm ausführt, wird durch eine Toast-Benachrichtigung, die den Benutzer darüber informiert, dass die Remote-Sitzung begonnen hat, sofort bestätigt, dass die System-Audiofunktion des Benutzers funktioniert.
+- Wenn auf dem Computer des Kunden ein Bildschirmleseprogramm ausgeführt wird, wird durch eine Toast-Benachrichtigung, die den Benutzer über den Beginn der Remote-Sitzung informiert, sofort bestätigt, dass die System-Audiofunktion des Benutzers funktioniert.
 - Auf einem Mac-Zielgerät wird der Tastatur-Einrichtungsassistent angezeigt, wenn zum ersten Mal eine Steuerung damit verbunden wird.
-- Dies gilt für die virtuelle Tastatur Karabiner, die auf Tastaturbefehle reagiert, die von einer Steuerung gesendet werden.
+- Dies gilt für die virtuelle Tastatur Karabiner, die auf Tastaturbefehle reagiert, die von einer Steuerung an sie gesendet werden.
 - Daher sollten Sie den Zielcomputer durch den Einrichtungsassistenten führen, da dieser während des Identifizierungsprozesses auf Tastatureingaben von der Fernsteuerung reagiert und nicht auf die Tastatur des Mac selbst.
 - Zu guter Letzt werden alle Tastatur- und Mauseingaben sofort an den Zielcomputer weitergeleitet. Um die Steuerung wieder auf Ihren Rechner zurückzuleiten, führen Sie einen der folgenden Schritte aus:
 - Drücken Sie Option+Umschalt+Rücktaste.
 - Klicken Sie mit der rechten Maustaste auf die Titelleiste des RIM-Fensters.
-- Klicken Sie mit der linken Maustaste auf das RIM-Symbol in der Mitte der Titelleiste.  
+- Klicken Sie mit der linken Maustaste auf das RIM-Symbol in der Mitte der Titelleiste.
+
+
 </MacOS>
+
 
 ### Fernsteuerungsbereich
 
 <Windows>
-Nun können Sie alle erforderlichen Aufgaben auf der Client-Seite ausführen. Wenn Sie wieder die Kontrolle über Ihren eigenen Computer übernehmen möchten, öffnen Sie das RIM-Menü und wählen Sie die Option „Sitzung minimieren”. Sie kehren zu Ihrem Computer zurück, bis Sie wieder zum Sitzungsfenster wechseln oder erneut Windows+Umschalt+Rücktaste drücken. Wenn Sie zum Sitzungsfenster zurückkehren, werden Tastatur- und Mauseingaben wieder an den Client-Computer weitergeleitet.
+
+Nun können Sie alle erforderlichen Aufgaben auf der Client-Seite ausführen. Wenn Sie wieder zur Steuerung Ihres eigenen Computers zurückkehren möchten, öffnen Sie das RIM-Menü und wählen Sie die Option „Sitzung minimieren”. Sie kehren zu Ihrem Computer zurück, bis Sie wieder zum Sitzungsfenster wechseln oder erneut Windows+Umschalt+Rücktaste drücken. Wenn Sie zum Sitzungsfenster zurückkehren, werden Tastatur- und Mauseingaben wieder an den Client-Computer weitergeleitet.
 </Windows>
 
 
 
+
+
 <MacOS>
-Jetzt können Sie alle erforderlichen Aufgaben auf der Client-Seite ausführen. Wenn Sie wieder zur Steuerung Ihres eigenen Computers zurückkehren möchten, öffnen Sie das RIM-Menü und wählen Sie die Option „Sitzung minimieren”. Sie werden zu Ihrem Computer zurückgeleitet, bis Sie wieder zum Sitzungsfenster wechseln oder erneut Option+Umschalt+Backspace drücken. Wenn Sie zum Sitzungsfenster zurückkehren, werden Tastatur- und Mauseingaben wieder an den Client-Computer weitergeleitet.  
+Jetzt können Sie alle erforderlichen Aufgaben auf der Client-Seite ausführen. Wenn Sie wieder zur Steuerung Ihres eigenen Computers zurückkehren möchten, öffnen Sie das RIM-Menü und wählen Sie die Option „Sitzung minimieren”. Sie kehren zu Ihrem Computer zurück, bis Sie wieder zum Sitzungsfenster wechseln oder erneut Option+Umschalt+Rücktaste drücken. Wenn Sie zum Sitzungsfenster zurückkehren, werden Tastatur- und Mauseingaben wieder an den Client-Computer weitergeleitet.
+
 </MacOS>
+
 
 Wenn Sie fertig sind, kann entweder der Controller oder das Zielgerät das RIM-Menü aufrufen und die Option „Sitzung trennen“ auswählen. Wenn die Sitzung beendet ist, erhält das Zielgerät eine Toast-Benachrichtigung, die es darüber informiert.
 
@@ -53,33 +67,35 @@ Wenn Sie fertig sind, kann entweder der Controller oder das Zielgerät das RIM-M
 
 Wie bereits erwähnt, gelangen Sie durch den Aufruf des RIM-Menüs zurück zu Ihrem Computer. Dieses Menü enthält eine Reihe von Optionen. Dazu gehören:  
 <Windows>
-- RIM auf Ziel aktualisieren: Erzwingt eine Aktualisierung von RIM auf dem Zielcomputer.
+
+
+- „Update RIM on Target” (RIM auf Zielcomputer aktualisieren): Erzwingt eine Aktualisierung von RIM auf dem Zielcomputer.
 - Diese Option wird angezeigt, wenn auf dem Zielcomputer eine ältere Version von RIM ausgeführt wird.
-- RIM als Administrator auf Ziel neu installieren: Diese Option versucht, RIM als Administrator auf einem Windows-Ziel neu zu installieren, wobei der Zielbenutzer die Administratorberechtigungsanforderung selbst und/oder mit Hilfe der IT-Abteilung seines Unternehmens akzeptieren muss.
-- Sitzung minimieren (**Windows+Umschalt+M**): Bringt die Kontrolle wie oben beschrieben zurück auf Ihren Computer.
-- Datei auf Ziel übertragen: Wird angezeigt, wenn sich eine Datei in der Zwischenablage befindet.
-- Diese alternative Methode zum Abschluss einer Dateiübertragung ist zwar immer verfügbar, jedoch nur für die Übertragung von Dateien auf Mac-Ziele erforderlich.
-- Sitzung umkehren (**Windows+Umschalt+F**): Ermöglicht Ihrem Client die Fernsteuerung Ihres Computers und das Hören seines Audios. Als ursprünglicher Controller können Sie die Sitzung durch erneutes Auswählen dieser Option wieder umkehren.
-- Sprachkonversation starten/stoppen: Ermöglicht es Ihnen, den Sprachchat für Ihre Sitzung ein- oder auszuschalten.
-- Während einer unbeaufsichtigten Sitzung wird bei dieser Option ein Berechtigungsdialogfeld angezeigt, auf das der Benutzer reagieren muss. Bei angeforderten Sitzungen werden Sprachkonversationen jedoch weiterhin durch den Controller aktiviert.
+- RIM als Administrator auf dem Zielgerät neu installieren: Diese Option versucht, RIM als Administrator auf einem Windows-Zielgerät neu zu installieren, wobei der Benutzer des Zielgeräts die Administratorberechtigungsanforderung selbst und/oder mit Hilfe der IT-Abteilung seines Unternehmens akzeptieren muss.
+- Sitzung minimieren (**Windows+Umschalt+M**): Bringt die Steuerung wie oben beschrieben zurück auf Ihr Gerät.
+- Datei auf das Zielgerät übertragen: Wird angezeigt, wenn sich eine Datei in der Zwischenablage befindet.
+    - Diese alternative Methode zum Abschluss einer Dateiübertragung ist zwar immer verfügbar, jedoch nur für die Übertragung von Dateien auf Mac-Ziele erforderlich.
+- Sitzung umkehren (**Windows+Umschalt+F**): Ermöglicht Ihrem Kunden die Fernsteuerung Ihres Computers und das Hören seines Audios. Als ursprünglicher Controller können Sie die Sitzung durch erneutes Auswählen dieser Option wieder umkehren.
+- Sprachkonversation starten/beenden: Ermöglicht es Ihnen, den Sprachchat für Ihre Sitzung ein- oder auszuschalten.
+- Während einer unbeaufsichtigten Sitzung wird bei dieser Option ein Berechtigungsdialogfeld angezeigt, auf das der Benutzer reagieren muss. Bei angeforderten Sitzungen werden Sprachkonversationen jedoch weiterhin durch den Controller initiiert.
 - Sitzungsaufzeichnung starten: Beginnt mit der Aufzeichnung des Inhalts der aktiven Sitzung – mehr dazu später.
-- Wenn die Sitzungsaufzeichnung aktiviert ist, wird diese Option durch die folgenden Optionen ersetzt:
-- Sitzungsaufzeichnung pausieren/fortsetzen (Umschalten)
+    - Wenn die Sitzungsaufzeichnung aktiviert ist, wird diese Option durch Folgendes ersetzt:
+- Sitzungsaufzeichnung anhalten/fortsetzen (Umschalten)
 - Sitzungsaufzeichnung beenden: Beendet die Aufzeichnung und speichert sie.
-- Remote-Zugriff starten: Diese Option wird angezeigt, wenn auf dem Remote-Computer kein Bildschirmleseprogramm ausgeführt wird. Dadurch wird die Sprachausgabe auf Ihrer Seite aktiviert, aber der Client muss sich keine Gedanken über das Hören der Sprachausgabe machen.
-- Wenn ein Bildschirmleseprogramm (einschließlich Remote-Zugriff) ausgeführt wird, wird diese Option zu einem erzwungenen Beenden des laufenden Bildschirmleseprogramms. Dies ist nützlich, wenn das Bildschirmleseprogramm des Ziels nicht mehr reagiert und Sie es nicht mehr normal neu starten können.
+- Remote-Barrierefreiheit starten: Diese Option wird angezeigt, wenn auf dem Remote-Computer kein Screenreader ausgeführt wird. Dadurch wird die Sprachausgabe auf Ihrer Seite aktiviert, aber der Client muss sich keine Gedanken über das Hören der Sprachausgabe machen.
+    - Wenn ein Screenreader (einschließlich Remote Accessibility) ausgeführt wird, wird diese Option zu einem erzwungenen Beenden des ausgeführten Screenreaders. Dies ist nützlich, wenn der Screenreader des Ziels nicht mehr reagiert und Sie ihn nicht mehr normal neu starten können.
 - Audioausgabe des Ziels stummschalten: Ermöglicht es Ihnen, die System-Audioausgabe des Remote-Computers stummzuschalten.
-- Beachten Sie, dass eine laufende Sprachkonversation während dieser Einstellung aktiv bleibt, sodass Sie mit der Person, mit der Sie verbunden sind, sprechen können, während deren System-Audio für Sie nicht hörbar ist.
+- Beachten Sie, dass eine laufende Sprachkonversation während der Gültigkeit dieser Einstellung aktiv bleibt, sodass Sie mit der Person, mit der Sie verbunden sind, sprechen können, während deren System-Audio für Sie nicht hörbar ist.
 - Neustart und erneute Verbindung: Ermöglicht es Ihnen, den Computer neu zu starten und die Sitzung automatisch wiederherzustellen.
-    - Beachten Sie, dass ein Mac-Ziel aufgrund von Plattformbeschränkungen, insbesondere FileVault, RIM vor der Anmeldung nicht starten kann.
+- Beachten Sie, dass ein Mac-Ziel aufgrund von Plattformbeschränkungen, insbesondere FileVault, RIM vor der Anmeldung nicht starten kann.
 - Daher stellt RIM die Verbindung wieder her, sobald sich der Benutzer anmeldet.
-- Strg+Alt+Entf senden: Sendet diese Tastenkombination an den Remote-Computer.
-- Eine entsprechende Option für Mac-Ziele ist noch nicht implementiert.
-- Unbeaufsichtigten oder angeforderten Zugriff anfordern: Ermöglicht es Ihnen, eine Anfrage für unbeaufsichtigten Zugriff auf den Client-Computer zu senden. Dies ist nützlich, wenn Sie als Systemadministrator routinemäßige Wartungsarbeiten durchführen müssen oder sogar für so einfache Dinge wie die Steuerung Ihres Heimcomputers von unterwegs.
+- Strg+Alt+Entf senden: Sendet diesen Tastendruck an den Remote-Computer.
+    - Eine entsprechende Option für Mac-Ziele ist noch nicht implementiert.
+- Unbeaufsichtigten oder angeforderten Zugriff anfordern: Ermöglicht es Ihnen, eine Anfrage für unbeaufsichtigten Zugriff auf den Client-Computer zu senden. Dies ist nützlich, wenn Sie als Systemadministrator routinemäßige Wartungsarbeiten durchführen müssen oder auch für so einfache Dinge wie die Steuerung Ihres Heimcomputers von unterwegs.
 - Zielcomputer sperren: Sperrt den Zielcomputer.
 - Verbindungsdetails anzeigen: Bietet detaillierte Informationen zu Ihrer Verbindung sowie zum Zielcomputer. Zu den Informationen gehören:
 - Verbindungsstatistiken
-- Informationen zum Computer, einschließlich Betriebssystemversion, verfügbarem RAM usw.
+- Informationen über den Computer, einschließlich Betriebssystemversion, verfügbarer RAM usw.
 - Laufende Prozesse
 - Installierte Pakete
 - KI-Tools: Ermöglicht Ihnen den Chat mit einer Reihe von Chatbots, die auf Barrierefreiheit ausgerichtet sind.
@@ -87,31 +103,35 @@ Wie bereits erwähnt, gelangen Sie durch den Aufruf des RIM-Menüs zurück zu Ih
 - Sitzung trennen (**Windows+Umschalt+D**): Beendet die Sitzung.
 - Beachten Sie, dass diese Option für beide Seiten der Sitzung verfügbar ist.
 
-</Windows>  
+
+</Windows>
+  
+
 
 <MacOS>
+
 - RIM auf Ziel aktualisieren: Erzwingt eine Aktualisierung von RIM auf dem Zielcomputer.
 - Diese Option wird angezeigt, wenn auf dem Zielcomputer eine ältere Version von RIM ausgeführt wird.
-- RIM als Administrator auf dem Ziel neu installieren: Diese Option versucht, RIM als Administrator auf einem Windows-Ziel neu zu installieren, wobei der Zielbenutzer die Administratorberechtigungsanforderung selbst und/oder mit Hilfe der IT-Abteilung seines Unternehmens akzeptieren muss.
-- Sitzung minimieren (**Option+Umschalt+M**): Bringt die Steuerung wie oben beschrieben zurück auf Ihren Computer.
-- Datei auf das Ziel übertragen: Wird angezeigt, wenn sich eine Datei in der Zwischenablage befindet.
-    - Diese alternative Methode zum Abschluss einer Dateiübertragung ist zwar immer verfügbar, wird jedoch nur für die Übertragung von Dateien auf Mac-Ziele benötigt.
-- Sitzung umkehren (**Option+Umschalt+F**): Ermöglicht Ihrem Client die Fernsteuerung Ihres Computers und das Hören seines Audiosignals. Als ursprünglicher Controller können Sie die Sitzung durch erneutes Auswählen dieser Option wieder umkehren.
+- RIM als Administrator auf Ziel neu installieren: Diese Option versucht, RIM als Administrator auf einem Windows-Ziel neu zu installieren, wobei der Zielbenutzer die Administratorberechtigungsanforderung selbst und/oder mit Hilfe der IT-Abteilung seines Unternehmens akzeptieren muss.
+- Sitzung minimieren (**Option+Umschalt+M**): Bringt die Kontrolle wie oben beschrieben zurück auf Ihren Computer.
+- Datei auf Ziel übertragen: Wird angezeigt, wenn sich eine Datei in der Zwischenablage befindet.
+- Diese alternative Methode zum Abschluss einer Dateiübertragung ist zwar immer verfügbar, wird jedoch nur für die Übertragung von Dateien auf Mac-Ziele benötigt.
+- Sitzung umkehren (**Option+Umschalt+F**): Ermöglicht Ihrem Client die Fernsteuerung Ihres Computers und das Hören seines Audios. Als ursprünglicher Controller können Sie die Sitzung durch erneutes Auswählen dieser Option wieder umkehren.
 - Sprachkonversation starten/beenden: Ermöglicht es Ihnen, den Sprachchat für Ihre Sitzung ein- oder auszuschalten.
-- Während einer unbeaufsichtigten Sitzung wird bei dieser Option ein Berechtigungsdialogfeld angezeigt, auf das der Benutzer reagieren muss. Bei angeforderten Sitzungen werden Sprachkonversationen jedoch weiterhin durch den Controller initiiert.
+- Während einer unbeaufsichtigten Sitzung wird bei dieser Option ein Berechtigungsdialogfeld angezeigt, auf das der Benutzer reagieren muss. Bei angeforderten Sitzungen werden Sprachkonversationen jedoch weiterhin durch den Controller aktiviert.
 - Sitzungsaufzeichnung starten: Beginnt mit der Aufzeichnung des Inhalts der aktiven Sitzung – mehr dazu später.
     - Wenn die Sitzungsaufzeichnung aktiviert ist, wird diese Option durch Folgendes ersetzt:
-- Sitzungsaufzeichnung pausieren/fortsetzen (Umschalten)
+- Sitzungsaufzeichnung anhalten/fortsetzen (Umschalten)
 - Sitzungsaufzeichnung beenden: Beendet die Aufzeichnung und speichert sie.
-- Remote-Barrierefreiheit starten: Diese Option wird angezeigt, wenn auf dem Remote-Computer kein Screenreader ausgeführt wird. Dadurch wird die Sprachausgabe auf Ihrer Seite aktiviert, aber der Client muss sich keine Gedanken über die Sprachausgabe machen.
+- Remote-Barrierefreiheit starten: Diese Option wird angezeigt, wenn auf dem Remote-Computer kein Screenreader ausgeführt wird. Dadurch wird die Sprachausgabe auf Ihrer Seite aktiviert, aber der Client muss sich keine Gedanken über das Hören der Sprachausgabe machen.
     - Wenn ein Bildschirmleseprogramm (einschließlich Remote-Zugriff) ausgeführt wird, wird diese Option zu einem erzwungenen Beenden des laufenden Bildschirmleseprogramms. Dies ist nützlich, wenn das Bildschirmleseprogramm des Ziels nicht mehr reagiert und Sie es nicht mehr normal neu starten können.
 - Audioausgabe des Ziels stummschalten: Ermöglicht es Ihnen, die System-Audioausgabe des Remote-Computers stummzuschalten.
 - Beachten Sie, dass eine laufende Sprachkonversation während der Gültigkeit dieser Einstellung aktiv bleibt, sodass Sie mit der Person, mit der Sie verbunden sind, sprechen können, während deren System-Audio für Sie nicht hörbar ist.
-- Neustart und erneute Verbindung: Ermöglicht es Ihnen, den Computer neu zu starten und die Sitzung automatisch wiederherzustellen.
-- Beachten Sie, dass ein Mac-Ziel aufgrund von Plattformbeschränkungen, insbesondere FileVault, RIM vor der Anmeldung nicht starten kann.
+- Neustart und erneute Verbindung: Ermöglicht es Ihnen, den Computer neu zu starten und die Sitzung automatisch erneut zu verbinden.
+    - Beachten Sie, dass ein Mac-Ziel aufgrund von Plattformbeschränkungen, insbesondere FileVault, RIM vor der Anmeldung nicht starten kann.
 - Daher stellt RIM auf einem Mac-Ziel die Verbindung wieder her, sobald sich der Benutzer anmeldet.
 - Strg+Alt+Entf senden: Sendet diesen Tastendruck an den Remote-Computer.
-    - Eine entsprechende Option für Mac-Ziele ist noch nicht implementiert.
+- Eine entsprechende Option für Mac-Ziele ist noch nicht implementiert.
 - Unbeaufsichtigten oder angeforderten Zugriff anfordern: Ermöglicht es Ihnen, eine Anfrage für unbeaufsichtigten Zugriff auf den Client-Computer zu senden. Dies ist nützlich, wenn Sie als Systemadministrator routinemäßige Wartungsarbeiten durchführen müssen oder sogar für etwas so Einfaches wie die Steuerung Ihres Heimcomputers von unterwegs.
 - Zielcomputer sperren: Sperrt den Zielcomputer.
 - Verbindungsdetails anzeigen: Bietet detaillierte Informationen zu Ihrer Verbindung sowie zum Zielcomputer. Zu den Informationen gehören:
@@ -122,194 +142,262 @@ Wie bereits erwähnt, gelangen Sie durch den Aufruf des RIM-Menüs zurück zu Ih
 - KI-Tools: Ermöglicht Ihnen den Chat mit einer Reihe von Chatbots, die auf Barrierefreiheit ausgerichtet sind.
     - Diese Option steht nur Controllern zur Verfügung, die über einen Pro-Pass verfügen oder ein Abonnement für die persönliche Community, den Wochenend-Support oder Pro/Enterprise haben.
 - Sitzung trennen (**Option+Umschalt+D**): Beendet die Sitzung.
-- Beachten Sie, dass diese Option für beide Seiten der Sitzung verfügbar ist.  
+- Beachten Sie, dass diese Option für beide Seiten der Sitzung verfügbar ist.
+
+
 </MacOS>
+
 
 ### Dateiübertragungen
 
 RIM bietet eine einfache Möglichkeit zur Übertragung von Dateien, unabhängig von der verwendeten Plattform.
 1. Öffnen Sie das RIM-Menü und klicken Sie auf „Sitzung minimieren”. Die Steuerung wird wieder an Ihren Computer zurückgegeben.
 1. Wählen Sie die Datei(en) und/oder Ordner(n), die Sie übertragen möchten, mit Ihrem Dateimanager aus.
-1. Kopieren Sie den ausgewählten Inhalt wie gewohnt in die Zwischenablage. Sie erhalten eine Benachrichtigung, dass eine Datei zur Übertragung bereitsteht. Sie haben zwei Möglichkeiten.
+1. Kopieren Sie die ausgewählten Inhalte wie gewohnt in die Zwischenablage. Sie erhalten eine Benachrichtigung, dass eine Datei zur Übertragung bereitsteht. Sie haben zwei Möglichkeiten.
 1. **Wenn das Ziel ein Mac ist:**
 - Aktivieren Sie das RIM-Sitzungsmenü und klicken Sie auf die Option „Datei zum Ziel übertragen”.
-- Nach Abschluss der Übertragung erstellt der Ziel-Mac ein temporäres Verzeichnis mit den übertragenen Inhalten. Diese sollten dann kopiert und in die vorgesehenen Verzeichnisse eingefügt werden.
+    - Nach Abschluss der Übertragung erstellt der Ziel-Mac ein temporäres Verzeichnis mit den übertragenen Inhalten. Diese sollten dann kopiert und in die vorgesehenen Verzeichnisse eingefügt werden.
 1. **Wenn das Ziel ein Windows-Rechner ist:**
 - Wechseln Sie zurück zur Remote-Sitzung und suchen Sie den Ordner auf dem Zielrechner, in den Sie den Inhalt einfügen möchten.
 - Zuletzt fügen Sie den Inhalt wie gewohnt ein.
 
-Beachten Sie, dass die Übertragungszeit vollständig von der Größe des zu sendenden Inhalts sowie Ihrer Netzwerkgeschwindigkeit abhängt.
+Beachten Sie, dass die Übertragungszeit vollständig von der Größe der zu sendenden Inhalte sowie von Ihrer Netzwerkgeschwindigkeit abhängt.
 
 ### Sitzungsaufzeichnung
 
-Mit der Sitzungsaufzeichnungsfunktion von RIM können Sie als Controller den Inhalt Ihrer Sitzung bequem in einer Datei auf Ihrem Computer speichern. Diese Datei kann dann später an die Person weitergegeben werden, der Sie Remote-Support leisten. Die Sitzungsaufzeichnung umfasst die audiovisuelle Ausgabe des Zielcomputers sowie den Ton einer laufenden Sprachkonversation.
-So führen Sie eine Sitzungsaufzeichnung durch:  
+Mit der Sitzungsaufzeichnungsfunktion von RIM können Sie als Controller den Inhalt Ihrer Sitzung bequem in einer Datei auf Ihrem Computer speichern. Diese Datei kann dann später an die Person weitergegeben werden, der Sie Remote-Support leisten. Der Inhalt der Sitzungsaufzeichnung umfasst die audiovisuelle Ausgabe des Zielcomputers sowie den Ton einer laufenden Sprachkonversation.
+So erleichtern Sie eine Sitzungsaufzeichnung:
+
 <Windows>
-1. Wählen Sie im Sitzungsmenü die Option „Sitzungsaufzeichnung starten”. Daraufhin werden die folgenden Aktionen ausgeführt:
+
+1. Rufen Sie die Option „Sitzungsaufzeichnung starten” im Sitzungsmenü auf. Daraufhin werden die folgenden Aktionen ausgeführt:
+* Während einer Keyword-Sitzung:
+* Der Zielbenutzer erhält ein Berechtigungsdialogfeld, in dem er gefragt wird, ob er der Aufzeichnung der Sitzung zustimmen möchte. Die Tastatureingabe des Controllers wird ausgesetzt, während dieses Dialogfeld angezeigt wird.
+* Wenn der Zielbenutzer zustimmt, beginnt die Aufzeichnung. Wenn der Zielbenutzer die Aufzeichnung ablehnt, wird die gesamte Sitzung beendet.
+    * Bei angeforderten/unbeaufsichtigten Sitzungen:
 * Die Aufzeichnung beginnt sofort.
-* Beide Parteien erhalten eine Benachrichtigung, dass die Aufzeichnung gestartet wurde.
-1. Um die Aufzeichnung anzuhalten oder fortzusetzen, wählen Sie im Sitzungsmenü die Option „Sitzungsaufzeichnung anhalten/fortsetzen”.
+* Unabhängig davon erhalten beide Parteien eine Benachrichtigung, dass die Aufzeichnung begonnen hat, sobald die Aufzeichnung tatsächlich startet.
+1. Um die Aufzeichnung anzuhalten oder fortzusetzen, rufen Sie die Option „Sitzungsaufzeichnung anhalten/fortsetzen“ im Sitzungsmenü auf.
 * Die Aufzeichnung wird entsprechend angehalten oder fortgesetzt.
     * Beide Parteien erhalten eine entsprechende Benachrichtigung.
 1. Die Aufzeichnung kann über die Option „Sitzungsaufzeichnung beenden“ im Sitzungsmenü beendet werden.
-* Beide Parteien erhalten nach Beendigung der Aufzeichnung eine Benachrichtigung.
-* Die Aufzeichnung wird dann im Ordner „Videos“ in Ihrem Benutzerverzeichnis gespeichert. Der Einfachheit halber werden Sie automatisch über den Explorer zu diesem Ordner weitergeleitet, sodass Sie die Aufzeichnung bei Bedarf an den Benutzer senden können.
-* Durch Trennen der Sitzung wird die Aufzeichnung auf die oben beschriebene Weise beendet.
+* Standardmäßig wird ein Bestätigungsdialogfeld angezeigt, in dem Sie gefragt werden, ob Sie die Aufzeichnung beenden möchten. Dieses Dialogfeld soll eine versehentliche Deaktivierung der Sitzungsaufzeichnung verhindern, kann jedoch optional deaktiviert werden.
+* Beide Parteien erhalten nach Abschluss der Aufzeichnung eine Benachrichtigung.
+    * Die Aufzeichnung wird dann in dem Verzeichnis gespeichert, in dem RIM zum Speichern Ihrer Aufzeichnungen konfiguriert ist (standardmäßig ist dies der Ordner „Videos” in Ihrem Benutzerverzeichnis). Der Einfachheit halber werden Sie automatisch über den Explorer zu diesem Ordner weitergeleitet, sodass Sie die Aufzeichnung bei Bedarf an den Benutzer senden können.
+* Beachten Sie, dass die Aufzeichnung automatisch beendet wird, wenn die Sitzung getrennt wird.
+
+
 </Windows>
 
 
 
 <MacOS>
-1. Rufen Sie die Option „Sitzungsaufzeichnung starten“ im Sitzungsmenü auf. Daraufhin werden die folgenden Aktionen ausgeführt:
-* Die Aufzeichnung wird sofort gestartet.
-    * Beide Parteien erhalten eine Benachrichtigung, dass die Aufzeichnung begonnen hat.
-1. Um die Aufzeichnung anzuhalten oder fortzusetzen, rufen Sie die Option „Pause/Fortsetzen der Sitzungsaufzeichnung“ im Sitzungsmenü auf.
+
+1. Rufen Sie die Option „Sitzungsaufzeichnung starten” im Sitzungsmenü auf. Daraufhin werden die folgenden Aktionen ausgeführt:
+* Während einer Keyword-Sitzung:
+* Der Zielbenutzer erhält ein Berechtigungsdialogfeld, in dem er gefragt wird, ob er der Aufzeichnung der Sitzung zustimmen möchte. Die Tastatureingabe des Controllers wird unterbrochen, während dieses Dialogfeld angezeigt wird.
+* Wenn der Zielbenutzer zustimmt, beginnt die Aufzeichnung. Wenn der Zielbenutzer die Aufzeichnung ablehnt, wird die gesamte Sitzung beendet.
+* Bei aufgeforderten/unbeaufsichtigten Sitzungen:
+* Die Aufzeichnung beginnt sofort.
+* Unabhängig davon erhalten beide Parteien eine Benachrichtigung, dass die Aufzeichnung begonnen hat, sobald die Aufzeichnung tatsächlich startet.
+1. Um die Aufzeichnung anzuhalten oder fortzusetzen, rufen Sie die Option „Aufzeichnung der Sitzung anhalten/fortsetzen” im Sitzungsmenü auf.
 * Die Aufzeichnung wird entsprechend angehalten oder fortgesetzt.
 * Beide Parteien erhalten eine entsprechende Benachrichtigung.
-1. Die Aufzeichnung kann über die Option „Sitzungsaufzeichnung beenden“ im Sitzungsmenü beendet werden.
+1. Die Aufzeichnung kann über die Option „Aufzeichnung der Sitzung beenden” im Sitzungsmenü beendet werden.
+    * Standardmäßig wird ein Bestätigungsdialogfeld angezeigt, in dem Sie gefragt werden, ob Sie die Aufzeichnung beenden möchten. Dieses Dialogfeld soll eine versehentliche Deaktivierung der Sitzungsaufzeichnung verhindern, kann jedoch optional deaktiviert werden.
     * Beide Parteien erhalten nach Abschluss der Aufzeichnung eine Benachrichtigung.
-* Die Aufzeichnung wird dann im Ordner „Movies” in Ihrem Benutzerverzeichnis gespeichert. Der Einfachheit halber werden Sie automatisch über den Finder zu diesem Ordner weitergeleitet, sodass Sie die Aufzeichnung bei Bedarf an den Benutzer senden können.
-* Durch Trennen der Sitzung wird die Aufzeichnung auf die oben beschriebene Weise beendet.  
+* Die Aufzeichnung wird dann in dem Verzeichnis gespeichert, in dem RIM Ihre Aufzeichnungen speichert (standardmäßig ist dies der Ordner „Movies“ in Ihrem Benutzerverzeichnis). Der Einfachheit halber werden Sie automatisch über den Finder zu diesem Ordner weitergeleitet, sodass Sie die Aufzeichnung bei Bedarf an den Benutzer senden können.
+* Beachten Sie, dass die Aufzeichnung automatisch beendet wird, wenn die Sitzung getrennt wird.
+
+
 </MacOS>
 
 
-Die Aufzeichnung ist eine völlig kostenlose Funktion, die allen Benutzern aller Stufen zur Verfügung steht. Darüber hinaus werden die Aufzeichnungen vollständig lokal verarbeitet, ohne dass der Cloud-Dienst daran beteiligt ist.
 
-### Modul für Fernzugriff
+Aufzeichnungen sind eine völlig kostenlose Funktion, die jedem Benutzer auf jeder Stufe zur Verfügung steht. Darüber hinaus werden Aufzeichnungen vollständig lokal verarbeitet, ohne dass der Cloud-Dienst daran beteiligt ist.
 
-Ganz gleich, ob Sie einem Benutzer helfen, der keinen Screenreader verwendet, oder ein Problem mit einem fehlerhaften Screenreader diagnostizieren – RIM ist bestens darauf vorbereitet, Ihnen zu helfen.
+Hinweis zum Remote-Zugriffsmodul
+
+Da das Remote-Zugriffsmodul seine Sprache an Ihre laufende Kopie von NVDA ausgibt, muss RIM dies berücksichtigen, um dies in einer Aufzeichnung zu erfassen. Wenn während einer Aufzeichnung die Fernzugriffsfunktion aktiv ist, initiiert RIM daher eine Erfassung der gesamten Audioausgabe Ihres Systems. Auf diese Weise kann die über das Modul für Fernzugriff gehörte Sprache genau so erfasst werden, wie sie während der Sitzung gehört wurde. Dies kann dazu führen, dass einige Benachrichtigungstöne Ihres Steuerungscomputers in der Aufzeichnung mit aufgezeichnet werden, jedoch wird dadurch kein Ton vom Zielcomputer doppelt aufgezeichnet.
+
+Erweiterte Konfiguration für Sitzungsaufzeichnungen
+
+RIM bietet eine Reihe von erweiterten Konfigurationsoptionen für die Sitzungsaufzeichnung. Dazu gehören die Möglichkeit, Aufzeichnungen bei Sitzungsbeginn automatisch zu starten, Aufzeichnungen in einem alternativen Pfad (z. B. einer Netzwerkfreigabe) zu speichern und den Status des Bestätigungsdialogs beim Beenden einer Aufzeichnung festzulegen. Derzeit können diese Einstellungen nur über eine Konfigurationsdatei geändert werden, daher ist das Verfahren nur in englischer Sprache verfügbar.  
 
 <Windows>
-Das Modul für Fernzugriff besteht aus zwei Komponenten:
-- Ein Add-on für den NVDA-Screenreader, mit dem der Screenreader Ausgaben vom Remote-Computer empfangen kann
-- Ein eigenständiges Barrierefreiheitsmodul, das auf Anfrage des Controllers auf dem Zielcomputer gestartet wird. Der Vorteil dieses Ansatzes besteht darin, dass der Endbenutzer keine Sprachausgabe auf seinem Computer hört, während Sie ihn steuern. Stattdessen leitet das Remote Accessibility Module die Sprachausgabe an die laufende Kopie von NVDA auf der Controllerseite weiter. Auf diese Weise können Sie einem Endbenutzer barrierefrei helfen, ohne dass dieser einen Screenreader installieren oder sogar herunterladen muss.
+
+
+Auf die Konfigurationsdatei kann über den Ausführungsdialog zugegriffen werden, indem Sie Folgendes einfügen:  
+%appdata%\remote-incident-manager\config.toml
+</Windows>
+  
+
+
+
+<MacOS>
+Die Datei „config.toml“ befindet sich unter „$HOME/Library/Application Support/remote-incident-manager“.
+
+</MacOS>
+
+In der Konfigurationsdatei stehen Ihnen die folgenden Optionen zur Verfügung:
+* `<span translate="no">directory</span>`: Legt das Verzeichnis zum Speichern von Aufzeichnungen fest.
+* Bei Windows-Verzeichnissen müssen Backslashes ordnungsgemäß maskiert werden.
+* `<span translate="no">auto_start</span>`: Legt fest, ob die Sitzungsaufzeichnung sofort nach Beginn der Sitzung startet. Standardmäßig ist diese Option auf `<span translate="no">false</span>` gesetzt.
+* `<span translate="no">suppress_stop_confirmation</span>`: Legt fest, ob beim manuellen Beenden einer Aufzeichnung ein Bestätigungsdialogfeld angezeigt wird. Standardmäßig ist diese Option auf `<span translate="no">false</span>` gesetzt.
+	* Beachten Sie, dass das Trennen einer Sitzung unabhängig von dieser Einstellung immer ohne Bestätigung die Aufzeichnung beendet.  
+  
+Sobald Sie die Konfiguration gespeichert haben, werden die Änderungen für nachfolgende Sitzungen wirksam. Ein Neustart der Anwendung ist nicht erforderlich.  
+  
+  
+### Remote Accessibility Module
+
+Ganz gleich, ob Sie einen Benutzer unterstützen, der keinen Bildschirmleser verwendet, oder ein Problem mit einem fehlerhaften Bildschirmleser diagnostizieren – das RIM steht Ihnen jederzeit zur Seite.
+<Windows>
+
+
+Das Modul für den Fernzugriff besteht aus zwei Komponenten:
+- Ein Add-on für den NVDA-Bildschirmleser, mit dem der Bildschirmleser Ausgaben vom Remote-Computer empfangen kann
+- Ein eigenständiges Barrierefreiheitsmodul, das auf Anfrage des Controllers auf dem Zielcomputer gestartet wird. Der Vorteil dieses Ansatzes besteht darin, dass der Endbenutzer keine Sprachausgabe auf seinem Computer hört, während Sie ihn steuern. Stattdessen leitet das Modul für Remote-Barrierefreiheit die Sprachausgabe an die laufende Kopie von NVDA auf der Controllerseite weiter. Auf diese Weise können Sie einem Endbenutzer barrierefrei helfen, ohne dass dieser einen Screenreader installieren oder sogar herunterladen muss.
 
 ### Einrichtungsvorgang
 Für die erstmalige Initialisierung des Barrierefreiheitsmoduls müssen Sie Folgendes tun:
 1. Stellen Sie eine Verbindung zu einem Computer her, auf dem kein Screenreader ausgeführt wird.
 1. Wenn NVDA derzeit ausgeführt wird, werden Sie aufgefordert, ein Add-on zu installieren, mit dem Ihre NVDA-Kopie während der Sitzung mit dem Remote-Computer kommunizieren kann. Akzeptieren Sie die Installationsaufforderungen und warten Sie, bis NVDA neu gestartet wurde.
-1. Nun ist das Remote-Barrierefreiheitsmodul vollständig initialisiert und Sie hören eine Sprachausgabe, während Sie den Remote-Computer steuern. Um die Sprachausgabe vorübergehend stummzuschalten, drücken Sie einfach einmal die Einfügen- oder Feststelltaste+S, um sie auszuschalten, und dann zweimal, um sie wieder zu aktivieren.
+1. Nun ist das Remote-Barrierefreiheitsmodul vollständig initialisiert, und Sie hören eine Sprachausgabe, während Sie den Remote-Computer steuern. Um die Sprachausgabe vorübergehend stummzuschalten, drücken Sie einfach einmal die Einfügen- oder Feststelltaste+S, um sie auszuschalten, und dann zweimal, um sie wieder zu aktivieren.
 
-Wenn Sie ab diesem Zeitpunkt einen Screenreader auf dem steuernden Computer ausführen, wird das Remote-Zugriffsmodul automatisch während Remote-Sitzungen gestartet, in denen auf dem Remote-Computer kein Screenreader ausgeführt wird. Sollten Sie einen anderen Screenreader als NVDA ausführen, deaktiviert RIM diesen Screenreader und wechselt zu NVDA. Wenn Sie das Remote-Zugriffsmodul auf dem Remote-Computer beenden müssen, um einen anderen Bildschirmleser zu starten, rufen Sie einfach die Option „Remote-Zugriff beenden“ im RIM-Menü auf.
+Wenn Sie ab diesem Zeitpunkt einen Screenreader auf dem steuernden Computer ausführen, wird das Remote-Zugriffsmodul automatisch während Remote-Sitzungen gestartet, in denen auf dem Remote-Computer kein Screenreader ausgeführt wird. Wenn Sie einen anderen Screenreader als NVDA verwenden, deaktiviert RIM diesen Screenreader und wechselt zu NVDA. Wenn Sie das Remote-Zugriffsmodul auf dem Remote-Computer beenden müssen, um einen anderen Screenreader zu starten, rufen Sie einfach die Option „Remote-Zugriff beenden” im RIM-Menü auf.  
+
 </Windows>
+
+
 <MacOS>
-Das Remote-Zugriffsmodul ist eine spezielle Konfiguration, die auf dem Ziel-Mac auf Anfrage eines Windows- oder Mac-Controllers initiiert wird. Der Vorteil dieses Ansatzes besteht darin, dass der Endbenutzer keine Sprachausgabe auf seinem Computer hört, während Sie ihn steuern. Stattdessen leitet das Remote-Zugriffsmodul die Sprachausgabe an das Sprachsystem auf der Controllerseite weiter. Auf diese Weise können Sie einem Endbenutzer barrierefrei helfen, ohne dass dieser einen Screenreader aktivieren muss. Wenn Sie VoiceOver auf dem steuernden Mac ausführen, wird das Remote-Zugriffsmodul automatisch während Remote-Sitzungen gestartet, in denen auf dem Remote-Computer kein Screenreader ausgeführt wird.  
+
+Das Remote-Zugriffsmodul ist eine spezielle Konfiguration, die auf dem Ziel-Mac auf Anfrage eines Windows- oder Mac-Controllers initiiert wird. Der Vorteil dieses Ansatzes besteht darin, dass der Endbenutzer keine Sprachausgabe auf seinem Computer hört, während Sie ihn steuern. Stattdessen leitet das Remote-Zugriffsmodul die Sprachausgabe an das Sprachsystem auf der Controllerseite weiter. Auf diese Weise können Sie einem Endbenutzer barrierefrei helfen, ohne dass dieser einen Screenreader aktivieren muss. Wenn Sie VoiceOver auf dem steuernden Mac ausführen, wird das Remote-Zugriffsmodul automatisch während Remote-Sitzungen gestartet, in denen auf dem Remote-Computer kein Screenreader ausgeführt wird.
 </MacOS>
+  
 
 ## Neustart und erneute Verbindung
 
-Ganz gleich, ob Sie Systemaktualisierungen installieren oder einen Systemabsturz beheben möchten, RIM unterstützt Sie während des Neustartvorgangs. Wenn Sie im RIM-Menü die Option „Neustart und erneute Verbindung“ auswählen, können Sie je nach Zustand des Computers entweder einen ordnungsgemäßen Neustart oder einen Not-Neustart durchführen. Während der Computer neu gestartet wird, informiert Sie RIM darüber, dass Versuche unternommen werden, die Verbindung wiederherzustellen.
-Beachten Sie, dass Sie gefragt werden, ob Sie die Sitzung erneut verbinden möchten, wenn der Computer durch eine Softwareinstallation oder manuell auf die übliche Weise neu gestartet wird. Beachten Sie außerdem, dass Mac-Ziele in beiden Fällen erst dann erneut verbunden werden, wenn sich der Benutzer anmeldet. Dies liegt daran, dass RIM aufgrund von Plattformbeschränkungen, insbesondere der FileVault-Festplattenverschlüsselung, nicht automatisch auf dem Anmeldebildschirm gestartet werden kann.
+Unabhängig davon, ob Sie Systemaktualisierungen installieren oder einen Systemabsturz beheben, RIM unterstützt Sie während des Neustartvorgangs. Wenn Sie im RIM-Menü die Option „Neustart und erneute Verbindung“ auswählen, können Sie je nach Zustand des Computers entweder einen ordnungsgemäßen Neustart oder einen Not-Neustart durchführen. Während der Computer neu startet, informiert Sie RIM darüber, dass Versuche unternommen werden, die Verbindung wiederherzustellen.
+Beachten Sie, dass Sie gefragt werden, ob Sie die Sitzung erneut verbinden möchten, wenn der Computer durch eine Softwareinstallation neu gestartet oder auf die übliche Weise manuell neu gestartet wird. Beachten Sie außerdem, dass Mac-Ziele in beiden Fällen erst nach der Anmeldung des Benutzers erneut verbunden werden. Dies liegt daran, dass RIM aufgrund von Plattformbeschränkungen, insbesondere der FileVault-Festplattenverschlüsselung, nicht automatisch auf dem Anmeldebildschirm gestartet werden kann.
 
 ### Unbeaufsichtigter oder angeforderter Zugriff
 
-Mit RIM können Sie als Controller Computer für unbeaufsichtigten oder angeforderten Zugriff konfigurieren. Auf diese Weise können Sie Remote-Unterstützung leisten, ohne dass der Benutzer RIM starten, ein Schlüsselwort eingeben oder sich in der Nähe des Computers befinden muss. Dies ist nützlich, wenn Sie als Systemadministrator routinemäßige Wartungsarbeiten an Computern in Ihrer Arbeitsgruppe durchführen oder wenn Sie regelmäßig Support für Kunden leisten. Möglicherweise möchten Sie auch unbeaufsichtigten Zugriff für Ihren Heimcomputer zulassen, falls Sie von einem anderen Ort aus darauf zugreifen müssen.
-Es gibt mehrere Möglichkeiten, Computer für unbeaufsichtigten Zugriff zu konfigurieren.
+Mit RIM können Sie als Controller Computer für den unbeaufsichtigten oder angeforderten Zugriff konfigurieren. Auf diese Weise können Sie Remote-Unterstützung leisten, ohne dass der Benutzer RIM starten, ein Schlüsselwort eingeben oder sich in der Nähe des Computers befinden muss. Dies ist nützlich, wenn Sie als Systemadministrator routinemäßige Wartungsarbeiten an Computern in Ihrer Arbeitsgruppe durchführen oder wenn Sie regelmäßig Support für Kunden leisten. Möglicherweise möchten Sie auch unbeaufsichtigten Zugriff für Ihren Heimcomputer zulassen, falls Sie von einem anderen Ort aus darauf zugreifen müssen.
+Es gibt mehrere Möglichkeiten, Computer für den unbeaufsichtigten Zugriff zu konfigurieren.
 
 #### Während einer interaktiven Sitzung
 
 1. Rufen Sie das RIM-Menü auf.
 1. Wählen Sie „Unbeaufsichtigten oder angeforderten Zugriff anfordern”.
 1. Sie werden gefragt, welche Art von Verbindung Sie konfigurieren möchten. Sie haben folgende Optionen:
-1. Unbeaufsichtigt: Ermöglicht das Starten von Sitzungen ohne jegliche Eingriffe seitens des Endbenutzers.
+1. Unbeaufsichtigt: Ermöglicht die Initiierung von Sitzungen ohne jegliche Eingriffe seitens des Endbenutzers.
 1. Mit Aufforderung: Bei dieser Konfiguration wird dem Benutzer eine Aufforderung angezeigt, die ihn darüber informiert, dass Sie eine Verbindung zu seinem Computer herstellen. Er muss Option+Umschalt+Y unter macOS oder Windows+Umschalt+Y unter Windows drücken, wenn er die Verbindung akzeptieren möchte.
 1. Sie werden aufgefordert, diesem Computer einen Namen zu geben. Geben Sie einen persönlichen Namen für den Computer ein oder, falls zutreffend, die Computer-ID, wie sie in Ihrer Arbeitsgruppe angezeigt wird.
 1. Drücken Sie die Eingabetaste.
-1. Auf dem Client-Computer wird ein Dialogfeld angezeigt, in dem der Benutzer gefragt wird, ob er damit einverstanden ist, dass sein Computer für den von Ihnen angeforderten Zugriff eingerichtet wird. Wenn er mit „Ja“ antwortet, erhalten Sie eine Meldung, dass der Zugriff genehmigt wurde.  
+1. Auf dem Client-Computer wird ein Dialogfeld angezeigt, in dem der Benutzer gefragt wird, ob er damit einverstanden ist, dass sein Computer für den von Ihnen angeforderten Zugriff eingerichtet wird. Wenn er mit „Ja“ antwortet, erhalten Sie eine Eingabeaufforderung, die Sie darüber informiert, dass der Zugriff genehmigt wurde.  
+
 
 ##### Hinweis für Inhaber eines persönlichen unbeaufsichtigten Kontos
 
-Wenn Sie alle Ihrem Konto zugewiesenen Geräteslots bereits belegt haben, führt RIM die Anfrage nicht aus. In diesem Fall haben Sie zwei Möglichkeiten, die beide über das RIM-Dashboard verfügbar sind:
-1. Melden Sie eines Ihrer Geräte ab, um einen Slot freizugeben.
-1. Erweitern Sie Ihr Abonnement um weitere Slots.
+Wenn Sie alle Ihrem Konto zugewiesenen Geräteslots verwendet haben, führt RIM die Anfrage nicht aus. In diesem Fall haben Sie zwei Möglichkeiten, die beide über das RIM-Dashboard verfügbar sind:
+1. Melden Sie einen Ihrer Computer ab, um einen Platz freizugeben.
+1. Erweitern Sie Ihr Abonnement um weitere Plätze.
 
-#### Registrieren eines Geräts in Ihrem RIM-Konto
+Registrieren eines Computers für Ihr RIM-Konto
 
-Wenn Sie eines Ihrer eigenen Geräte für den unbeaufsichtigten Zugriff registrieren möchten, können Sie dies tun, ohne eine interaktive Sitzung mit dem Gerät starten zu müssen.
+Wenn Sie einen Ihrer eigenen Computer für den unbeaufsichtigten Zugriff registrieren möchten, können Sie dies tun, ohne eine interaktive Sitzung mit dem Computer starten zu müssen. 
 1. Starten Sie RIM im Empfangs-Hilfemodus.
 1. Klicken Sie auf die Schaltfläche „Dieses Gerät zu Ihrem RIM-Konto hinzufügen”.
-1. Geben Sie Ihre E-Mail-Adresse ein und klicken Sie dann auf „Weiter”.
-1. Warten Sie, bis Sie den zweistufigen Anmeldecode erhalten haben, geben Sie ihn ein, und Sie sollten nun angemeldet sein.
-1. Sie werden gefragt, welche Art von Zugriff Sie für diesen Computer konfigurieren möchten. Sie haben folgende Optionen:
-1. Unbeaufsichtigt: Ermöglicht die Initiierung von Sitzungen ohne jegliche Eingriffe seitens des Endbenutzers.
-    1. Mit Aufforderung: Bei dieser Konfiguration wird dem Benutzer eine Aufforderung angezeigt, die ihn darüber informiert, dass Sie eine Verbindung zu seinem Computer herstellen.
-1. Geben Sie dem Computer einen Namen und klicken Sie dann auf die Schaltfläche „Computer hinzufügen”.
-1. Der Computer wird in Ihrem Konto registriert, sodass alle Controller-Computer, die in Ihrem RIM-Konto angemeldet sind, eine Verbindung zu diesem Computer herstellen können.
+1. Geben Sie Ihre E-Mail-Adresse ein und klicken Sie auf „Weiter”.
+1. Warten Sie, bis Sie den zweistufigen Anmeldecode erhalten haben, geben Sie ihn ein, und Sie sollten angemeldet sein.
+1. Sie werden gefragt, welche Art von Zugriff Sie für dieses Gerät konfigurieren möchten. Sie haben folgende Optionen:
+1. Unbeaufsichtigt: Ermöglicht das Starten von Sitzungen ohne jegliche Eingriffe seitens des Endbenutzers.
+1. Aufgefordert: Bei dieser Konfiguration wird dem Benutzer eine Meldung angezeigt, die ihn darüber informiert, dass Sie eine Verbindung zu seinem Gerät herstellen.
+1. Geben Sie dem Gerät einen Namen und aktivieren Sie dann die Schaltfläche „Gerät hinzufügen”.
+1. Der Computer wird in Ihrem Konto registriert, sodass alle in Ihrem RIM-Konto angemeldeten Controller-Computer eine Verbindung zu diesem Computer herstellen können.
 
 ##### Hinweis für Inhaber eines persönlichen unbeaufsichtigten Kontos
 
-Wenn Sie alle Ihrem Konto zugewiesenen Rechnerplätze belegt haben, führt RIM die Anfrage nicht aus. In diesem Fall haben Sie zwei Möglichkeiten, die beide über das RIM-Dashboard verfügbar sind:
-1. Melden Sie einen Ihrer Rechner ab, um einen Platz freizugeben.
-1. Erweitern Sie Ihr Abonnement um weitere Plätze.
+Wenn Sie alle Ihrem Konto zugewiesenen Computerplätze belegt haben, führt RIM die Anfrage nicht aus. In diesem Fall haben Sie zwei Möglichkeiten, die beide über das RIM-Dashboard verfügbar sind:
+1. Melden Sie eine Ihrer Maschinen ab, um einen Steckplatz freizugeben.
+1. Erweitern Sie Ihr Abonnement um weitere Steckplätze.
 
 Verbindung herstellen
 
-Nachdem wir das Gerät für den unbeaufsichtigten Zugriff registriert haben, starten wir nun eine Sitzung.
+Nachdem wir die Maschine für den unbeaufsichtigten Zugriff registriert haben, starten wir nun eine Sitzung.
 1. Starten Sie RIM im Controller-Modus.
-1. Anstatt ein Schlüsselwort einzugeben, suchen Sie die Schaltfläche „Gerät auswählen” und aktivieren Sie sie.
-1. Wenn Sie darauf klicken, wird eine Liste der Geräte angezeigt. Wählen Sie das gewünschte Gerät aus und drücken Sie die Eingabetaste. Sie können auch die Suchleiste verwenden, um die Liste auf ein bestimmtes Gerät einzugrenzen.
+1. Anstatt ein Schlüsselwort einzugeben, suchen Sie die Schaltfläche „Maschine auswählen“ und aktivieren Sie sie.
+1. Wenn Sie darauf klicken, wird eine Liste der Computer angezeigt. Wählen Sie den gewünschten Computer aus und drücken Sie die Eingabetaste. Sie können auch die Suchleiste verwenden, um die Liste auf einen bestimmten Computer einzugrenzen.
 
-Wenn der Zielcomputer für den promptbasierten Zugriff konfiguriert ist, erhält der Endbenutzer eine Eingabeaufforderung. Sobald er mit „Ja” antwortet, werden Sie verbunden. Wenn es sich um eine unbeaufsichtigte Sitzung handelt, werden Sie sofort verbunden und gelangen in den Fernsteuerungsbereich.
+Wenn der Zielcomputer für den promptbasierten Zugriff konfiguriert ist, erhält der Endbenutzer eine Aufforderung. Sobald er mit „Ja” antwortet, werden Sie verbunden. Wenn es sich um eine unbeaufsichtigte Sitzung handelt, werden Sie sofort verbunden und gelangen in den Fernsteuerungsbereich.
 
-Bitte beachten Sie: Sprachkonversationen müssen vom Zielbenutzer während vollständig unbeaufsichtigter Sitzungen genehmigt werden. Bei promptbasierten Sitzungen ist dies jedoch nicht erforderlich.
+Bitte beachten Sie: Sprachkonversationen müssen vom Zielbenutzer während vollständig unbeaufsichtigter Sitzungen genehmigt werden. Bei Sitzungen mit Aufforderung ist dies jedoch nicht erforderlich.
 
-#### Erstellen einer Verknüpfung für eine unbeaufsichtigte Sitzung
+Erstellen einer Verknüpfung für eine unbeaufsichtigte Sitzung
 
-Für zusätzlichen Komfort können Sie Desktop-Verknüpfungen erstellen, mit denen Sie unbeaufsichtigte Sitzungen automatisch starten können. Dazu gehen Sie wie folgt vor:
+Für zusätzlichen Komfort können Sie Desktop-Verknüpfungen erstellen, mit denen Sie unbeaufsichtigte Sitzungen automatisch starten können. Gehen Sie dazu wie folgt vor:
 1. Rufen Sie die Liste der unbeaufsichtigten Computer auf und wählen Sie den Computer aus, für den Sie eine Verknüpfung erstellen möchten.
 1. Klicken Sie auf die Schaltfläche „Verknüpfung erstellen”.
 1. Eine Verknüpfung wird automatisch zu Ihrem Desktop hinzugefügt.
 
-Wenn Sie diese Verknüpfung nun aktivieren, gelangen Sie entweder automatisch zur Remote-Sitzung oder senden eine Aufforderung an den Computer des Benutzers, die dieser akzeptieren kann.
-
+Wenn Sie diese Verknüpfung nun aktivieren, gelangen Sie entweder automatisch in die Remote-Sitzung oder senden eine Aufforderung an den Computer des Benutzers, die dieser akzeptieren kann.
 <Windows>
-Weitere Möglichkeiten zur Verwendung von Verknüpfungen für unbeaufsichtigte Sitzungen
+
+
+##### Weitere Möglichkeiten zur Verwendung von Verknüpfungen für unbeaufsichtigte Sitzungen
 
 Unbeaufsichtigte Sitzungsverknüpfungen können wie alle anderen Verknüpfungen mit globalen Hotkeys verknüpft werden. Dies kann äußerst nützlich sein, wenn Sie als Wartungstechniker mehrere Computer in einer Arbeitsgruppe verwalten. Wenn Ihre Arbeitsgruppe beispielsweise aus 6 Computern besteht, an denen Sie routinemäßige Wartungsarbeiten durchführen, können Sie Alt+Strg+1 bis 6 als Hotkeys für die jeweiligen Computer konfigurieren. Dies sollte Ihren Arbeitsablauf erheblich beschleunigen.
-Darüber hinaus können Sie eine unbeaufsichtigte Sitzung über das Ausführungsfeld aufrufen, wenn Sie die Verknüpfung in Ihr Benutzerverzeichnis kopieren. Nachdem Sie die Verknüpfung kopiert haben, können Sie eine unbeaufsichtigte Sitzung starten, indem Sie your-session-name.url in das Ausführungsfeld eingeben.  
+Darüber hinaus können Sie eine unbeaufsichtigte Sitzung über das Ausführungsfeld aufrufen, wenn Sie die Verknüpfung in Ihr Benutzerverzeichnis kopieren. Nachdem Sie die Verknüpfung kopiert haben, können Sie eine unbeaufsichtigte Sitzung starten, indem Sie your-session-name.url in das Ausführungsfeld eingeben.
+
 </Windows>
 
 
 #### Unbeaufsichtigten Zugriff widerrufen
 
 Wenn Sie nicht mehr möchten, dass Ihr Computer unbeaufsichtigt gesteuert wird, können Sie den Zugriff des Controllers widerrufen. Dazu müssen Sie sich nicht in einer Sitzung befinden.
+
 <Windows>
+
 1. Rufen Sie das Symbol „Remote Incident Manager“ in Ihrer Taskleiste auf.
-1. Wenn Sie die Tastatur verwenden, drücken Sie Windows+B, dann die Leertaste und anschließend die Pfeiltaste nach links oder rechts, bis Sie das Symbol finden.
-1. Klicken Sie mit der rechten Maustaste auf dieses Symbol oder drücken Sie die Taste „Anwendungen“ oder Umschalt+F10.
-1. Wählen Sie die Option „Unbeaufsichtigten Zugriff widerrufen“.
+1. Wenn Sie die Tastatur verwenden, drücken Sie Windows+B, dann die Leertaste und dann die Pfeiltaste nach links oder rechts, bis Sie das Symbol finden.
+1. Klicken Sie mit der rechten Maustaste auf dieses Symbol oder drücken Sie die Anwendungstaste oder die Umschalt-Taste + F10.
+1. Wählen Sie die Option „Unbeaufsichtigten Zugriff widerrufen”.
 1. Sie gelangen zu einer Liste von Computern. Wählen Sie den Computer aus, dessen Zugriff Sie widerrufen möchten.
-1. Sie werden gefragt, ob Sie den Zugriff für diesen Computer widerrufen möchten. Beantworten Sie diese Frage mit „Ja”.  
+1. Sie werden gefragt, ob Sie den Computer widerrufen möchten. Beantworten Sie diese Frage mit „Ja”.
 </Windows>
+  
+
 
 
 <MacOS>
-1. Rufen Sie das Symbol „Remote Incident Manager” in Ihren Menü-Extras/Statusmenüs auf.
-1. Wenn Sie VoiceOver verwenden, drücken Sie zweimal VO+M und suchen Sie dann das Menüsymbol „Remote Incident Manager”.
-    1. Klicken Sie auf dieses Symbol oder drücken Sie VO+Leertaste.  
-1. Wählen Sie die Option „Unbeaufsichtigten Zugriff widerrufen”.
+1. Rufen Sie das Symbol „Remote Incident Manager“ in Ihren Menü-Extras/Statusmenüs auf.
+1. Wenn Sie VoiceOver verwenden, drücken Sie zweimal VO+M und suchen Sie dann das Menüsymbol „Remote Incident Manager“.
+1. Klicken Sie auf dieses Symbol oder drücken Sie VO+Leertaste.
+1. Wählen Sie die Option „Unbeaufsichtigten Zugriff widerrufen“.
 1. Sie gelangen zu einer Liste von Computern. Wählen Sie den Computer aus, den Sie widerrufen möchten.
-1. Sie werden gefragt, ob Sie den Computer widerrufen möchten. Beantworten Sie diese Frage mit „Ja”.  
-</MacOS>  
+1. Sie werden gefragt, ob Sie den Computer widerrufen möchten. Beantworten Sie diese Frage mit „Ja”.
+</MacOS>
+  
 
-Das war&#x27;s schon! Der Controller erhält eine Nachricht, dass dieser Computer nicht mehr für den unbeaufsichtigten Zugriff verfügbar ist. Sollte erneut ein unbeaufsichtigter Zugriff erforderlich sein, kann der Vorgang wie oben beschrieben erneut gestartet werden, um die Berechtigung für den unbeaufsichtigten Zugriff anzufordern.  
+Das war&#x27;s schon! Der Controller erhält eine Nachricht, dass dieser Computer nicht mehr für den unbeaufsichtigten Zugriff verfügbar ist. Sollte erneut ein unbeaufsichtigter Zugriff erforderlich sein, kann der Vorgang wie oben beschrieben erneut gestartet werden, um die Berechtigung für den unbeaufsichtigten Zugriff anzufordern.
 
-### KI-Tools  
+### KI-Tools
 
-Das Menü „KI-Tools” ist eine praktische Zusammenstellung von Chatbots mit Schwerpunkt auf Barrierefreiheit. Mit all diesen Bots erhalten Sie schnell Antworten zu verschiedenen Themen im Zusammenhang mit assistiver Technologie, Betriebssystemen usw. Alle Benutzer mit einem Pro-Pass, einem persönlichen Community-Abonnement, einem persönlichen Wochenend-Support-Abonnement oder einem Pro-/Enterprise-Abonnement haben Zugriff auf diese Funktion.  
-Beachten Sie, dass sich viele dieser Bots – einschließlich unseres eigenen – in der Beta-Phase befinden und daher mit Vorsicht verwendet werden sollten, genauso wie Sie GPS-Wegbeschreibungen nicht als unumstößliche Tatsache betrachten sollten. Mehr dazu später.
+Das Menü „KI-Tools” ist eine praktische Sammlung von Chatbots, die sich auf Barrierefreiheit konzentrieren. Mit all diesen Bots erhalten Sie schnell Antworten zu verschiedenen Themen im Zusammenhang mit assistiver Technologie, Betriebssystemen usw. Alle Benutzer mit einem Pro-Pass, einem persönlichen Community-Abonnement, einem persönlichen Wochenend-Support-Abonnement oder einem Pro-/Enterprise-Abonnement haben Zugriff auf diese Funktion.  
+Beachten Sie, dass sich viele dieser Bots – einschließlich unseres eigenen – in der Beta-Phase befinden und daher mit Vorsicht verwendet werden sollten, genauso wie Sie GPS-Anweisungen nicht als unumstößliche Tatsache betrachten sollten. Mehr dazu später.
 
-Derzeit sind folgende Bots verfügbar: 
+Derzeit sind folgende Bots verfügbar:
 * RIMBot (Beta)
 * Ask Microsoft Accessibility
 * FSCompanion (Beta)
 
-Diese Bots sind derzeit ausschließlich in englischer Sprache verfügbar.
+Diese Bots sind derzeit ausschließlich in englischer Sprache verfügbar.  
 Jeder Bot wird in einem separaten Fenster geöffnet. Jeder Bot hat seine eigenen Schnittstellenkonventionen, aber durch Drücken der Escape-Taste gelangen Sie immer zurück zu Ihrer Remote-Sitzung.
 
-#### Haftungsausschluss
+#### Haftungsausschluss 
 
-Die AI Tools-Funktion innerhalb von Remote Incident Manager (RIM) bietet eine barrierefreie Schnittstelle für die Nutzung des Pneuma Solutions RIMBot und anderer Dienste von Drittanbietern. Pneuma Solutions lehnt ausdrücklich alle ausdrücklichen oder stillschweigenden Gewährleistungen hinsichtlich der Zuverlässigkeit, Verfügbarkeit oder langfristigen Unterstützung dieser Tools von Drittanbietern ab. Als Beta gekennzeichnete Tools, einschließlich der von Pneuma Solutions entwickelten, werden innerhalb der AI Tools-Schnittstelle der RIM-Anwendung oder des zugehörigen Dashboards deutlich als solche gekennzeichnet.
+Die AI-Tools-Funktion innerhalb des Remote Incident Manager (RIM) bietet eine barrierefreie Schnittstelle für die Nutzung des Pneuma Solutions RIMBot und anderer Dienste von Drittanbietern. Pneuma Solutions lehnt ausdrücklich alle ausdrücklichen oder stillschweigenden Gewährleistungen hinsichtlich der Zuverlässigkeit, Verfügbarkeit oder langfristigen Unterstützung dieser Tools von Drittanbietern ab. Als Beta-Version gekennzeichnete Tools, einschließlich der von Pneuma Solutions entwickelten, werden in der AI Tools-Oberfläche der RIM-Anwendung oder dem zugehörigen Dashboard deutlich als solche gekennzeichnet.
 
 Der RIMBot-Support-Chatbot wurde teilweise anhand öffentlich zugänglicher Daten zu verschiedenen Technologien trainiert. Dieses Training wird durchgeführt, um die Fähigkeit des Bots zu verbessern, genaue und nützliche Antworten zu liefern und gleichzeitig die Urheberrechts- und Datenschutzstandards einzuhalten. Pneuma Solutions ist bestrebt, sicherzustellen, dass die Antworten des Bots ein angemessenes Maß an Genauigkeit aufweisen. Aufgrund der inhärenten Einschränkungen großer Sprachmodelle kann Pneuma Solutions jedoch nicht garantieren, dass alle Antworten vollständig korrekt sind.
 

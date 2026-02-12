@@ -9,6 +9,7 @@ import MacOS from "~/components/platform/MacOS.astro"
 
 Plusieurs choses se produiront immédiatement après l&#x27;établissement de la connexion.
 
+
 <Windows>
 - La fenêtre de contrôle à distance pour la session apparaîtra. Cette fenêtre peut être déplacée et redimensionnée sur un seul écran, ainsi que sur une configuration multi-écrans.
 - Vous serez informé de l&#x27;état du lecteur d&#x27;écran en cours d&#x27;exécution, ou de son absence, sur la machine du client.
@@ -17,10 +18,13 @@ Plusieurs choses se produiront immédiatement après l&#x27;établissement de la
 - Cela concerne le clavier virtuel Karabiner, qui écoute les commandes clavier qui lui sont envoyées par un contrôleur.
     - Vous devrez donc guider l&#x27;ordinateur cible à travers l&#x27;assistant de configuration, car celui-ci écoutera les pressions sur le clavier distant lors du processus d&#x27;identification, et non celles sur le clavier du Mac.
 - Enfin, toutes les entrées du clavier et de la souris seront immédiatement dirigées vers l&#x27;ordinateur cible. Pour rediriger le contrôle vers votre machine, procédez de l&#x27;une des manières suivantes :
-    - Appuyez sur Windows+Maj+Retour arrière.
-- Cliquez avec le bouton droit de la souris sur la barre de titre de la fenêtre RIM.
+- Appuyez sur Windows+Maj+Retour arrière.
+    - Cliquez avec le bouton droit de la souris sur la barre de titre de la fenêtre RIM.
 - Cliquez avec le bouton gauche de la souris sur l&#x27;icône RIM au milieu de la barre de titre.
 </Windows>
+
+
+
 
 
 
@@ -36,17 +40,25 @@ Plusieurs choses se produiront immédiatement après l&#x27;établissement de la
 - Appuyez sur Option+Maj+Retour arrière.
 - Cliquez avec le bouton droit de la souris sur la barre de titre de la fenêtre RIM.
 - Cliquez avec le bouton gauche de la souris sur l&#x27;icône RIM au milieu de la barre de titre.
+
+
 </MacOS>
 
 
-
 ### Zone de contrôle à distance
+
+
 <Windows>
-À ce stade, vous êtes prêt à effectuer toutes les tâches nécessaires côté client. Si vous devez revenir au contrôle de votre propre machine, affichez le menu RIM, puis sélectionnez l&#x27;option « Réduire la session ». Vous serez ramené à votre machine jusqu&#x27;à ce que vous reveniez à la fenêtre de session ou que vous appuyiez à nouveau sur Windows+Maj+Retour arrière. Lorsque vous revenez à la fenêtre de session, les entrées clavier et souris seront à nouveau dirigées vers l&#x27;ordinateur client.
+À ce stade, vous êtes prêt à effectuer toutes les tâches nécessaires côté client. Si vous devez revenir au contrôle de votre propre machine, affichez le menu RIM, puis sélectionnez l&#x27;option « Réduire la session ». Vous serez redirigé vers votre machine jusqu&#x27;à ce que vous reveniez à la fenêtre de session ou que vous appuyiez à nouveau sur Windows+Maj+Retour arrière. Lorsque vous revenez à la fenêtre de session, les entrées du clavier et de la souris seront à nouveau dirigées vers l&#x27;ordinateur client.
 </Windows>
 
+
+
+
+
 <MacOS>
-À ce stade, vous êtes prêt à effectuer toutes les tâches nécessaires côté client. Si vous devez revenir au contrôle de votre propre machine, affichez le menu RIM, puis sélectionnez l&#x27;option « Réduire la session ». Vous serez redirigé vers votre machine jusqu&#x27;à ce que vous reveniez à la fenêtre de session ou que vous appuyiez à nouveau sur Option+Maj+Retour arrière. Lorsque vous revenez à la fenêtre de session, les entrées clavier et souris seront à nouveau dirigées vers l&#x27;ordinateur client.
+À ce stade, vous êtes prêt à effectuer toutes les tâches nécessaires côté client. Si vous devez revenir au contrôle de votre propre machine, affichez le menu RIM, puis sélectionnez l&#x27;option « Réduire la session ». Vous serez redirigé vers votre machine jusqu&#x27;à ce que vous reveniez à la fenêtre de session ou que vous appuyiez à nouveau sur Option+Maj+Retour arrière. Lorsque vous revenez à la fenêtre de session, les entrées du clavier et de la souris seront à nouveau dirigées vers l&#x27;ordinateur client.
+
 </MacOS>
 
 
@@ -54,10 +66,15 @@ Une fois que vous avez terminé, le contrôleur ou la cible peut accéder au men
 
 ## Le menu RIM
 
-Comme mentionné précédemment, l&#x27;accès au menu RIM vous ramène à votre machine. Ce menu propose plusieurs options, notamment :  
+Comme mentionné précédemment, l&#x27;accès au menu RIM vous redirige vers votre machine. Ce menu propose plusieurs options, notamment :  
+
 
 <Windows>
 - Mettre à jour RIM sur la cible : force la mise à jour de RIM sur l&#x27;ordinateur cible
+</Windows>
+.
+
+<Windows>
 - Cette option s&#x27;affiche si la machine cible exécute une version plus ancienne de RIM.
 - Réinstaller RIM en tant qu&#x27;administrateur sur la cible : cette option tente de réinstaller RIM en tant qu&#x27;administrateur sur une cible Windows, ce qui nécessite que l&#x27;utilisateur cible accepte la demande d&#x27;autorisation d&#x27;administrateur par lui-même et/ou avec l&#x27;aide du service informatique de son entreprise.
 - Réduire la session (**Windows+Maj+M**) : ramène le contrôle sur votre machine comme décrit ci-dessus.
@@ -65,25 +82,25 @@ Comme mentionné précédemment, l&#x27;accès au menu RIM vous ramène à votre
     - Bien que cette autre méthode de transfert de fichiers soit toujours disponible, elle n&#x27;est nécessaire que pour transférer des fichiers vers des cibles Mac.
 - Inverser la session (**Windows+Maj+F**) : permet à votre client de contrôler votre machine à distance et d&#x27;entendre son audio. En tant que contrôleur d&#x27;origine, vous pouvez inverser la session en sélectionnant cette option une deuxième fois.
 - Démarrer/arrêter la conversation vocale : vous permet d&#x27;activer ou de désactiver le chat vocal pour votre session.
-- Lors d&#x27;une session sans surveillance, cette option affichera une boîte de dialogue d&#x27;autorisation à laquelle l&#x27;utilisateur devra répondre. Cependant, les sessions demandées lancent toujours des conversations vocales dès leur activation par le contrôleur.
-- Démarrer l&#x27;enregistrement de la session : commence l&#x27;enregistrement du contenu de la session active - plus d&#x27;informations à ce sujet plus tard.
-    - Lorsque l&#x27;enregistrement de la session est activé, cette option est remplacée par les options suivantes :
-        - Pause/Reprise de l&#x27;enregistrement de la session (bascule)
-        - Arrêter l&#x27;enregistrement de la session : termine et enregistre l&#x27;enregistrement.
+- Lors d&#x27;une session sans surveillance, cette option affichera une boîte de dialogue d&#x27;autorisation à laquelle l&#x27;utilisateur devra répondre. Cependant, les sessions avec invite lancent toujours des conversations vocales lorsqu&#x27;elles sont activées par le contrôleur.
+- Démarrer l&#x27;enregistrement de la session : commence l&#x27;enregistrement du contenu de la session active - plus d&#x27;informations à ce sujet plus tard
+    - Lorsque l&#x27;enregistrement de session est activé, cette option est remplacée par les options suivantes :
+- Pause/Reprise de l&#x27;enregistrement de session (bascule)
+- Arrêter l&#x27;enregistrement de session : met fin à l&#x27;enregistrement et l&#x27;enregistre
 - Démarrer l&#x27;accessibilité à distance : cette option apparaît lorsqu&#x27;aucun lecteur d&#x27;écran n&#x27;est en cours d&#x27;exécution sur l&#x27;ordinateur distant. Cela activera la synthèse vocale de votre côté, mais le client n&#x27;aura pas à se soucier d&#x27;entendre la synthèse vocale.
-- Si un lecteur d&#x27;écran (y compris l&#x27;accessibilité à distance) est en cours d&#x27;exécution, cette option se transforme en une fermeture forcée du lecteur d&#x27;écran en cours d&#x27;exécution. Cela est utile lorsque le lecteur d&#x27;écran de la cible cesse de répondre au point que vous ne pouvez plus le redémarrer normalement.
+    - Si un lecteur d&#x27;écran (y compris l&#x27;accessibilité à distance) est en cours d&#x27;exécution, cette option se transforme en une fermeture forcée du lecteur d&#x27;écran en cours d&#x27;exécution. Cela est utile lorsque le lecteur d&#x27;écran de la cible cesse de répondre au point que vous ne pouvez plus le redémarrer normalement.
 - Couper le son de la sortie audio de la cible : vous permet de couper le son de la sortie audio du système de l&#x27;ordinateur distant.
-- Notez qu&#x27;une conversation vocale en cours restera active pendant que ce paramètre est activé, ce qui vous permettra de parler avec la personne à laquelle vous êtes connecté sans entendre le son de son système.
+    - Notez qu&#x27;une conversation vocale en cours restera active pendant que ce paramètre est activé, ce qui vous permettra de parler avec la personne à laquelle vous êtes connecté sans entendre le son de son système.
 - Redémarrer et se reconnecter : vous permet de redémarrer l&#x27;ordinateur et de vous reconnecter automatiquement à la session.
 - Notez qu&#x27;une cible Mac ne peut pas démarrer RIM avant la connexion en raison de limitations de la plate-forme, notamment FileVault.
-- Ainsi, RIM se reconnectera une fois que l&#x27;utilisateur se sera connecté.
+    - Ainsi, RIM se reconnectera une fois que l&#x27;utilisateur se sera connecté.
 - Envoyer Ctrl+Alt+Suppr : envoie cette combinaison de touches à la machine distante.
-    - Une option équivalente n&#x27;est pas encore implémentée pour les cibles Mac.
+- Une option équivalente n&#x27;est pas encore implémentée pour les cibles Mac.
 - Demander un accès sans surveillance ou avec invite : vous permet d&#x27;envoyer une demande d&#x27;accès sans surveillance à l&#x27;ordinateur client. Cette option est utile si vous êtes administrateur système et devez effectuer une maintenance de routine, ou même pour quelque chose d&#x27;aussi simple que contrôler votre ordinateur personnel lorsque vous êtes en déplacement.
 - Verrouiller la machine cible : verrouille la machine cible.
 - Afficher les détails de la connexion : fournit des informations détaillées sur votre connexion, ainsi que sur la machine cible. Les informations comprennent :
 - Statistiques de connexion
-- Informations sur l&#x27;ordinateur, y compris la version du système d&#x27;exploitation, la mémoire RAM disponible, etc.
+- Informations sur l&#x27;ordinateur, y compris la version du système d&#x27;exploitation, la RAM disponible, etc.
 - Processus en cours d&#x27;exécution
 - Paquets installés
 - Outils IA : vous permet de discuter avec un certain nombre de chatbots axés sur l&#x27;accessibilité.
@@ -91,31 +108,35 @@ Comme mentionné précédemment, l&#x27;accès au menu RIM vous ramène à votre
 - Déconnecter la session (**Windows+Maj+D**) : met fin à la session.
 - N&#x27;oubliez pas que cette option est disponible pour les deux parties de la session.
 
-</Windows>  
+
+</Windows>
+  
+
 
 <MacOS>
+
 - Mettre à jour RIM sur la cible : force une mise à jour de RIM sur l&#x27;ordinateur cible.
 - Cette option s&#x27;affiche si la machine cible exécute une version plus ancienne de RIM.
 - Réinstaller RIM en tant qu&#x27;administrateur sur la cible : cette option tente de réinstaller RIM en tant qu&#x27;administrateur sur une cible Windows, ce qui nécessite que l&#x27;utilisateur cible accepte la demande d&#x27;autorisation d&#x27;administrateur par lui-même et/ou avec l&#x27;aide du service informatique de son entreprise.
 - Réduire la session (**Option+Maj+M**) : ramène le contrôle sur votre machine comme décrit ci-dessus.
-- Transférer un fichier vers la cible : s&#x27;affiche si un fichier se trouve dans le presse-papiers.
+- Transférer un fichier vers la cible : apparaît si un fichier se trouve dans le presse-papiers.
 - Bien que cette autre méthode de transfert de fichiers soit toujours disponible, elle n&#x27;est nécessaire que pour transférer des fichiers vers des cibles Mac.
-- Inverser la session (**Option+Maj+F**) : Permet à votre client de contrôler votre machine à distance et d&#x27;entendre son audio. En tant que contrôleur d&#x27;origine, vous pouvez inverser la session en sélectionnant cette option une deuxième fois.
+- Inverser la session (**Option+Maj+F**) : permet à votre client de contrôler votre machine à distance et d&#x27;entendre son audio. En tant que contrôleur d&#x27;origine, vous pouvez inverser la session en sélectionnant cette option une deuxième fois.
 - Démarrer/arrêter la conversation vocale : vous permet d&#x27;activer ou de désactiver le chat vocal pour votre session.
-- Lors d&#x27;une session sans surveillance, cette option affichera une boîte de dialogue d&#x27;autorisation à laquelle l&#x27;utilisateur devra répondre. Cependant, les sessions demandées lancent toujours des conversations vocales lorsqu&#x27;elles sont activées par le contrôleur.
+    - Lors d&#x27;une session sans surveillance, cette option affichera une boîte de dialogue d&#x27;autorisation à laquelle l&#x27;utilisateur devra répondre. Cependant, les sessions avec invite lancent toujours des conversations vocales dès leur activation par le contrôleur.
 - Démarrer l&#x27;enregistrement de la session : commence l&#x27;enregistrement du contenu de la session active - plus d&#x27;informations à ce sujet plus tard
 - Lorsque l&#x27;enregistrement de la session est activé, cette option est remplacée par les options suivantes :
-- Pause/Reprise de l&#x27;enregistrement de la session (basculer)
-- Arrêter l&#x27;enregistrement de la session : termine et enregistre l&#x27;enregistrement
+- Pause/Reprendre l&#x27;enregistrement de la session (basculer)
+- Arrêter l&#x27;enregistrement de la session : met fin à l&#x27;enregistrement et l&#x27;enregistre
 - Démarrer l&#x27;accessibilité à distance : cette option apparaît lorsqu&#x27;aucun lecteur d&#x27;écran n&#x27;est en cours d&#x27;exécution sur l&#x27;ordinateur distant. Cela activera la synthèse vocale de votre côté, mais le client n&#x27;aura pas à se soucier d&#x27;entendre la synthèse vocale.
-- Si un lecteur d&#x27;écran (y compris l&#x27;accessibilité à distance) est en cours d&#x27;exécution, cette option se transforme en une fermeture forcée du lecteur d&#x27;écran en cours d&#x27;exécution. Cela est utile lorsque le lecteur d&#x27;écran de la cible cesse de répondre au point que vous ne pouvez plus le redémarrer normalement.
+- Si un lecteur d&#x27;écran (y compris l&#x27;accessibilité à distance) est en cours d&#x27;exécution, cette option se transforme en une fermeture forcée du lecteur d&#x27;écran en cours d&#x27;exécution. Cette option est utile lorsque le lecteur d&#x27;écran de la cible cesse de répondre au point que vous ne pouvez plus le redémarrer normalement.
 - Couper le son de la cible : vous permet de couper le son du système de l&#x27;ordinateur distant.
 - Notez qu&#x27;une conversation vocale en cours restera active pendant que ce paramètre est activé, ce qui vous permettra de parler avec la personne à laquelle vous êtes connecté sans entendre le son de son système.
 - Redémarrer et se reconnecter : vous permet de redémarrer l&#x27;ordinateur et de vous reconnecter automatiquement à la session.
-    - Notez qu&#x27;une cible Mac ne peut pas démarrer RIM avant la connexion en raison des limitations de la plate-forme, notamment FileVault.
+- Notez qu&#x27;une cible Mac ne peut pas démarrer RIM avant la connexion en raison de limitations de la plate-forme, notamment FileVault.
 - Ainsi, sur une cible Mac, RIM se reconnectera une fois que l&#x27;utilisateur se sera connecté.
 - Envoyer Ctrl+Alt+Suppr : envoie cette combinaison de touches à la machine distante.
-- Une option équivalente n&#x27;est pas encore implémentée pour les cibles Mac.
+    - Une option équivalente n&#x27;est pas encore implémentée pour les cibles Mac.
 - Demander un accès sans surveillance ou avec invite : vous permet d&#x27;envoyer une demande d&#x27;accès sans surveillance à l&#x27;ordinateur client. Cette option est utile si vous êtes administrateur système et devez effectuer une maintenance de routine, ou même pour quelque chose d&#x27;aussi simple que contrôler votre ordinateur personnel lorsque vous êtes en déplacement.
 - Verrouiller la machine cible : verrouille la machine cible.
 - Afficher les détails de la connexion : fournit des informations détaillées sur votre connexion, ainsi que sur la machine cible. Les informations comprennent :
@@ -128,17 +149,19 @@ Comme mentionné précédemment, l&#x27;accès au menu RIM vous ramène à votre
 - Déconnecter la session (**Option+Maj+D**) : met fin à la session.
 - N&#x27;oubliez pas que cette option est disponible pour les deux parties de la session.
 
+
 </MacOS>
+
 
 ### Transferts de fichiers
 
 RIM offre un moyen simple de transférer des fichiers, quelle que soit la plateforme utilisée.
 1. Ouvrez le menu RIM et cliquez sur « Réduire la session ». Le contrôle sera renvoyé vers votre ordinateur.
 1. Sélectionnez le ou les fichiers et/ou dossiers que vous souhaitez transférer à l&#x27;aide de votre gestionnaire de fichiers.
-1. Copiez le contenu sélectionné dans le presse-papiers de la manière habituelle. Vous recevrez une notification vous indiquant qu&#x27;un fichier est prêt à être transféré. Vous avez deux options.
+1. Copiez le contenu sélectionné dans le presse-papiers de la manière habituelle. Vous recevrez une notification indiquant qu&#x27;un fichier est prêt à être transféré. Vous avez deux options.
 1. **Si la cible est un Mac :**
 - Activez le menu de session RIM et cliquez sur l&#x27;option « Transférer le fichier vers la cible ».
-    - Une fois le transfert terminé, le Mac cible générera un répertoire temporaire contenant le contenu transféré. Celui-ci devra ensuite être copié et collé dans les répertoires prévus à cet effet.
+- Une fois le transfert terminé, le Mac cible générera un répertoire temporaire contenant le contenu transféré. Celui-ci devra ensuite être copié et collé dans les répertoires prévus à cet effet.
 1. **Si la cible est un ordinateur Windows :**
 - Revenez à la session à distance et localisez le dossier sur l&#x27;ordinateur cible dans lequel vous souhaitez coller le contenu.
 - Enfin, collez le contenu comme vous le feriez normalement.
@@ -147,43 +170,94 @@ Notez que la durée du transfert dépendra entièrement de la taille du contenu 
 
 ### Enregistrement de session
 
-La fonction d&#x27;enregistrement de session de RIM vous permet, en tant que contrôleur, d&#x27;enregistrer facilement le contenu de votre session dans un fichier sur votre ordinateur. Ce fichier peut ensuite être distribué à la personne à laquelle vous fournissez une assistance à distance. Le contenu de l&#x27;enregistrement de session comprendra la sortie audiovisuelle de l&#x27;ordinateur cible, ainsi que l&#x27;audio d&#x27;une conversation vocale en cours.  
+La fonction d&#x27;enregistrement de session de RIM vous permet, en tant que contrôleur, d&#x27;enregistrer facilement le contenu de votre session dans un fichier sur votre ordinateur. Ce fichier peut ensuite être distribué à la personne à laquelle vous fournissez une assistance à distance. Le contenu de l&#x27;enregistrement de session comprendra la sortie audiovisuelle de l&#x27;ordinateur cible, ainsi que l&#x27;audio d&#x27;une conversation vocale en cours.
 Pour faciliter l&#x27;enregistrement d&#x27;une session :  
 
 <Windows>
-1. Accédez à l&#x27;option « Démarrer l&#x27;enregistrement de session » dans le menu de session. Les actions suivantes se produiront alors :
-* L&#x27;enregistrement commencera instantanément
-    * Les deux parties recevront une notification indiquant que l&#x27;enregistrement a commencé.
+
+1. Accédez à l&#x27;option « Démarrer l&#x27;enregistrement de la session » dans le menu de la session. Les actions suivantes se produiront alors :
+* Pendant une session par mot-clé :
+* L&#x27;utilisateur cible recevra une boîte de dialogue d&#x27;autorisation lui demandant s&#x27;il accepte que la session soit enregistrée. La saisie au clavier du contrôleur sera suspendue pendant l&#x27;affichage de cette boîte de dialogue.
+* Si l&#x27;utilisateur cible accepte, l&#x27;enregistrement commence. Si l&#x27;utilisateur cible refuse l&#x27;enregistrement, la session entière prend fin.
+    * Pour les sessions avec invite/sans surveillance :
+* L&#x27;enregistrement commencera instantanément.
+* Dans tous les cas, les deux parties recevront une notification indiquant que l&#x27;enregistrement a commencé une fois que celui-ci aura véritablement démarré.
+1. Pour mettre en pause ou reprendre l&#x27;enregistrement, accédez à l&#x27;option « Mettre en pause/Reprendre l&#x27;enregistrement de la session » dans le menu de la session.
+* L&#x27;enregistrement sera mis en pause ou repris en conséquence.
+    * Une notification sera envoyée aux deux parties.
+1. L&#x27;enregistrement peut être arrêté via l&#x27;option « Arrêter l&#x27;enregistrement de la session » du menu de session.
+* Par défaut, vous recevrez une boîte de dialogue de confirmation vous demandant si vous souhaitez arrêter l&#x27;enregistrement. Cette boîte de dialogue est conçue pour empêcher la désactivation accidentelle de l&#x27;enregistrement de la session, mais elle peut être désactivée si vous le souhaitez.
+* Les deux parties recevront une notification une fois l&#x27;enregistrement terminé.
+    * L&#x27;enregistrement sera ensuite enregistré dans le répertoire dans lequel RIM est configuré pour enregistrer vos enregistrements (il s&#x27;agit par défaut du dossier « Vidéos » dans votre répertoire utilisateur). Pour plus de commodité, vous serez automatiquement redirigé vers ce dossier via l&#x27;Explorateur, ce qui vous permettra d&#x27;envoyer l&#x27;enregistrement à l&#x27;utilisateur si vous le souhaitez.
+* Notez que la déconnexion de la session arrête automatiquement l&#x27;enregistrement.
+
+
+</Windows>
+
+
+
+<MacOS>
+
+1. Accédez à l&#x27;option « Démarrer l&#x27;enregistrement de la session » dans le menu de la session. Les actions suivantes se produiront alors :
+* Pendant une session par mot-clé :
+* L&#x27;utilisateur cible recevra une boîte de dialogue d&#x27;autorisation lui demandant s&#x27;il accepte que la session soit enregistrée. La saisie au clavier du contrôleur sera suspendue pendant l&#x27;affichage de cette boîte de dialogue.
+* Si l&#x27;utilisateur cible accepte, l&#x27;enregistrement commence. Si l&#x27;utilisateur cible refuse l&#x27;enregistrement, la session entière prend fin.
+* Pour les sessions avec invite/sans surveillance :
+* L&#x27;enregistrement commencera instantanément.
+* Quoi qu&#x27;il en soit, les deux parties recevront une notification indiquant que l&#x27;enregistrement a commencé une fois que celui-ci aura véritablement débuté.
 1. Pour mettre en pause ou reprendre l&#x27;enregistrement, accédez à l&#x27;option « Mettre en pause/Reprendre l&#x27;enregistrement de la session » dans le menu de la session.
 * L&#x27;enregistrement sera mis en pause ou repris en conséquence.
 * Une notification sera envoyée aux deux parties.
 1. L&#x27;enregistrement peut être arrêté via l&#x27;option « Arrêter l&#x27;enregistrement de la session » dans le menu de la session.
+    * Par défaut, une boîte de dialogue de confirmation s&#x27;affichera pour vous demander si vous souhaitez arrêter l&#x27;enregistrement. Cette boîte de dialogue est conçue pour éviter toute désactivation accidentelle de l&#x27;enregistrement de la session, mais elle peut être désactivée si vous le souhaitez.
 * Les deux parties recevront une notification une fois l&#x27;enregistrement terminé.
-* L&#x27;enregistrement sera ensuite enregistré dans le dossier « Vidéos » de votre répertoire utilisateur. Pour plus de commodité, vous serez automatiquement redirigé vers ce dossier via l&#x27;Explorateur, ce qui vous permettra d&#x27;envoyer l&#x27;enregistrement à l&#x27;utilisateur si vous le souhaitez.
-* La déconnexion de la session arrête l&#x27;enregistrement de la même manière que décrit ci-dessus.
+    * L&#x27;enregistrement sera ensuite enregistré dans le répertoire dans lequel RIM enregistre vos enregistrements (il s&#x27;agit par défaut du dossier « Movies » dans votre répertoire utilisateur). Pour plus de commodité, vous serez automatiquement redirigé vers ce dossier via le Finder, ce qui vous permettra d&#x27;envoyer l&#x27;enregistrement à l&#x27;utilisateur si vous le souhaitez.
+* Notez que la déconnexion de la session arrête automatiquement l&#x27;enregistrement.
 
-</Windows>
-
-<MacOS>
-1. Accédez à l&#x27;option « Démarrer l&#x27;enregistrement de la session » dans le menu de la session. Les actions suivantes se produiront alors :
-* L&#x27;enregistrement commencera instantanément.
-* Les deux parties recevront une notification indiquant que l&#x27;enregistrement a commencé.
-1. Pour mettre en pause ou reprendre l&#x27;enregistrement, accédez à l&#x27;option « Mettre en pause/Reprendre l&#x27;enregistrement de la session » dans le menu de la session.
-    * L&#x27;enregistrement sera mis en pause ou repris en conséquence.
-* Une notification sera envoyée aux deux parties.
-1. L&#x27;enregistrement peut être arrêté via l&#x27;option « Arrêter l&#x27;enregistrement de la session » dans le menu de la session.
-* Les deux parties recevront une notification une fois l&#x27;enregistrement terminé.
-    * L&#x27;enregistrement sera ensuite enregistré dans le dossier « Films » de votre répertoire utilisateur. Pour plus de commodité, vous serez automatiquement redirigé vers ce dossier via le Finder, ce qui vous permettra d&#x27;envoyer l&#x27;enregistrement à l&#x27;utilisateur si vous le souhaitez.
-* La déconnexion de la session arrête l&#x27;enregistrement de la même manière que celle décrite ci-dessus.
 
 </MacOS>
 
 
+
 Les enregistrements sont une fonctionnalité entièrement gratuite, accessible à tous les utilisateurs, quel que soit leur niveau. De plus, les enregistrements sont traités entièrement en local, sans aucune intervention du service cloud.
+
+Remarque concernant le module d&#x27;accessibilité à distance
+
+Étant donné que le module d&#x27;accessibilité à distance transmet sa parole à votre copie de NVDA en cours d&#x27;exécution, RIM doit s&#x27;adapter à cela afin de pouvoir la capturer dans un enregistrement. Par conséquent, chaque fois que l&#x27;accessibilité à distance est active pendant un enregistrement, le RIM lance une capture de la sortie audio complète de votre système. Cela permet de capturer la parole entendue via le module d&#x27;accessibilité à distance exactement telle qu&#x27;elle a été entendue pendant la session. Bien que cela puisse entraîner la capture de certains sons de notification provenant de votre ordinateur de contrôle dans l&#x27;enregistrement, cela n&#x27;entraînera pas de duplication du son provenant de l&#x27;ordinateur cible.
+
+#### Configuration avancée pour les enregistrements de session
+
+RIM propose un certain nombre d&#x27;options de configuration avancées pour l&#x27;enregistrement de session. Celles-ci incluent la possibilité de démarrer automatiquement les enregistrements au début de la session, de stocker les enregistrements dans un autre chemin d&#x27;accès (par exemple, un partage réseau) et de déterminer l&#x27;état de la boîte de dialogue de confirmation lors de l&#x27;arrêt d&#x27;un enregistrement. Actuellement, la seule façon de modifier ces paramètres est d&#x27;utiliser un fichier de configuration. La procédure n&#x27;est donc disponible qu&#x27;en anglais.  
+
+
+<Windows>
+
+Le fichier de configuration est accessible via la boîte de dialogue Exécuter en collant ce qui suit :  
+%appdata%\remote-incident-manager\config.toml
+</Windows>
+  
+
+
+
+<MacOS>
+Le fichier config.toml se trouve sous $HOME/Library/Application Support/remote-incident-manager
+
+</MacOS>
+
+Une fois dans le fichier de configuration, les options suivantes seront disponibles :
+*<span translate="no">directory</span> : définit le répertoire de stockage des enregistrements.
+* Les barres obliques inversées doivent être correctement échappées dans le cas des répertoires Windows.
+*<span translate="no">auto_start</span> : détermine si l&#x27;enregistrement de la session commence immédiatement après le lancement de la session. Cette option est définie par défaut sur <span translate="no">false</span>.  
+* <span translate="no">suppress_stop_confirmation</span> : contrôle l&#x27;affichage de la boîte de dialogue de confirmation lors de l&#x27;arrêt manuel d&#x27;un enregistrement. La valeur par défaut est <span translate="no">false</span>.
+* Notez que la déconnexion d&#x27;une session arrête toujours l&#x27;enregistrement sans confirmation, quel que soit ce paramètre.
+
+Une fois la configuration enregistrée, les modifications prendront effet pour les sessions suivantes. Il n&#x27;est pas nécessaire de redémarrer l&#x27;application.
+
 
 ### Module d&#x27;accessibilité à distance
 
-Que vous aidiez un utilisateur qui n&#x27;utilise pas de lecteur d&#x27;écran ou que vous diagnostiquiez un problème avec un lecteur d&#x27;écran défectueux, le module RIM est entièrement prêt à vous venir en aide.
+Que vous aidiez un utilisateur qui n&#x27;utilise pas de lecteur d&#x27;écran ou que vous diagnostiquiez un problème avec un lecteur d&#x27;écran défectueux, le module RIM est entièrement prêt à vous aider.
+
 
 <Windows>
 Le module d&#x27;accessibilité à distance se compose de deux éléments :
@@ -196,20 +270,25 @@ Pour la première initialisation du module d&#x27;accessibilité, voici ce que v
 1. Si NVDA est actuellement en cours d&#x27;exécution, vous serez invité à installer un module complémentaire qui permettra à votre copie de NVDA de communiquer avec l&#x27;ordinateur distant pendant la session. Acceptez les invites d&#x27;installation et attendez que NVDA redémarre.
 1. À ce stade, le module d&#x27;accessibilité à distance sera entièrement initialisé et vous entendrez une sortie vocale lorsque vous contrôlerez l&#x27;ordinateur distant. Pour désactiver temporairement la sortie vocale, appuyez simplement une fois sur Insert ou Capslock+S, puis appuyez deux fois sur cette commande pour la réactiver.
 
-À partir de ce moment, si vous utilisez un lecteur d&#x27;écran sur l&#x27;ordinateur de contrôle, le module d&#x27;accessibilité à distance démarrera automatiquement pendant les sessions à distance au cours desquelles aucun lecteur d&#x27;écran n&#x27;est utilisé sur l&#x27;ordinateur distant. Si vous utilisez un lecteur d&#x27;écran autre que NVDA, RIM désactivera ce lecteur d&#x27;écran et basculera vers NVDA. Si vous devez arrêter le module d&#x27;accessibilité à distance sur la machine distante afin de démarrer un autre lecteur d&#x27;écran, il vous suffit d&#x27;accéder à l&#x27;option « Arrêter l&#x27;accessibilité à distance » dans le menu RIM.
+À partir de ce moment, si vous utilisez un lecteur d&#x27;écran sur l&#x27;ordinateur de contrôle, le module d&#x27;accessibilité à distance démarrera automatiquement pendant les sessions à distance au cours desquelles aucun lecteur d&#x27;écran n&#x27;est utilisé sur l&#x27;ordinateur distant. Si vous utilisez un lecteur d&#x27;écran autre que NVDA, RIM désactivera ce lecteur d&#x27;écran et basculera vers NVDA. Si vous devez arrêter le module d&#x27;accessibilité à distance sur la machine distante afin de démarrer un autre lecteur d&#x27;écran, il vous suffit d&#x27;accéder à l&#x27;option « Arrêter l&#x27;accessibilité à distance » dans le menu RIM.  
+
 </Windows>
+
+
 <MacOS>
-Le module d&#x27;accessibilité à distance est une configuration spéciale lancée sur le Mac cible à la demande d&#x27;un contrôleur Windows ou Mac. L&#x27;avantage de cette approche est que l&#x27;utilisateur final n&#x27;entend pas la synthèse vocale sur son ordinateur pendant que vous le contrôlez. Au lieu de cela, le module d&#x27;accessibilité à distance transmet la sortie vocale au système de synthèse vocale côté contrôleur. De cette façon, vous pouvez aider un utilisateur final de manière accessible sans qu&#x27;il ait à activer un lecteur d&#x27;écran. Si vous utilisez VoiceOver sur le Mac de contrôle, le module d&#x27;accessibilité à distance démarre automatiquement pendant les sessions à distance au cours desquelles aucun lecteur d&#x27;écran n&#x27;est en cours d&#x27;exécution sur l&#x27;ordinateur distant.
+
+Le module d&#x27;accessibilité à distance est une configuration spéciale lancée sur le Mac cible à la demande d&#x27;un contrôleur Windows ou Mac. L&#x27;avantage de cette approche est que l&#x27;utilisateur final n&#x27;entend pas la synthèse vocale sur son ordinateur pendant que vous le contrôlez. Au lieu de cela, le module d&#x27;accessibilité à distance transmet la sortie vocale au système de synthèse vocale côté contrôleur. De cette façon, vous pouvez aider un utilisateur final de manière accessible sans qu&#x27;il ait à activer un lecteur d&#x27;écran. Si vous utilisez VoiceOver sur le Mac de contrôle, le module d&#x27;accessibilité à distance démarre automatiquement pendant les sessions à distance au cours desquelles l&#x27;ordinateur distant n&#x27;utilise pas de lecteur d&#x27;écran.
 </MacOS>
+  
 
 ## Redémarrage et reconnexion
 
-Que vous installiez des mises à jour du système ou que vous essayiez de sortir d&#x27;un blocage du système, RIM vous accompagne pendant le processus de redémarrage. En sélectionnant l&#x27;option « Redémarrer et se reconnecter » dans le menu RIM, vous pouvez effectuer un redémarrage normal ou un redémarrage d&#x27;urgence, selon l&#x27;état de l&#x27;ordinateur. Pendant le redémarrage de l&#x27;ordinateur, RIM vous informe que des tentatives de reconnexion sont en cours.
-Notez que si l&#x27;ordinateur est redémarré par une installation logicielle ou manuellement de la manière habituelle, il vous sera demandé si vous souhaitez vous reconnecter à la session. Il convient également de noter que dans les deux cas, les cibles Mac ne se reconnecteront qu&#x27;une fois que l&#x27;utilisateur se sera connecté. Cela est dû au fait que RIM ne peut pas démarrer automatiquement sur l&#x27;écran de connexion en raison des limitations de la plate-forme, notamment le chiffrement du disque FileVault.
+Que vous installiez des mises à jour du système ou que vous tentiez de résoudre un blocage du système, RIM vous accompagne pendant le processus de redémarrage. En sélectionnant l&#x27;option « Redémarrer et se reconnecter » dans le menu RIM, vous pouvez effectuer un redémarrage normal ou un redémarrage d&#x27;urgence, selon l&#x27;état de l&#x27;ordinateur. Pendant le redémarrage de l&#x27;ordinateur, RIM vous informe que des tentatives de reconnexion sont en cours.
+Notez que si l&#x27;ordinateur est redémarré par une installation logicielle ou manuellement de la manière habituelle, il vous sera demandé si vous souhaitez reconnecter la session. Il convient également de noter que dans les deux cas, les cibles Mac ne se reconnecteront qu&#x27;une fois que l&#x27;utilisateur se sera connecté. Cela est dû au fait que RIM ne peut pas démarrer automatiquement sur l&#x27;écran de connexion en raison des limitations de la plate-forme, notamment le chiffrement du disque FileVault.
 
 ### Accès sans surveillance ou sur demande
 
-RIM vous permet, en tant que contrôleur, de configurer les machines pour un accès sans surveillance ou sur demande. Cela vous permet de fournir une assistance à distance sans que l&#x27;utilisateur ait à lancer RIM, à entrer un mot de passe ou même à se trouver à proximité de l&#x27;ordinateur. Cette fonctionnalité est utile si vous êtes un administrateur système effectuant la maintenance de routine des ordinateurs de votre groupe de travail ou si vous fournissez régulièrement une assistance à des clients. Vous pouvez également autoriser l&#x27;accès sans surveillance à votre ordinateur personnel si vous devez y accéder depuis un autre endroit.
+RIM vous permet, en tant que contrôleur, de configurer des machines pour un accès sans surveillance ou sur demande. Cela vous permet de fournir une assistance à distance sans que l&#x27;utilisateur ait à lancer RIM, à entrer un mot de passe ou même à se trouver à proximité de l&#x27;ordinateur. Cette fonctionnalité est utile si vous êtes un administrateur système effectuant la maintenance de routine des ordinateurs de votre groupe de travail ou si vous fournissez régulièrement une assistance à des clients. Vous pouvez également autoriser l&#x27;accès sans surveillance à votre ordinateur personnel si vous devez y accéder depuis un autre endroit.
 Il existe plusieurs façons de configurer les machines pour un accès sans surveillance.
 
 #### Pendant une session interactive
@@ -219,43 +298,43 @@ Il existe plusieurs façons de configurer les machines pour un accès sans surve
 1. Vous serez invité à indiquer le type de connexion que vous souhaitez configurer. Vous avez le choix entre les options suivantes :
 1. Sans surveillance : permet de lancer des sessions sans aucune intervention de la part de l&#x27;utilisateur final.
 1. Avec invite : cette configuration affiche une invite informant l&#x27;utilisateur que vous vous connectez à son ordinateur. Il devra appuyer sur Option+Maj+Y sous macOS ou Windows+Maj+Y sous Windows s&#x27;il souhaite accepter la connexion.
-1. Vous serez invité à donner un nom à cet ordinateur. Entrez un nom personnel pour l&#x27;ordinateur ou, le cas échéant, l&#x27;ID de l&#x27;ordinateur tel qu&#x27;il apparaît dans votre groupe de travail.
+1. Il vous sera demandé de donner un nom à cette machine. Entrez un nom personnel pour la machine ou, le cas échéant, l&#x27;ID de la machine tel qu&#x27;il apparaît dans votre groupe de travail.
 1. Appuyez sur Entrée.
-1. Sur la machine cliente, une boîte de dialogue s&#x27;affiche pour demander à l&#x27;utilisateur s&#x27;il accepte que son ordinateur soit configuré pour l&#x27;accès que vous avez demandé. S&#x27;il répond oui, vous recevrez une invite vous informant que l&#x27;accès a été approuvé.  
+1. Sur la machine cliente, une boîte de dialogue s&#x27;affiche pour demander à l&#x27;utilisateur s&#x27;il accepte que son ordinateur soit configuré pour l&#x27;accès que vous avez demandé. S&#x27;il répond oui, vous recevrez un message vous informant que l&#x27;accès a été approuvé.  
 
 ##### Remarque à l&#x27;attention des titulaires d&#x27;un compte personnel sans surveillance
 
-Si vous avez utilisé tous les emplacements machine attribués à votre compte, RIM ne donnera pas suite à la demande. Dans ce cas, vous avez deux options, toutes deux possibles via le tableau de bord RIM :
-1. Désenregistrez l&#x27;un de vos ordinateurs afin de libérer un emplacement.
-1. Mettez à niveau votre abonnement afin d&#x27;obtenir davantage d&#x27;emplacements.
+Si vous avez utilisé tous les emplacements de machine attribués à votre compte, RIM ne donnera pas suite à la demande. Dans ce cas, vous avez deux options, toutes deux possibles via le tableau de bord RIM :
+1. Désenregistrez l&#x27;une de vos machines afin de libérer un emplacement.
+1. Mettez à niveau votre abonnement avec davantage d&#x27;emplacements.
 
-#### Enregistrement d&#x27;un appareil sur votre compte RIM
+#### Enregistrement d&#x27;un ordinateur sur votre compte RIM
 
-Si vous souhaitez enregistrer l&#x27;un de vos propres appareils pour un accès sans surveillance, vous pouvez le faire sans avoir à démarrer une session interactive avec l&#x27;appareil.
+Si vous souhaitez enregistrer l&#x27;un de vos propres ordinateurs pour un accès sans surveillance, vous pouvez le faire sans avoir à démarrer une session interactive avec l&#x27;ordinateur.
 1. Démarrez RIM en mode « Receive Help » (Recevoir de l&#x27;aide).
-1. Cliquez sur le bouton « Add this machine to your RIM account » (Ajouter cet appareil à votre compte RIM).
-1. Saisissez votre adresse e-mail, puis cliquez sur « Next » (Suivant).
+1. Cliquez sur le bouton « Add this machine to your RIM account » (Ajouter cet ordinateur à votre compte RIM).
+1. Entrez votre adresse e-mail, puis cliquez sur Suivant.
 1. Attendez que le code de connexion en deux étapes vous parvienne, entrez-le, puis vous devriez être connecté.
 1. Il vous sera demandé quel type d&#x27;accès vous souhaitez configurer pour cette machine. Vous avez le choix entre les options suivantes :
 1. Sans surveillance : permet de lancer des sessions sans aucune intervention de la part de l&#x27;utilisateur final.
-1. Avec invite : cette configuration présente à l&#x27;utilisateur une invite l&#x27;informant que vous vous connectez à sa machine.
-1. Donnez un nom à la machine, puis activez le bouton « Ajouter une machine ».
-1. La machine sera enregistrée sur votre compte, ce qui permettra à toutes les machines contrôleurs connectées à votre compte RIM de se connecter à cette machine.
+1. Avec invite : cette configuration affiche une invite informant l&#x27;utilisateur que vous vous connectez à son ordinateur.
+1. Donnez un nom à l&#x27;ordinateur, puis cliquez sur le bouton « Ajouter un ordinateur ».
+1. L&#x27;ordinateur sera enregistré sur votre compte, ce qui permettra à tous les ordinateurs contrôleurs connectés à votre compte RIM de se connecter à cet ordinateur.
 
-##### Remarque pour les titulaires d&#x27;un compte personnel sans surveillance
+##### Remarque à l&#x27;attention des titulaires d&#x27;un compte personnel sans surveillance
 
 Si vous avez utilisé tous les emplacements de machine attribués à votre compte, RIM ne traitera pas la demande. Dans ce cas, vous avez deux options, toutes deux possibles via le tableau de bord RIM :
-1. Désenregistrez l&#x27;un de vos ordinateurs afin de libérer un emplacement.
-1. Mettez à niveau votre abonnement avec plus d&#x27;emplacements.
+1. Désenregistrez l&#x27;une de vos machines afin de libérer un emplacement.
+1. Mettez à niveau votre abonnement afin d&#x27;obtenir davantage d&#x27;emplacements.
 
 #### Se connecter
 
-Maintenant que nous avons enregistré l&#x27;ordinateur pour un accès sans surveillance, voici comment démarrer une session.
+Maintenant que nous avons enregistré la machine pour un accès sans surveillance, voici comment démarrer une session.
 1. Démarrez RIM en mode contrôleur.
-1. Au lieu de saisir un mot-clé, localisez et activez le bouton « Choisir une machine ».
-1. Lorsque vous cliquez dessus, une liste de machines s&#x27;affiche. Choisissez celle que vous souhaitez, puis appuyez sur Entrée. Vous pouvez également utiliser la barre de recherche pour affiner la liste et trouver une machine spécifique.
+1. Plutôt que de saisir un mot-clé, localisez et activez le bouton « Choisir une machine ».
+1. Lorsque vous cliquez dessus, une liste de machines apparaît. Choisissez celle que vous souhaitez, puis appuyez sur Entrée. Vous pouvez également utiliser la barre de recherche pour affiner la liste et trouver une machine spécifique.
 
-Si la machine cible est configurée pour un accès avec invite, l&#x27;utilisateur final recevra une invite. Une fois qu&#x27;il aura répondu oui, vous serez connecté. Si la session est sans surveillance, vous serez immédiatement connecté et redirigé vers la zone de contrôle à distance.
+Si la machine cible est configurée pour un accès sur demande, l&#x27;utilisateur final recevra une invite. Une fois qu&#x27;il aura répondu oui, vous serez connecté. Si la session est sans surveillance, vous serez immédiatement connecté et redirigé vers la zone de contrôle à distance.
 
 Remarque : les conversations vocales doivent être approuvées par l&#x27;utilisateur cible lors des sessions entièrement sans surveillance. Cela n&#x27;est toutefois pas nécessaire pour les sessions avec invite.
 
@@ -267,11 +346,14 @@ Pour plus de commodité, vous pouvez créer des raccourcis sur le bureau qui vou
 1. Un raccourci sera automatiquement ajouté à votre bureau.
 
 Désormais, lorsque vous activerez ce raccourci, vous serez automatiquement redirigé vers la session à distance ou vous enverrez une invite à l&#x27;ordinateur de l&#x27;utilisateur, qu&#x27;il pourra accepter.
+
+
 <Windows>
 ##### Autres façons d&#x27;utiliser les raccourcis de session sans surveillance
 
-Les raccourcis de session sans surveillance, comme tous les autres raccourcis, peuvent être associés à des raccourcis clavier globaux. Cela peut être extrêmement utile si vous êtes un technicien de maintenance qui gère plusieurs ordinateurs dans un groupe de travail. Par exemple, si votre groupe de travail comprend 6 ordinateurs sur lesquels vous effectuez une maintenance de routine, vous pouvez configurer Alt+Contrôle+1 à 6 comme raccourcis clavier pour chaque machine respective. Cela devrait accélérer considérablement votre flux de travail.
+Les raccourcis de session sans surveillance, comme tous les autres raccourcis, peuvent être associés à des raccourcis clavier globaux. Cela peut s&#x27;avérer extrêmement utile si vous êtes un technicien de maintenance gérant plusieurs ordinateurs dans un groupe de travail. Par exemple, si votre groupe de travail comprend 6 ordinateurs sur lesquels vous effectuez une maintenance de routine, vous pouvez configurer les raccourcis clavier Alt+Contrôle+1 à 6 pour chaque machine respective. Cela devrait considérablement accélérer votre flux de travail.
 De plus, vous pouvez appeler une session sans surveillance via la boîte d&#x27;exécution si vous copiez le raccourci dans votre répertoire utilisateur. Une fois le raccourci copié, vous pouvez démarrer une session sans surveillance en tapant votre-nom-de-session.url dans la boîte d&#x27;exécution.
+
 </Windows>
 
 
@@ -279,22 +361,28 @@ De plus, vous pouvez appeler une session sans surveillance via la boîte d&#x27;
 
 Si vous ne souhaitez plus que votre machine soit contrôlée sans surveillance, vous pouvez révoquer l&#x27;accès du contrôleur. Vous n&#x27;avez pas besoin d&#x27;être en session pour le faire.
 
+
 <Windows>
 1. Accédez à l&#x27;icône Remote Incident Manager dans votre barre d&#x27;état système.
-1. Si vous utilisez le clavier, appuyez sur Windows+B, puis sur la barre d&#x27;espace, puis sur la flèche gauche ou droite jusqu&#x27;à ce que vous trouviez l&#x27;icône.
+    1. Si vous utilisez le clavier, appuyez sur Windows+B, puis sur la barre d&#x27;espace, puis sur la flèche gauche ou droite jusqu&#x27;à ce que vous trouviez l&#x27;icône.
 1. Cliquez avec le bouton droit sur cette icône ou appuyez sur la touche Applications ou Maj+F10.
 1. Sélectionnez l&#x27;option « Révoquer l&#x27;accès sans surveillance ».
 1. Vous accéderez à une liste d&#x27;ordinateurs. Sélectionnez celui que vous souhaitez révoquer.
-1. Il vous sera demandé si vous souhaitez révoquer l&#x27;ordinateur. Répondez oui.  
+1. Il vous sera demandé si vous souhaitez révoquer la machine ; répondez oui.
 </Windows>
+  
+
+
+
 <MacOS>
 1. Accédez à l&#x27;icône Remote Incident Manager dans vos menus extras/statut.
 1. Si vous utilisez VoiceOver, appuyez deux fois sur VO+M, puis localisez l&#x27;icône du menu Remote Incident Manager.
 1. Cliquez sur cette icône ou appuyez sur VO+Espace.
 1. Sélectionnez l&#x27;option « Révoquer l&#x27;accès sans surveillance ».
-1. Vous accéderez à une liste d&#x27;ordinateurs, sélectionnez celui que vous souhaitez révoquer.
-1. Il vous sera demandé si vous souhaitez révoquer la machine ; répondez oui.
-</MacOS>  
+1. Vous accéderez à une liste d&#x27;ordinateurs. Sélectionnez celui que vous souhaitez révoquer.
+1. Il vous sera demandé si vous souhaitez révoquer l&#x27;accès à la machine ; répondez oui.
+</MacOS>
+  
 
 C&#x27;est tout ! Le contrôleur recevra un message indiquant que cette machine n&#x27;est plus disponible pour un accès sans surveillance. S&#x27;il a à nouveau besoin d&#x27;un accès sans surveillance, il peut relancer la procédure pour demander l&#x27;autorisation d&#x27;accès sans surveillance comme décrit ci-dessus.
 
