@@ -5,125 +5,131 @@ title: Das RIM Management Dashboard
 import Windows from "~/components/platform/Windows.astro"
 import MacOS from "~/components/platform/MacOS.astro"
 
-RIM bietet ein webbasiertes Dashboard, das verschiedene Aufgaben der Computer- und Kontoverwaltung erleichtert. Sie können Ihre vorhandenen unbeaufsichtigten Computer verwalten, vorkonfigurierte Installationsprogramme für Zielcomputer erstellen und vieles mehr.  
-Es ist zu beachten, dass der Funktionsumfang des Dashboards weitgehend davon abhängt, welche Abonnementstufe Ihr Konto hat. So können Unternehmensanwender beispielsweise Computer Zielgruppen zuweisen und Silent-Installer erstellen. Andererseits kann jeder (auch Privatanwender) benutzerdefinierte Installationsprogramme für seine unbeaufsichtigten Rechner erstellen.
+RIM verfügt über ein  webbasiertes Dashboard, das verschiedene Aufgaben der Maschinen- und Kontenverwaltung erleichtert. Sie können Ihre vorhandenen unbeaufsichtigten Computer verwalten, vorkonfigurierte Installationsprogramme für Zielcomputer erstellen und vieles mehr.  
+Es ist zu beachten, dass der Funktionsumfang des Dashboards weitgehend davon abhängt, welche Abonnementstufe Ihr Konto hat. Beispielsweise können Unternehmensbenutzer Maschinen Zielgruppen zuweisen sowie unbeaufsichtigte Installationsprogramme erstellen. Andererseits kann jeder (auch Privatanwender) benutzerdefinierte Installationsprogramme für seine unbeaufsichtigten Maschinen erstellen.
 
-### Auffinden des Dashboards
+### Das Dashboard finden
 
-Wenn Sie ein Controller sind, gelangen Sie am einfachsten über die RIM-Hauptschnittstelle zum Dashboard. Wenn Sie auf die Schaltfläche "RIM-Dashboard" klicken, wird das Dashboard automatisch in Ihrem Standardbrowser geöffnet, wobei die Anmeldung bereits erledigt ist.  
-Wenn Sie ein Netzwerkadministrator sind, der RIM nicht installiert hat, können Sie sich einfach bei Ihrem Konto auf der RIM-Website anmelden, und Ihr Dashboard wird angezeigt.
+Wenn Sie ein Controller sind, gelangen Sie am einfachsten über die RIM-Hauptschnittstelle zum Dashboard. Durch Klicken auf die Schaltfläche „RIM Dashboard” wird das Dashboard automatisch in Ihrem Standardbrowser geöffnet, wobei die Anmeldung bereits erledigt ist.  
+Wenn Sie ein Netzwerkadministrator sind, der RIM nicht installiert hat, können Sie sich einfach auf der RIM-Website bei Ihrem Konto anmelden, woraufhin Ihr Dashboard angezeigt wird.
 
-### Verwaltung von Organisationsmitgliedern (Unternehmen)
+### Verwalten von Organisationsmitgliedern (Unternehmen)
 
-Wenn Sie die Schaltfläche "Organisation" auf dem RIM-Dashboard aktivieren, wird ein Menü mit Optionen für die Verwaltung von Organisationen und Mitgliedern angezeigt. Auf der Seite "Mitglieder" werden alle Mitglieder Ihrer Organisation aufgelistet. Alle Mitglieder können ihre Rolle, Abteilung und ihren Namen ändern, und jedes Mitglied kann deaktiviert oder aus einer Organisation entfernt werden, mit Ausnahme des Eigentümers der Organisation. Beachten Sie, dass die Deaktivierung eines Mitglieds dazu führt, dass sein Konto nicht mehr funktionsfähig ist, während sein Datensatz erhalten bleibt.
+Durch Aktivieren der Schaltfläche „Organisation“ im RIM-Dashboard wird ein Menü mit Optionen zur Organisations- und Mitgliederverwaltung angezeigt. Auf der Seite „Mitglieder“ werden alle Mitglieder Ihrer Organisation aufgelistet. Die Rolle, Abteilung und der Name aller Mitglieder können geändert werden, und jedes Mitglied kann deaktiviert oder aus einer Organisation entfernt werden, mit Ausnahme des Organisationsinhabers. Beachten Sie, dass durch die Deaktivierung eines Mitglieds dessen Konto unbrauchbar wird, während die Daten erhalten bleiben.
 
-Das Hinzufügen von Mitgliedern ist so einfach wie die Eingabe ihrer E-Mail-Adresse, die Auswahl ihrer Rolle (Benutzer oder Administrator), die optionale Eingabe ihres Namens und die Auswahl ihrer Abteilung, falls eine solche erstellt wurde.
-Wenn Sie mehrere Mitglieder hinzufügen möchten, können Sie das Bearbeitungsfeld "Mitglieder" verwenden, um eine Massenaufnahme durchzuführen. Dieses Feld kann mehrere Textzeilen enthalten, so dass Sie die Informationen zu jedem Mitglied in eine eigene Zeile eingeben können. In jeder Zeile können Sie entweder eine einzelne E-Mail-Adresse oder eine E-Mail-Adresse und einen Namen in dem Format eingeben:  
-*email@example.com Unbekannter*
+Das Hinzufügen von Mitgliedern ist ganz einfach: Geben Sie die E-Mail-Adresse ein, wählen Sie die Rolle (Benutzer oder Administrator) aus, geben Sie optional den Namen ein und wählen Sie die Abteilung aus, falls eine erstellt wurde.
+Wenn Sie mehrere Mitglieder hinzufügen möchten, können Sie das Bearbeitungsfeld „Mitglieder“ verwenden, um eine Massenhinzufügung durchzuführen. Dieses Bearbeitungsfeld akzeptiert mehrere Textzeilen, sodass Sie die Informationen jedes Mitglieds in einer separaten Zeile eingeben können. In jeder Zeile können Sie entweder eine einzelne E-Mail-Adresse oder eine E-Mail-Adresse und einen Namen im folgenden Format eingeben:  
+*email@example.com John Doe*
 
-Wenn Sie fertig sind, klicken Sie auf die Schaltfläche "Hinzufügen". 
+Wenn Sie fertig sind, klicken Sie auf die Schaltfläche „Hinzufügen”. 
 
 #### Abteilungen
 
-Abteilungen ermöglichen es Ihnen, Mitglieder nach den verschiedenen Gruppen Ihrer Organisation zu organisieren.
+Mit Abteilungen können Sie Mitglieder entsprechend den verschiedenen Gruppen Ihrer Organisation organisieren.
 
-Um eine Abteilung hinzuzufügen, geben Sie ihren Namen in das Eingabefeld "Name" unter der Überschrift "Abteilung erstellen" ein.
+Um eine Abteilung hinzuzufügen, geben Sie deren Namen in das Bearbeitungsfeld „Name” unter der Überschrift „Abteilung erstellen” ein.
 
-#### Mitgliederdaten exportieren
+#### Export von Mitgliedsdaten
 
-Die Mitgliederliste in Ihrer Organisation kann als CSV-Datei exportiert werden. Um den Export herunterzuladen:
-1. Wählen Sie das Feldtrennzeichen, das die Spalten der Datei trennen soll. Die verfügbaren Optionen sind:
-    * komma
-    * Semikolon
-    * Tabulator
-1. Aktivieren Sie die Schaltfläche "Herunterladen".
+Die Mitgliederliste Ihrer Organisation kann als CSV-Datei exportiert werden. So laden Sie den Export herunter: 
+1. Wählen Sie das Feldtrennzeichen, das die Spalten der Datei trennen soll. Folgende Optionen stehen zur Verfügung: 
+    * Komma 
+    * Semikolon 
+    * Tabulator 
+1. Klicken Sie auf die Schaltfläche „Herunterladen“. 
 
-#### Restriktionen
+#### Einschränkungen
 
-Je nach Art Ihrer Organisation kann es bestimmte Funktionen geben, auf die Ihre Mitarbeiter keinen Zugriff haben sollen. Daher können die Administratoren der Organisation die Funktionen auswählen, auf die sie den Kontrolleuren Zugriff gewähren möchten. Der Bildschirm "Einschränkungen", auf den Sie über das Menü "Organisation" zugreifen können, ermöglicht Ihnen die Konfiguration dieser Berechtigungen.
+Je nach Art Ihrer Organisation gibt es möglicherweise bestimmte Funktionen, auf die Ihre Mitarbeiter keinen Zugriff haben sollen. Daher können Organisationsadministratoren auswählen, auf welche Funktionen Controller Zugriff haben sollen. Über den Bildschirm „Einschränkungen“, der über das Menü „Organisation“ aufgerufen werden kann, können Sie diese Berechtigungen konfigurieren.
 
-Zu den Berechtigungen, die umgeschaltet werden können, gehören:
-* Zulassen, dass der Kontrolleur die Sitzung umdreht
-    * Wenn diese Option nicht aktiviert ist, verschwindet die Option "Sitzung umdrehen" aus dem Sitzungsmenü, und die Tastenkombination funktioniert nicht.
+Zu den Berechtigungen, die aktiviert oder deaktiviert werden können, gehören:
+* Controller darf die Sitzung umschalten
+    * Wenn diese Option deaktiviert ist, verschwindet die Option „Sitzung umschalten“ aus dem Sitzungsmenü und die Tastenkombination funktioniert nicht mehr.
 * Dem Controller erlauben, eine Sprachkonversation zu starten
-    * Wenn diese Option nicht aktiviert ist, verschwindet das Kontrollkästchen "Sprachkonversation starten" aus dem Bildschirm "Fernhilfe bereitstellen", ebenso wie der Menüpunkt im Sitzungsmenü.
+* Wenn diese Option deaktiviert ist, verschwindet das Kontrollkästchen „Sprachkonversation starten“ aus dem Bildschirm „Remote-Hilfe bereitstellen“ sowie die Menüoption im Sitzungsmenü.
 * Dem Controller erlauben, unbeaufsichtigten Zugriff anzufordern
-    * Wenn diese Option nicht markiert ist, wird die Option zur Anforderung des unbeaufsichtigten Zugriffs aus dem Sitzungsmenü entfernt.
-* Übertragung von Text und Dateien zwischen Rechnern über die Zwischenablage zulassen
-    * Wenn diese Option nicht aktiviert ist, ignoriert RIM alle Aktivitäten in der Zwischenablage.
-* Sperren des Zielrechners durch den Controller zulassen
-    * Wenn diese Option nicht aktiviert ist, wird die Option zum Sperren des Zielrechners aus dem Sitzungsmenü entfernt.
+    * Wenn diese Option deaktiviert ist, verschwindet die Option zum Anfordern unbeaufsichtigten Zugriffs aus dem Sitzungsmenü.
+* Übertragung von Text und Dateien zwischen Computern über die Zwischenablage zulassen
+* Wenn diese Option deaktiviert ist, ignoriert RIM alle Aktivitäten in der Zwischenablage.
+* Dem Controller erlauben, den Zielcomputer zu sperren
+* Wenn diese Option deaktiviert ist, verschwindet die Option zum Sperren des Zielcomputers aus dem Sitzungsmenü.
+* Dem Controller erlauben, die Sitzung aufzuzeichnen
+* Diese Option ist standardmäßig deaktiviert, sodass die Sitzungsaufzeichnung eine reine Opt-in-Funktion für Unternehmen und/oder Pro-Kunden mit dem Enterprise-Add-on ist.
+* Wenn diese Option deaktiviert ist, verschwindet die Option zum Aufzeichnen der Sitzung aus dem Sitzungsmenü.
+* Diese Einschränkung hebt zusätzlich den clientseitigen auto_start in der Datei config.toml auf.
 
-Sobald Sie die Berechtigungen zu Ihrer Zufriedenheit konfiguriert haben, aktivieren Sie die Schaltfläche "Aktualisieren". Die Änderungen wirken sich nicht auf aktive Sitzungen zum Zeitpunkt der Änderung der Berechtigungen aus. Sie werden jedoch für alle zukünftigen Sitzungen wirksam, ohne dass ein Neustart des Clients erforderlich ist.
+Wenn Sie die Berechtigungen nach Ihren Wünschen konfiguriert haben, klicken Sie auf die Schaltfläche „Aktualisieren“. Die Änderungen haben keine Auswirkungen auf aktive Sitzungen zum Zeitpunkt der Änderung der Berechtigungen. Sie werden jedoch für alle zukünftigen Sitzungen wirksam, ohne dass ein Neustart des Clients erforderlich ist.
 
 ### Ziele verwalten
 
-Wenn Sie auf den Link "Ziele konfigurieren" klicken, gelangen Sie auf eine Seite, auf der Sie alle Rechner verwalten können, die Sie für den unbeaufsichtigten Zugriff konfiguriert haben. Sie können auf jeden dieser Rechner klicken, um ihn zu verwalten. Dort können Sie Folgendes tun:
+Wenn Sie auf den Link „Ziele konfigurieren“ klicken, gelangen Sie zu einer Seite, auf der Sie alle Maschinen verwalten können, die Sie für den unbeaufsichtigten Zugriff konfiguriert haben. Sie können auf eine dieser Maschinen klicken, um sie zu verwalten. Sobald Sie sich darin befinden, können Sie:
 * Das Ziel umbenennen
-* Das Ziel in eine andere Gruppe verschieben (mehr über Zielgruppen später)
-* Eine Fernsitzung mit dem Zielrechner starten
-* Den Zielrechner löschen
+* Das Ziel in eine andere Gruppe verschieben (mehr zu Zielgruppen später)
+* Eine Remote-Sitzung mit dem Ziel starten
+* Das Ziel löschen
+
 
 ### Zielgruppen (für Pro-Konten und höher)
 
-Nehmen wir an, Ihre Arbeitsgruppe ist über mehrere Standorte verteilt. Oder vielleicht möchten Sie Gruppen von Rechnern für Ihre routinemäßigen Wartungstechniker bestimmen. Mit Zielgruppen können Sie genau das tun. Klicken Sie dazu einfach auf die Schaltfläche "Zielgruppe erstellen", benennen Sie Ihre Gruppe und senden Sie sie ab.  
+Angenommen, Ihre Arbeitsgruppe ist auf mehrere verschiedene Standorte verteilt. Oder vielleicht möchten Sie Gruppen von Computern für Ihre routinemäßigen Wartungstechniker festlegen. Mit Zielgruppen können Sie genau das tun. Klicken Sie dazu einfach auf die Schaltfläche „Zielgruppe erstellen“, benennen Sie Ihre Gruppe und senden Sie sie ab.  
 Sie können so viele Zielgruppen erstellen, wie Sie für Ihren Anwendungsfall benötigen. 
 
-#### Zugriffskontrolle (für Unternehmensorganisationen)
+#### Zugriffskontrolle (für Unternehmen)
 
-Wenn in Ihrem Unternehmen ein Supporttechniker einer bestimmten Gruppe von Rechnern zugewiesen wird, möchten Sie wahrscheinlich sicherstellen, dass er nur Zugriff auf diese bestimmte Gruppe hat. Hier kommt die Zugriffskontrolle für Zielgruppen ins Spiel.  
-Wenn Sie auf eine Zielgruppe klicken, erhalten Sie Optionen zur Verwaltung der Maschinen in der Gruppe sowie der Gruppe selbst. Im Abschnitt "Zugriffskontrolle" können Sie den Zugriff auf diese Gruppe für einzelne Konten gewähren. Geben Sie einfach die E-Mail-Adresse des Kontos ein, das Sie hinzufügen möchten, und klicken Sie dann auf die Schaltfläche "Zugriff gewähren". Beachten Sie, dass dieses Konto außerhalb der Domäne Ihrer Unternehmensorganisation existieren kann.  
-Danach wird eine Tabelle mit den Konten angezeigt, die Zugriff auf diese Gruppe haben. Unter jedem Konto befindet sich eine Schaltfläche "Zugriff widerrufen". Für diese Schaltfläche ist keine weitere Bestätigung erforderlich.  
-Es ist zu beachten, dass alle Organisationsadministratoren automatisch Zugriff auf die Verwaltung aller Gruppen erhalten, die unter der Organisation erstellt werden. Außerdem werden alle E-Mail-Adressen, die unter den Domänen Ihrer Organisation liegen, standardmäßig zu Ihrer Organisation in RIM hinzugefügt. Wenn Sie eine genauere Kontrolle darüber wünschen, wer in die Organisation aufgenommen wird, können Sie dies im Hauptmitgliederbereich Ihrer Organisation deaktivieren. Darüber hinaus können Sie im Mitgliederbereich E-Mail-Adressen in großen Mengen hinzufügen, indem Sie Kommas, Leerzeichen oder Zeilenumbrüche zwischen die E-Mail-Adressen setzen.
+Wenn Ihr Unternehmen Support-Techniker für bestimmte Computer zuweist, möchten Sie wahrscheinlich sicherstellen, dass diese nur Zugriff auf diese bestimmten Computer haben. Hier kommt die Zugriffskontrolle für Zielgruppen ins Spiel.  
+Wenn Sie auf eine Zielgruppe klicken, erhalten Sie Optionen zur Verwaltung der Computer in der Gruppe sowie der Gruppe selbst. Im Abschnitt „Zugriffskontrolle“ können Sie den Zugriff auf diese Gruppe auf Kontobasis gewähren. Geben Sie einfach die E-Mail-Adresse des Kontos ein, das Sie hinzufügen möchten, und klicken Sie dann auf die Schaltfläche „Zugriff gewähren“. Beachten Sie, dass dieses Konto außerhalb der Domäne Ihrer Unternehmensorganisation existieren kann.  
+Anschließend wird Ihnen eine Tabelle mit den Konten angezeigt, denen Zugriff auf diese Gruppe gewährt wurde. Unter jedem Konto befindet sich die Schaltfläche „Zugriff widerrufen“. Diese Schaltfläche erfordert keine weitere Bestätigung.  
+Es ist zu beachten, dass allen Organisationsadministratoren automatisch Zugriff gewährt wird, um alle Gruppen zu verwalten, die unter der Organisation erstellt wurden. Darüber hinaus werden alle E-Mail-Adressen unter den Domänen Ihrer Organisation standardmäßig zu Ihrer Organisation in RIM hinzugefügt. Wenn Sie eine detailliertere Kontrolle darüber benötigen, wer aufgenommen wird, können Sie dies im Hauptbereich für Mitglieder Ihrer Organisation deaktivieren. Darüber hinaus können Sie im Mitgliederbereich E-Mail-Adressen in großen Mengen hinzufügen, indem Sie zwischen den E-Mail-Adressen Kommas, Leerzeichen oder Zeilenumbrüche einfügen.
 
-### Einrichten eines vorkonfigurierten RIM-Installers (Pro oder höher)
+Einrichten eines vorkonfigurierten RIM-Installationsprogramms (Pro oder höher)
 
-Eine der einfachsten Möglichkeiten, einen Rechner für unbeaufsichtigte oder angeforderte Verbindungen einzurichten, ist die Erstellung eines benutzerdefinierten Installationsprogramms. Dies ist unglaublich nützlich, wenn Sie Massenverteilungen konfigurieren, oder auch als einfachere Möglichkeit, RIM auf dem Computer eines Endbenutzers zum Laufen zu bringen, für den Sie regelmäßig Support anbieten wollen.
+Eine der einfachsten Möglichkeiten, einen Computer für unbeaufsichtigte oder angeforderte Verbindungen einzurichten, ist die Erstellung eines benutzerdefinierten Installationsprogramms. Dies ist äußerst nützlich, wenn Sie Massenbereitstellungen konfigurieren oder sogar als einfachere Möglichkeit, RIM auf dem Computer eines Endbenutzers einzurichten, für den Sie regelmäßig Support leisten möchten.
 
 Um dies zu tun:
-1. Klicken Sie im Bildschirm "Zielverwaltung" auf die Schaltfläche "Zielinstallationsprogramm erstellen".
-1. Sie werden zunächst gefragt, ob Sie diesen Rechner für einen völlig unbeaufsichtigten Zugriff oder für einen Zugriff mit Eingabeaufforderung konfigurieren möchten, bei dem der Benutzer eine Eingabeaufforderung akzeptieren muss, um die Verbindung zu initiieren.
-1. Dann werden Sie nach einer Zielgruppenzuweisung gefragt. Beachten Sie, dass die Zielgruppenauswahl automatisch auf die von Ihnen gewählte Zielgruppe übergeht, wenn Sie die Konfiguration des Installationsprogramms von der Seite Ihrer Gruppe aus starten.
-1. Sie werden gefragt, wie lange dieser Installer gültig sein soll. Die Gültigkeitsdauer kann zwischen 7 und 30 Tagen liegen, oder sie kann für Unternehmenstarife dauerhaft sein, indem Sie die Gültigkeitsdauer auf nie setzen.
-1. Anschließend haben Sie die Möglichkeit, einen Bassnamen zu vergeben. Jedem Rechner, der über dieses Installationspaket bereitgestellt wird, wird dieser Basisname zugewiesen.
+1. Klicken Sie im Zielverwaltungsbildschirm auf die Schaltfläche „Zielinstallationsprogramm erstellen”.
+1. Sie werden zunächst gefragt, ob Sie diesen Computer für den vollständig unbeaufsichtigten Zugriff oder für den abgefragten Zugriff konfigurieren möchten, bei dem der Benutzer eine Abfrage akzeptieren muss, um die Verbindung herzustellen.
+1. Anschließend werden Sie nach einer Zielgruppenzuweisung gefragt. Beachten Sie, dass die Zielgruppenauswahl automatisch auf die von Ihnen ausgewählte Zielgruppe gesetzt wird, wenn Sie die Installationsprogrammkonfiguration von Ihrer Gruppenseite aus starten.
+1. Sie werden gefragt, wie lange dieses Installationsprogramm gültig sein soll. Er kann zwischen 7 und 30 Tagen gültig sein oder für Unternehmenspläne dauerhaft gültig sein, indem Sie das Ablaufdatum auf „nie” setzen.
+1. Anschließend haben Sie die Möglichkeit, einen Basisnamen zuzuweisen. Allen über dieses Installationspaket bereitgestellten Computern wird dieser Basisname zugewiesen.
 1. Anschließend wird Ihnen ein Kontrollkästchen angezeigt, mit dem Sie sich für eine E-Mail-Benachrichtigung entscheiden können, wenn ein Benutzer RIM über dieses Installationsprogramm installiert.
-1. Wenn Sie ein Unternehmensadministrator sind, sehen Sie ein Kontrollkästchen, mit dem Sie das Installationsprogramm als MSI-Paket erstellen können. Diese Option ist nützlich für die Massenverteilung eines benutzerdefinierten Installers auf einen Computer-Cluster, der der angegebenen Zielgruppe zugewiesen wird.
-1. Sie werden aufgefordert, einen Installer-Namen und optional einige Notizen anzugeben. Diese sind für interne Zwecke bestimmt und werden nicht im erstellten Installer angezeigt.
-1. Klicken Sie auf "Installer erstellen" Es wird ein Download-Link angezeigt, den Sie entweder in die Zwischenablage kopieren und an Ihren Endbenutzer senden können. Alternativ können Sie das Installationsprogramm auch direkt herunterladen, um es bei Masseninstallationen zu verwenden. Sie können das Installationsprogramm von diesem Bildschirm aus löschen, wenn Sie es vorzeitig unbrauchbar machen möchten.
+1. Wenn Sie ein Unternehmensadministrator sind, wird ein Kontrollkästchen angezeigt, mit dem Sie das Installationsprogramm als MSI-Paket erstellen können. Diese Option ist nützlich für die Massenbereitstellung eines benutzerdefinierten Installationsprogramms auf einem Maschinencluster, der für die angegebene Zielgruppe vorgesehen ist.
+1. Sie werden aufgefordert, einen Namen für das Installationsprogramm und optional einige Notizen anzugeben. Diese dienen der internen Dokumentation und werden nicht im erstellten Installationsprogramm angezeigt.
+1. Klicken Sie auf „Installationsprogramm erstellen“. Sie erhalten einen Download-Link, den Sie entweder in die Zwischenablage kopieren und an Ihren Endbenutzer senden können. Alternativ können Sie das Installationsprogramm direkt herunterladen, um es für Massenbereitstellungen zu verwenden. Sie können das Installationsprogramm von diesem Bildschirm löschen, wenn Sie es vorzeitig unbrauchbar machen möchten.
 
-Nachdem Sie Ihr Installationsprogramm erhalten haben, können Sie es auf eine von zwei Arten ausführen. In beiden Fällen fragt das Installationsprogramm den Server ab, um die Gültigkeit des Installationsprogramms zu überprüfen. Wenn der Installer gültig ist, wird der Rechner nach Abschluss der Installation sowohl in Ihrem Konto als auch im RIM-Client zu Ihrer Rechnerliste hinzugefügt. Ein ungültiges Installationsprogramm wird nicht ausgeführt.
+Nachdem Sie nun Ihr Installationsprogramm haben, kann es auf zwei Arten ausgeführt werden. In beiden Fällen fragt das Installationsprogramm den Server ab, um die Gültigkeit des Installationsprogramms zu überprüfen. Wenn das Installationsprogramm gültig ist, wird der Computer nach Abschluss der Installation sowohl in Ihrem Konto als auch im RIM-Client zu Ihrer Computerliste hinzugefügt. Ein ungültiges Installationsprogramm wird nicht ausgeführt.
 
-#### Normale Ausführung
 
-Bei der Ausführung des Installationsprogramms erhält der Benutzer eine Eingabeaufforderung mit den folgenden Informationen:
-* Den Namen des Technikers und ggf. seine Organisation
-* die Art der Verbindung, d.h. ob eine Eingabeaufforderung erforderlich ist oder nicht
+Normale Ausführung
 
-Der Benutzer kann wählen, ob er die Installation mit Ja oder Nein beantwortet. Wenn er mit Nein antwortet, wird die Installation abgebrochen. Nach Beendigung der Installation erhält der Benutzer eine Meldung, dass sein Rechner nun für den Fernzugriff eingerichtet ist.
+Der Benutzer erhält beim Ausführen des Installationsprogramms eine Eingabeaufforderung mit den folgenden Informationen:
+* Name des Technikers zusammen mit seiner Organisation, falls zutreffend
+* Die Art der Verbindung, d. h. ob eine Eingabeaufforderung erforderlich ist oder nicht.
 
-#### Stille Installation (nur Enterprise Installer)
+Der Benutzer kann die Installation entweder mit „Ja” oder „Nein” beantworten. Bei der Antwort „Nein” wird die Installation abgebrochen. Nach Abschluss des Installationsprogramms erhält der Benutzer eine Meldung, dass sein Computer nun für den Fernzugriff eingerichtet ist.
 
-Eine stille Installation kann durch Ausführen des ausführbaren Installationsprogramms mit dem Befehlszeilenparameter */S* eingeleitet werden. Dies ist nützlich, wenn RIM als Teil einer Massenverteilungsroutine installiert werden soll.
+#### Stille Installation (nur für Unternehmensinstallationsprogramme)
+
+Eine unbeaufsichtigte Installation kann durch Ausführen des ausführbaren Installationsprogramms mit dem Befehlszeilenparameter */S* gestartet werden. Dies ist nützlich, wenn RIM im Rahmen einer Massenbereitstellungsroutine installiert wird.
 
 ### Sitzungsverlauf
 
-Über das RIM-Dashboard können Sie den gesamten Verlauf Ihrer vergangenen Sitzungen einsehen. Der Sitzungsverlauf enthält derzeit das Datum und die Uhrzeit jeder Sitzung, den Namen des Computers, mit dem Sie verbunden waren, und die Dauer der Sitzung. Über den Link "Kommentar hinzufügen" in der Sitzungszeile können Sie außerdem Kommentare zu einer Sitzung hinzufügen. Dies ist nützlich, um Notizen zum aktuellen Status eines Vorfalls sowohl für Sie selbst als auch für die Administratoren der Organisation hinzuzufügen.
+Über das RIM-Dashboard können Sie Ihren gesamten Verlauf vergangener Sitzungen einsehen. Der Sitzungsverlauf enthält derzeit das Datum und die Uhrzeit jeder Sitzung, den Namen des Computers, mit dem Sie verbunden waren, und die Dauer der Sitzung. Sie können einer Sitzung auch Kommentare hinzufügen, indem Sie auf den Link „Kommentar hinzufügen” in der Zeile der Sitzung klicken. Dies ist nützlich, um Notizen zum aktuellen Status eines Vorfalls für sich selbst und für die Administratoren der Organisation hinzuzufügen.
 
-Ihr gesamter Sitzungsverlauf kann zur späteren Betrachtung über eine Tabellenkalkulationsanwendung exportiert werden. Aktivieren Sie die Schaltfläche "Sitzungsverlauf als CSV herunterladen", die sich unter der Tabelle des Sitzungsverlaufs befindet, um eine Anpassungsseite für den Datenexport zu öffnen. Auf dieser Seite können Sie die Zeitspanne für den Export sowie das Symbol zur Trennung der Felder auswählen.
+Ihr gesamter Sitzungsverlauf kann zur späteren Anzeige in einer Tabellenkalkulationsanwendung exportiert werden. Klicken Sie auf die Schaltfläche „Sitzungsverlauf als CSV herunterladen” unterhalb der Tabelle mit dem Sitzungsverlauf, um eine Seite zur Anpassung Ihres Datenexports anzuzeigen. Auf dieser Seite können Sie den Zeitraum für den Export sowie das Symbol zur Trennung der Felder auswählen.
 
-### Verwaltung Ihres Abonnements (Personal und Pro Plans)
+### Verwalten Ihres Abonnements (Personal- und Pro-Tarife)
 
-Über das Dashboard können Sie die Details Ihres RIM-Abonnements einfach einsehen und verwalten. Wenn Sie auf den Link "Abonnement verwalten" klicken, können Sie:
-* Ihr Abo upgraden
+Über das Dashboard können Sie Ihre RIM-Abonnementdetails einfach anzeigen und verwalten. Wenn Sie auf den Link „Abonnement verwalten” klicken, können Sie:
+* Ihren Tarif upgraden
 * Ihre Zahlungsmethode aktualisieren
 * Wiederkehrende Zahlungen stornieren
 
-#### Ihr Abonnement aufwerten
+#### Ihren Tarif upgraden
 
-Sie können Ihr Abonnement ganz einfach aktualisieren. Wenn Sie ein Monatsabonnement haben, wird Ihnen der verbleibende Betrag des neuen Abonnements anteilig berechnet, während für die folgenden Monate der volle neue Betrag berechnet wird. Wenn Sie auf "Abonnement aktualisieren" klicken, öffnet sich eine Seite, die fast identisch ist mit der Seite zur Auswahl des ursprünglichen Tarifs. Es gibt ein paar bemerkenswerte Unterschiede, die wir im Folgenden erläutern:
-* Sie können Ihren Tarif nicht auf einen Tarif mit weniger Rechnern herabstufen. Sie können jedoch von einem Monatstarif auf einen Jahrestarif mit der gleichen Anzahl von Rechnern wie Ihr aktueller Tarif umsteigen. Um ein Downgrade vorzunehmen, müssen Sie Ihren Plan kündigen, dessen Ablauf abwarten und dann einen neuen Plan mit weniger Rechnern abschließen.
-* Enterprise-Tarife, einschließlich des Enterprise-Addons, können nicht direkt über diese Seite erworben werden.
+Sie können Ihr Abonnement ganz einfach upgraden. Wenn Sie einen Monatstarif haben, wird Ihnen die verbleibende Gebühr anteilig vom neuen Betrag berechnet, wobei der volle neue Betrag für die folgenden Monate in Rechnung gestellt wird. Wenn Sie auf „Abonnement upgraden“ klicken, wird eine Seite angezeigt, die fast identisch mit der ersten Tarifauswahlseite ist. Es gibt jedoch einige wichtige Unterschiede, die wir im Folgenden erläutern möchten:
+* Sie können Ihren Tarif nicht auf einen Tarif mit weniger Geräten herabstufen. Sie können jedoch von einem Monatstarif auf einen Jahrestarif mit derselben Anzahl von Geräten wie Ihr aktueller Tarif upgraden. Um eine Herabstufung vorzunehmen, müssen Sie Ihren Tarif kündigen, dessen Ablauf abwarten und dann einen neuen Tarif mit weniger Geräten abschließen.
+* Enterprise-Tarife, einschließlich des Enterprise-Add-ons, können nicht direkt über diese Seite erworben werden.
 
-#### Stornierung wiederkehrender Zahlungen
+#### Kündigung wiederkehrender Zahlungen
 
-Wenn Sie auf "Automatische Verlängerung kündigen" klicken, werden Sie um eine Bestätigung gebeten, woraufhin Ihr Abonnement am Ende der aktuellen Laufzeit ausläuft.
+Wenn Sie auf „Automatische Verlängerung kündigen” klicken, werden Sie um eine Bestätigung gebeten. Danach läuft Ihr Abonnement am Ende der aktuellen Laufzeit aus.

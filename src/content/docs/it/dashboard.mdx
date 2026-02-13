@@ -5,125 +5,129 @@ title: Il cruscotto di gestione RIM
 import Windows from "~/components/platform/Windows.astro"
 import MacOS from "~/components/platform/MacOS.astro"
 
-RIM dispone di un dashboard basato sul Web per facilitare varie attività di gestione dei computer e degli account. È possibile gestire i computer non presidiati esistenti, creare programmi di installazione preconfigurati per i computer di destinazione e molto altro ancora.  
-Va notato che le funzionalità del dashboard dipendono in larga misura dal livello di abbonamento dell'account. Ad esempio, gli utenti aziendali possono assegnare i computer a gruppi di destinazione e creare installatori silenziosi. D'altro canto, chiunque (compresi gli utenti privati) può creare installatori personalizzati per i propri computer non presidiati.
+RIM dispone di una  dashboard basata sul web per facilitare varie attività di gestione delle macchine e degli account. È possibile gestire i computer incustoditi esistenti, creare programmi di installazione preconfigurati per i computer di destinazione e molto altro ancora.  
+Va notato che le funzionalità della dashboard dipendono in gran parte dal livello di abbonamento del proprio account. Ad esempio, gli utenti aziendali possono assegnare macchine a gruppi di destinazione, nonché creare programmi di installazione silenziosi. D&#x27;altra parte, chiunque (compresi gli utenti privati) può creare programmi di installazione personalizzati per i propri computer non presidiati.
 
-### Individuazione della Dashboard
+### Individuazione della dashboard
 
-Se si è un controller, il modo più semplice per raggiungere la dashboard è attraverso l'interfaccia principale di RIM. Facendo clic sul pulsante "RIM Dashboard" si aprirà automaticamente la dashboard nel browser predefinito, con il login già effettuato.  
-Se siete un amministratore di rete che non ha installato RIM, potete semplicemente accedere al vostro account sul sito web di RIM e la vostra dashboard apparirà.
+Se sei un controller, il modo più semplice per accedere alla dashboard è attraverso l&#x27;interfaccia principale di RIM. Facendo clic sul pulsante &quot;RIM Dashboard&quot; si aprirà automaticamente la dashboard nel browser predefinito, con il login già effettuato.  
+Se sei un amministratore di rete che non ha installato RIM, puoi semplicemente accedere al tuo account sul sito web RIM e apparirà la tua dashboard.
 
-### Gestione dei membri dell'organizzazione (Enterprise)
+### Gestione dei membri dell&#x27;organizzazione (Enterprise)
 
-Attivando il pulsante "Organizzazione" sulla dashboard RIM, si aprirà un menu di opzioni relative all'organizzazione e alla gestione dei membri. La pagina "Membri" elenca tutti i membri dell'organizzazione. Tutti i membri possono essere modificati nel ruolo, nel reparto e nel nome e tutti i membri possono essere disattivati o rimossi da un'organizzazione, tranne il proprietario dell'organizzazione. Si noti che la disattivazione di un membro renderà il suo account inutilizzabile, pur conservando il suo record.
+Attivando il pulsante &quot;Organizzazione&quot; sulla dashboard RIM verrà visualizzato un menu di opzioni relative alla gestione dell&#x27;organizzazione e dei membri. La pagina &quot;Membri&quot; elencherà tutti i membri della tua organizzazione. È possibile modificare il ruolo, il reparto e il nome di tutti i membri, nonché disattivare o rimuovere qualsiasi membro dall&#x27;organizzazione, ad eccezione del proprietario dell&#x27;organizzazione. Si noti che la disattivazione di un membro renderà il suo account inutilizzabile, pur conservandone la registrazione.
 
-Per aggiungere un membro è sufficiente inserire il suo indirizzo e-mail, selezionare il suo ruolo (utente o amministratore), inserire facoltativamente il suo nome e selezionare il suo reparto, se è stato creato.
-Se si devono aggiungere più membri, è possibile utilizzare il campo di modifica "Membri" per eseguire un'aggiunta in blocco. Questo campo di modifica accetta più righe di testo, consentendo di inserire le informazioni di ciascun membro su una riga separata. Su ogni riga è possibile inserire un singolo indirizzo e-mail o un indirizzo e-mail e un nome nel formato:  
+Per aggiungere membri è sufficiente inserire il loro indirizzo e-mail, selezionare il loro ruolo (utente o amministratore), inserire facoltativamente il loro nome e selezionare il loro reparto, se ne è stato creato uno.
+Se si desidera aggiungere più membri, è possibile utilizzare il campo di modifica &quot;Membri&quot; per eseguire un&#x27;aggiunta in blocco. Questo campo di modifica accetta più righe di testo, consentendo di inserire le informazioni di ciascun membro su una riga separata. Su ogni riga è possibile inserire un singolo indirizzo e-mail o un indirizzo e-mail e un nome nel formato:  
 *email@example.com John Doe*
 
-Al termine, fare clic sul pulsante "Aggiungi". 
+Una volta terminato, fai clic sul pulsante &quot;Aggiungi&quot;. 
 
-#### Reparti
+#### Dipartimenti
 
-I dipartimenti consentono di organizzare i membri in base ai vari gruppi dell'organizzazione.
+I dipartimenti consentono di organizzare i membri in base ai vari gruppi della tua organizzazione.
 
-Per aggiungere un reparto, inserire il suo nome nella casella di modifica "Nome" sotto la voce "Crea reparto".
+Per aggiungere un dipartimento, inserisci il suo nome nella casella di modifica &quot;Nome&quot; sotto l&#x27;intestazione &quot;Crea dipartimento&quot;.
 
-#### Esportazione dei dati dei soci
+#### Esportazione dei dati dei membri
 
-L'elenco dei membri dell'organizzazione può essere esportato come file CSV. Per scaricare l'esportazione:
-1. Scegliere il separatore di campo che separerà le colonne del file. Le opzioni disponibili sono:
-    * virgola
-    * Punto e virgola
-    * Tab
-1. Attivare il pulsante "Download".
+L&#x27;elenco dei membri della tua organizzazione può essere esportato come file CSV. Per scaricare l&#x27;esportazione:
+1. Scegli il separatore di campo che separerà le colonne del file. Le opzioni disponibili includono:
+* virgola
+* punto e virgola
+* tabulazione
+1. Attiva il pulsante &quot;Scarica&quot;.
 
 #### Restrizioni
 
-A seconda della natura della vostra organizzazione, è possibile che vi siano alcune funzioni a cui non volete che il vostro personale abbia accesso. Gli amministratori dell'organizzazione possono scegliere le funzioni a cui consentire l'accesso ai controllori. La schermata "Restrizioni", accessibile dal menu "Organizzazione", consente di configurare queste autorizzazioni.
+A seconda della natura della tua organizzazione, potrebbero esserci alcune funzionalità a cui non desideri che il tuo personale abbia accesso. Pertanto, gli amministratori dell&#x27;organizzazione possono scegliere le funzionalità a cui desiderano consentire l&#x27;accesso ai controller. La schermata &quot;Restrizioni&quot;, accessibile dal menu &quot;Organizzazione&quot;, consente di configurare queste autorizzazioni.
 
 Le autorizzazioni che possono essere attivate includono:
-* Consentire al controllore di capovolgere la sessione
-    * Se questa opzione è deselezionata, l'opzione "Capovolgi sessione" scomparirà dal menu della sessione e la scorciatoia da tastiera non funzionerà.
-* Consenti al controllore di avviare una conversazione vocale
-    * Se questa opzione è deselezionata, la casella di controllo "Avvia conversazione vocale" scomparirà dalla schermata "Fornisci assistenza remota", così come l'opzione nel menu della sessione.
-* Consenti al controllore di richiedere l'accesso senza sorveglianza
-    * Se questa opzione è deselezionata, l'opzione di richiesta di accesso non presidiato scomparirà dal menu della sessione.
-* Consentire il trasferimento di testo e di file tra le macchine tramite gli appunti
-    * Se questa opzione è deselezionata, RIM ignorerà tutte le attività degli appunti.
-* Consenti al controller di bloccare il computer di destinazione
-    * Se questa opzione è deselezionata, l'opzione di blocco del computer di destinazione scompare dal menu di sessione.
+* Consenti al controller di capovolgere la sessione
+    * Se questa opzione non è selezionata, l&#x27;opzione &quot;Capovolgi sessione&quot; scomparirà dal menu della sessione e la scorciatoia da tastiera non funzionerà.
+* Consenti al controller di avviare una conversazione vocale
+* Se questa opzione non è selezionata, la casella di controllo &quot;Avvia conversazione vocale&quot; scomparirà dalla schermata &quot;Fornisci assistenza remota&quot;, così come l&#x27;opzione di menu nel menu della sessione.
+* Consenti al controller di richiedere l&#x27;accesso non presidiato
+    * Se questa opzione non è selezionata, l&#x27;opzione per richiedere l&#x27;accesso non presidiato scomparirà dal menu della sessione.
+* Consenti il trasferimento di testo e file tra macchine tramite gli appunti
+* Se questa opzione non è selezionata, RIM ignorerà qualsiasi attività degli appunti.
+* Consenti al controller di bloccare la macchina di destinazione
+* Se questa opzione non è selezionata, l&#x27;opzione per bloccare la macchina di destinazione scomparirà dal menu della sessione.
+* Consenti al controller di registrare la sessione
+* Questa opzione è disabilitata per impostazione predefinita, rendendo la registrazione della sessione una funzione strettamente opzionale per le organizzazioni aziendali e/o i clienti professionali con l&#x27;add-on aziendale.
+* Se questa opzione non è selezionata, l&#x27;opzione per registrare la sessione scomparirà dal menu della sessione.
+* Questa restrizione impedisce inoltre l&#x27;auto_start lato client nel file config.toml
 
-Una volta configurate le autorizzazioni in modo soddisfacente, attivare il pulsante "Aggiorna". Le modifiche non influiscono sulle sessioni attive al momento della modifica dei permessi. Tuttavia, avranno effetto per tutte le sessioni future senza richiedere il riavvio del client.
+Una volta configurati i permessi in base alle proprie esigenze, attivare il pulsante &quot;Aggiorna&quot;. Le modifiche non avranno effetto sulle sessioni attive al momento della modifica dei permessi. Tuttavia, avranno effetto su tutte le sessioni future senza richiedere il riavvio del client.
 
-### Gestione degli obiettivi
+### Gestione dei target
 
-Facendo clic sul collegamento "Configura obiettivi", si accede a una pagina che consente di gestire tutte le macchine configurate per l'accesso non presidiato. È possibile fare clic su una qualsiasi di queste macchine per gestirla. Una volta entrati, sarà possibile
+Cliccando sul link &quot;Configura target&quot;, si accede a una pagina che consente di gestire tutte le macchine configurate per l&#x27;accesso non presidiato. È possibile cliccare su una qualsiasi di queste macchine per gestirla. Una volta all&#x27;interno, sarà possibile:
 * Rinominare il target
-* Spostare il target in un gruppo diverso (maggiori informazioni sui gruppi di target in seguito)
+* Spostare il target in un gruppo diverso (maggiori informazioni sui gruppi di target più avanti)
 * Avviare una sessione remota con il target
 * Eliminare il target
 
-### Gruppi di destinazione (per gli account Pro e superiori)
+### Gruppi di target (per account Pro e superiori)
 
-Supponiamo che il vostro gruppo di lavoro sia distribuito in diverse sedi. O forse si desidera designare gruppi di macchine per i tecnici della manutenzione ordinaria. I gruppi di destinazione consentono di fare proprio questo. Per farlo, è sufficiente fare clic sul pulsante "Crea gruppo di destinazione", assegnare un nome al gruppo e inviare.  
-È possibile creare tutti i gruppi di destinazione necessari per il proprio caso d'uso. 
+Supponiamo, ad esempio, che il tuo gruppo di lavoro sia distribuito in diverse sedi. Oppure, forse desideri assegnare gruppi di macchine ai tuoi tecnici addetti alla manutenzione ordinaria. I gruppi di target ti consentono proprio questo. Per farlo, è sufficiente fare clic sul pulsante &quot;Crea gruppo di target&quot;, assegnare un nome al gruppo e inviare.  
+Puoi avere tutti i gruppi target necessari per il tuo caso d&#x27;uso. 
 
-#### Controllo degli accessi (per le organizzazioni aziendali)
+#### Controllo degli accessi (per organizzazioni aziendali)
 
-Se le vostre organizzazioni assegnano un tecnico dell'assistenza a un gruppo specifico di macchine, probabilmente vorrete assicurarvi che abbia accesso solo a quel gruppo specifico. È qui che entra in gioco l'impostazione del controllo degli accessi per i gruppi di destinazione.  
-Quando si fa clic su un gruppo di destinazione, vengono offerte le opzioni per gestire i computer del gruppo e il gruppo stesso. Nella sezione di controllo dell'accesso è possibile concedere l'accesso al gruppo in base all'account. È sufficiente inserire l'indirizzo e-mail dell'account che si desidera aggiungere, quindi fare clic sul pulsante "Dai accesso". Si noti che questo account può esistere al di fuori del dominio dell'organizzazione aziendale.  
-Una volta completata l'operazione, verrà presentata una tabella di account a cui è stato concesso l'accesso a questo gruppo. Sotto ogni account è presente il pulsante "Revoca accesso". Questo pulsante non richiede ulteriori conferme.  
-Si noti che a tutti gli amministratori dell'organizzazione viene automaticamente concesso l'accesso alla gestione di tutti i gruppi creati nell'ambito dell'organizzazione. Inoltre, tutti gli indirizzi e-mail che rientrano nei domini dell'organizzazione saranno aggiunti all'organizzazione in RIM per impostazione predefinita. Se si desidera un controllo più granulare su chi viene aggiunto, è possibile disattivare questa opzione nell'area principale dei membri dell'organizzazione. Inoltre, nell'area membri è possibile aggiungere indirizzi e-mail in blocco inserendo virgole, spazi o interruzioni di riga tra gli indirizzi e-mail.
+Se la tua organizzazione assegna un tecnico di supporto a un insieme specifico di macchine, probabilmente vorrai assicurarti che abbia accesso solo a quell&#x27;insieme specifico. È qui che entra in gioco l&#x27;impostazione del controllo degli accessi per i gruppi target.  
+Quando clicchi su un gruppo di destinazione, ti vengono fornite opzioni per gestire i computer nel gruppo, nonché il gruppo stesso. La sezione di controllo degli accessi è dove puoi concedere l&#x27;accesso a questo gruppo su base individuale per ogni account. Basta inserire l&#x27;indirizzo e-mail dell&#x27;account che desideri aggiungere, quindi cliccare sul pulsante &quot;Concedi accesso&quot;. Tieni presente che questo account può esistere al di fuori del dominio della tua organizzazione aziendale.  
+Una volta fatto ciò, verrà visualizzata una tabella degli account a cui è stato concesso l&#x27;accesso a questo gruppo. Sotto ogni account è presente un pulsante &quot;Revoca accesso&quot;. Questo pulsante non richiede ulteriori conferme.  
+Va notato che a tutti gli amministratori dell&#x27;organizzazione viene automaticamente concesso l&#x27;accesso per gestire tutti i gruppi creati nell&#x27;ambito dell&#x27;organizzazione. Inoltre, tutti gli indirizzi e-mail dei domini della tua organizzazione verranno aggiunti di default alla tua organizzazione in RIM. Se hai bisogno di un controllo più granulare su chi viene inserito, puoi disabilitare questa funzione nell&#x27;area membri principale della tua organizzazione. Inoltre, nell&#x27;area membri puoi aggiungere indirizzi e-mail in blocco separandoli con virgole, spazi o interruzioni di riga.
 
-### Impostazione di un programma di installazione RIM preconfigurato (Pro o superiore)
+### Configurazione di un programma di installazione RIM preconfigurato (Pro o superiore)
 
-Uno dei modi più semplici per impostare un computer per connessioni non presidiate o richieste è creare un programma di installazione personalizzato. Questo è incredibilmente utile se si stanno configurando distribuzioni di massa o anche come modo più semplice per rendere RIM attivo e funzionante sul computer di un utente finale per il quale si intende fornire assistenza regolarmente.
+Uno dei modi più semplici per configurare un computer per connessioni automatiche o con richiesta di conferma è creare un programma di installazione personalizzato. Ciò è incredibilmente utile se stai configurando distribuzioni di massa o anche come modo più semplice per rendere RIM operativo sul computer di un utente finale a cui intendi fornire assistenza regolarmente.
 
-Per fare questo:
-1. Nella schermata di gestione dei target, fare clic sul pulsante "Build Target Installer".
-1. Verrà innanzitutto chiesto se si desidera che la macchina sia configurata per l'accesso completamente non presidiato o per l'accesso guidato, in cui l'utente deve accettare una richiesta per avviare la connessione.
-1. Verrà quindi richiesto di assegnare un gruppo di destinazione. Si noti che la selezione del gruppo di destinazione andrà automaticamente al gruppo di destinazione scelto se si avvia la configurazione del programma di installazione dalla pagina del gruppo.
-1. Verrà chiesto per quanto tempo si desidera che il programma di installazione sia valido. La validità può essere compresa tra i 7 e i 30 giorni, oppure può essere permanente per i piani aziendali impostando la scadenza su mai.
-1. Viene quindi data la possibilità di assegnare un nome al basso. A qualsiasi macchina approvvigionata tramite questo pacchetto di installazione verrà assegnato questo nome di base.
-1. Viene quindi presentata una casella di controllo che consente di scegliere di ricevere una notifica via e-mail quando un utente installa RIM tramite questo programma di installazione.
-1. Se siete un amministratore aziendale, vedrete una casella di controllo che vi permette di creare il programma di installazione come pacchetto MSI. Questa opzione è utile per la distribuzione di massa di un programma di installazione personalizzato su un cluster di macchine che saranno designate per il gruppo di destinazione indicato.
-1. Verrà richiesto di fornire il nome del programma di installazione e, facoltativamente, alcune note. Queste sono per i registri interni e non appariranno nel programma di installazione creato.
-1. Fare clic su "Build Installer" Verrà visualizzato il link per il download che può essere copiato negli appunti e inviato all'utente finale. In alternativa, è possibile scaricare direttamente il programma di installazione per utilizzarlo nelle distribuzioni di massa. È possibile eliminare il programma di installazione da questa schermata se si decide di renderlo prematuramente inutilizzabile.
+Per farlo:
+1. Nella schermata di gestione dei target, fai clic sul pulsante &quot;Crea programma di installazione target&quot;.
+1. Ti verrà prima chiesto se desideri che questo computer sia configurato per un accesso completamente automatico o per un accesso con richiesta, in cui l&#x27;utente deve accettare una richiesta per avviare la connessione.
+1. Ti verrà quindi chiesto di assegnare un gruppo di destinazione. Tieni presente che la selezione del gruppo di destinazione passerà automaticamente al gruppo di destinazione scelto se avvii la configurazione del programma di installazione dalla pagina del tuo gruppo.
+1. Ti verrà chiesto per quanto tempo desideri che questo programma di installazione sia valido. Può essere valido per un periodo compreso tra 7 e 30 giorni, oppure permanentemente valido per i piani aziendali impostando la scadenza su mai.
+1. Ti verrà quindi data la possibilità di assegnare un nome di base. A qualsiasi macchina fornita tramite questo pacchetto di installazione verrà assegnato questo nome di base.
+1. Ti verrà quindi presentata una casella di controllo che ti consentirà di scegliere di ricevere una notifica via e-mail quando un utente installa RIM tramite questo programma di installazione.
+1. Se sei un amministratore aziendale, vedrai una casella di controllo che ti consente di creare il programma di installazione come pacchetto MSI. Questa opzione è utile per la distribuzione di massa di un programma di installazione personalizzato su un cluster di macchine che sarà designato al gruppo di destinazione specificato.
+1. Ti verrà chiesto di fornire un nome per il programma di installazione e, facoltativamente, alcune note. Queste sono destinate alla documentazione interna e non appariranno nel programma di installazione creato.
+1. Fai clic su &quot;Crea programma di installazione&quot;. Ti verrà presentato il link per il download che potrai copiare negli appunti e inviare al tuo utente finale. In alternativa, puoi scaricare direttamente il programma di installazione per utilizzarlo nelle distribuzioni di massa. Puoi eliminare il programma di installazione da questa schermata se desideri renderlo inutilizzabile prematuramente.
 
-Una volta ottenuto il programma di installazione, è possibile eseguirlo in due modi. In entrambi i casi, il programma di installazione interroga il server per verificare la validità del programma di installazione. Se il programma di installazione è valido, il computer verrà aggiunto all'elenco dei computer dell'account e del client RIM al termine dell'installazione. Un programma di installazione non valido non verrà eseguito.
+Ora che hai il tuo programma di installazione, puoi eseguirlo in due modi. In entrambi i casi, il programma di installazione interrogherà il server per verificare la validità del programma di installazione. Se l&#x27;installatore è valido, il computer verrà aggiunto all&#x27;elenco dei computer sia nel tuo account che nel client RIM al termine dell&#x27;installazione. Un installatore non valido non verrà eseguito.
 
-#### Esecuzione normale
+Esecuzione normale
 
-Durante l'esecuzione del programma di installazione, l'utente riceverà un prompt contenente le seguenti informazioni:
+Quando si esegue l&#x27;installatore, all&#x27;utente verrà visualizzata una finestra di dialogo contenente le seguenti informazioni:
 * Il nome del tecnico e la sua organizzazione, se applicabile
-* la natura della connessione, ovvero se è richiesto un prompt o meno
+* La natura della connessione, ovvero se è richiesta o meno una richiesta di conferma.
 
-L'utente può scegliere se rispondere sì o no all'installazione. Rispondendo no, l'installazione viene annullata. Al termine dell'installazione, l'utente riceverà un messaggio che lo informa che il suo computer è ora configurato per l'accesso remoto.
+L&#x27;utente può scegliere di rispondere sì o no all&#x27;installazione. Rispondendo no, l&#x27;installazione verrà annullata. Al termine dell&#x27;installazione, l&#x27;utente riceverà un messaggio che lo informa che il suo computer è ora configurato per l&#x27;accesso remoto.
 
-#### Installazione silenziosa (solo per gli installatori aziendali)
+#### Installazione silenziosa (solo programmi di installazione aziendali)
 
-È possibile avviare un'installazione silenziosa eseguendo il programma di installazione eseguibile con il parametro della riga di comando */S*. Questo è utile quando si installa RIM come parte di una routine di distribuzione di massa.
+È possibile avviare un&#x27;installazione silenziosa eseguendo il programma di installazione eseguibile con il parametro della riga di comando */S*. Ciò è utile quando si installa RIM come parte di una routine di distribuzione di massa.
 
-### Cronologia della sessione
+### Cronologia delle sessioni
 
-È possibile visualizzare l'intera cronologia delle sessioni passate attraverso il cruscotto di RIM. La cronologia delle sessioni contiene attualmente la data e l'ora di ogni sessione, il nome del computer a cui ci si è connessi e la durata della sessione. Si può anche scegliere di aggiungere commenti a una sessione tramite il link "Aggiungi commento" nella riga della sessione. Questo è utile per aggiungere note sullo stato attuale di un incidente, sia per sé che per gli amministratori dell'organizzazione.
+È possibile visualizzare l&#x27;intera cronologia delle sessioni passate tramite il dashboard RIM. La cronologia delle sessioni contiene attualmente la data e l&#x27;ora di ciascuna sessione, il nome del computer a cui ci si è connessi e la durata della sessione. È anche possibile aggiungere commenti a una sessione tramite il link &quot;Aggiungi commento&quot; nella riga della sessione. Ciò è utile per aggiungere note sullo stato attuale di un incidente sia per sé stessi che per gli amministratori dell&#x27;organizzazione.
 
-L'intera cronologia delle sessioni può essere esportata per una successiva visualizzazione tramite un foglio di calcolo. Attivare il pulsante "Scarica la cronologia delle sessioni come CSV", situato sotto la tabella della cronologia delle sessioni, per visualizzare una pagina di personalizzazione per l'esportazione dei dati. In questa pagina è possibile scegliere la durata dell'esportazione e il simbolo utilizzato per separare i campi.
+L&#x27;intera cronologia delle sessioni può essere esportata per essere visualizzata in un secondo momento tramite un&#x27;applicazione di foglio elettronico. Attivare il pulsante &quot;Scarica cronologia sessioni come CSV&quot; situato sotto la tabella della cronologia delle sessioni per visualizzare una pagina di personalizzazione per l&#x27;esportazione dei dati. In questa pagina è possibile scegliere l&#x27;intervallo di tempo dell&#x27;esportazione, nonché il simbolo utilizzato per separare i campi.
 
-### Gestione dell'abbonamento (piani Personal e Pro)
+### Gestione dell&#x27;abbonamento (piani Personal e Pro)
 
-Il cruscotto consente di visualizzare e gestire facilmente i dettagli dell'abbonamento RIM. Facendo clic sul link "Gestisci abbonamento", è possibile:
-* Aggiornare il proprio piano
+La dashboard consente di visualizzare e gestire facilmente i dettagli dell&#x27;abbonamento RIM. Facendo clic sul link &quot;Gestisci abbonamento&quot;, è possibile:
+* Aggiornare il piano
 * Aggiornare il metodo di pagamento
 * Annullare i pagamenti ricorrenti
 
 #### Aggiornamento del piano
 
-È possibile aggiornare facilmente il proprio abbonamento. Se avete un piano mensile, vi verrà addebitato il costo residuo del nuovo importo, mentre l'intero importo verrà addebitato per i mesi successivi. Facendo clic su "Aggiorna abbonamento" si apre una pagina quasi identica a quella di selezione del piano iniziale. Ci sono alcune differenze degne di nota che illustreremo di seguito:
-* Non è possibile effettuare il downgrade a un piano con meno macchine. È tuttavia possibile passare da un piano mensile a uno annuale con lo stesso numero di macchine del piano attuale. Per effettuare il downgrade, è necessario annullare il piano, attendere la sua scadenza e avviare un nuovo piano con un numero inferiore di macchine.
-* I piani Enterprise, compreso l'addon Enterprise, non possono essere acquistati direttamente da questa pagina.
+Puoi aggiornare facilmente il tuo abbonamento. Se hai un piano mensile, ti verrà addebitato il costo rimanente dal nuovo importo, mentre per i mesi successivi ti verrà addebitato l&#x27;intero nuovo importo. Cliccando su &quot;Aggiorna abbonamento&quot; si apre una pagina quasi identica alla pagina iniziale di selezione del piano. Ci sono alcune differenze significative che illustreremo di seguito:
+* Non è possibile effettuare il downgrade del piano a uno con un numero inferiore di macchine. È tuttavia possibile effettuare l&#x27;upgrade da un piano mensile a uno annuale con lo stesso numero di macchine del piano attuale. Per effettuare il downgrade, è necessario annullare il piano, attendere la scadenza e quindi attivare un nuovo piano con un numero inferiore di macchine.
+* I piani Enterprise, compreso l&#x27;add-on Enterprise, non possono essere acquistati direttamente tramite questa pagina.
 
 #### Annullamento dei pagamenti ricorrenti
 
-Quando si fa clic su "Annullamento del rinnovo automatico", viene richiesta una conferma, dopodiché l'abbonamento viene impostato per scadere alla fine del periodo corrente.
+Quando si fa clic su &quot;Annulla rinnovo automatico&quot;, verrà richiesta una conferma, dopodiché l&#x27;abbonamento scadrà alla fine del periodo corrente.

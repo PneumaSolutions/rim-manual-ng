@@ -188,6 +188,10 @@ Recordings are a completely free feature, available to any user on any tier. In 
 
 Since the Remote Accessibility Module outputs its speech to your running copy of NVDA, RIM must accommodate for that in order to capture this speech on a recording. Therefore, whenever remote accesibility is active during a recording, RIM initiates a capture of your system's full audio output. This allows the speech heard through the remote accessibility module to be captured exactly as it was heard during the session. While this may result in some notification sounds from your controlling computer being caught in the recording, this will not cause any audio from the target computer to be doubled.
 
+#### Note for Enterprise Usage
+
+IN order to align with a typical enterprise security posture, session recording is a strictly opt-in capability within enterprise setups. Therefore, unless the ability to record has been enabled by an organization admin, all mechanisms for recording will be unavailable to RIM controllers within the organization.
+
 #### Advanced Configuration for Session Recordings
 
 RIM features a number of advanced configuration options for session recording. These include the ability to auto-start recordings upon session initiation, store recordings in an alternate path (I.E. a network share), and determine the state of the confirmation dialog when stopping a recording. Currently, the only way to modify these settings is via a configuration file, thus the procedure is only available in English.  

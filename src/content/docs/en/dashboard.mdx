@@ -53,6 +53,10 @@ The permissions that can be toggled include:
     * If this option is unchecked, RIM will ignore any and all clipboard activity.
 * Allow the controller to lock the target machine
     * If this option is unchecked, the option to lock the target machine will disappear from the session menu.
+* Allow the controller to record the session
+    * This option is disabled by default, making session recording a strictly opt-in feature for enterprise organizations and/or pro customers with the enterprise addon.
+    * If this option is unchecked, the option to record the session will disappear from the session menu.
+    * This restriction additionally vetos the client-side auto_start in the config.toml file
 
 Once you have configured the permissions to your satisfaction, activate the "Update" button. Changes will not affect any active sessions at the time the permissions are changed. They will however take effect for any and all future sessions without requiring a reboot of the client.
 
