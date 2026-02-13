@@ -8,8 +8,6 @@ import MacOS from "~/components/platform/MacOS.astro"
 Versions of RIM will be denoted by headings at level 3. Substantial updates with several features for both platforms will be divided into Mac and Windows subheadings at level 4.
 ### 3.4.8
 
-
-
 * Implements capture of the Remote accessibility Module during a session recording by way of the system audio of the controlling computer
 * Implements a target-side consent dialog prior to the start of a session recording during any keyword-based sessions. Should the target user deny the request for recording, the session terminates.
 * Implements a confirmation dialog prior to manually stopping a recording. This dialog can be configured not to appear if desired.
@@ -19,6 +17,7 @@ Versions of RIM will be denoted by headings at level 3. Substantial updates with
 ### 3.4.7
 This build introduces an open beta of the session recording capability across both platforms. This capability is free for anyone to use, and the cloud service is never utilized for processing the recording. Recordings are currently saved to the controlling user's local Videos folder, that being "Videos" on Windows and "Movies" on MacOS respectively.  
 Please do not hesitate to [send us feedback](https://getrim.app/feedback) should you run into any issues while using this feature, or if you have any comments or suggestions on how it can be improved.
+
 ### 3.4.6
 
 * This is a bug-fix update.
@@ -29,19 +28,23 @@ Please do not hesitate to [send us feedback](https://getrim.app/feedback) should
 
 ### 3.4.4
 
-* macOS: RIM is now compatible with recent versions of the Karabiner Elements keyboard mapping tool.
+####macOS
+RIM is now compatible with recent versions of the Karabiner Elements keyboard mapping tool.
 
 ### 3.4.3
 
-* Windows: The remote accessibility feature is now compatible with NVDA 2025.1.
+#### Windows
+The remote accessibility feature is now compatible with NVDA 2025.1.
 
 ### 3.4.2
 
-* macOS: When flipping a session, RIM now stops remote accessibility if that feature was active on the former target.
+#### macOS
+When flipping a session, RIM now stops remote accessibility if that feature was active on the former target.
 
 ### 3.4.1
 
-* Windows: When running a pre-configured target installer in silent mode, RIM now more reliably registers the target machine and starts accepting unattended connections.
+#### Windows
+When running a pre-configured target installer in silent mode, RIM now more reliably registers the target machine and starts accepting unattended connections.
 
 ### 3.4.0
 * Added an option for enterprise users to create never-expiring installers
@@ -52,7 +55,8 @@ Please do not hesitate to [send us feedback](https://getrim.app/feedback) should
 
 ### 3.3.39
 
-* macOS: Added a note about the required permissions to the welcome screen.
+#### macOS
+Added a note about the required permissions to the welcome screen.
 
 ### 3.3.38
 
@@ -72,21 +76,26 @@ Please do not hesitate to [send us feedback](https://getrim.app/feedback) should
 
 ### 3.3.34
 
-* Windows: Fixed a problem that caused the mouse cursor to be invisible in the controller's Remote Session window when connecting to some Windows targets with no mouse connected.
+#### Windows
+Fixed a problem that caused the mouse cursor to be invisible in the controller's Remote Session window when connecting to some Windows targets with no mouse connected.
 
 ### 3.3.33
 
-* macOS: RIM now has the necessary entitlement from Apple to allow remote access, including unattended access, without re-prompting for the screen recording permission every month. This requires target users running macOS Sequoia to grant a new "remote access" permission just once. RIM will request this permission before it displays the Receive Help screen, or the first time it starts up after installing this update on machines that are registered as unattended targets. Note that there is still one known issue with RIM on macOS Sequoia: the remote accessibility feature on macOS Sequoia target machines isn't working correctly. We are currently working with Apple to resolve this issue. If you or your target users would be affected by this issue, we continue to recommend that you avoid upgrading to macOS Sequoia until further notice. Thank you for your patience.
+#### macOS
+RIM now has the necessary entitlement from Apple to allow remote access, including unattended access, without re-prompting for the screen recording permission every month. This requires target users running macOS Sequoia to grant a new "remote access" permission just once. RIM will request this permission before it displays the Receive Help screen, or the first time it starts up after installing this update on machines that are registered as unattended targets. Note that there is still one known issue with RIM on macOS Sequoia: the remote accessibility feature on macOS Sequoia target machines isn't working correctly. We are currently working with Apple to resolve this issue. If you or your target users would be affected by this issue, we continue to recommend that you avoid upgrading to macOS Sequoia until further notice. Thank you for your patience.
 
 ### 3.3.32
 
 * Fixed a problem that sometimes caused RIM to crash when copying a folder to the clipboard.
 * Fixed a problem that sometimes caused the session to freeze and reconnect when copying a large folder to the clipboard.
-* Windows: Fixed a problem that intermittently caused RIM to fail to notice when a new file or set of files was copied to the clipboard.
+
+#### Windows
+Fixed a problem that intermittently caused RIM to fail to notice when a new file or set of files was copied to the clipboard.
 
 ### 3.3.31
 
-* macOS: Updated instructions for granting the necessary permissions on macOS Sequoia. Note that there are still two known issues with RIM on macOS Sequoia: macOS reprompts the target user for the screen recording permission every month, interfering with unattended sessions, and the remote accessibility feature on macOS Sequoia target machines isn't working correctly. We are currently working with Apple to resolve these issues. If you or your target users would be affected by either of these issues, we continue to recommend that you avoid upgrading to macOS Sequoia until further notice. Thank you for your patience.
+#### macOS
+Updated instructions for granting the necessary permissions on macOS Sequoia. Note that there are still two known issues with RIM on macOS Sequoia: macOS reprompts the target user for the screen recording permission every month, interfering with unattended sessions, and the remote accessibility feature on macOS Sequoia target machines isn't working correctly. We are currently working with Apple to resolve these issues. If you or your target users would be affected by either of these issues, we continue to recommend that you avoid upgrading to macOS Sequoia until further notice. Thank you for your patience.
 
 ### 3.3.30
 
@@ -107,7 +116,9 @@ This update makes it possible to install an additional server profile. This is u
 ### 3.3.24
 
 * The Remote Session window can now be moved and resized,, within a single display or across displays. The title bar for this window also now has the platform-standard controls to close the window, maximize it, and so on. Note that the RIM icon, which can be clicked to open the menu, is now in the middle of the title bar, not at the left end.
-* Windows: Fixed a bug that caused RIM to crash when copying text to the clipboard in Adobe Reader.
+
+#### Windows
+Fixed a bug that caused RIM to crash when copying text to the clipboard in Adobe Reader.
 
 ### 3.3.23
 
@@ -129,16 +140,22 @@ This update makes it possible to install an additional server profile. This is u
 ### 3.3.19
 
 * When transferring files using the option on the RIM menu, RIM now shows the completed percentage in the title bar of the progress window.
-* Windows: RIM now uses a more robust method of transitioning from the Windows Logon screen to the main desktop. This should especially help on target PCs where the user has no Windows password.
-* macOS: In new installations, RIM now asks for permissions after the welcome screen, and the requested permissions depend on whether you decide to receive or provide help.
+
+#### Windows
+RIM now uses a more robust method of transitioning from the Windows Logon screen to the main desktop. This should especially help on target PCs where the user has no Windows password.
+
+#### macOS
+In new installations, RIM now asks for permissions after the welcome screen, and the requested permissions depend on whether you decide to receive or provide help.
 
 ### 3.3.18
 
-* Windows: Fixed a problem that caused RIM to lock up if the session ended or reconnected during a file transfer.
+#### Windows
+Fixed a problem that caused RIM to lock up if the session ended or reconnected during a file transfer.
 
 ### 3.3.17
 
-* Windows: Solved a problem that caused the RIM Windows installer to be flagged as uncommonly downloaded and potentially unsafe by Microsoft SmartScreen.
+#### Windows
+Solved a problem that caused the RIM Windows installer to be flagged as uncommonly downloaded and potentially unsafe by Microsoft SmartScreen.
 
 ### 3.3.14
 
@@ -184,7 +201,8 @@ This update introduces support for the new NVDA 2024.1 release in RIM's remote a
 
 ### 3.3.6
 
-* macOS: The previous version for this platform didn't actually include the localization fixes.
+#### macOS
+The previous version for this platform didn't actually include the localization fixes.
 
 ### 3.3.5
 
@@ -202,21 +220,23 @@ This update introduces support for the new NVDA 2024.1 release in RIM's remote a
 * On the "Receive Help" screen, if you choose to add this machine to your RIM account, the "Receive Help" window will now stay open.
 
 ### 3.3.2
-##### Windows
+#### Windows
 * Fixed a problem that prevented RIM from installing updates on some machines with a locked-down configuration.
+
 ### 3.3.1
 * Updated translations
 * Internal changes
+
 ### 3.3.0
 This update adds a host of new features across the board, as well as platform-specific revisions. General additions include:
 * Added support for voice conversations in unattended sessions. The target user is prompted on the spot for permission to start a voice conversation.
 * In voice conversations, RIM now handles microphones being plugged and unplugged during the session 
 
-##### Windows
+#### Windows
 * Narrator now consistently speaks RIM notifications
 * Added a non-admin fallback
 
-##### Mac OS
+#### Mac OS
 * Added an uninstaller accessed via the About screen that completely and cleanly removes RIM, including the Karabiner Virtual HID driver
 * Mac target machine info now includes running processes and installed applications 
 
@@ -226,29 +246,37 @@ When you press the Log Out button in the Provide Help window, RIM now returns to
 * Fixed problems with the translations of menu items.
 * When starting an unattended session, RIM now supports double-clicking a target group or target machine.
 * Fixed a bug with the process of adding a target machine to your account when using single sign-on (SSO).
+
 ### 3.2.16
 * Fixed problems with the French localization. Thanks to Nael Sayegh for these fixes; this is the first community contribution to our localization efforts.
+
 ### 3.2.15
-##### Windows
+#### Windows
 * Fixed a problem that caused screen output on the controller to freeze when locking the target machine.
+
 ### 3.2.14
-##### Windows
+#### Windows
 * RIM now detects Fusion, the Vispero product that combines JAWS and ZoomText, as a distinct product when determining which screen reader is running on the target machine, rather than simply detecting it as JAWS. This means that RIM will not attempt to start its remote accessibility feature while Fusion is starting up.
 * We received reports that if Fusion started up after the beginning of a RIM session, Fusion would ignore some keystrokes from the controller, as JAWS used to do. We believe this problem is now fixed.
+
 ### 3.2.13
-##### Windows
+#### Windows
 Fixed a problem with keyboard input when connecting to target machines running JAWS 2024.
+
 ### 3.2.12
 Worked around a rare problem that could prevent the RIM app from connecting to the cloud service.
+
 ### 3.2.11
 Added a new button to the Connection Details window to request that the target machine send its RIM logs to Pneuma Solutions. Please only use this feature if requested by Pneuma Solutions.
+
 ### 3.2.10
 Fixed a problem that could cause RIM to stop working until the next application restart if the machine's Internet connection is temporarily unavailable.
 ### 3.2.9
-##### macOS
+#### Mac OS
 We are unfortunately no longer able to offer automatic stereo microphone input in voice conversations on this platform, because in some cases, this prevented microphone input from working at all on a Mac. Note that this change has no effect on captured audio output from the target machine; that is still stereo.
+
 ### 3.2.8
-##### macOS
+#### Mac OS
 Fixed a bug that prevented RIM from coming up when activating the application through the Finder or Dock, rather than using the global hotkey.
 ### 3.2.7
 Voice conversations now automatically use stereo when the audio hardware supports it. This is useful when using RIM for training in audio production.
@@ -271,50 +299,50 @@ First official release for Mac OS! New features include:
 ### 3.1.49
 This version provides a consistent, cross-platform way of opening the RIM controller session menu with the mouse. A controller can either click the large RIM icon at the upper-left corner of the session window, or as was previously possible on Windows, they can right-click anywhere on the title bar.
 ### 3.1.48
-##### Mac
+#### Mac OS
 * Added support for the FN+Number key workaround for using the function row on MacBooks.
 * RIM for Mac now customizes the menu bar, and in particular, the "About" option on the application menu now opens our own About dialog rather than the generic one.
 
 ### 3.1.47
-##### Windows
+#### Windows
 When connecting a Mac controller to a Windows target, with both sides using the same non-US keyboard layout, keyboard input from the controller wasn't being translated correctly. Version 3.1.47 for Windows fixes this problem.
 ### 3.1.46
 This version adds support for the new RIM Personal Community Support subscription package.
 
 ### 3.1.45
-##### Mac
+#### Mac OS
 RIM is now able to automatically resume capturing screen content and audio output if the target machine switches to the lock screen during a session.
 
 ### 3.1.44
-##### Mac
+#### Mac OS
 * Implements reboot and reconnect for Mac targets, including both standard and emergency reboots.
     * As with unattended access, RIM doesn't come up on the macOS login screen due to platform restrictions, particularly FileVault. So the target user will need to log back in before RIM can reconnect.
 * The notification about file transfers, introduced in the previous update, is now shown only once per RIM session.
 
 ### 3.1.43
-##### Mac
+#### Mac OS
 This update modifies the user interface for file transfers. When one or more files are placed on the clipboard on either side of the connection, the controller now receives a notification saying that the file transfer can be completed through the RIM menu. If the controller chooses this menu option, the file transfer is performed, and when done, a temporary folder containing the transferred file or files is opened on the destination machine. This method of file transfer is necessary when the destination machine is a Mac. When the destination is a Windows machine, the file transfer can be completed using either this new method or the old method of pasting in File Explorer on the destination machine.
 ### 3.1.42
-##### Mac
+#### Mac OS
 * RIM for Mac now works as an unattended target. It also performs updates in the background as the Windows version does.
     * We still have some work to do on access to the lock screen, and we don't believe we'll be able to provide access to the login screen before a user is logged in at all, due to limitations of the platform.
     * we haven't yet figured out how, or if, we'll be able to implement pre-configured target installers, so you'll need to use one of the other available methods of setting up unattended access.
 * Eliminates one source of latency in audio captured from Mac targets.
 
 ### 3.1.41
-##### Windows
+#### Windows
 Fixed a problem that sometimes caused RIM to crash in response to activity on the Windows clipboard during a RIM session.
 ### 3.1.40
 Adds some more logging related to audio on the target. So if you can reproduce laggy audio on the target, please do so with this version, then send logs. 
 ### 3.1.39
-##### Mac
+#### Mac OS
 This update adds mouse support for Mac targets.
 RIM now requests permission to use macOS accessibility features. For new
 installations, this replaces the input monitoring permission request, so
 the total number of permission steps doesn't go up. But for updates,
 you'll need to grant this permission before you can use RIM after updating.
 ### 3.1.38
-##### Mac
+#### Mac OS
 Fixed a crash that was affecting Mac targets at session initialization.
 ### 3.1.37
 This update marks a major milestone in the Mac port of RIM. The remote
@@ -331,45 +359,45 @@ down, and VoiceOver is restored to its previous settings.
 Note that both Windows and Mac controllers now need to be running
 version 3.1.37 to get full functionality when connecting to a Mac target.
 ### 3.1.36
-##### Windows
+#### Windows
 The remote accessibility feature is now compatible with NVDA 2023.1.
 ### 3.1.35
-##### Mac
+#### Mac OS
 * RIM now consistently uses stereo audio, particularly for Mac controllers.
 * When using RIM for Mac as a controller with the remote accessibility feature, RIM now uses the voice and speaking rate as defined in the Spoken Content section of system settings.
 
 ### 3.1.34
-##### Mac
+#### Mac OS
 When a Mac controller connects to a Windows target that's not running a screen reader, you can now run the remote accessibility module on the Windows target and get speech output on the Mac controller. Note that you still need to use NVDA keyboard commands when interacting with the Windows target, not VoiceOver commands, and we're using the NVDA laptop keyboard layout. 
 ### 3.1.33
 In response to user feedback, we removed the sound effect when displaying notifications about the status of a remote session.
 ### 3.1.32
-##### Mac
+#### Mac OS
 RIM now supports the Fn key when using a Mac laptop as a controller.  
 Note that for the top row of function keys, RIM always treats them as F1 through F12, and you need to use the Fn key if you want to use these keys as system function keys (for adjusting volume and so on), regardless of how the system preference is set on either end of the connection. We figure that in a remote session, you probably want to use these keys as F keys most of the time anyway. Behavior like using Fn+Left Arrow to press Home works as expected.
 ### 3.1.31
-##### Mac
+#### Mac OS
 * RIM previously didn't let go of its lock on keyboard input when some dialogs were displayed, such as the dialog requesting permission to access the microphone. This is now fixed.
 * When connecting from Mac to Windows or vice versa, it's no longer possible for the controller to trigger the RIM menu on the target machine. This fix requires the corresponding update to RIM for Windows.
 
-##### Windows
+#### Windows
 * Added a way to send RIM's log files to Pneuma Solutions, introduced for Mac OS in version 3.1.29. Please only use this function if requested by a representative of Pneuma Solutions.
 * RIM now plays a sound whenever it displays a notification.
 
 ### 3.1.30
-##### Mac
+#### Mac OS
 RIM will now request permission to display notifications, both on first run and for existing users updating from a previous version. As with most other permissions, granting this permission requires flipping a switch in System Settings. We've also added our own sound for these
 notifications.
 ### 3.1.29
-##### Mac
+#### Mac OS
 * We believe the problem that some users have reported with requesting keyboard input monitoring permission on machines running Karabiner Elements is now fixed.
 * The RIM About dialog now has a button to send logs. Please only use this if requested by Pneuma Solutions.
 
 ### 3.1.28
-##### Mac
+#### Mac OS
 When using RIM as a controller, it is now compatible with advanced keyboard customization tools such as Karabiner Elements.
 ### 3.1.27
-##### Mac
+#### Mac OS
 This is a minor update, with just two changes:
 * Marked RIM as requiring macOS 13.0 (Ventura) or later.
 * Fixed RIM so the virtual keyboard is only connected when RIM is actually running as a target. This means that the Keyboard Setup Assistant won't appear when using RIM as a controller. We're still looking into possible ways to avoid that dialog altogether.

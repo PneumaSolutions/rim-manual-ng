@@ -5,91 +5,101 @@ title: Journal des modifications
 import Windows from "~/components/platform/Windows.astro"
 import MacOS from "~/components/platform/MacOS.astro"
 
-Les versions de RIM seront désignées par des rubriques de niveau 3. Les mises à jour substantielles comportant plusieurs fonctionnalités pour les deux plates-formes seront divisées en sous-titres Mac et Windows au niveau 4.
-
+Les versions de RIM seront indiquées par des en-têtes au niveau 3. Les mises à jour importantes comportant plusieurs fonctionnalités pour les deux plateformes seront divisées en sous-titres Mac et Windows au niveau 4.
 ### 3.4.8
 
 * Implémente la capture du module d&#x27;accessibilité à distance pendant l&#x27;enregistrement d&#x27;une session via le système audio de l&#x27;ordinateur de contrôle.
-* Implémente une boîte de dialogue de consentement côté cible avant le début d&#x27;un enregistrement de session lors de toute session basée sur des mots-clés. Si l&#x27;utilisateur cible refuse la demande d&#x27;enregistrement, la session prend fin.
+* Implémente une boîte de dialogue de consentement côté cible avant le début d&#x27;un enregistrement de session pendant toute session basée sur des mots-clés. Si l&#x27;utilisateur cible refuse la demande d&#x27;enregistrement, la session prend fin.
 * Implémente une boîte de dialogue de confirmation avant l&#x27;arrêt manuel d&#x27;un enregistrement. Cette boîte de dialogue peut être configurée pour ne pas s&#x27;afficher si vous le souhaitez.
 * Il n&#x27;est plus possible de démarrer un enregistrement pendant qu&#x27;une session est basculée.
 * Implémente la possibilité de définir le répertoire d&#x27;enregistrement par défaut, ainsi que plusieurs autres paramètres de configuration, via un fichier toml. Reportez-vous à la section sur l&#x27;enregistrement de session pour obtenir des instructions sur la configuration de ces options.
 
 ### 3.4.7
-Cette version introduit une bêta ouverte de la fonctionnalité d&#x27;enregistrement de session sur les deux plateformes. Cette fonctionnalité est gratuite pour tous et le service cloud n&#x27;est jamais utilisé pour traiter l&#x27;enregistrement. Les enregistrements sont actuellement sauvegardés dans le dossier Vidéos local de l&#x27;utilisateur qui contrôle la session, à savoir « Vidéos » sous Windows et « Films » sous MacOS.  
+Cette version introduit une version bêta ouverte de la fonctionnalité d&#x27;enregistrement de session sur les deux plateformes. Cette fonctionnalité est gratuite pour tous et le service cloud n&#x27;est jamais utilisé pour traiter l&#x27;enregistrement. Les enregistrements sont actuellement sauvegardés dans le dossier Vidéos local de l&#x27;utilisateur qui contrôle la session, à savoir « Vidéos » sous Windows et « Films » sous MacOS.  
 N&#x27;hésitez pas à [nous envoyer vos commentaires](https://getrim.app/feedback) si vous rencontrez des problèmes lors de l&#x27;utilisation de cette fonctionnalité ou si vous avez des remarques ou des suggestions pour l&#x27;améliorer.
 
 ### 3.4.6
 
-* Il s'agit d'une mise à jour de correction de bogues.
+* Il s&#x27;agit d&#x27;une mise à jour corrective.
 
 ### 3.4.5
 
-* Il s'agit d'une mise à jour de correction de bogues.
+* Il s&#x27;agit d&#x27;une mise à jour corrective.
 
 ### 3.4.4
 
-* macOS : RIM est désormais compatible avec les versions récentes de l'outil de mappage de clavier Karabiner Elements.
+####macOS
+RIM est désormais compatible avec les versions récentes de l&#x27;outil de mappage de clavier Karabiner Elements.
 
 ### 3.4.3
 
-* Windows : La fonction d'accessibilité à distance est désormais compatible avec NVDA 2025.1.
+#### Windows
+La fonctionnalité d&#x27;accessibilité à distance est désormais compatible avec NVDA 2025.1.
 
 ### 3.4.2
 
-* macOS : Lors du basculement d'une session, RIM arrête désormais l'accessibilité à distance si cette fonctionnalité était active sur l'ancienne cible.
+#### macOS
+Lors du basculement d&#x27;une session, RIM arrête désormais l&#x27;accessibilité à distance si cette fonctionnalité était active sur l&#x27;ancienne cible.
 
 ### 3.4.1
 
-* Windows : Lors de l'exécution d'un programme d'installation préconfiguré en mode silencieux, RIM enregistre désormais de manière plus fiable la machine cible et commence à accepter les connexions non surveillées.
+#### Windows
+Lors de l&#x27;exécution d&#x27;un programme d&#x27;installation cible préconfiguré en mode silencieux, RIM enregistre désormais la machine cible de manière plus fiable et commence à accepter les connexions sans surveillance.
 
 ### 3.4.0
-* Ajout d'une option permettant aux utilisateurs professionnels de créer des installateurs n'expirant jamais
-    * Cette modification s'accompagne d'un contrôle de validation de tous les installateurs personnalisés. Si un programme d'installation personnalisé est expiré ou supprimé, il ne s'exécutera plus.
-* Correction d'un problème qui provoquait un signal sonore constant sur les machines cibles dépourvues de système audio embarqué, en particulier les serveurs Windows
-* Il n'est plus possible d'appuyer involontairement sur Windows+Shift+Backspace sur une cible Windows avec macOS comme contrôleur
+* Ajout d&#x27;une option permettant aux utilisateurs professionnels de créer des programmes d&#x27;installation sans date d&#x27;expiration
+* Cette modification s&#x27;accompagne d&#x27;une vérification de validation pour tous les programmes d&#x27;installation personnalisés. Si un programme d&#x27;installation personnalisé a expiré ou a été supprimé, il ne s&#x27;exécutera plus.
+* Correction d&#x27;un problème qui provoquait un bip constant sur les machines cibles sans carte audio intégrée, en particulier les serveurs Windows.
+* Il n&#x27;est plus possible d&#x27;appuyer involontairement sur Windows+Maj+Retour arrière sur une cible Windows avec macOS comme contrôleur.
+
 
 ### 3.3.39
 
-* macOS : Ajout d'une note sur les autorisations requises dans l'écran de bienvenue.
+#### macOS
+Ajout d&#x27;une note concernant les autorisations requises à l&#x27;écran d&#x27;accueil.
 
 ### 3.3.38
 
-* Correction d'un autre problème qui rendait imprécise la correspondance entre les curseurs du contrôleur et de la souris cible. Veuillez nous informer si vous continuez à avoir des problèmes dans ce domaine.
+* Correction d&#x27;un autre problème qui rendait imprécise la correspondance entre les curseurs de la souris du contrôleur et de la cible. Veuillez nous signaler tout problème persistant dans ce domaine.
 
 ### 3.3.37
 
-* Correction d'un problème qui rendait imprécise la correspondance entre les curseurs du contrôleur et de la souris cible.
+* Correction d&#x27;un problème qui rendait imprécise la correspondance entre les curseurs de la souris du contrôleur et de la cible.
 
 ### 3.3.36
 
-* Amélioration de la fiabilité de la prise en charge par RIM de la connexion à travers des pare-feu stricts.
+* Amélioration de la fiabilité de la prise en charge par RIM de la connexion via des pare-feu stricts.
 
 ### 3.3.35
 
-* Il s'agit d'une mise à jour de correction de bogues.
+* Il s&#x27;agit d&#x27;une mise à jour corrective.
 
 ### 3.3.34
 
-* Windows : Correction d'un problème qui faisait que le curseur de la souris était invisible dans la fenêtre de session à distance du contrôleur lors de la connexion à certaines cibles Windows sans souris connectée.
+#### Windows
+Correction d&#x27;un problème qui rendait le curseur de la souris invisible dans la fenêtre Session à distance du contrôleur lors de la connexion à certaines cibles Windows sans souris connectée.
 
 ### 3.3.33
 
-* macOS : RIM dispose désormais de l'autorisation nécessaire d'Apple pour permettre l'accès à distance, y compris l'accès sans surveillance, sans avoir à redemander l'autorisation d'enregistrement d'écran tous les mois. Pour ce faire, les utilisateurs cibles de macOS Sequoia doivent accorder une nouvelle autorisation d'"accès à distance" une seule fois. RIM demandera cette autorisation avant d'afficher l'écran de réception de l'aide, ou lors du premier démarrage après l'installation de cette mise à jour sur les machines enregistrées en tant que cibles sans surveillance. Notez qu'il existe encore un problème connu avec RIM sur macOS Sequoia : la fonction d'accessibilité à distance sur les machines cibles de macOS Sequoia ne fonctionne pas correctement. Nous travaillons actuellement avec Apple pour résoudre ce problème. Si vous ou vos utilisateurs cibles êtes concernés par ce problème, nous vous recommandons d'éviter la mise à niveau vers macOS Sequoia jusqu'à nouvel ordre. Nous vous remercions de votre patience.
+#### macOS
+RIM dispose désormais des droits nécessaires auprès d&#x27;Apple pour autoriser l&#x27;accès à distance, y compris l&#x27;accès sans surveillance, sans demander à nouveau l&#x27;autorisation d&#x27;enregistrer l&#x27;écran chaque mois. Cela nécessite que les utilisateurs cibles exécutant macOS Sequoia accordent une nouvelle autorisation « d&#x27;accès à distance » une seule fois. RIM demandera cette autorisation avant d&#x27;afficher l&#x27;écran Recevoir de l&#x27;aide ou lors du premier démarrage après l&#x27;installation de cette mise à jour sur les machines enregistrées comme cibles sans surveillance. Veuillez noter qu&#x27;il existe encore un problème connu avec RIM sur macOS Sequoia : la fonctionnalité d&#x27;accessibilité à distance sur les machines cibles macOS Sequoia ne fonctionne pas correctementfonctionne pas correctement. Nous travaillons actuellement avec Apple pour résoudre ce problème. Si vous ou vos utilisateurs cibles êtes concernés par ce problème, nous vous recommandons de continuer à éviter de passer à macOS Sequoia jusqu&#x27;à nouvel ordre. Merci de votre patience.
 
 ### 3.3.32
 
-* Correction d'un problème qui provoquait parfois le blocage de RIM lors de la copie d'un dossier dans le presse-papiers.
-* Correction d'un problème qui entraînait parfois le blocage de la session et la reconnexion lors de la copie d'un dossier volumineux dans le presse-papiers.
-* Windows : Correction d'un problème qui, par intermittence, empêchait RIM de remarquer qu'un nouveau fichier ou un nouvel ensemble de fichiers avait été copié dans le presse-papiers.
+* Correction d&#x27;un problème qui provoquait parfois le plantage de RIM lors de la copie d&#x27;un dossier dans le presse-papiers.
+* Correction d&#x27;un problème qui provoquait parfois le gel de la session et la reconnexion lors de la copie d&#x27;un dossier volumineux dans le presse-papiers.
+
+#### Windows
+Correction d&#x27;un problème qui empêchait parfois RIM de détecter la copie d&#x27;un nouveau fichier ou d&#x27;un ensemble de fichiers dans le presse-papiers.
 
 ### 3.3.31
 
-* macOS : Mise à jour des instructions pour accorder les permissions nécessaires sur macOS Sequoia. Notez qu'il y a encore deux problèmes connus avec RIM sur macOS Sequoia : macOS reprompt l'utilisateur cible pour l'autorisation d'enregistrement d'écran chaque mois, interférant avec les sessions sans surveillance, et la fonction d'accessibilité à distance sur les machines cibles de macOS Sequoia ne fonctionne pas correctement. Nous travaillons actuellement avec Apple pour résoudre ces problèmes. Si vous ou vos utilisateurs cibles êtes concernés par l'un ou l'autre de ces problèmes, nous vous recommandons d'éviter la mise à niveau vers macOS Sequoia jusqu'à nouvel ordre. Nous vous remercions de votre patience.
+#### macOS
+Mise à jour des instructions pour accorder les autorisations nécessaires sur macOS Sequoia. Veuillez noter qu&#x27;il existe encore deux problèmes connus avec RIM sur macOS Sequoia : macOS demande à nouveau à l&#x27;utilisateur cible l&#x27;autorisation d&#x27;enregistrer l&#x27;écran tous les mois, ce qui interfère avec les sessions sans surveillance, et la fonctionnalité d&#x27;accessibilité à distance sur les machines cibles macOS Sequoia ne fonctionne pas correctement. Nous travaillons actuellement avec Apple pour résoudre ces problèmes. Si vous ou vos utilisateurs cibles êtes concernés par l&#x27;un de ces problèmes, nous vous recommandons de ne pas effectuer la mise à niveau vers macOS Sequoia jusqu&#x27;à nouvel ordre. Merci de votre patience.
 
 ### 3.3.30
 
-* Correction d'un problème qui empêchait la fonction d'envoi de journaux de fonctionner de manière fiable.
+* Correction d&#x27;un problème qui empêchait la fonction Envoyer les journaux de fonctionner de manière fiable.
 
 ### 3.3.29
 
@@ -97,474 +107,492 @@ N&#x27;hésitez pas à [nous envoyer vos commentaires](https://getrim.app/feedba
 
 ### 3.3.28
 
-Cette mise à jour permet d'installer un profil de serveur supplémentaire. Ceci est utile pour les destinataires du support technique qui peuvent recevoir du support d'une organisation qui utilise un déploiement RIM privé par opposition à notre nuage public, ainsi que pour les contrôleurs qui peuvent travailler avec plus d'un serveur à la fois.
+Cette mise à jour permet d&#x27;installer un profil de serveur supplémentaire. Cela est utile pour les bénéficiaires d&#x27;une assistance technique qui peuvent recevoir une assistance de la part d&#x27;une organisation utilisant un déploiement RIM privé plutôt que notre cloud public, ainsi que pour les contrôleurs qui peuvent travailler avec plusieurs serveurs à la fois.
 
 ### 3.3.27
 
-* Cette mise à jour apporte quelques modifications à la manière dont RIM affiche le pointeur de la souris et gère les entrées de la souris. Elle corrige certaines situations dans lesquelles RIM affichait deux pointeurs de souris dans la zone de contenu de la fenêtre de session à distance, ainsi qu'un cas connu dans lequel aucun pointeur n'était affiché dans cette zone, en particulier lorsqu'aucune souris n'était connectée à la machine cible. Lors de la connexion à des cibles Windows, RIM est désormais souvent en mesure d'utiliser les paramètres du pointeur de la souris du contrôleur dans la fenêtre de la session à distance, ce qui la rend plus accessible aux utilisateurs malvoyants. En outre, la conversion de l'entrée de la souris de l'écran du contrôleur à l'écran de la machine cible est désormais plus précise.
+* Cette mise à jour apporte quelques modifications à la façon dont RIM affiche le pointeur de la souris et gère les entrées de la souris. Elle corrige certaines situations dans lesquelles RIM affichait deux pointeurs de souris dans la zone de contenu de la fenêtre Session à distance, ainsi qu&#x27;un cas connu où aucun pointeur n&#x27;était affiché dans cette zone, en particulier lorsqu&#x27;aucune souris n&#x27;était connectée à la machine cible. Lors de la connexion à des cibles Windows, RIM est désormais souvent en mesure d&#x27;utiliser les paramètres du pointeur de la souris du contrôleur dans la fenêtre Session à distance, ce qui la rend plus accessible aux utilisateurs malvoyants. De plus, la conversion des entrées de la souris de l&#x27;écran du contrôleur vers l&#x27;écran cible est désormais plus précise.
 
 ### 3.3.24
 
-* La fenêtre de la session à distance peut désormais être déplacée et redimensionnée, à l'intérieur d'un seul écran ou entre plusieurs écrans. La barre de titre de cette fenêtre comporte également les commandes standard de la plate-forme permettant de fermer la fenêtre, de la maximiser, etc. Notez que l'icône RIM, sur laquelle vous pouvez cliquer pour ouvrir le menu, se trouve maintenant au milieu de la barre de titre, et non plus à l'extrémité gauche.
-* Windows : Correction d'un bogue qui provoquait le blocage de RIM lors de la copie de texte dans le presse-papiers dans Adobe Reader.
+* La fenêtre Session à distance peut désormais être déplacée et redimensionnée, au sein d&#x27;un même écran ou entre plusieurs écrans. La barre de titre de cette fenêtre dispose désormais des commandes standard de la plate-forme pour fermer la fenêtre, l&#x27;agrandir, etc. Notez que l&#x27;icône RIM, sur laquelle vous pouvez cliquer pour ouvrir le menu, se trouve désormais au milieu de la barre de titre, et non plus à l&#x27;extrémité gauche.
+
+#### Windows
+Correction d&#x27;un bug qui provoquait le plantage de RIM lors de la copie de texte dans le presse-papiers dans Adobe Reader.
 
 ### 3.3.23
 
-* Le contrôleur peut maintenant couper la sortie audio de la cible. Pour ce faire, cochez la case "Couper la sortie audio de la cible" lorsque vous démarrez une session basée sur des mots-clés, ou choisissez "Couper la sortie audio de la cible" dans le menu de la session.
+* Le contrôleur peut désormais couper le son de la sortie audio de la cible. Pour ce faire, cochez la case « Couper le son de la sortie audio de la cible » lors du démarrage d&#x27;une session basée sur des mots-clés, ou sélectionnez « Couper le son de la sortie audio de la cible » dans le menu de la session.
 
 ### 3.3.22
 
-* Dans la fenêtre Fournir de l'aide, en attendant que l'utilisateur cible saisisse le mot-clé, RIM affiche désormais le mot-clé que vous avez saisi, ainsi qu'un compte à rebours jusqu'à l'expiration du mot-clé. Il y a également un bouton "Annuler", qui vous permet d'annuler facilement la tentative en cours sans fermer complètement la fenêtre ; c'est particulièrement pratique si vous voulez essayer un autre mot-clé.
-* Les abonnés à RIM Enterprise et RIM Pro avec le module complémentaire Enterprise peuvent désormais restreindre certaines fonctions RIM au sein de l'organisation. Les fonctionnalités suivantes peuvent actuellement être restreintes : retournement de session, conversations vocales, contrôleurs demandant un accès sans surveillance, transfert de texte et de fichiers entre machines via le presse-papiers, et contrôleurs verrouillant la machine cible. Les administrateurs de l'organisation peuvent accéder à ces paramètres via l'élément "Restrictions" du menu déroulant "Organisation" dans le tableau de bord RIM.
+* Dans la fenêtre Fournir de l&#x27;aide, pendant que vous attendez que l&#x27;utilisateur cible saisisse le mot-clé, RIM affiche désormais le mot-clé que vous avez saisi, ainsi qu&#x27;un compte à rebours jusqu&#x27;à l&#x27;expiration du mot-clé. Il existe également un bouton « Annuler » qui vous permet d&#x27;annuler facilement la tentative en cours sans fermer complètement la fenêtre, ce qui est particulièrement pratique si vous souhaitez essayer un autre mot-clé.
+* Les abonnés à RIM Enterprise et RIM Pro avec le module complémentaire Enterprise peuvent désormais restreindre certaines fonctionnalités RIM au sein de l&#x27;organisation. Les fonctionnalités suivantes peuvent actuellement être restreintes : basculement de session, conversations vocales, contrôleurs demandant un accès sans surveillance, transfert de texte et de fichiers entre machines via le presse-papiers et contrôleurs verrouillant la machine cible. Les administrateurs de l&#x27;organisation peuvent accéder à ces paramètres via l&#x27;élément « Restrictions » du menu déroulant « Organisation » dans le tableau de bord RIM.
 
 ### 3.3.21
 
-* Correction d'un autre problème qui entraînait une perte intermittente de connectivité de l'application RIM.
+* Correction d&#x27;un autre problème qui provoquait une perte intermittente de connectivité de l&#x27;application RIM.
 
 ### 3.3.20
 
-* Correction d'un problème qui entraînait parfois la déconnexion d'une machine exécutant RIM du service RIM et qui ne se reconnectait pas automatiquement, ce qui nécessitait le redémarrage de RIM.
+* Correction d&#x27;un problème qui provoquait parfois la déconnexion d&#x27;une machine exécutant RIM du service RIM et l&#x27;empêchait de se reconnecter automatiquement, nécessitant ainsi le redémarrage de RIM.
 
 ### 3.3.19
 
-* Lors du transfert de fichiers à l'aide de l'option du menu RIM, RIM affiche désormais le pourcentage d'achèvement dans la barre de titre de la fenêtre de progression.
-* Windows : RIM utilise désormais une méthode plus robuste pour passer de l'écran d'ouverture de session Windows au bureau principal. Cela devrait être particulièrement utile sur les PC cibles où l'utilisateur n'a pas de mot de passe Windows.
-* macOS : Dans les nouvelles installations, RIM demande désormais des autorisations après l'écran de bienvenue, et les autorisations demandées dépendent du fait que vous décidiez de recevoir ou de fournir de l'aide.
+* Lors du transfert de fichiers à l&#x27;aide de l&#x27;option du menu RIM, RIM affiche désormais le pourcentage terminé dans la barre de titre de la fenêtre de progression.
+
+#### Windows
+RIM utilise désormais une méthode plus robuste pour passer de l&#x27;écran de connexion Windows au bureau principal. Cela devrait être particulièrement utile sur les PC cibles où l&#x27;utilisateur n&#x27;a pas de mot de passe Windows.
+
+#### macOS
+Dans les nouvelles installations, RIM demande désormais des autorisations après l&#x27;écran d&#x27;accueil, et les autorisations demandées dépendent de votre décision de recevoir ou de fournir de l&#x27;aide.
 
 ### 3.3.18
 
-* Windows : Correction d'un problème qui provoquait le blocage de RIM si la session se terminait ou se reconnectait pendant un transfert de fichier.
+#### Windows
+Correction d&#x27;un problème qui provoquait le blocage de RIM si la session se terminait ou se reconnectait pendant un transfert de fichiers.
 
 ### 3.3.17
 
-* Windows : Résolution d'un problème qui faisait que le programme d'installation Windows de RIM était signalé comme téléchargé de manière inhabituelle et potentiellement dangereux par Microsoft SmartScreen.
+#### Windows
+Résolution d&#x27;un problème qui provoquait le signalement du programme d&#x27;installation de RIM Windows comme téléchargement inhabituel et potentiellement dangereux par Microsoft SmartScreen.
 
 ### 3.3.14
 
-* Correction d'un problème dans la mise à jour précédente qui empêchait la localisation de fonctionner pour quelques langues.
+* Correction d&#x27;un problème dans la mise à jour précédente qui empêchait la localisation de fonctionner pour certaines langues.
 
 ### 3.3.13
 
-* Mise à jour de la localisation japonaise, grâce aux contributions de Kojiro Kuyo.
-* Diverses corrections de bugs.
+* Mise à jour de la localisation japonaise, grâce à la contribution de Kojiro Kuyo.
+* Corrections de bugs divers.
 
 ### 3.3.12
 
-* Ajout de la localisation japonaise. Nous vous invitons à nous faire part de vos commentaires sur la qualité et l'exhaustivité de la traduction.
-* Amélioration de la traduction française - merci Nael Sayegh.
+* Ajout de la localisation japonaise. Nous apprécions vos commentaires sur la qualité et l&#x27;exhaustivité de la traduction.
+* Améliorations de la traduction française - merci à Nael Sayegh.
+
+### 3.3.11
+
+Correction d&#x27;une régression qui entraînait l&#x27;utilisation inutile des serveurs relais par RIM dans certains réseaux, ce qui dégradait la qualité de la connexion.
 
 ### 3.3.10
 
-Correction d'erreurs JavaScript intermittentes signalées dans la version précédente.
-
-### 3.3.10
-
-Correction d'erreurs JavaScript intermittentes signalées dans la version précédente.
+Correction d&#x27;erreurs JavaScript intermittentes signalées dans la version précédente.
 
 ### 3.3.9
 
-* Introduction d'une nouvelle méthode de secours pour se connecter à nos relais mondiaux, qui fonctionnera même dans les réseaux restreints qui n'autorisent que les connexions HTTPS sortantes. Il n'est donc plus nécessaire d'ajouter des exceptions de pare-feu pour le RIM, sauf dans des environnements extrêmement restreints.
-* RIM ne vérifie plus les mises à jour au premier plan lors du démarrage de l'application. Il ne vérifie plus que les mises à jour en arrière-plan. Si vous devez forcer RIM à se mettre à jour immédiatement, vous pouvez utiliser le nouveau bouton "Vérifier les mises à jour" dans la fenêtre "À propos".
-* Lors d'une inversion de session, si le contrôleur d'origine utilise un lecteur d'écran mais pas la cible, RIM démarre désormais automatiquement l'accessibilité à distance sur la cible, comme il l'a fait lors du démarrage de la session.
+* Introduction d&#x27;une nouvelle méthode de secours pour se connecter à nos relais mondiaux, qui fonctionnera même dans les réseaux restreints qui n&#x27;autorisent que les connexions HTTPS sortantes. Cela élimine la nécessité d&#x27;ajouter des exceptions de pare-feu pour RIM, sauf dans les environnements extrêmement restreints.
+* RIM ne vérifie plus les mises à jour en avant-plan au démarrage de l&#x27;application. Il ne vérifie désormais les mises à jour qu&#x27;en arrière-plan. Si vous devez forcer RIM à se mettre à jour immédiatement, vous pouvez utiliser le nouveau bouton « Vérifier les mises à jour » dans la fenêtre « À propos ».
+* Lors d&#x27;un renversement de session inversé, si le contrôleur d&#x27;origine exécute un lecteur d&#x27;écran mais que la cible ne le fait pas, RIM démarre désormais automatiquement l&#x27;accessibilité à distance sur la cible, comme il le faisait au démarrage de la session.
 
 #### Windows
 
-Correction d'un problème qui empêchait parfois la lecture des effets sonores NVDA lors de l'utilisation de l'accessibilité à distance.
+Correction d&#x27;un problème qui empêchait parfois la lecture des effets sonores NVDA lors de l&#x27;utilisation de l&#x27;accessibilité à distance.
 
 ### 3.3.8
 
 #### Windows
 
-Cette mise à jour introduit la prise en charge de la nouvelle version NVDA 2024.1 dans la fonction d'accessibilité à distance de RIM.
+Cette mise à jour introduit la prise en charge de la nouvelle version NVDA 2024.1 dans la fonctionnalité d&#x27;accessibilité à distance de RIM.
 
 ### 3.3.7
 
-* Plus de corrections mineures de localisation.
+* Autres corrections mineures de localisation.
 
 ### 3.3.6
 
-* macOS : La version précédente pour cette plateforme n'incluait pas les corrections de localisation.
+#### macOS
+La version précédente pour cette plateforme n&#x27;incluait pas les corrections de localisation.
 
 ### 3.3.5
 
-* Cette mise à jour apporte des corrections à la localisation suédoise, grâce à Karl-Otto Rosenqvist.
-* Dans toutes les langues, l'élément "Quitter" du menu de l'icône de la barre d'état système de RIM est maintenant traduit.
+* Cette mise à jour introduit des corrections à la localisation suédoise, grâce à Karl-Otto Rosenqvist.
+* Dans toutes les langues, l&#x27;élément « Quitter » dans le menu de l&#x27;icône de la barre d&#x27;état système RIM est désormais traduit.
 
 ### 3.3.4
 
-* Ajout de traductions en néerlandais et en portugais brésilien.
+* Ajout des traductions en néerlandais et en portugais brésilien.
 
 ### 3.3.3
 
-* Nous sommes maintenant suffisamment confiants dans la localisation de RIM pour la sortir de la version bêta. RIM utilise donc désormais par défaut la langue préférée du système, et nous avons supprimé l'étiquette "BETA" du sélecteur de langue.
-* Pour éviter toute confusion, il n'y a plus de bouton "Annuler" sur l'écran "Fournir de l'aide". Vous pouvez simplement fermer la fenêtre.
-* Sur l'écran "Recevoir de l'aide", si vous choisissez d'ajouter cette machine à votre compte RIM, la fenêtre "Recevoir de l'aide" restera ouverte.
+* Nous sommes désormais suffisamment confiants dans la localisation de RIM pour la sortir de la phase bêta. RIM utilise désormais par défaut la langue préférée de votre système et nous avons supprimé la mention « BETA » du sélecteur de langue.
+* Pour éviter toute confusion, le bouton « Annuler » n&#x27;apparaît plus sur l&#x27;écran « Fournir de l&#x27;aide ». Vous pouvez simplement fermer la fenêtre.
+* Sur l&#x27;écran « Recevoir de l&#x27;aide », si vous choisissez d&#x27;ajouter cet ordinateur à votre compte RIM, la fenêtre « Recevoir de l&#x27;aide » restera désormais ouverte.
 
 ### 3.3.2
-##### Fenêtres
-* Correction d'un problème qui empêchait RIM d'installer des mises à jour sur certaines machines avec une configuration verrouillée.
+#### Windows
+* Correction d&#x27;un problème qui empêchait RIM d&#x27;installer des mises à jour sur certaines machines dont la configuration était verrouillée.
+
 ### 3.3.1
-* Traductions mises à jour
-* Changements internes
+* Mises à jour des traductions
+* Modifications internes
+
 ### 3.3.0
-Cette mise à jour ajoute un grand nombre de nouvelles fonctionnalités, ainsi que des révisions spécifiques aux plates-formes. Les ajouts généraux sont les suivants :
-* Prise en charge des conversations vocales dans les sessions sans surveillance. L'utilisateur cible est invité sur place à demander l'autorisation d'entamer une conversation vocale.
-* Dans les conversations vocales, RIM gère désormais le branchement et le débranchement des microphones au cours de la session 
+Cette mise à jour ajoute une multitude de nouvelles fonctionnalités, ainsi que des révisions spécifiques à certaines plateformes. Les ajouts généraux comprennent :
+* Ajout de la prise en charge des conversations vocales dans les sessions sans surveillance. L&#x27;utilisateur cible est invité à donner son autorisation pour démarrer une conversation vocale.
+* Dans les conversations vocales, RIM gère désormais les microphones branchés et débranchés pendant la session. 
 
-##### Windows
-* Le narrateur prononce désormais les notifications de RIM de manière cohérente
-* Ajout d'une solution de repli pour les non-administrateurs
+#### Windows
+* Le narrateur lit désormais systématiquement les notifications RIM.
+* Ajout d&#x27;une solution de secours non administrative.
 
-##### Mac OS
-* Ajout d'un programme de désinstallation accessible via l'écran About qui supprime complètement et proprement RIM, y compris le pilote Karabiner Virtual HID
-* Les informations sur la machine cible Mac incluent désormais les processus en cours et les applications installées 
+#### Mac OS
+* Ajout d&#x27;un programme de désinstallation accessible via l&#x27;écran À propos qui supprime complètement et proprement RIM, y compris le pilote Karabiner Virtual HID. 
+* Les informations sur la machine cible Mac incluent désormais les processus en cours d&#x27;exécution et les applications installées. 
 
 ### 3.2.18
-Lorsque vous appuyez sur le bouton Déconnexion dans la fenêtre Fournir de l'aide, RIM revient maintenant à la fenêtre Recevoir de l'aide au lieu de vous demander de vous connecter à nouveau.
+Lorsque vous appuyez sur le bouton Déconnexion dans la fenêtre Fournir de l&#x27;aide, RIM revient désormais à la fenêtre Recevoir de l&#x27;aide au lieu de vous demander de vous reconnecter.
 ### 3.2.17
-* Correction des problèmes de traduction des éléments de menu.
-* Lors du démarrage d'une session sans surveillance, RIM prend désormais en charge le double-clic sur un groupe cible ou une machine cible.
-* Correction d'un bogue dans le processus d'ajout d'une machine cible à votre compte lors de l'utilisation de l'authentification unique (SSO).
+* Correction de problèmes liés à la traduction des éléments de menu.
+* Lors du démarrage d&#x27;une session sans surveillance, RIM prend désormais en charge le double-clic sur un groupe cible ou une machine cible.
+* Correction d&#x27;un bug lié au processus d&#x27;ajout d&#x27;une machine cible à votre compte lors de l&#x27;utilisation de l&#x27;authentification unique (SSO).
+
 ### 3.2.16
-* Correction de problèmes avec la localisation française. Merci à Nael Sayegh pour ces corrections ; il s'agit de la première contribution de la communauté à nos efforts de localisation.
+* Problèmes liés à la localisation française corrigés. Merci à Nael Sayegh pour ces corrections ; il s&#x27;agit de la première contribution de la communauté à nos efforts de localisation.
+
 ### 3.2.15
-##### Windows
-* Correction d'un problème qui provoquait le blocage de la sortie écran sur le contrôleur lors du verrouillage de la machine cible.
+#### Windows
+* Problème corrigé qui provoquait le gel de l&#x27;affichage à l&#x27;écran du contrôleur lors du verrouillage de la machine cible.
+
 ### 3.2.14
-##### Windows
-* RIM détecte désormais Fusion, le produit Vispero qui combine JAWS et ZoomText, comme un produit distinct lorsqu'il détermine quel lecteur d'écran est exécuté sur la machine cible, au lieu de le détecter simplement comme JAWS. Cela signifie que RIM n'essaiera pas de lancer sa fonction d'accessibilité à distance pendant le démarrage de Fusion.
-* Nous avons reçu des rapports indiquant que si Fusion démarrait après le début d'une session RIM, Fusion ignorait certaines frappes du contrôleur, comme le faisait JAWS. Nous pensons que ce problème est maintenant résolu.
+#### Windows
+* RIM détecte désormais Fusion, le produit Vispero qui combine JAWS et ZoomText, comme un produit distinct lorsqu&#x27;il détermine quel lecteur d&#x27;écran est en cours d&#x27;exécution sur la machine cible, plutôt que de le détecter simplement comme JAWS. Cela signifie que RIM ne tentera pas de démarrer sa fonctionnalité d&#x27;accessibilité à distance pendant le démarrage de Fusion.
+* Nous avons reçu des rapports indiquant que si Fusion démarrait après le début d&#x27;une session RIM, Fusion ignorait certaines frappes du contrôleur, comme le faisait JAWS auparavant. Nous pensons que ce problème est désormais résolu.
+
 ### 3.2.13
-##### Windows
-Correction d'un problème de saisie au clavier lors de la connexion à des machines cibles exécutant JAWS 2024.
+#### Windows
+Correction d&#x27;un problème avec la saisie au clavier lors de la connexion à des machines cibles exécutant JAWS 2024.
+
 ### 3.2.12
-Résolution d'un problème rare qui pouvait empêcher l'application RIM de se connecter au service cloud.
+Contournement d&#x27;un problème rare qui pouvait empêcher l&#x27;application RIM de se connecter au service cloud.
+
 ### 3.2.11
-Ajout d'un nouveau bouton dans la fenêtre Détails de la connexion pour demander que la machine cible envoie ses journaux RIM à Pneuma Solutions. N'utilisez cette fonction que si Pneuma Solutions vous le demande.
+Ajout d&#x27;un nouveau bouton dans la fenêtre Détails de la connexion pour demander à la machine cible d&#x27;envoyer ses journaux RIM à Pneuma Solutions. Veuillez n&#x27;utiliser cette fonctionnalité que si Pneuma Solutions vous le demande.
+
 ### 3.2.10
-Correction d'un problème qui pouvait entraîner l'arrêt du fonctionnement de RIM jusqu'au prochain redémarrage de l'application si la connexion Internet de la machine était temporairement indisponible.
+Correction d&#x27;un problème qui pouvait empêcher RIM de fonctionner jusqu&#x27;au prochain redémarrage de l&#x27;application si la connexion Internet de la machine était temporairement indisponible.
 ### 3.2.9
-##### macOS
-Nous ne sommes malheureusement plus en mesure de proposer l'entrée automatique du microphone stéréo dans les conversations vocales sur cette plateforme, car dans certains cas, cela empêchait l'entrée du microphone de fonctionner sur un Mac. Notez que ce changement n'a aucun effet sur la sortie audio capturée de la machine cible ; elle est toujours stéréo.
+#### Mac OS
+Nous ne sommes malheureusement plus en mesure de proposer l&#x27;entrée microphone stéréo automatique dans les conversations vocales sur cette plateforme, car dans certains cas, cela empêchait l&#x27;entrée microphone de fonctionner sur un Mac. Notez que cette modification n&#x27;a aucun effet sur la sortie audio capturée à partir de la machine cible, qui reste stéréo.
+
 ### 3.2.8
-##### macOS
-Correction d'un bogue qui empêchait RIM de s'afficher lors de l'activation de l'application via le Finder ou le Dock, au lieu d'utiliser le raccourci clavier global.
+#### Mac OS
+Correction d&#x27;un bug qui empêchait RIM de s&#x27;ouvrir lors de l&#x27;activation de l&#x27;application via le Finder ou le Dock, plutôt que d&#x27;utiliser le raccourci clavier global.
 ### 3.2.7
-Les conversations vocales utilisent désormais automatiquement la stéréo lorsque le matériel audio le permet. Ceci est utile lorsque vous utilisez RIM pour la formation à la production audio.
+Les conversations vocales utilisent désormais automatiquement la stéréo lorsque le matériel audio le prend en charge. Cela est utile lorsque vous utilisez RIM pour vous former à la production audio.
 ### 3.2.6
-Correction d'un problème récent qui pouvait empêcher RIM de fonctionner sur une nouvelle installation du système d'exploitation.
+Correction d&#x27;un problème récemment introduit qui pouvait empêcher RIM de fonctionner sur une nouvelle installation du système d&#x27;exploitation.
 ### 3.2.5
-Correction du message affichant le temps libre restant.
+Correction du message qui affiche le temps libre restant.
 ### 3.2.4
-La localisation de RIM dans d'autres langues est maintenant en version bêta. Les langues suivantes sont actuellement prises en charge : Allemand, Espagnol, Français, Italien et Suédois. Pour utiliser RIM dans l'une de ces langues, appuyez sur le bouton "Langue (BETA)" en bas de la fenêtre "Fournir de l'aide" ou "Recevoir de l'aide", puis choisissez votre langue dans la liste déroulante et appuyez sur le bouton "Changer de langue". Nous attendons avec impatience vos commentaires.
+La localisation de RIM dans d&#x27;autres langues est désormais en version bêta. Les langues suivantes sont actuellement prises en charge : allemand, espagnol, français, italien et suédois. Pour utiliser RIM dans l&#x27;une de ces langues, appuyez sur le bouton « Langue (BETA) » en bas de la fenêtre « Fournir de l&#x27;aide » ou « Recevoir de l&#x27;aide », puis choisissez votre langue dans la liste déroulante et appuyez sur le bouton « Changer de langue ». Nous attendons vos commentaires avec impatience.
 ### 3.2.1
-* Le processus de démarrage d'une nouvelle session RIM du côté du contrôleur est désormais plus fluide. La fenêtre initiale, dans laquelle vous avez saisi votre mot-clé ou choisi une machine cible, ne disparaît pas tant que la fenêtre principale de la session n'est pas prête. Si la fenêtre initiale n'a plus le focus au démarrage de la session, par exemple si vous avez changé de tâche en attendant que l'utilisateur cible entre un mot-clé, RIM vous informera que la session est prête et la fenêtre principale de la session apparaîtra lorsque vous redonnerez le focus à RIM.
-* macOS uniquement : Dans le cadre du changement précédent, nous avons modifié la manière dont RIM s'ajoute et se retire du Dock et de la liste Commande+Tab. N'hésitez pas à nous faire savoir si vous rencontrez des problèmes avec le comportement actuel.
-* Cibles Windows uniquement : Si un lecteur d'écran est démarré sur la machine cible alors que l'accessibilité à distance est active, l'accessibilité à distance s'arrêtera discrètement afin d'éviter une double sortie vocale.
+* Le processus de démarrage d&#x27;une nouvelle session RIM côté contrôleur est désormais plus fluide. La fenêtre d&#x27;origine, dans laquelle vous avez saisi votre mot-clé ou choisi une machine cible, ne disparaîtra pas tant que la fenêtre de session principale ne sera pas prête. Si la fenêtre initiale n&#x27;est plus active lorsque la session démarre, par exempleg. si vous avez changé de tâche pendant que vous attendiez que l&#x27;utilisateur cible entre un mot-clé, RIM vous informera que la session est prête et la fenêtre principale de la session apparaîtra lorsque vous reviendrez sur RIM.
+* macOS uniquement : dans le cadre de la modification précédente, nous avons modifié la façon dont RIM s&#x27;ajoute et se supprime dans le Dock et la liste Command+Tab. Veuillez nous signaler tout problème rencontré avec le comportement actuel.
+* Cibles Windows uniquement : si un lecteur d&#x27;écran est lancé sur la machine cible alors que l&#x27;accessibilité à distance est active, celle-ci s&#x27;arrêtera discrètement afin d&#x27;éviter une double sortie vocale.
 
 ### 3.2.0
-Première version officielle pour Mac OS ! Les nouvelles fonctionnalités sont les suivantes
-* la possibilité de configurer des sessions sans surveillance ou guidées à partir d'une session interactive.
-* Toutes les nouvelles instructions d'autorisation pour les utilisateurs qui n'utilisent pas VoiceOver.
+Première version officielle pour Mac OS ! Nouvelles fonctionnalités :
+* possibilité de configurer des sessions sans surveillance ou avec invite à partir d&#x27;une session interactive.
+* Toutes les nouvelles instructions d&#x27;autorisation pour les utilisateurs qui n&#x27;utilisent pas VoiceOver.
 
 ### 3.1.49
-Cette version propose une méthode cohérente et multiplateforme pour ouvrir le menu de la session du contrôleur RIM à l'aide de la souris. Un contrôleur peut soit cliquer sur la grande icône RIM dans le coin supérieur gauche de la fenêtre de session, soit, comme c'était le cas auparavant sous Windows, cliquer avec le bouton droit de la souris n'importe où dans la barre de titre.
+Cette version offre un moyen cohérent et multiplateforme d&#x27;ouvrir le menu de session du contrôleur RIM à l&#x27;aide de la souris. Un contrôleur peut soit cliquer sur la grande icône RIM dans le coin supérieur gauche de la fenêtre de session, soit, comme cela était auparavant possible sous Windows, cliquer avec le bouton droit n&#x27;importe où sur la barre de titre.
 ### 3.1.48
-##### Mac
-* Ajout de la prise en charge de la solution de contournement de la touche FN+Numéro pour l'utilisation de la rangée de fonctions sur les MacBooks.
-* RIM pour Mac personnalise désormais la barre de menu et, en particulier, l'option "À propos" du menu de l'application ouvre désormais notre propre boîte de dialogue "À propos" au lieu de la boîte de dialogue générique.
+#### Mac OS
+* Ajout de la prise en charge de la combinaison de touches FN+Numéro pour utiliser la rangée de touches de fonction sur les MacBook.
+* RIM pour Mac personnalise désormais la barre de menus. En particulier, l&#x27;option « À propos » du menu de l&#x27;application ouvre désormais notre propre boîte de dialogue À propos plutôt que la boîte de dialogue générique.
 
 ### 3.1.47
-##### Windows
-Lors de la connexion d'un contrôleur Mac à une cible Windows, les deux parties utilisant la même disposition de clavier non américaine, la saisie du clavier du contrôleur n'était pas traduite correctement. La version 3.1.47 pour Windows corrige ce problème.
+#### Windows
+Lors de la connexion d&#x27;un contrôleur Mac à une cible Windows, les deux côtés utilisant la même disposition de clavier non américaine, les entrées clavier provenant du contrôleur n&#x27;étaient pas traduites correctement. La version 3.1.47 pour Windows corrige ce problème.
 ### 3.1.46
-Cette version ajoute la prise en charge de la nouvelle formule d'abonnement RIM Personal Community Support.
+Cette version ajoute la prise en charge du nouveau pack d&#x27;abonnement RIM Personal Community Support.
 
 ### 3.1.45
-##### Mac
-RIM est désormais en mesure de reprendre automatiquement la capture du contenu de l'écran et de la sortie audio si la machine cible passe à l'écran de verrouillage au cours d'une session.
+#### Mac OS
+RIM est désormais capable de reprendre automatiquement la capture du contenu de l&#x27;écran et de la sortie audio si la machine cible passe en mode écran verrouillé pendant une session.
 
 ### 3.1.44
-##### Mac
-* Implémente le redémarrage et la reconnexion pour les cibles Mac, y compris les redémarrages standard et d'urgence.
-    * Comme pour l'accès sans surveillance, RIM ne s'affiche pas sur l'écran de connexion de macOS en raison des restrictions de la plate-forme, en particulier FileVault. L'utilisateur cible devra donc se reconnecter avant que RIM ne puisse se reconnecter.
-* La notification concernant les transferts de fichiers, introduite dans la mise à jour précédente, ne s'affiche plus qu'une seule fois par session RIM.
+#### Mac OS
+* Implémente le redémarrage et la reconnexion pour les cibles Mac, y compris les redémarrages standard et d&#x27;urgence.
+* Comme pour l&#x27;accès sans surveillance, RIM n&#x27;apparaît pas sur l&#x27;écran de connexion macOS en raison des restrictions de la plate-forme, en particulier FileVault. L&#x27;utilisateur cible devra donc se reconnecter avant que RIM puisse se reconnecter.
+* La notification concernant les transferts de fichiers, introduite dans la mise à jour précédente, n&#x27;apparaît désormais qu&#x27;une seule fois par session RIM.
 
 ### 3.1.43
-##### Mac
-Cette mise à jour modifie l'interface utilisateur pour les transferts de fichiers. Lorsqu'un ou plusieurs fichiers sont placés dans le presse-papiers de part et d'autre de la connexion, le contrôleur reçoit désormais une notification indiquant que le transfert de fichiers peut être effectué via le menu RIM. Si le contrôleur choisit cette option de menu, le transfert de fichiers est effectué et, une fois terminé, un dossier temporaire contenant le ou les fichiers transférés est ouvert sur la machine de destination. Cette méthode de transfert de fichiers est nécessaire lorsque la machine de destination est un Mac. Lorsque la destination est une machine Windows, le transfert de fichiers peut être effectué en utilisant soit cette nouvelle méthode, soit l'ancienne méthode consistant à coller dans l'explorateur de fichiers sur la machine de destination.
+#### Mac OS
+Cette mise à jour modifie l&#x27;interface utilisateur pour les transferts de fichiers. Lorsqu&#x27;un ou plusieurs fichiers sont placés dans le presse-papiers de l&#x27;un ou l&#x27;autre côté de la connexion, le contrôleur reçoit désormais une notification indiquant que le transfert de fichiers peut être effectué via le menu RIM. Si le contrôleur choisit cette option de menu, le transfert de fichiers est effectué et, une fois terminé, un dossier temporaire contenant le ou les fichiers transférés s&#x27;ouvre sur la machine de destination. Cette méthode de transfert de fichiers est nécessaire lorsque la machine de destination est un Mac. Lorsque la destination est une machine Windows, le transfert de fichiers peut être effectué à l&#x27;aide de cette nouvelle méthode ou de l&#x27;ancienne méthode consistant à coller dans l&#x27;Explorateur de fichiers sur la machine de destination.
 ### 3.1.42
-##### Mac
-* RIM pour Mac fonctionne désormais comme une cible sans surveillance. Il effectue également des mises à jour en arrière-plan, comme le fait la version Windows.
-    * Nous avons encore du travail à faire en ce qui concerne l'accès à l'écran de verrouillage, et nous ne pensons pas pouvoir donner accès à l'écran de connexion avant que l'utilisateur ne soit connecté, en raison des limitations de la plate-forme.
-    * nous n'avons pas encore déterminé comment, ou si, nous pourrons mettre en œuvre des installateurs de cibles préconfigurés, de sorte que vous devrez utiliser l'une des autres méthodes disponibles pour mettre en place un accès sans surveillance.
-* Élimination d'une source de latence dans l'audio capturé à partir de cibles Mac.
+#### Mac OS
+* RIM pour Mac fonctionne désormais comme une cible sans surveillance. Il effectue également des mises à jour en arrière-plan, comme la version Windows.
+* Nous avons encore du travail à faire sur l&#x27;accès à l&#x27;écran de verrouillage, et nous ne pensons pas pouvoir fournir l&#x27;accès à l&#x27;écran de connexion avant qu&#x27;un utilisateur ne soit connecté, en raison des limitations de la plateforme.
+* Nous n&#x27;avons pas encore déterminé comment, ni si, nous serons en mesure de mettre en œuvre des installateurs cibles préconfigurés. Vous devrez donc utiliser l&#x27;une des autres méthodes disponibles pour configurer l&#x27;accès sans surveillance.
+* Élimine une source de latence dans l&#x27;audio capturé à partir de cibles Mac.
 
 ### 3.1.41
-##### Windows
-Correction d'un problème qui provoquait parfois le plantage de RIM en réponse à l'activité du presse-papiers de Windows au cours d'une session RIM.
+#### Windows
+Correction d&#x27;un problème qui provoquait parfois le plantage de RIM en réponse à une activité dans le presse-papiers Windows pendant une session RIM.
 ### 3.1.40
-Ajout d'une journalisation supplémentaire relative à l'audio sur la cible. Ainsi, si vous pouvez reproduire un audio laggy sur la cible, veuillez le faire avec cette version, puis envoyez les logs. 
+Ajout de quelques journaux supplémentaires liés à l&#x27;audio sur la cible. Si vous pouvez reproduire un son saccadé sur la cible, veuillez le faire avec cette version, puis envoyer les journaux. 
 ### 3.1.39
-##### Mac
-Cette mise à jour ajoute le support de la souris pour les cibles Mac.
-RIM demande maintenant la permission d'utiliser les fonctions d'accessibilité de macOS. Pour les nouvelles
-nouvelles installations, cela remplace la demande d'autorisation pour le contrôle des entrées, de sorte que le nombre total d'étapes d'autorisation n'augmente pas
-le nombre total d'étapes d'autorisation n'augmente pas. Mais pour les mises à jour,
-vous devrez accorder cette permission avant de pouvoir utiliser RIM après la mise à jour.
+#### Mac OS
+Cette mise à jour ajoute la prise en charge de la souris pour les cibles Mac.
+RIM demande désormais l&#x27;autorisation d&#x27;utiliser les fonctionnalités d&#x27;accessibilité de macOS. Pour les nouvelles
+installations, cela remplace la demande d&#x27;autorisation de surveillance des entrées, de sorte que
+le nombre total d&#x27;étapes d&#x27;autorisation n&#x27;augmente pas. Mais pour les mises à jour,
+vous devrez accorder cette autorisation avant de pouvoir utiliser RIM après la mise à jour.
 ### 3.1.38
-##### Mac
-Correction d'un crash qui affectait les cibles Mac lors de l'initialisation de la session.
+#### Mac OS
+Correction d&#x27;un plantage qui affectait les cibles Mac lors de l&#x27;initialisation de la session.
 ### 3.1.37
-Cette mise à jour marque une étape importante dans le portage Mac de RIM. La fonction d'accessibilité
-la fonction d'accessibilité à distance de RIM est désormais disponible lors de la connexion à des cibles Mac
-mac. En utilisant une configuration spéciale de VoiceOver sur la machine cible, le contrôleur, qu'il soit sous Windows ou sous Mac, peut se connecter à des cibles Mac
-le contrôleur, qu'il utilise Windows ou Mac, entend la parole, alors que l'utilisateur cible n'entend rien
-tandis que l'utilisateur cible n'entend ni paroles ni effets sonores. Il n'y a pas non plus d'indication visible que VoiceOver
-il n'y a pas non plus d'indication visible que VoiceOver fonctionne sur la cible.
-Le processus de démarrage de l'accessibilité à distance, qu'il soit automatique ou
-manuellement, fonctionne de la même manière que pour les cibles Windows. Et bien sûr, à la fin de la session, la configuration spéciale de VoiceOver est conservée,
-lorsque la session se termine, la configuration spéciale de VoiceOver est arrêtée
-et VoiceOver est rétabli dans ses paramètres précédents.
+Cette mise à jour marque une étape importante dans le portage de RIM sur Mac. La fonctionnalité d&#x27;accessibilité à distance de RIM est désormais disponible lors de la connexion à des cibles Mac.
+Grâce à une configuration spéciale de VoiceOver sur la machine cible
+, le contrôleur, qu&#x27;il utilise Windows ou Mac, entendra la voix
+tandis que l&#x27;utilisateur cible n&#x27;entendra aucune voix ni aucun effet sonore. Il
+n&#x27;y a également aucune indication visible que VoiceOver est en cours d&#x27;exécution sur la cible.
+Le processus de démarrage de l&#x27;accessibilité à distance, automatiquement ou
+manuellement, fonctionne exactement comme avec les cibles Windows. Et bien sûr,
+lorsque la session se termine, la configuration spéciale de VoiceOver est désactivée
+et VoiceOver est restauré avec ses paramètres précédents.
 
-Notez que les contrôleurs Windows et Mac doivent maintenant fonctionner avec la version 3.1.37 de
-version 3.1.37 pour obtenir toutes les fonctionnalités lors de la connexion à une cible Mac.
+Notez que les contrôleurs Windows et Mac doivent désormais exécuter
+la version 3.1.37 pour bénéficier de toutes les fonctionnalités lors de la connexion à une cible Mac.
 ### 3.1.36
-##### Windows
-La fonction d'accessibilité à distance est désormais compatible avec NVDA 2023.1.
+#### Windows
+La fonctionnalité d&#x27;accessibilité à distance est désormais compatible avec NVDA 2023.1.
 ### 3.1.35
-##### Mac
-* RIM utilise désormais systématiquement l'audio stéréo, en particulier pour les contrôleurs Mac.
-* Lors de l'utilisation de RIM pour Mac en tant que contrôleur avec la fonction d'accessibilité à distance, RIM utilise désormais la voix et la vitesse d'élocution définies dans la section Contenu parlé des paramètres du système.
+#### Mac OS
+* RIM utilise désormais systématiquement l&#x27;audio stéréo, en particulier pour les contrôleurs Mac.
+* Lorsque vous utilisez RIM pour Mac comme contrôleur avec la fonctionnalité d&#x27;accessibilité à distance, RIM utilise désormais la voix et la vitesse de lecture définies dans la section Contenu vocal des paramètres système.
 
 ### 3.1.34
-##### Mac
-Lorsqu'un contrôleur Mac se connecte à une cible Windows qui n'utilise pas de lecteur d'écran, vous pouvez désormais exécuter le module d'accessibilité à distance sur la cible Windows et obtenir une sortie vocale sur le contrôleur Mac. Notez que vous devez toujours utiliser les commandes du clavier NVDA pour interagir avec la cible Windows, et non les commandes VoiceOver, et que nous utilisons la disposition du clavier de l'ordinateur portable NVDA. 
+#### Mac OS
+Lorsqu&#x27;un contrôleur Mac se connecte à une cible Windows qui n&#x27;exécute pas de lecteur d&#x27;écran, vous pouvez désormais exécuter le module d&#x27;accessibilité à distance sur la cible Windows et obtenir une sortie vocale sur le contrôleur Mac. Notez que vous devez toujours utiliser les commandes clavier NVDA lorsque vous interagissez avec la cible Windows, et non les commandes VoiceOver, et que nous utilisons la disposition du clavier d&#x27;ordinateur portable NVDA. 
 ### 3.1.33
-En réponse aux commentaires des utilisateurs, nous avons supprimé l'effet sonore lors de l'affichage des notifications sur l'état d'une session à distance.
+En réponse aux commentaires des utilisateurs, nous avons supprimé l&#x27;effet sonore lors de l&#x27;affichage des notifications concernant l&#x27;état d&#x27;une session à distance.
 ### 3.1.32
-##### Mac
-RIM prend désormais en charge la touche Fn lors de l'utilisation d'un ordinateur portable Mac comme contrôleur.  
-Notez que pour la rangée supérieure de touches de fonction, RIM les traite toujours comme F1 à F12, et vous devez utiliser la touche Fn si vous voulez utiliser ces touches comme touches de fonction du système (pour régler le volume, etc.), quelle que soit la manière dont les préférences du système sont définies à l'une ou l'autre extrémité de la connexion. Nous pensons que dans une session à distance, vous voudrez probablement utiliser ces touches comme touches F la plupart du temps. Un comportement tel que l'utilisation de Fn+Flèche gauche pour appuyer sur Accueil fonctionne comme prévu.
+#### Mac OS
+RIM prend désormais en charge la touche Fn lorsque vous utilisez un ordinateur portable Mac comme contrôleur.
+Notez que pour la rangée supérieure de touches de fonction, RIM les traite toujours comme les touches F1 à F12, et vous devez utiliser la touche Fn si vous souhaitez utiliser ces touches comme touches de fonction système (pour régler le volume, etc.), quel que soit le réglage des préférences système à chaque extrémité de la connexion. Nous pensons que dans une session à distance, vous souhaiterez probablement utiliser ces touches comme touches F la plupart du temps. Les actions telles que l&#x27;utilisation de Fn+Flèche gauche pour appuyer sur Accueil fonctionnent comme prévu.
 ### 3.1.31
-##### Mac
-* Auparavant, RIM ne levait pas son verrou sur la saisie au clavier lorsque certaines boîtes de dialogue étaient affichées, telles que la boîte de dialogue demandant l'autorisation d'accéder au microphone. Ce problème est désormais résolu.
-* Lors d'une connexion de Mac à Windows ou vice versa, il n'est plus possible pour le contrôleur de déclencher le menu RIM sur la machine cible. Cette correction nécessite la mise à jour correspondante de RIM pour Windows.
+#### Mac OS
+* Auparavant, RIM ne relâchait pas son verrouillage sur la saisie au clavier lorsque certaines boîtes de dialogue s&#x27;affichaient, telles que la boîte de dialogue demandant l&#x27;autorisation d&#x27;accéder au microphone. Ce problème est désormais résolu.
+* Lors d&#x27;une connexion entre Mac et Windows ou vice versa, le contrôleur ne peut plus déclencher le menu RIM sur la machine cible. Cette correction nécessite la mise à jour correspondante de RIM pour Windows.
 
-##### Windows
-* Ajout d'un moyen d'envoyer les fichiers journaux de RIM à Pneuma Solutions, introduit pour Mac OS dans la version 3.1.29. N'utilisez cette fonction qu'à la demande d'un représentant de Pneuma Solutions.
-* RIM émet désormais un son lorsqu'il affiche une notification.
+#### Windows
+* Ajout d&#x27;un moyen d&#x27;envoyer les fichiers journaux de RIM à Pneuma Solutions, introduit pour Mac OS dans la version 3.1.29. Veuillez n&#x27;utiliser cette fonction que si un représentant de Pneuma Solutions vous le demande.
+* RIM émet désormais un son chaque fois qu&#x27;il affiche une notification.
 
 ### 3.1.30
-##### Mac
-RIM demande désormais la permission d'afficher des notifications, à la fois lors de la première utilisation et pour les utilisateurs existants qui effectuent une mise à jour à partir d'une version précédente. Comme pour la plupart des autres autorisations, l'octroi de cette permission nécessite de basculer un interrupteur dans les paramètres du système. Nous avons également ajouté notre propre son pour ces
-notifications.
+#### Mac OS
+RIM demandera désormais l&#x27;autorisation d&#x27;afficher des notifications, tant lors de la première exécution que pour les utilisateurs existants effectuant une mise à jour à partir d&#x27;une version précédente. Comme pour la plupart des autres autorisations, l&#x27;octroi de cette autorisation nécessite d&#x27;activer un commutateur dans les paramètres système. Nous avons également ajouté notre propre son pour ces notifications.
+
 ### 3.1.29
-##### Mac
-* Nous pensons que le problème signalé par certains utilisateurs concernant la demande d'autorisation de surveillance de la saisie au clavier sur les machines équipées de Karabiner Elements est à présent résolu.
-* La boîte de dialogue "À propos de RIM" comporte désormais un bouton permettant d'envoyer les journaux. Veuillez ne l'utiliser que si Pneuma Solutions vous le demande.
+#### Mac OS
+* Nous pensons que le problème signalé par certains utilisateurs concernant la demande d&#x27;autorisation de surveillance des entrées clavier sur les machines exécutant Karabiner Elements est désormais résolu.
+* La boîte de dialogue À propos de RIM comporte désormais un bouton permettant d&#x27;envoyer les journaux. Veuillez l&#x27;utiliser uniquement si Pneuma Solutions vous le demande.
 
 ### 3.1.28
-##### Mac
-Lorsque RIM est utilisé comme contrôleur, il est désormais compatible avec les outils avancés de personnalisation du clavier tels que Karabiner Elements.
+#### Mac OS
+Lorsque vous utilisez RIM comme contrôleur, il est désormais compatible avec les outils avancés de personnalisation du clavier tels que Karabiner Elements.
 ### 3.1.27
-##### Mac
-Il s'agit d'une mise à jour mineure, avec seulement deux changements :
-* Marquage de RIM comme nécessitant macOS 13.0 (Ventura) ou une version ultérieure.
-* Correction de RIM pour que le clavier virtuel ne soit connecté que lorsque RIM est en cours d'exécution en tant que cible. Cela signifie que l'assistant de configuration du clavier n'apparaîtra pas lorsque RIM est utilisé comme contrôleur. Nous continuons à chercher des moyens d'éviter cette boîte de dialogue.
+#### Mac OS
+Il s&#x27;agit d&#x27;une mise à jour mineure, avec seulement deux modifications :
+* Indication que RIM nécessite macOS 13.0 (Ventura) ou une version ultérieure.
+* Correction de RIM afin que le clavier virtuel ne soit connecté que lorsque RIM fonctionne réellement comme cible. Cela signifie que l&#x27;assistant de configuration du clavier n&#x27;apparaîtra pas lorsque vous utilisez RIM comme contrôleur. Nous continuons à rechercher des moyens d&#x27;éviter complètement cette boîte de dialogue.
 
 ### 3.1.26
 Version bêta initiale de RIM pour Mac OS.
 ### 3.1.24
-* Lors de la connexion à une machine cible avec une résolution d'affichage inférieure ou un facteur d'échelle de points par pouce (DPI) supérieur à celui du contrôleur, RIM adapte désormais l'affichage de la cible distante à l'écran du contrôleur, ce qui rend l'affichage distant plus facile à utiliser visuellement.
+* Lors de la connexion à une machine cible avec une résolution d&#x27;affichage inférieure ou un facteur d&#x27;échelle de points par pouce (DPI) supérieur à celui du contrôleur, RIM adapte désormais l&#x27;affichage de la cible distante à l&#x27;écran du contrôleur, ce qui facilite l&#x27;utilisation visuelle de l&#x27;affichage distant.
 
 ### 3.1.23
 * Ajout de la prise en charge des heures prépayées.
 
 ### 3.1.22
-* Correction d'un bogue qui entraînait parfois le RIM sur la machine cible dans une boucle qui empêchait les connexions sans surveillance.
+* Correction d&#x27;un bug qui provoquait parfois une boucle dans RIM sur la machine cible, empêchant les connexions sans surveillance.
 
 ### 3.1.21
-* Ajout d'un nouveau raccourci clavier, Windows+Shift+M, dans une fenêtre de session, pour minimiser la fenêtre et ramener le focus du clavier sur la machine locale (contrôleur).
+* Ajout d&#x27;un nouveau raccourci clavier, Windows+Maj+M, dans une fenêtre de session, pour réduire la fenêtre et ramener le focus clavier sur la machine locale (contrôleur).
 
 ### 3.1.20
-* Ajout d'une journalisation qui nous aidera à diagnostiquer les rapports sur les cibles non surveillées qui sont déconnectées par intermittence de RIM.
+* Ajout d&#x27;une journalisation qui nous aidera à diagnostiquer les rapports de cibles sans surveillance déconnectées de manière intermittente de RIM.
 
 ### 3.1.19
-* Correction de certains cas particuliers dans la gestion des entrées clavier à distance. En particulier, lors de l'exécution de JAWS sur la machine cible, JAWS reconnaît désormais correctement les pressions sur les touches Pause et Verrouillage numérique du contrôleur. N'hésitez pas à nous faire savoir si vous constatez des régressions dans la gestion des entrées clavier, en particulier pour les claviers non américains.
+* Correction de certains cas particuliers dans la gestion des entrées clavier à distance. En particulier, lorsque JAWS est exécuté sur la machine cible, JAWS reconnaît désormais correctement les pressions sur les touches Pause et NumLock du contrôleur. Veuillez nous signaler toute régression dans la gestion des entrées clavier, en particulier pour les dispositions de clavier non américaines.
 
 ### 3.1.18
-* Correction d'un problème qui empêchait RIM de se mettre à jour sur les machines cibles qui se trouvaient sur l'écran d'ouverture de session Windows sans session utilisateur active.
+* Correction d&#x27;un problème qui empêchait RIM de se mettre à jour sur les machines cibles qui se trouvaient sur l&#x27;écran de connexion Windows sans session utilisateur active.
 
 ### 3.1.17
-* Depuis la mise à jour précédente, nous avons reçu des rapports indiquant que le modificateur Shift était bloqué sur la machine cible lors de l'exécution de JAWS. Nous pensons que cette mise à jour résout ce problème. Veuillez nous informer si vous continuez à avoir des problèmes avec des modificateurs bloqués.
-* Correction d'un bogue qui faisait que RIM arrêtait NVDA sur la machine cible à la fin d'une session si NVDA était démarré sur la machine cible après l'activation de l'accessibilité à distance.
+* Depuis la mise à jour précédente, nous avons reçu des rapports indiquant que la touche de modification Shift restait bloquée sur la machine cible lors de l&#x27;exécution de JAWS. Nous pensons que cette mise à jour résout ce problème. Veuillez nous signaler si vous continuez à rencontrer des problèmes avec les touches de modification bloquées.
+* Correction d&#x27;un bug qui provoquait la fermeture de NVDA sur la machine cible à la fin d&#x27;une session si NVDA était lancé sur la machine cible après l&#x27;activation de l&#x27;accessibilité à distance.
 
 ### 3.1.16
-* Lorsque JAWS est exécuté sur la machine cible avec l'option Unified Keyboard Processing activée, JAWS répond désormais de manière fiable aux frappes provenant du contrôleur.
-* Correction d'une erreur qui se produit sporadiquement lors du démarrage du module complémentaire d'accessibilité à distance après l'installation ou la mise à jour du module complémentaire NVDA sur l'ordinateur contrôleur.
+* Lorsque JAWS est exécuté sur la machine cible avec le traitement unifié du clavier activé, JAWS répond désormais de manière fiable aux frappes du contrôleur.
+* Correction d&#x27;une erreur qui se produisait sporadiquement lors du démarrage du module complémentaire d&#x27;accessibilité à distance après l&#x27;installation ou la mise à jour du module complémentaire NVDA sur la machine contrôleur.
 
 ### 3.1.15
-* Lorsque vous vous connectez à une machine cible sans lecteur d'écran en cours d'exécution, RIM active automatiquement l'accessibilité à distance si vous utilisez un lecteur d'écran sur la machine contrôleur. Si vous utilisez un lecteur d'écran autre que NVDA sur la machine contrôleur, RIM fermera même automatiquement ce lecteur d'écran et démarrera NVDA si vous l'avez installé.
-* Correction de problèmes qui empêchaient le module d'accessibilité à distance d'utiliser vos paramètres de configuration NVDA locaux, tels que la disposition du clavier et l'écho de frappe.
+* Lorsque vous vous connectez à une machine cible sans lecteur d&#x27;écran en cours d&#x27;exécution, RIM active automatiquement l&#x27;accessibilité à distance si vous utilisez un lecteur d&#x27;écran sur la machine contrôleur. Si vous utilisez un lecteur d&#x27;écran autre que NVDA sur la machine contrôleur, RIM fermera même automatiquement ce lecteur d&#x27;écran et lancera NVDA si vous l&#x27;avez installé.
+* Correction de problèmes qui empêchaient le module d&#x27;accessibilité à distance d&#x27;utiliser vos paramètres de configuration NVDA locaux, tels que la disposition du clavier et l&#x27;écho de frappe.
 
 ### 3.1.14
-* Le processus de rétablissement d'une connexion en cas de problème de connectivité est désormais plus robuste.
-* Correction d'un problème qui provoquait parfois l'arrêt du processus de mise à jour en arrière-plan de RIM.
-* Si le contrôleur utilise une version de RIM plus ancienne que la cible, le menu ne comporte plus d'option de mise à jour de la cible.
-* Si un lecteur d'écran ou le module d'accessibilité à distance de RIM est en cours d'exécution sur la machine cible, vous pouvez désormais l'arrêter par le biais d'une option dans le menu.
+* Le processus de rétablissement d&#x27;une connexion en cas de problème de connectivité est désormais plus robuste.
+* Correction d&#x27;un problème qui provoquait parfois l&#x27;arrêt du processus de mise à jour en arrière-plan de RIM.
+* Si le contrôleur utilise une version de RIM plus ancienne que la cible, le menu ne comprend plus d&#x27;option pour mettre à jour la cible.
+* Si un lecteur d&#x27;écran ou le module d&#x27;accessibilité à distance de RIM est en cours d&#x27;exécution sur la machine cible, vous pouvez désormais l&#x27;arrêter via une option du menu.
 
 ### 3.1.13
-* Correction d'un bogue qui provoquait la déconnexion des utilisateurs de RIM après l'installation de certaines mises à jour Windows.
+* Correction d&#x27;un bug qui provoquait la déconnexion des utilisateurs de RIM après l&#x27;installation de certaines mises à jour Windows.
 
 ### 3.1.12
-* À la demande générale, RIM ne demande plus de commentaire à la fin de chaque session. Vous pouvez toujours publier des commentaires sur les sessions dans le tableau de bord RIM. Il est possible que nous ajoutions une option configurable pour demander un commentaire à l'avenir.
+* À la demande générale, RIM ne demande plus de commentaire à la fin de chaque session. Vous pouvez toujours publier des commentaires sur les sessions dans le tableau de bord RIM. Nous ajouterons peut-être à l&#x27;avenir une option configurable pour demander un commentaire.
 
 ### 3.1.11
-* Si la machine cible utilise au moins cette version de RIM, mais n'a pas encore été mise à jour, le contrôleur peut désormais forcer la machine cible à mettre à jour son installation de RIM par le biais d'une nouvelle option dans le menu de la session.
+* Si la machine cible exécute au moins cette version de RIM, mais n&#x27;a pas encore été mise à jour vers la dernière version, le contrôleur peut désormais forcer la machine cible à mettre à jour son installation de RIM via une nouvelle option dans le menu de session.
 
 ### 3.1.10
-* Vous pouvez désormais ajouter un commentaire à la fin d'une session RIM. Les commentaires de session peuvent être consultés dans le tableau de bord RIM.
-* La fenêtre Détails de la connexion a été améliorée. Les statistiques sont mises à jour en direct tant que la fenêtre est ouverte, et la fenêtre contient désormais des informations sur la machine cible.
+* Vous pouvez désormais ajouter un commentaire à la fin d&#x27;une session RIM. Les commentaires de session peuvent être consultés dans le tableau de bord RIM.
+* La fenêtre Détails de la connexion a été améliorée. Les statistiques sont mises à jour en temps réel tant que la fenêtre est ouverte, et celle-ci inclut désormais des informations sur la machine cible.
 
 ### 3.1.9
-* Correction d'un problème qui provoquait parfois le blocage d'une session RIM lors de la reconnexion.
+* Correction d&#x27;un problème qui provoquait parfois le blocage d&#x27;une session RIM lors d&#x27;une tentative de reconnexion.
 
 ### 3.1.8
-* Correction d'un problème qui empêchait parfois le module d'accessibilité à distance de démarrer.
+* Correction d&#x27;un problème qui empêchait parfois le démarrage du module d&#x27;accessibilité à distance.
 
 ### 3.1.7
-* Lorsque vous choisissez une machine cible pour une session sans surveillance ou avec invite, vous pouvez désormais effectuer une recherche parmi vos machines cibles. Pour ce faire, sur l'écran Fournir de l'aide, appuyez sur "Choisir une machine" comme précédemment, tabulez jusqu'au champ "Rechercher", entrez le texte à rechercher, puis appuyez sur Entrée ou sur le bouton "Rechercher".
+* Lorsque vous choisissez une machine cible pour une session sans surveillance ou avec invite, vous pouvez désormais effectuer une recherche parmi vos machines cibles. Pour ce faire, dans l&#x27;écran Fournir de l&#x27;aide, appuyez comme auparavant sur « Choisir une machine », placez-vous dans le champ « Rechercher », entrez le texte à rechercher, puis appuyez sur Entrée ou sur le bouton « Rechercher ».
 
 ### 3.1.6
-* Correction d'un problème qui rendait parfois impossible l'interruption du discours de JAWS sur le bureau sécurisé.
+* Correction d&#x27;un problème qui empêchait parfois d&#x27;interrompre la synthèse vocale JAWS sur le bureau sécurisé.
 
 ### 3.1.5
-* Correction d'un problème d'affichage visuel qui faisait que la liste des machines cibles non surveillées se superposait aux boutons situés en dessous.
+* Correction d&#x27;un bug d&#x27;affichage visuel qui provoquait le chevauchement de la liste des machines cibles sans surveillance avec les boutons situés en dessous.
 
 ### 3.1.4
-* Les entreprises peuvent désormais déployer RIM à l'aide d'un programme d'installation basé sur MSI.
+* Les entreprises peuvent désormais déployer RIM à l&#x27;aide d&#x27;un programme d&#x27;installation MSI.
 
 ### 3.1.3
-* Correction d'un bogue qui pouvait entraîner le plantage de RIM si le menu RIM était ouvert lors de la reconnexion d'une session.
+* Correction d&#x27;un bug qui pouvait entraîner le plantage de RIM si le menu RIM était ouvert lors de la reconnexion d&#x27;une session.
 
 ### 3.1.2
 * Ajustement du style visuel pour le rendre plus accessible aux utilisateurs malvoyants.
-* Ajout de messages d'erreur si des champs obligatoires sont laissés vides.
+* Ajout de messages d&#x27;erreur si les champs obligatoires sont laissés vides.
 
 ### 3.1.1
-* Lorsque vous appuyez sur le bouton "RIM Dashboard" dans la fenêtre "Fournir de l'aide", cette fenêtre reste désormais ouverte.
+* Lorsque vous appuyez sur le bouton « Tableau de bord RIM » dans la fenêtre « Fournir de l&#x27;aide », cette fenêtre reste désormais ouverte.
 
 ### 3.1.0
 Cette version ajoute un tableau de bord de gestion complet pour les contrôleurs.
-* Tous les abonnés ont accès au tableau de bord, les fonctionnalités étant déterminées par le niveau d'abonnement.
-* Suppression des fonctions in-app pour renommer, supprimer et créer des installateurs pour les machines sans surveillance car cela fait maintenant partie du tableau de bord
-* La page de bienvenue a été rétablie.
+* Tous les abonnés ont accès au tableau de bord, avec des ensembles de fonctionnalités déterminés par le niveau d&#x27;abonnement.
+* Suppression des fonctions intégrées à l&#x27;application permettant de renommer, supprimer et créer des programmes d&#x27;installation pour les machines sans surveillance, car cela fait désormais partie du tableau de bord.
+* Réintroduction de la page d&#x27;accueil.
 
 ### 3.0.8
-Correction d'un bogue qui empêchait parfois la sortie d'écran à distance de fonctionner lorsqu'une invite de contrôle de compte d'utilisateur était affichée.
+Correction d&#x27;un bug qui empêchait parfois l&#x27;affichage de l&#x27;écran distant lorsque l&#x27;invite de contrôle de compte utilisateur s&#x27;affichait.
 ### 3.0.7
-* Il s'agit d'une mise à jour de correction de bogues.
+* Il s&#x27;agit d&#x27;une mise à jour corrective.
 
 ### 3.0.6
-* Les utilisateurs disposant d'un abonnement RIM Enterprise ou d'un abonnement RIM Pro avec le module complémentaire Enterprise peuvent désormais créer des programmes d'installation préconfigurés entièrement silencieux pour un accès sans surveillance. Pour exécuter un programme d'installation en mode silencieux, qu'il s'agisse du programme d'installation standard ou d'un programme d'installation préconfiguré à partir d'un compte d'entreprise, utilisez le commutateur de ligne de commande /S (notez la majuscule) lors de l'exécution du programme d'installation.
+* Les utilisateurs disposant d&#x27;un abonnement RIM Enterprise ou d&#x27;un abonnement RIM Pro avec le module complémentaire Enterprise peuvent désormais créer des programmes d&#x27;installation préconfigurés entièrement silencieux pour un accès sans surveillance. Pour exécuter un programme d&#x27;installation en mode silencieux, qu&#x27;il s&#x27;agisse du programme d&#x27;installation standard ou d&#x27;un programme d&#x27;installation préconfiguré à partir d&#x27;un compte d&#x27;entreprise, utilisez le commutateur de ligne de commande /S (notez les majuscules) lors de l&#x27;exécution du programme d&#x27;installation.
 
 ### 3.0.5
-* Il s'agit d'une mise à jour de correction de bogues.
+* Il s&#x27;agit d&#x27;une mise à jour corrective.
 
 ### 3.0.4
 * Cette mise à jour rétablit la compatibilité avec Windows 7.
 
 ### 3.0.3
-* RIM n'affiche plus par erreur le bouton "Create an Installer for Unattended Access" si vous n'avez pas d'abonnement.
+* RIM n&#x27;affiche plus par erreur le bouton « Créer un programme d&#x27;installation pour un accès sans assistance » si vous n&#x27;avez pas d&#x27;abonnement.
 
 ### 3.0.2
-* Si vous avez acheté un ou plusieurs pass RIM, vous pouvez désormais contrôler si une session particulière utilisera un pass RIM ou le niveau gratuit, ainsi que le pass qui sera utilisé. RIM vous indique également le temps restant sur le pass sélectionné.
+* Si vous avez acheté un ou plusieurs pass RIM, vous pouvez désormais choisir si une session particulière utilisera un pass RIM ou le niveau gratuit, ainsi que le pass qui sera utilisé. RIM vous indique également le temps restant sur le pass que vous avez sélectionné.
 
 ### 3.0.1
-* Cette mise à jour introduit la prise en charge des nouveaux pass personnels RIM, qui vous permettent d'utiliser RIM pour une assistance technique ou une formation à distance pendant 24 heures pour seulement 10 $. [Essayez un pass RIM dès aujourd'hui.](https://getrim.app/signup/pass)
-* Le bouton qui s'appelait "Create a Pre-Configured Target Installer" s'appelle désormais "Create an Installer for Unattended Access".
-* Lors du renommage d'une machine cible sans surveillance, le nom existant est maintenant rempli et sélectionné pour faciliter l'édition.
+* Cette mise à jour introduit la prise en charge des nouveaux pass personnels RIM, qui vous permettent d&#x27;utiliser RIM pour une assistance technique ou une formation à distance pendant 24 heures pour seulement 10 $. [Essayez un pass RIM dès aujourd&#x27;hui.](https://getrim.app/signup/pass)
+* Le bouton qui s&#x27;appelait auparavant « Créer un programme d&#x27;installation préconfiguré pour la cible » s&#x27;appelle désormais « Créer un programme d&#x27;installation pour un accès sans surveillance ».
+* Lorsque vous renommez une machine cible sans surveillance, le nom existant est désormais renseigné et sélectionné pour faciliter la modification.
 
 ### 3.0.0
-Cette version met fin à la version bêta publique de RIM. Les plans de tarification de RIM et les restrictions sur l'utilisation gratuite sont maintenant en vigueur. Pour les comptes gratuits, RIM affiche maintenant un compteur d'utilisation ainsi qu'un bouton d'achat.
+Cette version marque la fin de la bêta publique de RIM. Les tarifs RIM et les restrictions d&#x27;utilisation gratuite sont désormais en vigueur. Pour les comptes gratuits, RIM affiche désormais un compteur d&#x27;utilisation ainsi qu&#x27;un bouton d&#x27;achat.
 ### 0.12.2
-Correction d'un bogue qui empêchait le nouveau raccourci clavier Windows+Shift+Backspace de fonctionner dans certaines situations.
+Correction d&#x27;un bug qui empêchait le nouveau raccourci clavier Windows+Maj+Retour arrière de fonctionner dans certaines situations.
 ### 0.12.1
-* Le raccourci clavier Control+Shift+Backspace n'est plus actif dans RIM. Le raccourci clavier officiel est désormais Windows+Shift+Backspace. Windows+Shift+Escape reste également disponible pendant une session.
-* La nouvelle touche de raccourci principale de RIM, Windows+Shift+Backspace, est désormais active à tout moment sur les machines où RIM est installé, à moins qu'une autre application ne réclame la touche de raccourci en premier. Lorsqu'une session RIM est active sur le contrôleur, ce raccourci clavier ouvre le menu RIM si la fenêtre de la session est focalisée, ou focalise la fenêtre de la session si elle est en arrière-plan. Sur la cible, ce raccourci clavier ouvre le menu de la cible RIM lorsque la session est active. Des deux côtés, si une session n'est pas active, ce raccourci clavier ouvre la fenêtre RIM pour démarrer une nouvelle session.
-* Lors d'une demande d'accès sans surveillance, RIM concentre désormais de manière fiable la boîte de dialogue d'approbation sur la machine cible.
-* Mise à jour du module d'accessibilité à distance.
+* Le raccourci clavier Ctrl+Maj+Retour arrière n&#x27;est plus actif dans RIM. Le raccourci clavier officiel est désormais Windows+Maj+Retour arrière. Windows+Maj+Échap reste également disponible pendant une session.
+* Le nouveau raccourci clavier principal de RIM, Windows+Maj+Retour arrière, est désormais actif à tout moment sur les machines où RIM est installé, sauf si une autre application revendique le raccourci clavier en premier. Lorsqu&#x27;une session RIM est active sur le contrôleur, ce raccourci clavier ouvre le menu RIM si la fenêtre de session est active, ou active la fenêtre de session si elle est en arrière-plan. Sur la cible, ce raccourci ouvre le menu cible RIM pendant que la session est active. De chaque côté, si aucune session n&#x27;est active, ce raccourci ouvre la fenêtre RIM pour démarrer une nouvelle session.
+* Lors d&#x27;une demande d&#x27;accès sans surveillance, RIM met désormais de manière fiable en avant la boîte de dialogue d&#x27;approbation sur la machine cible.
+* Mise à jour du module d&#x27;accessibilité à distance.
 
 ### 0.12.0
-Vous pouvez maintenant créer un installateur préconfiguré qui enregistrera automatiquement toutes les machines sur lesquelles il est installé en tant que cibles sans surveillance dans votre compte RIM.
+Vous pouvez désormais créer un programme d&#x27;installation préconfiguré qui enregistrera automatiquement toutes les machines sur lesquelles il est installé en tant que cibles sans surveillance dans votre compte RIM.
 
-Pour ce faire, utilisez le nouveau bouton intitulé "Create a Pre-Configured Target Installer" (Créer un installateur de cibles préconfiguré), sur l'écran "Provide Help" (Fournir de l'aide). Vous devrez ensuite saisir un nom de base pour la ou les machines cibles ; RIM ajoutera automatiquement le nom d'hôte de chaque machine cible à ce nom de base. Une fois les machines cibles enregistrées, vous pouvez les renommer comme n'importe quelle machine cible non surveillée. Vous pouvez également définir la date d'expiration du programme d'installation, qui doit être comprise entre 7 et 30 jours. Une fois que RIM a créé le programme d'installation, vous recevez un lien que vous pouvez soit partager directement avec les utilisateurs cibles, soit télécharger vous-même afin de partager le programme d'installation d'une autre manière.
+Pour ce faire, utilisez le nouveau bouton intitulé « Créer un programme d&#x27;installation de cible préconfiguré » dans l&#x27; écran « Fournir de l&#x27;aide ». Vous devrez ensuite entrer un nom de base pour la ou les machines cibles ; RIM ajoutera automatiquement le nom d&#x27;hôte de chaque machine cible à ce nom de base. Une fois les machines cibles enregistrées, vous pouvez les renommer comme n&#x27;importe quelle cible sans surveillance. Vous pouvez également définir la date d&#x27;expiration du programme d&#x27;installation, qui doit être comprise entre 7 et 30 jours. Une fois que RIM a créé le programme d&#x27;installation, vous obtiendrez un lien que vous pourrez soit partager directement avec les utilisateurs cibles, soit télécharger vous-même afin de pouvoir partager le programme d&#x27;installation d&#x27;une autre manière.
 
-Notez que lorsqu'un utilisateur cible exécute le programme d'installation préconfiguré, il voit d'abord apparaître une boîte de dialogue de confirmation qui explique ce que le programme d'installation va faire. Cette boîte de dialogue contient le nom du contrôleur qui a créé le programme d'installation. Cette étape de confirmation est conçue pour éviter les abus. Un mode totalement silencieux sera disponible pour les entreprises.
+Notez que lorsqu&#x27;un utilisateur cible exécute le programme d&#x27;installation préconfiguré, une boîte de dialogue de confirmation s&#x27;affiche d&#x27;abord pour expliquer ce que le programme d&#x27;installation va faire. Cette boîte de dialogue inclut le nom du contrôleur qui a créé le programme d&#x27;installation. Cette étape de confirmation est conçue pour empêcher tout abus. Un mode complètement silencieux sera disponible pour les clients professionnels.
 
 ### 0.11.6
-* RIM dispose maintenant d'une nouvelle option pour enregistrer une machine pour un accès sans surveillance sous votre compte RIM sans avoir à démarrer une session à distance à l'aide d'un mot-clé. Sur la machine que vous souhaitez enregistrer, appuyez sur le nouveau bouton appelé "Register This Machine for Unattended Access" (Enregistrer cette machine pour un accès sans surveillance), sur l'écran Receive Help (Recevoir de l'aide). Ensuite, connectez-vous à votre compte RIM si vous ne l'avez pas déjà fait sur cette machine, entrez un nom pour la machine, et vous avez terminé. Notez que nous travaillons toujours sur un moyen de personnaliser le programme d'installation de RIM, afin de permettre un déploiement de masse et de rendre aussi facile que possible la mise en place d'un accès sans surveillance sur des machines auxquelles vous n'avez pas encore accès.
-* RIM vous empêche désormais d'essayer d'ouvrir une connexion sans surveillance sur la même machine que celle sur laquelle vous exécutez le contrôleur.
-* Nous expérimentons actuellement un troisième raccourci clavier pour ouvrir le menu RIM : Windows+Shift+Backspace. Cela signifie qu'il y a maintenant trois options : Windows+Shift+Escape, Windows+Shift+Backspace, et Control+Shift+Backspace. Nous n'avons pas encore pris de décision définitive sur le ou les raccourcis clavier à conserver, mais nous le ferons avant la fin de la version bêta publique. Nous apprécions vos commentaires.
-* La plupart des options du menu RIM disposent désormais de raccourcis clavier à une lettre sur lesquels vous pouvez appuyer une fois le menu ouvert.
-* Cette mise à jour apporte une solution plus fiable aux problèmes intermittents signalés par les utilisateurs lorsque JAWS ne reconnaissait pas la saisie au clavier à partir de RIM. N'hésitez pas à nous faire savoir si vous continuez à avoir des problèmes avec ce scénario.
+* RIM propose désormais une nouvelle option permettant d&#x27;enregistrer une machine pour un accès sans surveillance sous votre compte RIM sans avoir à démarrer une session à distance à l&#x27;aide d&#x27;un mot de passe. Sur la machine que vous souhaitez enregistrer, appuyez sur le nouveau bouton intitulé « Enregistrer cette machine pour un accès sans surveillance » dans l&#x27;écran Recevoir de l&#x27;aide. Connectez-vous ensuite à votre compte RIM si vous ne l&#x27;avez pas déjà fait sur cette machine, entrez un nom pour la machine, et le tour est joué. Notez que nous travaillons toujours sur un moyen de personnaliser le programme d&#x27;installation RIM, afin de permettre un déploiement massif et de faciliter autant que possible la configuration de l&#x27;accès sans surveillance sur les machines auxquelles vous n&#x27;avez pas encore accès.
+* RIM vous empêche désormais d&#x27;essayer d&#x27;ouvrir une connexion sans surveillance sur la même machine que celle sur laquelle vous exécutez le contrôleur.
+* Nous testons actuellement un troisième raccourci clavier pour ouvrir le menu RIM : Windows+Maj+Retour arrière. Cela signifie qu&#x27;il existe désormais trois options : Windows+Maj+Échap, Windows+Maj+Retour arrière et Ctrl+Maj+Retour arrière. Nous n&#x27;avons pas encore pris de décision définitive quant au ou aux raccourcis clavier à conserver, mais nous le ferons avant la fin de la bêta publique. Nous apprécions vos commentaires.
+* La plupart des options du menu RIM disposent désormais de raccourcis clavier à une seule lettre que vous pouvez appuyer une fois le menu ouvert.
+* Cette mise à jour apporte une solution plus fiable aux problèmes intermittents signalés par les utilisateurs concernant JAWS qui ne reconnaît pas les entrées clavier provenant du RIM. Veuillez nous informer si vous continuez à rencontrer des problèmes dans ce cas de figure.
 
 ### 0.11.5
-* Cette mise à jour introduit deux nouveaux raccourcis clavier. Windows+Shift+D déconnecte la session lorsqu'elle est pressée d'un côté ou de l'autre. Pour la manette, Windows+Shift+F inverse la session.
-* Cette mise à jour ajoute des protections contre le blocage des modificateurs de clavier sur l'une ou l'autre machine.
-* Il existe une nouvelle option de menu, "Verrouiller la machine cible", qui équivaut à appuyer sur Windows+L sur la cible.
-* RIM dispose désormais d'une fenêtre "À propos", dans laquelle vous pouvez vérifier le numéro de version, contacter Pneuma Solutions pour obtenir de l'aide et des informations, lire le manuel et consulter le journal des modifications de la version.
-* RIM ne demande plus de commentaires à la fin d'une session ou lors de la fermeture de la fenêtre "Fournir de l'aide".
+* Cette mise à jour introduit deux nouveaux raccourcis clavier. Windows+Maj+D déconnecte la session lorsque vous appuyez sur l&#x27;une ou l&#x27;autre touche. Pour le contrôleur, Windows+Maj+F bascule la session.
+* Cette mise à jour ajoute des mesures de sécurité contre le blocage des modificateurs du clavier sur l&#x27;une ou l&#x27;autre des machines.
+* Une nouvelle option de menu, « Verrouiller la machine cible », équivaut à appuyer sur Windows+L sur la machine cible.
+* RIM dispose désormais d&#x27;une fenêtre « À propos » dans laquelle vous pouvez vérifier le numéro de version, contacter Pneuma Solutions pour obtenir de l&#x27;aide et faire part de vos commentaires, lire le manuel et consulter le journal des modifications de version.
+* RIM ne demande plus de commentaires à la fin d&#x27;une session ou lors de la fermeture de la fenêtre « Fournir de l&#x27;aide ».
 
 ### 0.11.4
-Cette mise à jour corrige quelques bogues dans le processus de redémarrage et de reconnexion. Nous n'avons pas encore diagnostiqué tous les problèmes signalés, mais nous avons pu en trouver et en corriger quelques-uns lors de nos propres tests.
+Cette mise à jour corrige quelques bugs dans le processus de redémarrage et de reconnexion. Nous n&#x27;avons pas encore diagnostiqué tous les problèmes signalés, mais nous avons pu en trouver et en corriger quelques-uns lors de nos propres tests.
 ### 0.11.3
-* RIM se met désormais à jour en arrière-plan sur toutes les machines. RIM inclut désormais le numéro de la version installée dans l'infobulle de son icône dans la barre des tâches. Il s'agit de la dernière mise à jour que les utilisateurs devront installer manuellement, quelle que soit la configuration de la machine.
-* Si la machine cible est redémarrée, mais sans utiliser la fonction Reboot and Reconnect de RIM, RIM demande désormais au contrôleur s'il souhaite se reconnecter à la cible après le redémarrage. Si le contrôleur répond par la négative, la cible n'attendra pas une reconnexion après le redémarrage.
+* RIM se met désormais à jour en arrière-plan sur toutes les machines. RIM inclut désormais le numéro de la version actuellement installée dans l&#x27;info-bulle de son icône dans la barre d&#x27;état système. Il s&#x27;agit de la dernière mise à jour que les utilisateurs devront installer manuellement, quelle que soit la configuration de la machine.
+* Si la machine cible est redémarrée, mais sans utiliser la fonction de redémarrage et de reconnexion de RIM, RIM demande désormais au contrôleur s&#x27;il souhaite se reconnecter à la cible après le redémarrage. Si le contrôleur répond non, la cible n&#x27;attendra pas la reconnexion après le redémarrage.
 
 ### 0.11.2
-* RIM se met désormais à jour en arrière-plan sur les machines cibles non surveillées. Il s'agit de la dernière mise à jour que vous devrez installer manuellement sur vos machines cibles sans surveillance.
-* Lors de la mise à jour avant une session interactive, RIM n'a plus besoin de passer par le contrôle de compte d'utilisateur. Cela signifie que les utilisateurs non administrateurs peuvent mettre à jour RIM une fois qu'il a été installé pour eux par un administrateur.
+* RIM se met désormais à jour en arrière-plan sur les machines cibles sans surveillance. Il s&#x27;agit de la dernière mise à jour que vous devrez installer manuellement sur vos cibles sans surveillance.
+* Lors d&#x27;une mise à jour avant une session interactive, RIM n&#x27;a plus besoin de passer par le contrôle de compte d&#x27;utilisateur. Cela signifie que les utilisateurs non administrateurs peuvent mettre à jour RIM une fois qu&#x27;il a été installé pour eux par un administrateur.
 
 ### 0.11.1
-Il s'agit d'une mise à jour de correction de bogues. Veuillez noter que les cibles non surveillées doivent toujours être mises à jour manuellement en exécutant le dernier programme d'installation de RIM. Cependant, vous pourrez désormais vous connecter à une cible non surveillée une fois l'installation terminée, sans qu'il soit nécessaire de fermer la fenêtre "Recevoir de l'aide".
+Il s&#x27;agit d&#x27;une mise à jour corrective. Veuillez noter que les cibles sans surveillance doivent toujours être mises à jour manuellement en exécutant le dernier programme d&#x27;installation RIM. Cependant, vous pouvez désormais vous connecter à une cible sans surveillance une fois l&#x27;installation terminée, sans avoir besoin de fermer la fenêtre « Recevoir de l&#x27;aide ».
 ### 0.11.0
-* La fonction de redémarrage et de reconnexion est désormais implémentée. En utilisant la nouvelle option Redémarrage et reconnexion du menu RIM du contrôleur, vous pouvez effectuer un redémarrage standard ou d'urgence, et poursuivre automatiquement la session une fois le redémarrage terminé. RIM se reconnecte également si la machine cible redémarre pour une autre raison, par exemple lorsqu'un programme d'installation redémarre la machine.
-* RIM tente également de se reconnecter automatiquement si la connexion est interrompue pour une raison quelconque. Cette fonction est utile dans le cas de connexions Internet peu fiables.
-* Lors de l'exécution d'une session sans surveillance ou de l'utilisation de Reboot and Reconnect, vous pouvez désormais utiliser RIM lorsque la machine cible se trouve sur l'écran d'ouverture de session Windows. Notez que RIM devra reconnecter la session lorsque la machine cible passe de l'écran de connexion au bureau principal. Il s'agit d'une limitation connue de l'implémentation actuelle que nous pourrons corriger dans une prochaine mise à jour.
-* RIM est désormais entièrement fonctionnel lorsque l'utilisateur cible ne dispose pas de privilèges d'administrateur sur la machine cible, pour autant que le service Remote Incident Manager Host soit exécuté sur cette machine. Notez que les privilèges d'administrateur sont toujours nécessaires pour installer les mises à jour de RIM. Notez également que les nouvelles versions de RIM doivent toujours être installées manuellement sur les cibles non surveillées. Nous travaillons sur des solutions à ces deux problèmes.
+* La fonctionnalité de redémarrage et de reconnexion est désormais implémentée. À l&#x27;aide de la nouvelle option « Redémarrer et se reconnecter » du menu RIM du contrôleur, vous pouvez effectuer un redémarrage standard ou d&#x27;urgence, puis reprendre automatiquement la session une fois le redémarrage terminé. RIM se reconnectera également si la machine cible redémarre pour une autre raison, par exemple lorsqu&#x27;un programme d&#x27;installation redémarre la machine.
+* RIM tente également de se reconnecter automatiquement si la connexion est interrompue pour une raison quelconque. Cela sera utile en cas de connexions Internet peu fiables.
+* Lorsque vous exécutez une session sans surveillance ou que vous utilisez la fonction « Redémarrer et se reconnecter », vous pouvez désormais utiliser RIM pendant que la machine cible est sur l&#x27;écran de connexion Windows. Notez que RIM devra se reconnecter à la session lorsque la machine cible passera de l&#x27;écran de connexion au bureau principal. Il s&#x27;agit d&#x27;une limitation connue de la mise en œuvre actuelle, que nous pourrions corriger dans une future mise à jour.
+* RIM est désormais pleinement fonctionnel lorsque l&#x27;utilisateur cible ne dispose pas de privilèges d&#x27;administrateur sur la machine cible, à condition que le service Remote Incident Manager Host soit en cours d&#x27;exécution sur cette machine. Notez que les privilèges d&#x27;administrateur sont toujours nécessaires pour installer les mises à jour RIM. Notez également que les nouvelles versions de RIM doivent toujours être installées manuellement sur les cibles sans surveillance. Nous travaillons à la résolution de ces deux problèmes.
 
 ### 0.10.10.0
-Si vous avez configuré un accès sans surveillance à une ou plusieurs machines cibles, vous pouvez désormais créer un raccourci pour accéder directement à l'une de ces machines. Il vous suffit d'appuyer sur le bouton "Créer un raccourci" sous la liste des machines cibles sans surveillance, et RIM créera un raccourci sur votre bureau.
+Si vous avez configuré un accès sans surveillance à une ou plusieurs machines cibles, vous pouvez désormais créer un raccourci pour accéder directement à l&#x27;une de ces machines. Il suffit d&#x27;appuyer sur le bouton « Créer un raccourci » sous la liste des cibles sans surveillance, et RIM créera un raccourci sur votre bureau.
 ### 0.10.9
-RIM fonctionne désormais sur une machine cible qui n'a pas de périphérique audio. Ceci, combiné avec le module d'accessibilité à distance existant, ouvre l'accès aux serveurs et aux machines virtuelles qui ne pouvaient auparavant pas être accédés avec un lecteur d'écran, sauf via RDP et sa sortie audio très sous-optimale.
+RIM fonctionne désormais sur une machine cible qui ne dispose pas de périphérique audio. Associé au module d&#x27;accessibilité à distance existant, cela ouvre l&#x27;accès à des serveurs et des machines virtuelles qui ne pouvaient auparavant être accessibles avec un lecteur d&#x27;écran, sauf via RDP et sa sortie audio très sous-optimale.
 ### 0.10.8
-* Si vous n'avez pas encore pré-commandé la première année de votre abonnement RIM Pro, vous pouvez désormais le faire facilement en utilisant le nouveau bouton de l'écran "Fournir de l'aide". Nous introduisons également de nouvelles options tarifaires pour l'ajout de contrôleurs supplémentaires et de canaux simultanés à un abonnement RIM Pro. Vous pouvez ajouter jusqu'à deux utilisateurs de contrôleurs et deux canaux supplémentaires pour 500 $ par an chacun. RIM reste gratuit pendant la bêta publique, mais si vous précommandez votre abonnement maintenant, vous bénéficierez d'un service ininterrompu lorsque la bêta publique se terminera le 1er septembre.
-* Nous introduisons Control+Shift+Backspace comme raccourci clavier alternatif pour ouvrir le menu RIM des deux côtés de la connexion. Pour l'instant, nous continuons à prendre en charge Windows+Shift+Escape, mais l'objectif est de standardiser Control+Shift+Backspace en tant que touche de raccourci unique pour toutes les étapes de RIM.
-* Si vous appuyez sur le bouton "Fournir de l'aide à la place" dans l'écran "Recevoir de l'aide", RIM ne fait plus de ce choix la valeur par défaut tant que vous n'êtes pas connecté à votre compte RIM.
+* Si vous n&#x27;avez pas encore précommandé la première année de votre abonnement RIM Pro, vous pouvez désormais le faire facilement à l&#x27;aide du nouveau bouton de l&#x27;écran «Fournir de l&#x27;aide ». Nous introduisons également de nouvelles options tarifaires pour ajouter des contrôleurs supplémentaires et des canaux simultanés à un abonnement RIM Pro. Vous pouvez ajouter jusqu&#x27;à deux utilisateurs de contrôleurs supplémentaires et deux canaux supplémentaires pour 500 $ par an chacun. RIM reste gratuit pendant la bêta publique, mais si vous précommandez votre abonnement dès maintenant, vous bénéficierez d&#x27;un service ininterrompu lorsque la bêta publique prendra fin le 1er septembre.
+* Nous introduisons la combinaison de touches Ctrl+Maj+Retour arrière comme raccourci clavier alternatif pour ouvrir le menu RIM des deux côtés de la connexion. Nous continuons également à prendre en charge la combinaison Windows+Maj+Échap pour l&#x27;instant, mais nous prévoyons de standardiser la combinaison Ctrl+Maj+Retour arrière comme raccourci clavier unique pour toutes les étapes de RIM.
+* Si vous appuyez sur le bouton « Fournir de l&#x27;aide à la place » sur l&#x27;écran « Recevoir de l&#x27;aide », RIM ne définit plus ce choix comme valeur par défaut tant que vous ne vous êtes pas connecté à votre compte RIM.
 * Correction de quelques erreurs JavaScript qui se produisaient dans de rares cas.
 
 ### 0.10.7
-vous pouvez maintenant utiliser la molette de la souris dans une session à distance.
+Vous pouvez désormais utiliser la molette de la souris dans une session à distance.
 ### 0.10.6
-Nous espérons avoir corrigé tous les problèmes restants qui provoquaient un blocage du processus d'installation.
+Nous espérons avoir corrigé tous les problèmes restants qui provoquaient le blocage du processus d&#x27;installation.
 ### 0.10.5
-Cette version comprend quelques changements sous le capot. En particulier, nous avons inclus des mises à jour de l'installation et des paquets sous-jacents afin de résoudre les problèmes provoquant le blocage de l'installation.
+Cette version comprend quelques modifications en arrière-plan. Nous avons notamment inclus des mises à jour de l&#x27;installation et des paquets sous-jacents afin de résoudre les problèmes qui provoquaient le blocage de l&#x27;installation.
 ### 0.10.4
-* Il y a maintenant une option dans le menu RIM pour envoyer Control+Alt+Delete à la machine cible.
-* Vous pouvez maintenant ouvrir le menu RIM en faisant un clic droit sur la barre de titre de la fenêtre de session. Nous prévoyons d'ajouter la possibilité d'ouvrir le menu RIM en cliquant sur l'icône RIM à l'extrémité gauche de la barre de titre.
+* Il existe désormais une option dans le menu RIM permettant d&#x27;envoyer la combinaison de touches Ctrl+Alt+Suppr à la machine cible.
+* Vous pouvez désormais ouvrir le menu RIM en cliquant avec le bouton droit de la souris sur la barre de titre de la fenêtre de session. Nous prévoyons d&#x27;ajouter la possibilité d&#x27;ouvrir le menu RIM en cliquant également sur l&#x27;icône RIM située à l&#x27;extrémité gauche de la barre de titre.
 
 ### 0.10.3
-* Le contrôleur peut maintenant retourner une session sans surveillance.
-* Le contrôleur peut maintenant renommer une machine cible sans surveillance.
-* Correction d'un bogue qui entraînait parfois l'absence de réponse de la session après une copie dans le presse-papiers.
-* Correction d'un bogue qui provoquait parfois l'échec du démarrage du module d'accessibilité à distance avec une erreur JavaScript.
+* Le contrôleur peut désormais basculer une session sans surveillance.
+* Le contrôleur peut désormais renommer une machine cible sans surveillance.
+* Correction d&#x27;un bug qui provoquait parfois le blocage de la session après la copie dans le presse-papiers.
+* Correction d&#x27;un bug qui provoquait parfois l&#x27;échec du démarrage du module d&#x27;accessibilité à distance avec une erreur JavaScript.
 
 ### 0.10.2
-Correction d'un conflit entre l'addon NVDA RIM Client Support et l'addon Dropbox.
+Correction d&#x27;un conflit entre l&#x27;add-on RIM Client Support NVDA et l&#x27;add-on Dropbox.
 ### 0.10.1
-* Vous pouvez désormais précommander la première année de votre abonnement à RIM Pro pour 999 $. Le lien pour précommander sera disponible dans la fenêtre de feedback lorsque vous terminez une session à distance. Vous pouvez également suivre le lien direct ici : [Pré-commander RIM Pro] (https://getrim.app/signup/rim_preorder)
-* Si vous avez des machines cibles sans surveillance dans votre compte RIM, le bouton pour démarrer une session sans surveillance est maintenant affiché de manière plus fiable sur l'écran "Fournir de l'aide".
-* Lors de l'inversion d'une session, le contrôleur d'origine peut désormais inverser la session en ouvrant le menu RIM avec Windows+Shift+Escape.
+* Vous pouvez désormais précommander la première année de votre abonnement à RIM Pro pour 999 $. Le lien pour précommander sera disponible dans la fenêtre de commentaires lorsque vous aurez terminé une session à distance. Vous pouvez également suivre le lien direct ici : [Précommander RIM Pro.](https://getrim.app/signup/rim_preorder)
+* Si votre compte RIM comporte des machines cibles sans surveillance, le bouton permettant de démarrer une session sans surveillance s&#x27;affiche désormais de manière plus fiable sur l&#x27;écran « Fournir de l&#x27;aide ».
+* Lors du basculement d&#x27;une session, le contrôleur d&#x27;origine peut désormais rétablir la session initiale en ouvrant le menu RIM à l&#x27;aide des touches Windows+Maj+Échap.
 

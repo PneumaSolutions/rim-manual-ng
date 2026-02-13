@@ -5,565 +5,593 @@ title: Ändra logg
 import Windows from "~/components/platform/Windows.astro"
 import MacOS from "~/components/platform/MacOS.astro"
 
-Versioner av RIM betecknas med rubriker på nivå 3. Betydande uppdateringar med flera funktioner för båda plattformarna kommer att delas in i Mac- och Windows-underrubriker på nivå 4.
-
+Versioner av RIM kommer att anges med rubriker på nivå 3. Väsentliga uppdateringar med flera funktioner för båda plattformarna kommer att delas upp i underrubriker för Mac och Windows på nivå 4.
 ### 3.4.8
 
-* Implementerar inspelning av fjärråtkomstmodulen under en sessionsinspelning via systemljudet på den styrande datorn.
-* Implementerar en dialogruta för samtycke från målsidan innan en sessionsinspelning startar under alla nyckelordsbaserade sessioner. Om mål användaren nekar begäran om inspelning avslutas sessionen.
+* Implementerar inspelning av modulen för fjärråtkomst under en sessionsinspelning via systemljudet på den styrande datorn.
+* Implementerar en dialogruta för samtycke på målsidan innan en sessionsinspelning startar under alla nyckelordsbaserade sessioner. Om mål användaren nekar begäran om inspelning avslutas sessionen.
 * Implementerar en bekräftelsedialogruta innan en inspelning stoppas manuellt. Denna dialogruta kan konfigureras så att den inte visas om så önskas.
 * Det är inte längre möjligt att starta en inspelning medan en session är vänd.
 * Implementerar möjligheten att ställa in standardkatalogen för inspelning, tillsammans med flera andra konfigurationsparametrar, via en toml-fil. Se avsnittet om sessionsinspelning för instruktioner om hur du konfigurerar dessa alternativ.
 
 ### 3.4.7
-Denna version introducerar en öppen betaversion av funktionen för sessionsinspelning på båda plattformarna. Funktionen är gratis för alla att använda, och molntjänsten används aldrig för att bearbeta inspelningen. Inspelningarna sparas för närvarande i den kontrollerande användarens lokala videomapp, det vill säga &quot;Videos&quot; i Windows och &quot;Movies&quot; i MacOS.  
+Denna version introducerar en öppen betaversion av sessionsinspelningsfunktionen på båda plattformarna. Denna funktion är gratis för alla att använda, och molntjänsten används aldrig för att bearbeta inspelningen. Inspelningar sparas för närvarande i den kontrollerande användarens lokala videomapp, det vill säga &quot;Videos&quot; på Windows och &quot;Movies&quot; på MacOS.  
 Tveka inte att [skicka feedback till oss](https://getrim.app/feedback) om du stöter på problem när du använder den här funktionen eller om du har kommentarer eller förslag på hur den kan förbättras.
+
 ### 3.4.6
 
-* Detta är en uppdatering med buggfixar.
+* Detta är en uppdatering för buggfixar.
 
 ### 3.4.5
 
-* Detta är en uppdatering med buggfixar.
+* Detta är en uppdatering för buggfixar.
 
 ### 3.4.4
 
-* macOS: RIM är nu kompatibelt med de senaste versionerna av tangentbordsmappningsverktyget Karabiner Elements.
+####macOS
+RIM är nu kompatibelt med de senaste versionerna av tangentbordskartläggningsverktyget Karabiner Elements.
 
 ### 3.4.3
 
-* Windows: Funktionen för fjärrtillgänglighet är nu kompatibel med NVDA 2025.1.
+#### Windows
+Funktionen för fjärråtkomst är nu kompatibel med NVDA 2025.1.
 
 ### 3.4.2
 
-* macOS: När en session vänds stoppar RIM nu fjärråtkomst om den funktionen var aktiv på det tidigare målet.
+#### macOS
+När en session växlas avbryter RIM nu fjärråtkomsten om den funktionen var aktiv på det tidigare målet.
 
 ### 3.4.1
 
-* Windows: När du kör en förkonfigurerad målinstallatör i tyst läge registrerar RIM nu målmaskinen på ett mer tillförlitligt sätt och börjar acceptera obevakade anslutningar.
+#### Windows
+När ett förkonfigurerat målinstallationsprogram körs i tyst läge registrerar RIM nu måldatorn på ett mer tillförlitligt sätt och börjar acceptera obevakade anslutningar.
 
 ### 3.4.0
-* Lagt till ett alternativ för företagsanvändare att skapa installatörer som aldrig går ut
-    * Med denna ändring följer en valideringskontroll av alla anpassade installatörer. Om en anpassad installatör är utgången eller raderad kommer den inte längre att köras.
-* Åtgärdade ett problem som orsakade ett konstant pipande från målmaskiner utan inbyggt ljud, särskilt Windows-servrar
-* Det är inte längre möjligt att oavsiktligt trycka på Windows+Shift+Backspace på ett Windows-mål med macOS som styrenhet
+* Lagt till ett alternativ för företagsanvändare att skapa installationsprogram som aldrig går ut
+* Med denna ändring  kommer en valideringskontroll för alla anpassade installationsprogram. Om ett anpassat installationsprogram har gått ut eller raderats kommer det inte längre att köras.
+* Ett problem som orsakade ett konstant pipande ljud från målmaskiner utan inbyggt ljud, särskilt Windows-servrar, har åtgärdats.
+* Det är inte längre möjligt att oavsiktligt trycka på Windows+Skift+Bakåt på en Windows-målmaskin med macOS som styrenhet.
+
 
 ### 3.3.39
 
-* macOS: En notering om vilka behörigheter som krävs har lagts till på välkomstskärmen.
+#### macOS
+Lagt till en anteckning om nödvändiga behörigheter på välkomstskärmen.
 
 ### 3.3.38
 
-* Åtgärdade ett annat problem som gjorde att mappningen mellan styrenhetens och målets muspekare var felaktig. Meddela oss om du fortsätter att ha problem på det här området.
+* Fixat ett annat problem som orsakade att mappningen mellan kontrollenhetens och målets muspekare var felaktig. Vänligen meddela oss om du fortfarande har problem med detta.
 
 ### 3.3.37
 
-* Åtgärdade ett problem som gjorde att mappningen mellan styrenhetens och målets muspekare var felaktig.
+* Ett problem som gjorde att mappningen mellan kontrollenhetens och målets muspekare blev felaktig har åtgärdats.
 
 ### 3.3.36
 
-* Förbättrat tillförlitligheten i RIM:s stöd för anslutning genom strikta brandväggar.
+* Tillförlitligheten i RIM:s stöd för anslutning via strikta brandväggar har förbättrats.
 
 ### 3.3.35
 
-* Detta är en uppdatering med buggfixar.
+* Detta är en uppdatering för buggfixar.
 
 ### 3.3.34
 
-* Windows: Åtgärdade ett problem som gjorde att muspekaren var osynlig i styrenhetens Remote Session-fönster vid anslutning till vissa Windows-mål utan ansluten mus.
+#### Windows
+Åtgärdat ett problem som gjorde att muspekaren var osynlig i kontrollerns fönster för fjärrsessioner vid anslutning till vissa Windows-mål utan ansluten mus.
 
 ### 3.3.33
 
-* macOS: RIM har nu den nödvändiga behörigheten från Apple för att tillåta fjärråtkomst, inklusive obevakad åtkomst, utan att behöva be om tillstånd för skärminspelning varje månad. Detta kräver att målanvändare som kör macOS Sequoia beviljar en ny "fjärråtkomst"-behörighet bara en gång. RIM kommer att begära denna behörighet innan den visar skärmen Ta emot hjälp, eller första gången den startar efter att ha installerat denna uppdatering på maskiner som är registrerade som obevakade mål. Observera att det fortfarande finns ett känt problem med RIM på macOS Sequoia: funktionen för fjärråtkomst på macOS Sequoia-målmaskiner fungerar inte korrekt. Vi arbetar för närvarande med Apple för att lösa detta problem. Om du eller dina målanvändare skulle påverkas av det här problemet fortsätter vi att rekommendera att du undviker att uppgradera till macOS Sequoia tills vidare. Tack för ditt tålamod.
+#### macOS
+RIM har nu den nödvändiga behörigheten från Apple för att tillåta fjärråtkomst, inklusive obevakad åtkomst, utan att varje månad behöva begära tillstånd för skärminspelning. Detta kräver att mål användare som kör macOS Sequoia beviljar ett nytt tillstånd för &quot;fjärråtkomst&quot; en enda gång. RIM kommer att begära detta tillstånd innan skärmen Ta emot hjälp visas, eller första gången det startas efter installation av denna uppdatering på maskiner som är registrerade som obevakade mål. Observera att det fortfarande finns ett känt problem med RIM på macOS Sequoia: funktionen för fjärråtkomst på macOS Sequoia-målmaskiner fungerar inte korrekt. Vi arbetar för närvarande med Apple för att lösa detta problem. Om du eller dina mål användare påverkas av detta problem rekommenderar vi att du undviker att uppgradera till macOS Sequoia tills vidare. Tack för ditt tålamod.
 
 ### 3.3.32
 
-* Åtgärdat ett problem som ibland gjorde att RIM kraschade när en mapp kopierades till urklipp.
-* Åtgärdade ett problem som ibland ledde till att sessionen frös och kopplades om när en stor mapp kopierades till urklipp.
-* Windows: Åtgärdade ett problem som gjorde att RIM ibland inte märkte när en ny fil eller uppsättning filer kopierades till urklipp.
+* Fixat ett problem som ibland orsakade att RIM kraschade när en mapp kopierades till urklipp.
+* Fixat ett problem som ibland orsakade att sessionen frös och återanslöt när en stor mapp kopierades till urklipp.
+
+#### Windows
+Fixat ett problem som ibland orsakade att RIM inte märkte när en ny fil eller en uppsättning filer kopierades till urklipp.
 
 ### 3.3.31
 
-* macOS: Uppdaterade instruktioner för att bevilja nödvändiga behörigheter på macOS Sequoia. Observera att det fortfarande finns två kända problem med RIM på macOS Sequoia: macOS frågar målanvändaren på nytt efter skärminspelningsbehörighet varje månad, vilket stör obevakade sessioner, och funktionen för fjärråtkomst på macOS Sequoia-målmaskiner fungerar inte korrekt. Vi arbetar för närvarande med Apple för att lösa dessa problem. Om du eller dina målanvändare skulle påverkas av något av dessa problem fortsätter vi att rekommendera att du undviker att uppgradera till macOS Sequoia tills vidare. Tack för ditt tålamod.
+#### macOS
+Uppdaterade instruktioner för att bevilja nödvändiga behörigheter på macOS Sequoia. Observera att det fortfarande finns två kända problem med RIM på macOS Sequoia: macOS ber målanvändaren om tillstånd för skärminspelning varje månad, vilket stör obevakade sessioner, och funktionen för fjärråtkomst på macOS Sequoia-målmaskiner fungerar inte korrekt. Vi arbetar för närvarande med Apple för att lösa dessa problem. Om du eller dina målanvändare skulle påverkas av något av dessa problem rekommenderar vi att du undviker att uppgradera till macOS Sequoia tills vidare. Tack för ditt tålamod.
 
 ### 3.3.30
 
-* Åtgärdade ett problem som hindrade funktionen Skicka loggar från att fungera tillförlitligt.
+* Fixat ett problem som hindrade funktionen Skicka loggar från att fungera tillförlitligt.
 
 ### 3.3.29
 
-* Den här uppdateringen introducerar interna ändringar i RIM:s programuppdaterare för att göra den mer robust.
+* Denna uppdatering introducerar interna ändringar i RIM-programuppdateraren för att göra den mer robust.
 
 ### 3.3.28
 
-Den här uppdateringen gör det möjligt att installera ytterligare en serverprofil. Detta är användbart för mottagare av teknisk support som kan få support från en organisation som använder en privat RIM-distribution i motsats till vårt offentliga moln, samt för controllers som kan arbeta med mer än en server åt gången.
+Denna uppdatering gör det möjligt att installera en ytterligare serverprofil. Detta är användbart för mottagare av teknisk support som kan få support från en organisation som använder en privat RIM-distribution i stället för vår offentliga molntjänst, samt för kontrollanter som kan arbeta med mer än en server åt gången.
 
 ### 3.3.27
 
-* Denna uppdatering introducerar några ändringar i hur RIM återger muspekaren och hanterar musinmatning. Den åtgärdar vissa situationer där RIM visade två muspekare i innehållsområdet i fönstret Fjärrsession, samt ett känt fall där ingen pekare visades i det området, särskilt när ingen mus var ansluten till målmaskinen. Vid anslutning till Windows-mål kan RIM nu ofta använda styrenhetens inställningar för muspekare i fönstret Remote Session, vilket gör det mer tillgängligt för användare med nedsatt syn. Dessutom är konverteringen av musinmatning från styrenhetens display till målets display nu mer exakt.
+* Denna uppdatering introducerar några ändringar i hur RIM renderar muspekaren och hanterar musinmatning. Den åtgärdar vissa situationer där RIM visade två muspekare i innehållsområdet i fönstret Remote Session, samt ett känt fall där ingen pekare visades i det området, särskilt när ingen mus var ansluten till måldatorn. När du ansluter till Windows-mål kan RIM nu ofta använda kontrollerns muspekarinställningar i fönstret Remote Session, vilket gör det mer tillgängligt för användare med nedsatt syn. Dessutom är konverteringen av musinmatning från kontrollerns skärm till målskärmen nu mer exakt.
 
 ### 3.3.24
 
-* Fönstret Remote Session kan nu flyttas och ändras i storlek, både inom en skärm och mellan olika skärmar. Titelfältet för detta fönster har nu också de plattformsstandardiserade kontrollerna för att stänga fönstret, maximera det och så vidare. Observera att RIM-ikonen, som kan klickas på för att öppna menyn, nu finns i mitten av titelfältet, inte i den vänstra änden.
-* Windows: Åtgärdat en bugg som gjorde att RIM kraschade när text kopierades till urklipp i Adobe Reader.
+* Fönstret Remote Session kan nu flyttas och ändras i storlek, inom en enda skärm eller över flera skärmar. Titelfältet för detta fönster har nu också plattformens standardkontroller för att stänga fönstret, maximera det och så vidare. Observera att RIM-ikonen, som kan klickas på för att öppna menyn, nu finns i mitten av titelfältet, inte i vänstra änden.
+
+#### Windows
+Ett fel som orsakade att RIM kraschade när text kopierades till urklipp i Adobe Reader har åtgärdats.
 
 ### 3.3.23
 
-* Styrenheten kan nu stänga av ljudutgången från målet. Detta gör du genom att markera kryssrutan "Mute target audio output" när du startar en nyckelordsbaserad session eller genom att välja "Mute Target Audio Output" i sessionsmenyn.
+* Kontrollenheten kan nu stänga av ljudet från målenheten. För att göra detta markerar du kryssrutan &quot;Stäng av ljud från målenhet&quot; när du startar en nyckelordsbaserad session, eller väljer &quot;Stäng av ljud från målenhet&quot; i sessionsmenyn.
 
 ### 3.3.22
 
-* I fönstret Provide Help, medan du väntar på att målanvändaren ska skriva in nyckelordet, visar RIM nu det nyckelord du skrev in, samt en nedräkning tills nyckelordet löper ut. Det finns också en "Avbryt"-knapp, så att du enkelt kan avbryta det aktuella försöket utan att stänga fönstret helt; detta är särskilt praktiskt om du vill prova ett annat nyckelord.
-* Abonnenter på RIM Enterprise och RIM Pro med Enterprise-tillägget kan nu begränsa vissa RIM-funktioner inom organisationen. Följande funktioner kan för närvarande begränsas: session flipping, röstsamtal, controllers som begär obevakad åtkomst, överföring av text och filer mellan maskiner via urklipp och controllers som låser målmaskinen. Organisationsadministratörer kan komma åt dessa inställningar via alternativet "Begränsningar" i rullgardinsmenyn "Organisation" i RIM Dashboard.
+* I fönstret &quot;Provide Help&quot; (Ge hjälp) visar RIM nu det nyckelord du angav samt en nedräkning till dess att nyckelordet upphör att gälla, medan du väntar på att mål användaren ska ange nyckelordet. Det finns också en &quot;Cancel&quot; (Avbryt)-knapp, så att du enkelt kan avbryta det aktuella försöket utan att stänga fönstret helt. Detta är särskilt praktiskt om du vill prova ett annat nyckelord.
+* Abonnenter på RIM Enterprise och RIM Pro med tillägget Enterprise kan nu begränsa vissa RIM-funktioner inom organisationen. Följande funktioner kan för närvarande begränsas: session flipping, röstsamtal, kontroller som begär obevakad åtkomst, överföring av text och filer mellan maskiner via urklipp och kontroller som låser målmaskinen. Organisationsadministratörer kan komma åt dessa inställningar via alternativet &quot;Begränsningar&quot; i rullgardinsmenyn &quot;Organisation&quot; i RIM-instrumentpanelen.
 
 ### 3.3.21
 
-* Åtgärdade ett annat problem som gjorde att RIM-appen periodvis förlorade anslutningen.
+* Ett annat problem som orsakade att RIM-appen ibland förlorade anslutningen har åtgärdats.
 
 ### 3.3.20
 
-* Åtgärdade ett problem som ibland orsakade att en maskin som kör RIM kopplades bort från RIM-tjänsten och inte automatiskt återanslöts, vilket krävde att RIM startades om.
+* Ett problem som ibland gjorde att en maskin som körde RIM kopplades bort från RIM-tjänsten och inte återanslöt automatiskt, vilket krävde att RIM startades om, har åtgärdats.
 
 ### 3.3.19
 
-* När du överför filer med hjälp av alternativet på RIM-menyn visar RIM nu den slutförda procentsatsen i titelfältet i förloppsfönstret.
-* Windows: RIM använder nu en mer robust metod för att övergå från inloggningsskärmen i Windows till huvudskrivbordet. Detta bör särskilt vara till hjälp på måldatorer där användaren inte har något Windows-lösenord.
-* macOS: I nya installationer ber RIM nu om behörigheter efter välkomstskärmen, och de begärda behörigheterna beror på om du bestämmer dig för att ta emot eller ge hjälp.
+* När filer överförs med hjälp av alternativet i RIM-menyn visar RIM nu den färdiga procentandelen i titelraden i förloppsfönstret.
+
+#### Windows
+RIM använder nu en mer robust metod för övergång från Windows inloggningsskärm till huvudskrivbordet. Detta bör vara till hjälp särskilt på mål-PC:er där användaren inte har något Windows-lösenord.
+
+#### macOS
+I nya installationer ber RIM nu om behörigheter efter välkomstskärmen, och de begärda behörigheterna beror på om du väljer att ta emot eller ge hjälp.
 
 ### 3.3.18
 
-* Windows: Åtgärdade ett problem som gjorde att RIM låste sig om sessionen avslutades eller återanslöts under en filöverföring.
+#### Windows
+Åtgärdat ett problem som gjorde att RIM låste sig om sessionen avslutades eller återanslöts under en filöverföring.
 
 ### 3.3.17
 
-* Windows: Löste ett problem som gjorde att RIM:s Windows-installationsprogram flaggades som ovanligt nedladdat och potentiellt osäkert av Microsoft SmartScreen.
+#### Windows
+Löst ett problem som gjorde att RIM Windows-installationsprogrammet flaggades som ovanligt nedladdat och potentiellt osäkert av Microsoft SmartScreen.
 
 ### 3.3.14
 
-* Åtgärdade ett problem i den tidigare uppdateringen som gjorde att lokaliseringen inte fungerade för ett fåtal språk.
+* Fixat ett problem i den tidigare uppdateringen som hindrade lokaliseringen från att fungera för några språk.
 
 ### 3.3.13
 
-* Uppdaterade den japanska lokaliseringen, tack vare bidrag från Kojiro Kuyo.
+* Uppdaterat den japanska lokaliseringen, tack vare bidrag från Kojiro Kuyo.
 * Diverse buggfixar.
 
 ### 3.3.12
 
-* Lagt till japansk lokalisering. Vi välkomnar din feedback på översättningens kvalitet och fullständighet.
-* Förbättringar av den franska översättningen - tack Nael Sayegh.
+* Lagt till japansk lokalisering. Vi välkomnar dina synpunkter på översättningens kvalitet och fullständighet.
+* Förbättringar av den franska översättningen – tack till Nael Sayegh.
+
+### 3.3.11
+
+Åtgärdat ett regressionsfel som gjorde att RIM onödigt använde reläservrarna i vissa nätverk, vilket ledde till försämrad anslutningskvalitet.
 
 ### 3.3.10
 
-Korrigerade intermittenta JavaScript-fel som rapporterades i den tidigare versionen.
-
-### 3.3.10
-
-Korrigerade intermittenta JavaScript-fel som rapporterades i den tidigare versionen.
+Åtgärdat intermittenta JavaScript-fel som rapporterats i den tidigare versionen.
 
 ### 3.3.9
 
-* Vi har infört en ny reservmetod för anslutning till våra globala reläer som fungerar även i begränsade nätverk som endast tillåter utgående HTTPS-anslutningar. Detta eliminerar behovet av att lägga till brandväggsundantag för RIM, utom i extremt begränsade miljöer.
-* RIM söker inte längre efter uppdateringar i förgrunden när programmet startas. Den söker nu bara efter uppdateringar i bakgrunden. Om du vill tvinga RIM att uppdatera omedelbart kan du använda den nya knappen "Sök efter uppdatering" i fönstret "Om".
-* Om den ursprungliga styrenheten kör en skärmläsare men målet inte gör det, kommer RIM nu automatiskt att starta fjärråtkomst på målet när du gör en omvänd sessionsvändning, precis som när du startade sessionen.
+* Introducerat en ny reservmetod för att ansluta till våra globala reläer som fungerar även i begränsade nätverk som endast tillåter utgående HTTPS-anslutningar. Detta eliminerar behovet av att lägga till brandväggsundantag för RIM, förutom i extremt begränsade miljöer.
+* RIM kontrollerar inte längre efter uppdateringar i förgrunden när applikationen startas. Nu söker den endast efter uppdateringar i bakgrunden. Om du behöver tvinga RIM att uppdatera omedelbart kan du använda den nya knappen &quot;Sök efter uppdateringar&quot; i fönstret &quot;Om&quot;.
+* Vid omvänd sessionsväxling, om den ursprungliga kontrollenheten kör en skärmläsare men målet inte gör det, startar RIM nu automatiskt fjärråtkomst på målet, precis som när sessionen startades.
 
 #### Windows
 
-Åtgärdade ett problem som ibland hindrade NVDA-ljudeffekter från att spelas upp vid användning av fjärråtkomst.
+Ett problem som ibland hindrade NVDA-ljudeffekter från att spelas upp vid användning av fjärråtkomst har åtgärdats.
 
 ### 3.3.8
 
 #### Windows
 
-Denna uppdatering introducerar stöd för den nya NVDA 2024.1-versionen i RIM:s funktion för fjärrtillgänglighet.
+Denna uppdatering introducerar stöd för den nya versionen NVDA 2024.1 i RIM:s fjärråtkomstfunktion.
 
 ### 3.3.7
 
-* Fler mindre lokaliseringsfixar.
+* Fler mindre lokaliseringskorrigeringar.
 
 ### 3.3.6
 
-* macOS: Den tidigare versionen för denna plattform innehöll faktiskt inte lokaliseringsfixarna.
+#### macOS
+Den tidigare versionen för denna plattform innehöll inte lokaliseringskorrigeringarna.
 
 ### 3.3.5
 
-* Den här uppdateringen innehåller korrigeringar av den svenska lokaliseringen, tack vare Karl-Otto Rosenqvist.
-* På alla språk är nu "Avsluta" i menyn för RIM-ikonen i systemfältet översatt.
+* Denna uppdatering introducerar korrigeringar av den svenska lokaliseringen, tack vare Karl-Otto Rosenqvist.
+* I alla språk är nu alternativet &quot;Avsluta&quot; i menyn för RIM-systemfältets ikon översatt.
 
 ### 3.3.4
 
-* Översättningar till holländska och brasiliansk portugisiska har lagts till.
+* Nederländska och brasilianska portugisiska översättningar har lagts till.
 
 ### 3.3.3
 
-* Vi är nu tillräckligt säkra på RIM:s lokalisering för att ta den ur betaversionen. Därför använder RIM nu ditt systemomfattande föredragna språk som standard, och vi har tagit bort etiketten "BETA" från språkväljaren.
-* För att undvika förvirring finns det inte längre någon "Avbryt"-knapp på skärmen "Ge hjälp". Istället kan du helt enkelt stänga fönstret.
-* Om du väljer att lägga till den här maskinen till ditt RIM-konto på skärmen "Ta emot hjälp" kommer fönstret "Ta emot hjälp" nu att vara öppet.
+* Vi är nu tillräckligt säkra på RIM:s lokalisering för att ta bort betaversionen. RIM använder nu ditt systemomfattande föredragna språk som standard, och vi har tagit bort beteckningen &quot;BETA&quot; från språkväljaren.
+* För att undvika förvirring finns det inte längre någon &quot;Avbryt&quot;-knapp på skärmen &quot;Ge hjälp&quot;. Istället kan du helt enkelt stänga fönstret.
+* Om du väljer att lägga till den här datorn till ditt RIM-konto på skärmen &quot;Få hjälp&quot; kommer fönstret &quot;Få hjälp&quot; nu att förbli öppet.
 
 ### 3.3.2
-##### Fönster
-* Åtgärdade ett problem som hindrade RIM från att installera uppdateringar på vissa maskiner med en låst konfiguration.
+#### Windows
+* Fixat ett problem som hindrade RIM från att installera uppdateringar på vissa datorer med en låst konfiguration.
+
 ### 3.3.1
 * Uppdaterade översättningar
 * Interna ändringar
+
 ### 3.3.0
-Denna uppdatering innehåller en mängd nya funktioner samt plattformsspecifika revideringar. Allmänna tillägg inkluderar:
-* Tillagt stöd för röstkonversationer i obevakade sessioner. Målanvändaren tillfrågas direkt om tillstånd att starta en röstkonversation.
-* I röstsamtal hanterar RIM nu att mikrofoner kopplas in och ur under sessionen 
+Denna uppdatering lägger till en rad nya funktioner över hela linjen, samt plattformsspecifika revideringar. Allmänna tillägg inkluderar:
+* Stöd för röstsamtal i obevakade sessioner har lagts till. Mål användaren ombeds på plats om tillstånd att starta ett röstsamtal.
+* I röstsamtal hanterar RIM nu mikrofoner som ansluts och kopplas bort under sessionen. 
 
-##### Windows
-* RIM-meddelanden hörs nu konsekvent i berättaren
-* Lagt till en icke-administratörsfallback
+#### Windows
+* Narrator läser nu konsekvent upp RIM-meddelanden.
+* En icke-administrativ fallback har lagts till.
 
-##### Mac OS
-* En avinstallerare har lagts till som nås via Om-skärmen och som helt och rent tar bort RIM, inklusive drivrutinen Karabiner Virtual HID
-* Information om Mac-målmaskin innehåller nu körande processer och installerade program 
+#### Mac OS
+* Ett avinstallationsprogram har lagts till som nås via skärmen Om och som helt och hållet tar bort RIM, inklusive Karabiner Virtual HID-drivrutinen.
+* Informationen om Mac-målmaskinen inkluderar nu körda processer och installerade program.
 
 ### 3.2.18
-När du trycker på knappen Logga ut i fönstret Tillhandahåll hjälp återgår RIM nu till fönstret Ta emot hjälp i stället för att kräva att du loggar in igen.
+När du trycker på knappen Logga ut i fönstret Ge hjälp återgår RIM nu till fönstret Ta emot hjälp istället för att kräva att du loggar in igen.
 ### 3.2.17
-* Problem med översättningar av menyalternativ har åtgärdats.
-* Vid start av en obevakad session stöder RIM nu dubbelklickning på en målgrupp eller målmaskin.
-* Åtgärdat ett fel i processen för att lägga till en målmaskin till ditt konto när du använder SSO (Single Sign-On).
+* Problem med översättningarna av menyalternativen har åtgärdats.
+* När du startar en obevakad session stöder RIM nu dubbelklick på en målgrupp eller målmaskin.
+* Ett fel i processen för att lägga till en målmaskin till ditt konto när du använder enkel inloggning (SSO) har åtgärdats.
+
 ### 3.2.16
-* Åtgärdade problem med den franska lokaliseringen. Tack till Nael Sayegh för dessa korrigeringar; detta är det första community-bidraget till våra lokaliseringsinsatser.
+* Problem med den franska lokaliseringen har åtgärdats. Tack till Nael Sayegh för dessa korrigeringar; detta är det första bidraget från communityn till vårt lokaliseringsarbete.
+
 ### 3.2.15
-##### Windows
-* Åtgärdat ett problem som gjorde att skärmutmatningen på styrenheten frös när målmaskinen låstes.
+#### Windows
+* Ett problem som orsakade att skärmbilden på kontrollenheten frös när målmaskinen låstes har åtgärdats.
+
 ### 3.2.14
-##### Windows
-* RIM identifierar nu Fusion, Vispero-produkten som kombinerar JAWS och ZoomText, som en separat produkt när man fastställer vilken skärmläsare som körs på måldatorn, istället för att bara identifiera den som JAWS. Detta innebär att RIM inte kommer att försöka starta sin funktion för fjärråtkomst medan Fusion startas.
-* Vi har fått rapporter om att om Fusion startades efter att en RIM-session påbörjats skulle Fusion ignorera vissa tangenttryckningar från styrenheten, vilket JAWS brukade göra. Vi tror att detta problem nu är åtgärdat.
+#### Windows
+* RIM identifierar nu Fusion, Visperos produkt som kombinerar JAWS och ZoomText, som en separat produkt när den avgör vilken skärmläsare som körs på måldatorn, istället för att bara identifiera den som JAWS. Detta innebär att RIM inte försöker starta sin fjärråtkomstfunktion medan Fusion startar.
+* Vi har fått rapporter om att om Fusion startades efter att en RIM-session hade påbörjats, ignorerade Fusion vissa tangenttryckningar från kontrollenheten, precis som JAWS brukade göra. Vi tror att detta problem nu är åtgärdat.
+
 ### 3.2.13
-##### Windows
-Ett problem med tangentbordsinmatning vid anslutning till målmaskiner som kör JAWS 2024 har åtgärdats.
+#### Windows
+Åtgärdat ett problem med tangentbordsinmatning vid anslutning till måldatorer som kör JAWS 2024.
+
 ### 3.2.12
-Åtgärdat ett sällsynt problem som kunde hindra RIM-appen från att ansluta till molntjänsten.
+Löst ett sällsynt problem som kunde hindra RIM-appen från att ansluta till molntjänsten.
+
 ### 3.2.11
-Lade till en ny knapp i fönstret Anslutningsdetaljer för att begära att målmaskinen skickar sina RIM-loggar till Pneuma Solutions. Använd endast denna funktion om Pneuma Solutions begär det.
+Lagt till en ny knapp i fönstret Anslutningsdetaljer för att begära att målmaskinen skickar sina RIM-loggar till Pneuma Solutions. Använd endast denna funktion om Pneuma Solutions begär det.
+
 ### 3.2.10
-Åtgärdade ett problem som kunde leda till att RIM slutade fungera fram till nästa omstart av programmet om maskinens Internetanslutning tillfälligt var otillgänglig.
+Åtgärdat ett problem som kunde orsaka att RIM slutade fungera tills nästa omstart av applikationen om maskinens internetanslutning tillfälligt var otillgänglig.
 ### 3.2.9
-##### macOS
-Vi kan tyvärr inte längre erbjuda automatisk stereomikrofoninmatning i röstsamtal på denna plattform, eftersom detta i vissa fall förhindrade att mikrofoninmatningen fungerade överhuvudtaget på en Mac. Observera att denna ändring inte har någon effekt på inspelat ljud från målmaskinen; det är fortfarande stereo.
+#### Mac OS
+Vi kan tyvärr inte längre erbjuda automatisk stereomikrofoningång i röstsamtal på denna plattform, eftersom detta i vissa fall hindrade mikrofoningången från att fungera alls på en Mac. Observera att denna ändring inte påverkar den inspelade ljudutgången från måldatorn, som fortfarande är stereo.
+
 ### 3.2.8
-##### macOS
-Åtgärdat ett fel som gjorde att RIM inte visades när programmet aktiverades via Finder eller Dock i stället för med den globala snabbtangenten.
+#### Mac OS
+Fixat ett fel som hindrade RIM från att starta när applikationen aktiverades via Finder eller Dock, istället för att använda det globala snabbtangenten.
 ### 3.2.7
-Röstsamtal använder nu automatiskt stereo när ljudhårdvaran stöder det. Detta är användbart när RIM används för utbildning i ljudproduktion.
+Röstsamtal använder nu automatiskt stereo när ljudhårdvaran stöder det. Detta är användbart när du använder RIM för utbildning i ljudproduktion.
 ### 3.2.6
-Åtgärdat ett nyligen introducerat problem som kunde förhindra RIM från att fungera på en ny operativsysteminstallation.
+Åtgärdat ett nyligen introducerat problem som kunde förhindra RIM från att fungera på en ny installation av operativsystemet.
 ### 3.2.5
 Åtgärdat meddelandet som visar återstående ledig tid.
 ### 3.2.4
-Lokalisering av RIM till andra språk är nu i betaversion. Följande språk stöds för närvarande: Tyska, spanska, franska, italienska och svenska. För att använda RIM på ett av dessa språk, tryck på knappen "Språk (BETA)" längst ner i fönstret "Ge hjälp" eller "Ta emot hjälp", välj sedan ditt språk från rullgardinslistan och tryck på knappen "Byt språk". Vi ser fram emot din feedback.
+Lokalisering av RIM till andra språk är nu i betaversion. Följande språk stöds för närvarande: tyska, spanska, franska, italienska och svenska. För att använda RIM på ett av dessa språk, tryck på knappen &quot;Språk (BETA)&quot; längst ner i fönstret &quot;Ge hjälp&quot; eller &quot;Få hjälp&quot;, välj sedan ditt språk i listrutan och tryck på knappen &quot;Byt språk&quot;. Vi ser fram emot dina synpunkter.
 ### 3.2.1
-* Det går nu smidigare att starta en ny RIM-session på styrenhetssidan. Det ursprungliga fönstret, där du angav ditt nyckelord eller valde en målmaskin, kommer inte att försvinna förrän sessionens huvudfönster är klart. Om det ursprungliga fönstret inte längre har fokus när sessionen startar, t.ex. om du bytte uppgift medan du väntade på att målanvändaren skulle ange ett nyckelord, kommer RIM att meddela dig att sessionen är klar, och huvudsessionsfönstret visas när du återför fokus till RIM.
-* endast macOS: Som en del av den tidigare ändringen har vi ändrat hur RIM lägger till och tar bort sig själv i Dock och i Command+Tab-listan. Meddela oss om du upptäcker några problem med det nuvarande beteendet.
-* Endast Windows-mål: Om en skärmläsare startas på måldatorn medan fjärråtkomst är aktivt kommer fjärråtkomst att stängas av tyst för att undvika dubbel talutmatning.
+* Processen för att starta en ny RIM-session på kontrollersidan är nu smidigare. Det ursprungliga fönstret, där du angav ditt nyckelord eller valde en måldator, försvinner inte förrän huvudfönstret för sessionen är klart. Om det ursprungliga fönstret inte längre har fokus när sessionen startar, t.ex. om du bytte uppgift medan du väntade på att mål användaren skulle ange ett nyckelord, kommer RIM att meddela dig att sessionen är klar och huvudfönstret för sessionen visas när du återgår till RIM.
+* Endast macOS: Som en del av den tidigare ändringen har vi modifierat sättet som RIM lägger till och tar bort sig själv i Dock och Command+Tab-listan. Vänligen meddela oss om du upptäcker några problem med det aktuella beteendet.
+* Endast Windows-mål: Om en skärmläsare startas på målmaskinen medan fjärråtkomst är aktiv, stängs fjärråtkomsten tyst av för att undvika dubbel talutmatning.
 
 ### 3.2.0
 Första officiella versionen för Mac OS! Nya funktioner inkluderar:
-* möjlighet att konfigurera obevakade sessioner eller sessioner med uppmaning från en interaktiv session.
-* Helt nya behörighetsinstruktioner för användare som inte använder VoiceOver.
+* Möjlighet att konfigurera obevakade eller uppmanade sessioner från en interaktiv session.
+* Helt nya instruktioner för behörigheter för användare som inte använder VoiceOver.
 
 ### 3.1.49
-Denna version ger ett konsekvent, plattformsoberoende sätt att öppna RIM-styrenhetens sessionsmeny med musen. En kontrollant kan antingen klicka på den stora RIM-ikonen i det övre vänstra hörnet av sessionsfönstret eller, som tidigare var möjligt i Windows, högerklicka var som helst i titelfältet.
+Denna version erbjuder ett konsekvent, plattformsoberoende sätt att öppna RIM-kontrollerns sessionsmeny med musen. En kontrollant kan antingen klicka på den stora RIM-ikonen i det övre vänstra hörnet av sessionsfönstret eller, som tidigare var möjligt i Windows, högerklicka var som helst på titelraden.
 ### 3.1.48
-##### Mac
-* Stöd har lagts till för FN+Number-tangentens lösning för att använda funktionsraden på MacBooks.
-* RIM för Mac anpassar nu menyfältet, och i synnerhet alternativet "Om" på programmenyn öppnar nu vår egen Om-dialogruta i stället för den generiska.
+#### Mac OS
+* Stöd för FN+nummertangent-lösningen för att använda funktionsraden på MacBook har lagts till.
+* RIM för Mac anpassar nu menyraden, och i synnerhet öppnar alternativet &quot;Om&quot; i applikationsmenyn nu vår egen dialogruta &quot;Om&quot; istället för den generiska.
 
 ### 3.1.47
-##### Windows
-Vid anslutning av en Mac-styrenhet till ett Windows-mål, där båda sidor använder samma icke-amerikanska tangentbordslayout, översattes inte tangentbordsinmatningen från styrenheten korrekt. Version 3.1.47 för Windows åtgärdar detta problem.
+#### Windows
+När en Mac-kontroller anslöts till en Windows-målmaskin, där båda sidor använde samma icke-amerikanska tangentbordslayout, översattes inte tangentbordsinmatningen från kontrollern korrekt. Version 3.1.47 för Windows åtgärdar detta problem.
 ### 3.1.46
-I den här versionen läggs stöd till för det nya prenumerationspaketet RIM Personal Community Support.
+Denna version lägger till stöd för det nya prenumerationspaketet RIM Personal Community Support.
 
 ### 3.1.45
-##### Mac
-RIM kan nu automatiskt återuppta inspelning av skärminnehåll och ljud om målmaskinen växlar till låsskärmen under en session.
+#### Mac OS
+RIM kan nu automatiskt återuppta inspelningen av skärminnehåll och ljudutmatning om målmaskinen växlar till låsskärmen under en session.
 
 ### 3.1.44
-##### Mac
-* Implementerar omstart och återanslutning för Mac-mål, inklusive både standardomstart och nödomstart.
-    * Precis som med obevakad åtkomst visas inte RIM på macOS-inloggningsskärmen på grund av plattformsbegränsningar, särskilt FileVault. Målanvändaren måste därför logga in igen innan RIM kan återansluta.
-* Meddelandet om filöverföringar, som introducerades i föregående uppdatering, visas nu bara en gång per RIM-session.
+#### Mac OS
+* Implementerar omstart och återanslutning för Mac-mål, inklusive både standard- och nödomstarter.
+    * Liksom vid obevakad åtkomst visas inte RIM på inloggningsskärmen för macOS på grund av plattformsbegränsningar, särskilt FileVault. Mål användaren måste därför logga in igen innan RIM kan återansluta.
+* Meddelandet om filöverföringar, som introducerades i den tidigare uppdateringen, visas nu endast en gång per RIM-session.
 
 ### 3.1.43
-##### Mac
-Denna uppdatering ändrar användargränssnittet för filöverföringar. När en eller flera filer placeras i urklipp på vardera sidan av anslutningen, får den registeransvarige nu ett meddelande om att filöverföringen kan slutföras via RIM-menyn. Om styrenheten väljer detta menyalternativ utförs filöverföringen, och när den är klar öppnas en tillfällig mapp som innehåller den överförda filen eller filerna på destinationsmaskinen. Denna metod för filöverföring är nödvändig när destinationsmaskinen är en Mac. Om destinationen är en Windows-maskin kan filöverföringen genomföras antingen med denna nya metod eller med den gamla metoden att klistra in filer i Utforskaren på destinationsmaskinen.
+#### Mac OS
+Denna uppdatering modifierar användargränssnittet för filöverföringar. När en eller flera filer placeras i urklipp på någon av sidorna av anslutningen får kontrollenheten nu ett meddelande om att filöverföringen kan slutföras via RIM-menyn. Om kontrollenheten väljer detta menyalternativ utförs filöverföringen, och när den är klar öppnas en tillfällig mapp med den eller de överförda filerna på måldatorn. Denna metod för filöverföring är nödvändig när måldatorn är en Mac. När målet är en Windows-dator kan filöverföringen slutföras med antingen denna nya metod eller den gamla metoden att klistra in i File Explorer på måldatorn.
 ### 3.1.42
-##### Mac
-* RIM för Mac fungerar nu som ett obevakat mål. Den utför också uppdateringar i bakgrunden som Windows-versionen gör.
-    * Vi har fortfarande en del att göra när det gäller åtkomst till låsskärmen, och vi tror inte att vi kommer att kunna ge åtkomst till inloggningsskärmen innan en användare är inloggad alls, på grund av plattformens begränsningar.
-    * vi har ännu inte räknat ut hur, eller om, vi kommer att kunna implementera förkonfigurerade målinstallatörer, så du måste använda en av de andra tillgängliga metoderna för att konfigurera obevakad åtkomst.
-* Eliminerar en källa till fördröjning i ljud som fångats från Mac-mål.
+#### Mac OS
+* RIM för Mac fungerar nu som ett obevakat mål. Det utför också uppdateringar i bakgrunden precis som Windows-versionen.
+* Vi har fortfarande lite arbete kvar att göra när det gäller åtkomst till låsskärmen, och vi tror inte att vi kommer att kunna ge åtkomst till inloggningsskärmen innan en användare har loggat in, på grund av plattformens begränsningar.
+* Vi har ännu inte kommit fram till hur, eller om, vi kommer att kunna implementera förkonfigurerade målinstallationsprogram, så du måste använda någon av de andra tillgängliga metoderna för att konfigurera obevakad åtkomst.
+* Eliminerar en källa till fördröjning i ljud som fångas upp från Mac-mål.
 
 ### 3.1.41
-##### Windows
-Åtgärdat ett problem som ibland fick RIM att krascha som svar på aktivitet i Windows urklipp under en RIM-session.
+#### Windows
+Åtgärdat ett problem som ibland orsakade att RIM kraschade som svar på aktivitet i Windows-klippbordet under en RIM-session. 
 ### 3.1.40
-Lägger till lite mer loggning relaterad till ljud på målet. Så om du kan reproducera fördröjt ljud på målet, gör det med den här versionen och skicka sedan loggar. 
+Lägger till ytterligare loggning relaterad till ljud på målenheten. Om du kan återskapa fördröjt ljud på målenheten, gör det med den här versionen och skicka sedan loggarna. 
 ### 3.1.39
-##### Mac
+#### Mac OS
 Denna uppdatering lägger till musstöd för Mac-mål.
-RIM begär nu tillstånd att använda tillgänglighetsfunktioner i macOS. För nya
-installationer ersätter detta tillståndsbegäran för inmatningsövervakning, så
-det totala antalet tillståndssteg inte ökar. Men för uppdateringar,
+RIM begär nu tillstånd att använda macOS-tillgänglighetsfunktioner. För nya
+installationer ersätter detta begäran om tillstånd för inmatningsövervakning, så
+det totala antalet tillståndssteg ökar inte. Men för uppdateringar
 måste du bevilja detta tillstånd innan du kan använda RIM efter uppdateringen.
 ### 3.1.38
-##### Mac
-Åtgärdat en krasch som påverkade Mac-mål vid sessionsinitialisering.
+#### Mac OS
+Fixat ett krasch som påverkade Mac-mål vid sessionens initialisering.
 ### 3.1.37
-Denna uppdatering markerar en viktig milstolpe i Mac-porten av RIM. Funktionen för
-tillgänglighetsfunktionen i RIM är nu tillgänglig vid anslutning till Mac
-mål. Med hjälp av en särskild konfiguration av VoiceOver på
-maskinen kommer styrenheten, oavsett om den använder Windows eller Mac, att höra tal
-medan målanvändaren inte hör något tal eller några ljudeffekter. Det finns
-finns heller ingen synlig indikation på att VoiceOver körs på måldatorn.
-Processen för att starta fjärråtkomst, antingen automatiskt eller
-manuellt, fungerar precis som med Windows-mål. Och naturligtvis,
-när sessionen avslutas stängs den speciella konfigurationen av VoiceOver
-ner och VoiceOver återställs till sina tidigare inställningar.
-
-Observera att både Windows- och Mac-styrenheter nu måste köra
-version 3.1.37 för att få full funktionalitet vid anslutning till ett Mac-mål.
+Denna uppdatering markerar en viktig milstolpe i Mac-portningen av RIM. RIM:s fjärråtkomstfunktion
+är nu tillgänglig vid anslutning till Mac-mål. Med hjälp av en speciell konfiguration av VoiceOver på målmaskinen
+kommer kontrollenheten, oavsett om den använder Windows eller Mac, att höra tal
+medan målanvändaren inte hör något tal eller ljudeffekter. Det finns heller ingen synlig indikation på att VoiceOver körs på målenheten.
+Processen för att starta fjärråtkomst, antingen automatiskt eller manuellt, fungerar precis som med Windows-mål. Och naturligtvis stängs den speciella konfigurationen av VoiceOver av när sessionen avslutas, och VoiceOver återställs till sina tidigare inställningar.
+Observera att både Windows- och Mac-kontrollanter nu måste köra version 3.1.37 för att få full funktionalitet vid anslutning till en Mac-enhet.
 ### 3.1.36
-##### Windows
+RIM har nu stöd för Windows 7.
+
+Observera att både Windows- och Mac-kontroller nu måste köra
+version 3.1.37 för att få full funktionalitet när de ansluts till en Mac-mål.
+### 3.1.36
+#### Windows
 Funktionen för fjärråtkomst är nu kompatibel med NVDA 2023.1.
 ### 3.1.35
-##### Mac
+#### Mac OS
 * RIM använder nu konsekvent stereoljud, särskilt för Mac-kontroller.
-* När du använder RIM för Mac som styrenhet med funktionen för fjärråtkomst använder RIM nu den röst och talhastighet som definieras i avsnittet Talat innehåll i systeminställningarna.
+* När du använder RIM för Mac som en kontroller med funktionen för fjärråtkomst använder RIM nu rösten och talhastigheten som definieras i avsnittet Talat innehåll i systeminställningarna.
 
 ### 3.1.34
-##### Mac
-När en Mac-styrenhet ansluter till ett Windows-mål som inte kör en skärmläsare kan du nu köra fjärrtillgänglighetsmodulen på Windows-målet och få talutmatning på Mac-styrenheten. Observera att du fortfarande måste använda NVDA-tangentbordskommandon när du interagerar med Windows-målet, inte VoiceOver-kommandon, och att vi använder NVDA-tangentbordslayouten för bärbara datorer. 
+#### Mac OS
+När en Mac-kontroller ansluter till en Windows-mål som inte kör en skärmläsare kan du nu köra fjärråtkomstmodulen på Windows-målet och få talutmatning på Mac-kontrollern. Observera att du fortfarande måste använda NVDA-tangentbordskommandon när du interagerar med Windows-målet, inte VoiceOver-kommandon, och vi använder NVDA-tangentbordslayouten för bärbara datorer. 
 ### 3.1.33
-Som svar på feedback från användare har vi tagit bort ljudeffekten när meddelanden om status för en fjärrsession visas.
+Som svar på användarfeedback har vi tagit bort ljudeffekten när meddelanden om statusen för en fjärrsession visas.
 ### 3.1.32
-##### Mac
-RIM stöder nu Fn-tangenten när en bärbar Mac-dator används som styrenhet.  
-Observera att RIM alltid behandlar den översta raden av funktionstangenter som F1 till F12, och att du måste använda Fn-tangenten om du vill använda dessa tangenter som systemfunktionstangenter (för att justera volym och så vidare), oavsett hur systeminställningarna är inställda på endera sidan av anslutningen. Vi tror att du i en fjärrsession förmodligen ändå vill använda dessa tangenter som F-tangenter för det mesta. Beteende som att använda Fn+Vänsterpil för att trycka på Hem fungerar som förväntat.
-### 3.1.31
-##### Mac
-* RIM släppte tidigare inte sitt lås på tangentbordsinmatning när vissa dialogrutor visades, t.ex. dialogrutan som begär tillstånd att komma åt mikrofonen. Detta är nu åtgärdat.
-* Vid anslutning från Mac till Windows eller vice versa är det inte längre möjligt för styrenheten att aktivera RIM-menyn på målmaskinen. Den här korrigeringen kräver motsvarande uppdatering av RIM för Windows.
+#### Mac OS
+RIM stöder nu Fn-tangenten när du använder en Mac-bärbar dator som styrenhet.  
+Observera att RIM alltid behandlar den övre raden med funktionstangenter som F1 till F12, och du måste använda Fn-tangenten om du vill använda dessa tangenter som systemfunktionstangenter (för att justera volymen och så vidare), oavsett hur systeminställningarna är konfigurerade på någon av anslutningsändarna. Vi antar att du i en fjärrsession vill du förmodligen använda dessa tangenter som F-tangenter ändå. Funktioner som att använda Fn+vänsterpil för att trycka på Home fungerar som förväntat.  
+### 3.1.31  
+#### Mac OS  
+* RIM släppte tidigare inte sitt lås på tangentbordsinmatningen när vissa dialogrutor visades, till exempel dialogrutan som begär tillstånd för åtkomst till mikrofonen. Detta är nu åtgärdat.
+* När du ansluter från Mac till Windows eller vice versa är det inte längre möjligt för kontrollenheten att aktivera RIM-menyn på måldatorn. Denna korrigering kräver motsvarande uppdatering av RIM för Windows.
 
-##### Windows
-* Ett sätt att skicka RIM:s loggfiler till Pneuma Solutions har lagts till, introducerat för Mac OS i version 3.1.29. Använd endast denna funktion om en representant för Pneuma Solutions begär det.
-* RIM spelar nu upp ett ljud när den visar ett meddelande.
+#### Windows
+* Ett sätt att skicka RIM:s loggfiler till Pneuma Solutions har lagts till, vilket introducerades för Mac OS i version 3.1.29. Använd endast denna funktion om en representant för Pneuma Solutions begär det.
+* RIM spelar nu upp ett ljud varje gång det visar en avisering.
 
 ### 3.1.30
-##### Mac
-RIM kommer nu att begära tillstånd att visa aviseringar, både vid första körningen och för befintliga användare som uppdaterar från en tidigare version. Som med de flesta andra behörigheter krävs det att man vrider på en strömbrytare i Systeminställningar för att bevilja denna behörighet. Vi har också lagt till vårt eget ljud för dessa
+#### Mac OS
+RIM kommer nu att begära tillstånd att visa meddelanden, både vid första körningen och för befintliga användare som uppdaterar från en tidigare version. Liksom med de flesta andra behörigheter krävs det att man aktiverar en knapp i systeminställningarna för att bevilja denna behörighet. Vi har också lagt till vårt eget ljud för dessa
 meddelanden.
 ### 3.1.29
-##### Mac
-* Vi tror att det problem som vissa användare har rapporterat med att begära behörighet för övervakning av tangentbordsinmatning på maskiner som kör Karabiner Elements nu är åtgärdat.
-* I dialogrutan RIM Om finns nu en knapp för att skicka loggar. Använd endast denna funktion om Pneuma Solutions begär det.
+#### Mac OS
+* Vi tror att det problem som vissa användare har rapporterat med begäran om tillstånd för övervakning av tangentbordsinmatning på datorer som kör Karabiner Elements nu är löst.
+* Dialogrutan Om RIM har nu en knapp för att skicka loggar. Använd endast denna om Pneuma Solutions begär det.
 
 ### 3.1.28
-##### Mac
-När du använder RIM som styrenhet är den nu kompatibel med avancerade verktyg för tangentbordsanpassning som Karabiner Elements.
+#### Mac OS
+När du använder RIM som styrenhet är det nu kompatibelt med avancerade verktyg för tangentbordsanpassning, såsom Karabiner Elements.
 ### 3.1.27
-##### Mac
-Detta är en mindre uppdatering med bara två ändringar:
-* Markerat RIM som kräver macOS 13.0 (Ventura) eller senare.
-* Fixat RIM så att det virtuella tangentbordet endast är anslutet när RIM faktiskt körs som ett mål. Detta innebär att tangentbordsassistenten inte visas när RIM används som styrenhet. Vi undersöker fortfarande möjliga sätt att undvika den dialogen helt och hållet.
+#### Mac OS
+Detta är en mindre uppdatering med endast två ändringar:
+* RIM har markerats som kräver macOS 13.0 (Ventura) eller senare.
+* RIM har fixats så att det virtuella tangentbordet endast är anslutet när RIM faktiskt körs som mål. Detta innebär att tangentbordsinställningsassistenten inte visas när RIM används som styrenhet. Vi undersöker fortfarande möjliga sätt att helt undvika den dialogrutan.
 
 ### 3.1.26
-Första betaversionen av RIM för Mac OS.
+Initial betaversion av RIM för Mac OS.
 ### 3.1.24
-* Vid anslutning till en målmaskin med lägre skärmupplösning eller en högre DPI-skalfaktor (dots-per-inch) än styrenheten, skalar RIM nu fjärrmålskärmen så att den passar styrenhetens skärm, vilket gör det lättare att arbeta med fjärrskärmen visuellt.
+* När du ansluter till en målmaskin med lägre skärmupplösning eller högre DPI-skalningsfaktor än kontrollenheten, skalar RIM nu den fjärranslutna måldisplayen så att den passar kontrollenhetens skärm, vilket gör den fjärranslutna displayen lättare att arbeta med visuellt.
 
 ### 3.1.23
 * Stöd för förbetalda timmar har lagts till.
 
 ### 3.1.22
-* Åtgärdat ett fel som ibland ledde till att RIM på måldatorn hamnade i en loop som förhindrade obevakade anslutningar.
+* Fixat ett fel som ibland orsakade att RIM på målmaskinen hamnade i en loop som förhindrade obevakade anslutningar.
 
 ### 3.1.21
-* Ett nytt kortkommando, Windows+Shift+M, har lagts till i ett sessionsfönster för att minimera fönstret och återföra tangentbordets fokus till den lokala (styrenhetens) maskin.
+* Lagt till ett nytt kortkommando, Windows+Shift+M, i ett sessionsfönster, för att minimera fönstret och återföra tangentbordsfokus till den lokala (kontroll)maskinen.
 
 ### 3.1.20
-* Loggning har lagts till som hjälper oss att diagnostisera rapporter om obevakade mål som periodvis kopplas bort från RIM.
+* Loggning har lagts till som hjälper oss att diagnostisera rapporter om obevakade mål som ibland kopplas bort från RIM.
 
 ### 3.1.19
-* Några hörnfall i hanteringen av tangentbordsinmatning på distans har åtgärdats. I synnerhet när JAWS körs på måldatorn känner JAWS nu korrekt igen paus- och NumLock-tangenttryckningar från styrenheten. Meddela oss gärna om du upptäcker några regressioner i hanteringen av tangentbordsinmatning, särskilt för icke-amerikanska tangentbordslayouter.
+* Fixade några specialfall i hanteringen av fjärrstyrd tangentbordsinmatning. I synnerhet när JAWS körs på måldatorn känner JAWS nu korrekt igen paus- och NumLock-tangenttryckningar från kontrollenheten. Vänligen meddela oss om du upptäcker några försämringar i hanteringen av tangentbordsinmatning, särskilt för icke-amerikanska tangentbordslayouter.
 
 ### 3.1.18
-* Åtgärdade ett problem som hindrade RIM från att uppdatera sig självt på målmaskiner som befann sig på Windows-inloggningsskärmen utan någon aktiv användarsession.
+* Fixat ett problem som hindrade RIM från att uppdatera sig själv på måldatorer som var på Windows inloggningsskärm utan någon aktiv användarsession.
 
 ### 3.1.17
-* Sedan den föregående uppdateringen har vi fått rapporter om att Shift-modifieraren fastnar på måldatorn när JAWS körs. Vi tror att detta problem är löst med denna uppdatering. Meddela oss om du fortfarande har problem med modifierare som fastnat.
-* Åtgärdat ett fel som gjorde att RIM stängde av NVDA på måldatorn i slutet av en session om NVDA startades på måldatorn efter att fjärråtkomst aktiverats.
+* Sedan den senaste uppdateringen har vi fått rapporter om att Shift-modifieraren fastnat på målmaskinen när JAWS körs. Vi tror att den här uppdateringen löser problemet. Vänligen meddela oss om du fortfarande har problem med fastnade modifierare.
+* Fixat ett fel som gjorde att RIM stängde av NVDA på målmaskinen i slutet av en session om NVDA startades på målmaskinen efter att fjärråtkomst aktiverats.
 
 ### 3.1.16
-* När JAWS körs på måldatorn med Unified Keyboard Processing aktiverat svarar JAWS nu på ett tillförlitligt sätt på tangenttryckningar från styrenheten.
-* Åtgärdat ett fel som sporadiskt uppstod när tillägget för fjärråtkomst startades efter installation eller uppdatering av NVDA-tillägget på styrdatorns maskin.
+* När JAWS körs på målmaskinen med Unified Keyboard Processing aktiverat, svarar JAWS nu på ett tillförlitligt sätt på tangenttryckningar från kontrollenheten.
+* Fixat ett fel som sporadiskt uppstår när tillägget för fjärråtkomst startas efter installation eller uppdatering av NVDA-tillägget på kontrollenheten.
 
 ### 3.1.15
-* När du ansluter till en målmaskin som inte har någon skärmläsare aktiverar RIM automatiskt fjärråtkomst om du kör en skärmläsare på styrenhetens maskin. Om du kör en annan skärmläsare än NVDA på styrdatorn, kommer RIM även att automatiskt stänga av skärmläsaren och starta NVDA om du har den installerad.
-* Åtgärdade problem som hindrade fjärrtillgänglighetsmodulen från att använda dina lokala NVDA-konfigurationsinställningar, t.ex. tangentbordslayout och skriveko.
+* När du ansluter till en måldator utan någon skärmläsare igång aktiverar RIM automatiskt fjärråtkomst om du kör en skärmläsare på kontrollermaskinen. Om du kör en annan skärmläsare än NVDA på kontrollermaskinen stänger RIM till och med automatiskt av den skärmläsaren och startar NVDA om du har den installerad.
+* Fixade problem som hindrade fjärråtkomstmodulen från att använda dina lokala NVDA-konfigurationsinställningar, såsom tangentbordslayout och skrivande eko.
 
 ### 3.1.14
 * Processen för att återupprätta en anslutning när det finns ett anslutningsproblem är nu mer robust.
-* Åtgärdade ett problem som ibland orsakade att RIM:s bakgrundsuppdateringsprocess stoppades.
-* Om styrenheten kör en äldre version av RIM än målet, innehåller menyn inte längre ett alternativ för att uppdatera målet.
-* Om en skärmläsare eller RIM:s modul för fjärråtkomst körs på måldatorn kan du nu stoppa den via ett alternativ på menyn.
+* Fixat ett problem som ibland orsakade att RIM:s bakgrundsuppdateringsprocess avbröts.
+* Om kontrollenheten kör en äldre version av RIM än målenheten, innehåller menyn inte längre ett alternativ för att uppdatera målenheten.
+* Om en skärmläsare eller RIM:s modul för fjärråtkomst körs på målmaskinen kan du nu stoppa den via ett alternativ i menyn.
 
 ### 3.1.13
-* Åtgärdat ett fel som gjorde att användare loggades ut från RIM efter installation av vissa Windows-uppdateringar.
+* Ett fel som gjorde att användare loggades ut från RIM efter installation av vissa Windows-uppdateringar har åtgärdats.
 
 ### 3.1.12
-* På allmän begäran ber RIM inte längre om en kommentar i slutet av varje session. Du kan fortfarande skriva kommentarer om sessioner i RIM Dashboard. Vi kan komma att lägga till ett konfigurerbart alternativ för att be om en kommentar som en funktion i framtiden.
+* På allmän begäran frågar RIM inte längre efter en kommentar i slutet av varje session. Du kan fortfarande lägga upp kommentarer om sessioner i RIM-instrumentpanelen. Vi kan komma att lägga till ett konfigurerbart alternativ för att be om en kommentar som en funktion i framtiden.
 
 ### 3.1.11
-* Om måldatorn kör minst den här versionen av RIM, men ännu inte har uppdaterat till den senaste versionen, kan styrenheten nu tvinga måldatorn att uppdatera sin installation av RIM via ett nytt alternativ på sessionsmenyn.
+* Om måldatorn kör minst denna version av RIM, men ännu inte har uppdaterats till den senaste versionen, kan kontrollenheten nu tvinga måldatorn att uppdatera sin installation av RIM genom ett nytt alternativ i sessionsmenyn.
 
 ### 3.1.10
-* Du kan nu lägga till en kommentar i slutet av en RIM-session. Sessionskommentarerna kan visas i RIM Dashboard.
-* Fönstret Anslutningsdetaljer har förbättrats. Statistiken uppdateras live så länge fönstret är öppet, och fönstret innehåller nu information om målmaskinen.
+* Du kan nu välja att lägga till en kommentar i slutet av en RIM-session. Sessionskommentarer kan visas i RIM-instrumentpanelen.
+* Fönstret Anslutningsdetaljer har förbättrats. Statistiken uppdateras live så länge fönstret är öppet, och fönstret innehåller nu information om måldatorn.
 
 ### 3.1.9
-* Åtgärdade ett problem som ibland orsakade att en RIM-session fastnade när den försökte återansluta.
+* Ett problem som ibland gjorde att en RIM-session fastnade när den försökte återansluta har åtgärdats.
 
 ### 3.1.8
-* Åtgärdade ett problem som ibland hindrade fjärrtillgänglighetsmodulen från att starta.
+* Ett problem som ibland hindrade fjärråtkomstmodulen från att starta har åtgärdats.
 
 ### 3.1.7
-* När du väljer en målmaskin för en obevakad eller uppmanad session kan du nu söka igenom dina målmaskiner. För att göra detta trycker du på "Välj maskin" som tidigare på skärmen Ge hjälp, tabbar till fältet "Sök", anger den text du vill söka efter och trycker sedan antingen på Enter eller på knappen "Sök".
+* När du väljer en måldator för en obevakad eller uppmanad session kan du nu söka igenom dina måldatorer. För att göra detta trycker du på skärmen Provide Help (Ge hjälp) på &quot;Choose machine&quot; (Välj dator) som tidigare, tabbar till fältet &quot;Search&quot; (Sök), anger texten du vill söka efter och trycker sedan på Enter eller på knappen &quot;Search&quot; (Sök).
 
 ### 3.1.6
-* Åtgärdat ett problem som ibland gjorde det omöjligt att avbryta JAWS tal på det säkra skrivbordet.
+* Ett problem har åtgärdats som ibland gjorde det omöjligt att avbryta JAWS-tal på den säkra skrivbordet.
 
 ### 3.1.5
-* Åtgärdat ett visningsfel som gjorde att listan över obevakade målmaskiner överlappade med knapparna under den.
+* Ett visningsfel har åtgärdats som gjorde att listan över obevakade måldatorer överlappade knapparna under den.
 
 ### 3.1.4
 * Företagskunder kan nu distribuera RIM med hjälp av ett MSI-baserat installationsprogram.
 
 ### 3.1.3
-* Åtgärdat ett fel som kunde få RIM att krascha om RIM-menyn är öppen när en session återansluts.
+* Fixat ett fel som kunde orsaka att RIM kraschade om RIM-menyn var öppen när en session återanslöts.
 
 ### 3.1.2
-* Justerat den visuella stilen för att vara mer tillgänglig för användare med nedsatt syn.
+* Justerat den visuella stilen för att göra den mer tillgänglig för användare med nedsatt syn.
 * Lagt till felmeddelanden om obligatoriska fält lämnas tomma.
 
 ### 3.1.1
-* När du trycker på knappen "RIM Dashboard" i fönstret Provide Help förblir det fönstret nu öppet.
+* När du trycker på knappen &quot;RIM Dashboard&quot; i fönstret Provide Help förblir det fönstret nu öppet.
 
 ### 3.1.0
-Denna version innehåller en komplett kontrollpanel för styrenheter.
-* Alla abonnenter har tillgång till instrumentpanelen, med funktionsuppsättningar som bestäms av abonnemangsnivån.
-* Ta bort funktionerna i appen för att byta namn på, radera och skapa installationsprogram för obevakade maskiner eftersom detta nu är en del av instrumentpanelen
-* Återinfört välkomstsidan.
+Denna version lägger till en komplett hanteringspanel för kontrollanter.
+* Alla prenumeranter har tillgång till instrumentpanelen, med funktionsuppsättningar som bestäms av prenumerationsnivån.
+* Appens funktioner för att byta namn, radera och skapa installationsprogram för obevakade maskiner har tagits bort, eftersom detta nu ingår i instrumentpanelen.
+* Välkomstsidan har återinförts.
 
 ### 3.0.8
-Åtgärdat ett fel som ibland hindrade fjärrskärmsutmatning från att fungera när en uppmaning om användarkontokontroll visades.
+Ett fel som ibland hindrade fjärrskärmutmatningen från att fungera när en användarkontokontrollfråga visades har åtgärdats.
 ### 3.0.7
-* Detta är en uppdatering med buggfixar.
+* Detta är en uppdatering för felkorrigering.
 
 ### 3.0.6
-* Användare med antingen ett RIM Enterprise-abonnemang eller ett RIM Pro-abonnemang med tillägget Enterprise kan nu skapa helt tysta förkonfigurerade installationsprogram för obevakad åtkomst. Om du vill köra ett installationsprogram i tyst läge, oavsett om det är standardinstallationsprogrammet eller ett förkonfigurerat installationsprogram från ett företagskonto, använder du kommandoradsswitchen /S (observera versalerna) när du kör installationsprogrammet.
+* Användare med antingen ett RIM Enterprise-abonnemang eller ett RIM Pro-abonnemang med Enterprise-tillägget kan nu skapa helt tysta förkonfigurerade installationsprogram för obevakad åtkomst. För att köra ett installationsprogram i tyst läge, oavsett om det är standardinstallationsprogrammet eller ett förkonfigurerat installationsprogram från ett företagskonto, använder du kommandoradsväxeln /S (notera versalerna) när du kör installationsprogrammet.
 
 ### 3.0.5
-* Detta är en uppdatering med buggfixar.
+* Detta är en uppdatering för buggfixar.
 
 ### 3.0.4
 * Denna uppdatering återställer kompatibiliteten med Windows 7.
 
 ### 3.0.3
-* RIM visar inte längre felaktigt knappen "Skapa ett installationsprogram för obevakad åtkomst" om du inte har en prenumeration.
+* RIM visar inte längre felaktigt knappen &quot;Skapa ett installationsprogram för obevakad åtkomst&quot; om du inte har ett abonnemang.
 
 ### 3.0.2
-* Om du har köpt ett eller flera RIM-pass har du nu kontroll över om en viss session ska använda ett RIM-pass eller den kostnadsfria nivån, samt vilket pass som ska användas. RIM talar också om för dig hur mycket tid som återstår på ditt valda pass.
+* Om du har köpt ett eller flera RIM-pass har du nu kontroll över om en viss session ska använda ett RIM-pass eller den kostnadsfria nivån, samt vilket pass som ska användas. RIM informerar dig också om hur mycket tid som återstår på ditt valda pass.
 
 ### 3.0.1
-* Denna uppdatering introducerar stöd för de nya personliga RIM-passen, som låter dig använda RIM för teknisk fjärrsupport eller utbildning i upp till 24 timmar för så lite som $10. [Prova ett RIM-pass idag.](https://getrim.app/signup/pass)
-* Knappen som tidigare hette "Skapa ett förkonfigurerat installationsprogram" heter nu "Skapa ett installationsprogram för obevakad åtkomst".
-* När du byter namn på en obevakad målmaskin fylls nu det befintliga namnet i och väljs för enkel redigering.
+* Denna uppdatering introducerar stöd för de nya personliga RIM-passen, som låter dig använda RIM för fjärrsupport eller utbildning i upp till 24 timmar för så lite som 10 dollar. [Prova ett RIM-pass idag.](https://getrim.app/signup/pass)
+* Knappen som tidigare hette &quot;Skapa en förkonfigurerad målinstallatör&quot; heter nu &quot;Skapa en installatör för obevakad åtkomst&quot;.
+* När du byter namn på en obevakad måldator fylls nu det befintliga namnet i och markeras för enkel redigering.
 
 ### 3.0.0
-Denna version avslutar den offentliga betaversionen av RIM. RIM:s prisplaner och restriktioner för kostnadsfri användning gäller nu. För gratiskonton visar RIM nu en användningsmätare tillsammans med en köpknapp.
+Denna version avslutar den offentliga betaversionen av RIM. RIM:s prisplaner och begränsningar för gratis användning gäller nu. För gratiskonton visar RIM nu en användningsmätare tillsammans med en köpknapp.
 ### 0.12.2
-Åtgärdat ett fel som gjorde att den nya snabbtangenten Windows+Shift+Backspace inte fungerade i vissa situationer.
+Fixat ett fel som hindrade den nya snabbtangenten Windows+Skift+Backspace från att fungera i vissa situationer.
 ### 0.12.1
-* Snabbtangenten Control+Shift+Backspace är inte längre aktiv i RIM. Den officiella snabbtangenten är nu Windows+Shift+Backspace. Windows+Shift+Escape är också tillgängligt under en session.
-* RIM:s nya huvudgenvägstangent, Windows+Shift+Backspace, är nu aktiv hela tiden på datorer där RIM är installerat, såvida inte ett annat program gör anspråk på genvägstangenten först. När en RIM-session är aktiv på styrenheten öppnar den här snabbtangenten RIM-menyn om sessionsfönstret är fokuserat, eller fokuserar sessionsfönstret om det är i bakgrunden. På målet öppnar denna snabbtangent RIM-målmenyn medan sessionen är aktiv. På båda sidor, om en session inte är aktiv, öppnar denna snabbtangent RIM-fönstret för att starta en ny session.
-* Vid begäran om obevakad åtkomst fokuserar RIM nu godkännandedialogen på måldatorn på ett tillförlitligt sätt.
-* Modulen för fjärråtkomst har uppdaterats.
+* Snabbtangenten Control+Skift+Backspace är inte längre aktiv i RIM. Den officiella snabbtangenten är nu Windows+Skift+Backspace. Windows+Skift+Escape är också fortfarande tillgänglig under en session.
+* RIM:s nya huvudsakliga snabbtangent, Windows+Skift+Bakåt, är nu alltid aktiv på datorer där RIM är installerat, såvida inte en annan applikation tar i anspråk snabbtangenten först. När en RIM-session är aktiv på kontrollenheten öppnar denna snabbtangent RIM-menyn om sessionsfönstret är i fokus, eller fokuserar sessionsfönstret om det är i bakgrunden. På målenheten öppnar denna snabbtangent RIM-målmenyn medan sessionen är aktiv. Om en session inte är aktiv på någon av sidorna öppnar denna snabbtangent RIM-fönstret för att starta en ny session.
+* När du begär obevakad åtkomst fokuserar RIM nu pålitligt godkännandedialogen på målmaskinen.
+* Uppdaterat modulen för fjärråtkomst.
 
 ### 0.12.0
-Du kan nu skapa ett förkonfigurerat installationsprogram som automatiskt registrerar alla maskiner som det installeras på som obevakade mål i ditt RIM-konto.
+Du kan nu skapa ett förkonfigurerat installationsprogram som automatiskt registrerar alla maskiner där det är installerat som obevakade mål i ditt RIM-konto.
 
-Detta gör du genom att använda den nya knappen "Skapa ett förkonfigurerat installationsprogram" på skärmen "Hjälp". Du måste sedan ange ett basnamn för målmaskinerna; RIM kommer automatiskt att lägga till värdnamnet för varje målmaskin till detta basnamn. När målmaskinerna har registrerats kan du byta namn på dem som med alla obevakade mål. Du kan också ange utgångsdatum för installationsprogrammet, vilket måste vara mellan 7 och 30 dagar. När RIM har skapat installationsprogrammet får du en länk som du antingen kan dela direkt med målanvändarna eller ladda ner själv så att du kan dela installationsprogrammet på något annat sätt.
+För att göra detta använder du den nya knappen &quot;Skapa ett förkonfigurerat målinstallationsprogram&quot; på skärmen &quot;Ge hjälp&quot;. Du måste sedan ange ett basnamn för målmaskinen/målmaskinerna. RIM lägger automatiskt till värdnamnet för varje målmaskin till detta basnamn. När målmaskinerna har registrerats kan du byta namn på dem precis som med alla obevakade mål. Du kan också ställa in installationsprogrammets utgångsdatum, som måste vara mellan 7 och 30 dagar. När RIM har skapat installationsprogrammet får du en länk som du antingen kan dela direkt med mål användarna eller ladda ner själv så att du kan dela installationsprogrammet på något annat sätt.
 
-Observera att när en målanvändare kör det förkonfigurerade installationsprogrammet visas först en bekräftelsedialog som förklarar vad installationsprogrammet kommer att göra. I dialogrutan anges namnet på den kontrollant som skapade installationsprogrammet. Detta bekräftelsesteg är utformat för att förhindra missbruk. Ett helt tyst läge kommer att finnas tillgängligt för företagskunder.
+Observera att när en mål användare kör det förkonfigurerade installationsprogrammet visas först en bekräftelsedialogruta som förklarar vad installationsprogrammet kommer att göra. Denna dialogruta innehåller namnet på den kontrollant som skapade installationsprogrammet. Detta bekräftelsesteg är utformat för att förhindra missbruk. Ett helt tyst läge kommer att finnas tillgängligt för företagskunder.
 
 ### 0.11.6
-* RIM har nu ett nytt alternativ för att registrera en maskin för obevakad åtkomst under ditt RIM-konto utan att behöva starta en fjärrsession med hjälp av ett nyckelord. På den maskin som du vill registrera trycker du på den nya knappen "Register This Machine for Unattended Access" på skärmen Receive Help. Logga sedan in på ditt RIM-konto om du inte redan har gjort det på den maskinen, ange ett namn för maskinen och du är klar. Observera att vi fortfarande arbetar på ett sätt att anpassa RIM-installationsprogrammet, för att möjliggöra massdistribution och göra det så enkelt som möjligt att konfigurera obevakad åtkomst på maskiner som du inte redan har åtkomst till.
-* RIM förhindrar nu att du försöker öppna en obevakad anslutning till samma maskin där du kör styrenheten.
-* Vi experimenterar nu med en tredje snabbtangent för att öppna RIM-menyn: Windows+Shift+Backspace. Det innebär att det nu finns tre alternativ: Windows+Shift+Escape, Windows+Shift+Backspace och Control+Shift+Backspace. Vi har ännu inte fattat något slutgiltigt beslut om vilken eller vilka snabbtangenter vi ska behålla, men vi kommer att göra det innan den offentliga betan avslutas. Vi uppskattar din feedback.
-* De flesta alternativen i RIM-menyn har nu kortkommandon med en bokstav som du kan trycka på när du har öppnat menyn.
-* Denna uppdatering introducerar en mer tillförlitlig lösning på de intermittenta problem som användare har rapporterat med JAWS som inte känner igen tangentbordsinmatning från RIM. Meddela oss om du fortsätter att ha problem med detta scenario.
+* RIM har nu ett nytt alternativ för att registrera en maskin för obevakad åtkomst under ditt RIM-konto utan att behöva starta en fjärrsession med ett nyckelord. På den maskin som du vill registrera trycker du på den nya knappen &quot;Registrera denna maskin för obevakad åtkomst&quot; på skärmen &quot;Få hjälp&quot;. Logga sedan in på ditt RIM-konto om du inte redan har gjort det på den maskinen, ange ett namn för maskinen, och du är klar. Observera att vifortfarande arbetar på ett sätt att anpassa RIM-installationsprogrammet för att möjliggöra massdistribution och göra det så enkelt som möjligt att konfigurera obevakad åtkomst på maskiner som du inte redan har åtkomst till.
+* RIM förhindrar nu att du försöker öppna en obevakad anslutning till samma maskin där du kör kontrollenheten.
+* Vi experimenterar nu med en tredje snabbtangent för att öppna RIM-menyn: Windows+Skift+Backspace. Det innebär att det nu finns tre alternativ: Windows+Skift+Escape, Windows+Skift+Backspace och Kontroll+Skift+Backspace. Vi har ännu inte fattat något slutgiltigt beslut om vilken eller vilka snabbtangenter vi ska behålla, men vi kommer att besluta innan den offentliga betaversionen avslutas. Vi uppskattar dina synpunkter.
+* De flesta alternativ i RIM-menyn har nu kortkommandon med en enda bokstav som du kan trycka på när du har öppnat menyn.
+* Denna uppdatering introducerar en mer tillförlitlig lösning på de intermittenta problem som användare har rapporterat med JAWS som inte känner igen tangentbordsinmatning från RIM. Vänligen meddela oss om du fortfarande har problem med detta scenario.
 
 ### 0.11.5
-* Denna uppdatering introducerar två nya snabbtangenter. Windows+Shift+D kopplar bort sessionen när den trycks ned på endera sidan. För styrenheten vänder Windows+Shift+F sessionen.
-* Den här uppdateringen lägger till skydd mot att tangentbordsmodifierare fastnar på endera maskinen.
-* Det finns ett nytt menyalternativ, "Lås målmaskinen", som motsvarar att trycka på Windows+L på målmaskinen.
-* RIM har nu ett "Om"-fönster, där du kan kontrollera versionsnumret, kontakta Pneuma Solutions för support och feedback, läsa manualen och se versionsändringsloggen.
-* RIM ber inte längre om feedback i slutet av en session eller när fönstret "Provide Help" stängs.
+* Denna uppdatering introducerar två nya snabbtangenter. Windows+Skift+D kopplar bort sessionen när den trycks ned på någon av sidorna. För kontrollenheten vänder Windows+Skift+F sessionen.
+* Denna uppdatering lägger till skydd mot att tangentbordsmodifierare fastnar på någon av maskinerna.
+* Det finns ett nytt menyalternativ, &quot;Lås målmaskinen&quot;, som motsvarar att trycka på Windows+L på målet.
+* RIM har nu ett &quot;Om&quot;-fönster där du kan kontrollera versionsnumret, kontakta Pneuma Solutions för support och feedback, läsa manualen och visa versionsändringsloggen.
+* RIM ber inte längre om feedback i slutet av en session eller när du stänger fönstret &quot;Ge hjälp&quot;.
 
 ### 0.11.4
-Denna uppdatering åtgärdar några buggar i processen för omstart och återanslutning. Vi har ännu inte diagnostiserat allt som har rapporterats, men vi kunde hitta och åtgärda några problem i våra egna tester.
+Denna uppdatering åtgärdar några buggar i omstarts- och återanslutningsprocessen. Vi har ännu inte diagnostiserat allt som har rapporterats, men vi kunde hitta och åtgärda några problem i våra egna tester.
 ### 0.11.3
-* RIM uppdaterar nu sig själv i bakgrunden på alla maskiner. RIM inkluderar nu det aktuella versionsnumret i verktygstipset på ikonen i facket. Detta är den sista uppdateringen som användarna behöver installera manuellt, oavsett maskinkonfiguration.
-* Om målmaskinen startas om, men inte med RIM:s Reboot and Reconnect-funktion, frågar RIM nu styrenheten om de vill återansluta till målet efter omstarten. Om den personuppgiftsansvarige svarar nej kommer målmaskinen inte att vänta på en återanslutning efter omstarten.
+* RIM uppdaterar sig nu i bakgrunden på alla maskiner. RIM inkluderar nu det aktuella installationsversionsnumret i verktygstips för dess fältikon. Detta är den sista uppdateringen som användare behöver installera manuellt, oavsett maskinens konfiguration.
+* Om målmaskinen startas om, men inte använder RIM:s funktion för omstart och återanslutning, frågar RIM nu kontrollenheten om den vill återansluta till målet efter omstarten. Om kontrollenheten svarar nej, väntar målet inte på en återanslutning efter omstarten.
 
 ### 0.11.2
-* RIM uppdaterar nu sig själv i bakgrunden på obevakade målmaskiner. Detta är den sista uppdateringen som du behöver installera manuellt på dina obevakade mål.
-* Vid uppdatering före en interaktiv session behöver RIM inte längre gå igenom User Account Control. Detta innebär att användare som inte är administratörer kan uppdatera RIM när det har installerats åt dem av en administratör.
+* RIM uppdaterar nu sig själv i bakgrunden på obevakade måldatorer. Detta är den sista uppdateringen som du behöver installera manuellt på dina obevakade mål.
+* Vid uppdatering före en interaktiv session behöver RIM inte längre gå igenom användarkontokontroll. Detta innebär att användare som inte är administratörer kan uppdatera RIM när det har installerats för dem av en administratör.
 
 ### 0.11.1
-Detta är en buggfix-uppdatering. Observera att obevakade mål fortfarande måste uppdateras manuellt genom att köra det senaste RIM-installationsprogrammet. Nu kommer du dock att kunna ansluta till ett obevakat mål efter att installationen är klar, utan att någon behöver stänga fönstret "Ta emot hjälp".
+Detta är en uppdatering för buggfixar. Observera att obevakade mål fortfarande måste uppdateras manuellt genom att köra den senaste RIM-installationsprogrammet. Nu kan du dock ansluta till ett obevakat mål efter att installationen är klar, utan att någon behöver stänga fönstret &quot;Få hjälp&quot;.
 ### 0.11.0
-* Funktionen för omstart och återanslutning är nu implementerad. Med det nya alternativet Reboot and Reconnect på styrenhetens RIM-meny kan du göra antingen en standardomstart eller en nödomstart och automatiskt fortsätta sessionen när omstarten är klar. RIM återansluter även om målmaskinen startas om av någon annan anledning, t.ex. när ett installationsprogram startar om maskinen.
-* RIM försöker också automatiskt återansluta om anslutningen bryts av någon anledning. Detta underlättar vid opålitliga Internetanslutningar.
-* När du kör en obevakad session eller använder Omstart och återanslutning kan du nu använda RIM medan målmaskinen är på Windows inloggningsskärm. Observera att RIM måste återansluta sessionen när måldatorn övergår från inloggningsskärmen till huvudskrivbordet. Detta är en känd begränsning i den nuvarande implementeringen som vi kan komma att åtgärda i en framtida uppdatering.
-* RIM är nu fullt fungerande när målanvändaren inte har administratörsbehörighet på måldatorn, så länge tjänsten Remote Incident Manager Host körs på den maskinen. Observera att administratörsbehörighet fortfarande krävs för att installera RIM-uppdateringar. Observera också att nya versioner av RIM fortfarande måste installeras manuellt på obevakade mål. Vi arbetar på lösningar för båda dessa problem.
+* Funktionen Starta om och återanslut har nu implementerats. Med den nya alternativet Starta om och återanslut i kontrollerns RIM-meny kan du göra en standard- eller nödstart och automatiskt fortsätta sessionen när omstarten är klar. RIM återansluter också om måldatorn startas om av någon annan anledning, till exempel när ett installationsprogram startar om datorn.
+* RIM försöker också automatiskt återansluta om anslutningen av någon anledning bryts. Detta underlättar vid opålitliga internetanslutningar.
+* När du kör en obevakad session eller använder omstart och återanslutning kan du nu använda RIM medan måldatorn är på Windows-inloggningsskärmen. Observera att RIM måste återansluta sessionen när måldatorn övergår från inloggningsskärmen till huvudskrivbordet. Detta är en känd begränsning i den nuvarande implementeringen som vi kan komma att åtgärda i en framtida uppdatering.
+* RIM är nu fullt funktionellt när mål användaren inte har administratörsbehörighet på måldatorn, så länge Remote Incident Manager Host-tjänsten körs på den datorn. Observera att administratörsbehörighet fortfarande krävs för att installera RIM-uppdateringar. Observera också att nya versioner av RIM fortfarande måste installeras manuellt på obevakade mål. Vi arbetar på lösningar för båda dessa problem.
 
 ### 0.10.10.0
-Om du har konfigurerat obevakad åtkomst till en eller flera målmaskiner kan du nu skapa en genväg för direkt åtkomst till någon av dessa maskiner. Tryck bara på knappen "Skapa genväg" under listan över obevakade mål, så skapar RIM en genväg på skrivbordet.
+Om du har konfigurerat obevakad åtkomst till en eller flera måldatorer kan du nu skapa en genväg för att direkt komma åt någon av dessa datorer. Tryck bara på knappen &quot;Skapa genväg&quot; under listan över obevakade mål, så skapar RIM en genväg på ditt skrivbord.
 ### 0.10.9
-RIM fungerar nu på en målmaskin som inte har någon ljudenhet. Detta, i kombination med den befintliga fjärrtillgänglighetsmodulen, ger åtkomst till servrar och virtuella maskiner som tidigare inte kunde nås med en skärmläsare annat än via RDP och dess mycket suboptimala ljudutgång.
+RIM fungerar nu på en måldator som saknar ljudenhet. Detta, i kombination med den befintliga modulen för fjärråtkomst, öppnar upp åtkomst till servrar och virtuella maskiner som tidigare inte kunde nås med en skärmläsare förutom via RDP och dess mycket suboptimala ljudutgång.
 ### 0.10.8
-* Om du ännu inte har förbeställt det första året av din RIM Pro-prenumeration kan du nu enkelt göra det med hjälp av den nya knappen på skärmen "Ge hjälp". Vi introducerar också nya prisalternativ för att lägga till extra styrenheter och samtidiga kanaler till en RIM Pro-prenumeration. Du kan lägga till upp till två extra controller-användare och två extra kanaler för 500 USD per år vardera. RIM fortsätter att vara gratis under den offentliga betan, men om du förbeställer din prenumeration nu kommer du att ha oavbruten service när den offentliga betan avslutas den 1 september.
-* Vi introducerar Control+Shift+Backspace som en alternativ snabbtangent för att öppna RIM-menyn på båda sidor av anslutningen. Vi stöder också fortfarande Windows+Shift+Escape för tillfället, men planen är att standardisera på Control+Shift+Backspace som den enda snabbtangenten för alla steg i RIM.
-* Om du trycker på knappen "Ge hjälp istället" på skärmen "Ta emot hjälp", ställer RIM inte längre in detta val som standard förrän du har loggat in på ditt RIM-konto.
-* Åtgärdat några JavaScript-fel som uppstod i sällsynta fall.
+* Om du ännu inte har förbeställt det första året av ditt RIM Pro-abonnemang kan du nu enkelt göra det med den nya knappen på skärmen &quot;Ge hjälp&quot;. Vi introducerar också nya prisalternativ för att lägga till extra kontroller och samtidiga kanaler till ett RIM Pro-abonnemang. Du kan lägga till upp till två ytterligare kontrollanvändare och två ytterligare kanaler för 500 dollar per år vardera. RIM fortsätter att vara gratis under den offentliga betaversionen, men om du förbeställer ditt abonnemang nu kommer du att ha oavbruten service när den offentliga betaversionen avslutas den 1 september.
+* Vi introducerar Control+Shift+Backspace som ett alternativt snabbtangent för att öppna RIM-menyn på båda sidor av anslutningen. Vi stöder fortfarande Windows+Shift+Escape för tillfället, men planen är att standardisera Control+Shift+Backspace som det enda snabbtangenten för alla steg i RIM.
+* Om du trycker på knappen &quot;Ge hjälp istället&quot; på skärmen &quot;Få hjälp&quot; ställer RIM inte längre in detta val som standard förrän du har loggat in på ditt RIM-konto.
+* Fixade några JavaScript-fel som inträffade i sällsynta fall.
 
 ### 0.10.7
-du kan nu använda mushjulet i en fjärrsession.
+Du kan nu använda mushjulet i en fjärrsession.
 ### 0.10.6
 Förhoppningsvis har alla återstående problem som orsakade att installationsprocessen hängde sig åtgärdats.
 ### 0.10.5
-Denna version innehåller några förändringar under huven. I synnerhet har vi inkluderat uppdateringar av installationen och underliggande paket för att åtgärda problem som gör att installationen hänger sig.
+Denna version innehåller några förändringar under huven. Vi har särskilt inkluderat uppdateringar av installationen och underliggande paket för att åtgärda problem som orsakade att installationen hängde sig.
 ### 0.10.4
-* Det finns nu ett alternativ på RIM-menyn för att skicka Control+Alt+Delete till målmaskinen.
-* Du kan nu öppna RIM-menyn genom att högerklicka på titelfältet i sessionsfönstret. Vi planerar att lägga till möjligheten att öppna RIM-menyn genom att klicka på RIM-ikonen i den vänstra änden av titelfältet också.
+* Det finns nu ett alternativ i RIM-menyn för att skicka Control+Alt+Delete till måldatorn.
+* Du kan nu öppna RIM-menyn genom att högerklicka på titelraden i sessionsfönstret. Vi planerar att lägga till alternativet att öppna RIM-menyn genom att klicka på RIM-ikonen i vänstra änden av titelraden.
 
 ### 0.10.3
-* Styrenheten kan nu vända en obevakad session.
-* Styrenheten kan nu byta namn på en obevakad målmaskin.
-* Åtgärdat ett fel som ibland gjorde att sessionen inte svarade efter kopiering till urklipp.
-* Åtgärdat ett fel som ibland ledde till att start av modulen för fjärråtkomst misslyckades med ett JavaScript-fel.
+* Kontrollenheten kan nu vända en obevakad session.
+* Kontrollenheten kan nu byta namn på en obevakad måldator.
+* Fixat ett fel som ibland gjorde att sessionen slutade svara efter kopiering till urklipp.
+* Fixat ett fel som ibland gjorde att start av fjärråtkomstmodulen misslyckades med ett JavaScript-fel.
 
 ### 0.10.2
-Åtgärdade en konflikt mellan tillägget RIM Client Support NVDA och tillägget Dropbox.
+Fixat en konflikt mellan RIM Client Support NVDA-tillägget och Dropbox-tillägget.
 ### 0.10.1
-* Du kan nu förbeställa det första året av din prenumeration på RIM Pro för 999 USD. Länken till förbeställningen kommer att finnas i feedbackfönstret när du avslutar en fjärrsession. Eller så kan du följa direktlänken här: [Förbeställ RIM Pro.](https://getrim.app/signup/rim_preorder)
-* Om du har obevakade målmaskiner i ditt RIM-konto visas nu knappen för att starta en obevakad session mer tillförlitligt på skärmen "Ge hjälp".
-* När en session vänds kan den ursprungliga styrenheten nu vända sessionen tillbaka genom att öppna RIM-menyn med Windows+Shift+Escape.
+* Du kan nu förbeställa det första året av ditt abonnemang på RIM Pro för 999 $. Länken för förbeställning kommer att finnas tillgänglig i feedbackfönstret när du avslutar en fjärrsession. Eller så kan du följa den direkta länken här: [Förbeställ RIM Pro.](https://getrim.app/signup/rim_preorder)
+* Om du har obevakade måldatorer i ditt RIM-konto visas nu knappen för att starta en obevakad session på ett mer tillförlitligt sätt på skärmen ”Ge hjälp”.
+* När du växlar mellan sessioner kan den ursprungliga kontrollern nu växla tillbaka till den ursprungliga sessionen genom att öppna RIM-menyn med Windows+Skift+Escape.
 
