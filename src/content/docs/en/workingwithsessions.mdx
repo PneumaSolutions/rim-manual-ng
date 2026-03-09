@@ -55,6 +55,8 @@ As mentioned earlier, accessing the RIM menu directs you back to your machine. T
     - This option shows if the target's machine is running an older version of RIM.
 - Re-install RIM as Administrator on Target: This option will attempt to reinstall RIM as admin on a Windows target, requiring the target user to accept the admin permission request by themselves and/or with the help of their company IT.
 - Minimize Session (**Windows+Shift+M**): brings control back to your machine as described above
+- Open Chat: Opens the text chat for a given session
+    - Note that this option additionally appears in the target-side session menu.
 - Transfer File to Target: Appears if a file is on the clipboard.
     - Although this alternate method of completing a file transfer is always available, it is only necessary for transferring files to Mac targets.
 - Flip Session (**Windows+Shift+F**): Allows your client to remote control your machine and hear its audio. As the original controller, you can flip the session back by selecting this option a second time.
@@ -92,6 +94,8 @@ As mentioned earlier, accessing the RIM menu directs you back to your machine. T
     - This option shows if the target's machine is running an older version of RIM.
 - Re-install RIM as Administrator on Target: This option will attempt to reinstall RIM as admin on a Windows target, requiring the target user to accept the admin permission request by themselves and/or with the help of their company IT.
 - Minimize Session (**Option+Shift+M**): brings control back to your machine as described above
+- Open Chat: Opens the text chat for a given session
+    - Note that this option additionally appears in the target-side session menu.
 - Transfer File to Target: Appears if a file is on the clipboard.
     - Although this alternate method of completing a file transfer is always available, it is only necessary for transferring files to Mac targets.
 - Flip Session (**Option+Shift+F**): Allows your client to remote control your machine and hear its audio. As the original controller, you can flip the session back by selecting this option a second time.
@@ -123,6 +127,48 @@ As mentioned earlier, accessing the RIM menu directs you back to your machine. T
     - Remember that this option is available to both sides of the session.
 
 </MacOS>
+
+### Session Chat
+
+Text communication via RIM's built-in session chat capability can be a useful option in situations where a voice conversation isn't possible or practical. It can even be used to supplement an existing voice conversation, I.E. to send links, instructions, or the like.  
+
+#### Starting a Chat
+A session chat can be initiated in one of the following ways:  
+* Controller-side
+    * A controller can select the "Open Chat" option off the session menu.
+    * When the chat window appears on the controlling computer, focus lands in the edit box wherein a message can be typed and sent using the enter key.
+    * A message sent to the target user will trigger a chat window on their machine. At this point, back-and-forth chat is now possible.
+    * Note that it is not possible to control the target computer while the user's chat window is in focus. Control of the target will resume if any of the following conditions are met:
+        * The target user shifts focus away from the chat window, in which case control may resume until they shift focus back to the chat window.
+        * The target user closes the chat window by pressing escape.
+        * If the chat window on the controlling computer is closed and 30 seconds have passed, the target user's chat window will automatically disengage, at which point control resumes.
+* Target-side:
+    * The target user can select the "Open Chat" option off the session menu. Doing so will immediately trigger a chat window on the controlling computer.
+    * At this point, back-and-forth chat is now possible.
+    * If the target user closes the chat window on their side, the chat window will remain open on the controlling computer. A subsequent message from the controller will revive the chat window on the target computer.
+
+#### Working within a Chat
+While the chat window is in focus, messages will be presented in both speech and Braille as they arrive. A machine that does not have the chat window in focus will be alerted of chat messages through standard Windows toast notifications.  
+While outside the message box, the chat can be navigated like a standard webpage. Messages sent by the party opposite from the one viewing the message can be copied to the clipboard via the "Copy" button adjacent to the message in question.
+
+#### Chat Transcripts
+
+Chat transcripts are saved in a user-configurable directory. By default, this is the "documents/Remote Incident Manager/Chat" directory in your user folder.
+
+Currently, the only way to modify the directory is via a configuration file, thus the procedure is only available in English.  
+
+<Windows>
+The configuration file can be accessed via the run dialog by pasting the following:  
+%appdata%\remote-incident-manager\config.toml  
+</Windows>
+<MacOS>  
+The config.toml file will be under $HOME/Library/Application Support/remote-incident-manager
+</MacOS>
+Once inside the configuration file, look for the <span translate="no">directory</span> line under the <span translate="no">Chat</span> line, and modify the directory to one of your choosing.  
+Note that backslashes must be properly escaped in the case of Windows directories.  
+Once you save the configuration, the changes will take effect for subsequent sessions. There is no need to restart the application.
+
+
 
 ### File Transfers
 
