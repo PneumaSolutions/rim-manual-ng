@@ -5,7 +5,7 @@ title: Installation
 import Windows from "~/components/platform/Windows.astro"
 import MacOS from "~/components/platform/MacOS.astro"
 
-How you acquire and install Remote Incident Manager depends on your use case and configuration, but in any case the process is quite straight forward.
+How you acquire and install Remote Incident Manager depends on your use case and configuration, but in any case the process is quite straightforward.
 <Windows>
 ### Typical Installation for Individuals
 There is only one installation package to use, whether you are offering or receiving assistance.
@@ -17,7 +17,7 @@ There is only one installation package to use, whether you are offering or recei
 
 That's all there is to it! A desktop shortcut will be automatically created to aid in subsequent launches of RIM. Additionally, RIM sets up a multipurpose global hotkey (Windows+Shift+Backspace) which, among other things, automatically launches the program from wherever you are.
 ### Unattended or Prompted Access Installer
-If the person providing assistance has provided you a custom installer, you will be advised of this when the installer launches. This is because this installer will automatically configure RIM for what is known as either unattended or prompted access. This is what will allow the person helping you to initiate a session with your computer without you having to enter a keyword. We will cover these types of sessions indepth later on in this manual.
+If the person providing assistance has provided you a custom installer, you will be advised of this when the installer launches. This is because this installer will automatically configure RIM for what is known as either unattended or prompted access. This is what will allow the person helping you to initiate a session with your computer without you having to enter a keyword. We will cover these types of sessions in-depth later on in this manual.
 
 ### Installing without Administrative Privileges
 
@@ -29,7 +29,7 @@ Running without admin does not result in any limitations on the controller side 
 * RIM doesn't run on the Windows sign-in screen. 
 * RIM has no access to the secure desktop; this means no access to UAC prompts, or to the sign-in screen when unlocking the machine. 
 * Remote keyboard input doesn't work if the focus on the target is in an elevated application, or even an application running with the Windows UI Access flag, such as an installed copy of a screen reader. 
-* The option to press Ctrl+Alt+Delete doesn't work. 
+* The option to press CTRL+Alt+Delete doesn't work. 
 
 As a controller, you will be able to attempt a re-installation of RIM with admin privileges during a session.
 
@@ -48,7 +48,7 @@ To install RIM on your Windows Server, connect to the server via RDP. In order t
 #### Obtaining Sound and running Narrator
 
 For Windows Server distributions prior to 2022, you will need to manually enable sound before launching Narrator. Do the following once connected:
-1. Press windows key+r.
+1. Press Windows key+R.
 1. Type cmd and hit enter. Wait about ten seconds.
 1. Type:  
 **net start audiosrv**  
@@ -74,11 +74,11 @@ While every effort is made to ensure a smooth installation, sometimes problems d
 
 ### Permissions
 
-Due to macOS's precautionary behavior when dealing with applications of this nature for the first time, you will need to grant some permissions to Remote Incident Manager upon first launch. The number of permissions will vary depending on whether or not your Mac will be providing or receiving remote help.
+Due to ma Cos's precautionary behavior when dealing with applications of this nature for the first time, you will need to grant some permissions to Remote Incident Manager upon first launch. The number of permissions will vary depending on whether or not your Mac will be providing or receiving remote help.
 
 #### Karabiner HID driver (Target only)
 
-This is the driver that processes input from a controlling computer that is received by RIM. This is a system extension, thus you must manually approve it. Rim will bring up a system dialogue that will take you to the Privacy and Security section of system settings. You will then want to scroll until you locate the Allow button. Clicking this will prompt you for your password or touch ID.
+This is the driver that processes input from a controlling computer that is received by RIM. This is a system extension, thus you must manually approve it. RIM will bring up a system dialogue that will take you to the Privacy and Security section of system settings. You will then want to scroll until you locate the Allow button. Clicking this will prompt you for your password or Touch ID.
 
 #### Notifications
 
@@ -106,7 +106,7 @@ If you are receiving remote support from an organization who has a private RIM s
 
 ### Uninstalling RIM
 
-Should you encounter any show-stopping problems with your installation of RIM, you may wish to perform a clean reinstall of the app. Due to the complex nature of the RIM distribution for Mac OS, simply moving the app to the trash will not uninstall it, and thus may not fully resolve your issue.
+Should you encounter any show-stopping problems with your installation of RIM, you may wish to perform a clean reinstall of the app. Due to the complex nature of the RIM distribution for macOS, simply moving the app to the trash will not uninstall it, and thus may not fully resolve your issue.
 
-RIM provides an easy method to fully uninstall itself. When you click the "About" button in the main window, you will see an uninstall button in the About screen that appears. Clicking this button will result in a confirmation dialogue, afterwhich you will be prompted for your password or touch ID in order to proceed with uninstallation. You will be given a confirmation message once the uninstallation is complete.
+RIM provides an easy method to fully uninstall itself. When you click the "About" button in the main window, you will see an uninstall button in the About screen that appears. Clicking this button will result in a confirmation dialogue, after which you will be prompted for your password or Touch ID in order to proceed with the uninstall. You will be given a confirmation message once the uninstall is complete.
 </MacOS>
