@@ -1,4 +1,4 @@
----
+﻿---
 title: Working within a Session
 ---
 
@@ -59,6 +59,9 @@ As mentioned earlier, accessing the RIM menu directs you back to your machine. T
     - Note that this option additionally appears in the target-side session menu.
 - Transfer File to Target: Appears if a file is on the clipboard.
     - Although this alternate method of completing a file transfer is always available, it is only necessary for transferring files to Mac targets.
+- Browse Files on Target: Enables file transfers by opening the target computer's filesystem in a dedicated window.
+    - This file transfer method requires permission from the target user during keyword sessions.
+    - This option will not appear for a controller working within an enterprise organization unless the organization has enabled the feature.
 - Flip Session (**Windows+Shift+F**): Allows your client to remote control your machine and hear its audio. As the original controller, you can flip the session back by selecting this option a second time.
 - Start/stop Voice Conversation: Allows you to toggle the voice chat on or off for your session.
     - During an unattended session, this option will present a permissions dialogue that the user must be present to respond to. However, prompted sessions still initiate voice conversations upon activation by the controller.
@@ -98,6 +101,9 @@ As mentioned earlier, accessing the RIM menu directs you back to your machine. T
     - Note that this option additionally appears in the target-side session menu.
 - Transfer File to Target: Appears if a file is on the clipboard.
     - Although this alternate method of completing a file transfer is always available, it is only necessary for transferring files to Mac targets.
+- Browse Files on Target: Enables file transfers by opening the target computer's filesystem in a dedicated window.
+    - This file transfer method requires permission from the target user during keyword sessions.
+    - This option will not appear for a controller working within an enterprise organization unless the organization has enabled the feature.
 - Flip Session (**Option+Shift+F**): Allows your client to remote control your machine and hear its audio. As the original controller, you can flip the session back by selecting this option a second time.
 - Start/stop Voice Conversation: Allows you to toggle the voice chat on or off for your session.
     - During an unattended session, this option will present a permissions dialogue that the user must be present to respond to. However, prompted sessions still initiate voice conversations upon activation by the controller.
@@ -172,7 +178,10 @@ Once you save the configuration, the changes will take effect for subsequent ses
 
 ### File Transfers
 
-RIM provides a simple avenue for transferring files, irrespective of the platform used.
+RIM provides a few simple avenues for transferring files, irrespective of the platform used.
+
+#### Clipboard-based File Transfers
+
 1. Bring up the RIM menu, and click on "Minimize Session." Control will be directed back to your computer.
 1. Select the file(s) and/or folder(s) you want to transfer using your file manager.
 1. Copy the selected contents to the clipboard in the usual way. You will receive a notification that a file is ready to be transferred. You have two options.
@@ -184,6 +193,75 @@ RIM provides a simple avenue for transferring files, irrespective of the platfor
     - Last but not least, paste as you normally would.
 
 Note that the transfer time will depend entirely on the size of the content being sent as well as your network speed.
+
+#### The File Browser
+
+Using the file browser allows you, as the controller, to seamlessly transfer files to and from the target computer via a unified interface. This is particularly handy if you frequently provide assistance to end users using a desktop platform different from your own. What's more, the file browser allows file transfers to happen without taking the end user away from a task they're working on.  
+In addition to file transfers, the built-in file browser interface allows files and folders to be renamed and sent to the recycle bin or trash.
+
+##### Activating the File Browser
+
+Activate the file browser by choosing the "Browse Files on Target" option from the session menu.
+
+Note: During a keyword session, this file transfer method requires end user approval in order to commence. This is because this functionality conducts file operations without opening an Explorer or Finder window on the target computer.
+
+The target user will receive a dialog asking whether they wish to allow or deny the request.
+
+##### Using the File Browser
+
+If the target user accepts your request to initiate the file transfer, you will be placed in a file browser window. This window presents a dual-list layout similar to what you'd expect in multifunction file managers such as Total Commander or FTP clients like FileZilla. Your focus will initially land on the directory structure for your own system. The directory listing for the target computer is presented on the right side of the screen and can be reached easily via the Tab key.
+
+<Windows>
+
+1. Select an item (or items) in either list. The following keys can be used to traverse the directories:
+    * Return: Opens a folder.
+    * Backspace: Goes up a level, i.e., back into the parent folder.
+2. Once you are satisfied with the selection, press Control+C to copy.
+3. Move to the other list and press Control+V to paste. Note that the transfer time will depend entirely on the size of the content being sent as well as your network speed.
+4. While in either list, you can:
+    * Press F2 to rename an item.
+    * Press Delete to move the selected items to the recycle bin.
+        * RIM will never permanently delete a file under any circumstance.
+    * Press F5 to refresh a list.
+
+</Windows>
+
+<MacOS>
+
+1. Select an item (or items) in either list. The following keys can be used to traverse the directories:
+    * Return: Opens a folder.
+    * Delete or Command+Up Arrow: Goes up a level, i.e., back into the parent folder.
+2. Once you are satisfied with the selection, press Command+C to copy.
+3. Move to the other list and press Command+V to paste. Note that the transfer time will depend entirely on the size of the content being sent as well as your network speed.
+4. While in either list, you can:
+    * Press F2 to rename an item.
+    * Press Command+Delete to move the selected items to the trash.
+        * RIM will never permanently delete a file under any circumstance.
+    * Press Command+R to refresh a list.
+
+</MacOS>
+
+##### Known Limitations
+
+###### Power Loss Recovery
+
+- If RIM is interrupted during an upload due to a crash or power connection loss, partial files stay on the target. Only an intentional  cancelation or a documented transfer failure removes partial artifacts.
+
+###### File Deletion with Removable Devices
+
+Some removable devices do not have an internal trash mechanism. If you attempt to delete a file from one of these devices, RIM will clearly inform you of this limitation and abort the deletion. This safety measure ensures that RIM never inadvertently performs a destructive delete operation.
+If you are assisting an end user with a file deletion and encounter this limitation, you can browse to the file on the target computer and delete it in the usual manner. When you delete a file this way, the operating system handles the operation, not RIM.
+
+###### macOS Limitations
+
+* Mac apps and packages, i.e., files that end in a .app or a .pkg extension cannot be copied. RIM will tell you to compress them into a zip, a task which must be done outside the file browser.
+* Content from iCloud Drive canot be accessed via the file browser.
+* An upload to a Mac is refused if a path is 1024 bytes or longer.
+
+###### File Attributes and Permissions
+
+* - Read-only and hidden attributes are not copied.
+* The executable bit is kept only for files copied to a Mac. Downloaded files are never executable for safety.
 
 ### Session Recording
 

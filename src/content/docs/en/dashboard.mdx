@@ -60,9 +60,18 @@ The permissions that can be toggled include:
 * Allow text chat during the session
     * This option is disabled by default, making session chat a strictly opt-in feature for enterprise organizations and/or pro customers with the enterprise addon.
     * If this option is unchecked, the option to open the chat will disappear from the session menu.
+* Allow the controller to browse and transfer files on the target machine via the file browser
+    * If this option is unchecked, the option to browse files on the target will disappear from the session menu.
 
+Once you have configured the permissions to your satisfaction, activate the "Update" button. Most changes take effect immediately in any sessions that are active at the time the permissions are changed. In particular:
 
-Once you have configured the permissions to your satisfaction, activate the "Update" button. Changes will not affect any active sessions at the time the permissions are changed. They will however take effect for any and all future sessions without requiring a reboot of the client.
+* A flipped session will be immediately reversed.
+* An active voice conversation will cease.
+* A pending request for unattended access will be aborted.
+* Clipboard operations, including file transfers in progress, will cease.
+* A session recording in progress will terminate immediately. However, RIM will not discard the recording.
+* A text chat in progress will cease.
+* The file browser will disappear, and any file transfers in progress will be canceled.
 
 ### Managing Targets
 
