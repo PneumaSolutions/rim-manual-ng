@@ -31,7 +31,9 @@ Running without admin does not result in any limitations on the controller side 
 * Remote keyboard input doesn't work if the focus on the target is in an elevated application, or even an application running with the Windows UI Access flag, such as an installed copy of a screen reader. 
 * The option to press Ctrl+Alt+Delete doesn't work. 
 
-As a controller, you will be able to attempt a re-installation of RIM with admin privileges during a session.
+If RIM detects that you’ve connected to a Windows target whose copy of RIM is running with restricted capabilities, a dialog will appear when the session begins to let you know. You can choose to reinstall RIM as administrator right away or continue the session normally. If you opt out of this dialog, you can still reinstall RIM with administrator privileges from the session menu.
+
+Note that the opt-out preference applies only to your RIM account and the specific target in question. If you connect to a different target, or if someone else in your organization later connects to the same target, the dialog will reappear.
 
 ### Silent Installation
 

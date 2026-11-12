@@ -7,470 +7,525 @@ import MacOS from "~/components/platform/MacOS.astro"
 
 ### Cose da sapere prima di iniziare
 
-Subito dopo aver stabilito la connessione, succederanno un paio di cose.
-
-
+Subito dopo aver stabilito la connessione, si verificheranno alcune operazioni.
 
 <Windows>
 
-- Apparirà la finestra di controllo remoto per la sessione. Questa finestra può essere spostata e ridimensionata su un singolo schermo o su una configurazione multi-monitor.
-- Ti verrà comunicato lo stato dello screen reader in esecuzione, o la sua assenza, sul computer del cliente.
-- Se il client sta eseguendo uno screen reader, una notifica toast che informa l&#x27;utente dell&#x27;avvio della sessione remota fornirà una conferma immediata del funzionamento dell&#x27;audio del sistema dell&#x27;utente.
-- Se è la prima volta che un controller si connette a un Mac, verrà visualizzata la finestra di configurazione della tastiera.
-- Si tratta della tastiera virtuale Karabiner, che ascolta i comandi inviati dal controller.
-- Pertanto, sarà necessario guidare il computer di destinazione attraverso la procedura di configurazione, poiché durante il processo di identificazione ascolterà i tasti premuti sulla tastiera remota e non sulla tastiera del Mac.
-- Infine, ma non meno importante, tutti gli input della tastiera e del mouse saranno immediatamente indirizzati al computer di destinazione. Per riportare il controllo sul proprio computer, eseguire una delle seguenti operazioni:
-- Premere Windows+Maiusc+Backspace.
-- Fare clic con il pulsante destro del mouse sulla barra del titolo della finestra RIM.
-- Fare clic con il pulsante sinistro del mouse sull&#x27;icona RIM al centro della barra del titolo.
-
+* Apparirà la finestra di controllo remoto della sessione. Questa finestra può essere spostata e ridimensionata sia su un singolo schermo che in una configurazione multi-monitor.
+* Verrai informato sullo stato dello screen reader in esecuzione, o sulla sua assenza, sul computer del cliente.
+* Se il client sta utilizzando uno screen reader, una notifica a comparsa che informa l’utente dell’avvio della sessione remota fornirà una conferma immediata del corretto funzionamento dell’audio di sistema dell’utente.
+* Se si tratta della prima volta che un controller si connette a un computer Mac, verrà visualizzata la finestra dell’assistente di configurazione della tastiera.
+    * Ciò riguarda la tastiera virtuale Karabiner, che rileva i comandi da tastiera inviati da un controller.
+    * Pertanto, sarà necessario guidare l’utente del computer di destinazione attraverso l’assistente di configurazione, poiché durante il processo di identificazione il sistema rileverà le pressioni della tastiera remota, non quelle della tastiera del Mac stesso.
+* Infine, ma non meno importante, tutti gli input da tastiera e mouse verranno immediatamente indirizzati al computer di destinazione. Per riportare il controllo sul proprio computer, eseguire una delle seguenti operazioni:
+    * Premere Windows+Shift+Backspace.
+    * Fai clic con il tasto destro sulla barra del titolo della finestra di RIM.
+    * Fai clic con il tasto sinistro sull’icona di RIM al centro della barra del titolo.
 
 </Windows>
 
-
-
 <MacOS>
 
-- Verrà visualizzata la finestra di controllo remoto per la sessione. Questa finestra può essere spostata e ridimensionata su un singolo display, così come su una configurazione multi-monitor.
-- Verrai informato sullo stato dello screen reader in esecuzione, o sulla sua assenza, sul computer del cliente.
-- Se il client sta eseguendo uno screen reader, una notifica toast che informa l&#x27;utente dell&#x27;avvio della sessione remota fornirà una conferma immediata del funzionamento dell&#x27;audio del sistema dell&#x27;utente.
-- Un target Mac farà apparire l&#x27;assistente di configurazione della tastiera se è la prima volta che un controller si connette ad esso.
-- Questo è per la tastiera virtuale Karabiner, che ascolta i comandi della tastiera inviati da un controller.
-    - Pertanto, è consigliabile guidare il computer di destinazione attraverso l&#x27;assistente di configurazione, poiché durante il processo di identificazione ascolterà i tasti premuti sulla tastiera remota, non sulla tastiera del Mac.
-- Infine, ma non meno importante, tutti gli input della tastiera e del mouse saranno immediatamente indirizzati al computer di destinazione. Per riportare il controllo sul proprio computer, procedere in uno dei seguenti modi:
-- Premere Opzione+Maiusc+Backspace.
-    - Fare clic con il pulsante destro del mouse sulla barra del titolo della finestra RIM.
-- Fare clic con il pulsante sinistro del mouse sull&#x27;icona RIM al centro della barra del titolo.
+* Apparirà la finestra di controllo remoto della sessione. Questa finestra può essere spostata e ridimensionata sia su un singolo schermo che in una configurazione multi-monitor.
+* Verrai informato sullo stato dello screen reader in esecuzione, o sulla sua assenza, sul computer client.
+* Se il client sta utilizzando uno screen reader, una notifica a comparsa che informa l'utente dell'avvio della sessione remota fornirà una conferma immediata del corretto funzionamento dell'audio di sistema dell'utente.
+* Se si tratta della prima volta che un controller si connette a un computer Mac, verrà visualizzata la finestra dell'assistente di configurazione della tastiera.
+    * Ciò riguarda la tastiera virtuale Karabiner, che rileva i comandi da tastiera inviati da un controller.
+    * Pertanto, sarà necessario guidare l’utente del computer di destinazione attraverso l’assistente di configurazione, poiché durante il processo di identificazione il sistema rileverà le pressioni della tastiera remota, non quelle della tastiera del Mac stesso.
+* Infine, ma non meno importante, tutti gli input da tastiera e mouse verranno immediatamente indirizzati al computer di destinazione. Per riportare il controllo sul proprio computer, eseguire una delle seguenti operazioni:
+    * Premere Opzione+Maiusc+Backspace.
+    * Fare clic con il tasto destro sulla barra del titolo della finestra di RIM.
+    * Fare clic con il tasto sinistro sull’icona di RIM al centro della barra del titolo.
+
 </MacOS>
 
-
-
-
-### Zona di controllo remoto
-
+### Area di controllo remoto
 
 <Windows>
-A questo punto, siete pronti per eseguire qualsiasi operazione necessaria sul lato client. Se è necessario tornare al controllo del proprio computer, aprire il menu RIM, quindi selezionare l&#x27;opzione &quot;Riduci a icona sessione&quot;. Si tornerà al proprio computer fino a quando non si tornerà alla finestra della sessione o si premerà nuovamente Windows+Maiusc+Backspace. Quando si torna alla finestra della sessione, gli input della tastiera e del mouse saranno nuovamente indirizzati al computer client.
+
+A questo punto, sei pronto per eseguire qualsiasi operazione necessaria sul lato client. Se dovessi aver bisogno di tornare a controllare il tuo computer, apri il menu RIM, quindi seleziona l’opzione “Riduci a icona la sessione”. Verrai reindirizzato al tuo computer fino a quando non tornerai alla finestra della sessione o non premerai nuovamente Windows+Maiusc+Backspace. Quando tornerai alla finestra della sessione, gli input da tastiera e mouse verranno nuovamente indirizzati al computer client.
 
 </Windows>
 
-
-
 <MacOS>
 
-A questo punto, sei pronto per eseguire qualsiasi operazione necessaria sul lato client. Se devi tornare a controllare il tuo computer, apri il menu RIM, quindi seleziona l&#x27;opzione &quot;Riduci a icona sessione&quot;. Tornerai al tuo computer fino a quando non tornerai alla finestra della sessione o non premi nuovamente Opzione+Maiusc+Backspace. Quando torni alla finestra della sessione, gli input della tastiera e del mouse saranno nuovamente indirizzati al computer client.
+A questo punto, sei pronto per eseguire qualsiasi operazione necessaria sul lato client. Se dovessi aver bisogno di tornare a controllare il tuo computer, apri il menu RIM, quindi seleziona l’opzione "Riduci a icona la sessione". Verrai reindirizzato al tuo computer fino a quando non tornerai alla finestra della sessione o non premerai nuovamente Opzione+Maiusc+Backspace. Quando tornerai alla finestra della sessione, gli input da tastiera e mouse verranno nuovamente indirizzati al computer client.
 
 </MacOS>
 
-
-Una volta terminato, sia il controller che il target possono accedere al menu RIM e selezionare l&#x27;opzione &quot;Disconnetti sessione&quot;. Al termine della sessione, il computer target riceverà una notifica toast che lo informerà di ciò.
+Una volta terminato, sia il controller che il computer di destinazione possono accedere al menu RIM e scegliere l’opzione “Disconnetti sessione”. Al termine della sessione, il computer di destinazione riceverà una notifica a comparsa che lo informerà di ciò.
 
 ## Il menu RIM
 
-Come accennato in precedenza, l&#x27;accesso al menu RIM vi riporta al vostro computer. In questo menu sono disponibili diverse opzioni. Tra queste:  
+Come accennato in precedenza, l’accesso al menu RIM ti riporta al tuo computer. In questo menu sono disponibili diverse opzioni, tra cui:  
 
 <Windows>
 
-- Aggiorna RIM sul computer di destinazione: forza un aggiornamento di RIM sul computer di destinazione.
-    - Questa opzione viene visualizzata se il computer di destinazione esegue una versione precedente di RIM.
-- Reinstalla RIM come amministratore sul computer di destinazione: questa opzione tenterà di reinstallare RIM come amministratore su un computer di destinazione Windows, richiedendo all&#x27;utente di destinazione di accettare la richiesta di autorizzazione dell&#x27;amministratore autonomamente e/o con l&#x27;aiuto del reparto IT della propria azienda.
-- Riduci a icona la sessione (**Windows+Shift+M**): riporta il controllo sul tuo computer come descritto sopra.
-- Apri chat: apre la chat di testo per una determinata sessione.
-- Si noti che questa opzione appare anche nel menu della sessione sul computer di destinazione.
-- Trasferisci file al target: appare se un file è negli appunti.
-- Sebbene questo metodo alternativo per completare un trasferimento di file sia sempre disponibile, è necessario solo per trasferire file a target Mac.
-- Capovolgi sessione (**Windows+Shift+F**): consente al client di controllare in remoto il computer e di ascoltare l&#x27;audio. In qualità di controller originale, è possibile capovolgere nuovamente la sessione selezionando questa opzione una seconda volta.
-- Avvia/interrompi conversazione vocale: consente di attivare o disattivare la chat vocale per la sessione.
-- Durante una sessione non presidiata, questa opzione presenterà una finestra di dialogo delle autorizzazioni a cui l&#x27;utente dovrà rispondere. Tuttavia, le sessioni richieste avviano comunque le conversazioni vocali al momento dell&#x27;attivazione da parte del controller.
-- Avvia registrazione sessione: avvia la registrazione dei contenuti della sessione attiva - ulteriori informazioni in seguito
-    - Quando la registrazione della sessione è attiva, questa opzione viene sostituita con la seguente:
-- Metti in pausa/riprendi la registrazione della sessione (attiva/disattiva)
-- Interrompi la registrazione della sessione: termina e salva la registrazione
-- Avvia accessibilità remota: questa opzione appare quando nessun lettore di schermo è in esecuzione sul computer remoto. Ciò abiliterà la sintesi vocale dalla tua parte, ma il cliente non dovrà preoccuparsi di ascoltare la sintesi vocale.
-    - Se è in esecuzione uno screen reader (inclusa l&#x27;accessibilità remota), questa opzione si trasforma in una chiusura forzata dello screen reader in esecuzione. Ciò è utile quando lo screen reader del destinatario smette di rispondere al punto da non poterlo riavviare normalmente.
-- Disattiva audio del computer di destinazione: consente di disattivare l&#x27;audio del computer remoto.
-- Si noti che una conversazione vocale in corso rimarrà attiva mentre questa impostazione è attiva, consentendo di parlare con la persona a cui si è connessi senza sentire l&#x27;audio del suo sistema.
-- Riavvia e riconnetti: consente di riavviare il computer e ricollegare automaticamente la sessione.
-- Si noti che un target Mac non può avviare RIM prima dell&#x27;accesso a causa delle limitazioni della piattaforma, in particolare FileVault.
-- Pertanto, RIM si ricollegherà una volta che l&#x27;utente avrà effettuato l&#x27;accesso.
-- Invia Control+Alt+Canc: invia questa combinazione di tasti al computer remoto.
-    - Un&#x27;opzione equivalente non è ancora stata implementata per i target Mac.
-- Richiedi accesso non presidiato o con richiesta: consente di inviare una richiesta di accesso non presidiato al computer client. Questa opzione è utile se sei un amministratore di sistema e devi eseguire la manutenzione ordinaria o anche solo per controllare il tuo computer di casa mentre sei in viaggio.
-- Blocca il computer di destinazione: blocca il computer di destinazione.
-- Visualizza dettagli connessione: fornisce informazioni dettagliate sulla connessione e sul computer di destinazione. Le informazioni includono:
-- Statistiche di connessione
-- Informazioni sul computer, tra cui versione del sistema operativo, RAM disponibile, ecc.
-- Processi in esecuzione
-- Pacchetti installati
-- Strumenti AI: consente di chattare con una serie di chatbot orientati all&#x27;accessibilità.
-    - Questa opzione è disponibile solo per i controllori che dispongono di pass pro o che hanno sottoscritto un abbonamento alla community personale, al supporto weekend o pro/enterprise.
-- Disconnetti sessione (**Windows+Shift+D**): termina la sessione.
-- Ricorda che questa opzione è disponibile per entrambe le parti della sessione.
-
+* Aggiorna RIM sul computer di destinazione: forza un aggiornamento di RIM sul computer di destinazione
+    * Questa opzione viene visualizzata se il computer di destinazione sta utilizzando una versione precedente di RIM.
+* Reinstalla RIM come amministratore sul computer di destinazione: questa opzione tenterà di reinstallare RIM con privilegi di amministratore su un computer di destinazione Windows, richiedendo all’utente di destinazione di accettare la richiesta di autorizzazione di amministratore autonomamente e/o con l’aiuto del reparto IT della propria azienda.
+* Riduci a icona la sessione (**Windows+Shift+M**): riporta il controllo sul proprio computer come descritto sopra
+* Apri chat: apre la chat di testo per una determinata sessione
+    * Si noti che questa opzione compare anche nel menu della sessione sul lato del computer di destinazione.
+* Trasferisci file al computer di destinazione: compare se è presente un file negli appunti.
+    * Sebbene questo metodo alternativo per completare un trasferimento di file sia sempre disponibile, è necessario solo per trasferire file su computer Mac.
+* Sfoglia file sul computer di destinazione: consente il trasferimento di file aprendo il file system del computer di destinazione in una finestra dedicata.
+    * Questo metodo di trasferimento file richiede l’autorizzazione dell’utente di destinazione durante le sessioni con parola chiave.
+    * Questa opzione non apparirà per un controllore che opera all’interno di un’organizzazione aziendale, a meno che l’organizzazione non abbia abilitato la funzionalità.
+* Inverti sessione (**Windows+Shift+F**): Consente al tuo cliente di controllare in remoto il tuo computer e di ascoltare l’audio dello stesso. In qualità di controllore originale, puoi invertire nuovamente la sessione selezionando questa opzione una seconda volta.
+* Avvia/interrompi conversazione vocale: consente di attivare o disattivare la chat vocale per la sessione.
+    * Durante una sessione non presidiata, questa opzione visualizzerà una finestra di dialogo di autorizzazione alla quale l’utente deve rispondere di persona. Tuttavia, le sessioni con richiesta di conferma avviano comunque le conversazioni vocali al momento dell’attivazione da parte del controllore.
+* Avvia registrazione della sessione: avvia la registrazione dei contenuti della sessione attiva — ne parleremo più avanti
+    * Quando la registrazione della sessione è attiva, questa opzione viene sostituita dalle seguenti:
+        * Metti in pausa/Riprendi registrazione della sessione (interruttore)
+        * Interrompi registrazione della sessione: termina e salva la registrazione
+* Avvia accessibilità remota: questa opzione appare quando sul computer remoto non è in esecuzione alcun lettore di schermo. Ciò abiliterà la sintesi vocale dal proprio lato, ma il cliente non dovrà preoccuparsi di ascoltare la sintesi vocale.
+    * Se è in esecuzione uno screen reader (inclusa l’Accessibilità remota), questa opzione si trasforma in una chiusura forzata dello screen reader in esecuzione. Ciò è utile quando lo screen reader del computer di destinazione smette di rispondere al punto da non poterlo riavviare normalmente.
+* Disattiva audio in uscita del computer di destinazione: consente di silenziare l’audio in uscita del computer remoto.
+    * Si noti che una conversazione vocale in corso rimarrà attiva mentre questa impostazione è attiva, consentendo di parlare con la persona a cui ci si è collegati pur non potendo udire l’audio del suo sistema.
+* Riavvia e riconnetti: consente di riavviare il computer e ricollegare automaticamente la sessione.
+    * Si noti che un computer Mac di destinazione non può avviare RIM prima del login a causa di limitazioni della piattaforma, in particolare FileVault.
+    * Pertanto, RIM si ricollegherà una volta che l’utente avrà effettuato l’accesso.
+* Invia Control+Alt+Canc: invia questa combinazione di tasti al computer remoto.
+    * Un'opzione equivalente a questa non è ancora stata implementata per i computer di destinazione Mac.
+* Richiedi accesso automatico o con richiesta di conferma: consente di inviare una richiesta di accesso automatico al computer client. Ciò è utile se sei un amministratore di sistema e devi eseguire operazioni di manutenzione ordinaria, o anche per qualcosa di semplice come controllare il tuo computer di casa mentre sei in viaggio.
+* Blocca il computer di destinazione: blocca il computer di destinazione.
+* Visualizza i dettagli della connessione: fornisce informazioni dettagliate sulla connessione e sul computer di destinazione. Le informazioni includono:
+    * Statistiche di connessione
+    * Informazioni sul computer, tra cui la versione del sistema operativo, la RAM disponibile, ecc.
+    * Processi in esecuzione
+    * Pacchetti installati
+* Strumenti AI: Consente di chattare con una serie di chatbot dedicati all’accessibilità.
+    * Questa opzione è disponibile solo per i controllori in possesso di un pass Pro o che dispongono di un abbonamento alla community personale, al supporto nel fine settimana o a un abbonamento Pro/Enterprise.
+* Disconnetti sessione (**Windows+Shift+D**): Termina la sessione.
+    * Ricorda che questa opzione è disponibile per entrambe le parti della sessione.
 
 </Windows>
-  
-
 
 <MacOS>
 
-- Aggiorna RIM sul target: forza un aggiornamento di RIM sul computer di destinazione.
-- Questa opzione viene visualizzata se il computer di destinazione esegue una versione precedente di RIM.
-- Reinstalla RIM come amministratore sul target: questa opzione tenterà di reinstallare RIM come amministratore su un target Windows, richiedendo all&#x27;utente di destinazione di accettare la richiesta di autorizzazione dell&#x27;amministratore autonomamente e/o con l&#x27;aiuto del reparto IT della propria azienda.
-- Riduci a icona la sessione (**Opzione+Maiusc+M**): riporta il controllo sul tuo computer come descritto sopra.
-- Apri chat: apre la chat di testo per una determinata sessione.
-- Si noti che questa opzione appare anche nel menu della sessione sul lato di destinazione.
-- Trasferisci file al target: appare se è presente un file negli appunti.
-- Sebbene questo metodo alternativo per completare il trasferimento di un file sia sempre disponibile, è necessario solo per trasferire file a target Mac.
-- Capovolgi sessione (**Opzione+Maiusc+F**): Consente al client di controllare in remoto il computer e di ascoltare l&#x27;audio. In qualità di controller originale, è possibile invertire nuovamente la sessione selezionando questa opzione una seconda volta.
-- Avvia/interrompi conversazione vocale: consente di attivare o disattivare la chat vocale per la sessione.
-- Durante una sessione non presidiata, questa opzione presenterà una finestra di dialogo delle autorizzazioni a cui l&#x27;utente dovrà rispondere. Tuttavia, le sessioni richieste continuano ad avviare conversazioni vocali al momento dell&#x27;attivazione da parte del controller.
-- Avvia registrazione sessione: avvia la registrazione dei contenuti della sessione attiva - ulteriori informazioni in seguito
-- Quando la registrazione della sessione è attiva, questa opzione viene sostituita con la seguente:
-- Pausa/Riprendi registrazione sessione (attiva/disattiva)
-        - Interrompi registrazione sessione: termina e salva la registrazione.
-- Avvia accessibilità remota: questa opzione appare quando nessun lettore di schermo è in esecuzione sul computer remoto. Ciò abiliterà la riproduzione vocale dalla tua parte, ma il cliente non dovrà preoccuparsi di ascoltare la riproduzione vocale.
-- Se è in esecuzione un lettore di schermo (inclusa l&#x27;accessibilità remota), questa opzione si trasforma in una chiusura forzata del lettore di schermo in esecuzione. Ciò è utile quando lo screen reader del target smette di rispondere al punto da non poterlo riavviare normalmente.
-- Disattiva audio target: consente di silenziare l&#x27;audio del computer remoto.
-- Si noti che una conversazione vocale in corso rimarrà attiva mentre questa impostazione è attiva, consentendo di parlare con la persona a cui si è connessi mentre l&#x27;audio del suo sistema non è udibile.
-- Riavvia e riconnetti: consente di riavviare il computer e ricollegare automaticamente la sessione.
-- Si noti che un target Mac non può avviare RIM prima dell&#x27;accesso a causa delle limitazioni della piattaforma, in particolare FileVault.
-- Pertanto, su un target Mac, RIM si ricollegherà una volta che l&#x27;utente avrà effettuato l&#x27;accesso.
-- Invia Control+Alt+Canc: invia questa combinazione di tasti al computer remoto.
-    - Un&#x27;opzione equivalente non è ancora stata implementata per i dispositivi Mac.
-- Richiedi accesso automatico o guidato: consente di inviare una richiesta di accesso automatico al computer client. Questa opzione è utile se sei un amministratore di sistema e devi eseguire la manutenzione ordinaria o anche solo per controllare il tuo computer di casa mentre sei in viaggio.
-- Blocca il dispositivo di destinazione: blocca il dispositivo di destinazione.
-- Visualizza dettagli connessione: fornisce informazioni dettagliate sulla connessione e sul computer di destinazione. Le informazioni includono:
-- Statistiche di connessione
-- Informazioni sul computer, tra cui versione del sistema operativo, RAM disponibile, ecc.
-- Processi in esecuzione
-- Pacchetti installati
-- Strumenti AI: consente di chattare con una serie di chatbot orientati all&#x27;accessibilità.
-    - Questa opzione è disponibile solo per i controllori che dispongono di pass pro o che hanno sottoscritto un abbonamento alla community personale, al supporto weekend o pro/enterprise.
-- Disconnetti sessione (**Opzione+Maiusc+D**): termina la sessione.
-- Ricorda che questa opzione è disponibile per entrambe le parti della sessione.
-
+* Aggiorna RIM sul computer di destinazione: forza un aggiornamento di RIM sul computer di destinazione
+    * Questa opzione viene visualizzata se il computer di destinazione sta eseguendo una versione precedente di RIM.
+* Reinstalla RIM come amministratore sul computer di destinazione: questa opzione tenterà di reinstallare RIM come amministratore su un computer di destinazione Windows, richiedendo all’utente di destinazione di accettare la richiesta di autorizzazione amministrativa autonomamente e/o con l’aiuto del reparto IT della propria azienda.
+* Riduci a icona la sessione (**Opzione+Maiusc+M**): riporta il controllo sul proprio computer come descritto sopra
+* Apri chat: apre la chat di testo per una determinata sessione
+    * Si noti che questa opzione appare anche nel menu della sessione sul lato del computer di destinazione.
+* Trasferisci file al computer di destinazione: appare se è presente un file negli appunti.
+    * Sebbene questo metodo alternativo per completare un trasferimento di file sia sempre disponibile, è necessario solo per trasferire file su computer Mac.
+* Sfoglia file sul computer di destinazione: consente il trasferimento di file aprendo il file system del computer di destinazione in una finestra dedicata.
+    * Questo metodo di trasferimento file richiede l’autorizzazione dell’utente di destinazione durante le sessioni con parola chiave.
+    * Questa opzione non apparirà per un controllore che opera all’interno di un’organizzazione aziendale a meno che l’organizzazione non abbia abilitato la funzione.
+* Inverti sessione (**Opzione+Maiusc+F**): Consente al tuo cliente di controllare in remoto il tuo computer e di ascoltarne l’audio. In qualità di controllore originale, puoi invertire nuovamente la sessione selezionando questa opzione una seconda volta.
+* Avvia/interrompi conversazione vocale: consente di attivare o disattivare la chat vocale per la sessione.
+    * Durante una sessione non presidiata, questa opzione visualizzerà una finestra di dialogo di autorizzazione alla quale l’utente deve rispondere di persona. Tuttavia, le sessioni con richiesta di conferma avviano comunque le conversazioni vocali al momento dell’attivazione da parte del controllore.
+* Avvia registrazione della sessione: avvia la registrazione dei contenuti della sessione attiva — ne parleremo più avanti
+    * Quando la registrazione della sessione è attiva, questa opzione viene sostituita dalle seguenti:
+        * Metti in pausa/Riprendi registrazione della sessione (interruttore)
+        * Interrompi registrazione della sessione: termina e salva la registrazione
+* Avvia accessibilità remota: questa opzione appare quando sul computer remoto non è in esecuzione alcun lettore di schermo. Ciò attiverà la sintesi vocale sul proprio computer, ma il cliente non dovrà preoccuparsi di ascoltare la sintesi vocale.
+    * Se è in esecuzione uno screen reader (inclusa l’Accessibilità remota), questa opzione si trasforma in una chiusura forzata dello screen reader in esecuzione. Ciò è utile quando lo screen reader del computer di destinazione smette di rispondere al punto da non poterlo riavviare normalmente.
+* Disattiva audio in uscita del computer di destinazione: consente di silenziare l’audio in uscita del computer remoto.
+    * Si noti che una conversazione vocale in corso rimarrà attiva mentre questa impostazione è attiva, consentendo di parlare con la persona a cui si è connessi pur non potendo udire l’audio del suo sistema.
+* Riavvia e riconnetti: consente di riavviare il computer e ricollegare automaticamente la sessione.
+    * Si noti che un computer Mac di destinazione non può avviare RIM prima del login a causa di limitazioni della piattaforma, in particolare FileVault.
+    * Pertanto, su un computer Mac di destinazione, RIM si ricollegherà una volta che l’utente avrà effettuato l’accesso.
+* Invia Control+Alt+Canc: invia questa combinazione di tasti al computer remoto.
+    * Un'opzione equivalente a questa non è ancora stata implementata per i computer Mac.
+* Richiedi accesso automatico o con richiesta di conferma: consente di inviare una richiesta di accesso automatico al computer client. Ciò è utile se sei un amministratore di sistema e devi eseguire operazioni di manutenzione ordinaria, o anche per qualcosa di semplice come controllare il tuo computer di casa mentre sei in viaggio.
+* Blocca il computer di destinazione: blocca il computer di destinazione.
+* Visualizza i dettagli della connessione: fornisce informazioni dettagliate sulla connessione e sul computer di destinazione. Le informazioni includono:
+    * Statistiche di connessione
+    * Informazioni sul computer, tra cui la versione del sistema operativo, la RAM disponibile, ecc.
+    * Processi in esecuzione
+    * Pacchetti installati
+* Strumenti AI: Consente di chattare con una serie di chatbot dedicati all’accessibilità.
+    * Questa opzione è disponibile solo per i controllori in possesso di un pass Pro o che dispongono di un abbonamento alla community personale, al supporto nel fine settimana o a un abbonamento Pro/Enterprise.
+* Disconnetti sessione (**Opzione+Maiusc+D**): Termina la sessione.
+    * Ricorda che questa opzione è disponibile per entrambe le parti della sessione.
 
 </MacOS>
 
+### Chat di sessione
 
-### Chat della sessione
-
-La comunicazione testuale tramite la funzione di chat integrata nella sessione RIM può essere un&#x27;opzione utile in situazioni in cui una conversazione vocale non è possibile o pratica. Può anche essere utilizzata per integrare una conversazione vocale esistente, ad esempio per inviare link, istruzioni o simili.
+La comunicazione testuale tramite la funzionalità di chat di sessione integrata in RIM può essere un’opzione utile in situazioni in cui una conversazione vocale non è possibile o pratica. Può anche essere utilizzata per integrare una conversazione vocale in corso, ad esempio per inviare link, istruzioni o simili.  
 
 #### Avvio di una chat
-Una chat di sessione può essere avviata in uno dei seguenti modi:  
+
+È possibile avviare una chat di sessione in uno dei seguenti modi:  
+
 * Lato controller
-* Un controller può selezionare l&#x27;opzione &quot;Apri chat&quot; dal menu della sessione.
-* Quando la finestra della chat appare sul computer di controllo, il focus si posiziona nella casella di modifica in cui è possibile digitare un messaggio e inviarlo utilizzando il tasto Invio.
-* Un messaggio inviato all&#x27;utente di destinazione attiverà una finestra di chat sul suo computer. A questo punto, è possibile avviare una conversazione.  
-    * Si noti che non è possibile controllare il computer di destinazione mentre la finestra di chat dell&#x27;utente è attiva. Il controllo del computer di destinazione riprenderà se si verifica una delle seguenti condizioni:  
-        * L&#x27;utente di destinazione sposta l&#x27;attenzione dalla finestra di chat, nel qual caso il controllo può riprendere fino a quando non riporta l&#x27;attenzione sulla finestra di chat.  
-        * L&#x27;utente di destinazione chiude la finestra di chat premendo il tasto Esc.
-* Se la finestra di chat sul computer di controllo viene chiusa e sono trascorsi 30 secondi, la finestra di chat dell&#x27;utente di destinazione si disattiverà automaticamente, a quel punto il controllo riprenderà.
-* Lato destinazione:
-    * L&#x27;utente di destinazione può selezionare l&#x27;opzione &quot;Apri chat&quot; dal menu della sessione. In questo modo si aprirà immediatamente una finestra di chat sul computer di controllo.
-* A questo punto è possibile comunicare tramite chat.
-* Se l&#x27;utente di destinazione chiude la finestra di chat sul proprio computer, la finestra di chat rimarrà aperta sul computer di controllo. Un messaggio successivo dal controller riattiverà la finestra di chat sul computer di destinazione.
+    * Un controller può selezionare l’opzione “Apri chat” dal menu della sessione.
+    * Quando la finestra di chat appare sul computer di controllo, il focus si posiziona nella casella di modifica, nella quale è possibile digitare un messaggio e inviarlo utilizzando il tasto Invio.
+    * Un messaggio inviato all’utente di destinazione aprirà una finestra di chat sul suo computer. A questo punto, è possibile uno scambio di messaggi.
+    * Si noti che non è possibile controllare il computer di destinazione mentre la finestra di chat dell’utente è attiva. Il controllo del computer di destinazione riprenderà se si verifica una delle seguenti condizioni:
+        * L’utente di destinazione sposta il focus dalla finestra di chat; in tal caso, il controllo potrà riprendere fino a quando non sposterà nuovamente il focus sulla finestra di chat.
+        * L'utente di destinazione chiude la finestra di chat premendo il tasto Esc.
+        * Se la finestra di chat sul computer di controllo viene chiusa e sono trascorsi 30 secondi, la finestra di chat dell'utente di destinazione si disattiverà automaticamente, a quel punto il controllo riprenderà.
+* Lato utente di destinazione:
+    * L’utente di destinazione può selezionare l’opzione «Apri chat» dal menu della sessione. In questo modo si aprirà immediatamente una finestra di chat sul computer di controllo.
+    * A questo punto, è possibile lo scambio di messaggi.
+    * Se l’utente di destinazione chiude la finestra di chat dal proprio lato, la finestra di chat rimarrà aperta sul computer di controllo. Un messaggio successivo inviato da chi controlla riattiverà la finestra di chat sul computer di destinazione.
 
-#### Funzionamento all&#x27;interno di una chat
-Mentre la finestra di chat è attiva, i messaggi verranno visualizzati sia in forma vocale che in Braille man mano che arrivano. Un computer che non ha la finestra di chat attiva verrà avvisato dei messaggi di chat tramite le normali notifiche di Windows.  
-Quando si è fuori dalla finestra dei messaggi, è possibile navigare nella chat come in una pagina web standard. I messaggi inviati dalla parte opposta a quella che visualizza il messaggio possono essere copiati negli appunti tramite il pulsante &quot;Copia&quot; adiacente al messaggio in questione.
+#### Utilizzo della chat
 
-#### Trascrizioni delle chat
+Mentre la finestra di chat è attiva, i messaggi verranno visualizzati sia in sintesi vocale che in Braille man mano che arrivano. Un dispositivo su cui la finestra di chat non è attiva riceverà una notifica dei messaggi di chat tramite le normali notifiche a comparsa di Windows.  
+Quando non si è all’interno della finestra dei messaggi, è possibile navigare nella chat come in una normale pagina web. I messaggi inviati dall’interlocutore opposto a chi sta visualizzando il messaggio possono essere copiati negli appunti tramite il pulsante «Copia» adiacente al messaggio in questione.
 
-Le trascrizioni delle chat vengono salvate in una directory configurabile dall&#x27;utente. Per impostazione predefinita, si tratta della directory &quot;documenti/Remote Incident Manager/Chat&quot; nella cartella utente.
+#### Trascrizioni della chat
 
-Attualmente, l&#x27;unico modo per modificare la directory è tramite un file di configurazione, pertanto la procedura è disponibile solo in inglese.
+Le trascrizioni della chat vengono salvate in una directory configurabile dall’utente. Per impostazione predefinita, si tratta della directory «documents/Remote Incident Manager/Chat» nella cartella utente.
 
-
+Attualmente, l’unico modo per modificare la directory è tramite un file di configurazione; pertanto, la procedura è disponibile solo in inglese.  
 
 <Windows>
-È possibile accedere al file di configurazione tramite la finestra di dialogo Esegui incollando quanto segue:  
-%appdata%\remote-incident-manager\config.toml
+
+È possibile accedere al file di configurazione tramite la finestra di dialogo "Esegui" incollando quanto segue:  
+%appdata%\remote-incident-manager\config.toml  
+
 </Windows>
-  
-
-
 
 <MacOS>
-Il file config.toml si trova in $HOME/Library/Application
+
+Il file config.toml si troverà in $HOME/Library/Application Support/remote-incident-manager
+
 </MacOS>
- Support/remote-incident-manager
 
-
-Una volta all&#x27;interno del file di configurazione, cerca la riga <span translate="no">directory</span> sotto la riga <span translate="no">Chat</span> e modifica la directory con quella che preferisci.  
-Si noti che nel caso delle directory Windows è necessario inserire correttamente i caratteri di escape.   
-Una volta salvata la configurazione, le modifiche avranno effetto per le sessioni successive. Non è necessario riavviare l&#x27;applicazione.
-
-
+Una volta all'interno del file di configurazione, cerca la riga relativa alla <settingID>directory</settingID> sotto quella relativa alla <settingID>Chat</settingID> e modifica il percorso con quello desiderato.  
+Tieni presente che, nel caso delle directory di Windows, le barre rovesciate devono essere correttamente precedute dal carattere di escape.  
+Una volta salvata la configurazione, le modifiche avranno effetto per le sessioni successive. Non è necessario riavviare l'applicazione.
 
 ### Trasferimento di file
 
-RIM offre un modo semplice per trasferire file, indipendentemente dalla piattaforma utilizzata.
-1. Aprire il menu RIM e fare clic su &quot;Riduci sessione&quot;. Il controllo tornerà al tuo computer.
-1. Seleziona i file e/o le cartelle che desideri trasferire utilizzando il tuo file manager.
-1. Copia i contenuti selezionati negli appunti come di consueto. Riceverai una notifica che ti avvisa che un file è pronto per essere trasferito. Hai due opzioni.
-1. **Se la destinazione è un Mac:**
-    - Attiva il menu della sessione RIM e clicca sull&#x27;opzione &quot;Trasferisci file alla destinazione&quot;.
-- Al termine del trasferimento, il Mac di destinazione genererà una directory temporanea contenente i contenuti trasferiti. Questi dovranno quindi essere copiati e incollati nelle directory di destinazione.
-1. **Se la destinazione è un computer Windows:**
-- Torna alla sessione remota e individua la cartella sul computer di destinazione in cui desideri incollare il contenuto.
-- Infine, incolla come faresti normalmente.
+RIM offre alcune semplici modalità per trasferire file, indipendentemente dalla piattaforma utilizzata.
 
-Si noti che il tempo di trasferimento dipenderà interamente dalla dimensione del contenuto inviato e dalla velocità della rete.
+#### Trasferimento di file tramite appunti
+
+1. Apri il menu di RIM e fai clic su "Riduci a icona la sessione". Il controllo tornerà al tuo computer.
+1. Selezionare i file e/o le cartelle che si desidera trasferire utilizzando il proprio gestore di file.
+1. Copiare i contenuti selezionati negli appunti come di consueto. Verrà visualizzata una notifica che indica che un file è pronto per essere trasferito. Sono disponibili due opzioni.
+1. **Se la destinazione è un Mac:**
+    * Attiva il menu della sessione RIM e fai clic sull’opzione “Trasferisci file alla destinazione”.
+    * Al termine del trasferimento, il Mac di destinazione creerà una directory temporanea contenente i contenuti trasferiti. Questi dovranno poi essere copiati e incollati nelle directory di destinazione.
+1. **Se la destinazione è un computer Windows:**
+    * Tornate alla sessione remota e individuate la cartella sul computer di destinazione in cui desiderate incollare il contenuto.
+    * Infine, incollate il contenuto come fareste normalmente.
+
+Si noti che il tempo di trasferimento dipenderà interamente dalle dimensioni del contenuto inviato e dalla velocità della vostra rete.
+
+#### Il browser dei file
+
+L’utilizzo del browser dei file consente a te, in qualità di controllore, di trasferire file da e verso il computer di destinazione in modo trasparente tramite un’interfaccia unificata. Ciò risulta particolarmente utile se fornisci frequentemente assistenza a utenti finali che utilizzano una piattaforma desktop diversa dalla tua. Inoltre, il browser dei file consente di effettuare trasferimenti senza che l’utente finale debba interrompere l’attività su cui sta lavorando.  
+Oltre al trasferimento dei file, l’interfaccia integrata del browser dei file permette di rinominare file e cartelle e di spostarli nel cestino.
+
+##### Attivazione del browser dei file
+
+Attiva il browser dei file selezionando l’opzione “Sfoglia file sul computer di destinazione” dal menu della sessione.
+
+Nota: durante una sessione con parola chiave, questo metodo di trasferimento file richiede l’approvazione dell’utente finale per poter essere avviato. Ciò è dovuto al fatto che questa funzionalità esegue operazioni sui file senza aprire una finestra di Esplora risorse o Finder sul computer di destinazione.
+
+All’utente di destinazione verrà visualizzata una finestra di dialogo in cui gli verrà chiesto se desidera autorizzare o rifiutare la richiesta. Se l’utente di destinazione accetta la richiesta di avviare il trasferimento dei file, si aprirà una finestra del browser dei file. Se si annulla la richiesta o l’utente di destinazione la rifiuta, si tornerà alla sessione remota.
+
+##### Utilizzo del browser dei file
+
+La finestra del browser dei file presenta un layout a doppio elenco simile a quello che ci si aspetterebbe in gestori di file multifunzione come Total Commander o in client FTP come FileZilla. Inizialmente il focus si troverà sulla struttura delle directory del proprio sistema, situata sul lato sinistro dello schermo. L’elenco delle directory del computer di destinazione è visualizzato sul lato destro dello schermo ed è facilmente raggiungibile tramite il tasto Tab.
+
+<Windows>
+
+1. Selezionare uno o più elementi in uno dei due elenchi. Per navigare tra le directory è possibile utilizzare i seguenti tasti:
+    * Invio: apre una cartella.
+    * Backspace: sale di un livello, ovvero torna alla cartella padre.
+2. Una volta effettuata la selezione desiderata, premere Ctrl+C per copiare.
+3. Passare all’altro elenco e premere Ctrl+V per incollare. Si noti che il tempo di trasferimento dipenderà interamente dalle dimensioni del contenuto inviato e dalla velocità della rete.
+4. Da entrambi gli elenchi è possibile:
+    * Premere F2 per rinominare un elemento.
+    * Premere Canc per spostare gli elementi selezionati nel cestino.
+        * RIM non eliminerà mai definitivamente un file in nessuna circostanza.
+    * Premere F5 per aggiornare un elenco.
+
+</Windows>
+
+<MacOS>
+
+1. Seleziona uno o più elementi in uno dei due elenchi. È possibile utilizzare i seguenti tasti per navigare tra le directory:
+    * Invio: apre una cartella.
+    * Canc o Comando+Freccia su: sale di un livello, ovvero torna alla cartella principale.
+2. Una volta effettuata la selezione desiderata, premere Comando+C per copiare.
+3. Passare all’altro elenco e premere Comando+V per incollare. Si noti che il tempo di trasferimento dipenderà interamente dalle dimensioni del contenuto inviato e dalla velocità della rete.
+4. Da entrambi gli elenchi è possibile:
+    * Premere F2 per rinominare un elemento.
+    * Premere Comando+Canc per spostare gli elementi selezionati nel cestino.
+        * RIM non eliminerà mai definitivamente un file in nessuna circostanza.
+    * Premere Comando+R per aggiornare un elenco.
+
+</MacOS>
+
+##### Limitazioni note
+
+###### Ripristino in caso di interruzione di corrente
+
+* Se RIM viene interrotto durante un caricamento a causa di un arresto anomalo o di un’interruzione dell’alimentazione, i file parziali rimangono sulla destinazione. Solo un’annullamento intenzionale o un errore di trasferimento documentato rimuove i file parziali.
+
+###### Eliminazione dei file con dispositivi rimovibili
+
+Alcuni dispositivi rimovibili non dispongono di un meccanismo interno di cestino. Se si tenta di eliminare un file da uno di questi dispositivi, RIM informerà chiaramente l’utente di questa limitazione e interromperà l’eliminazione. Questa misura di sicurezza garantisce che RIM non esegua mai inavvertitamente un’operazione di eliminazione definitiva.
+
+Se state assistendo un utente finale nella cancellazione di un file e incontrate questa limitazione, potete individuare il file sul computer di destinazione ed eliminarlo nel modo consueto. Quando si elimina un file in questo modo, è il sistema operativo a gestire l’operazione sul file, non RIM.
+
+###### Limitazioni di macOS
+
+* Le app e i pacchetti Mac, ovvero i file con estensione .app o .pkg, non possono essere copiati. RIM ti chiederà di comprimerli in un file zip, operazione che deve essere eseguita al di fuori del browser dei file.
+* Non è possibile accedere ai contenuti di iCloud Drive tramite il browser dei file.
+* Il caricamento su un Mac viene rifiutato se il percorso è lungo 1024 byte o più.
+
+###### Attributi e permessi dei file
+
+* Gli attributi “sola lettura” e “nascosto” non vengono copiati.
+* Il bit di esecuzione viene mantenuto solo per i file copiati su un Mac. Per motivi di sicurezza, i file scaricati non sono mai eseguibili.
 
 ### Registrazione della sessione
 
-La funzione di registrazione della sessione di RIM consente al controllore di registrare comodamente il contenuto della sessione in un file sul proprio computer. Questo file può poi essere distribuito alla persona a cui si sta fornendo il supporto remoto. Il contenuto della registrazione della sessione includerà l&#x27;output audiovisivo del computer di destinazione, nonché l&#x27;audio di una conversazione vocale in corso.
-Per facilitare la registrazione di una sessione:
-
+La funzionalità di registrazione della sessione di RIM consente a te, in qualità di controllore, di registrare comodamente il contenuto della tua sessione in un file sul tuo computer. Questo file potrà poi essere distribuito alla persona a cui stai fornendo assistenza remota. Il contenuto della registrazione della sessione includerà l’output audiovisivo del computer di destinazione, nonché l’audio di una conversazione vocale in corso.
+Per avviare la registrazione di una sessione:  
 
 <Windows>
-1. Accedere all&#x27;opzione &quot;Avvia registrazione sessione&quot; dal menu della sessione. Di conseguenza, verranno eseguite le seguenti azioni:
-* Durante una sessione con parola chiave:
-* All&#x27;utente di destinazione verrà visualizzata una finestra di dialogo delle autorizzazioni in cui verrà chiesto se desidera acconsentire alla registrazione della sessione. L&#x27;input della tastiera del controllore verrà sospeso mentre viene visualizzata questa finestra di dialogo.
-* Se l&#x27;utente di destinazione acconsente, la registrazione avrà inizio. Se l&#x27;utente di destinazione rifiuta la registrazione, l&#x27;intera sessione verrà terminata.
-    * Per le sessioni con richiesta/non presidiate:
-* La registrazione inizierà immediatamente.
-* In ogni caso, entrambe le parti riceveranno una notifica dell&#x27;avvio della registrazione una volta che questa avrà avuto inizio.
-1. Per mettere in pausa o riprendere la registrazione, accedere all&#x27;opzione &quot;Metti in pausa/Riprendi registrazione sessione&quot; dal menu della sessione.
-* La registrazione verrà messa in pausa o ripresa di conseguenza.
-* Una notifica verrà inviata a entrambe le parti.
-1. La registrazione può essere interrotta tramite l&#x27;opzione &quot;Interrompi registrazione della sessione&quot; nel menu della sessione.
-* Per impostazione predefinita, verrà visualizzata una finestra di dialogo di conferma che chiede se si desidera interrompere la registrazione. Questa finestra di dialogo è stata progettata per impedire la disattivazione accidentale della registrazione della sessione, ma può essere disabilitata facoltativamente.
-* Entrambe le parti riceveranno una notifica al termine della registrazione.
-    * La registrazione verrà quindi salvata nella directory in cui RIM è configurato per salvare le registrazioni (di default è la cartella &quot;Video&quot; nella directory utente). Per maggiore comodità, si verrà reindirizzati automaticamente a questa cartella tramite Explorer, consentendo di inviare la registrazione all&#x27;utente, se lo si desidera.
-* Si noti che la disconnessione dalla sessione interrompe automaticamente la registrazione.
 
+1. Accedi all’opzione “Avvia registrazione della sessione” dal menu della sessione. Di conseguenza, si verificheranno le seguenti azioni:
+    * Durante una sessione con parola chiave:
+        * All’utente di destinazione verrà visualizzata una finestra di dialogo di autorizzazione in cui gli verrà chiesto se desidera acconsentire alla registrazione della sessione. L’input da tastiera del controllore verrà sospeso mentre è visualizzata questa finestra di dialogo.
+        * Se l’utente di destinazione acconsente, la registrazione avrà inizio. Se l’utente di destinazione nega il consenso, l’intera sessione terminerà.
+    * Per le sessioni con richiesta di conferma/in modalità automatica:
+        * La registrazione inizierà immediatamente
+    * In ogni caso, entrambe le parti riceveranno una notifica che la registrazione è iniziata non appena questa avrà effettivamente inizio.
+1. Per mettere in pausa o riprendere la registrazione, accedere all’opzione “Metti in pausa/Riprendi registrazione della sessione” dal menu della sessione.
+    * La registrazione verrà messa in pausa o ripresa di conseguenza
+    * Verrà inviata una notifica a entrambe le parti
+1. La registrazione può essere interrotta tramite l’opzione “Interrompi registrazione della sessione” dal menu della sessione.
+    * Per impostazione predefinita, verrà visualizzata una finestra di dialogo di conferma in cui ti verrà chiesto se desideri interrompere la registrazione. Questa finestra di dialogo è pensata per impedire la disattivazione accidentale della registrazione della sessione, ma può essere disabilitata facoltativamente.
+    * Entrambe le parti riceveranno una notifica al termine della registrazione.
+    * La registrazione verrà quindi salvata nella directory in cui RIM è configurato per salvare le registrazioni (per impostazione predefinita, si tratta della cartella "Video" nella directory utente). Per maggiore comodità, verrai reindirizzato automaticamente a questa cartella tramite Esplora file, consentendoti di inviare la registrazione all'utente, se lo desideri.
+    * Si noti che la disconnessione dalla sessione interrompe automaticamente la registrazione.
 
 </Windows>
 
-
-
 <MacOS>
 
-1. Accedere all&#x27;opzione &quot;Avvia registrazione sessione&quot; dal menu della sessione. Di conseguenza, verranno eseguite le seguenti azioni:
-    * Durante una sessione con parola chiave:
-* All&#x27;utente di destinazione verrà visualizzata una finestra di dialogo delle autorizzazioni in cui gli verrà chiesto se desidera acconsentire alla registrazione della sessione. L&#x27;input da tastiera del controller verrà sospeso mentre è visualizzata questa finestra di dialogo.
-* Se l&#x27;utente di destinazione acconsente, la registrazione avrà inizio. Se l&#x27;utente di destinazione rifiuta la registrazione, l&#x27;intera sessione verrà terminata.
-    * Per le sessioni con richiesta/non presidiate:
-* La registrazione inizierà immediatamente
-* In ogni caso, entrambe le parti riceveranno una notifica dell&#x27;avvio della registrazione una volta che questa avrà avuto inizio.
-1. Per mettere in pausa o riprendere la registrazione, accedere all&#x27;opzione &quot;Metti in pausa/Riprendi registrazione sessione&quot; dal menu della sessione.
-    * La registrazione verrà messa in pausa o ripresa di conseguenza.
-* Una notifica verrà inviata a entrambe le parti.
-1. La registrazione può essere interrotta tramite l&#x27;opzione &quot;Interrompi registrazione della sessione&quot; dal menu della sessione.
-* Per impostazione predefinita, verrà visualizzata una finestra di dialogo di conferma che chiede se si desidera interrompere la registrazione. Questa finestra di dialogo è progettata per impedire la disattivazione accidentale della registrazione della sessione, ma può essere disabilitata facoltativamente.
+1. Accedere all’opzione “Avvia registrazione della sessione” dal menu della sessione. Di conseguenza, si verificheranno le seguenti azioni:
+    * Durante una sessione con parole chiave:
+        * All’utente di destinazione verrà visualizzata una finestra di dialogo relativa alle autorizzazioni in cui gli verrà chiesto se desidera acconsentire alla registrazione della sessione. L’input da tastiera del controllore verrà sospeso mentre è visualizzata questa finestra di dialogo.
+        * Se l’utente di destinazione acconsente, la registrazione avrà inizio. Se l’utente di destinazione rifiuta la registrazione, l’intera sessione terminerà.
+    * Per le sessioni con richiesta di conferma/non presidiate:
+        * La registrazione inizierà immediatamente
+    * In ogni caso, entrambe le parti riceveranno una notifica che la registrazione è iniziata non appena questa avrà effettivamente inizio.
+1. Per mettere in pausa o riprendere la registrazione, accedere all’opzione “Metti in pausa/Riprendi registrazione della sessione” dal menu della sessione.
+    * La registrazione verrà messa in pausa o ripresa di conseguenza
+    * Verrà inviata una notifica a entrambe le parti
+1. La registrazione può essere interrotta tramite l’opzione “Interrompi registrazione della sessione” dal menu della sessione.
+    * Per impostazione predefinita, verrà visualizzata una finestra di dialogo di conferma in cui ti verrà chiesto se desideri interrompere la registrazione. Questa finestra di dialogo è pensata per impedire la disattivazione accidentale della registrazione della sessione, ma può essere disabilitata se lo desideri.
     * Entrambe le parti riceveranno una notifica al termine della registrazione.
-* La registrazione verrà quindi salvata nella directory in cui RIM salva le registrazioni (di default è la cartella &quot;Movies&quot; nella directory utente). Per maggiore comodità, si verrà reindirizzati automaticamente a questa cartella tramite Finder, consentendo di inviare la registrazione all&#x27;utente, se lo si desidera.
-* Si noti che la disconnessione dalla sessione interrompe automaticamente la registrazione.
-
+    * La registrazione verrà quindi salvata nella directory in cui RIM salva le registrazioni (per impostazione predefinita, si tratta della cartella “Movies” nella directory utente). Per maggiore comodità, verrai reindirizzato automaticamente a questa cartella tramite il Finder, consentendoti di inviare la registrazione all’utente, se lo desideri.
+    * Si noti che la disconnessione dalla sessione interrompe automaticamente la registrazione.
 
 </MacOS>
 
+Le registrazioni sono una funzionalità completamente gratuita, disponibile per qualsiasi utente su qualsiasi piano tariffario. Inoltre, le registrazioni vengono elaborate interamente in locale, senza alcun coinvolgimento del servizio cloud.
 
+#### Nota relativa al Modulo di accessibilità remota
 
-Le registrazioni sono una funzione completamente gratuita, disponibile per tutti gli utenti di qualsiasi livello. Inoltre, le registrazioni vengono elaborate interamente in locale, senza alcun coinvolgimento del servizio cloud.
+Poiché il Modulo di accessibilità remota invia il proprio output vocale alla vostra copia di NVDA in esecuzione, RIM deve tenerne conto per poter catturare tale output vocale in una registrazione. Pertanto, ogni volta che l’accessibilità remota è attiva durante una registrazione, RIM avvia l’acquisizione dell’intero output audio del vostro sistema. Ciò consente di acquisire il parlato udito tramite il modulo di accessibilità remota esattamente come è stato udito durante la sessione. Sebbene ciò possa comportare la presenza nella registrazione di alcuni suoni di notifica provenienti dal computer di controllo, ciò non causerà il raddoppio dell’audio proveniente dal computer di destinazione.
 
-#### Nota relativa al modulo di accessibilità remota
+#### Nota per l’utilizzo aziendale
 
-Poiché il modulo di accessibilità remota invia la sua voce alla copia di NVDA in esecuzione, RIM deve adattarsi a ciò per acquisire questa voce in una registrazione. Pertanto, ogni volta che l&#x27;accessibilità remota è attiva durante una registrazione, RIM avvia l&#x27;acquisizione dell&#x27;uscita audio completa del sistema. Ciò consente di acquisire la voce ascoltata attraverso il modulo di accessibilità remota esattamente come è stata ascoltata durante la sessione. Anche se ciò può comportare la registrazione di alcuni suoni di notifica provenienti dal computer di controllo, ciò non causerà il raddoppio dell&#x27;audio proveniente dal computer di destinazione.
-
-
-#### Nota per l&#x27;utilizzo aziendale
-
-Al fine di allinearsi con una tipica politica di sicurezza aziendale, la registrazione delle sessioni è una funzionalità strettamente opzionale all&#x27;interno delle configurazioni aziendali. Pertanto, a meno che la funzionalità di registrazione non sia stata abilitata da un amministratore dell&#x27;organizzazione, tutti i meccanismi di registrazione non saranno disponibili per i controller RIM all&#x27;interno dell&#x27;organizzazione.
+Al fine di allinearsi a una tipica politica di sicurezza aziendale, la registrazione delle sessioni è una funzionalità rigorosamente soggetta ad autorizzazione esplicita (opt-in) nelle configurazioni aziendali. Pertanto, a meno che la possibilità di registrare non sia stata abilitata da un amministratore dell’organizzazione, tutti i meccanismi di registrazione non saranno disponibili per i controllori RIM all’interno dell’organizzazione.
 
 #### Configurazione avanzata per le registrazioni delle sessioni
 
-RIM offre una serie di opzioni di configurazione avanzate per la registrazione delle sessioni. Queste includono la possibilità di avviare automaticamente le registrazioni all&#x27;inizio della sessione, di memorizzare le registrazioni in un percorso alternativo (ad esempio una condivisione di rete) e di determinare lo stato della finestra di dialogo di conferma quando si interrompe una registrazione. Attualmente, l&#x27;unico modo per modificare queste impostazioni è tramite un file di configurazione, pertanto la procedura è disponibile solo in inglese.  
-
+RIM offre una serie di opzioni di configurazione avanzate per la registrazione delle sessioni. Queste includono la possibilità di avviare automaticamente le registrazioni all’inizio della sessione, di archiviare le registrazioni in un percorso alternativo (ad esempio, una condivisione di rete) e di determinare lo stato della finestra di dialogo di conferma quando si interrompe una registrazione. Attualmente, l’unico modo per modificare queste impostazioni è tramite un file di configurazione; pertanto, la procedura è disponibile solo in inglese.  
 
 <Windows>
 
-È possibile accedere al file di configurazione tramite la finestra di dialogo Esegui incollando quanto segue:  
-%appdata%\remote-incident-manager\config.toml
+È possibile accedere al file di configurazione tramite la finestra di dialogo "Esegui" incollando quanto segue:  
+%appdata%\remote-incident-manager\config.toml  
+
 </Windows>
-  
-
-
 
 <MacOS>
-Il file config.toml si trova in $HOME/Library/Application
+
+Il file config.toml si troverà in $HOME/Library/Application Support/remote-incident-manager
+
 </MacOS>
- Support/remote-incident-manager
 
-Una volta all&#x27;interno del file di configurazione, saranno disponibili le seguenti opzioni:
-* <span translate="no">directory</span>: Imposta la directory per l&#x27;archiviazione delle registrazioni.
-    * Le barre rovesciate devono essere correttamente sostituite nel caso delle directory Windows.
-* <span translate="no">auto_start</span>:  Determina se la registrazione della sessione inizia immediatamente all&#x27;avvio della sessione. L&#x27;impostazione predefinita è <span translate="no">false</span>.
-* <span translate="no">suppress_stop_confirmation</span>: Controlla se viene visualizzata la finestra di dialogo di conferma quando si interrompe manualmente una registrazione. L&#x27;impostazione predefinita è <span translate="no">false</span>.
-	* Si noti che la disconnessione da una sessione interrompe sempre la registrazione senza richiesta di conferma, indipendentemente da questa impostazione.
+Una volta all’interno del file di configurazione, saranno disponibili le seguenti opzioni:
 
-Una volta salvata la configurazione, le modifiche avranno effetto per le sessioni successive. Non è necessario riavviare l&#x27;applicazione.
+* <settingID>directory</settingID>: imposta la directory in cui salvare le registrazioni.
+    * Le barre rovesciate devono essere correttamente precedute dal carattere di escape nel caso delle directory di Windows.  
+* <settingID>auto_start</settingID>: determina se la registrazione della sessione inizi immediatamente all’avvio della sessione. Per impostazione predefinita è impostato su <settingID>false</settingID>.  
+* <settingID>suppress_stop_confirmation</settingID>: controlla se viene visualizzata la finestra di dialogo di conferma quando si interrompe manualmente una registrazione. Il valore predefinito è <settingID>false</settingID>.
+    * Si noti che la disconnessione da una sessione interromperà sempre la registrazione senza richiesta di conferma, indipendentemente da questa impostazione.
 
+Una volta salvata la configurazione, le modifiche avranno effetto per le sessioni successive. Non è necessario riavviare l’applicazione.
 
-### Modulo di accessibilità remota
+### Modulo di accessibilità remota (RIM)
 
-Sia che stiate assistendo un utente che non utilizza uno screen reader, sia che stiate diagnosticando un problema con uno screen reader malfunzionante, RIM è pronto ad aiutarvi.
-
+Sia che stiate assistendo un utente che non utilizza uno screen reader, sia che stiate diagnosticando un problema con uno screen reader malfunzionante, RIM è pronto a venire in vostro aiuto.
 
 <Windows>
-Il modulo di accessibilità remota è composto da due componenti:
-- Un componente aggiuntivo per lo screen reader NVDA che consente allo screen reader di ricevere l&#x27;output dal computer remoto.
-- Un modulo di accessibilità autonomo avviato sul computer di destinazione su richiesta del controller. Il vantaggio di questo approccio è che l&#x27;utente finale non sente la voce sul proprio computer mentre lo state controllando. Il modulo di accessibilità remota convoglia invece l&#x27;output vocale alla copia di NVDA in esecuzione sul lato controller. In questo modo, è possibile assistere in modo accessibile un utente finale senza che questi debba installare o scaricare uno screen reader.
+
+Il modulo di accessibilità remota è costituito da due componenti:
+* Un componente aggiuntivo per il lettore di schermo NVDA che consente al lettore di ricevere l’output dal computer remoto
+* Un modulo di accessibilità autonomo avviato sul computer di destinazione su richiesta del controllore. Il vantaggio di questo approccio è che l’utente finale non sente la sintesi vocale sul proprio computer mentre lo state controllando. Il Modulo di accessibilità remota, infatti, convoglia l’output vocale verso la copia di NVDA in esecuzione sul lato del controllore. In questo modo, potete assistere in modo accessibile un utente finale senza che questi debba installare o nemmeno scaricare uno screen reader.
 
 ### Procedura di configurazione
-Per la prima inizializzazione del modulo di accessibilità, ecco cosa è necessario fare:
-1. Connettersi a un computer che non ha uno screen reader in esecuzione.
-1. Se NVDA è attualmente in esecuzione, verrà richiesto di installare un componente aggiuntivo che consentirà alla copia di NVDA di comunicare con il computer remoto durante la sessione. Accettare le richieste di installazione e attendere il riavvio di NVDA.
-1. A questo punto, il modulo di accessibilità remota sarà completamente inizializzato e si sentirà l&#x27;output vocale mentre si controlla il computer remoto. Per disattivare temporaneamente l&#x27;output vocale, è sufficiente premere una volta Insert o Capslock+S per disattivarlo, quindi premere due volte quel comando per riattivarlo.
 
-Da questo momento in poi, se si esegue uno screen reader sul computer di controllo, il modulo di accessibilità remota si avvierà automaticamente durante le sessioni remote in cui il computer remoto non ha uno screen reader in esecuzione. Se si esegue uno screen reader diverso da NVDA, RIM disattiverà quello screen reader e passerà a NVDA. Se è necessario arrestare il modulo di accessibilità remota sul computer remoto per avviare un altro lettore di schermo, è sufficiente accedere all&#x27;opzione &quot;Stop Remote Accessibility&quot; (Arresta accessibilità
+Per l’inizializzazione iniziale del modulo di accessibilità, ecco cosa è necessario fare:
+
+1. Connettersi a un computer su cui non sia in esecuzione alcun lettore di schermo.
+1. Se NVDA è attualmente in esecuzione, ti verrà chiesto di installare un componente aggiuntivo che consentirà alla tua copia di NVDA di comunicare con il computer remoto durante la sessione. Accetta le richieste di installazione e attendi il riavvio di NVDA.
+1. A questo punto, il modulo di accessibilità remota sarà completamente inizializzato e sentirete l’output vocale mentre controllate il computer remoto. Per disattivare temporaneamente l’output vocale, basta premere una volta il tasto Insert o Caps Lock+S per disattivarlo, quindi premere due volte quel comando per riattivarlo.
+
+Da questo momento in poi, se sul computer di controllo è in esecuzione uno screen reader, il modulo di accessibilità remota si avvierà automaticamente durante le sessioni remote in cui sul computer remoto non è in esecuzione uno screen reader. Qualora si stia utilizzando uno screen reader diverso da NVDA, RIM disattiverà tale screen reader e passerà a NVDA. Se è necessario arrestare il modulo di accessibilità remota sul computer remoto per avviare un altro lettore di schermo, è sufficiente selezionare l’opzione “Arresta accessibilità remota” dal menu RIM.  
+
 </Windows>
- 
-<MacOS>
-remota
-</MacOS>
-
-<Windows>
-) dal menu RIM.
-</Windows>
-  
-
-
-
 
 <MacOS>
-Il modulo di accessibilità remota è una configurazione speciale avviata sul Mac di destinazione su richiesta di un controller Windows o Mac. Il vantaggio di questo approccio è che l&#x27;utente finale non sente la voce sul proprio computer mentre lo si controlla. Il modulo di accessibilità remota convoglia invece l&#x27;output vocale al sistema vocale sul lato controller. In questo modo, puoi assistere in modo accessibile un utente finale senza che questi debba abilitare uno screen reader. Se stai eseguendo VoiceOver sul Mac di controllo, il modulo di accessibilità remota si avvierà automaticamente durante le sessioni remote in cui il computer remoto non ha uno screen reader in esecuzione.
+
+Il modulo di accessibilità remota è una configurazione speciale avviata sul Mac di destinazione su richiesta di un controller Windows o Mac. Il vantaggio di questo approccio è che l’utente finale non sente la sintesi vocale sul proprio computer mentre lo state controllando. Il modulo di accessibilità remota, infatti, convoglia l’output vocale verso il sistema di sintesi vocale presente sul lato del controller. In questo modo, è possibile assistere un utente finale in modo accessibile senza che questi debba abilitare uno screen reader. Se su Mac controllante è in esecuzione VoiceOver, il modulo di accessibilità remota si avvierà automaticamente durante le sessioni remote in cui sul computer remoto non è in esecuzione uno screen reader.  
+
 </MacOS>
-  
 
 ## Riavvio e ricollegamento
 
-Sia che stiate installando aggiornamenti di sistema o cercando di risolvere un blocco del sistema, RIM vi assiste durante il processo di riavvio. Selezionando l&#x27;opzione &quot;Riavvia e riconnetti&quot; dal menu RIM potrete eseguire un riavvio graduale o un riavvio di emergenza, a seconda dello stato del computer. Durante il riavvio del computer, RIM vi informerà che sono in corso tentativi di riconnettersi.
-Tieni presente che se il computer viene riavviato da un&#x27;installazione software o riavviato manualmente nel modo consueto, ti verrà chiesto se desideri ricollegare la sessione. È inoltre importante notare che in entrambi i casi, i target Mac si ricollegheranno solo dopo che l&#x27;utente avrà effettuato l&#x27;accesso. Ciò è dovuto al fatto che RIM non può avviarsi automaticamente nella schermata di accesso a causa delle limitazioni della piattaforma, in particolare la crittografia del disco FileVault.
+Sia che stiate installando aggiornamenti di sistema o cercando di risolvere un blocco del sistema, il RIM vi supporta durante il processo di riavvio. Selezionando l’opzione «Riavvia e riconnetti» dal menu RIM potrai eseguire un riavvio regolare o un riavvio di emergenza, a seconda dello stato in cui si trova il computer. Mentre il computer si riavvia, RIM ti informerà che sono in corso tentativi di riconnessione.
 
-### Accesso non presidiato o con richiesta
+Si noti che se il computer viene riavviato a seguito dell’installazione di un software o manualmente secondo la procedura standard, ti verrà chiesto se desideri ricollegare la sessione. È inoltre importante notare che, in entrambi i casi, i dispositivi Mac di destinazione si ricollegheranno solo dopo che l’utente avrà effettuato l’accesso. Ciò è dovuto al fatto che RIM non può avviarsi automaticamente nella schermata di accesso a causa di limitazioni della piattaforma, in particolare la crittografia del disco FileVault.
 
-RIM consente al controllore di configurare i computer per l&#x27;accesso non presidiato o con richiesta di conferma. Ciò consente di fornire assistenza remota senza che l&#x27;utente debba avviare RIM, inserire una parola chiave o persino trovarsi vicino al computer. Ciò è utile se sei un amministratore di sistema che esegue la manutenzione ordinaria dei computer nel tuo gruppo di lavoro o per i clienti a cui fornisci assistenza regolarmente. Potresti anche voler consentire l&#x27;accesso non presidiato al tuo computer di casa nel caso in cui dovessi accedervi da un altro luogo.
-Esistono diversi modi per configurare i computer per l&#x27;accesso non presidiato.
+### Accesso automatico o con richiesta di conferma
+
+RIM consente a te, in qualità di amministratore, di configurare i computer per l’accesso automatico o con richiesta di conferma. Ciò consente di fornire assistenza remota senza che l’utente debba avviare RIM, inserire una parola chiave o persino trovarsi vicino al computer. Ciò è utile se sei un amministratore di sistema che esegue la manutenzione ordinaria sui computer del proprio gruppo di lavoro, oppure per i clienti a cui fornisci assistenza regolarmente. Potresti anche voler abilitare l’accesso automatico per il tuo computer di casa, nel caso dovessi accedervi da un’altra postazione.
+
+Esistono diversi modi per configurare i computer per l’accesso automatico.
 
 #### Durante una sessione interattiva
 
-1. Apri il menu RIM.
-1. Seleziona &quot;Richiedi accesso non presidiato o con richiesta di conferma&quot;.
-1. Ti verrà chiesto che tipo di connessione desideri configurare. Le opzioni disponibili sono:
-1. Non presidiato: consente di avviare le sessioni senza alcun intervento da parte dell&#x27;utente finale.
-1. Con richiesta: questa configurazione presenta all&#x27;utente un messaggio che lo informa che ti stai connettendo al suo computer. Se desidera accettare la connessione, dovrà premere Opzione+Maiusc+Y su macOS o Windows+Maiusc+Y su Windows.
-1. Ti verrà chiesto di assegnare un nome a questo computer. Inserisci un nome personale per il computer o, se applicabile, l&#x27;ID del computer così come appare nel tuo gruppo di lavoro.
-1. Premere Invio.
-1. Sul computer client, viene visualizzata una finestra di dialogo che chiede all&#x27;utente se è d&#x27;accordo con la configurazione del computer per l&#x27;accesso richiesto. Se risponde sì, verrà visualizzato un messaggio che informa che l&#x27;accesso è stato approvato.  
+1. Apri il menu di RIM.
+1. Selezionare «Richiedi accesso automatico o con richiesta di conferma».
+1. Verrà chiesto quale tipo di connessione si desidera configurare. Le opzioni disponibili sono:
+    1. Automatico: consente di avviare le sessioni senza alcun intervento da parte dell’utente finale.
+    1. Con richiesta di conferma: questa configurazione mostra all’utente un messaggio che lo informa che ti stai connettendo al suo computer. Se desidera accettare la connessione, dovrà premere Opzione+Maiusc+Y su macOS oppure Windows+Maiusc+Y su Windows.
+1. Ti verrà chiesto di assegnare un nome a questo computer. Inserisci un nome personalizzato per il computer oppure, se applicabile, l’ID del computer così come appare nel tuo gruppo di lavoro.
+1. Se fai parte di un’organizzazione o se il tuo account è dotato della funzionalità “gruppo di destinazione”, ti verrà chiesto di assegnare questo computer a un gruppo di destinazione.
+    * Se selezioni il gruppo di destinazione predefinito, RIM mostrerà una finestra di dialogo di conferma aggiuntiva prima di avviare la richiesta.
+1. Attiva "Invia richiesta".
+1. Sul computer client apparirà una finestra di dialogo che chiede all’utente se acconsente alla configurazione del proprio computer per l’accesso da te richiesto. Se risponde di sì, riceverai un messaggio che ti informa che l’accesso è stato approvato.  
 
 ##### Nota per i titolari di account personali non presidiati
 
-Se hai utilizzato tutti gli slot macchina assegnati al tuo account, RIM non eseguirà la richiesta. In questa situazione, hai due opzioni, entrambe disponibili tramite la dashboard RIM:
-1. Cancella la registrazione di uno dei tuoi computer, liberando uno slot.
-1. Aggiorna il tuo abbonamento con più slot.
+Se hai utilizzato tutti gli slot per computer assegnati al tuo account, RIM non eseguirà la richiesta. In questo caso, hai due opzioni, entrambe disponibili tramite la dashboard di RIM:
 
-Registrazione di un computer al tuo account RIM
+1. Cancella la registrazione di uno dei tuoi computer, liberando così uno slot.
+1. Esegui l’upgrade del tuo abbonamento per ottenere più slot.
 
-Se desideri registrare uno dei tuoi computer per l&#x27;accesso non presidiato, puoi farlo senza dover avviare una sessione interattiva con il computer. 
-1. Avvia RIM in modalità Ricevi assistenza.
-1. Fai clic sul pulsante &quot;Aggiungi questo computer al tuo account RIM&quot;.
-1. Inserisci il tuo indirizzo e-mail, quindi fai clic su Avanti.
-1. Attendi l&#x27;arrivo del codice di accesso in due passaggi, inseriscilo e dovresti aver effettuato l&#x27;accesso.
-1. Ti verrà chiesto quale tipo di accesso desideri configurare per questo computer. Le opzioni disponibili sono:
-1. Non presidiato: consente di avviare sessioni senza alcun intervento da parte dell&#x27;utente finale.
-1. Con richiesta: questa configurazione presenta all&#x27;utente una richiesta che lo informa che ti stai connettendo al suo computer.
-1. Assegna un nome al computer, quindi attiva il pulsante &quot;Aggiungi computer&quot;.
-1. Il computer verrà registrato sul tuo account, consentendo a tutti i computer controller connessi al tuo account RIM di connettersi a questo computer.
+#### Registrazione di un computer sul tuo account RIM
 
-##### Nota per i titolari di account personali non presidiati
+Se desideri registrare uno dei tuoi dispositivi per l’accesso non presidiato, puoi farlo senza dover avviare una sessione interattiva con il dispositivo. 
 
-Se hai utilizzato tutti gli slot per computer assegnati al tuo account, RIM non eseguirà la richiesta. In questa situazione, hai due opzioni, entrambe disponibili tramite la dashboard RIM:
-1. Cancella la registrazione di una delle tue macchine, liberando uno slot.
-1. Aggiorna il tuo abbonamento con più slot.
+1. Avvia RIM in modalità “Ricevi assistenza”.
+1. Fai clic sul pulsante “Aggiungi questo dispositivo al tuo account RIM”.
+1. Inserisci il tuo indirizzo e-mail, quindi fai clic su “Avanti”.
+1. Attendi l’arrivo del codice di accesso in due passaggi, inseriscilo, dopodiché dovresti aver effettuato l’accesso.
+1. Ti verrà chiesto quale tipo di accesso desideri configurare per questa macchina. Le opzioni disponibili sono:
+    1. Non presidiato: consente di avviare sessioni senza alcun intervento da parte dell’utente finale.
+    1. Con richiesta di conferma: questa configurazione mostra all’utente un messaggio che lo informa che ti stai connettendo al suo computer.
+1. Assegna un nome al computer.
+1. Se fai parte di un’organizzazione o se il tuo account dispone della funzionalità "Gruppo di destinazione", ti verrà chiesto di assegnare questo computer a un gruppo di destinazione.
+    * Se selezioni il gruppo di destinazione predefinito, RIM visualizzerà una finestra di dialogo di conferma aggiuntiva prima di avviare la richiesta.
+1. Clicca sul pulsante "Aggiungi dispositivo".
+1. Il dispositivo verrà registrato sul tuo account, consentendo a qualsiasi dispositivo controller che abbia effettuato l’accesso al tuo account RIM di connettersi a questo dispositivo.
 
-#### Connessione
+##### Nota per i titolari di account personali in modalità automatica
 
-Ora che abbiamo registrato la macchina per l&#x27;accesso non presidiato, ecco come avviare una sessione.
+Se hai utilizzato tutti gli slot per i dispositivi assegnati al tuo account, RIM non eseguirà la richiesta. In questa situazione, hai due opzioni, entrambe disponibili tramite la dashboard di RIM:
+
+1. Cancella la registrazione di uno dei tuoi dispositivi, liberando così uno slot.
+1. Esegui l’upgrade del tuo abbonamento con più slot.
+
+#### Come connettersi
+
+Ora che abbiamo registrato il dispositivo per l’accesso non presidiato, ecco come avviare una sessione.
+
 1. Avvia RIM in modalità controller.
-1. Invece di inserire una parola chiave, individua e attiva il pulsante &quot;Scegli una macchina&quot;.
-1. Quando clicchi su questo pulsante, apparirà un elenco di macchine. Scegli quella che desideri, quindi premi Invio. Puoi anche utilizzare la barra di ricerca per restringere l&#x27;elenco a una macchina specifica.
+1. Anziché inserire una parola chiave, individua e attiva la scheda “I miei dispositivi”.
+1. Quando si attiva questa scheda, apparirà un elenco di macchine. Scegliere quella desiderata, quindi premere Invio. È anche possibile utilizzare la barra di ricerca per restringere l’elenco a una macchina specifica.
 
-Se la macchina di destinazione è configurata per l&#x27;accesso con richiesta, l&#x27;utente finale riceverà una richiesta. Una volta che avrà risposto sì, sarai connesso. Se la sessione è non presidiata, sarai immediatamente connesso e indirizzato alla zona di controllo remoto.
+Se la macchina di destinazione è configurata per l’accesso con richiesta di conferma, all’utente finale verrà visualizzata una richiesta. Una volta che avrà risposto “sì”, sarai connesso. Se la sessione è in modalità non presidiata, verrai immediatamente connesso e reindirizzato alla zona di controllo remoto.
 
-Nota: le conversazioni vocali richiedono l&#x27;approvazione dell&#x27;utente di destinazione durante le sessioni completamente non presidiate. Ciò non è tuttavia necessario per le sessioni con richiesta di conferma.
+Nota bene: le conversazioni vocali richiedono l’approvazione dell’utente di destinazione durante le sessioni completamente non presidiate. Ciò non è tuttavia necessario per le sessioni con richiesta di conferma.
 
-Creazione di un collegamento per una sessione non presidiata
+#### Creazione di un collegamento per una sessione non presidiata
 
 Per maggiore comodità, è possibile creare collegamenti sul desktop che consentono di avviare automaticamente sessioni non presidiate. Per farlo:
-1. Accedi all&#x27;elenco dei computer non presidiati e seleziona quello per cui desideri creare un collegamento.
-1. Fai clic sul pulsante &quot;Crea collegamento&quot;.
-1. Un collegamento verrà automaticamente aggiunto al desktop.
 
-Ora, quando attivi questo collegamento, verrai reindirizzato automaticamente alla sessione remota oppure verrà inviata una richiesta al computer dell&#x27;utente che potrà accettare.
+1. Accedi all’elenco dei computer non presidiati nella scheda “I miei computer” e seleziona quello per cui desideri creare un collegamento.
+1. Fare clic sul pulsante “Crea collegamento”.
+1. Un collegamento verrà aggiunto automaticamente al desktop.
+
+Ora, quando si attiva questo collegamento, si accederà automaticamente alla sessione remota oppure verrà inviato un messaggio di richiesta al computer dell’utente che potrà essere accettato.
 
 <Windows>
 
 ##### Altri modi per utilizzare i collegamenti alle sessioni non presidiate
 
-I collegamenti alle sessioni non presidiate, come qualsiasi altro collegamento, possono avere tasti di scelta rapida globali associati. Ciò può essere estremamente utile se sei un tecnico di manutenzione che gestisce più computer in un gruppo di lavoro. Ad esempio, se il tuo gruppo di lavoro è composto da 6 computer su cui esegui la manutenzione ordinaria, potresti configurare Alt+Control+1 fino a 6 come tasti di scelta rapida per ciascuna macchina. Questo dovrebbe velocizzare notevolmente il tuo flusso di lavoro.
-Inoltre, puoi richiamare una sessione non presidiata tramite la casella Esegui se copi il collegamento nella tua directory utente. Una volta copiato il collegamento, puoi avviare una sessione non presidiata digitando il nome-della-tua-sessione.url nella casella Esegui.
+I collegamenti alle sessioni non presidiate, come qualsiasi altro collegamento, possono avere tasti di scelta rapida globali associati. Ciò può rivelarsi estremamente utile se sei un tecnico di manutenzione che gestisce più computer in un gruppo di lavoro. Ad esempio, se il tuo gruppo di lavoro è composto da 6 computer sui quali esegui la manutenzione ordinaria, potresti configurare i tasti di scelta rapida da Alt+Ctrl+1 a Alt+Ctrl+6 per ciascuna macchina. Ciò dovrebbe velocizzare notevolmente il tuo flusso di lavoro.
+Inoltre, è possibile avviare una sessione automatica tramite la finestra "Esegui" se si copia il collegamento nella propria directory utente. Una volta copiato il collegamento, è possibile avviare una sessione automatica digitando "nome-della-sessione.url" nella finestra "Esegui".
 
 </Windows>
 
+#### Revoca dell’accesso in modalità automatica
 
-#### Revoca dell&#x27;accesso non presidiato
-
-Se non si desidera più che la macchina sia controllata in modo non presidiato, è possibile revocare l&#x27;accesso al controller. Non è necessario essere in una sessione per farlo.
-
+Se non desideri più che il tuo computer venga controllato in modalità automatica, puoi revocare l’accesso al controllore. Non è necessario essere in una sessione per farlo.
 
 <Windows>
-1. Accedere all&#x27;icona Remote Incident Manager nella barra delle applicazioni.
-1. Se si utilizza la tastiera, premere Windows+B, quindi lo spazio, quindi la freccia sinistra o destra fino a trovare l&#x27;icona.
-1. Fare clic con il pulsante destro del mouse su questa icona oppure premere il tasto Applicazioni o Maiusc+F10.
-1. Selezionare l&#x27;opzione &quot;Revoca accesso non presidiato&quot;.
-1. Verrà visualizzato un elenco di computer, selezionare quello che si desidera revocare.
-1. Ti verrà chiesto se desideri revocare il computer; rispondi sì.
+
+1. Accedere all’icona di Remote Incident Manager nella barra delle applicazioni.
+    1. Se si utilizza la tastiera, premere Windows+B, poi la barra spaziatrice, quindi la freccia sinistra o destra fino a individuare l’icona.
+1. Fare clic con il tasto destro su questa icona oppure premere il tasto Applicazioni o Shift+F10.
+1. Seleziona l’opzione «Revoca accesso in modalità automatica».
+1. Verrà visualizzato un elenco di computer; seleziona quello per cui desideri revocare l’accesso.
+1. Ti verrà chiesto se desideri revocare l’accesso al computer; rispondi «Sì».  
+
 </Windows>
-  
-
-
 
 <MacOS>
-1. Accedi all&#x27;icona Remote Incident Manager nel menu extra/menu di stato.
-1. Se utilizzi VoiceOver, premi due volte VO+M, quindi individua l&#x27;icona del menu Remote Incident Manager.
-1. Fai clic su questa icona o premi VO+Spazio.
-1. Seleziona l&#x27;opzione &quot;Revoca accesso non presidiato&quot;.
-1. Verrà visualizzato un elenco di computer, seleziona quello che desideri revocare.
-1. Ti verrà chiesto se desideri revocare l&#x27;accesso al computer; rispondi sì.
-</MacOS>
-  
 
-Ecco fatto! Il controller riceverà un messaggio che indica che questo computer non è più disponibile per l&#x27;accesso non presidiato. Se dovesse essere nuovamente necessario l&#x27;accesso non presidiato, sarà possibile riavviare la procedura per richiedere l&#x27;autorizzazione all&#x27;accesso non presidiato come descritto sopra.
+1. Accedi all’icona di Remote Incident Manager nei menu "Extras" o "Stato".
+    1. Se utilizzi VoiceOver, premi due volte VO+M, quindi individua l’icona del menu di Remote Incident Manager.
+    1. Fai clic su questa icona oppure premi VO+Spazio.  
+1. Seleziona l’opzione “Revoca accesso non presidiato”.
+1. Verrà visualizzato un elenco di computer; seleziona quello per cui desideri revocare l’accesso.
+1. Ti verrà chiesto se desideri revocare l’accesso al computer; rispondi “sì”.  
+
+</MacOS>
+
+Ecco fatto! Il controller riceverà un messaggio che indica che questo computer non è più disponibile per l’accesso non presidiato. Qualora fosse nuovamente necessario l’accesso non presidiato, potrà riavviare la procedura per richiedere l’autorizzazione all’accesso non presidiato come descritto sopra.
 
 ### Strumenti AI
 
-Il menu Strumenti AI è un comodo aggregatore di chatbot incentrati sull&#x27;accessibilità. Tutti questi bot consentono di ottenere rapidamente risposte su vari argomenti relativi alla tecnologia assistiva, ai sistemi operativi, ecc. Tutti gli utenti con un pass pro, un abbonamento alla community personale, un abbonamento al supporto personale nel fine settimana o un abbonamento pro/enterprise avranno accesso a questa funzionalità.  
-Si noti che molti di questi bot, compreso il nostro, sono in versione beta e, come tali, devono essere utilizzati con cautela, allo stesso modo in cui non si dovrebbero considerare le indicazioni GPS come un dato di fatto indiscutibile. Maggiori informazioni su questo argomento saranno fornite in seguito.
+Il menu "Strumenti IA" è un pratico aggregatore di chatbot incentrati sull’accessibilità. Tutti questi bot consentono di ottenere rapidamente risposte su vari argomenti relativi alle tecnologie assistive, ai sistemi operativi, ecc. Tutti gli utenti in possesso di un pass Pro, di un abbonamento alla community personale, di un abbonamento al supporto personale nel fine settimana o di un abbonamento Pro/Enterprise avranno accesso a questa funzionalità.  
+Si noti che molti di questi bot — compreso il nostro — sono in versione beta e, in quanto tali, dovrebbero essere utilizzati con cautela, proprio come non si dovrebbero considerare le indicazioni del GPS come fatti indiscutibili. Ne parleremo più avanti.
 
-I bot attualmente disponibili sono i seguenti:
+I bot attualmente disponibili sono i seguenti: 
 * RIMBot (beta)
-* FSCompanion (Beta)
+* FSCompanion (beta)
 
-Questi bot sono attualmente disponibili solo in inglese.  
-Ciascun bot si aprirà in una finestra separata. Sebbene ogni bot abbia le proprie convenzioni di interfaccia, premendo il tasto Esc si tornerà sempre alla sessione remota.
+Questi bot sono attualmente disponibili esclusivamente in inglese.  
+Ogni bot si aprirà in una finestra separata. Sebbene ogni bot abbia le proprie convenzioni di interfaccia, premendo il tasto Esc si tornerà sempre alla sessione remota.
 
 #### Dichiarazioni di non responsabilità
 
-La funzione Strumenti AI all&#x27;interno di Remote Incident Manager (RIM) fornisce un&#x27;interfaccia accessibile per l&#x27;utilizzo di Pneuma Solutions RIMBot e altri servizi di terze parti. Pneuma Solutions declina espressamente ogni garanzia, espressa o implicita, relativa all&#x27;affidabilità, alla disponibilità o al supporto a lungo termine di questi strumenti di terze parti. Gli strumenti designati come beta, compresi quelli sviluppati da Pneuma Solutions, saranno chiaramente contrassegnati come tali all&#x27;interno dell&#x27;interfaccia Strumenti AI dell&#x27;applicazione RIM o della relativa dashboard.
+La funzionalità “Strumenti di IA” all’interno di Remote Incident Manager (RIM) fornisce un’interfaccia accessibile per l’utilizzo del RIMBot di Pneuma Solutions e di altri servizi di terze parti. Pneuma Solutions declina espressamente ogni garanzia, sia essa esplicita o implicita, relativa all’affidabilità, alla disponibilità o al supporto a lungo termine di questi strumenti di terze parti. Gli strumenti contrassegnati come beta, compresi quelli sviluppati da Pneuma Solutions, saranno chiaramente identificati come tali all’interno dell’interfaccia “Strumenti IA” dell’applicazione RIM o della relativa dashboard.
 
-Il chatbot di supporto RIMBot è parzialmente addestrato utilizzando dati disponibili pubblicamente che coprono varie tecnologie. Questo addestramento viene condotto per migliorare la capacità del bot di fornire risposte accurate e utili, nel rispetto degli standard di copyright e privacy. Pneuma Solutions si impegna a garantire che le risposte del bot mantengano un ragionevole grado di accuratezza. Tuttavia, a causa delle limitazioni intrinseche dei modelli linguistici di grandi dimensioni, Pneuma Solutions non può garantire che tutte le risposte siano completamente accurate.
+Il chatbot di supporto RIMBot è stato parzialmente addestrato utilizzando dati disponibili pubblicamente relativi a varie tecnologie. Tale addestramento è stato condotto per migliorare la capacità del bot di fornire risposte accurate e utili, nel rispetto delle norme sul copyright e sulla privacy. Pneuma Solutions si impegna a garantire che le risposte del bot mantengano un ragionevole grado di accuratezza. Tuttavia, a causa dei limiti intrinseci dei modelli linguistici di grandi dimensioni, Pneuma Solutions non può garantire che tutte le risposte siano del tutto accurate.
 
-Sebbene siano stati condotti test approfonditi per garantire la sicurezza e l&#x27;affidabilità del bot, potrebbero verificarsi delle imprecisioni. In caso di risposta verificabilmente errata, gli utenti sono invitati a segnalare il problema fornendo una copia dettagliata del log della chat pertinente tramite l&#x27;applicazione RIM o la nostra [pagina di contatto](https://pneumasolutions.com/contact/).
+Sebbene siano stati condotti test approfonditi per garantire la sicurezza e l’affidabilità del bot, potrebbero verificarsi imprecisioni. In caso di una risposta verificabilmente errata, gli utenti sono invitati a segnalare il problema fornendo una copia dettagliata della cronologia della chat pertinente tramite l’applicazione RIM o la nostra [pagina dei contatti](https://pneumasolutions.com/contact/).
 
-La presente dichiarazione di non responsabilità regola l&#x27;uso degli strumenti di intelligenza artificiale e di RIMBot ed è soggetta ai [termini e condizioni](https://pneumasolutions.com/terms-of-use/) di utilizzo forniti da Pneuma Solutions.
+La presente dichiarazione di non responsabilità regola l’uso degli strumenti di IA e di RIMBot ed è soggetta ai [termini e condizioni](https://pneumasolutions.com/terms-of-use/) d’uso forniti da Pneuma Solutions.
 

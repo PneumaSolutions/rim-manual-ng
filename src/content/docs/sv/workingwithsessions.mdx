@@ -7,462 +7,525 @@ import MacOS from "~/components/platform/MacOS.astro"
 
 ### Vad du bör veta innan du börjar
 
-Några saker kommer att hända omedelbart efter att anslutningen har upprättats.
-
-
-<Windows>
-- Fönstret för fjärrkontroll för sessionen visas. Detta fönster kan flyttas och storleksändras på en enda skärm, liksom i en konfiguration med flera skärmar.
-- Du kommer att informeras om statusen för den aktiva skärmläsaren, eller avsaknaden av sådan, på klientens dator.
-- Om klienten kör en skärmläsare kommer ett meddelande som informerar användaren om att fjärrsessionen har börjat att omedelbart bekräfta att användarens systemljud fungerar.
-- En Mac-målmaskin kommer att visa upp assistenten för tangentbordsinställningar om det är första gången en kontroller ansluts till den.
-- Detta är för det virtuella tangentbordet Karabiner, som lyssnar på tangentbordskommandon som skickas till det av en kontroller.
-    - Därför bör du gå igenom installationsassistenten på måldatorn, eftersom den lyssnar efter tangenttryckningar från fjärrkontrollen under identifieringsprocessen, inte Mac-datorns eget tangentbord.
-- Sist men inte minst kommer alla tangentbords- och musinmatningar omedelbart att dirigeras till måldatorn. För att återföra kontrollen till din dator gör du något av följande:
-- Tryck på Windows+Skift+Bakåt.
-    - Högerklicka på RIM-fönstrets titelrad.
-- Vänsterklicka på RIM-ikonen i mitten av titelraden.
-</Windows>
-
-
-
-
-
-
-
-<MacOS>
-- Fönstret för fjärrkontroll för sessionen visas. Detta fönster kan flyttas och storleksändras på en enda skärm, liksom i en konfiguration med flera skärmar.
-- Du kommer att informeras om statusen för den aktiva skärmläsaren, eller avsaknaden av sådan, på klientens dator.
-- Om klienten kör en skärmläsare kommer ett meddelande som informerar användaren om att fjärrsessionen har börjat att ge omedelbar bekräftelse på att användarens systemljud fungerar.
-- En Mac-målcomputer öppnar assistenten för tangentbordsinställningar om det är första gången en styrenhet ansluts till den.
-- Detta gäller det virtuella tangentbordet Karabiner, som lyssnar på tangentbordskommandon som skickas till det av en styrenhet.
-- Därför bör du gå igenom assistenten för inställningar på målcomputern, eftersom den lyssnar efter tangenttryckningar på fjärrtangentbordet under identifieringsprocessen, inte på Mac-datorns eget tangentbord.
-- Sist men inte minst kommer all tangentbords- och musinmatning omedelbart att dirigeras till måldatorn. För att återföra kontrollen till din maskin gör du något av följande:
-- Tryck på Option+Shift+Backspace.
-- Högerklicka på RIM-fönstrets titelrad.
-- Vänsterklicka på RIM-ikonen i mitten av titelraden.
-
-
-</MacOS>
-
-
-### Fjärrkontrollzon
-
+Några saker kommer att hända direkt efter att anslutningen har upprättats.
 
 <Windows>
-Nu är du redo att utföra alla uppgifter som behöver göras på klientsidan. Om du behöver växla tillbaka till att styra din egen dator öppnar du RIM-menyn och väljer alternativet &quot;Minimera session&quot;. Du kommer att återgå till din egen dator tills du växlar tillbaka till sessionsfönstret eller trycker på Windows+Skift+Backspace igen. När du går tillbaka till sessionsfönstret kommer tangentbords- och musinmatningen återigen att dirigeras till klientdatorn.
+
+* Fönstret för fjärrstyrning av sessionen visas. Detta fönster kan flyttas och storleksändras både på en enskild skärm och i en konfiguration med flera skärmar.
+* Du kommer att informeras om statusen för den skärmläsare som körs, eller om det inte finns någon sådan, på klientens dator.
+* Om klienten kör en skärmläsare kommer ett popup-meddelande som informerar användaren om att fjärrsessionen har startat att ge omedelbar bekräftelse på att användarens systemljud fungerar.
+* På en Mac-mottagare kommer assistenten för tangentbordsinställningar att dyka upp om det är första gången en kontrollenhet ansluter till den.
+    * Detta gäller det virtuella tangentbordet Karabiner, som lyssnar på tangentbordskommandon som skickas till det av en kontrollenhet.
+    * Därför bör du guida måldatorn genom inställningsassistenten, eftersom den under identifieringsprocessen kommer att lyssna efter tangenttryckningar från fjärrkontrollen, inte från Mac-datorns eget tangentbord.
+* Sist men inte minst kommer all tangentbords- och musinmatning omedelbart att dirigeras till måldatorn. För att återföra kontrollen till din egen dator gör du något av följande:
+    * Tryck på Windows+Skift+Backspace.
+    * Högerklicka på RIM-fönstrets titelrad.
+    * Vänsterklicka på RIM-ikonen i mitten av titelraden.
 
 </Windows>
 
+<MacOS>
 
+* Fjärrstyrningsfönstret för sessionen visas. Detta fönster kan flyttas och storleksändras på en enskild skärm såväl som i en konfiguration med flera skärmar.
+* Du kommer att informeras om statusen för den aktiva skärmläsaren, eller avsaknaden av en sådan, på klientens dator.
+* Om klienten kör en skärmläsare kommer ett popup-meddelande som informerar användaren om att fjärrsessionen har startat att ge omedelbar bekräftelse på att användarens systemljud fungerar.
+* På en Mac-mottagare öppnas assistenten för tangentbordsinställningar om det är första gången en kontrollenhet ansluter till den.
+    * Detta gäller det virtuella tangentbordet Karabiner, som lyssnar på tangentbordskommandon som skickas till det av en kontrollenhet.
+    * Därför bör du guida måldatorn genom inställningsassistenten, eftersom den under identifieringsprocessen kommer att lyssna efter tangenttryckningar från fjärrkontrollen, inte från Mac-datorns eget tangentbord.
+* Sist men inte minst kommer all tangentbords- och musinmatning omedelbart att dirigeras till måldatorn. För att återföra kontrollen till din egen dator gör du något av följande:
+    * Tryck på Option+Shift+Backspace.
+    * Högerklicka på RIM-fönstrets titelrad.
+    * Vänsterklicka på RIM-ikonen mitt på titelraden.
+
+</MacOS>
+
+### Fjärrstyrningszon
+
+<Windows>
+
+Nu är du redo att utföra alla uppgifter som behöver göras på klientsidan. Om du behöver växla tillbaka till att styra din egen dator öppnar du RIM-menyn och väljer sedan alternativet ”Minimera session”. Du kommer då tillbaka till din egen dator tills du växlar tillbaka till sessionsfönstret eller trycker på Windows+Skift+Backspace igen. När du går tillbaka till sessionsfönstret kommer tangentbords- och musinmatningen återigen att dirigeras till klientdatorn.
+
+</Windows>
 
 <MacOS>
 
-Nu är du redo att utföra alla uppgifter som behöver göras på klientsidan. Om du behöver växla tillbaka till att styra din egen dator öppnar du RIM-menyn och väljer alternativet &quot;Minimera session&quot;. Du kommer då tillbaka till din dator tills du växlar tillbaka till sessionsfönstret eller trycker på Option+Skift+Backspace igen. När du går tillbaka till sessionsfönstret kommer tangentbords- och musinmatningar återigen att dirigeras till klientdatorn.
+Nu är du redo att utföra alla uppgifter som behöver göras på klientsidan. Om du behöver växla tillbaka till att styra din egen dator öppnar du RIM-menyn och väljer sedan alternativet ”Minimera session”. Du kommer då tillbaka till din egen dator tills du växlar tillbaka till sessionsfönstret eller trycker på Option+Shift+Backspace igen. När du går tillbaka till sessionsfönstret kommer tangentbords- och musinmatningen återigen att dirigeras till klientdatorn.
+
 </MacOS>
 
-
-
-När du är klar kan antingen kontrollenheten eller målet gå in i RIM-menyn och välja alternativet &quot;Koppla från session&quot;. När sessionen avslutas får måldatorn ett meddelande som informerar om detta.
+När du är klar kan antingen kontrollenheten eller måldatorn öppna RIM-menyn och välja alternativet ”Avsluta session”. När sessionen avslutas får måldatorn ett popup-meddelande som informerar om detta.
 
 ## RIM-menyn
 
-Som nämnts tidigare leder åtkomst till RIM-menyn dig tillbaka till din dator. Det finns ett antal alternativ i denna meny. De inkluderar:  
+Som nämnts tidigare leder åtkomst till RIM-menyn dig tillbaka till din egen dator. Det finns ett antal alternativ i denna meny. De inkluderar:  
 
 <Windows>
 
-- Uppdatera RIM på måldatorn: Tvingar fram en uppdatering av RIM på måldatorn.
-- Detta alternativ visas om måldatorn kör en äldre version av RIM.
-- Installera om RIM som administratör på måldatorn: Detta alternativ försöker installera om RIM som administratör på en Windows-måldator, vilket kräver att måldatorns användare accepterar begäran om administratörsbehörighet själv och/eller med hjälp av företagets IT-avdelning.
-- Minimera session (**Windows+Skift+M**): återför kontrollen till din dator enligt beskrivningen ovan.
-- Öppna chatt: Öppnar textchatten för en given session.
-- Observera att detta alternativ också visas i mål-sidans sessionsmeny.
-- Överför fil till mål: Visas om en fil finns i urklipp.
-- Även om denna alternativa metod för att slutföra en filöverföring alltid är tillgänglig, är den endast nödvändig för att överföra filer till Mac-mål.
-- Vänd session (**Windows+Skift+F**): Gör det möjligt för din klient att fjärrstyra din dator och höra dess ljud. Som den ursprungliga kontrollern kan du vända tillbaka sessionen genom att välja detta alternativ en andra gång.
-- Starta/avsluta röstkonversation: Gör det möjligt att slå på eller stänga av röstchatten för din session.
-- Under en obevakad session kommer detta alternativ att visa en behörighetsdialogruta som användaren måste vara närvarande för att svara på. Men vid uppmanade sessioner initieras ändå röstkonversationer när kontrollern aktiverar dem.
-- Starta sessionsinspelning: Börjar spela in innehållet i den aktiva sessionen – mer om detta senare.
-- När sessionsinspelning är aktiverad ersätts detta alternativ med följande:
-- Pausa/återuppta sessionsinspelning (växla)
-- Stoppa sessionsinspelning: Avslutar och sparar inspelningen.
-- Starta fjärråtkomst: Det här alternativet visas när ingen skärmläsare körs på fjärrdatorn. Detta aktiverar tal på din sida, men klienten behöver inte oroa sig för att höra tal.
-- Om en skärmläsare (inklusive fjärråtkomst) körs, förvandlas det här alternativet till en tvingad avslutning av den körda skärmläsaren. Detta är användbart när målets skärmläsare slutar svara i sådan utsträckning att du inte kan starta om den normalt.
-- Stäng av målets ljudutgång: Gör det möjligt att stänga av systemets ljudutgång på den fjärranslutna datorn.
-- Observera att en pågående röstkonversation förblir aktiv medan denna inställning är aktiv, vilket gör att du kan prata med personen du är ansluten till medan deras systemljud är ohörbart för dig.
-- Starta om och återanslut: Gör det möjligt att starta om datorn och automatiskt återansluta sessionen.
-- Observera att en Mac-målmaskin inte kan starta RIM före inloggning på grund av plattformsbegränsningar, särskilt FileVault.
-- Därför återansluter RIM när användaren loggar in.
-- Skicka Control+Alt+Delete: Skickar detta tangenttryck till fjärrdatorn.
-    - En motsvarighet till detta alternativ har ännu inte implementerats för Mac-mål.
-- Begär obevakad eller uppmanad åtkomst: Gör det möjligt att skicka en begäran om obevakad åtkomst till klientdatorn. Detta är användbart om du är systemadministratör och behöver utföra rutinunderhåll, eller till och med för något så enkelt som att styra din hemdator när du är på resande fot.
-- Lås måldatorn: Låser måldatorn.
-- Visa anslutningsdetaljer: Ger detaljerad information om din anslutning och måldatorn. Informationen inkluderar:
-- Anslutningsstatistik
-- Information om datorn, inklusive operativsystemversion, tillgängligt RAM-minne etc.
-- Aktiva processer
-- Installerade paket
-- AI-verktyg: Gör det möjligt att chatta med ett antal chattbottar som är anpassade för tillgänglighet.
-    - Det här alternativet är bara tillgängligt för kontrollanter som har pro-pass eller är medlemmar i den personliga communityn, har helgsupport eller pro/enterprise-abonnemang.
-- Koppla från session (**Windows+Skift+D**): Avslutar sessionen.
-- Kom ihåg att det här alternativet är tillgängligt för båda sidor av sessionen.
-
+* Uppdatera RIM på måldatorn: Tvingar fram en uppdatering av RIM på måldatorn
+    * Detta alternativ visas om måldatorn kör en äldre version av RIM.
+* Re-install RIM as Administrator on Target: Detta alternativ försöker installera om RIM som administratör på en Windows-målmaskin, vilket kräver att målanvändaren själv och/eller med hjälp av företagets IT-avdelning godkänner begäran om administratörsbehörighet.
+* Minimera session (**Windows+Shift+M**): återför kontrollen till din dator enligt beskrivningen ovan
+* Öppna chatt: Öppnar textchatten för en viss session
+    * Observera att detta alternativ även visas i sessionsmenyn på målsidan.
+* Överför fil till måldator: Visas om det finns en fil i urklipp.
+    * Även om denna alternativa metod för att genomföra en filöverföring alltid är tillgänglig, behövs den endast för att överföra filer till Mac-mål.
+* Bläddra bland filer på målet: Möjliggör filöverföringar genom att öppna måldatorns filsystem i ett särskilt fönster.
+    * Denna filöverföringsmetod kräver tillstånd från målanvändaren under nyckelordssessioner.
+    * Detta alternativ visas inte för en kontrollant som arbetar inom en företagsorganisation om inte organisationen har aktiverat funktionen.
+* Växla session (**Windows+Shift+F**): Gör det möjligt för din klient att fjärrstyra din dator och höra ljudet från den. Som den ursprungliga kontrollanten kan du växla tillbaka sessionen genom att välja detta alternativ en andra gång.
+* Starta/avsluta röstkonversation: Gör det möjligt för dig att slå på eller stänga av röstchatten för din session.
+    * Under en obevakad session visar detta alternativ en behörighetsdialog som användaren måste vara närvarande för att svara på. I sessioner med inbjudan initieras dock fortfarande röstkonversationer när kontrollanten aktiverar dem.
+* Starta sessionsinspelning: Börjar spela in innehållet i den aktiva sessionen — mer om detta senare
+    * När sessionsinspelningen är aktiverad ersätts detta alternativ med följande:
+        * Pausa/återuppta sessionsinspelning (växla)
+        * Stoppa sessionsinspelning: Avslutar och sparar inspelningen
+* Starta fjärråtkomst: Detta alternativ visas när ingen skärmläsare körs på fjärrdatorn. Detta aktiverar tal på din sida, men klienten behöver inte oroa sig för att höra talet.
+    * Om en skärmläsare (inklusive Fjärråtkomst) körs, förvandlas detta alternativ till en tvingad avslutning av den aktiva skärmläsaren. Detta är användbart när målets skärmläsare slutar svara i sådan utsträckning att du inte kan starta om den normalt.
+* Stäng av målets ljudutgång: Gör det möjligt att stänga av systemljudet från fjärrdatorn.
+    * Observera att ett pågående röstsamtal förblir aktivt medan denna inställning är aktiv, vilket gör att du kan prata med personen du är ansluten till samtidigt som deras systemljud är ohörbart för dig.
+* Starta om och återanslut: Gör det möjligt att starta om datorn och automatiskt återansluta sessionen.
+    * Observera att en Mac-måldator inte kan starta RIM före inloggning på grund av plattformsbegränsningar, framför allt FileVault.
+    * Därför kommer RIM att återansluta så snart användaren loggar in.
+* Skicka Control+Alt+Delete: Skickar denna tangentkombination till den fjärranslutna datorn.
+    * En motsvarighet till detta alternativ har ännu inte implementerats för Mac-mål.
+* Begär obevakad eller bekräftad åtkomst: Gör det möjligt att skicka en begäran om obevakad åtkomst till klientdatorn. Detta är användbart om du är systemadministratör och behöver utföra rutinunderhåll, eller till och med för något så enkelt som att styra din hemdator när du är på resande fot.
+* Lås måldatorn: Låser måldatorn.
+* Visa anslutningsdetaljer: Ger en detaljerad översikt över din anslutning samt måldatorn. Informationen omfattar:
+    * Anslutningsstatistik
+    * Information om datorn, inklusive operativsystemets version, tillgängligt RAM-minne etc.
+    * Aktiva processer
+    * Installerade paket
+* AI-verktyg: Gör det möjligt att chatta med ett antal chatbots inriktade på tillgänglighet.
+    * Detta alternativ är endast tillgängligt för kontrollanter som har Pro-pass eller som har ett abonnemang i den personliga gemenskapen, helgsupport eller Pro/Enterprise-abonnemang.
+* Avsluta sessionen (**Windows+Shift+D**): Avslutar sessionen.
+    * Tänk på att detta alternativ är tillgängligt för båda parter i sessionen.
 
 </Windows>
-  
-
 
 <MacOS>
 
-- Uppdatera RIM på måldatorn: Tvingar fram en uppdatering av RIM på måldatorn.
-- Detta alternativ visas om måldatorn kör en äldre version av RIM.
-- Installera om RIM som administratör på måldatorn: Detta alternativ försöker installera om RIM som administratör på en Windows-måldator, vilket kräver att målanvändaren accepterar begäran om administratörsbehörighet själv och/eller med hjälp av företagets IT-avdelning.
-- Minimera session (**Option+Skift+M**): återför kontrollen till din dator enligt beskrivningen ovan.
-- Öppna chatt: Öppnar textchatten för en given session.
-    - Observera att detta alternativ också visas i mål-sidans sessionsmeny.
-- Överför fil till mål: Visas om en fil finns i urklipp.
-- Även om denna alternativa metod för att slutföra en filöverföring alltid är tillgänglig, är den endast nödvändig för att överföra filer till Mac-mål.
-- Vänd session (**Option+Skift+F**): Gör det möjligt för din klient att fjärrstyra din dator och höra dess ljud. Som den ursprungliga kontrollern kan du vända tillbaka sessionen genom att välja detta alternativ en andra gång.
-- Starta/avsluta röstkonversation: Gör det möjligt för dig att slå på eller stänga av röstchatten för din session.
-- Under en obevakad session kommer detta alternativ att visa en behörighetsdialog som användaren måste vara närvarande för att svara på. Vid uppmanade sessioner initieras dock fortfarande röstkonversationer när kontrollen aktiveras.
-- Starta sessionsinspelning: Börjar spela in innehållet i den aktiva sessionen – mer om detta senare.
-- När sessionsinspelning är aktiverad ersätts detta alternativ med följande:
-- Pausa/återuppta sessionsinspelning (växla)
-- Stoppa sessionsinspelning: Avslutar och sparar inspelningen.
-- Starta fjärråtkomst: Detta alternativ visas när ingen skärmläsare körs på fjärrdatorn. Detta aktiverar tal på din sida, men klienten behöver inte oroa sig för att höra tal.
-- Om en skärmläsare (inklusive fjärråtkomst) körs, förvandlas detta alternativ till ett tvångsavslut för den körande skärmläsaren. Detta är användbart när målets skärmläsare slutar svara i sådan utsträckning att du inte kan starta om den normalt.
-- Stäng av målets ljudutgång: Gör det möjligt att stänga av systemets ljudutgång på den fjärranslutna datorn.
-- Observera att en pågående röstkonversation förblir aktiv medan denna inställning är aktiv, vilket gör att du kan prata med personen du är ansluten till medan deras systemljud är ohörbart för dig.
-- Starta om och återanslut: Gör det möjligt att starta om datorn och automatiskt återansluta sessionen.
-    - Observera att en Mac-målmaskin inte kan starta RIM före inloggning på grund av plattformsbegränsningar, särskilt FileVault.
-- På en Mac-målmaskin kommer RIM därför att återansluta när användaren loggar in.
-- Skicka Control+Alt+Delete: Skickar detta tangenttryck till fjärrdatorn.
-- En motsvarighet till detta alternativ har ännu inte implementerats för Mac-målmaskiner.
-- Begär obevakad eller uppmanad åtkomst: Gör det möjligt att skicka en begäran om obevakad åtkomst till klientdatorn. Detta är användbart om du är systemadministratör och behöver utföra rutinunderhåll, eller till och med för något så enkelt som att styra din hemdator när du är på resande fot.
-- Lås måldatorn: Låser måldatorn.
-- Visa anslutningsdetaljer: Ger detaljerad information om din anslutning och måldatorn. Informationen inkluderar:
-- Anslutningsstatistik
-- Information om datorn, inklusive operativsystemversion, tillgängligt RAM-minne etc.
-- Aktiva processer
-- Installerade paket
-- AI-verktyg: Gör det möjligt att chatta med ett antal chattbottar som är inriktade på tillgänglighet.
-    - Det här alternativet är bara tillgängligt för kontrollanter som har pro-pass eller är medlemmar i den personliga communityn, har helgsupport eller pro/enterprise-abonnemang.
-- Koppla från session (**Option+Shift+D**): Avslutar sessionen.
-- Kom ihåg att det här alternativet är tillgängligt för båda sidor av sessionen.
-
+* Uppdatera RIM på måldatorn: Tvingar fram en uppdatering av RIM på måldatorn
+    * Detta alternativ visas om måldatorn kör en äldre version av RIM.
+* Ominstallera RIM som administratör på måldatorn: Detta alternativ försöker ominstallera RIM som administratör på en Windows-måldator, vilket kräver att målanvändaren godkänner begäran om administratörsbehörighet själv och/eller med hjälp av företagets IT-avdelning.
+* Minimera sessionen (**Option+Shift+M**): återför kontrollen till din dator enligt beskrivningen ovan
+* Öppna chatt: Öppnar textchatten för en given session
+    * Observera att detta alternativ även visas i sessionsmenyn på målsidan.
+* Överför fil till målet: Visas om det finns en fil i urklipp.
+    * Även om denna alternativa metod för att genomföra en filöverföring alltid är tillgänglig, behövs den endast för att överföra filer till Mac-mål.
+* Bläddra bland filer på målet: Möjliggör filöverföringar genom att öppna måldatorns filsystem i ett särskilt fönster.
+    * Denna filöverföringsmetod kräver tillstånd från målanvändaren under nyckelordssessioner.
+    * Detta alternativ visas inte för en kontrollant som arbetar inom en företagsorganisation om inte organisationen har aktiverat funktionen.
+* Växla session (**Option+Shift+F**): Gör det möjligt för din klient att fjärrstyra din dator och höra ljudet från den. Som den ursprungliga kontrollanten kan du växla tillbaka sessionen genom att välja detta alternativ en andra gång.
+* Starta/avsluta röstkonversation: Gör det möjligt för dig att slå på eller stänga av röstchatten för din session.
+    * Under en obevakad session visar detta alternativ en behörighetsdialog som användaren måste vara närvarande för att svara på. I sessioner med inbjudan initieras dock fortfarande röstkonversationer när kontrollanten aktiverar dem.
+* Starta sessionsinspelning: Börjar spela in innehållet i den aktiva sessionen — mer om detta senare
+    * När sessionsinspelningen är aktiverad ersätts detta alternativ med följande:
+        * Pausa/återuppta sessionsinspelning (växla)
+        * Stoppa sessionsinspelning: Avslutar och sparar inspelningen
+* Starta fjärråtkomst: Detta alternativ visas när ingen skärmläsare körs på fjärrdatorn. Detta aktiverar tal på din sida, men klienten behöver inte oroa sig för att höra talet.
+    * Om en skärmläsare (inklusive Fjärråtkomst) körs, förvandlas detta alternativ till en tvingad avslutning av den aktiva skärmläsaren. Detta är användbart när målets skärmläsare slutar svara i sådan utsträckning att du inte kan starta om den normalt.
+* Stäng av målets ljudutgång: Gör det möjligt att stänga av systemljudet från fjärrdatorn.
+    * Observera att ett pågående röstsamtal förblir aktivt medan denna inställning är aktiv, vilket gör att du kan prata med den person du är ansluten till samtidigt som deras systemljud är ohörbart för dig.
+* Starta om och återanslut: Gör det möjligt att starta om datorn och automatiskt återansluta sessionen.
+    * Observera att en Mac-målcomputer inte kan starta RIM före inloggning på grund av plattformsbegränsningar, framför allt FileVault.
+    * På en Mac-målcomputer kommer RIM därför att återansluta så snart användaren loggar in.
+* Skicka Control+Alt+Delete: Skickar denna tangentkombination till fjärrdatorn.
+    * En motsvarighet till detta alternativ har ännu inte implementerats för Mac-mål.
+* Begär obevakad eller bekräftad åtkomst: Gör det möjligt att skicka en begäran om obevakad åtkomst till klientdatorn. Detta är användbart om du är systemadministratör och behöver utföra rutinunderhåll, eller till och med för något så enkelt som att styra din hemdator när du är på resande fot.
+* Lås måldatorn: Låser måldatorn.
+* Visa anslutningsdetaljer: Ger en detaljerad översikt över din anslutning samt måldatorn. Informationen omfattar:
+    * Anslutningsstatistik
+    * Information om datorn, inklusive operativsystemversion, tillgängligt RAM-minne etc.
+    * Aktiva processer
+    * Installerade paket
+* AI-verktyg: Gör det möjligt att chatta med ett antal chatbots inriktade på tillgänglighet.
+    * Detta alternativ är endast tillgängligt för kontrollanter som har Pro-pass eller som har ett abonnemang inom Personal Community, Weekend Support eller Pro/Enterprise.
+* Avsluta sessionen (**Option+Shift+D**): Avslutar sessionen.
+    * Tänk på att detta alternativ är tillgängligt för båda parter i sessionen.
 
 </MacOS>
-
 
 ### Sessionschatt
 
-Textkommunikation via RIM:s inbyggda sessionschattfunktion kan vara ett användbart alternativ i situationer där röstkonversation inte är möjlig eller praktisk. Den kan även användas som komplement till en befintlig röstkonversation, t.ex. för att skicka länkar, instruktioner eller liknande.
-
+Textkommunikation via RIM:s inbyggda sessionschattfunktion kan vara ett användbart alternativ i situationer där ett röstsamtal inte är möjligt eller praktiskt. Den kan till och med användas som komplement till ett pågående röstsamtal, t.ex. för att skicka länkar, instruktioner eller liknande.  
 
 #### Starta en chatt
-En sessionschatt kan startas på ett av följande sätt:  
-* Kontrollersidan
-* En kontroller kan välja alternativet &quot;Öppna chatt&quot; i sessionsmenyn.
-* När chattfönstret visas på den kontrollerande datorn hamnar fokus i redigeringsrutan där ett meddelande kan skrivas och skickas med Enter-tangenten.
-* Ett meddelande som skickas till mål användaren kommer att trigga ett chattfönster på deras maskin. Vid denna punkt är det nu möjligt att chatta fram och tillbaka.
-* Observera att det inte är möjligt att styra måldatorn medan användarens chattfönster är i fokus. Styrningen av målet återupptas om något av följande villkor är uppfyllt:
-* Mål användaren flyttar fokus från chattfönstret, i vilket fall styrningen kan återupptas tills de flyttar fokus tillbaka till chattfönstret.
-* Mål användaren stänger chattfönstret genom att trycka på Escape.
-        * Om chattfönstret på den kontrollerande datorn stängs och 30 sekunder har gått, kommer mål användarens chattfönster automatiskt att kopplas bort, varvid kontrollen återupptas.
-* Målsidan:
-* Mål användaren kan välja alternativet &quot;Öppna chatt&quot; i sessionsmenyn. Detta kommer omedelbart att aktivera ett chattfönster på den kontrollerande datorn.
+
+En sessionschatt kan inledas på ett av följande sätt:  
+
+* På kontrollantens sida
+    * En kontrollant kan välja alternativet ”Öppna chatt” i sessionsmenyn.
+    * När chattfönstret visas på den styrande datorn hamnar fokus i redigeringsrutan, där ett meddelande kan skrivas in och skickas med Enter-tangenten.
+    * Ett meddelande som skickas till målanvändaren öppnar ett chattfönster på dennes dator. Nu är det möjligt att chatta fram och tillbaka.
+    * Observera att det inte går att styra måldatorn medan användarens chattfönster har fokus. Styrningen av måldatorn återupptas om något av följande villkor är uppfyllt:
+        * Målanvändaren flyttar fokus bort från chattfönstret, i vilket fall styrningen kan återupptas tills hen flyttar fokus tillbaka till chattfönstret.
+        * Målanvändaren stänger chattfönstret genom att trycka på Escape.
+        * Om chattfönstret på den styrande datorn är stängt och 30 sekunder har gått, stängs målanvändarens chattfönster automatiskt, varvid kontrollen återupptas.
+* Mål-sidan:
+    * Målanvändaren kan välja alternativet ”Öppna chatt” i sessionsmenyn. Detta aktiverar omedelbart ett chattfönster på den styrande datorn.
     * Nu är det möjligt att chatta fram och tillbaka.
-* Om mål användaren stänger chattfönstret på sin sida förblir chattfönstret öppet på den kontrollerande datorn. Ett efterföljande meddelande från kontrollören återaktiverar chattfönstret på måldatorn.
+    * Om målanvändaren stänger chattfönstret på sin sida förblir chattfönstret öppet på den styrande datorn. Ett efterföljande meddelande från den som styr återaktiverar chattfönstret på måldatorn.
 
-Arbeta i en chatt
-När chattfönstret är i fokus visas meddelanden både som tal och punktskrift när de kommer in. En maskin som inte har chattfönstret i fokus kommer att varnas om chattmeddelanden genom standardmeddelanden i Windows.  
-Utanför meddelandefältet kan chatten navigeras som en vanlig webbsida. Meddelanden som skickas av den part som är motsatt den som visar meddelandet kan kopieras till urklipp via knappen &quot;Kopiera&quot; bredvid meddelandet i fråga.
+#### Arbeta i en chatt
 
-#### Chattranskriptioner
+När chattfönstret är i fokus visas meddelanden både som tal och i punktskrift allteftersom de anländer. En dator som inte har chattfönstret i fokus kommer att varnas om chattmeddelanden via vanliga Windows-meddelanden.  
+När man befinner sig utanför meddelandefältet kan man navigera i chatten precis som på en vanlig webbsida. Meddelanden som skickas av den part som inte är den som läser meddelandet kan kopieras till urklipp via knappen ”Kopiera” bredvid det aktuella meddelandet.
 
-Chattranskriptioner sparas i en katalog som kan konfigureras av användaren. Som standard är detta katalogen &quot;documents/Remote Incident Manager/Chat&quot; i din användarmapp.
+#### Chattloggar
+
+Chattranskript sparas i en katalog som kan konfigureras av användaren. Som standard är detta katalogen ”documents/Remote Incident Manager/Chat” i din användarmapp.
 
 För närvarande är det enda sättet att ändra katalogen via en konfigurationsfil, vilket innebär att proceduren endast är tillgänglig på engelska.  
 
-
 <Windows>
 
-Konfigurationsfilen kan nås via kördialogen genom att klistra in följande:    
-%appdata%\remote-incident-manager\config.toml
+Du kommer åt konfigurationsfilen via kördialogen genom att klistra in följande:  
+%appdata%\remote-incident-manager\config.toml  
+
 </Windows>
-  
-  
-  
 
 <MacOS>
-Filen config.toml finns under $HOME/Library/Application Support/remote-incident-manager
+
+Filen config.toml finns i $HOME/Library/Application Support/remote-incident-manager
 
 </MacOS>
 
-När du är inne i konfigurationsfilen letar du efter raden <span translate="no">directory</span> under raden <span translate="no">Chat</span> och ändrar katalogen till en som du själv väljer.  
-Observera att bakstreck måste eskapas korrekt i Windows-kataloger.  
-När du har sparat konfigurationen träder ändringarna i kraft för efterföljande sessioner. Du behöver inte starta om programmet.
-
-
+När du är inne i konfigurationsfilen letar du efter raden ”<settingID>directory</settingID>” under raden ”<settingID>Chat</settingID>” och ändrar katalogen till den du önskar.  
+Observera att bakstreck måste skrivas med escape-tecken vid Windows-kataloger.  
+När du har sparat konfigurationen träder ändringarna i kraft för kommande sessioner. Det finns inget behov av att starta om programmet.
 
 ### Filöverföringar
 
-RIM erbjuder ett enkelt sätt att överföra filer, oavsett vilken plattform som används.
-1. Öppna RIM-menyn och klicka på &quot;Minimera session&quot;. Kontrollen återgår till din dator.
-1. Välj de filer och/eller mappar som du vill överföra med hjälp av din filhanterare.
-1. Kopiera det valda innehållet till urklipp på vanligt sätt. Du får ett meddelande om att en fil är klar att överföras. Du har två alternativ.
-1. **Om målet är en Mac:**
-- Aktivera RIM-sessionsmenyn och klicka på alternativet &quot;Överför fil till mål&quot;.
-    - När överföringen är klar genererar mål-Macen en tillfällig katalog som innehåller det överförda innehållet. Detta ska sedan kopieras och klistras in i avsedda kataloger.
-1. **Om målet är en Windows-dator:**
-- Växla tillbaka till fjärrsessionen och leta reda på mappen på måldatorn där du vill klistra in innehållet.
-- Sist men inte minst, klistra in som vanligt.
+RIM erbjuder några enkla sätt att överföra filer, oavsett vilken plattform som används.
 
-Observera att överföringstiden beror helt på storleken på innehållet som skickas samt på din nätverkshastighet.
+#### Filöverföringar via urklipp
+
+1. Öppna RIM-menyn och klicka på ”Minimera session”. Kontrollerna återgår då till din dator.
+1. Välj de filer och/eller mappar du vill överföra med hjälp av din filhanterare.
+1. Kopiera det markerade innehållet till urklipp på vanligt sätt. Du får ett meddelande om att en fil är klar att överföras. Du har två alternativ.
+1. **Om måldatorn är en Mac:**
+    * Öppna RIM-sessionsmenyn och klicka på alternativet ”Överför fil till mål”.
+    * När överföringen är klar skapar mål-Macen en tillfällig katalog som innehåller det överförda innehållet. Detta ska sedan kopieras och klistras in i de avsedda katalogerna.
+1. **Om målet är en Windows-dator:**
+    * Gå tillbaka till fjärrsessionen och leta reda på mappen på måldatorn där du vill klistra in innehållet.
+    * Slutligen klistrar du in som vanligt.
+
+Observera att överföringstiden helt beror på storleken på det innehåll som skickas samt på din nätverkshastighet.
+
+#### Filbläddraren
+
+Genom att använda filbläddraren kan du, som kontrollant, smidigt överföra filer till och från måldatorn via ett enhetligt gränssnitt. Detta är särskilt praktiskt om du ofta hjälper slutanvändare som använder en annan stationär plattform än din egen. Dessutom gör filbläddraren det möjligt att överföra filer utan att slutanvändaren behöver avbryta den uppgift hen arbetar med.  
+Förutom filöverföringar gör det inbyggda gränssnittet för filbläddraren det möjligt att byta namn på filer och mappar samt flytta dem till papperskorgen.
+
+##### Aktivera filbläddraren
+
+Aktivera filbläddraren genom att välja alternativet ”Bläddra bland filer på måldatorn” i sessionsmenyn.
+
+Obs! Under en nyckelordssession kräver denna filöverföringsmetod slutkundens godkännande för att kunna påbörjas. Detta beror på att denna funktion utför filåtgärder utan att öppna ett Explorer- eller Finder-fönster på måldatorn.
+
+Målanvändaren får upp en dialogruta där hen ombeds ange om hen vill godkänna eller avslå begäran. Om målanvändaren godkänner din begäran om att påbörja filöverföringen kommer du att förflyttas till ett filbläddringsfönster. Om du avbryter begäran eller om målanvändaren avslår den kommer du att förflyttas tillbaka till fjärrsessionen.
+
+##### Använda filbläddraren
+
+Filtillvägagångsfönstret har en layout med två listor, liknande den du kan förvänta dig i multifunktionella filhanterare som Total Commander eller FTP-klienter som FileZilla. Fokus hamnar inledningsvis på katalogstrukturen för ditt eget system, som finns på vänster sida av skärmen. Kataloglistan för måldatorn visas på höger sida av skärmen och kan enkelt nås med Tab-tangenten.
+
+<Windows>
+
+1. Välj ett objekt (eller flera objekt) i någon av listorna. Följande tangenter kan användas för att navigera i katalogerna:
+    * Returtangenten: Öppnar en mapp.
+    * Backspace: Går upp en nivå, dvs. tillbaka till överordnad mapp.
+2. När du är nöjd med ditt val trycker du på Ctrl+C för att kopiera.
+3. Gå till den andra listan och tryck på Ctrl+V för att klistra in. Observera att överföringstiden beror helt på storleken på det innehåll som skickas samt på din nätverkshastighet.
+4. När du befinner dig i någon av listorna kan du:
+    * Trycka på F2 för att byta namn på ett objekt.
+    * Trycka på Delete för att flytta de markerade objekten till papperskorgen.
+        * RIM raderar aldrig en fil permanent under några omständigheter.
+    * Trycka på F5 för att uppdatera en lista.
+
+</Windows>
+
+<MacOS>
+
+1. Markera ett objekt (eller flera objekt) i någon av listorna. Följande tangenter kan användas för att navigera i katalogerna:
+    * Retur: Öppnar en mapp.
+    * Delete eller Kommando+uppåtpil: Går upp en nivå, dvs. tillbaka till överordnad mapp.
+2. När du är nöjd med ditt val trycker du på Kommando+C för att kopiera.
+3. Gå till den andra listan och tryck på Kommando+V för att klistra in. Observera att överföringstiden beror helt på storleken på det innehåll som skickas samt på din nätverkshastighet.
+4. När du befinner dig i någon av listorna kan du:
+    * Trycka på F2 för att byta namn på ett objekt.
+    * Trycka på Kommando+Delete för att flytta de markerade objekten till papperskorgen.
+        * RIM raderar aldrig en fil permanent under några omständigheter.
+    * Trycka på Kommando+R för att uppdatera en lista.
+
+</MacOS>
+
+##### Kända begränsningar
+
+###### Återställning vid strömavbrott
+
+* Om RIM avbryts under en uppladdning på grund av ett systemkrasch eller strömavbrott, kvarstår ofullständiga filer på målenheten. Endast en avsiktlig avbrytning eller ett dokumenterat överföringsfel tar bort ofullständiga filer.
+
+###### Filradering med flyttbara enheter
+
+Vissa flyttbara enheter saknar en inbyggd papperskorgsfunktion. Om du försöker radera en fil från en sådan enhet kommer RIM tydligt att informera dig om denna begränsning och avbryta raderingen. Denna säkerhetsåtgärd säkerställer att RIM aldrig oavsiktligt utför en destruktiv raderingsåtgärd.
+
+Om du hjälper en slutanvändare med att radera en fil och stöter på denna begränsning kan du navigera till filen på måldatorn och radera den på vanligt sätt. När du raderar en fil på detta sätt hanteras filoperationen av operativsystemet, inte av RIM.
+
+###### Begränsningar i macOS
+
+* Mac-appar och -paket, dvs. filer som slutar på filändelsen .app eller .pkg, kan inte kopieras. RIM kommer att uppmana dig att komprimera dem till en zip-fil, vilket måste göras utanför filutforskaren.
+* Innehåll från iCloud Drive kan inte nås via filutforskaren.
+* En uppladdning till en Mac nekas om sökvägen är 1024 byte eller längre.
+
+###### Filattribut och behörigheter
+
+* Attributen ”skrivskyddad” och ”dold” kopieras inte.
+* Den körbara biten behålls endast för filer som kopieras till en Mac. Nedladdade filer är av säkerhetsskäl aldrig körbara.
 
 ### Sessionsinspelning
 
-RIM:s  sessionsinspelningsfunktion gör det möjligt för dig som kontrollant att enkelt spela in innehållet i din session till en fil på din dator. Denna fil kan sedan distribueras till den person som du ger fjärrsupport. Innehållet i sessionsinspelningen kommer att inkludera den audiovisuella utgången från måldatorn samt ljudet från ett pågående röstsamtal.
-För att underlätta en sessionsinspelning:
-
+RIM:s funktion för sessionsinspelning gör det möjligt för dig, som kontrollant, att enkelt spela in innehållet i din session till en fil på din dator. Denna fil kan sedan distribueras till den person som du ger fjärrsupport till. Innehållet i sessionsinspelningen kommer att omfatta den audiovisuella utmatningen från måldatorn, samt ljudet från ett pågående röstsamtal.
+Så här gör du för att spela in en session:  
 
 <Windows>
-1. Öppna alternativet &quot;Starta sessionsinspelning&quot; i sessionsmenyn. Följande åtgärder kommer att utföras som ett resultat:
-* Under en nyckelordssession:
-* Mål användaren får en dialogruta med behörigheter där hen ombeds att godkänna att sessionen spelas in. Kontrollantens tangentbordsinmatning avbryts medan denna dialogruta visas.
-* Om mål användaren godkänner, börjar inspelningen. Om mål användaren nekar inspelningen, avslutas hela sessionen.
-    * För uppmanade/obevakade sessioner:
-* Inspelningen startar omedelbart.
-* Oavsett vilket kommer båda parter att få ett meddelande om att inspelningen har startat när inspelningen påbörjas.
-1. För att pausa eller återuppta inspelningen, välj alternativet &quot;Pausa/återuppta sessionsinspelning&quot; i sessionsmenyn.
-* Inspelningen pausas eller återupptas i enlighet med detta.
-    * Ett meddelande skickas till båda parter om detta.
-1. Inspelningen kan stoppas via alternativet &quot;Stoppa sessionsinspelning&quot; i sessionsmenyn.
-* Som standard visas en bekräftelsedialogruta där du ombeds bekräfta att du vill stoppa inspelningen. Denna dialogruta är utformad för att förhindra oavsiktlig avaktivering av sessionsinspelningen, men den kan också inaktiveras.
-* Båda parter får ett meddelande när inspelningen är klar.
-    * Inspelningen sparas sedan i den katalog där RIM är konfigurerat att spara dina inspelningar (som standard är detta mappen &quot;Videos&quot; i din användarkatalog). För extra bekvämlighet kommer du automatiskt att hamna i denna mapp via Explorer, så att du kan skicka inspelningen till användaren om du vill.
-* Observera att om du kopplar från sessionen stoppas inspelningen automatiskt.
 
+1. Välj alternativet ”Starta sessionsinspelning” i sessionsmenyn. Följande händer då:
+    * Under en nyckelordssession:
+        * Målanvändaren får upp en behörighetsdialogruta där hen tillfrågas om hen samtycker till att sessionen spelas in. Kontrollantens tangentbordsinmatning avbryts medan denna dialogruta visas.
+        * Om målanvändaren samtycker påbörjas inspelningen. Om målanvändaren nekar till inspelning avslutas hela sessionen.
+    * För sessioner med inmatningsuppmaningar/obevakade sessioner:
+        * Inspelningen påbörjas omedelbart
+    * Oavsett vilket kommer båda parter att få ett meddelande om att inspelningen har startat så snart den påbörjas på allvar.
+1. För att pausa eller återuppta inspelningen, använd växlingsknappen ”Pausa/Återuppta sessionsinspelning” i sessionsmenyn.
+    * Inspelningen pausas eller återupptas därefter
+    * En avisering skickas till båda parter om detta
+1. Inspelningen kan avbrytas via alternativet ”Avbryt sessionsinspelning” i sessionsmenyn.
+    * Som standard visas en bekräftelsedialog där du tillfrågas om du vill stoppa inspelningen. Denna dialog är utformad för att förhindra att sessionsinspelningen av misstag avaktiveras, men den kan inaktiveras om så önskas.
+    * Båda parter kommer att få ett meddelande när inspelningen är avslutad.
+    * Inspelningen sparas sedan i den katalog där RIM är konfigurerat att spara dina inspelningar (som standard är detta mappen ”Videos” i din användarkatalog). För att underlätta för dig öppnas denna mapp automatiskt i Utforskaren, vilket gör att du kan skicka inspelningen till användaren om så önskas.
+    * Observera att inspelningen avbryts automatiskt när anslutningen till sessionen bryts.
 
 </Windows>
 
-
-
 <MacOS>
 
-1. Öppna alternativet &quot;Starta sessionsinspelning&quot; i sessionsmenyn. Följande åtgärder kommer att utföras som ett resultat:
-* Under en nyckelordssession:
-* Mål användaren får en dialogruta med behörigheter där de frågas om de vill samtycka till att sessionen spelas in. Kontrollerns tangentbordsinmatning avbryts medan denna dialogruta visas.
-* Om mål användaren samtycker, börjar inspelningen. Om mål användaren nekar inspelning, avslutas hela sessionen.
-* För uppmanade/obevakade sessioner:
-* Inspelningen påbörjas omedelbart
-* Oavsett vilket kommer båda parter att få ett meddelande om att inspelningen har startat när inspelningen påbörjas på allvar.
-1. För att pausa eller återuppta inspelningen, gå till alternativet &quot;Pausa/återuppta sessionsinspelning&quot; i sessionsmenyn.
-* Inspelningen pausas eller återupptas i enlighet med detta.
-* Ett meddelande skickas till båda parter.
-1. Inspelningen kan stoppas via alternativet &quot;Stoppa sessionsinspelning&quot; i sessionsmenyn.
-    * Som standard visas en bekräftelsedialogruta där du ombeds bekräfta att du vill stoppa inspelningen. Denna dialogruta är utformad för att förhindra oavsiktlig avaktivering av sessionsinspelningen, men den kan också inaktiveras.
-* Båda parter kommer att få ett meddelande när inspelningen är klar.
-* Inspelningen sparas sedan i den katalog där RIM sparar dina inspelningar (som standard är detta mappen &quot;Movies&quot; i din användarkatalog). För extra bekvämlighet kommer du automatiskt att hamna i denna mapp via Finder, så att du kan skicka inspelningen till användaren om du vill.
-* Observera att inspelningen avbryts automatiskt när du kopplar från sessionen.
+1. Välj alternativet ”Starta sessionsinspelning” i sessionsmenyn. Följande åtgärder kommer då att utföras:
+    * Under en nyckelordssession:
+        * Målanvändaren får upp en behörighetsdialogruta där hen tillfrågas om hen samtycker till att sessionen spelas in. Kontrollantens tangentbordsinmatning avbryts medan denna dialogruta visas.
+        * Om målanvändaren samtycker påbörjas inspelningen. Om målanvändaren nekar till inspelning avslutas hela sessionen.
+    * För sessioner med uppmaning/obevakade sessioner:
+        * Inspelningen påbörjas omedelbart
+    * Oavsett vilket kommer båda parter att få ett meddelande om att inspelningen har startat så snart den påbörjas på allvar.
+1. För att pausa eller återuppta inspelningen, använd växlingsknappen ”Pausa/Återuppta sessionsinspelning” i sessionsmenyn.
+    * Inspelningen pausas eller återupptas därefter
+    * En avisering skickas till båda parter om detta
+1. Inspelningen kan avbrytas via alternativet ”Avbryt sessionsinspelning” i sessionsmenyn.
+    * Som standard visas en bekräftelsedialog där du tillfrågas om du vill stoppa inspelningen. Denna dialog är utformad för att förhindra att sessionsinspelningen av misstag avaktiveras, men den kan inaktiveras om så önskas.
+    * Båda parter kommer att få ett meddelande när inspelningen är klar.
+    * Inspelningen sparas sedan i den katalog där RIM sparar dina inspelningar (som standard är detta mappen ”Movies” i din användarkatalog). För att underlätta för dig öppnas denna mapp automatiskt i Finder, så att du kan skicka inspelningen till användaren om du vill.
+    * Observera att inspelningen avbryts automatiskt när anslutningen till sessionen bryts.
+
 </MacOS>
 
-
-
-
-Inspelningar är en helt gratis funktion som är tillgänglig för alla användare på alla nivåer. Dessutom bearbetas inspelningarna helt lokalt, utan någon inblandning från molntjänsten.
+Inspelningar är en helt kostnadsfri funktion som är tillgänglig för alla användare oavsett abonnemangsnivå. Dessutom bearbetas inspelningarna helt lokalt, utan någon inblandning från molntjänsten.
 
 #### Anmärkning angående modulen för fjärråtkomst
 
-Eftersom modulen för fjärråtkomst skickar sitt tal till din körda kopia av NVDA måste RIM anpassa sig efter detta för att kunna fånga upp talet i en inspelning. När fjärråtkomst är aktiv under en inspelning initierar RIM därför en inspelning av hela systemets ljudutgång. Detta gör att talet som hörs via fjärråtkomstmodulen kan fångas exakt som det hördes under sessionen. Även om detta kan leda till att vissa meddelandeljud från din styrdator fångas upp i inspelningen, kommer detta inte att orsaka att ljudet från måldatorn fördubblas.
+Eftersom modulen för fjärråtkomst matar ut sitt tal till din aktiva instans av NVDA måste RIM ta hänsyn till detta för att kunna fånga upp talet i en inspelning. Därför initierar RIM en inspelning av hela systemets ljudutmatning varje gång fjärråtkomst är aktiv under en inspelning. Detta gör att talet som hörs via modulen för fjärråtkomst kan fångas upp exakt så som det hördes under sessionen. Även om detta kan leda till att vissa meddelandeljud från din styrande dator fångas upp i inspelningen, kommer detta inte att orsaka att ljudet från måldatorn spelas upp dubbelt.
 
-#### Anmärkning för företagsanvändning
+#### Anmärkning för användning i företag
 
-För att anpassa sig till en typisk säkerhetspolicy för företag är sessionsinspelning en funktion som endast kan aktiveras inom företagsmiljöer. Om inte inspelningsfunktionen har aktiverats av en administratör inom organisationen kommer därför alla inspelningsmekanismer att vara otillgängliga för RIM-kontrollanter inom organisationen.
+För att överensstämma med en typisk säkerhetspolicy i företag är sessionsinspelning en funktion som endast kan aktiveras av användaren i företagsmiljöer. Om inte inspelningsfunktionen har aktiverats av en organisationsadministratör kommer därför inga inspelningsmekanismer att vara tillgängliga för RIM-kontrollanter inom organisationen.
 
 #### Avancerad konfiguration för sessionsinspelningar
 
-RIM har ett antal avancerade konfigurationsalternativ för sessionsinspelning. Dessa inkluderar möjligheten att automatiskt starta inspelningar när sessionen inleds, lagra inspelningar i en alternativ sökväg (dvs. en nätverksresurs) och bestämma status för bekräftelsedialogen när en inspelning stoppas. För närvarande är det enda sättet att ändra dessa inställningar via en konfigurationsfil, vilket innebär att proceduren endast är tillgänglig på engelska.  
-
+RIM har ett antal avancerade konfigurationsalternativ för sessionsinspelning. Dessa inkluderar möjligheten att automatiskt starta inspelningar när en session inleds, lagra inspelningar i en alternativ sökväg (t.ex. en nätverksresurs) och bestämma statusen för bekräftelsedialogrutan när en inspelning avbryts. För närvarande är det enda sättet att ändra dessa inställningar via en konfigurationsfil, vilket innebär att proceduren endast finns tillgänglig på engelska.  
 
 <Windows>
 
-Konfigurationsfilen kan nås via kördialogen genom att klistra in följande:    
-%appdata%\remote-incident-manager\config.toml
+Du kommer åt konfigurationsfilen via kördialogen genom att klistra in följande:  
+%appdata%\remote-incident-manager\config.toml  
+
 </Windows>
-  
-  
-  
 
 <MacOS>
-Filen config.toml finns under $HOME/Library/Application Support/remote-incident-manager
+
+Filen config.toml finns i $HOME/Library/Application Support/remote-incident-manager
+
 </MacOS>
-  
-  
-När du är inne i konfigurationsfilen har du följande alternativ tillgängliga:
-* <span translate="no">directory</span>: Ställer in katalogen för lagring av inspelningar.
-* Backslashes måste vara korrekt undantagna i fallet med Windows-kataloger.
-* <span translate="no">auto_start</span>:  Avgör om sessionsinspelning startar omedelbart vid sessionens start. Detta är som standard inställt på <span translate="no">false</span>.  
-* <span translate="no">suppress_stop_confirmation</span>: Styr om bekräftelsedialogen visas när en inspelning stoppas manuellt. Standardinställningen är <span translate="no">false</span>.
-* Observera att omkoppling av en session alltid stoppar inspelningen utan bekräftelse, oavsett denna inställning.
+
+När du är inne i konfigurationsfilen har du följande alternativ till ditt förfogande:
+
+* <settingID>directory</settingID>: Anger katalogen där inspelningarna ska sparas.
+    * Backslashes måste skrivas med escape-tecken vid Windows-kataloger.  
+* <settingID>auto_start</settingID>: Avgör om sessionsinspelningen ska starta omedelbart när sessionen inleds. Detta är som standard inställt på <settingID>false</settingID>.  
+* <settingID>suppress_stop_confirmation</settingID>: Styr om bekräftelsedialogen visas när en inspelning stoppas manuellt. Standardvärdet är <settingID>false</settingID>.
+    * Observera att om du kopplar bort en session kommer inspelningen alltid att stoppas utan bekräftelse, oavsett denna inställning.
 
 När du har sparat konfigurationen träder ändringarna i kraft för efterföljande sessioner. Du behöver inte starta om programmet.
 
-
 ### Modul för fjärråtkomst
 
-Oavsett om du hjälper en användare som inte använder en skärmläsare eller diagnostiserar ett problem med en felaktig skärmläsare, är RIM fullt utrustat för att hjälpa dig.
-
+Oavsett om du hjälper en användare som inte använder en skärmläsare eller om du felsöker ett problem med en skärmläsare som inte fungerar som den ska, är RIM fullt rustat för att hjälpa dig.
 
 <Windows>
+
 Modulen för fjärråtkomst består av två komponenter:
-- Ett tillägg för skärmläsaren NVDA som gör det möjligt för skärmläsaren att ta emot utdata från fjärrdatorn
+* Ett tillägg till skärmläsaren NVDA som gör det möjligt för skärmläsaren att ta emot utdata från fjärrdatorn
+* En fristående tillgänglighetsmodul som startas på måldatorn på begäran av den som styr. Fördelen med denna metod är att slutanvändaren inte hör tal på sin dator medan du styr den. Istället vidarebefordrar fjärråtkomstmodulen talutmatningen till den aktiva instansen av NVDA på kontrollantens sida. På detta sätt kan du på ett tillgängligt sätt hjälpa en slutanvändare utan att denne behöver installera eller ens ladda ner en skärmläsare.
+
+### Inställningsprocedur
+
+För den första initialiseringen av tillgänglighetsmodulen måste du göra följande:
+
+1. Anslut till en dator där ingen skärmläsare körs.
+1. Om NVDA för närvarande körs kommer du att uppmanas att installera ett tillägg som gör att din kopia av NVDA kan kommunicera med fjärrdatorn under sessionen. Godkänn installationsmeddelandena och vänta tills NVDA har startat om.
+1. Nu bör fjärrtillgänglighetsmodulen vara fullständigt initialiserad, och du kommer att höra röstutmatning när du styr fjärrdatorn. För att tillfälligt stänga av röstutmatningen trycker du helt enkelt på Insert eller Caps Lock+S en gång för att stänga av den, och sedan två gånger för att slå på den igen.
+
+Från och med nu, om du kör en skärmläsare på den styrande datorn, kommer fjärråtkomstmodulen automatiskt att starta under fjärrsessioner där den fjärrstyrda datorn inte har någon skärmläsare igång. Om du kör en annan skärmläsare än NVDA kommer RIM att inaktivera den skärmläsaren och sedan växla över dig till NVDA. Om du behöver stoppa fjärråtkomstmodulen på fjärrdatorn för att starta en annan skärmläsare, väljer du helt enkelt alternativet ”Stoppa fjärråtkomst” i RIM-menyn.  
+
 </Windows>
-.
-<Windows>
-
-- En fristående tillgänglighetsmodul som startas på måldatorn på begäran av kontrollenheten. Fördelen med detta tillvägagångssätt är att slutanvändaren inte hör tal på sin dator medan du styr den. Istället leder fjärråtkomstmodulen talutmatningen till den körda kopian av NVDA på kontrollenhetssidan. På så sätt kan du hjälpa en slutanvändare utan att denne behöver installera eller ens ladda ner en skärmläsare.
-
-### Installationsprocedur
-För första initialiseringen av tillgänglighetsmodulen behöver du göra följande:
-1. Anslut till en dator som inte har någon skärmläsare igång.
-1. Om NVDA för närvarande är igång kommer du att bli ombedd att installera ett tillägg som gör att din kopia av NVDA kan kommunicera med fjärrdatorn under sessionen. Acceptera installationsmeddelandena och vänta tills NVDA startar om.
-1. Nu är fjärråtkomstmodulen helt initialiserad och du hör talutmatning när du styr fjärrdatorn. För att tillfälligt stänga av talutmatningen trycker du bara på Insert eller Capslock+S en gång för att stänga av den och sedan två gånger för att återaktivera den.
-
-Från och med nu, om du kör en skärmläsare på den styrande datorn, kommer fjärråtkomstmodulen automatiskt att starta under fjärrsessioner där den fjärranslutna datorn inte har någon skärmläsare igång. Om du kör en annan skärmläsare än NVDA kommer RIM att koppla bort den skärmläsaren och sedan växla över till NVDA. Om du behöver stoppa fjärråtkomstmodulen på fjärrdatorn för att starta en annan skärmläsare, väljer du bara alternativet &quot;Stoppa fjärråtkomst&quot; i RIM-menyn.
-</Windows>
-  
-
-
 
 <MacOS>
-Fjärråtkomstmodulen är en speciell konfiguration som startas på mål-Macen på begäran av en Windows- eller Mac-kontroller. Fördelen med detta tillvägagångssätt är att slutanvändaren inte hör tal på sin dator medan du styr den. Istället skickar modulen för fjärråtkomst talutmatningen till talsystemet på kontrollersidan. På så sätt kan du hjälpa en slutanvändare utan att denne behöver aktivera en skärmläsare. Om du kör VoiceOver på den kontrollerande Mac-datorn startar modulen för fjärråtkomst automatiskt under fjärrsessioner där den fjärranslutna datorn inte har någon skärmläsare igång.
+
+Fjärrtillgänglighetsmodulen är en speciell konfiguration som initieras på mål-Macen på begäran av en Windows- eller Mac-kontrollant. Fördelen med detta tillvägagångssätt är att slutanvändaren inte hör tal på sin dator medan du styr den. Istället vidarebefordrar fjärrtillgänglighetsmodulen talutmatningen till talsystemet på kontrollantsidan. På detta sätt kan du på ett tillgängligt sätt hjälpa en slutanvändare utan att denne behöver aktivera en skärmläsare. Om du kör VoiceOver på den styrande Mac-datorn startar fjärrtillgänglighetsmodulen automatiskt under fjärrsessioner där den fjärrstyrda datorn inte har någon skärmläsare igång.  
+
 </MacOS>
-  
 
-## Starta om och återansluta
+## Omstart och återanslutning
 
-Oavsett om du installerar systemuppdateringar eller försöker lösa ett systemfel, hjälper RIM dig under omstartsprocessen. Genom att välja alternativet ”Reboot and Reconnect” (Starta om och återanslut) i RIM-menyn kan du antingen utföra en normal omstart eller en nödstart, beroende på datorns tillstånd. Medan datorn startar om informerar RIM dig om att återanslutningsförsök pågår.
-Observera att om datorn startas om på grund av en programinstallation eller startas om manuellt på vanligt sätt, kommer du att bli tillfrågad om du vill återansluta sessionen. Det är också viktigt att notera att i båda fallen kommer Mac-mål endast att återanslutas när användaren loggar in. Detta beror på att RIM inte kan starta automatiskt på inloggningsskärmen på grund av plattformsbegränsningar, framför allt FileVault-diskkryptering.
+Oavsett om du installerar systemuppdateringar eller försöker lösa ett systemhaveri, så hjälper RIM dig under omstartsprocessen. Genom att välja alternativet ”Starta om och återanslut” i RIM-menyn kan du antingen utföra en ordnad omstart eller en nödstart, beroende på vilket tillstånd datorn befinner sig i. Medan datorn startar om kommer RIM att informera dig om att försök till återanslutning pågår.
+
+Observera att om datorn startas om på grund av en programvaruinstallation eller manuellt på vanligt sätt, kommer du att tillfrågas om du vill återansluta sessionen. Det är också värt att notera att i båda fallen kommer Mac-mål endast att återanslutas när användaren har loggat in. Detta beror på att RIM inte kan startas automatiskt på inloggningsskärmen på grund av plattformsbegränsningar, framför allt FileVault-diskkryptering.
 
 ### Obevakad eller uppmanad åtkomst
 
-RIM låter dig som kontrollant konfigurera maskiner för obevakad eller uppmanad åtkomst. Detta gör att du kan ge fjärrhjälp utan att användaren behöver starta RIM, ange ett lösenord eller ens befinna sig i närheten av datorn. Detta är användbart om du är systemadministratör och utför rutinunderhåll på datorer i din arbetsgrupp eller för kunder som du regelbundet ger support till. Du kanske också vill tillåta obevakad åtkomst för din hemdator om du behöver komma åt den från någon annan plats.
+RIM gör det möjligt för dig, som administratör, att konfigurera datorer för obevakad eller uppmanad åtkomst. Detta gör att du kan ge fjärrhjälp utan att användaren behöver starta RIM, ange ett lösenord eller ens befinna sig i närheten av datorn. Detta är användbart om du är systemadministratör som utför rutinunderhåll på datorer i din arbetsgrupp, eller för kunder som du regelbundet ger support till. Du kanske också vill tillåta obevakad åtkomst till din hemdator om du behöver komma åt den från någon annan plats.
+
 Det finns flera sätt att konfigurera datorer för obevakad åtkomst.
 
 #### Under en interaktiv session
 
 1. Öppna RIM-menyn.
-1. Välj &quot;Begär obevakad eller uppmanad åtkomst&quot;.
+1. Välj ”Begär obevakad eller bekräftad åtkomst”.
 1. Du kommer att bli tillfrågad vilken typ av anslutning du vill konfigurera. Dina alternativ är:
-1. Oövervakad: Gör det möjligt att starta sessioner utan någon som helst inblandning från slutanvändaren.
-1. Med uppmaning: Denna konfiguration visar en uppmaning för användaren som informerar om att du ansluter till deras maskin. De måste trycka på Option+Shift+Y på macOS eller Windows+Shift+Y på Windows om de vill acceptera anslutningen.
-1. Du kommer att bli ombedd att ge denna maskin ett namn. Ange ett personligt namn för maskinen eller, om tillämpligt, maskin-ID som det visas i din arbetsgrupp.
-1. Tryck på Enter.
-1. På klientmaskinen visas en dialogruta som frågar användaren om det är okej att deras dator konfigureras för den åtkomst du begärt. Om de svarar ja får du en uppmaning som informerar dig om att åtkomsten har godkänts.  
+    1. Obevakad: Tillåter att sessioner inleds utan någon som helst inblandning från slutanvändaren.
+    1. Med bekräftelse: Denna konfiguration visar en bekräftelse för användaren som informerar om att du ansluter till deras dator. De måste trycka på Option+Shift+Y på macOS, eller Windows+Shift+Y på Windows, om de vill godkänna anslutningen.
+1. Du ombeds att ge datorn ett namn. Ange ett eget namn på datorn eller, om tillämpligt, datorns ID så som det visas i din arbetsgrupp.
+1. Om du tillhör en organisation eller om ditt konto på annat sätt har målgruppsfunktioner kommer du att ombes att tilldela datorn till en målgrupp.
+    * Om du väljer standardmålgruppen kommer RIM att visa en extra bekräftelsedialog innan begäran initieras.
+1. Aktivera ”Skicka begäran”.
+1. På klientdatorn dyker en dialogruta upp där användaren tillfrågas om det är okej att datorn konfigureras för den åtkomst du begärt. Om användaren svarar ja får du ett meddelande om att åtkomsten har godkänts.  
 
 ##### Anmärkning för innehavare av personliga obevakade konton
 
-Om du har använt alla maskinplatser som tilldelats ditt konto kommer RIM inte att utföra begäran. I detta fall har du två alternativ, båda möjliga via RIM-instrumentpanelen:
+Om du har använt alla de datorplatser som tilldelats ditt konto kommer RIM inte att utföra begäran. I detta fall har du två alternativ, båda tillgängliga via RIM-instrumentpanelen:
+
+1. Avregistrera en av dina datorer för att frigöra en plats.
+1. Uppgradera ditt abonnemang med fler platser.
+
+#### Registrera en dator på ditt RIM-konto
+
+Om du vill registrera en av dina egna maskiner för obevakad åtkomst kan du göra det utan att behöva starta en interaktiv session med maskinen. 
+
+1. Starta RIM i läget ”Receive Help”.
+1. Klicka på knappen ”Lägg till den här maskinen till ditt RIM-konto”.
+1. Ange din e-postadress och klicka sedan på ”Nästa”.
+1. Vänta tills tvåstegsinloggningskoden anländer, ange den, varefter du bör vara inloggad.
+1. Du kommer att tillfrågas vilken typ av åtkomst du vill konfigurera för denna dator. Dina alternativ är:
+    1. Obevakad: Tillåter att sessioner inleds utan någon som helst inblandning från slutanvändaren.
+    1. Med bekräftelse: Denna konfiguration visar ett meddelande för användaren som informerar om att du ansluter till deras dator.
+1. Ge datorn ett namn.
+1. Om du tillhör en organisation eller om ditt konto på annat sätt har målgruppsfunktioner kommer du att ombes att tilldela denna dator till en målgrupp.
+    * Om du väljer standardmålgruppen kommer RIM att visa en extra bekräftelsedialog innan begäran initieras.
+1. Klicka på knappen ”Lägg till dator”.
+1. Datorn registreras på ditt konto, vilket gör att alla styrenheter som är inloggade på ditt RIM-konto kan ansluta till denna dator.
+
+##### Anmärkning för innehavare av personliga obevakade konton
+
+Om du har använt alla maskinplatser som tilldelats ditt konto kommer RIM inte att utföra begäran. I detta fall har du två alternativ, båda tillgängliga via RIM-instrumentpanelen:
+
 1. Avregistrera en av dina maskiner för att frigöra en plats.
 1. Uppgradera ditt abonnemang med fler platser.
 
-#### Registrera en maskin på ditt RIM-konto
+#### Ansluta
 
-Om du vill registrera en av dina egna maskiner för obevakad åtkomst kan du göra det utan att behöva starta en interaktiv session med maskinen.
-1. Starta RIM i hjälpläge.
-1. Klicka på knappen &quot;Lägg till denna maskin till ditt RIM-konto&quot;.
-1. Ange din e-postadress och klicka sedan på Nästa.
-1. Vänta tills du får den tvåstegs inloggningskoden, ange den och du bör då vara inloggad.
-1. Du kommer att bli tillfrågad vilken typ av åtkomst du vill konfigurera för denna maskin. Dina alternativ är:
-1. Obevakad: Tillåter att sessioner initieras utan någon som helst inblandning från slutanvändaren.
-1. Med förfrågan: Denna konfiguration visar en förfrågan för användaren som informerar om att du ansluter till deras maskin.
-1. Ge maskinen ett namn och aktivera sedan knappen &quot;Lägg till maskin&quot;.
-1. Maskinen registreras på ditt konto, vilket gör att alla styrmaskiner som är inloggade på ditt RIM-konto kan ansluta till denna maskin.
+Nu när vi har registrerat maskinen för obevakad åtkomst, så här startar du en session.
 
-##### Anmärkning för innehavare av personliga obevakade konton
+1. Starta RIM i kontrollörsläge.
+1. Istället för att ange ett nyckelord, leta reda på och aktivera fliken ”Mina maskiner”.
+1. När du aktiverar den här fliken visas en lista över datorer. Välj den du vill ansluta till och tryck sedan på Enter. Du kan också använda sökfältet för att begränsa listan till en specifik dator.
 
-Om du har använt alla maskinslots som tilldelats ditt konto kommer RIM inte att utföra begäran. I detta fall har du två alternativ, båda möjliga via RIM-instrumentpanelen:
-1. Avregistrera en av dina maskiner för att frigöra en slot.
-1. Uppgradera ditt abonnemang med fler slots.
+Om måldatorn är konfigurerad för åtkomst med bekräftelse kommer slutanvändaren att få en förfrågan. När användaren svarar ja kommer du att anslutas. Om sessionen är obevakad kommer du omedelbart att anslutas och hamna i fjärrstyrningszonen.
 
-Ansluta
-
-Nu när vi har registrerat maskinen för obevakad åtkomst, så här startar vi en session.
-1. Starta RIM i kontrollermodus.
-1. Istället för att ange ett nyckelord, leta reda på och aktivera knappen &quot;Välj en maskin&quot;.
-1. När du klickar på den visas en lista med maskiner. Välj den du vill ha och tryck sedan på Enter. Du kan också använda sökfältet för att begränsa listan till en specifik maskin.
-
-Om målmaskinen är konfigurerad för åtkomst med uppmaning får slutanvändaren en uppmaning. När de svarar ja kommer du att anslutas. Om sessionen är obevakad kommer du omedelbart att anslutas och hamna i fjärrkontrollzonen.
-
-Observera: Röstsamtal kräver att mål användaren godkänner dem under helt obevakade sessioner. Detta krävs dock inte för sessioner med uppmaning.
+Observera: Röstsamtal kräver att målanvändaren godkänner dem under helt obevakade sessioner. Detta krävs dock inte för sessioner med bekräftelse.
 
 #### Skapa en genväg för en obevakad session
 
-För extra bekvämlighet kan du skapa genvägar på skrivbordet som gör att du automatiskt kan starta obevakade sessioner. För att göra detta:
-1. Öppna listan över obevakade datorer och välj den du vill skapa en genväg för.
-1. Klicka på knappen &quot;Skapa genväg&quot;.
-1. En genväg läggs automatiskt till på skrivbordet.
+För extra bekvämlighet kan du skapa genvägar på skrivbordet som gör att du automatiskt kan starta obevakade sessioner. Gör så här:
 
-När du aktiverar denna genväg kommer du antingen automatiskt att hamna i fjärrsessionen eller skicka en uppmaning till användarens dator som denne kan acceptera.
+1. Öppna listan över obevakade datorer under fliken ”Mina datorer” och välj den dator du vill skapa en genväg för.
+1. Klicka på knappen ”Skapa genväg”.
+1. En genväg läggs automatiskt till på ditt skrivbord.
 
+När du nu aktiverar denna genväg kommer du antingen automatiskt att hamna i fjärrsessionen eller skicka en uppmaning till användarens dator som denne kan godkänna.
 
 <Windows>
+
 ##### Fler sätt att använda genvägar till obevakade sessioner
 
-Genvägar till obevakade sessioner kan, precis som alla andra genvägar, kopplas till globala snabbtangenter. Detta kan vara mycket användbart om du är en underhållstekniker som hanterar flera datorer i en arbetsgrupp. Om din arbetsgrupp till exempel består av sex datorer som du utför rutinunderhåll på kan du konfigurera Alt+Control+1 till 6 som snabbtangenter för respektive maskin. Detta bör påskynda ditt arbetsflöde avsevärt.
-Dessutom kan du öppna en obevakad session via körrutan om du kopierar genvägen till din användarkatalog. När du har kopierat genvägen kan du starta en obevakad session genom att skriva ditt-sessionsnamn.url i körrutan.
+Genvägar till obevakade sessioner kan, precis som alla andra genvägar, kopplas till globala snabbtangenter. Detta kan vara mycket användbart om du är en underhållstekniker som hanterar flera datorer i en arbetsgrupp. Om din arbetsgrupp till exempel består av 6 datorer som du utför rutinunderhåll på kan du konfigurera Alt+Ctrl+1 till 6 som snabbtangenter för respektive dator. Detta bör avsevärt påskynda ditt arbetsflöde.
+Dessutom kan du starta en obevakad session via rutan ”Kör” om du kopierar genvägen till din användarkatalog. När du har kopierat genvägen kan du starta en obevakad session genom att skriva ditt-sessionsnamn.url i rutan ”Kör”.
+
 </Windows>
 
+#### Återkalla åtkomst för obevakad åtkomst
 
-
-#### Återkalla obevakad åtkomst
-
-Om du inte längre vill att din maskin ska kunna styras obevakad kan du återkalla kontrollerns åtkomst. Du behöver inte vara i en session för att göra detta.
-
+Om du inte längre vill att din dator ska styras obevakat kan du återkalla kontrollantens åtkomst. Du behöver inte befinna dig i en session för att göra detta.
 
 <Windows>
-1. Öppna ikonen Remote Incident Manager i systemfältet.
-1. Om du använder tangentbordet trycker du på Windows+B, sedan mellanslag och sedan vänster- eller högerpilen tills du hittar ikonen.
-1. Högerklicka på ikonen eller tryck på applikations- eller Skift+F10-tangenten.
+
+1. Öppna ikonen för Remote Incident Manager i systemfältet.
+    1. Om du använder tangentbordet trycker du på Windows+B, sedan mellanslag och sedan vänster- eller högerpilen tills du hittar ikonen.
+1. Högerklicka på ikonen eller tryck på applikationsknappen eller Shift+F10.
 1. Välj alternativet ”Återkalla obevakad åtkomst”.
-1. Du kommer till en lista med datorer. Välj den dator du vill återkalla.
-1. Du blir tillfrågad om du vill återkalla datorn. Svara ja.  
+1. Du kommer till en lista över datorer; välj den dator du vill återkalla åtkomsten för.
+1. Du blir tillfrågad om du vill återkalla åtkomsten till datorn; svara ja.  
 
 </Windows>
-
 
 <MacOS>
 
-1. Öppna ikonen Remote Incident Manager i menyn Extras/Status.
-1. Om du använder VoiceOver trycker du två gånger på VO+M och letar sedan upp ikonen Remote Incident Manager.
-1. Klicka på ikonen eller tryck på VO+mellanslag.
-1. Välj alternativet &quot;Återkalla obevakad åtkomst&quot;.
-1. Du kommer till en lista över datorer. Välj den dator du vill återkalla.
-1. Du kommer att få frågan om du vill återkalla maskinen. Svara ja.
+1. Öppna ikonen för Remote Incident Manager i menyn Extras/Status.
+    1. Om du använder VoiceOver trycker du på VO+M två gånger och letar sedan upp menyikonen för Remote Incident Manager.
+    1. Klicka på ikonen eller tryck på VO+mellanslag.  
+1. Välj alternativet ”Återkalla obevakad åtkomst”.
+1. Du kommer till en lista över datorer. Välj den dator du vill återkalla åtkomsten för.
+1. Du blir tillfrågad om du vill återkalla åtkomsten till datorn; svara ja.  
+
 </MacOS>
 
-
-Det är allt! Kontrollenheten kommer att få ett meddelande om att denna maskin inte längre är tillgänglig för obevakad åtkomst. Om de behöver obevakad åtkomst igen kan de starta om proceduren för att begära tillstånd för obevakad åtkomst enligt beskrivningen ovan.
+Det var allt! Kontrollantenheten kommer att få ett meddelande om att den här datorn inte längre är tillgänglig för obevakad åtkomst. Om de behöver obevakad åtkomst igen kan de starta om proceduren för att begära tillstånd för obevakad åtkomst enligt beskrivningen ovan.
 
 ### AI-verktyg
 
-Menyn AI-verktyg är en praktisk samlingsplats för chattbottar med fokus på tillgänglighet. Alla dessa bots gör att du snabbt kan få svar på olika frågor om hjälpmedelsteknik, operativsystem etc. Alla användare med ett pro-pass, ett personligt community-abonnemang, ett personligt weekend support-abonnemang eller ett pro/enterprise-abonnemang har tillgång till denna funktion.  
-Observera att många av dessa bots – inklusive vår egen – är i betaversion och därför bör användas med försiktighet, på samma sätt som du inte bör betrakta GPS-vägbeskrivningar som obestridliga fakta. Mer om detta senare.
+Menyn ”AI-verktyg” är en praktisk samlingsplats för chatbottar med fokus på tillgänglighet. Alla dessa bottar gör det möjligt för dig att snabbt få svar på olika frågor som rör hjälpmedelsteknik, operativsystem osv. Alla användare med ett Pro-pass, ett personligt community-abonnemang, ett personligt helgsupportabonnemang eller ett Pro-/Enterprise-abonnemang har tillgång till denna funktion.  
+Observera att många av dessa bots – inklusive våra egna – befinner sig i betafasen och därför bör användas med försiktighet, på samma sätt som man inte bör betrakta GPS-vägbeskrivningar som obestridliga fakta. Mer om detta senare.
 
-De bots som för närvarande är tillgängliga är följande:
+De bots som för närvarande är tillgängliga är följande: 
 * RIMBot (beta)
-* FSCompanion (Beta)
+* FSCompanion (beta)
 
-Dessa bots är för närvarande endast tillgängliga på engelska.  
-Varje bot öppnas i ett separat fönster. Varje bot har sina egna gränssnittskonventioner, men genom att trycka på Escape-tangenten återgår du alltid till din fjärrsession.
+Dessa botar finns för närvarande endast tillgängliga på engelska.  
+Varje bot öppnas i ett separat fönster. Även om varje bot har sina egna gränssnittskonventioner kommer du alltid tillbaka till din fjärrsession genom att trycka på Escape-tangenten.
 
 #### Ansvarsfriskrivning
 
-AI Tools-funktionen i Remote Incident Manager (RIM) tillhandahåller ett tillgängligt gränssnitt för användning av Pneuma Solutions RIMBot och andra tjänster från tredje part. Pneuma Solutions friskriver sig uttryckligen från alla garantier, vare sig uttryckliga eller underförstådda, avseende tillförlitlighet, tillgänglighet eller långsiktigt stöd för dessa verktyg från tredje part. Verktyg som betecknas som beta, inklusive de som utvecklats av Pneuma Solutions, kommer att tydligt märkas som sådana i AI Tools-gränssnittet i RIM-applikationen eller dess tillhörande instrumentpanel.
+Funktionen AI-verktyg i Remote Incident Manager (RIM) tillhandahåller ett lättanvänt gränssnitt för att använda Pneuma Solutions RIMBot och andra tjänster från tredje part. Pneuma Solutions friskriver sig uttryckligen från alla garantier, vare sig uttryckliga eller underförstådda, avseende tillförlitligheten, tillgängligheten eller det långsiktiga stödet för dessa verktyg från tredje part. Verktyg som betecknas som beta, inklusive de som utvecklats av Pneuma Solutions, kommer att tydligt märkas som sådana i gränssnittet för AI-verktyg i RIM-applikationen eller dess tillhörande instrumentpanel.
 
-RIMBot-supportchatten är delvis tränad med hjälp av offentligt tillgängliga data som täcker olika tekniker. Denna träning genomförs för att förbättra botens förmåga att leverera korrekta och användbara svar samtidigt som upphovsrätts- och sekretessstandarder följs. Pneuma Solutions strävar efter att säkerställa att botens svar har en rimlig grad av noggrannhet. På grund av de inneboende begränsningarna i stora språkmodeller kan Pneuma Solutions dock inte garantera att alla svar är helt korrekta.
+Supportchattboten RIMBot är delvis tränad med hjälp av allmänt tillgängliga data som täcker olika tekniker. Denna träning genomförs för att förbättra botens förmåga att leverera korrekta och användbara svar samtidigt som upphovsrätts- och integritetsstandarder följs. Pneuma Solutions strävar efter att säkerställa att botens svar upprätthåller en rimlig grad av noggrannhet. På grund av de inneboende begränsningarna hos stora språkmodeller kan Pneuma Solutions dock inte garantera att alla svar är helt korrekta.
 
-Även om omfattande tester har genomförts för att säkerställa botens säkerhet och tillförlitlighet kan felaktigheter förekomma. I händelse av ett verifierbart felaktigt svar uppmanas användarna att rapportera problemet genom att tillhandahålla en detaljerad kopia av den relevanta chattloggen via RIM-applikationen eller vår [kontaktsida](https://pneumasolutions.com/contact/).
+Även om omfattande tester har genomförts för att säkerställa botens säkerhet och tillförlitlighet kan felaktigheter förekomma. Om ett svar visar sig vara felaktigt uppmanas användarna att rapportera problemet genom att skicka en detaljerad kopia av den relevanta chattloggen via RIM-applikationen eller vår [kontaktsida](https://pneumasolutions.com/contact/).
 
-Denna ansvarsfriskrivning reglerar användningen av AI-verktyg och RIMBot och omfattas av [användarvillkoren](https://pneumasolutions.com/terms-of-use/) som tillhandahålls av Pneuma Solutions.
+Denna ansvarsfriskrivning reglerar användningen av AI-verktyg och RIMBot och omfattas av de [användarvillkor](https://pneumasolutions.com/terms-of-use/) som tillhandahålls av Pneuma Solutions.
 

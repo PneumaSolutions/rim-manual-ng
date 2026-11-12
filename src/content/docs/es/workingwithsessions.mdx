@@ -9,8 +9,8 @@ import MacOS from "~/components/platform/MacOS.astro"
 
 Inmediatamente después de establecer la conexión, sucederán varias cosas.
 
-
 <Windows>
+
 - Aparecerá la ventana de control remoto de la sesión. Esta ventana se puede mover y cambiar de tamaño tanto en una sola pantalla como en una configuración multimonitor.
 - Se le informará sobre el estado del lector de pantalla en ejecución, o la falta del mismo, en el equipo del cliente.
 - Si el cliente está ejecutando un lector de pantalla, una notificación emergente que informa al usuario de que la sesión remota ha comenzado proporcionará una confirmación instantánea de que el audio del sistema del usuario funciona.
@@ -22,10 +22,7 @@ Inmediatamente después de establecer la conexión, sucederán varias cosas.
 - Haga clic con el botón derecho del ratón en la barra de título de la ventana RIM.
 - Haga clic con el botón izquierdo del ratón en el icono RIM situado en el centro de la barra de título.
 
-
 </Windows>
-
-
 
 <MacOS>
 
@@ -40,26 +37,21 @@ Inmediatamente después de establecer la conexión, sucederán varias cosas.
 - Haga clic con el botón derecho del ratón en la barra de título de la ventana RIM.
 - Haga clic con el botón izquierdo del ratón en el icono RIM situado en el centro de la barra de título.
 
-
 </MacOS>
-
 
 ### Zona de control remoto
 
-
 <Windows>
+
 En este punto, ya está todo listo para realizar cualquier tarea que sea necesaria en el lado del cliente. Si necesita volver a controlar su propia máquina, abra el menú RIM y seleccione la opción «Minimizar sesión». Volverá a su máquina hasta que vuelva a la ventana de sesión o pulse Windows+Mayús+Retroceso de nuevo. Cuando vuelva a la ventana de sesión, las entradas del teclado y el ratón se dirigirán de nuevo al ordenador cliente.
+
 </Windows>
 
-
-
-
-
 <MacOS>
+
 En este punto, ya está todo listo para realizar las tareas que sea necesario realizar en el lado del cliente. Si necesita volver a controlar su propia máquina, abra el menú RIM y seleccione la opción «Minimizar sesión». Volverá a su máquina hasta que vuelva a la ventana de sesión o vuelva a pulsar Opción+Mayús+Retroceso. Cuando vuelva a la ventana de sesión, las entradas del teclado y el ratón se dirigirán de nuevo al ordenador cliente.
 
 </MacOS>
-
 
 Una vez que haya terminado, tanto el controlador como el destino pueden acceder al menú RIM y seleccionar la opción «Desconectar sesión». Cuando finalice la sesión, el equipo de destino recibirá una notificación emergente informándole de ello.
 
@@ -105,10 +97,7 @@ Como se ha mencionado anteriormente, al acceder al menú RIM se le redirigirá d
 - Desconectar sesión (**Windows+Shift+D**): termina la sesión.
 - Recuerde que esta opción está disponible para ambos lados de la sesión.
 
-
 </Windows>
-  
-
 
 <MacOS>
 
@@ -147,10 +136,8 @@ Como se ha mencionado anteriormente, al acceder al menú RIM se le redirigirá d
 - Esta opción solo está disponible para los controladores que tienen pases pro o que están en la comunidad personal, el soporte de fin de semana o las suscripciones pro/empresa.
 - Desconectar sesión (**Opción+Mayús+D**): finaliza la sesión.
 - Recuerde que esta opción está disponible para ambas partes de la sesión.
+
 </MacOS>
-
-
-
 
 ### Chat de sesión
 
@@ -181,17 +168,15 @@ Las transcripciones de chat se guardan en un directorio configurable por el usua
 
 Actualmente, la única forma de modificar el directorio es a través de un archivo de configuración, por lo que el procedimiento solo está disponible en inglés.  
 
-
 <Windows>
 
 Se puede acceder al archivo de configuración a través del cuadro de diálogo de ejecución pegando lo siguiente:  
 %appdata%\remote-incident-manager\config.toml
+
 </Windows>
-  
-
-
 
 <MacOS>
+
 El archivo config.toml se encuentra en $HOME/Library/Application Support/remote-incident-manager
 
 </MacOS>
@@ -199,8 +184,6 @@ El archivo config.toml se encuentra en $HOME/Library/Application Support/remote-
 Una vez dentro del archivo de configuración, busque la línea «<span translate="no">directory</span>» debajo de la línea «<span translate="no">Chat</span>» y modifique el directorio por el que desee.  
 Tenga en cuenta que las barras invertidas deben escaparse correctamente en el caso de los directorios de Windows.  
 Una vez guardada la configuración, los cambios surtirán efecto en las sesiones posteriores. No es necesario reiniciar la aplicación.
-
-
 
 ### Transferencias de archivos
 
@@ -239,14 +222,11 @@ Para facilitar la grabación de una sesión:
 * Ambas partes recibirán una notificación una vez finalizada la grabación.
 * A continuación, la grabación se guardará en el directorio en el que RIM está configurado para guardar sus grabaciones (por defecto, es la carpeta «Vídeos» de su directorio de usuario). Para mayor comodidad, se le dirigirá automáticamente a esta carpeta a través del Explorador, lo que le permitirá  enviar la grabación al usuario si lo desea.
 * Tenga en cuenta que al desconectar la sesión, la grabación se detiene automáticamente.
+
 </Windows>
 
-
-
-
-
-
 <MacOS>
+
 1. Acceda a la opción «Iniciar grabación de sesión» del menú de sesión. Como resultado, se producirán las siguientes acciones:
 * Durante una sesión de palabra clave:
 * El usuario de destino recibirá un cuadro de diálogo de permisos en el que se le preguntará si desea dar su consentimiento para que se grabe la sesión. La entrada del teclado del controlador se suspenderá mientras aparezca este cuadro de diálogo.
@@ -263,10 +243,7 @@ Para facilitar la grabación de una sesión:
     * A continuación, la grabación se guardará en el directorio en el que RIM guarda sus grabaciones (por defecto, la carpeta «Películas» de su directorio de usuario). Para mayor comodidad, se le redirigirá automáticamente a esta carpeta a través del Finder, lo que le permitirá enviar la grabación al usuario si lo desea.
 * Tenga en cuenta que al desconectar la sesión, la grabación se detiene automáticamente.
 
-
 </MacOS>
-
-
 
 Las grabaciones son una función totalmente gratuita, disponible para cualquier usuario de cualquier nivel. Además, las grabaciones se procesan íntegramente de forma local, sin ninguna intervención del servicio en la nube.
 
@@ -282,21 +259,20 @@ Con el fin de alinearse con la postura de seguridad típica de las empresas, la 
 
 RIM ofrece una serie de opciones de configuración avanzadas para la grabación de sesiones. Entre ellas se incluyen la posibilidad de iniciar automáticamente las grabaciones al comenzar la sesión, almacenar las grabaciones en una ruta alternativa (por ejemplo, un recurso compartido de red) y determinar el estado del cuadro de diálogo de confirmación al detener una grabación. Actualmente, la única forma de modificar estos ajustes es a través de un archivo de configuración, por lo que el procedimiento solo está disponible en inglés.  
 
-
 <Windows>
 
 Se puede acceder al archivo de configuración a través del cuadro de diálogo Ejecutar pegando lo siguiente:  
 %appdata%\remote-incident-manager\config.toml
+
 </Windows>
-  
-
-
 
 <MacOS>
-El archivo config.toml se encuentra en $HOME/Library/Application
-</MacOS>
- Support/remote-incident-manager
 
+El archivo config.toml se encuentra en $HOME/Library/Application
+
+</MacOS>
+
+ Support/remote-incident-manager
 
 Una vez dentro del archivo de configuración, tendrá a su disposición las siguientes opciones:
 * <span translate="no">directory</span>: Establece el directorio para almacenar las grabaciones.
@@ -307,17 +283,19 @@ Una vez dentro del archivo de configuración, tendrá a su disposición las sigu
 
 Una vez que guarde la configuración, los cambios surtirán efecto en las sesiones posteriores. No es necesario reiniciar la aplicación.
 
-
 ### Módulo de accesibilidad remota
 
 Tanto si está ayudando a un usuario que no utiliza un lector de pantalla como si está diagnosticando un problema con un lector de pantalla que funciona mal, el RIM está totalmente preparado para ayudarle.
 
-
 <Windows>
+
 El módulo de accesibilidad remota consta de dos componentes:
 - Un complemento para el lector de pantalla NVDA que permite al lector de pantalla recibir la salida del ordenador remoto
+
 </Windows>
+
 .
+
 <Windows>
 
 - Un módulo de accesibilidad autónomo que se inicia en el ordenador de destino a petición del controlador. La ventaja de este enfoque es que el usuario final no oye la voz en su ordenador mientras usted lo controla. En su lugar, el módulo de accesibilidad remota canaliza la salida de voz a través de la copia de NVDA que se ejecuta en el lado del controlador. De esta manera, puede ayudar de forma accesible a un usuario final sin que tenga que instalar o incluso descargar un lector de pantalla.
@@ -331,7 +309,6 @@ Para la inicialización inicial del módulo de accesibilidad, esto es lo que deb
 A partir de este momento, si está ejecutando un lector de pantalla en el ordenador de control, el módulo de accesibilidad remota se iniciará automáticamente durante las sesiones remotas en las que el ordenador remoto no tenga un lector de pantalla en ejecución. Si está ejecutando un lector de pantalla distinto de NVDA, RIM desactivará ese lector de pantalla y le cambiará a NVDA. Si necesita detener el módulo de accesibilidad remota en el equipo remoto para iniciar otro lector de pantalla, simplemente acceda a la opción «Detener accesibilidad remota» del menú RIM.  
 
 </Windows>
-
 
 <MacOS>
 
@@ -359,7 +336,6 @@ Hay varias formas de configurar los equipos para el acceso sin supervisión.
 1. Se le pedirá que le asigne un nombre a esta máquina. Introduzca un nombre personal para la máquina o, si procede, el ID de la máquina tal y como aparece en su grupo de trabajo.
 1. Pulse Intro.
 1. En el equipo cliente, aparecerá un cuadro de diálogo preguntando al usuario si está de acuerdo con que su ordenador se configure para el acceso que ha solicitado. Si responde que sí, aparecerá un mensaje informándole de que el acceso ha sido aprobado.  
-
 
 ##### Nota para los titulares de cuentas personales desatendidas
 
@@ -406,34 +382,32 @@ Para mayor comodidad, puede crear accesos directos en el escritorio que le permi
 
 Ahora, cuando active este acceso directo, accederá automáticamente a la sesión remota o enviará una solicitud al equipo del usuario para que la acepte.
 
-
 <Windows>
+
 Más formas de utilizar los accesos directos a sesiones desatendidas
 
 Los accesos directos a sesiones desatendidas, al igual que cualquier otro acceso directo, pueden tener teclas de acceso rápido globales asociadas. Esto puede resultar muy útil si es un técnico de mantenimiento que gestiona varios equipos en un grupo de trabajo. Por ejemplo, si su grupo de trabajo consta de 6 equipos en los que realiza un mantenimiento rutinario, puede configurar Alt+Control+1 a 6 como teclas de acceso rápido para cada máquina respectiva. Esto debería acelerar significativamente su flujo de trabajo.
 Además, puede abrir una sesión desatendida a través del cuadro de ejecución si copia el acceso directo en su directorio de usuario. Una vez que haya copiado el acceso directo, puede iniciar una sesión desatendida escribiendo su-nombre-de-sesión.url en el cuadro de ejecución.
+
 </Windows>
-
-
 
 Revocar el acceso desatendido
 
 Si ya no desea que su máquina sea controlada de forma desatendida, puede revocar el acceso del controlador. No es necesario estar en una sesión para hacerlo.
 
-
 <Windows>
+
 1. Acceda al icono del Administrador de incidentes remotos en la bandeja del sistema.
 1. Si utiliza el teclado, pulse Windows+B, luego la barra espaciadora y, a continuación, la flecha izquierda o derecha hasta encontrar el icono.
 1. Haga clic con el botón derecho en este icono o pulse la tecla Aplicaciones o Mayús+F10.
 1. Seleccione la opción «Revocar acceso desatendido».
 1. Aparecerá una lista de ordenadores; seleccione el que desee revocar.
 1. Se le preguntará si desea revocar el equipo; responda que sí.
+
 </Windows>
-  
-
-
 
 <MacOS>
+
 1. Acceda al icono del Administrador remoto de incidentes en los menús de extras/estado.
 1. Si utiliza VoiceOver, pulse VO+M dos veces y, a continuación, localice el icono del menú del Administrador remoto de incidentes.
     1. Haga clic en este icono o pulse VO+Espacio.  
