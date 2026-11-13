@@ -5,7 +5,40 @@ title: Wijzigingslogboek
 import Windows from "~/components/platform/Windows.astro"
 import MacOS from "~/components/platform/MacOS.astro"
 
-Versies van RIM worden aangeduid met kopjes op niveau 3. Belangrijke updates met verschillende functies voor beide platforms worden onderverdeeld in Mac- en Windows-subkopjes op niveau 4.
+Versies van RIM worden aangeduid met kopteksten op niveau 3. Ingrijpende updates met meerdere functies worden onderverdeeld in subkopteksten op niveau 4.
+
+### 3.5.0
+
+#### Wijzigingen in de gebruikersinterface
+
+We hebben het scherm ‘Hulp op afstand bieden’ gestroomlijnd om het in lijn te brengen met de iOS-client.
+
+* Het scherm ‘Hulp op afstand bieden’ is nu onderverdeeld in tabbladen, waardoor de sessiebesturing op basis van trefwoorden wordt gescheiden van de sessiebesturing voor onbemande doelsystemen.
+    * Wanneer u het scherm ‘Hulp op afstand bieden’ opent, onthoudt RIM het laatste tabblad waarop u zich bevond. Dit is met name handig als u regelmatig hulp biedt aan onbemande doelsystemen.
+* Opties zoals het openen van het dashboard en het lezen van de handleiding zijn nu beschikbaar via de knop ‘Menu’ op beide tabbladen.
+
+Het scherm ‘Hulp op afstand ontvangen’ blijft ongewijzigd.
+
+#### Gestroomlijnde interface voor bestandsoverdrachten
+
+RIM biedt nu een speciale bestandsbrowser, waarmee naadloos bestanden heen en weer kunnen worden overgedragen tussen verschillende platforms.
+
+Voor het gebruik van deze functie tijdens sessies op basis van trefwoorden is toestemming van het doelapparaat vereist.
+
+Deze functie is standaard uitgeschakeld voor bedrijfsorganisaties. Gebruik het paneel met beperkingen om de toegang tot deze functie te beheren.
+
+#### Verbeterd beheer van doelgroepen voor zakelijke klanten
+
+Het dashboard van uw organisatie bevat nu een instelling om de standaardgroep (de groep waartoe iedereen toegang heeft) uit te schakelen. Dit geeft beheerders van de organisatie meer controle over de toegang tot apparaten binnen verschillende afdelingen.
+
+Als u doelgroepen hebt geconfigureerd, vraagt RIM u nu om er een te kiezen wanneer u een computer configureert voor onbeheerde of om bevestiging gevraagde toegang. Er verschijnt een extra bevestigingsscherm wanneer u een computer toevoegt aan de standaarddoelgroep.
+
+#### Overige wijzigingen aan de client
+
+* RIM toont nu een meldingsscherm bij het verbinden met een Windows-doelcomputer waarop de RIM-installatie zonder verhoogde rechten draait.
+* Wijzigingen in organisatiebeperkingen kunnen nu direct tijdens een sessie van kracht worden. Voorheen, wanneer een organisatiebeheerder een functie uitschakelde, werd de beperking pas bij de volgende sessie van kracht.
+
+
 ### 3.4.23
 
 * Windows: We zijn ons ervan bewust dat sommige antivirusprogramma's recente RIM-updates ten onrechte als trojans hebben aangemerkt (valse positieven). We hebben ons uiterste best gedaan om dit probleem in deze update op te lossen. Neem contact met ons op als u dit probleem nog steeds ondervindt.

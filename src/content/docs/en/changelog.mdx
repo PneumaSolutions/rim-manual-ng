@@ -5,7 +5,41 @@ title: Change Log
 import Windows from "~/components/platform/Windows.astro"
 import MacOS from "~/components/platform/MacOS.astro"
 
-Versions of RIM will be denoted by headings at level 3. Substantial updates with several features for both platforms will be divided into Mac and Windows subheadings at level 4.
+Versions of RIM will be denoted by headings at level 3. Substantial updates with several features will be divided into subheadings at level 4.
+
+### 3.5.0
+
+#### User Interface Changes
+
+We've streamlined the Provide Remote Help screen to bring it in line with the iOS client.
+
+* The Provide Remote Help screen is now divided into tabs, separating keyword-based session controls from unattended session controls.
+    * When you open the Provide Remote Help screen, RIM remembers the last tab you were on. This is particularly useful if you regularly provide assistance to unattended targets.
+* Options such as opening the dashboard and reading the manual are now available from the "Menu" button on either tab.
+
+The Receive Remote Help screen remains unchanged.
+
+#### Streamlined Interface for File Transfers
+
+RIM now offers a dedicated file browser, which enables seamless back-and-forth transfers across platforms.
+
+Use of this feature during keyword sessions requires consent from the target.
+
+This feature is disabled by default for enterprise organizations. Use the restrictions panel to control access to this feature.
+
+#### Refined Target Group Management for Enterprise Customers
+
+Your organization's dashboard now includes a setting to disable the default group (the group everyone has access to). This gives organization administrators finer control over machine access across departments.
+
+If you've configured target groups, RIM will now ask you to choose one when you configure a machine for unattended or prompted access. An additional confirmation screen appears when adding a machine to the default target group.
+
+#### Additional Client Changes
+
+* RIM now displays a notice screen when connecting to a Windows target whose RIM installation is running without elevated privileges.
+* Changes to organization restrictions can now take effect immediately during a session. Previously, when an organization administrator disabled a feature, the restriction would not take effect until the next session.
+
+
+
 ### 3.4.23
 
 * Windows: We're aware that some antivirus programs have incorrectly flagged recent RIM updates as trojans (false positives). We've made our best effort to solve this problem in this update. Please contact us if you continue to have this problem.

@@ -5,7 +5,39 @@ title: Änderungsprotokoll
 import Windows from "~/components/platform/Windows.astro"
 import MacOS from "~/components/platform/MacOS.astro"
 
-Versionen von RIM werden durch Überschriften auf Ebene 3 gekennzeichnet. Wesentliche Updates mit mehreren Funktionen für beide Plattformen werden in Unterüberschriften für Mac und Windows auf Ebene 4 unterteilt.
+Die Versionen von RIM werden durch Überschriften der Ebene 3 gekennzeichnet. Umfangreiche Updates mit mehreren Funktionen werden in Unterüberschriften der Ebene 4 unterteilt.
+
+### 3.5.0
+
+#### Änderungen an der Benutzeroberfläche
+
+Wir haben den Bildschirm „Remote-Hilfe bereitstellen“ optimiert, um ihn an den iOS-Client anzupassen.
+
+* Der Bildschirm „Remote-Hilfe bereitstellen“ ist nun in Registerkarten unterteilt, wodurch die Steuerung von Sitzungen mit Schlüsselwörtern von der Steuerung unbeaufsichtigter Sitzungen getrennt wird.
+    * Wenn Sie den Bildschirm „Remote-Hilfe bereitstellen“ öffnen, merkt sich RIM die Registerkarte, auf der Sie zuletzt waren. Dies ist besonders nützlich, wenn Sie regelmäßig Unterstützung für unbeaufsichtigte Zielgeräte leisten.
+* Optionen wie das Öffnen des Dashboards und das Lesen des Handbuchs sind nun über die Schaltfläche „Menü“ auf beiden Registerkarten verfügbar.
+
+Der Bildschirm „Remote-Hilfe empfangen“ bleibt unverändert.
+
+#### Optimierte Benutzeroberfläche für Dateiübertragungen
+
+RIM bietet nun einen dedizierten Dateibrowser, der nahtlose Dateiübertragungen zwischen verschiedenen Plattformen ermöglicht.
+
+Die Nutzung dieser Funktion während Schlüsselwort-Sitzungen erfordert die Zustimmung des Zielgeräts.
+
+Diese Funktion ist für Unternehmenskunden standardmäßig deaktiviert. Verwenden Sie den Bereich „Einschränkungen“, um den Zugriff auf diese Funktion zu steuern.
+
+#### Verfeinerte Zielgruppenverwaltung für Unternehmenskunden
+
+Das Dashboard Ihrer Organisation enthält nun eine Einstellung zum Deaktivieren der Standardgruppe (der Gruppe, auf die jeder Zugriff hat). Dies ermöglicht Organisationsadministratoren eine feinere Steuerung des Zugriffs auf Geräte über Abteilungsgrenzen hinweg.
+
+Wenn Sie Zielgruppen konfiguriert haben, fordert RIM Sie nun auf, eine davon auszuwählen, wenn Sie einen Rechner für den unbeaufsichtigten oder abfragegesteuerten Zugriff konfigurieren. Beim Hinzufügen eines Rechners zur Standard-Zielgruppe erscheint ein zusätzlicher Bestätigungsbildschirm.
+
+#### Weitere Änderungen am Client
+
+* RIM zeigt nun einen Hinweisbildschirm an, wenn eine Verbindung zu einem Windows-Zielgerät hergestellt wird, auf dem die RIM-Installation ohne erweiterte Berechtigungen ausgeführt wird.
+* Änderungen an Organisationsbeschränkungen können nun bereits während einer Sitzung sofort wirksam werden. Bisher trat die Beschränkung erst bei der nächsten Sitzung in Kraft, wenn ein Organisationsadministrator eine Funktion deaktiviert hatte.
+
 
 ### 3.4.23
 

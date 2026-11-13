@@ -5,137 +5,147 @@ title: The RIM Management Dashboard
 import Windows from "~/components/platform/Windows.astro"
 import MacOS from "~/components/platform/MacOS.astro"
 
-RIM cuenta con un  panel de control basado en web para facilitar diversas tareas de gestión de máquinas y cuentas. Puede gestionar sus ordenadores desatendidos existentes, crear instaladores preconfigurados para ordenadores de destino y mucho más.  
-Cabe señalar que el conjunto de funciones del panel de control depende en gran medida del nivel de suscripción de su cuenta. Por ejemplo, los usuarios empresariales pueden asignar máquinas a grupos de destino, así como crear instaladores silenciosos. Por otro lado, cualquier persona (incluidos los usuarios personales) puede crear instaladores personalizados para sus equipos desatendidos.
+RIM cuenta con un panel de control basado en web para facilitar diversas tareas de gestión de equipos y cuentas. Puedes gestionar tus ordenadores sin supervisión existentes, crear instaladores preconfigurados para los ordenadores de destino y mucho más.  
+Cabe señalar que el conjunto de funciones del panel de control depende en gran medida del nivel de suscripción al que pertenezca tu cuenta. Por ejemplo, los usuarios empresariales pueden asignar equipos a grupos de destino, así como crear instaladores silenciosos. Por otro lado, cualquier persona (incluidos los usuarios particulares) puede crear instaladores personalizados para sus equipos sin supervisión.
 
-### Localización del panel de control
+### Cómo acceder al panel de control
 
-Si es usted un controlador, la forma más fácil de acceder al panel de control es a través de la interfaz principal de RIM. Al hacer clic en el botón «Panel de control de RIM», se abrirá automáticamente el panel de control en su navegador predeterminado, con el inicio de sesión ya realizado.  
-Si es un administrador de red que no tiene RIM instalado, simplemente puede iniciar sesión en su cuenta en el sitio web de RIM y aparecerá su panel de control.
+Si eres administrador, la forma más sencilla de acceder al panel de control es a través de la interfaz principal de RIM. Al hacer clic en el botón «RIM Dashboard», se abrirá automáticamente el panel de control en tu navegador predeterminado, con el inicio de sesión ya realizado.  
+Si eres un administrador de red que no tiene instalado RIM, solo tienes que iniciar sesión en tu cuenta en la página web de RIM y aparecerá tu panel de control.
 
 ### Gestión de los miembros de la organización (empresa)
 
-Al activar el botón «Organización» en el panel de control de RIM, aparecerá un menú de opciones relacionadas con la gestión de la organización y los miembros. La página «Miembros» mostrará una lista de todos los miembros de su organización. Se puede modificar la función, el departamento y el nombre de todos los miembros, y se puede desactivar o eliminar de la organización a cualquier miembro, excepto al propietario de la organización. Tenga en cuenta que al desactivar a un miembro, su cuenta quedará inoperativa, pero se conservará su registro.
+Al pulsar el botón «Organización» en el panel de control de RIM, aparecerá un menú de opciones relacionadas con la gestión de la organización y de sus miembros. La página «Miembros» mostrará una lista de todos los miembros de tu organización. Se pueden modificar el rol, el departamento y el nombre de todos los miembros, y cualquier miembro puede ser desactivado o eliminado de la organización, excepto el propietario de la misma. Ten en cuenta que al desactivar a un miembro, su cuenta dejará de estar operativa, aunque se conservará su registro.
 
-Para añadir miembros, solo tiene que introducir su dirección de correo electrónico, seleccionar su función (usuario o administrador), introducir opcionalmente su nombre y seleccionar su departamento, si se ha creado uno.
-Si tiene varios miembros que añadir, puede utilizar el campo de edición «Miembros» para realizar una adición masiva. Este campo de edición acepta varias líneas de texto, lo que le permite introducir la información de cada miembro en una línea separada. En cada línea, puede introducir una sola dirección de correo electrónico o una dirección de correo electrónico y un nombre en el formato:  
+Añadir miembros es tan sencillo como introducir su dirección de correo electrónico, seleccionar su función (usuario o administrador), introducir opcionalmente su nombre y seleccionar su departamento, si se ha creado alguno.
+Si tienes que añadir varios miembros, puedes utilizar el campo de edición «Miembros» para realizar una adición masiva. Este campo de edición admite varias líneas de texto, lo que te permite introducir la información de cada miembro en una línea separada. En cada línea, puedes introducir una sola dirección de correo electrónico o una dirección de correo electrónico y un nombre con el siguiente formato:  
 *email@example.com John Doe*
 
-Una vez que haya terminado, haga clic en el botón «Añadir». 
+Una vez que hayas terminado, haz clic en el botón «Añadir». 
 
 #### Departamentos
 
-Los departamentos le permiten organizar a los miembros según los distintos grupos de su organización.
+Los departamentos te permiten organizar a los miembros según los distintos grupos de tu organización.
 
-Para añadir un departamento, introduzca su nombre en el cuadro de edición «Nombre» bajo el encabezado «Crear departamento».
+Para añadir un departamento, introduce su nombre en el cuadro de edición «Nombre», situado bajo el encabezado «Crear departamento».
 
 #### Exportación de datos de miembros
 
-La lista de miembros de su organización se puede exportar como un archivo CSV. Para descargar la exportación:
-1. Elija el separador de campos que separará las columnas del archivo. Las opciones disponibles son:
+La lista de miembros de tu organización se puede exportar como un archivo CSV. Para descargar la exportación:
+1. Elige el separador de campos que separará las columnas del archivo. Las opciones disponibles son:
     * coma
     * punto y coma
-    * tabulador
-1. Active el botón «Descargar».
+    * tabulación
+1. Pulsa el botón «Descargar».
 
 #### Restricciones
 
-Dependiendo de la naturaleza de su organización, es posible que haya ciertas funciones a las que no desee que su personal tenga acceso. Por ello, los administradores de la organización pueden elegir las funciones a las que desean permitir el acceso a los controladores. La pantalla «Restricciones», a la que se accede a través del menú «Organización», le permite configurar estos permisos.
+Dependiendo de la naturaleza de tu organización, puede que haya ciertas funciones a las que no quieras que tu personal tenga acceso. Por ello, los administradores de la organización pueden elegir las funciones a las que desean permitir el acceso a los controladores. La pantalla «Restricciones», a la que se accede a través del menú «Organización», te permite configurar estos permisos.
 
-Los permisos que se pueden activar o desactivar son los siguientes:
-* Permitir al controlador cambiar la sesión
-    * Si esta opción no está marcada, la opción «Cambiar sesión» desaparecerá del menú de la sesión y el atajo de teclado no funcionará.
+Los permisos que se pueden activar o desactivar incluyen:
+* Permitir al controlador invertir la sesión
+    * Si esta opción está desmarcada, la opción «Invertir sesión» desaparecerá del menú de la sesión y el atajo de teclado no funcionará.
 * Permitir al controlador iniciar una conversación de voz
-* Si esta opción no está marcada, la casilla «Iniciar conversación de voz» desaparecerá de la pantalla «Proporcionar ayuda remota», al igual que la opción del menú de la sesión.
-* Permitir al controlador solicitar acceso desatendido
-    * Si esta opción no está marcada, la opción de solicitar acceso desatendido desaparecerá del menú de sesión.
+    * Si esta opción no está marcada, la casilla «Iniciar conversación de voz» desaparecerá de la pantalla «Proporcionar ayuda remota», al igual que la opción correspondiente del menú de la sesión.
+* Permitir que el controlador solicite acceso sin supervisión
+    * Si esta opción no está marcada, la opción para solicitar acceso sin supervisión desaparecerá del menú de la sesión.
 * Permitir la transferencia de texto y archivos entre equipos a través del portapapeles
-* Si esta opción no está marcada, RIM ignorará toda actividad del portapapeles.
-* Permitir al controlador bloquear el equipo de destino
-* Si esta opción no está marcada, la opción de bloquear el equipo de destino desaparecerá del menú de sesión.
+    * Si esta opción no está marcada, RIM ignorará toda actividad relacionada con el portapapeles.
+* Permitir que el controlador bloquee el equipo de destino
+    * Si esta opción no está marcada, la opción para bloquear el equipo de destino desaparecerá del menú de sesión.
 * Permitir que el controlador grabe la sesión
-* Esta opción está desactivada de forma predeterminada, lo que hace que la grabación de sesiones sea una función estrictamente opcional para las organizaciones empresariales y/o los clientes profesionales con el complemento empresarial.
-* Si esta opción no está marcada, la opción de grabar la sesión desaparecerá del menú de la sesión.
-* Esta restricción también veta el auto_start del lado del cliente en el archivo config.toml
+    * Esta opción está desactivada por defecto, lo que convierte la grabación de sesiones en una función estrictamente opcional para organizaciones empresariales y/o clientes «Pro» con el complemento empresarial.
+    * Si esta opción no está marcada, la opción para grabar la sesión desaparecerá del menú de la sesión.
+    * Esta restricción también desactiva la opción «auto_start» del lado del cliente en el archivo config.toml
 * Permitir el chat de texto durante la sesión
-* Esta opción está desactivada de forma predeterminada, lo que convierte el chat de la sesión en una función estrictamente opcional para las organizaciones empresariales y/o los clientes profesionales con el complemento empresarial.
-* Si esta opción no está marcada, la opción de abrir el chat desaparecerá del menú de la sesión.
+    * Esta opción está desactivada por defecto, lo que convierte el chat de la sesión en una función estrictamente opcional para organizaciones empresariales y/o clientes Pro con el complemento empresarial.
+    * Si esta opción no está marcada, la opción para abrir el chat desaparecerá del menú de la sesión.
+* Permitir que el controlador explore y transfiera archivos en el equipo de destino a través del explorador de archivos
+    * Si esta opción no está marcada, la opción para explorar archivos en el equipo de destino desaparecerá del menú de la sesión.
+* Permitir que se añadan nuevas máquinas de destino al grupo predeterminado, al que pueden acceder todos los controladores de la organización
+    * Si esta opción no está marcada, las máquinas solo se pueden añadir a los grupos de destino designados.
+    * Desactivar esta opción no elimina ninguna máquina que se haya añadido al grupo predeterminado antes del cambio.
 
+Una vez que haya configurado los permisos a su gusto, pulse el botón «Actualizar». La mayoría de los cambios surten efecto inmediatamente en cualquier sesión que esté activa en el momento en que se modifican los permisos. En concreto:
 
-Una vez que haya configurado los permisos a su satisfacción, active el botón «Actualizar». Los cambios no afectarán a ninguna sesión activa en el momento en que se modifiquen los permisos. Sin embargo, surtirán efecto en todas las sesiones futuras sin necesidad de reiniciar el cliente.
+* Una sesión invertida se revertirá de inmediato.
+* Se interrumpirá cualquier conversación de voz activa.
+* Se cancelará cualquier solicitud pendiente de acceso desatendido.
+* Las operaciones del portapapeles, incluidas las transferencias de archivos en curso, se interrumpirán.
+* Una grabación de sesión en curso finalizará inmediatamente. Sin embargo, RIM no descartará la grabación.
+* Un chat de texto en curso se interrumpirá.
+* El explorador de archivos desaparecerá y se cancelarán todas las transferencias de archivos en curso.
 
-### Gestión de destinos
+### Gestión de objetivos
 
-Al hacer clic en el enlace «Configurar destinos», accederá a una página que le permite gestionar todas las máquinas que ha configurado para el acceso desatendido. Puede hacer clic en cualquiera de estas máquinas para gestionarla. Una vez dentro, podrá:
-* Cambiar el nombre del destino
-* Mover el destino a un grupo diferente (más adelante se ofrece más información sobre los grupos de destinos)
-* Iniciar una sesión remota con el destino.
-* Eliminar el destino.
+Al hacer clic en el enlace «Configurar objetivos», accederás a una página que te permite gestionar todos los equipos que hayas configurado para el acceso sin supervisión. Puedes hacer clic en cualquiera de estos equipos para gestionarlo. Una vez dentro, podrás:
 
+* Cambiar el nombre del objetivo
+* Mover el destino a otro grupo (más adelante se explicará con más detalle qué son los grupos de destinos)
+* Iniciar una sesión remota con el destino
+* Eliminar el destino
 
 ### Grupos de destinos (para cuentas Pro y superiores)
 
+Supongamos, por ejemplo, que tu grupo de trabajo está repartido entre varias ubicaciones diferentes. O tal vez quieras asignar grupos de equipos a tus técnicos de mantenimiento rutinario. Los grupos de destinos te permiten hacer precisamente eso. Para ello, solo tienes que hacer clic en el botón «Crear grupo de destinos», asignar un nombre al grupo y enviarlo.  
+Puedes tener tantos grupos de destinos como sean necesarios para tu caso de uso. 
 
-Supongamos, por ejemplo, que su grupo de trabajo está repartido en varias ubicaciones diferentes. O tal vez desee designar grupos de máquinas a sus técnicos de mantenimiento rutinario. Los grupos de destinos le permiten hacer precisamente eso. Para ello, simplemente haga clic en el botón «Crear grupo de destinos», asigne un nombre a su grupo y envíelo.  
-Puede tener tantos grupos objetivo como sea necesario para su caso de uso. 
+#### Control de acceso (para organizaciones de nivel Enterprise)
 
-#### Control de acceso (para organizaciones empresariales)
+Si tu organización asigna a un técnico de soporte un conjunto específico de equipos, probablemente quieras asegurarte de que solo tenga acceso a ese conjunto concreto. Aquí es donde entra en juego la configuración de control de acceso para los grupos de destino.  
+Al hacer clic en un grupo de destino, se te ofrecen opciones para gestionar los equipos del grupo, así como el propio grupo. La sección de control de acceso es donde puedes conceder acceso a este grupo por cuenta. Solo tienes que introducir la dirección de correo electrónico de la cuenta que desees añadir y, a continuación, hacer clic en el botón «Conceder acceso». Ten en cuenta que esta cuenta puede pertenecer a un dominio ajeno al de tu organización empresarial.  
+Una vez hecho esto, aparecerá una tabla con las cuentas a las que se ha concedido acceso a este grupo. Debajo de cada cuenta hay un botón «Revocar acceso». Este botón no requiere confirmación adicional.  
+Cabe señalar que a todos los administradores de la organización se les concede automáticamente acceso para gestionar todos y cada uno de los grupos creados dentro de la organización. Además, cualquier dirección de correo electrónico que pertenezca a los dominios de tu organización se añadirá a tu organización en RIM de forma predeterminada. Si necesitas un control más detallado sobre quiénes se incorporan, puedes desactivar esta opción en el área principal de miembros de tu organización. Es más, desde el área de miembros puede añadir direcciones de correo electrónico de forma masiva separándolas con comas, espacios o saltos de línea.
 
-Si su organización asigna un técnico de soporte a un conjunto específico de máquinas, es probable que desee asegurarse de que solo tengan acceso a ese conjunto específico. Aquí es donde entra en juego la configuración de control de acceso para los grupos objetivo.  
-Al hacer clic en un grupo objetivo, se le ofrecen opciones para gestionar los equipos del grupo, así como el propio grupo. La sección de control de acceso es donde puede conceder acceso a este grupo por cuenta. Solo tiene que introducir la dirección de correo electrónico de la cuenta que desea añadir y hacer clic en el botón «Conceder acceso». Tenga en cuenta que esta cuenta puede existir fuera del dominio de su organización empresarial.  
-Una vez hecho esto, se le presentará una tabla con las cuentas a las que se les ha concedido acceso a este grupo. Debajo de cada cuenta hay un botón «Revocar acceso». Este botón no requiere confirmación adicional.  
-Cabe señalar que a todos los administradores de la organización se les concede automáticamente acceso para gestionar todos y cada uno de los grupos creados bajo la organización. Además, cualquier dirección de correo electrónico bajo los dominios de su organización se añadirá a su organización en RIM de forma predeterminada. Si necesita un control más detallado sobre quién se incorpora, puede desactivar esta opción en el área principal de miembros de su organización. Además, en el área de miembros puede añadir direcciones de correo electrónico de forma masiva mediante comas, espacios o saltos de línea entre las direcciones de correo electrónico.
+### Configuración de un instalador de RIM preconfigurado (Pro o superior)
 
-### Configuración de un instalador RIM preconfigurado (Pro o superior)
-
-Una de las formas más sencillas de configurar un equipo para conexiones desatendidas o con solicitud de confirmación es crear un instalador personalizado. Esto resulta increíblemente útil si está configurando implementaciones masivas, o incluso como una forma más sencilla de poner en marcha RIM en el equipo de un usuario final al que tiene previsto proporcionar asistencia de forma regular.
+Una de las formas más sencillas de configurar un equipo para conexiones desatendidas o con solicitud de confirmación es crear un instalador personalizado. Esto resulta increíblemente útil si estás configurando implementaciones masivas, o incluso como una forma más sencilla de poner en marcha RIM en el ordenador de un usuario final al que tienes previsto prestar asistencia de forma habitual.
 
 Para ello:
-1. En la pantalla de gestión de destinos, haga clic en el botón «Crear instalador de destino».
-1. Primero se le preguntará si desea que este equipo se configure para un acceso totalmente desatendido o para un acceso con solicitud, en el que el usuario debe aceptar una solicitud para iniciar la conexión.
-1. A continuación, se le pedirá que asigne un grupo de destino. Tenga en cuenta que la selección del grupo de destino se dirigirá automáticamente al grupo de destino elegido si inicia la configuración del instalador desde la página de su grupo.
-1. Se le preguntará durante cuánto tiempo desea que este instalador sea válido. Puede tener una validez de entre 7 y 30 días, o ser válido de forma permanente para los planes empresariales si se establece la caducidad en nunca.
-1. A continuación, se le ofrece la opción de asignar un nombre base. A cualquier máquina aprovisionada a través de este paquete de instalación se le asignará este nombre base.
-1. A continuación, se le mostrará una casilla de verificación que le permite optar por recibir una notificación por correo electrónico cuando un usuario instale RIM a través de este instalador.
-1. Si es administrador de una empresa, verá una casilla de verificación que le permite crear el instalador como un paquete MSI. Esta opción es útil para la implementación masiva de un instalador personalizado en un clúster de máquinas que se designará al grupo de destino dado.
-1. Se le pedirá que proporcione un nombre para el instalador y, opcionalmente, algunas notas. Estas son para registros internos y no aparecerán en el instalador creado.
-1. Haga clic en «Crear instalador». Se le mostrará el enlace de descarga, que puede copiar al portapapeles y enviar a su usuario final. También puede descargar el instalador directamente para utilizarlo en implementaciones masivas. Puede eliminar el instalador de esta pantalla si decide desactivarlo prematuramente.
+1. En la pantalla de gestión de destinos, haz clic en el botón «Crear instalador de destino».
+1. En primer lugar, se te preguntará si deseas que este equipo se configure para un acceso totalmente desatendido o para un acceso con solicitud de confirmación, en el que el usuario debe aceptar un mensaje para iniciar la conexión.
+1. A continuación, se te pedirá que asignes un grupo de destino. Ten en cuenta que la selección del grupo de destino se establecerá automáticamente en el grupo que hayas elegido si inicias la configuración del instalador desde la página de tu grupo.
+1. Se te preguntará durante cuánto tiempo deseas que este instalador sea válido. Puede tener una validez de entre 7 y 30 días, o ser válido de forma permanente para los planes Enterprise, estableciendo la caducidad en «nunca».
+1. A continuación, se le ofrecerá la opción de asignar un nombre base. A cualquier equipo aprovisionado a través de este paquete de instalación se le asignará este nombre base.
+1. A continuación, aparecerá una casilla de selección que le permite activar una notificación por correo electrónico cuando un usuario instale RIM mediante este instalador.
+1. Si eres administrador de empresa, verás una casilla de selección que te permite crear el instalador como un paquete MSI. Esta opción resulta útil para el despliegue masivo de un instalador personalizado en un clúster de equipos que se asignará al grupo de destino especificado.
+1. Se le pedirá que introduzca un nombre para el instalador y, opcionalmente, algunas notas. Estos datos son para registros internos y no aparecerán en el instalador creado.
+1. Haz clic en «Crear instalador». Se te mostrará el enlace de descarga, que puedes copiar al portapapeles y enviar a tu usuario final. Como alternativa, puedes descargar el instalador directamente para utilizarlo en implementaciones masivas. Puedes eliminar el instalador desde esta pantalla si decides dejarlo inoperativo antes de tiempo.
 
-Ahora que ya tiene su instalador, puede ejecutarlo de dos maneras. En ambos casos, el instalador consultará al servidor para comprobar su validez. Si el instalador es válido, el equipo se añadirá a su lista de equipos tanto en su cuenta como en el cliente RIM una vez completada la instalación. Un instalador no válido no se ejecutará.
-
+Ahora que ya dispone del instalador, puede ejecutarlo de dos formas diferentes. En ambos casos, el instalador consultará al servidor para comprobar su validez. Si el instalador es válido, el equipo se añadirá a su lista de equipos tanto en su cuenta como en el cliente RIM una vez finalizada la instalación. Un instalador no válido no se ejecutará.
 
 #### Ejecución normal
 
-El usuario recibirá un mensaje al ejecutar el instalador con la siguiente información:
+Al ejecutar el instalador, el usuario verá un mensaje que contiene la siguiente información:
 * El nombre del técnico junto con su organización, si procede
-* La naturaleza de la conexión, es decir, si se requiere un mensaje o no.
+* La naturaleza de la conexión, es decir, si se requiere o no una confirmación
 
-El usuario puede elegir entre responder sí o no a la instalación. Si responde no, se cancelará la instalación. Una vez finalizado el instalador, el usuario recibirá un mensaje informándole de que su máquina ya está configurada para el acceso remoto.
+El usuario puede elegir entre responder «sí» o «no» a la instalación. Si responde «no», se cancelará la instalación. Una vez finalizado el instalador, el usuario recibirá un mensaje informándole de que su equipo ya está configurado para el acceso remoto.
 
 #### Instalación silenciosa (solo instaladores empresariales)
 
-Se puede iniciar una instalación silenciosa ejecutando el instalador ejecutable con el parámetro de línea de comandos */S*. Esto resulta útil cuando se instala RIM como parte de una rutina de implementación masiva.
-
+Se puede iniciar una instalación silenciosa ejecutando el instalador ejecutable con el parámetro de línea de comandos */S*. Esto resulta útil al instalar RIM como parte de una rutina de implementación masiva.
 
 ### Historial de sesiones
 
-Puede ver todo el historial de sesiones anteriores a través del panel de control de RIM. El historial de sesiones contiene actualmente la fecha y la hora de cada sesión, el nombre del ordenador al que se ha conectado y la duración de la sesión. También puede optar por añadir comentarios a una sesión a través del enlace «Añadir comentario» dentro de la fila de la sesión. Esto resulta útil para añadir notas sobre el estado actual de un incidente, tanto para su propio beneficio como para el de los administradores de la organización.
+Puedes consultar todo tu historial de sesiones anteriores a través del panel de control de RIM. El historial de sesiones contiene actualmente la fecha y la hora de cada sesión, el nombre del ordenador al que te conectaste y la duración de la sesión. También puede añadir comentarios a una sesión mediante el enlace «Añadir comentario» que aparece en la fila de la sesión. Esto resulta útil para añadir notas sobre el estado actual de una incidencia, tanto para su propio uso como para los administradores de la organización.
 
-Todo el historial de sesiones se puede exportar para su posterior visualización a través de una aplicación de hoja de cálculo. Active el botón «Descargar historial de sesiones como CSV» situado debajo de la tabla del historial de sesiones para mostrar una página de personalización para la exportación de datos. En esta página, puede elegir el intervalo de tiempo de la exportación, así como el símbolo utilizado para separar los campos.
+Todo tu historial de sesiones se puede exportar para su consulta posterior mediante una aplicación de hojas de cálculo. Activa el botón «Descargar historial de sesiones como CSV», situado debajo de la tabla del historial de sesiones, para acceder a una página de personalización de la exportación de datos. En esta página, puedes seleccionar el intervalo de tiempo de la exportación, así como el símbolo que se utilizará para separar los campos.
 
-### Gestión de su suscripción (planes Personal y Pro)
+### Gestión de tu suscripción (planes Personal y Pro)
 
-El panel de control le permite ver y gestionar fácilmente los detalles de su suscripción a RIM. Al hacer clic en el enlace «Gestionar suscripción», puede:
-* Actualizar su plan
-* Actualizar su método de pago
+El panel de control te permite ver y gestionar fácilmente los detalles de tu suscripción a RIM. Al hacer clic en el enlace «Gestionar suscripción», puedes:
+* Actualizar tu plan
+* Actualizar tu método de pago
 * Cancelar los pagos recurrentes
 
-#### Actualizar su plan
+#### Actualización de tu plan
 
-Puede actualizar fácilmente su suscripción. Si tiene un plan mensual, se le prorrateará el cargo restante del nuevo importe, y se le cobrará el nuevo importe completo en los meses siguientes. Al hacer clic en «Actualizar suscripción», aparecerá una página casi idéntica a la página de selección del plan inicial. Hay algunas diferencias notables que describiremos a continuación:
-* No puede cambiar su plan a uno con menos máquinas. Sin embargo, puede cambiar de un plan mensual a uno anual con el mismo número de máquinas que su plan actual. Para cambiar a un plan inferior, tendría que cancelar su plan, esperar a que expire y, a continuación, iniciar un nuevo plan con menos máquinas.
+Puedes actualizar tu suscripción fácilmente. Si tienes un plan mensual, se te prorrateará el importe restante a partir del nuevo importe, y se te cobrará el nuevo importe completo en los meses siguientes. Al hacer clic en «Actualizar suscripción», aparecerá una página casi idéntica a la página inicial de selección de planes. Hay algunas diferencias importantes que describiremos a continuación:
+* No puedes bajar de categoría a un plan con menos máquinas. Sin embargo, sí puedes pasar de un plan mensual a uno anual con el mismo número de máquinas que tu plan actual. Para bajar de categoría, tendrías que cancelar tu plan, esperar a que caduque y, a continuación, contratar un nuevo plan con menos máquinas.
 * Los planes Enterprise, incluido el complemento Enterprise, no se pueden adquirir directamente a través de esta página.
 
 #### Cancelación de pagos recurrentes
 
-Al hacer clic en «Cancelar renovación automática», se le pedirá que confirme la acción, tras lo cual su suscripción caducará al final del periodo actual.
+Al hacer clic en «Cancelar renovación automática», se te pedirá una confirmación; tras ello, tu suscripción quedará configurada para que caduque al final del periodo actual.
+

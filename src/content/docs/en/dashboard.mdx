@@ -62,6 +62,9 @@ The permissions that can be toggled include:
     * If this option is unchecked, the option to open the chat will disappear from the session menu.
 * Allow the controller to browse and transfer files on the target machine via the file browser
     * If this option is unchecked, the option to browse files on the target will disappear from the session menu.
+* Allow new target machines to be added to the default group, where every controller in the organization can access them
+    * If this option is unchecked, machines can only be added to designated target groups.
+    * Disabling this option does not remove any machines that were added to the default group prior to the change.
 
 Once you have configured the permissions to your satisfaction, activate the "Update" button. Most changes take effect immediately in any sessions that are active at the time the permissions are changed. In particular:
 
@@ -76,6 +79,7 @@ Once you have configured the permissions to your satisfaction, activate the "Upd
 ### Managing Targets
 
 When you click the "Configure Targets" link, you will arrive at a page that allows you to manage all the machines you have configured for unattended access. You can click on any one of these machines in order to manage it. Once inside, you will be able to:
+
 * Rename the target
 * Move the target to a different group (more on target groups later)
 * Launch a remote session with the target

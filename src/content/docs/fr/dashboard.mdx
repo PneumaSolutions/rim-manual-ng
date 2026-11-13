@@ -5,133 +5,147 @@ title: Le tableau de bord de gestion du RIM
 import Windows from "~/components/platform/Windows.astro"
 import MacOS from "~/components/platform/MacOS.astro"
 
-RIM dispose d&#x27;un  tableau de bord Web qui facilite diverses tâches de gestion des machines et des comptes. Vous pouvez gérer vos ordinateurs sans surveillance existants, créer des programmes d&#x27;installation préconfigurés pour les ordinateurs cibles, et bien plus encore.  
-Il convient de noter que les fonctionnalités du tableau de bord dépendent en grande partie du niveau d&#x27;abonnement de votre compte. Par exemple, les utilisateurs professionnels peuvent attribuer des machines à des groupes cibles, ainsi que créer des programmes d&#x27;installation silencieux. D&#x27;autre part, tout le monde (y compris les utilisateurs particuliers) peut créer des programmes d&#x27;installation personnalisés pour ses machines sans surveillance.
+RIM propose un tableau de bord en ligne destiné à faciliter diverses tâches de gestion des machines et des comptes. Vous pouvez gérer vos ordinateurs en mode sans surveillance existants, créer des programmes d’installation préconfigurés pour les ordinateurs cibles, et bien plus encore.  
+Il convient de noter que les fonctionnalités du tableau de bord dépendent en grande partie du niveau d’abonnement de votre compte. Par exemple, les utilisateurs « Entreprise » peuvent affecter des machines à des groupes cibles, ainsi que créer des programmes d’installation en mode silencieux. En revanche, tout le monde (y compris les utilisateurs particuliers) peut créer des programmes d’installation personnalisés pour ses machines sans surveillance.
 
-### Localisation du tableau de bord
+### Accéder au tableau de bord
 
-Si vous êtes un contrôleur, le moyen le plus simple d&#x27;accéder au tableau de bord est de passer par l&#x27;interface principale de RIM. En cliquant sur le bouton « Tableau de bord RIM », le tableau de bord s&#x27;ouvrira automatiquement dans votre navigateur par défaut, et vous serez automatiquement connecté.  
-Si vous êtes un administrateur réseau qui n&#x27;a pas installé RIM, il vous suffit de vous connecter à votre compte sur le site web de RIM pour que votre tableau de bord s&#x27;affiche.
+Si vous êtes administrateur, le moyen le plus simple d’accéder au tableau de bord est de passer par l’interface principale de RIM. En cliquant sur le bouton « RIM Dashboard », le tableau de bord s’ouvrira automatiquement dans votre navigateur par défaut, la connexion étant déjà établie.  
+Si vous êtes un administrateur réseau qui n’a pas installé RIM, il vous suffit de vous connecter à votre compte sur le site web de RIM pour que votre tableau de bord s’affiche.
 
-### Gestion des membres de l&#x27;organisation (Entreprise)
+### Gestion des membres de l’organisation (entreprise)
 
-En activant le bouton « Organisation » sur le tableau de bord RIM, vous accédez à un menu d&#x27;options liées à la gestion de l&#x27;organisation et des membres. La page « Membres » répertorie tous les membres de votre organisation. Le rôle, le service et le nom de tous les membres peuvent être modifiés, et tout membre peut être désactivé ou supprimé d&#x27;une organisation, à l&#x27;exception du propriétaire de l&#x27;organisation. Notez que la désactivation d&#x27;un membre rendra son compte inutilisable tout en conservant son dossier.
+En cliquant sur le bouton « Organisation » du tableau de bord RIM, vous accéderez à un menu d’options liées à la gestion de l’organisation et de ses membres. La page « Membres » répertorie tous les membres de votre organisation. Il est possible de modifier le rôle, le service et le nom de tous les membres, et tout membre peut être désactivé ou supprimé de l’organisation, à l’exception du propriétaire de l’organisation. Notez que la désactivation d’un membre rendra son compte inopérant tout en conservant son dossier.
 
-Pour ajouter des membres, il suffit de saisir leur adresse e-mail, de sélectionner leur rôle (utilisateur ou administrateur), de saisir éventuellement leur nom et de sélectionner leur service s&#x27;il en existe un.
-Si vous avez plusieurs membres à ajouter, vous pouvez utiliser le champ d&#x27;édition « Membres » pour effectuer un ajout groupé. Ce champ d&#x27;édition accepte plusieurs lignes de texte, ce qui vous permet de saisir les informations de chaque membre sur une ligne distincte. Sur chaque ligne, vous pouvez saisir soit une seule adresse e-mail, soit une adresse e-mail et un nom au format :  
+Pour ajouter des membres, il suffit de saisir leur adresse e-mail, de sélectionner leur rôle (utilisateur ou administrateur), de saisir éventuellement leur nom et de sélectionner leur service si celui-ci a été créé.
+Si vous avez plusieurs membres à ajouter, vous pouvez utiliser le champ de saisie « Membres » pour effectuer un ajout groupé. Ce champ d’édition accepte plusieurs lignes de texte, ce qui vous permet de saisir les informations de chaque membre sur une ligne distincte. Sur chaque ligne, vous pouvez saisir soit une seule adresse e-mail, soit une adresse e-mail et un nom au format suivant :  
 *email@example.com John Doe*
 
 Une fois que vous avez terminé, cliquez sur le bouton « Ajouter ». 
 
-#### Départements
+#### Services
 
-Les départements vous permettent d&#x27;organiser les membres en fonction des différents groupes de votre organisation.
+Les services vous permettent d’organiser les membres en fonction des différents groupes de votre organisation.
 
-Pour ajouter un département, saisissez son nom dans la zone d&#x27;édition « Nom » sous l&#x27;en-tête « Créer un département ».
+Pour ajouter un service, saisissez son nom dans le champ « Nom » situé sous l’en-tête « Créer un service ».
 
 #### Exportation des données des membres
 
-La liste des membres de votre organisation peut être exportée sous forme de fichier CSV. Pour télécharger l&#x27;exportation : 
-1. Choisissez le séparateur de champs qui séparera les colonnes du fichier. Les options disponibles sont les suivantes : 
-    * virgule 
-    * point-virgule 
-    * tabulation 
-1. Activez le bouton « Télécharger ». 
+La liste des membres de votre organisation peut être exportée sous forme de fichier CSV. Pour télécharger le fichier exporté :
+1. Choisissez le séparateur de champs qui séparera les colonnes du fichier. Les options disponibles sont les suivantes :
+    * virgule
+    * point-virgule
+    * tabulation
+1. Cliquez sur le bouton « Télécharger ».
 
 #### Restrictions
 
-Selon la nature de votre organisation, il se peut que vous ne souhaitiez pas que votre personnel ait accès à certaines fonctionnalités. Les administrateurs de l&#x27;organisation peuvent donc choisir les fonctionnalités auxquelles ils souhaitent autoriser l&#x27;accès aux contrôleurs. L&#x27;écran « Restrictions », accessible via le menu « Organisation », vous permet de configurer ces autorisations.
+Selon la nature de votre organisation, il se peut que vous ne souhaitiez pas que votre personnel ait accès à certaines fonctionnalités. À ce titre, les administrateurs de l'organisation peuvent choisir les fonctionnalités auxquelles ils souhaitent autoriser l'accès aux contrôleurs. L'écran « Restrictions », accessible via le menu « Organisation », vous permet de configurer ces autorisations.
 
-Les autorisations qui peuvent être activées ou désactivées sont les suivantes :
+Les autorisations pouvant être activées ou désactivées sont les suivantes :
 * Autoriser le contrôleur à inverser la session
-    * Si cette option n&#x27;est pas cochée, l&#x27;option « Basculer la session » disparaîtra du menu de session et le raccourci clavier ne fonctionnera pas.
-* Autoriser le contrôleur à démarrer une conversation vocale
-* Si cette option n&#x27;est pas cochée, la case « Démarrer une conversation vocale » disparaîtra de l&#x27;écran « Fournir une aide à distance », tout comme l&#x27;option du menu de session.
+    * Si cette option n’est pas cochée, l’option « Inverser la session » disparaîtra du menu de session et le raccourci clavier ne fonctionnera pas.
+* Autoriser le contrôleur à lancer une conversation vocale
+    * Si cette option n’est pas cochée, la case à cocher « Démarrer une conversation vocale » disparaîtra de l’écran « Fournir une assistance à distance », tout comme l’option correspondante du menu de session.
 * Autoriser le contrôleur à demander un accès sans surveillance
-    * Si cette option n&#x27;est pas cochée, l&#x27;option permettant de demander un accès sans surveillance disparaîtra du menu de session.
+    * Si cette option n’est pas cochée, l’option permettant de demander un accès sans surveillance disparaîtra du menu de session.
 * Autoriser le transfert de texte et de fichiers entre les machines via le presse-papiers
-* Si cette option n&#x27;est pas cochée, RIM ignorera toute activité du presse-papiers.
+    * Si cette option n’est pas cochée, RIM ignorera toute activité liée au presse-papiers.
 * Autoriser le contrôleur à verrouiller la machine cible
-* Si cette option n&#x27;est pas cochée, l&#x27;option permettant de verrouiller la machine cible disparaîtra du menu de session.
+    * Si cette option n’est pas cochée, l’option permettant de verrouiller la machine cible disparaîtra du menu de session.
 * Autoriser le contrôleur à enregistrer la session
-* Cette option est désactivée par défaut, ce qui fait de l&#x27;enregistrement de session une fonctionnalité strictement optionnelle pour les entreprises et/ou les clients professionnels disposant du module complémentaire Entreprise.
-* Si cette option n&#x27;est pas cochée, l&#x27;option permettant d&#x27;enregistrer la session disparaîtra du menu de session.
-* Cette restriction bloque également l&#x27;option auto_start côté client dans le fichier config.toml
+    * Cette option est désactivée par défaut, ce qui fait de l’enregistrement de session une fonctionnalité strictement optionnelle pour les entreprises et/ou les clients « pro » disposant du module complémentaire « entreprise ».
+    * Si cette option n’est pas cochée, l’option permettant d’enregistrer la session disparaîtra du menu de session.
+    * Cette restriction désactive également le paramètre `auto_start` côté client dans le fichier `config.toml`
 * Autoriser le chat textuel pendant la session
-* Cette option est désactivée par défaut, ce qui fait du chat de session une fonctionnalité strictement facultative pour les entreprises et/ou les clients professionnels disposant du module complémentaire Entreprise.
-* Si cette option n&#x27;est pas cochée, l&#x27;option permettant d&#x27;ouvrir le chat disparaîtra du menu de la session.
+    * Cette option est désactivée par défaut, ce qui fait du chat de session une fonctionnalité strictement optionnelle pour les entreprises et/ou les clients Pro disposant de l’extension Entreprise.
+    * Si cette option n’est pas cochée, l’option permettant d’ouvrir le chat disparaîtra du menu de session.
+* Autoriser le contrôleur à parcourir et transférer des fichiers sur la machine cible via l’explorateur de fichiers
+    * Si cette option n’est pas cochée, l’option permettant de parcourir les fichiers sur la machine cible disparaîtra du menu de session.
+* Autoriser l’ajout de nouvelles machines cibles au groupe par défaut, auquel tous les contrôleurs de l’organisation peuvent accéder
+    * Si cette option n’est pas cochée, les machines ne peuvent être ajoutées qu’à des groupes cibles désignés.
+    * La désactivation de cette option ne supprime aucune machine ayant été ajoutée au groupe par défaut avant la modification.
 
+Une fois que vous avez configuré les autorisations à votre convenance, cliquez sur le bouton « Mettre à jour ». La plupart des modifications prennent effet immédiatement dans toutes les sessions actives au moment où les autorisations sont modifiées. En particulier :
 
-Une fois que vous avez configuré les autorisations à votre convenance, cliquez sur le bouton « Mettre à jour ». Les modifications n&#x27;affecteront pas les sessions actives au moment où les autorisations sont modifiées. Elles prendront toutefois effet pour toutes les sessions futures sans nécessiter de redémarrage du client.
+* Une session inversée sera immédiatement rétablie.
+* Une conversation vocale en cours sera interrompue.
+* Une demande d’accès sans surveillance en attente sera annulée.
+* Les opérations du presse-papiers, y compris les transferts de fichiers en cours, seront interrompues.
+* Un enregistrement de session en cours prendra fin immédiatement. Toutefois, RIM ne supprimera pas l’enregistrement.
+* Une conversation par chat textuel en cours prendra fin.
+* Le navigateur de fichiers disparaîtra, et tous les transferts de fichiers en cours seront annulés.
 
 ### Gestion des cibles
 
-Lorsque vous cliquez sur le lien « Configurer les cibles », vous accédez à une page qui vous permet de gérer toutes les machines que vous avez configurées pour un accès sans surveillance. Vous pouvez cliquer sur n&#x27;importe laquelle de ces machines pour la gérer. Une fois à l&#x27;intérieur, vous pourrez :
+Lorsque vous cliquez sur le lien « Configurer les cibles », vous accédez à une page qui vous permet de gérer toutes les machines que vous avez configurées pour l’accès sans surveillance. Vous pouvez cliquer sur n’importe laquelle de ces machines pour la gérer. Une fois sur cette page, vous pourrez :
+
 * Renommer la cible
-* Déplacer la cible vers un autre groupe (plus d&#x27;informations sur les groupes de cibles plus loin)
+* Déplacer la cible vers un autre groupe (nous reviendrons plus tard sur les groupes de cibles)
 * Lancer une session à distance avec la cible
 * Supprimer la cible
 
 ### Groupes de cibles (pour les comptes Pro et supérieurs)
 
-Supposons, par exemple, que votre groupe de travail soit réparti sur plusieurs sites différents. Ou peut-être souhaitez-vous désigner des groupes de machines à vos techniciens de maintenance de routine. Les groupes de cibles vous permettent justement de faire cela. Pour ce faire, il vous suffit de cliquer sur le bouton « Créer un groupe de cibles », de nommer votre groupe et de valider.  
-Vous pouvez créer autant de groupes cibles que nécessaire pour votre cas d&#x27;utilisation. 
+Imaginons, par exemple, que votre groupe de travail soit réparti sur plusieurs sites différents. Ou peut-être souhaitez-vous attribuer des groupes de machines à vos techniciens chargés de la maintenance courante. Les groupes de cibles vous permettent justement de le faire. Pour cela, il vous suffit de cliquer sur le bouton « Créer un groupe de cibles », de nommer votre groupe, puis de valider.  
+Vous pouvez créer autant de groupes de cibles que nécessaire en fonction de vos besoins. 
 
-#### Contrôle d&#x27;accès (pour les entreprises)
+#### Contrôle d’accès (pour les organisations de type Entreprise)
 
-Si votre entreprise affecte un technicien de support à un ensemble spécifique de machines, vous souhaitez probablement vous assurer qu&#x27;il n&#x27;ait accès qu&#x27;à cet ensemble spécifique. C&#x27;est là qu&#x27;intervient le paramètre de contrôle d&#x27;accès pour les groupes cibles.  
-Lorsque vous cliquez sur un groupe cible, vous disposez d&#x27;options pour gérer les machines du groupe, ainsi que le groupe lui-même. La section Contrôle d&#x27;accès vous permet d&#x27;accorder l&#x27;accès à ce groupe sur une base individuelle. Il vous suffit d&#x27;entrer l&#x27;adresse e-mail du compte que vous souhaitez ajouter, puis de cliquer sur le bouton « Accorder l&#x27;accès ». Notez que ce compte peut exister en dehors du domaine de votre organisation.  
-Une fois cette opération effectuée, un tableau des comptes ayant accès à ce groupe s&#x27;affiche. Sous chaque compte se trouve un bouton « Révoquer l&#x27;accès ». Ce bouton ne nécessite aucune confirmation supplémentaire.  
-Il convient de noter que tous les administrateurs de l&#x27;organisation se voient automatiquement accorder l&#x27;accès pour gérer tous les groupes créés au sein de l&#x27;organisation. De plus, toutes les adresses e-mail des domaines de votre organisation seront ajoutées par défaut à votre organisation dans RIM. Si vous souhaitez contrôler de manière plus précise qui peut être intégré, vous pouvez désactiver cette option dans la zone principale des membres de votre organisation. De plus, dans la zone des membres, vous pouvez ajouter des adresses e-mail en bloc en les séparant par des virgules, des espaces ou des sauts de ligne.
+Si votre organisation affecte un technicien de support à un ensemble spécifique de machines, vous souhaitez probablement vous assurer qu’il n’ait accès qu’à cet ensemble précis. C’est là qu’intervient le paramètre de contrôle d’accès pour les groupes cibles.  
+Lorsque vous cliquez sur un groupe cible, plusieurs options s’offrent à vous pour gérer les machines du groupe, ainsi que le groupe lui-même. La section « Contrôle d’accès » vous permet d’accorder l’accès à ce groupe compte par compte. Il vous suffit de saisir l’adresse e-mail du compte que vous souhaitez ajouter, puis de cliquer sur le bouton « Accorder l’accès ». Notez que ce compte peut exister en dehors du domaine de votre organisation d’entreprise.  
+Une fois cette opération effectuée, un tableau répertoriant les comptes ayant accès à ce groupe s’affichera. Sous chaque compte se trouve un bouton « Révoquer l’accès ». Ce bouton ne nécessite aucune confirmation supplémentaire.  
+Il convient de noter que tous les administrateurs de l’organisation se voient automatiquement accorder l’accès pour gérer l’ensemble des groupes créés au sein de l’organisation. De plus, toutes les adresses e-mail relevant des domaines de votre organisation seront ajoutées par défaut à votre organisation dans RIM. Si vous avez besoin d’un contrôle plus fin sur les personnes intégrées, vous pouvez désactiver cette fonctionnalité dans l’espace membres principal de votre organisation. De plus, dans l’espace membres, vous pouvez ajouter des adresses e-mail en masse en les séparant par des virgules, des espaces ou des sauts de ligne.
 
-### Configuration d&#x27;un programme d&#x27;installation RIM préconfiguré (Pro ou supérieur)
+### Configuration d’un programme d’installation RIM préconfiguré (version Pro ou supérieure)
 
-L&#x27;un des moyens les plus simples de configurer une machine pour des connexions sans surveillance ou avec invite consiste à créer un programme d&#x27;installation personnalisé. Cela s&#x27;avère extrêmement utile si vous configurez des déploiements à grande échelle, ou même comme moyen plus simple de mettre en place RIM sur l&#x27;ordinateur d&#x27;un utilisateur final auquel vous prévoyez d&#x27;apporter une assistance régulière.
+L’un des moyens les plus simples de configurer un ordinateur pour des connexions sans intervention ou avec invite consiste à créer un programme d’installation personnalisé. Cela s’avère extrêmement utile si vous configurez des déploiements à grande échelle, ou même simplement pour mettre en place RIM sur l’ordinateur d’un utilisateur final auquel vous prévoyez d’apporter une assistance régulière.
 
 Pour ce faire :
-1. Dans l&#x27;écran de gestion des cibles, cliquez sur le bouton « Créer un programme d&#x27;installation cible ».
-1. Il vous sera d&#x27;abord demandé si vous souhaitez que cette machine soit configurée pour un accès entièrement sans surveillance ou pour un accès avec invite, dans lequel l&#x27;utilisateur doit accepter une invite pour lancer la connexion.
-1. Il vous sera ensuite demandé d&#x27;attribuer un groupe cible. Notez que la sélection du groupe cible se fera automatiquement vers le groupe cible que vous avez choisi si vous lancez la configuration du programme d&#x27;installation à partir de la page de votre groupe.
-1. Il vous sera demandé pendant combien de temps vous souhaitez que ce programme d&#x27;installation soit valide. Il peut être valide pendant 7 à 30 jours, ou valide en permanence pour les plans d&#x27;entreprise en définissant l&#x27;expiration sur « jamais ».
-1. Vous avez ensuite la possibilité d&#x27;attribuer un nom de base. Tout ordinateur provisionné via ce package d&#x27;installation se verra attribuer ce nom de base.
-1. Une case à cocher vous permettra ensuite de choisir de recevoir une notification par e-mail lorsqu&#x27;un utilisateur installe RIM via ce programme d&#x27;installation.
-1. Si vous êtes un administrateur d&#x27;entreprise, vous verrez une case à cocher qui vous permet de créer le programme d&#x27;installation sous forme de package MSI. Cette option est utile pour le déploiement massif d&#x27;un programme d&#x27;installation personnalisé sur un cluster de machines qui sera désigné pour le groupe cible donné.
-1. Vous serez invité à fournir un nom pour le programme d&#x27;installation et, éventuellement, quelques notes. Celles-ci sont destinées à des enregistrements internes et n&#x27;apparaîtront pas dans le programme d&#x27;installation créé.
-1. Cliquez sur « Créer le programme d&#x27;installation ». Vous obtiendrez alors un lien de téléchargement que vous pourrez copier dans le presse-papiers et envoyer à votre utilisateur final. Vous pouvez également télécharger directement le programme d&#x27;installation pour l&#x27;utiliser dans le cadre de déploiements en masse. Vous pouvez supprimer le programme d&#x27;installation de cet écran si vous décidez de le rendre inutilisable prématurément.
+1. Dans l’écran de gestion des cibles, cliquez sur le bouton « Créer un programme d’installation cible ».
+1. Il vous sera d’abord demandé si vous souhaitez que cette machine soit configurée pour un accès entièrement sans intervention, ou pour un accès avec invite, dans lequel l’utilisateur doit accepter une invite pour lancer la connexion.
+1. Il vous sera ensuite demandé d’attribuer un groupe cible. Notez que la sélection du groupe cible se fera automatiquement sur le groupe de votre choix si vous lancez la configuration du programme d’installation depuis la page de votre groupe.
+1. Il vous sera demandé pendant combien de temps vous souhaitez que ce programme d’installation soit valide. Il peut être valide pendant une durée comprise entre 7 et 30 jours, ou de manière permanente pour les formules Entreprise en définissant l’expiration sur « jamais ».
+1. Vous avez ensuite la possibilité d’attribuer un nom de base. Toute machine provisionnée via ce package d’installation se verra attribuer ce nom de base.
+1. Une case à cocher s’affichera alors pour vous permettre de choisir de recevoir une notification par e-mail lorsqu’un utilisateur installe RIM via ce programme d’installation.
+1. Si vous êtes administrateur d’entreprise, vous verrez une case à cocher vous permettant de créer le programme d’installation sous forme de package MSI. Cette option est utile pour le déploiement à grande échelle d’un programme d’installation personnalisé sur un cluster de machines qui sera affecté au groupe cible donné.
+1. Il vous sera demandé de fournir un nom pour le programme d’installation, ainsi que des remarques facultatives. Ces informations sont destinées à un usage interne et n’apparaîtront pas dans le programme d’installation créé.
+1. Cliquez sur « Créer le programme d’installation ». Un lien de téléchargement s’affichera ; vous pouvez soit le copier dans le presse-papiers et l’envoyer à votre utilisateur final, soit télécharger directement le programme d’installation pour l’utiliser dans le cadre de déploiements à grande échelle. Vous pouvez supprimer le programme d’installation depuis cet écran si vous souhaitez le rendre inutilisable prématurément.
 
-Maintenant que vous disposez de votre programme d&#x27;installation, vous pouvez l&#x27;exécuter de deux manières différentes. Dans les deux cas, le programme d&#x27;installation interrogera le serveur pour vérifier sa validité. Si le programme d&#x27;installation est valide, la machine sera ajoutée à votre liste de machines dans votre compte ainsi que dans le client RIM une fois l&#x27;installation terminée. Un programme d&#x27;installation non valide ne s&#x27;exécutera pas.
+Maintenant que vous disposez de votre programme d’installation, celui-ci peut être exécuté de deux manières différentes. Dans les deux cas, le programme d’installation interrogera le serveur pour vérifier sa validité. Si le programme d’installation est valide, la machine sera ajoutée à votre liste de machines, tant dans votre compte que dans le client RIM, une fois l’installation terminée. Un programme d’installation non valide ne s’exécutera pas.
 
-Exécution normale
+#### Exécution normale
 
-L&#x27;utilisateur recevra une invite lors de l&#x27;exécution du programme d&#x27;installation, contenant les informations suivantes :
+Lors de l’exécution du programme d’installation, l’utilisateur verra s’afficher une invite contenant les informations suivantes :
 * Le nom du technicien ainsi que son organisation, le cas échéant
-* La nature de la connexion, c&#x27;est-à-dire si une invite est requise ou non.
+* La nature de la connexion, c’est-à-dire si une confirmation est requise ou non
 
-L&#x27;utilisateur peut choisir de répondre oui ou non à l&#x27;installation. Si vous répondez non, l&#x27;installation sera annulée. Une fois l&#x27;installation terminée, l&#x27;utilisateur recevra un message l&#x27;informant que son ordinateur est désormais configuré pour l&#x27;accès à distance.
+L’utilisateur peut choisir de répondre « oui » ou « non » à l’installation. Si l’utilisateur répond « non », l’installation sera annulée. Une fois l’installation terminée, l’utilisateur recevra un message l’informant que son ordinateur est désormais configuré pour l’accès à distance.
 
-#### Installation silencieuse (installateurs d&#x27;entreprise uniquement)
+#### Installation silencieuse (programmeurs d’installation d’entreprise uniquement)
 
-Une installation silencieuse peut être lancée en exécutant le programme d&#x27;installation exécutable avec le paramètre de ligne de commande */S*. Cela est utile lorsque vous installez RIM dans le cadre d&#x27;un déploiement de masse.
+Une installation silencieuse peut être lancée en exécutant le fichier exécutable du programme d’installation avec le paramètre de ligne de commande */S*. Cette option est utile lors de l’installation de RIM dans le cadre d’un déploiement à grande échelle.
 
 ### Historique des sessions
 
-Vous pouvez consulter l&#x27;historique complet de vos sessions passées via le tableau de bord RIM. L&#x27;historique des sessions contient actuellement la date et l&#x27;heure de chaque session, le nom de l&#x27;ordinateur auquel vous vous êtes connecté et la durée de la session. Vous pouvez également choisir d&#x27;ajouter des commentaires à une session via le lien « Ajouter un commentaire » dans la ligne de la session. Cela est utile pour ajouter des notes sur l&#x27;état actuel d&#x27;un incident, tant pour vous-même que pour les administrateurs de l&#x27;organisation.
+Vous pouvez consulter l’historique complet de vos sessions passées via le tableau de bord RIM. L’historique des sessions contient actuellement la date et l’heure de chaque session, le nom de l’ordinateur auquel vous vous êtes connecté et la durée de la session. Vous pouvez également choisir d’ajouter des commentaires à une session via le lien « Ajouter un commentaire » situé dans la ligne de la session. Cela s’avère utile pour ajouter des notes sur l’état actuel d’un incident, tant pour votre propre usage que pour celui des administrateurs de l’organisation.
 
-L&#x27;historique complet de vos sessions peut être exporté pour être consulté ultérieurement via un tableur. Activez le bouton « Télécharger l&#x27;historique des sessions au format CSV » situé sous le tableau de l&#x27;historique des sessions pour afficher une page de personnalisation pour l&#x27;exportation de vos données. Sur cette page, vous pouvez choisir la période d&#x27;exportation, ainsi que le symbole utilisé pour séparer les champs.
+L'intégralité de votre historique des sessions peut être exportée pour être consultée ultérieurement à l'aide d'un tableur. Cliquez sur le bouton « Télécharger l'historique des sessions au format CSV » situé sous le tableau de l'historique des sessions pour afficher une page de personnalisation de l'exportation de vos données. Sur cette page, vous pouvez choisir la période couverte par l'exportation, ainsi que le séparateur utilisé entre les champs.
 
 ### Gestion de votre abonnement (formules Personal et Pro)
 
-Le tableau de bord vous permet de consulter et de gérer facilement les détails de votre abonnement RIM. En cliquant sur le lien « Gérer l&#x27;abonnement », vous pouvez :
-* Mettre à niveau votre formule
+Le tableau de bord vous permet de consulter et de gérer facilement les détails de votre abonnement RIM. En cliquant sur le lien « Gérer l’abonnement », vous pouvez :
+* Passer à une formule supérieure
 * Mettre à jour votre mode de paiement
 * Annuler les paiements récurrents
 
-#### Mettre à niveau votre forfait
+#### Passer à une formule supérieure
 
-Vous pouvez facilement mettre à niveau votre abonnement. Si vous avez un forfait mensuel, le montant restant sera calculé au prorata du nouveau montant, et le nouveau montant total sera facturé pour les mois suivants. En cliquant sur « Mettre à niveau l&#x27;abonnement », vous accédez à une page presque identique à la page de sélection initiale du forfait. Il existe quelques différences notables que nous allons décrire ci-dessous :
-* Vous ne pouvez pas passer à un forfait comprenant moins de machines. Vous pouvez toutefois passer d&#x27;un forfait mensuel à un forfait annuel comprenant le même nombre de machines que votre forfait actuel. Pour passer à un forfait inférieur, vous devez résilier votre forfait, attendre son expiration, puis souscrire un nouveau forfait comprenant moins de machines.
+Vous pouvez facilement passer à un forfait supérieur. Si vous disposez d’un forfait mensuel, le montant restant sera calculé au prorata du nouveau montant, le nouveau montant total étant facturé pour les mois suivants. En cliquant sur « Passer à un forfait supérieur », vous accédez à une page presque identique à la page de sélection initiale des forfaits. Il existe toutefois quelques différences notables que nous allons détailler ci-dessous :
+* Vous ne pouvez pas passer à un forfait comprenant moins de machines. Vous pouvez toutefois passer d’un forfait mensuel à un forfait annuel comportant le même nombre de machines que votre forfait actuel. Pour passer à un forfait inférieur, vous devrez résilier votre forfait, attendre son expiration, puis souscrire un nouveau forfait comprenant moins de machines.
 * Les forfaits Entreprise, y compris le module complémentaire Entreprise, ne peuvent pas être souscrits directement via cette page.
 
-#### Annulation des paiements récurrents
+#### Résiliation des paiements récurrents
 
 Lorsque vous cliquez sur « Annuler le renouvellement automatique », une confirmation vous sera demandée, après quoi votre abonnement expirera à la fin de la période en cours.
+

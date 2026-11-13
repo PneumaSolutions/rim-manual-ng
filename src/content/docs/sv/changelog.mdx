@@ -5,7 +5,40 @@ title: Ändra logg
 import Windows from "~/components/platform/Windows.astro"
 import MacOS from "~/components/platform/MacOS.astro"
 
-Versioner av RIM kommer att anges med rubriker på nivå 3. Väsentliga uppdateringar med flera funktioner för båda plattformarna kommer att delas upp i underrubriker för Mac och Windows på nivå 4.
+Versioner av RIM kommer att anges med rubriker på nivå 3. Omfattande uppdateringar med flera funktioner kommer att delas upp i underrubriker på nivå 4.
+
+### 3.5.0
+
+#### Ändringar i användargränssnittet
+
+Vi har förenklat skärmen ”Ge fjärrhjälp” för att anpassa den till iOS-klienten.
+
+* Skärmen ”Ge fjärrhjälp” är nu indelad i flikar, där nyckelordsbaserade sessionskontroller skiljs från kontroller för obevakade sessioner.
+    * När du öppnar skärmen ”Ge fjärrhjälp” kommer RIM ihåg vilken flik du senast befann dig på. Detta är särskilt användbart om du regelbundet ger hjälp till obevakade mål.
+* Alternativ som att öppna instrumentpanelen och läsa manualen är nu tillgängliga via ”Meny”-knappen på båda flikarna.
+
+Skärmen ”Ta emot fjärrhjälp” förblir oförändrad.
+
+#### Förenklat gränssnitt för filöverföringar
+
+RIM erbjuder nu en dedikerad filbläddrare som möjliggör smidiga överföringar fram och tillbaka mellan plattformar.
+
+Användning av denna funktion under nyckelordssessioner kräver samtycke från målenheten.
+
+Denna funktion är inaktiverad som standard för företagskunder. Använd panelen för begränsningar för att styra åtkomsten till denna funktion.
+
+#### Förbättrad hantering av målgrupper för företagskunder
+
+Din organisations instrumentpanel innehåller nu en inställning för att inaktivera standardgruppen (den grupp som alla har åtkomst till). Detta ger organisationsadministratörer mer detaljerad kontroll över åtkomsten till enheter mellan avdelningar.
+
+Om du har konfigurerat målgrupper kommer RIM nu att be dig välja en när du konfigurerar en dator för obevakad åtkomst eller åtkomst med bekräftelse. En extra bekräftelseskärm visas när du lägger till en dator i standardmålgruppen.
+
+#### Ytterligare ändringar för klienter
+
+* RIM visar nu ett meddelande när du ansluter till en Windows-målmaskin där RIM-installationen körs utan utökade behörigheter.
+* Ändringar av organisationsbegränsningar kan nu träda i kraft omedelbart under en session. Tidigare, när en organisationsadministratör inaktiverade en funktion, trädde begränsningen inte i kraft förrän vid nästa session.
+
+
 ### 3.4.23
 
 * Windows: Vi är medvetna om att vissa antivirusprogram felaktigt har klassificerat de senaste RIM-uppdateringarna som trojaner (falska positiva resultat). Vi har gjort vårt bästa för att lösa detta problem i den här uppdateringen. Kontakta oss gärna om problemet kvarstår.

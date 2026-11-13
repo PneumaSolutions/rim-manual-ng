@@ -5,7 +5,40 @@ title: Registro delle modifiche
 import Windows from "~/components/platform/Windows.astro"
 import MacOS from "~/components/platform/MacOS.astro"
 
-Le versioni di RIM saranno indicate da intestazioni di livello 3. Gli aggiornamenti sostanziali con diverse funzionalità per entrambe le piattaforme saranno suddivisi in sottotitoli Mac e Windows di livello 4.
+Le versioni di RIM saranno indicate con titoli di livello 3. Gli aggiornamenti sostanziali che includono diverse funzionalità saranno suddivisi in sottotitoli di livello 4.
+
+### 3.5.0
+
+#### Modifiche all’interfaccia utente
+
+Abbiamo semplificato la schermata “Fornisci assistenza remota” per allinearla al client iOS.
+
+* La schermata “Fornisci assistenza remota” è ora suddivisa in schede, che separano i controlli delle sessioni basati su parole chiave da quelli delle sessioni non presidiate.
+    * Quando si apre la schermata “Fornisci assistenza remota”, RIM ricorda l’ultima scheda in cui ci si trovava. Ciò è particolarmente utile se si fornisce regolarmente assistenza a dispositivi non presidiati.
+* Opzioni quali l’apertura della dashboard e la consultazione del manuale sono ora disponibili dal pulsante “Menu” su entrambe le schede.
+
+La schermata “Ricevi assistenza remota” rimane invariata.
+
+#### Interfaccia ottimizzata per il trasferimento dei file
+
+RIM offre ora un browser di file dedicato, che consente trasferimenti bidirezionali senza interruzioni tra le piattaforme.
+
+L’utilizzo di questa funzionalità durante le sessioni con parole chiave richiede il consenso del dispositivo di destinazione.
+
+Questa funzionalità è disabilitata per impostazione predefinita per le organizzazioni aziendali. Utilizzare il pannello delle restrizioni per controllare l’accesso a questa funzionalità.
+
+#### Gestione perfezionata dei gruppi di destinatari per i clienti aziendali
+
+La dashboard della vostra organizzazione include ora un’impostazione per disabilitare il gruppo predefinito (il gruppo a cui tutti hanno accesso). Ciò offre agli amministratori dell’organizzazione un controllo più preciso sull’accesso ai dispositivi tra i vari reparti.
+
+Se sono stati configurati gruppi di destinatari, RIM chiederà ora di sceglierne uno quando si configura un computer per l’accesso automatico o con richiesta di conferma. Viene visualizzata una schermata di conferma aggiuntiva quando si aggiunge un computer al gruppo di destinatari predefinito.
+
+#### Ulteriori modifiche relative ai client
+
+* RIM ora visualizza una schermata di avviso quando si connette a un dispositivo Windows di destinazione su cui l’installazione di RIM è in esecuzione senza privilegi elevati.
+* Le modifiche alle restrizioni dell’organizzazione possono ora avere effetto immediato durante una sessione. In precedenza, quando un amministratore dell’organizzazione disabilitava una funzionalità, la restrizione non entrava in vigore fino alla sessione successiva.
+
+
 ### 3.4.23
 
 * Windows: Siamo a conoscenza del fatto che alcuni programmi antivirus abbiano erroneamente segnalato i recenti aggiornamenti RIM come trojan (falsi positivi). Abbiamo fatto del nostro meglio per risolvere questo problema con questo aggiornamento. Vi preghiamo di contattarci se il problema dovesse persistere.

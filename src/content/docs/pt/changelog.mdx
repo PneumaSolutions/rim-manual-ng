@@ -5,7 +5,40 @@ title: Registro de alterações
 import Windows from "~/components/platform/Windows.astro"
 import MacOS from "~/components/platform/MacOS.astro"
 
-As versões do RIM serão indicadas por títulos no nível 3. Atualizações substanciais com vários recursos para ambas as plataformas serão divididas em subtítulos Mac e Windows no nível 4.
+As versões do RIM serão indicadas por títulos de nível 3. Atualizações substanciais com vários recursos serão divididas em subtítulos de nível 4.
+
+### 3.5.0
+
+#### Alterações na interface do usuário
+
+Simplificamos a tela “Fornecer Ajuda Remota” para alinhá-la com o cliente iOS.
+
+* A tela “Fornecer Ajuda Remota” agora está dividida em guias, separando os controles de sessão baseados em palavras-chave dos controles de sessão autônoma.
+    * Ao abrir a tela “Fornecer Ajuda Remota”, a RIM lembra a última aba em que você estava. Isso é particularmente útil se você costuma prestar assistência a alvos autônomos.
+* Opções como abrir o painel de controle e ler o manual agora estão disponíveis no botão “Menu” em qualquer uma das abas.
+
+A tela “Receber Ajuda Remota” permanece inalterada.
+
+#### Interface otimizada para transferências de arquivos
+
+A RIM agora oferece um navegador de arquivos dedicado, que permite transferências bidirecionais sem interrupções entre plataformas.
+
+O uso desse recurso durante sessões por palavra-chave requer o consentimento do alvo.
+
+Esse recurso está desativado por padrão para organizações corporativas. Use o painel de restrições para controlar o acesso a esse recurso.
+
+#### Gerenciamento aprimorado de grupos-alvo para clientes corporativos
+
+O painel de controle da sua organização agora inclui uma configuração para desativar o grupo padrão (aquele ao qual todos têm acesso). Isso proporciona aos administradores da organização um controle mais preciso sobre o acesso aos dispositivos entre os departamentos.
+
+Se você configurou grupos-alvo, o RIM agora solicitará que você escolha um ao configurar uma máquina para acesso autônomo ou com solicitação. Uma tela de confirmação adicional é exibida ao adicionar uma máquina ao grupo-alvo padrão.
+
+#### Alterações adicionais no cliente
+
+* O RIM agora exibe uma tela de aviso ao se conectar a um alvo Windows cuja instalação do RIM esteja sendo executada sem privilégios elevados.
+* Alterações nas restrições da organização agora podem entrar em vigor imediatamente durante uma sessão. Anteriormente, quando um administrador da organização desativava um recurso, a restrição só entrava em vigor na sessão seguinte.
+
+
 ### 3.4.23
 
 * Windows: Estamos cientes de que alguns programas antivírus sinalizaram incorretamente as atualizações recentes da RIM como trojans (falsos positivos). Fizemos o possível para resolver esse problema nesta atualização. Entre em contato conosco caso continue enfrentando esse problema.

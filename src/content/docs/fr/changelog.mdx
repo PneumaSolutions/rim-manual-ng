@@ -5,7 +5,40 @@ title: Journal des modifications
 import Windows from "~/components/platform/Windows.astro"
 import MacOS from "~/components/platform/MacOS.astro"
 
-Les versions de RIM seront indiquées par des en-têtes au niveau 3. Les mises à jour importantes comportant plusieurs fonctionnalités pour les deux plateformes seront divisées en sous-titres Mac et Windows au niveau 4.
+Les versions de RIM seront indiquées par des titres de niveau 3. Les mises à jour importantes comportant plusieurs fonctionnalités seront divisées en sous-titres de niveau 4.
+
+### 3.5.0
+
+#### Modifications de l'interface utilisateur
+
+Nous avons simplifié l'écran « Fournir une assistance à distance » afin de l'harmoniser avec le client iOS.
+
+* L'écran « Fournir une assistance à distance » est désormais divisé en onglets, séparant les commandes de session basées sur des mots-clés de celles des sessions sans surveillance.
+    * Lorsque vous ouvrez l’écran « Fournir une aide à distance », RIM mémorise le dernier onglet sur lequel vous vous trouviez. Cela s’avère particulièrement utile si vous fournissez régulièrement une assistance à des cibles sans surveillance.
+* Des options telles que l’ouverture du tableau de bord et la consultation du manuel sont désormais accessibles depuis le bouton « Menu » de chaque onglet.
+
+L’écran « Recevoir une aide à distance » reste inchangé.
+
+#### Interface simplifiée pour les transferts de fichiers
+
+RIM propose désormais un navigateur de fichiers dédié, qui permet des transferts aller-retour fluides entre les plateformes.
+
+L’utilisation de cette fonctionnalité lors de sessions par mot-clé nécessite le consentement de la cible.
+
+Cette fonctionnalité est désactivée par défaut pour les entreprises. Utilisez le panneau des restrictions pour contrôler l’accès à cette fonctionnalité.
+
+#### Gestion affinée des groupes cibles pour les clients professionnels
+
+Le tableau de bord de votre organisation comprend désormais un paramètre permettant de désactiver le groupe par défaut (celui auquel tout le monde a accès). Cela offre aux administrateurs de l’organisation un contrôle plus précis sur l’accès aux machines au sein des différents services.
+
+Si vous avez configuré des groupes cibles, RIM vous demandera désormais d’en choisir un lorsque vous configurez un ordinateur pour un accès sans surveillance ou avec invite. Un écran de confirmation supplémentaire s’affiche lors de l’ajout d’un ordinateur au groupe cible par défaut.
+
+#### Autres modifications apportées au client
+
+* RIM affiche désormais un écran d’avertissement lors de la connexion à une cible Windows sur laquelle l’installation de RIM s’exécute sans privilèges élevés.
+* Les modifications apportées aux restrictions de l’organisation peuvent désormais prendre effet immédiatement au cours d’une session. Auparavant, lorsqu’un administrateur de l’organisation désactivait une fonctionnalité, la restriction ne prenait effet qu’à la session suivante.
+
+
 ### 3.4.23
 
 * Windows : Nous savons que certains logiciels antivirus ont signalé à tort les dernières mises à jour de RIM comme étant des chevaux de Troie (faux positifs). Nous avons fait tout notre possible pour résoudre ce problème dans cette mise à jour. N'hésitez pas à nous contacter si ce problème persiste.

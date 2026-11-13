@@ -5,134 +5,147 @@ title: Instrumentpanelen för RIM-hantering
 import Windows from "~/components/platform/Windows.astro"
 import MacOS from "~/components/platform/MacOS.astro"
 
-RIM har en  webbaserad instrumentpanel som underlättar olika maskin- och kontohanteringsuppgifter. Du kan hantera dina befintliga obevakade datorer, skapa förkonfigurerade installationsprogram för måldatorer och mycket mer.  
-Det bör noteras att instrumentpanelens funktionsuppsättning i stor utsträckning beror på vilken prenumerationsnivå ditt konto har. Till exempel kan företagsanvändare tilldela maskiner till målgrupper samt skapa tysta installationsprogram. Å andra sidan kan vem som helst (inklusive privata användare) skapa anpassade installationsprogram för sina obevakade datorer.
+RIM har en webbaserad kontrollpanel som underlättar olika uppgifter inom maskin- och kontohantering. Du kan hantera dina befintliga datorer som installeras automatiskt, skapa förkonfigurerade installationsprogram för måldatorer och mycket mer.  
+Det bör noteras att kontrollpanelens funktionsutbud i stor utsträckning beror på vilken prenumerationsnivå ditt konto tillhör. Till exempel kan företagsanvändare tilldela datorer till målgrupper samt skapa installationsprogram för automatisk installation. Å andra sidan kan vem som helst (inklusive privatpersoner) skapa anpassade installationsprogram för sina obevakade datorer.
 
-### Hitta instrumentpanelen
+### Hitta kontrollpanelen
 
-Om du är administratör är det enklast att komma till instrumentpanelen via RIM:s huvudgränssnitt. Om du klickar på knappen ”RIM Dashboard” öppnas instrumentpanelen automatiskt i din standardwebbläsare, och inloggningen är redan klar.  
-Om du är en nätverksadministratör som inte har RIM installerat kan du helt enkelt logga in på ditt konto på RIM:s webbplats så visas din instrumentpanel.
+Om du är administratör är det enklaste sättet att komma till kontrollpanelen via RIM:s huvudgränssnitt. När du klickar på knappen ”RIM Dashboard” öppnas kontrollpanelen automatiskt i din standardwebbläsare, och inloggningen sker automatiskt.  
+Om du är nätverksadministratör och inte har RIM installerat kan du helt enkelt logga in på ditt konto på RIM:s webbplats så visas din instrumentpanel.
 
-### Hantera organisationsmedlemmar (Enterprise)
+### Hantera organisationsmedlemmar (företag)
 
-När du aktiverar knappen &quot;Organisation&quot; på RIM-instrumentpanelen visas en meny med alternativ relaterade till organisations- och medlemshantering. På sidan &quot;Medlemmar&quot; visas alla medlemmar i din organisation. Alla medlemmars roll, avdelning och namn kan ändras, och alla medlemmar kan inaktiveras eller tas bort från en organisation, med undantag för organisationens ägare. Observera att om en medlem inaktiveras blir deras konto oanvändbart, men deras uppgifter sparas.
+När du klickar på knappen ”Organisation” på RIM-instrumentpanelen visas en meny med alternativ relaterade till organisations- och medlemshantering. På sidan ”Medlemmar” visas en lista över alla medlemmar i din organisation. Du kan ändra roll, avdelning och namn för alla medlemmar, och alla medlemmar utom organisationens ägare kan inaktiveras eller tas bort från organisationen. Observera att när en medlem inaktiveras blir deras konto inaktivt, men deras uppgifter sparas.
 
-För att lägga till medlemmar behöver du bara ange deras e-postadress, välja deras roll (användare eller administratör), eventuellt ange deras namn och välja deras avdelning om en sådan har skapats.
-Om du har flera medlemmar att lägga till kan du använda redigeringsfältet &quot;Medlemmar&quot; för att lägga till flera samtidigt. Detta redigeringsfält accepterar flera rader text, så att du kan ange varje medlems information på en separat rad. På varje rad kan du ange antingen en enda e-postadress eller en e-postadress och ett namn i formatet:  
+Att lägga till medlemmar är enkelt: ange deras e-postadress, välj deras roll (användare eller administratör), ange eventuellt deras namn och välj deras avdelning om en sådan har skapats.
+Om du har flera medlemmar att lägga till kan du använda redigeringsfältet ”Medlemmar” för att lägga till dem i bulk. Detta redigeringsfält accepterar flera textrader, vilket gör att du kan ange varje medlems uppgifter på en separat rad. På varje rad kan du ange antingen en enda e-postadress eller en e-postadress och ett namn i följande format:  
 *email@example.com John Doe*
 
-När du är klar klickar du på knappen &quot;Lägg till&quot;. 
+När du är klar klickar du på knappen ”Lägg till”. 
 
 #### Avdelningar
 
-Avdelningar gör det möjligt för dig att organisera medlemmarna efter olika grupper i din organisation.
+Avdelningar gör det möjligt att organisera medlemmarna enligt de olika grupperna i din organisation.
 
-För att lägga till en avdelning anger du dess namn i redigeringsrutan &quot;Namn&quot; under rubriken &quot;Skapa avdelning&quot;.
+För att lägga till en avdelning anger du dess namn i redigeringsrutan ”Namn” under rubriken ”Skapa avdelning”.
 
 #### Export av medlemsdata
 
-Medlemslistan i din organisation kan exporteras som en CSV-fil. För att ladda ner exporten:
-1. Välj fältavgränsare som ska separera kolumnerna i filen. De tillgängliga alternativen är:
-* kommatecken
-* semikolon
-* tabb
-1. Aktivera knappen &quot;Ladda ner&quot;.
+Medlemslistan i din organisation kan exporteras som en CSV-fil. Så här laddar du ner exporten:
+1. Välj det fältavgränsningstecken som ska avgränsa filens kolumner. De tillgängliga alternativen är:
+    * kommatecken
+    * semikolon
+    * tabbtecken
+1. Klicka på knappen ”Ladda ner”.
 
 #### Begränsningar
 
-Beroende på din organisations karaktär kan det finnas vissa funktioner som du inte vill att din personal ska ha tillgång till. Organisationsadministratörer kan därför välja vilka funktioner de vill ge kontrollanter tillgång till. På skärmen &quot;Begränsningar&quot;, som du kommer åt via menyn &quot;Organisation&quot;, kan du konfigurera dessa behörigheter.
+Beroende på vilken typ av organisation du har kan det finnas vissa funktioner som du inte vill att din personal ska ha tillgång till. Därför kan organisationsadministratörer välja vilka funktioner de vill ge kontrollanter tillgång till. På skärmen ”Begränsningar”, som du når via menyn ”Organisation”, kan du konfigurera dessa behörigheter.
 
 De behörigheter som kan aktiveras eller inaktiveras är:
-* Tillåt kontrollanten att vända sessionen
-    * Om detta alternativ är avmarkerat försvinner alternativet &quot;Växla session&quot; från sessionsmenyn och kortkommandot fungerar inte.
-* Tillåt kontrollern att starta ett röstsamtal
-* Om detta alternativ är avmarkerat försvinner kryssrutan &quot;Starta röstsamtal&quot; från skärmen &quot;Ge fjärrhjälp&quot;, liksom menyalternativet i sessionsmenyn.
-* Tillåt kontrollern att begära obevakad åtkomst
-    * Om detta alternativ är avmarkerat försvinner alternativet för att begära obevakad åtkomst från sessionsmenyn.
+* Tillåt kontrollanten att byta plats i sessionen
+    * Om detta alternativ är avmarkerat försvinner alternativet ”Byt plats i sessionen” från sessionsmenyn, och kortkommandot fungerar inte.
+* Tillåt kontrollanten att starta ett röstsamtal
+    * Om denna inställning är avmarkerad försvinner kryssrutan ”Starta röstsamtal” från skärmen ”Ge fjärrhjälp”, liksom menyalternativet i sessionsmenyn.
+* Tillåt kontrollanten att begära obevakad åtkomst
+    * Om denna inställning är avmarkerad försvinner alternativet att begära obevakad åtkomst från sessionsmenyn.
 * Tillåt överföring av text och filer mellan datorer via urklipp
-* Om detta alternativ är avmarkerat ignorerar RIM all aktivitet i urklipp.
-* Tillåt kontrollenheten att låsa måldatorn
-* Om detta alternativ är avmarkerat försvinner alternativet för att låsa måldatorn från sessionsmenyn.
-* Tillåt kontrollenheten att spela in sessionen
-* Detta alternativ är inaktiverat som standard, vilket gör sessionsinspelning till en funktion som endast kan väljas av företag och/eller pro-kunder med tillägget för företag.
-* Om detta alternativ är avmarkerat försvinner alternativet för att spela in sessionen från sessionsmenyn.
-* Denna begränsning blockerar dessutom auto_start på klientsidan i filen config.toml
+    * Om detta alternativ är avmarkerat kommer RIM att ignorera all aktivitet i urklipp.
+* Tillåt kontrollanten att låsa måldatorn
+    * Om detta alternativ är avmarkerat försvinner alternativet att låsa måldatorn från sessionsmenyn.
+* Tillåt att kontrollenheten spelar in sessionen
+    * Detta alternativ är inaktiverat som standard, vilket gör sessionsinspelning till en funktion som endast kan aktiveras av företagskunder och/eller pro-kunder med tillägget för företag.
+    * Om detta alternativ är avmarkerat försvinner alternativet att spela in sessionen från sessionsmenyn.
+    * Denna begränsning inaktiverar dessutom inställningen auto_start på klientsidan i filen config.toml
 * Tillåt textchatt under sessionen
-* Denna alternativ är inaktiverad som standard, vilket gör sessionschatten till en funktion som endast kan väljas av företag och/eller pro-kunder med tillägget för företag.
-* Om detta alternativ är avmarkerat försvinner alternativet att öppna chatten från sessionsmenyn.
+    * Detta alternativ är inaktiverat som standard, vilket innebär att sessionschatt är en funktion som endast kan aktiveras av företagskunder och/eller Pro-kunder med tillägget för företag.
+    * Om denna inställning är avmarkerad försvinner alternativet att öppna chatten från sessionsmenyn.
+* Tillåt kontrollanten att bläddra bland och överföra filer på måldatorn via filutforskaren
+    * Om denna inställning är avmarkerad försvinner alternativet att bläddra bland filer på måldatorn från sessionsmenyn.
+* Tillåt att nya måldatorer läggs till i standardgruppen, där alla kontrollanter i organisationen kan komma åt dem
+    * Om detta alternativ inte är markerat kan datorer endast läggas till i angivna målgrupper.
+    * Att inaktivera detta alternativ tar inte bort några datorer som lades till i standardgruppen före ändringen.
 
+När du har konfigurerat behörigheterna efter önskemål klickar du på knappen ”Uppdatera”. De flesta ändringar träder i kraft omedelbart i alla sessioner som är aktiva vid tidpunkten för behörighetsändringen. I synnerhet:
 
-När du har konfigurerat behörigheterna efter önskemål aktiverar du knappen &quot;Uppdatera&quot;. Ändringarna påverkar inte aktiva sessioner vid tidpunkten för ändringen av behörigheterna. De träder dock i kraft för alla framtida sessioner utan att klienten behöver startas om.
+* En speglad session återställs omedelbart.
+* Ett pågående röstsamtal avbryts.
+* En väntande begäran om obevakad åtkomst avbryts.
+* Urklipp-åtgärder, inklusive pågående filöverföringar, avbryts.
+* En pågående sessionsinspelning avslutas omedelbart. RIM raderar dock inte inspelningen.
+* En pågående textchatt avbryts.
+* Filbläddraren försvinner, och alla pågående filöverföringar avbryts.
 
 ### Hantera mål
 
-När du klickar på länken &quot;Konfigurera mål&quot; kommer du till en sida där du kan hantera alla maskiner som du har konfigurerat för obevakad åtkomst. Du kan klicka på vilken som helst av dessa maskiner för att hantera den. När du är inne kan du:
-* Byt namn på målet
+När du klickar på länken ”Konfigurera mål” kommer du till en sida där du kan hantera alla datorer som du har konfigurerat för obevakad åtkomst. Du kan klicka på vilken som helst av dessa datorer för att hantera den. Väl där kan du:
+
+* Byta namn på målet
 * Flytta målet till en annan grupp (mer om målgrupper senare)
 * Starta en fjärrsession med målet
 * Ta bort målet
 
 ### Målgrupper (för Pro-konton och högre)
 
-Anta till exempel att din arbetsgrupp är utspridd på flera olika platser. Eller kanske vill du tilldela grupper av maskiner till dina rutinunderhållstekniker. Med målgrupper kan du göra just det. För att göra detta klickar du bara på knappen &quot;Skapa målgrupp&quot;, namnger din grupp och skickar in.  
-Du kan ha så många målgrupper som behövs för ditt användningsfall. 
+Anta till exempel att din arbetsgrupp är utspridd på flera olika platser. Eller kanske vill du tilldela grupper av datorer till dina tekniker som sköter det rutinmässiga underhållet. Med målgrupper kan du göra just det. För att göra detta klickar du helt enkelt på knappen ”Skapa målgrupp”, namnger din grupp och bekräftar.  
+Du kan ha så många målgrupper som behövs för just ditt användningsfall. 
 
 #### Åtkomstkontroll (för företag)
 
-Om din organisation tilldelar en supporttekniker till en specifik uppsättning maskiner vill du förmodligen se till att de bara har åtkomst till den specifika uppsättningen. Det är här inställningen för åtkomstkontroll för målgrupper kommer in.  
-När du klickar på en målgrupp får du alternativ för att hantera maskinerna i gruppen, samt gruppen i sig. I avsnittet åtkomstkontroll kan du bevilja åtkomst till denna grupp per konto. Ange bara e-postadressen till det konto du vill lägga till och klicka sedan på knappen &quot;Ge åtkomst&quot;. Observera att detta konto kan finnas utanför din företagsorganisations domän.  
-När detta är gjort visas en tabell med konton som har fått åtkomst till denna grupp. Under varje konto finns en knapp &quot;Återkalla åtkomst&quot;. Denna knapp kräver ingen ytterligare bekräftelse.  
-Det bör noteras att alla organisationsadministratörer automatiskt beviljas åtkomst för att hantera alla grupper som skapas under organisationen. Dessutom läggs alla e-postadresser under din organisations domäner till din organisation i RIM som standard. Om du behöver mer detaljerad kontroll över vem som får tillgång kan du inaktivera detta i din organisations huvudsakliga medlemsområde. Dessutom kan du i medlemsområdet lägga till e-postadresser i bulk genom att använda kommatecken, mellanslag eller radbrytningar mellan e-postadresserna.
+Om din organisation tilldelar en supporttekniker en specifik uppsättning datorer vill du förmodligen säkerställa att denne endast har åtkomst till just den uppsättningen. Det är här inställningen för åtkomstkontroll för målgrupper kommer in.  
+När du klickar på en målgrupp får du alternativ för att hantera både maskinerna i gruppen och gruppen i sig. I avsnittet för åtkomstkontroll kan du bevilja åtkomst till denna grupp på kontobasis. Ange bara e-postadressen för det konto du vill lägga till och klicka sedan på knappen ”Ge åtkomst”. Observera att detta konto kan finnas utanför din företagsorganisations domän.  
+När detta är gjort visas en tabell med de konton som har beviljats åtkomst till denna grupp. Under varje konto finns en knapp för att ”Återkalla åtkomst”. Denna knapp kräver ingen ytterligare bekräftelse.  
+Det bör noteras att alla organisationsadministratörer automatiskt beviljas åtkomst att hantera alla grupper som skapas inom organisationen. Dessutom läggs alla e-postadresser under din organisations domäner till i din organisation i RIM som standard. Om du behöver mer detaljerad kontroll över vem som ska läggas till kan du inaktivera detta i organisationens huvudsakliga medlemsområde. Dessutom kan du i medlemsområdet lägga till e-postadresser i bulk genom att separera dem med kommatecken, mellanslag eller radbrytningar.
 
-### Konfigurera en förkonfigurerad RIM-installatör (Pro eller högre)
+### Konfigurera ett förkonfigurerat RIM-installationsprogram (Pro eller högre)
 
-Ett av de enklaste sätten att konfigurera en maskin för obevakade eller uppmanade anslutningar är att skapa ett anpassat installationsprogram. Detta är otroligt användbart om du konfigurerar massdistributioner, eller till och med som ett enklare sätt att få RIM igång på en slutanvändares dator som du planerar att ge support för regelbundet.
+Ett av de enklaste sätten att konfigurera en dator för obevakad eller interaktiv anslutning är att skapa ett anpassat installationsprogram. Detta är oerhört användbart om du konfigurerar massdistributioner, eller till och med som ett enklare sätt att få igång RIM på en slutanvändares dator som du planerar att ge regelbunden support för.
 
-För att göra detta:
-1. Klicka på knappen &quot;Skapa målinstallationsprogram&quot; på målhanteringsskärmen.
-1. Du kommer först att bli tillfrågad om du vill att denna maskin ska konfigureras för helt obevakad åtkomst eller för uppmanad åtkomst där användaren måste acceptera en uppmaning för att initiera anslutningen.
-1. Du kommer sedan att bli tillfrågad om en målgruppstilldelning. Observera att målgruppsvalet automatiskt går till din valda målgrupp om du initierar installationskonfigurationen från din grupps sida.
-1. Du kommer att bli tillfrågad hur länge du vill att detta installationsprogram ska vara giltigt. Den kan vara giltig i mellan 7 och 30 dagar, eller permanent giltig för företagsplaner genom att ställa in utgångsdatumet till aldrig.
-1. Du får sedan möjlighet att tilldela ett basnamn. Alla maskiner som tillhandahålls via detta installationspaket kommer att tilldelas detta basnamn.
-1. Du kommer sedan att få se en kryssruta som låter dig välja att få ett e-postmeddelande när en användare installerar RIM via detta installationsprogram.
-1. Om du är företagsadministratör visas en kryssruta där du kan välja att skapa installationsprogrammet som ett MSI-paket. Det här alternativet är användbart för massdistribution av ett anpassat installationsprogram till en maskincluster som kommer att tilldelas den angivna målgruppen.
-1. Du ombeds ange ett namn på installationsprogrammet och eventuellt några anteckningar. Dessa är avsedda för interna register och visas inte i det skapade installationsprogrammet.
-1. Klicka på ”Skapa installationsprogram”. Du får en nedladdningslänk som du kan kopiera till urklipp och skicka till din slutanvändare. Alternativt kan du ladda ner installationsprogrammet direkt för användning vid massdistribution. Du kan ta bort installationsprogrammet från den här skärmen om du väljer att göra det obrukbart i förtid.
+Gör så här:
+1. Klicka på knappen ”Skapa målinstallationsprogram” på skärmen för målhantering.
+1. Du kommer först att tillfrågas om du vill att den här datorn ska konfigureras för helt obevakad åtkomst eller för åtkomst med bekräftelse, där användaren måste godkänna en uppmaning för att initiera anslutningen.
+1. Du kommer sedan att tillfrågas om vilken målgrupp du vill tilldela. Observera att valet av målgrupp automatiskt kommer att ställas in på den målgrupp du valt om du startar installationskonfigurationen från din grupps sida.
+1. Du kommer att tillfrågas hur länge du vill att denna installatör ska vara giltig. Den kan vara giltig i mellan 7 och 30 dagar, eller permanent giltig för företagsabonnemang genom att ställa in utgångsdatumet till ”aldrig”.
+1. Du får sedan möjlighet att ange ett basnamn. Alla datorer som tilldelas via detta installationspaket kommer att tilldelas detta basnamn.
+1. Du kommer sedan att se en kryssruta som låter dig välja att få ett e-postmeddelande när en användare installerar RIM via detta installationsprogram.
+1. Om du är företagsadministratör visas en kryssruta som låter dig skapa installationsprogrammet som ett MSI-paket. Detta alternativ är användbart för massdistribution av ett anpassat installationsprogram till ett kluster av datorer som kommer att tilldelas den angivna målgruppen.
+1. Du ombeds ange ett namn på installationsprogrammet och eventuellt några anteckningar. Dessa är avsedda för interna register och kommer inte att visas i det skapade installationsprogrammet.
+1. Klicka på ”Skapa installationsprogram”. Du får då en nedladdningslänk som du antingen kan kopiera till urklipp och skicka till slutanvändaren. Alternativt kan du ladda ner installationsprogrammet direkt för användning vid massdistribution. Du kan ta bort installationsprogrammet från den här skärmen om du väljer att göra det obrukbart i förtid.
 
-Nu när du har ditt installationsprogram kan det köras på ett av två sätt. I båda fallen kommer installationsprogrammet att fråga servern för att kontrollera installationsprogrammets giltighet. Om installationsprogrammet är giltigt kommer maskinen att läggas till i din lista över maskiner både i ditt konto och i RIM-klienten efter att installationsprogrammet har slutförts. Ett ogiltigt installationsprogram kommer inte att köras.
+Nu när du har ditt installationsprogram kan det köras på ett av två sätt. I båda fallen kommer installationsprogrammet att kontakta servern för att kontrollera dess giltighet. Om installationsprogrammet är giltigt kommer datorn att läggas till i din lista över datorer både i ditt konto och i RIM-klienten efter att installationen är klar. Ett ogiltigt installationsprogram kommer inte att köras.
 
+#### Normal körning
 
-Normal körning
+Användaren får en förfrågan när installationsprogrammet körs, som innehåller följande information:
+* Teknikerns namn tillsammans med dennes organisation, om tillämpligt
+* anslutningens typ, dvs. om en bekräftelse krävs eller inte
 
-Användaren får en uppmaning när installationsprogrammet körs, med följande information:
-* Teknikerns namn tillsammans med deras organisation, om tillämpligt
-* Typ av anslutning, dvs. om en uppmaning krävs eller inte.
+Användaren kan välja att svara ja eller nej på installationsförfrågan. Om användaren svarar nej avbryts installationen. När installationsprogrammet är klart får användaren ett meddelande om att datorn nu är konfigurerad för fjärråtkomst.
 
-Användaren kan välja att svara ja eller nej till installationen. Om du svarar nej avbryts installationen. När installationen är klar får användaren en uppmaning om att datorn nu är konfigurerad för fjärråtkomst.
+#### Tyst installation (endast företagsinstallationsprogram)
 
-#### Tyst installation (endast Enterprise-installationsprogram)
-
-En tyst installation kan startas genom att köra det körbara installationsprogrammet med kommandoradsparametern */S*. Detta är användbart när RIM installeras som en del av en massdistributionsrutin.
+En tyst installation kan startas genom att köra det körbara installationsprogrammet med kommandoradsparametern */S*. Detta är användbart när RIM installeras som en del av en rutin för massdistribution.
 
 ### Sessionshistorik
 
-Du kan visa hela historiken över tidigare sessioner via RIM-instrumentpanelen. Sessionshistoriken innehåller för närvarande datum och tid för varje session, namnet på den dator du anslutit till och sessionens varaktighet. Du kan också välja att lägga till kommentarer till en session via länken &quot;Lägg till kommentar&quot; i sessionsraden. Detta är användbart för att lägga till anteckningar om den aktuella statusen för en incident, både för din egen skull och för organisationsadministratörernas skull.
+Du kan visa hela din historik över tidigare sessioner via RIM-instrumentpanelen. Sessionshistoriken innehåller för närvarande datum och tid för varje session, namnet på den dator du anslöt till samt sessionens varaktighet. Du kan också välja att lägga till kommentarer till en session via länken ”Lägg till kommentar” i sessionsraden. Detta är användbart för att lägga till anteckningar om den aktuella statusen för en incident, både för din egen skull och för organisationsadministratörernas skull.
 
-Hela din sessionshistorik kan exporteras för senare visning via ett kalkylbladsprogram. Aktivera knappen &quot;Ladda ner sessionshistorik som CSV&quot; under tabellen med sessionshistorik för att visa en anpassningssida för din dataexport. På denna sida kan du välja tidsperioden för exporten samt symbolen som används för att separera fälten.
+Hela din sessionshistorik kan exporteras för senare granskning via ett kalkylbladsprogram. Klicka på knappen ”Ladda ner sessionshistorik som CSV” under tabellen med sessionshistoriken för att öppna en anpassningssida för din dataexport. På den här sidan kan du välja tidsperioden för exporten samt det tecken som ska användas för att separera fälten.
 
 ### Hantera ditt abonnemang (Personal- och Pro-planer)
 
-På instrumentpanelen kan du enkelt visa och hantera dina RIM-abonnemangsuppgifter. När du klickar på länken &quot;Hantera abonnemang&quot; kan du:
+På instrumentpanelen kan du enkelt visa och hantera dina RIM-abonnemangsuppgifter. När du klickar på länken ”Hantera abonnemang” kan du:
 * Uppgradera din plan
 * Uppdatera din betalningsmetod
 * Avbryta återkommande betalningar
 
-#### Uppgradera ditt abonnemang
+#### Uppgradera din plan
 
-Du kan enkelt uppgradera ditt abonnemang. Om du har ett månadsabonnemang kommer den återstående avgiften att beräknas proportionellt utifrån det nya beloppet, och det fullständiga nya beloppet kommer att debiteras för efterföljande månader. När du klickar på &quot;Uppgradera abonnemang&quot; visas en sida som är nästan identisk med den ursprungliga sidan för val av abonnemang. Det finns några viktiga skillnader som vi kommer att beskriva nedan:
-* Du kan inte nedgradera din plan till en med färre maskiner. Du kan dock uppgradera från en månadsplan till en årsplan med samma antal maskiner som din nuvarande plan. För att nedgradera måste du avbryta din plan, vänta tills den löper ut och sedan starta en ny plan med färre maskiner.
-* Företagsplaner, inklusive tillägget för företag, kan inte köpas direkt via denna sida.
+Du kan enkelt uppgradera ditt abonnemang. Om du har ett månadsabonnemang kommer den återstående avgiften att beräknas proportionellt utifrån det nya beloppet, medan det fulla nya beloppet debiteras för efterföljande månader. När du klickar på ”Uppgradera abonnemang” öppnas en sida som är nästan identisk med den ursprungliga sidan för val av abonnemang. Det finns några viktiga skillnader som vi beskriver nedan:
+* Du kan inte nedgradera ditt abonnemang till ett med färre maskiner. Du kan dock uppgradera från ett månadsabonnemang till ett årsabonnemang med samma antal maskiner som ditt nuvarande abonnemang. För att nedgradera måste du säga upp ditt abonnemang, vänta tills det löper ut och sedan teckna ett nytt abonnemang med färre maskiner.
+* Enterprise-abonnemang, inklusive tillägget Enterprise, kan inte tecknas direkt via denna sida.
 
 #### Avbryta återkommande betalningar
 
-När du klickar på &quot;Avbryt automatisk förnyelse&quot; kommer du att ombes bekräfta, varefter din prenumeration kommer att löpa ut vid slutet av den aktuella perioden.
+När du klickar på ”Avbryt automatisk förnyelse” ombeds du bekräfta valet, varefter ditt abonnemang kommer att löpa ut vid slutet av den aktuella perioden.
+
